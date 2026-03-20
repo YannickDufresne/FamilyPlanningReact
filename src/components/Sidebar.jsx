@@ -15,93 +15,90 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
 
   return (
     <aside className="sidebar">
-
-      {/* Registre des données */}
       <div className="data-status">
-        <div className="data-status-title">📊 Registre</div>
+        <div className="data-status-title">Données</div>
         <p>{recettes.length} recettes · {exercices.length} exercices</p>
         <p>{activites.length} activités · {musique.length} œuvres</p>
       </div>
 
-      {/* Paramètres */}
-      <div className="sidebar-section-title">Paramètres</div>
+      <div className="sidebar-inner">
+        <div className="sidebar-section-title">Régimes alimentaires</div>
 
-      <div className="sidebar-subsection">🌱 Régimes alimentaires</div>
+        <div className="control-group">
+          <label className="control-label">
+            Repas végétariens — <strong>{filtres.nbVegetarien} / 7</strong>
+          </label>
+          <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
+            onChange={e => set('nbVegetarien', +e.target.value)} />
+        </div>
 
-      <div className="control-group">
-        <label className="control-label">
-          Repas végétariens &mdash; <strong>{filtres.nbVegetarien} / 7</strong>
-        </label>
-        <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
-          onChange={e => set('nbVegetarien', +e.target.value)} />
+        <div className="control-group">
+          <label className="control-label">
+            Repas véganes — <strong>{filtres.nbVegane} / 7</strong>
+          </label>
+          <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
+            onChange={e => set('nbVegane', +e.target.value)} />
+        </div>
+
+        <div className="sidebar-section-title">Filtres</div>
+
+        <div className="control-group">
+          <label className="checkbox-label">
+            <input type="checkbox" checked={filtres.activerOrigine}
+              onChange={e => set('activerOrigine', e.target.checked)} />
+            Filtrer par origine culturelle
+          </label>
+          {filtres.activerOrigine && (
+            <select value={filtres.origine} onChange={e => set('origine', e.target.value)}>
+              {origines.map(o => <option key={o} value={o}>{o}</option>)}
+            </select>
+          )}
+        </div>
+
+        <div className="control-group">
+          <label className="checkbox-label">
+            <input type="checkbox" checked={filtres.activerCout}
+              onChange={e => set('activerCout', e.target.checked)} />
+            Limiter le coût par recette
+          </label>
+          {filtres.activerCout && (
+            <>
+              <label className="control-label" style={{ marginTop: 10 }}>
+                Maximum — <strong>{filtres.coutMax} $</strong>
+              </label>
+              <input type="range" min={coutMin} max={coutMax} step={1} value={filtres.coutMax}
+                onChange={e => set('coutMax', +e.target.value)} />
+            </>
+          )}
+        </div>
+
+        <div className="control-group">
+          <label className="checkbox-label">
+            <input type="checkbox" checked={filtres.activerTemps}
+              onChange={e => set('activerTemps', e.target.checked)} />
+            Limiter le temps de cuisine
+          </label>
+          {filtres.activerTemps && (
+            <>
+              <label className="control-label" style={{ marginTop: 10 }}>
+                Maximum — <strong>{filtres.tempsMax} min</strong>
+              </label>
+              <input type="range" min={50} max={500} step={10} value={filtres.tempsMax}
+                onChange={e => set('tempsMax', +e.target.value)} />
+            </>
+          )}
+        </div>
+
+        <hr className="sidebar-rule" />
+
+        <button className="btn-rebrasser" onClick={onRebrasser}>
+          Rebrasser les cartes
+        </button>
+
+        <hr className="sidebar-rule" />
+
+        {stats && <StatsBlock stats={stats} filtres={filtres} />}
       </div>
-
-      <div className="control-group">
-        <label className="control-label">
-          Repas véganes &mdash; <strong>{filtres.nbVegane} / 7</strong>
-        </label>
-        <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
-          onChange={e => set('nbVegane', +e.target.value)} />
-      </div>
-
-      <div className="sidebar-subsection">🔍 Filtres</div>
-
-      <div className="control-group">
-        <label className="checkbox-label">
-          <input type="checkbox" checked={filtres.activerOrigine}
-            onChange={e => set('activerOrigine', e.target.checked)} />
-          Filtrer par origine culturelle
-        </label>
-        {filtres.activerOrigine && (
-          <select value={filtres.origine} onChange={e => set('origine', e.target.value)}>
-            {origines.map(o => <option key={o} value={o}>{o}</option>)}
-          </select>
-        )}
-      </div>
-
-      <div className="control-group">
-        <label className="checkbox-label">
-          <input type="checkbox" checked={filtres.activerCout}
-            onChange={e => set('activerCout', e.target.checked)} />
-          Limiter le coût par recette
-        </label>
-        {filtres.activerCout && (
-          <>
-            <label className="control-label" style={{ marginTop: 8 }}>
-              Maximum &mdash; <strong>{filtres.coutMax} $</strong>
-            </label>
-            <input type="range" min={coutMin} max={coutMax} step={1} value={filtres.coutMax}
-              onChange={e => set('coutMax', +e.target.value)} />
-          </>
-        )}
-      </div>
-
-      <div className="control-group">
-        <label className="checkbox-label">
-          <input type="checkbox" checked={filtres.activerTemps}
-            onChange={e => set('activerTemps', e.target.checked)} />
-          Limiter le temps de cuisine
-        </label>
-        {filtres.activerTemps && (
-          <>
-            <label className="control-label" style={{ marginTop: 8 }}>
-              Maximum &mdash; <strong>{filtres.tempsMax} min</strong>
-            </label>
-            <input type="range" min={50} max={500} step={10} value={filtres.tempsMax}
-              onChange={e => set('tempsMax', +e.target.value)} />
-          </>
-        )}
-      </div>
-
-      <hr className="sidebar-rule" />
-
-      <button className="btn-rebrasser" onClick={onRebrasser}>
-        <span>❧</span> Rebrasser les cartes <span>❧</span>
-      </button>
-
-      <hr className="sidebar-rule" />
-
-      {stats && <StatsBlock stats={stats} filtres={filtres} />}
     </aside>
   );
 }
@@ -121,16 +118,16 @@ function StatsBlock({ stats, filtres }) {
 
       <div className="stats-main">
         <div className="stat-item">
-          <span className="stat-value">{stats.tempsTotal}<small style={{ fontSize: '0.6em', fontWeight: 300 }}>min</small></span>
-          <div className="stat-label">Cuisine</div>
+          <span className="stat-value">{stats.tempsTotal}</span>
+          <div className="stat-label">Min cuisine</div>
         </div>
         <div className="stat-item">
-          <span className="stat-value">{stats.coutRecettes}<small style={{ fontSize: '0.6em', fontWeight: 300 }}>$</small></span>
-          <div className="stat-label">Recettes</div>
+          <span className="stat-value">{stats.coutRecettes}</span>
+          <div className="stat-label">$ recettes</div>
         </div>
         <div className="stat-item">
-          <span className="stat-value">{stats.coutActivites}<small style={{ fontSize: '0.6em', fontWeight: 300 }}>$</small></span>
-          <div className="stat-label">Activités</div>
+          <span className="stat-value">{stats.coutActivites}</span>
+          <div className="stat-label">$ activités</div>
         </div>
       </div>
 
@@ -153,12 +150,12 @@ function StatsBlock({ stats, filtres }) {
         </div>
         <div className="eval-member">
           <span className="eval-emoji">🎯</span>
-          <div className="eval-name">Obj. Végé</div>
+          <div className="eval-name">Obj.V.</div>
           <div className="eval-score">{filtres.nbVegetarien}/7</div>
         </div>
         <div className="eval-member">
           <span className="eval-emoji">🎯</span>
-          <div className="eval-name">Obj. Végane</div>
+          <div className="eval-name">Obj.Vg</div>
           <div className="eval-score">{filtres.nbVegane}/7</div>
         </div>
       </div>
@@ -170,7 +167,7 @@ function StatsBlock({ stats, filtres }) {
             <span className="eval-emoji">{m.emoji}</span>
             <div className="eval-name">{m.nom}</div>
             <div className="eval-score">
-              {stats.evals[m.key] != null ? `${stats.evals[m.key]}` : '—'}
+              {stats.evals[m.key] != null ? stats.evals[m.key] : '—'}
             </div>
           </div>
         ))}

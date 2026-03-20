@@ -1,3 +1,5 @@
+const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
+
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
 
 function EvalRow({ recette }) {
@@ -29,90 +31,82 @@ function EvalRow({ recette }) {
 export default function DayCard({ jour }) {
   const { recette, exercices, activite, musique, emoji } = jour;
   const isWarning = recette.nom.startsWith('⚠️');
+  const isTraining = JOURS_ENTRAINEMENT.includes(jour.jour);
   const isRepos = exercices.length === 1 && exercices[0].fonction === 'repos';
   const regimeLabel = REGIME_LABEL[recette.regime_alimentaire];
 
   return (
-    <article className={`day-card ${isWarning ? 'day-card--warning' : ''}`}>
+    <article className={`day-card ${isWarning ? 'day-card--warning' : ''} ${isTraining ? 'day-card--training' : ''}`}>
+      <div className="day-card__accent" />
 
-      {/* En-tête */}
       <div className="day-card__header">
+        <span className="day-card__jour">{jour.jour}</span>
         <span className="day-card__emoji">{emoji}</span>
-        <div>
-          <div className="day-card__jour">{jour.jour}</div>
-          <div className="day-card__theme">{jour.theme.replace(/_/g, ' ')}</div>
-        </div>
+        <span className="day-card__theme">{jour.theme.replace(/_/g, '\u00a0')}</span>
       </div>
 
-      <div className="day-card__body">
-
-        {/* Recette */}
-        <div className="planning-item">
-          <div className="planning-item__label">🍽 Repas</div>
-          <div className="planning-item__name">
-            {recette.nom}
-            {regimeLabel && !isWarning && (
-              <span className="regime-badge">{regimeLabel}</span>
-            )}
+      {/* Recette */}
+      <div className="planning-item">
+        <div className="planning-item__label">Repas</div>
+        <div className="planning-item__name">
+          {recette.nom}
+          {regimeLabel && !isWarning && (
+            <span className="regime-badge">{regimeLabel}</span>
+          )}
+        </div>
+        {!isWarning && (
+          <div className="planning-item__cost">
+            {recette.cout}$ &nbsp;·&nbsp; {recette.temps_preparation} min
           </div>
-          {!isWarning && (
-            <div className="planning-item__cost">
-              {recette.cout}$ &ensp;·&ensp; {recette.temps_preparation} min
-            </div>
-          )}
-          {!isWarning && recette.ingredients && (
-            <div className="planning-item__meta">{recette.ingredients}</div>
-          )}
-          {isWarning && (
-            <div className="planning-item__meta" style={{ color: '#7A3030' }}>
-              {recette.ingredients}
-            </div>
-          )}
-          {!isWarning && <EvalRow recette={recette} />}
-        </div>
+        )}
+        {!isWarning && recette.ingredients && (
+          <div className="planning-item__meta">{recette.ingredients}</div>
+        )}
+        {isWarning && (
+          <div className="planning-item__meta" style={{ color: '#C91D21' }}>
+            {recette.ingredients}
+          </div>
+        )}
+        {!isWarning && <EvalRow recette={recette} />}
+      </div>
 
-        {/* Exercices */}
-        <div className="planning-item">
-          <div className="planning-item__label">💪 Entraînement</div>
-          {isRepos ? (
-            <div className="planning-item__name" style={{ fontStyle: 'italic', fontWeight: 400 }}>
-              Repos &amp; récupération
-            </div>
-          ) : (
-            <div className="exercice-list">
-              {exercices.map((ex, i) => (
-                <div key={i} className="exercice-item">
-                  {ex.nom}
-                  <span style={{ opacity: 0.6 }}> · {ex.duree} min</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+      {/* Exercice */}
+      <div className="planning-item">
+        <div className="planning-item__label">Entraînement</div>
+        {isRepos ? (
+          <div className="planning-item__name" style={{ fontStyle: 'italic', fontWeight: 400, fontSize: '0.95rem' }}>
+            Repos · récupération
+          </div>
+        ) : (
+          <div className="exercice-list">
+            {exercices.map((ex, i) => (
+              <div key={i} className="exercice-item">
+                {ex.nom}
+                <span style={{ opacity: 0.55, fontSize: '0.75rem' }}> · {ex.duree} min</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
-        {/* Activité */}
-        <div className="planning-item">
-          <div className="planning-item__label">🎭 Activité</div>
-          <div className="planning-item__name">{activite.nom}</div>
-          {activite.lieu && (
-            <div className="planning-item__meta">
-              {activite.lieu}
-              {activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
-            </div>
-          )}
-        </div>
+      {/* Activité */}
+      <div className="planning-item">
+        <div className="planning-item__label">Activité</div>
+        <div className="planning-item__name">{activite.nom}</div>
+        {activite.lieu && (
+          <div className="planning-item__meta">
+            {activite.lieu}{activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
+          </div>
+        )}
+      </div>
 
-        {/* Musique */}
-        <div className="planning-item">
-          <div className="planning-item__label">🎵 Musique</div>
-          <div className="planning-item__name">{musique.nom}</div>
-          {musique.genre && (
-            <div className="planning-item__meta">
-              {musique.genre} · {musique.ambiance}
-            </div>
-          )}
-        </div>
-
+      {/* Musique */}
+      <div className="planning-item">
+        <div className="planning-item__label">Musique</div>
+        <div className="planning-item__name">{musique.nom}</div>
+        {musique.genre && (
+          <div className="planning-item__meta">{musique.genre} · {musique.ambiance}</div>
+        )}
       </div>
     </article>
   );

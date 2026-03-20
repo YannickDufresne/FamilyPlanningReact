@@ -13,7 +13,7 @@ export default function Header() {
         <h1>Planning Hebdomadaire</h1>
         <p className="header-subtitle">Repas &nbsp;·&nbsp; Exercices &nbsp;·&nbsp; Activités &nbsp;·&nbsp; Musique</p>
       </div>
-      <div className="header-ornament">Planning · Familial</div>
+      <div className="header-ornament">Vol. 2025</div>
     </header>
   );
 }
