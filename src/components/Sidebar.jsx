@@ -5,10 +5,8 @@ import activites from '../data/activites.json';
 import musique from '../data/musique.json';
 
 export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
-  const origines = useMemo(() => {
-    const all = [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort();
-    return all;
-  }, []);
+  const origines = useMemo(() =>
+    [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
   const coutMin = useMemo(() => Math.min(...recettes.map(r => r.cout)), []);
   const coutMax = useMemo(() => Math.max(...recettes.map(r => r.cout)), []);
@@ -18,33 +16,35 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
   return (
     <aside className="sidebar">
 
-      {/* Données chargées */}
+      {/* Registre des données */}
       <div className="data-status">
-        <h6>📊 Données chargées</h6>
-        <p>• Recettes : {recettes.length} entrées</p>
-        <p>• Exercices : {exercices.length} entrées</p>
-        <p>• Activités : {activites.length} entrées</p>
-        <p>• Musique : {musique.length} entrées</p>
+        <div className="data-status-title">📊 Registre</div>
+        <p>{recettes.length} recettes · {exercices.length} exercices</p>
+        <p>{activites.length} activités · {musique.length} œuvres</p>
       </div>
 
       {/* Paramètres */}
-      <h4>🎛️ Paramètres</h4>
+      <div className="sidebar-section-title">Paramètres</div>
 
-      <h5>🌱 Préférences alimentaires</h5>
+      <div className="sidebar-subsection">🌱 Régimes alimentaires</div>
 
       <div className="control-group">
-        <label>🥗 Repas végétariens / semaine : <strong>{filtres.nbVegetarien}</strong></label>
+        <label className="control-label">
+          Repas végétariens &mdash; <strong>{filtres.nbVegetarien} / 7</strong>
+        </label>
         <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
           onChange={e => set('nbVegetarien', +e.target.value)} />
       </div>
 
       <div className="control-group">
-        <label>🌿 Repas véganes / semaine : <strong>{filtres.nbVegane}</strong></label>
+        <label className="control-label">
+          Repas véganes &mdash; <strong>{filtres.nbVegane} / 7</strong>
+        </label>
         <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
           onChange={e => set('nbVegane', +e.target.value)} />
       </div>
 
-      <h5>🔍 Filtres optionnels</h5>
+      <div className="sidebar-subsection">🔍 Filtres</div>
 
       <div className="control-group">
         <label className="checkbox-label">
@@ -67,7 +67,9 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
         </label>
         {filtres.activerCout && (
           <>
-            <label>💰 Coût max : <strong>{filtres.coutMax} $</strong></label>
+            <label className="control-label" style={{ marginTop: 8 }}>
+              Maximum &mdash; <strong>{filtres.coutMax} $</strong>
+            </label>
             <input type="range" min={coutMin} max={coutMax} step={1} value={filtres.coutMax}
               onChange={e => set('coutMax', +e.target.value)} />
           </>
@@ -78,28 +80,27 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
         <label className="checkbox-label">
           <input type="checkbox" checked={filtres.activerTemps}
             onChange={e => set('activerTemps', e.target.checked)} />
-          Limiter le temps total de cuisine
+          Limiter le temps de cuisine
         </label>
         {filtres.activerTemps && (
           <>
-            <label>⏱️ Temps max total : <strong>{filtres.tempsMax} min</strong></label>
+            <label className="control-label" style={{ marginTop: 8 }}>
+              Maximum &mdash; <strong>{filtres.tempsMax} min</strong>
+            </label>
             <input type="range" min={50} max={500} step={10} value={filtres.tempsMax}
               onChange={e => set('tempsMax', +e.target.value)} />
           </>
         )}
       </div>
 
-      <hr />
+      <hr className="sidebar-rule" />
 
-      <div style={{ textAlign: 'center', margin: '20px 0' }}>
-        <button className="btn-rebrasser" onClick={onRebrasser}>
-          🎲 Rebrasser les cartes
-        </button>
-      </div>
+      <button className="btn-rebrasser" onClick={onRebrasser}>
+        <span>❧</span> Rebrasser les cartes <span>❧</span>
+      </button>
 
-      <hr />
+      <hr className="sidebar-rule" />
 
-      {/* Stats */}
       {stats && <StatsBlock stats={stats} filtres={filtres} />}
     </aside>
   );
@@ -116,33 +117,33 @@ function StatsBlock({ stats, filtres }) {
 
   return (
     <div className="stats-container">
-      <div className="stats-title">📊 Statistiques de la semaine</div>
+      <div className="stats-title">Bilan de la semaine</div>
 
       <div className="stats-main">
         <div className="stat-item">
-          <span className="stat-value">{stats.tempsTotal} min</span>
-          <div className="stat-label">Temps cuisine</div>
+          <span className="stat-value">{stats.tempsTotal}<small style={{ fontSize: '0.6em', fontWeight: 300 }}>min</small></span>
+          <div className="stat-label">Cuisine</div>
         </div>
         <div className="stat-item">
-          <span className="stat-value">{stats.coutRecettes} $</span>
-          <div className="stat-label">Coût recettes</div>
+          <span className="stat-value">{stats.coutRecettes}<small style={{ fontSize: '0.6em', fontWeight: 300 }}>$</small></span>
+          <div className="stat-label">Recettes</div>
         </div>
         <div className="stat-item">
-          <span className="stat-value">{stats.coutActivites} $</span>
-          <div className="stat-label">Moy. activités</div>
+          <span className="stat-value">{stats.coutActivites}<small style={{ fontSize: '0.6em', fontWeight: 300 }}>$</small></span>
+          <div className="stat-label">Activités</div>
         </div>
       </div>
 
-      <div className="evaluations-title">🍽️ Répartition des régimes</div>
+      <div className="evaluations-title">Répartition des régimes</div>
       <div className="eval-grid">
         <div className="eval-member">
           <span className="eval-emoji">🥩</span>
-          <div className="eval-name">Omnivore</div>
+          <div className="eval-name">Omni.</div>
           <div className="eval-score">{stats.regimes.omnivore}/7</div>
         </div>
         <div className="eval-member">
           <span className="eval-emoji">🥗</span>
-          <div className="eval-name">Végétarien</div>
+          <div className="eval-name">Végé.</div>
           <div className="eval-score">{stats.regimes['végétarien']}/7</div>
         </div>
         <div className="eval-member">
@@ -162,13 +163,15 @@ function StatsBlock({ stats, filtres }) {
         </div>
       </div>
 
-      <div className="evaluations-title">👨‍👩‍👧‍👦 Évaluations moyennes</div>
+      <div className="evaluations-title">Évaluations familiales</div>
       <div className="eval-grid">
         {membres.map(m => (
           <div key={m.key} className="eval-member">
             <span className="eval-emoji">{m.emoji}</span>
             <div className="eval-name">{m.nom}</div>
-            <div className="eval-score">{stats.evals[m.key] != null ? `${stats.evals[m.key]}/5` : '—'}</div>
+            <div className="eval-score">
+              {stats.evals[m.key] != null ? `${stats.evals[m.key]}` : '—'}
+            </div>
           </div>
         ))}
       </div>
