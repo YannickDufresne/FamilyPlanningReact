@@ -27,7 +27,7 @@ function EvalRow({ recette }) {
 }
 
 export default function DayCard({ jour }) {
-  const { recette, exercices, activite, musique, emoji, dateFormatee } = jour;
+  const { recette, exercices, activite, musique, emoji, dateCourte } = jour;
   const isWarning = recette.nom.startsWith('⚠️');
   const isTraining = JOURS_ENTRAINEMENT.includes(jour.jour);
   const isRepos = exercices.length === 1 && exercices[0].fonction === 'repos';
@@ -41,7 +41,7 @@ export default function DayCard({ jour }) {
       <div className="day-card__header">
         <div className="day-card__header-left">
           <span className="day-card__jour">{jour.jour}</span>
-          <span className="day-card__date">{dateFormatee.split(', ')[1]}</span>
+          <span className="day-card__date">{dateCourte}</span>
         </div>
         <span className="day-card__emoji">{emoji}</span>
         <span className="day-card__theme">{jour.theme.replace(/_/g, '\u00a0')}</span>

@@ -38,13 +38,11 @@ export function getLundiSemaine() {
   return lundi;
 }
 
-// ── Formate une date en "Vendredi, 20 mars" ───────────────────────────────────
-export function formatDateJour(date) {
-  return date.toLocaleDateString('fr-CA', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  });
+// ── Formate une date en "20 mars" ─────────────────────────────────────────────
+export function formatDateCourte(date) {
+  const jour = date.getDate();
+  const mois = date.toLocaleDateString('fr-CA', { month: 'long' });
+  return `${jour} ${mois}`;
 }
 
 export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut }) {
@@ -128,7 +126,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     planning.push({
       jour: jourInfo.jour,
       date: dateStr,
-      dateFormatee: formatDateJour(dateJour), // "Vendredi, 20 mars"
+      dateCourte: formatDateCourte(dateJour), // "20 mars"
       theme: jourInfo.theme,
       emoji: jourInfo.emoji,
       recette: recetteJour,
