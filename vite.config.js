@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
+// base = '/' en dev, '/FamilyPlanningReact/' en production (GitHub Pages)
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: '/FamilyPlanningReact/',
-})
+  base: command === 'serve' ? '/' : '/FamilyPlanningReact/',
+}))
