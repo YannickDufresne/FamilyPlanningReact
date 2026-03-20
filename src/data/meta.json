@@ -4,6 +4,8 @@
     "debut": "2026-03-16",
     "fin": "2026-03-22"
   },
-  "source": "Ticketmaster",
-  "count": 3
+  "source": "ticketmaster+claude",
+  "count": 11,
+  "ticketmaster": 3,
+  "claude": 8
 }

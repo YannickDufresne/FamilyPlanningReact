@@ -9,7 +9,8 @@
     "origine": "Québec",
     "exemple_claude": 1,
     "date": "2026-03-19",
-    "url": ""
+    "url": "",
+    "source": "ticketmaster"
   },
   {
     "nom": "Remparts de Quebec v Saguenéens de Chicoutimi - Hommage 20 ans",
@@ -21,7 +22,8 @@
     "origine": "Québec",
     "exemple_claude": 1,
     "date": "2026-03-20",
-    "url": "https://www.ticketmaster.ca/remparts-de-quebec-v-sagueneens-de-quebec-quebec-03-20-2026/event/310062E7C2DB5D4F"
+    "url": "https://www.ticketmaster.ca/remparts-de-quebec-v-sagueneens-de-quebec-quebec-03-20-2026/event/310062E7C2DB5D4F",
+    "source": "ticketmaster"
   },
   {
     "nom": "REMPARTS VS SAGUENÉENS",
@@ -33,6 +35,127 @@
     "origine": "Québec",
     "exemple_claude": 1,
     "date": "2026-03-20",
-    "url": ""
+    "url": "",
+    "source": "ticketmaster"
+  },
+  {
+    "nom": "Visite du Musée national des beaux-arts du Québec",
+    "lieu": "Musée national des beaux-arts du Québec, Parc des Champs-de-Bataille",
+    "duree": 120,
+    "cout": 22,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.mnbaq.org",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Patricia et Yannick adoreront explorer les collections d'art québécois et les expositions temporaires dans ce musée de calibre international! 💚🦉"
+  },
+  {
+    "nom": "Glissade et jeux au Domaine de Maizerets",
+    "lieu": "Domaine de Maizerets, 2000 boulevard Montmorency",
+    "duree": 150,
+    "cout": 0,
+    "saison": "printemps",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.domainemaizerets.com",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Aventure gratuite en plein air! Joseph pourra courir et explorer pendant que Luce profite des sentiers faciles et de l'arboretum! 🐤🍒"
+  },
+  {
+    "nom": "Atelier créatif aux Ateliers Artefact",
+    "lieu": "Méduse, 541 rue De Saint-Vallier Est",
+    "duree": 90,
+    "cout": 15,
+    "saison": "toute",
+    "type": "apprentissage",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.meduse.org",
+    "source": "claude",
+    "pourQui": "enfants",
+    "description": "Mika va s'éclater dans cet atelier d'arts où la créativité et les couleurs sont à l'honneur! Parfait pour les petits artistes curieux! 🍒"
+  },
+  {
+    "nom": "Brunch gastronomique au Café du Monde",
+    "lieu": "Café du Monde, 84 rue Dalhousie, Vieux-Port",
+    "duree": 90,
+    "cout": 45,
+    "saison": "toute",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.lecafedumonde.com",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Une expérience bistro parisien raffinée avec vue sur le fleuve! Patricia et Yannick savoureront ce moment gourmand et élégant! 💚🦉"
+  },
+  {
+    "nom": "Exploration de l'Aquarium du Québec",
+    "lieu": "Aquarium du Québec, 1675 avenue des Hôtels",
+    "duree": 180,
+    "cout": 23,
+    "saison": "toute",
+    "type": "famille",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.sepaq.com/aquarium",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Morses, phoques et 10 000 animaux marins attendent toute la famille! Joseph adorera l'énergie des bassins tactiles et Luce sera fascinée! 🐤🍒"
+  },
+  {
+    "nom": "Randonnée au Parc de la Chute-Montmorency",
+    "lieu": "Parc de la Chute-Montmorency, 5300 boulevard Sainte-Anne",
+    "duree": 120,
+    "cout": 6,
+    "saison": "printemps",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.sepaq.com/destinations/parc-chute-montmorency",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "La chute spectaculaire au printemps avec le dégel! Yannick et Joseph grimperont l'escalier panoramique pendant que les petits profitent des points de vue! 🦉🐤"
+  },
+  {
+    "nom": "Visite guidée du Vieux-Québec fortifié",
+    "lieu": "Vieux-Québec, départ Château Frontenac",
+    "duree": 90,
+    "cout": 0,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.quebec-cite.com",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Découvrez l'histoire et l'architecture des fortifications avec Yannick comme guide passionné! Les enfants adoreront jouer aux explorateurs! 🦉🍒"
+  },
+  {
+    "nom": "Séance de jeux à Récréofun",
+    "lieu": "Récréofun, 555 boulevard Wilfrid-Hamel",
+    "duree": 120,
+    "cout": 18,
+    "saison": "toute",
+    "type": "sport",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.recreofun.com",
+    "source": "claude",
+    "pourQui": "enfants",
+    "description": "Structures gonflables, parcours ninja et trampolines! Joseph dépensera son énergie pendant que Mika et Luce s'amusent dans les zones adaptées! 🐤🍒"
   }
 ]
