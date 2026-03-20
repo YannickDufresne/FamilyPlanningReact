@@ -29,9 +29,10 @@ jobs:
       - name: Installer les dépendances
         run: npm ci
 
-      - name: Fetcher les événements Ticketmaster
+      - name: Fetcher les événements et suggestions IA
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-activites.mjs
 
       - name: Vérifier s'il y a des changements

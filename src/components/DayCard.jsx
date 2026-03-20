@@ -102,6 +102,14 @@ export default function DayCard({ jour }) {
                 {activite.lieu}{activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
               </div>
             )}
+            {activite.description && (
+              <div className="planning-item__meta" style={{ marginTop: 3 }}>
+                {activite.description}
+              </div>
+            )}
+            {activite.source === 'claude' && (
+              <div className="planning-item__badge">✦ Suggestion IA</div>
+            )}
           </>
         ) : (
           <div className="planning-item__empty">Aucun événement planifié</div>

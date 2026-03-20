@@ -111,11 +111,19 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       exercicesJour = [{ nom: '🛌 Jour de repos', duree: 0, objectif: 'récupération', fonction: 'repos' }];
     }
 
-    // ── Activité — uniquement si un événement est prévu ce jour précis ────────
+    // ── Activité ──────────────────────────────────────────────────────────────
+    // Priorité 1 : événement avec date précise ce jour-là (Ticketmaster)
+    // Priorité 2 : suggestion sans date (Claude / statique) comme fallback
     const activitesJour = activites.filter(a => a.date === dateStr);
-    const activite = activitesJour.length > 0
-      ? pickRandom(activitesJour, rngRecette) // rng stable
-      : null; // Aucun événement ce jour
+    const activitesFallback = activites.filter(a => !a.date || a.date === '');
+
+    let activite = null;
+    if (activitesJour.length > 0) {
+      activite = pickRandom(activitesJour, rngRecette);
+    } else if (activitesFallback.length > 0) {
+      // Distribution cyclique pour éviter les répétitions
+      activite = activitesFallback[i % activitesFallback.length];
+    }
 
     // ── Musique ───────────────────────────────────────────────────────────────
     let musiqueDispo = musique;
