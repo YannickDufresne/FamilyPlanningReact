@@ -45,8 +45,19 @@ export function formatDateCourte(date) {
   return `${jour} ${mois}`;
 }
 
+function shuffleSeeded(arr, seed) {
+  const rng = seededRandom(seed);
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut }) {
-  const { nbVegetarien, nbVegane, activerOrigine, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
+  const { nbVegetarien, nbVegane, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
+  const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
   if (nbOmnivore < 0) return null;
 
@@ -54,6 +65,12 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   const lundi = semaineDebut
     ? new Date(semaineDebut + 'T12:00:00')
     : getLundiSemaine();
+
+  // ── Musique : shuffle seeded une seule fois → chanson différente chaque jour ─
+  const musiqueBase = filtrerOrigine
+    ? (musique.filter(m => m.origine === origine).length > 0 ? musique.filter(m => m.origine === origine) : musique)
+    : musique;
+  const musiqueShuffled = shuffleSeeded(musiqueBase, seed + 9999);
 
   let compteurOmnivore = 0;
   let compteurVegetarien = 0;
@@ -74,8 +91,8 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
 
     // ── Recettes ──────────────────────────────────────────────────────────────
     let recettesDispo = recettes.filter(r => r[themeCol] === 1);
-    if (activerOrigine && origine) recettesDispo = recettesDispo.filter(r => r.origine === origine);
-    if (activerCout)               recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
+    if (filtrerOrigine) recettesDispo = recettesDispo.filter(r => r.origine === origine);
+    if (activerCout)    recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
 
     let regimeNecessaire = null;
     if      (compteurVegane     < nbVegane)     regimeNecessaire = 'végane';
@@ -100,7 +117,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     let exercicesJour = [];
     if (JOURS_ENTRAINEMENT.includes(jourInfo.jour)) {
       let exDispo = exercices;
-      if (activerOrigine && origine) exDispo = exDispo.filter(e => e.origine === origine);
+      if (filtrerOrigine) exDispo = exDispo.filter(e => e.origine === origine);
       SEQUENCE_ENTRAINEMENT.forEach((fonction, fi) => {
         const rngEx = seededRandom(seed + i * 29 + fi * 7 + 300);
         const candidats = exDispo.filter(e => e.fonction === fonction);
@@ -126,9 +143,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
 
     // ── Musique ───────────────────────────────────────────────────────────────
-    let musiqueDispo = musique;
-    if (activerOrigine && origine) musiqueDispo = musiqueDispo.filter(m => m.origine === origine);
-    const musiqueJour = pickRandom(musiqueDispo.length > 0 ? musiqueDispo : musique, rngMusique)
+    const musiqueJour = musiqueShuffled[i % musiqueShuffled.length]
       || { nom: 'Musique à définir', genre: 'Variété', ambiance: 'Relaxante' };
 
     planning.push({

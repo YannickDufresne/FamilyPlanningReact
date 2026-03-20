@@ -43,16 +43,11 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
         <div className="sidebar-section-title">Filtres</div>
 
         <div className="control-group">
-          <label className="checkbox-label">
-            <input type="checkbox" checked={filtres.activerOrigine}
-              onChange={e => set('activerOrigine', e.target.checked)} />
-            Filtrer par origine culturelle
-          </label>
-          {filtres.activerOrigine && (
-            <select value={filtres.origine} onChange={e => set('origine', e.target.value)}>
-              {origines.map(o => <option key={o} value={o}>{o}</option>)}
-            </select>
-          )}
+          <label className="control-label">Origine culturelle</label>
+          <select className="sidebar-select" value={filtres.origine} onChange={e => set('origine', e.target.value)}>
+            <option value="Tous">Toutes les origines</option>
+            {origines.map(o => <option key={o} value={o}>{o}</option>)}
+          </select>
         </div>
 
         <div className="control-group">

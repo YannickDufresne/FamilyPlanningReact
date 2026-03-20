@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import WeeklyPlanning from './components/WeeklyPlanning';
 import GroceryList from './components/GroceryList';
+import RecettesPage from './components/RecettesPage';
 import { genererPlanning, calculerStats } from './utils/planning';
 import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
@@ -14,8 +15,7 @@ import './App.css';
 const DEFAULT_FILTRES = {
   nbVegetarien: 2,
   nbVegane: 1,
-  activerOrigine: false,
-  origine: 'Italie',
+  origine: 'Tous',
   activerCout: false,
   coutMax: 6,
   activerTemps: false,
@@ -25,6 +25,7 @@ const DEFAULT_FILTRES = {
 export default function App() {
   const [filtres, setFiltres] = useState(DEFAULT_FILTRES);
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 100000));
+  const [view, setView] = useState('planning'); // 'planning' | 'recettes'
 
   const planning = useMemo(() =>
     genererPlanning({
@@ -38,19 +39,23 @@ export default function App() {
 
   return (
     <div className="app">
-      <Header />
-      <div className="layout">
-        <Sidebar
-          filtres={filtres}
-          setFiltres={setFiltres}
-          onRebrasser={() => setSeed(Math.floor(Math.random() * 1e9))}
-          stats={stats}
-        />
-        <main className="main-content">
-          <WeeklyPlanning planning={planning} />
-          <GroceryList planning={planning} />
-        </main>
-      </div>
+      <Header onViewRecettes={() => setView('recettes')} />
+      {view === 'recettes' ? (
+        <RecettesPage onRetour={() => setView('planning')} />
+      ) : (
+        <div className="layout">
+          <Sidebar
+            filtres={filtres}
+            setFiltres={setFiltres}
+            onRebrasser={() => setSeed(Math.floor(Math.random() * 1e9))}
+            stats={stats}
+          />
+          <main className="main-content">
+            <WeeklyPlanning planning={planning} />
+            <GroceryList planning={planning} />
+          </main>
+        </div>
+      )}
     </div>
   );
 }

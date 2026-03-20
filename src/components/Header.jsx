@@ -5,16 +5,15 @@ function formatSemaine(debut, fin) {
   const locale = 'fr-CA';
   const d = new Date(debut + 'T12:00:00');
   const f = new Date(fin + 'T12:00:00');
-  // Même mois → "16 – 22 mars 2026", mois différents → "28 mars – 3 avril 2026"
   if (d.getMonth() === f.getMonth()) {
     return `${d.getDate()} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
   }
   return `${d.toLocaleDateString(locale, opts)} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
 }
 
-export default function Header() {
+export default function Header({ onViewRecettes }) {
   const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
-  const source = meta.source === 'Ticketmaster' ? 'Ticketmaster · Québec' : 'Données statiques';
+  const sourceLabel = meta.source?.includes('ticketmaster') ? 'Ticketmaster · Claude IA' : 'Données statiques';
   const maj = new Date(meta.lastUpdated + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -32,13 +31,14 @@ export default function Header() {
       <div className="header-content">
         <h1>Planning Hebdomadaire</h1>
         <p className="header-subtitle">
-          Repas &nbsp;·&nbsp; Exercices &nbsp;·&nbsp; Activités &nbsp;·&nbsp; Musique
+          <button className="header-nav-link" onClick={onViewRecettes}>Repas</button>
+          &nbsp;·&nbsp; Exercices &nbsp;·&nbsp; Activités &nbsp;·&nbsp; Musique
         </p>
       </div>
 
       <div className="header-meta">
         <div className="header-semaine">{semaine}</div>
-        <div className="header-maj">Mis à jour le {maj} · {source}</div>
+        <div className="header-maj">Mis à jour le {maj} · {sourceLabel}</div>
       </div>
     </header>
   );
