@@ -38,6 +38,23 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   let compteurVegane = 0;
   const planning = [];
 
+  // ── Shuffle seedé des activités — distribué sans répétition sur 7 jours ───
+  function shuffleSeeded(arr, s) {
+    const a = [...arr];
+    const rng = seededRandom(s);
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  let activitesDispo = activites;
+  if (filtres.activerOrigine && filtres.origine)
+    activitesDispo = activitesDispo.filter(a => a.origine === filtres.origine);
+  if (activitesDispo.length === 0) activitesDispo = activites;
+  const activitesShuffled = shuffleSeeded(activitesDispo, seed + 9999);
+
   for (let i = 0; i < 7; i++) {
     const jourInfo = THEMES_PAR_JOUR[i];
     const themeCol = `theme_${jourInfo.theme}`;
@@ -86,10 +103,9 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       exercicesJour = [{ nom: '🛌 Jour de repos', duree: 0, objectif: 'récupération', fonction: 'repos' }];
     }
 
-    // ── Activité ──────────────────────────────────────────────────────────────
-    let activitesDispo = activites;
-    if (activerOrigine && origine) activitesDispo = activitesDispo.filter(a => a.origine === origine);
-    const activite = pickRandom(activitesDispo.length > 0 ? activitesDispo : activites, rngActivite)
+    // ── Activité — distribuée via shuffle seedé global ────────────────────────
+    // (calculé avant la boucle et réutilisé ici via closure)
+    const activite = activitesShuffled[i % activitesShuffled.length]
       || { nom: 'Activité à définir', lieu: 'À définir', cout: 0 };
 
     // ── Musique ───────────────────────────────────────────────────────────────
