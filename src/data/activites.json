@@ -1,0 +1,212 @@
+[
+  {
+    "nom": "Visite Musée National des Beaux-Arts",
+    "lieu": "Musée national des beaux-arts du Québec",
+    "duree": 90,
+    "cout": 20,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Marché du Vieux-Port Saveurs Italiennes",
+    "lieu": "Marché du Vieux-Port de Québec",
+    "duree": 60,
+    "cout": 5,
+    "saison": "été",
+    "type": "gastronomie",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Aperitivo Grande Allée",
+    "lieu": "Terrasses de la Grande Allée",
+    "duree": 120,
+    "cout": 25,
+    "saison": "été",
+    "type": "social",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Cours Cuisine Italienne",
+    "lieu": "École hôtelière de la Capitale",
+    "duree": 180,
+    "cout": 80,
+    "saison": "toute",
+    "type": "apprentissage",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Balade Parc des Champs-de-Bataille",
+    "lieu": "Parc des Champs-de-Bataille",
+    "duree": 45,
+    "cout": 0,
+    "saison": "toute",
+    "type": "plein air",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Opéra de Québec",
+    "lieu": "Grand Théâtre de Québec",
+    "duree": 180,
+    "cout": 75,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Cinéma International",
+    "lieu": "Cinéma Cartier",
+    "duree": 120,
+    "cout": 12,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Italie",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Soirée Latina",
+    "lieu": "Agora du Vieux-Port de Québec",
+    "duree": 150,
+    "cout": 20,
+    "saison": "toute",
+    "type": "festival",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Cours Salsa",
+    "lieu": "Studio de danse Québec",
+    "duree": 90,
+    "cout": 25,
+    "saison": "toute",
+    "type": "danse",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Tour Gastronomique Saint-Roch",
+    "lieu": "Quartier Saint-Roch",
+    "duree": 180,
+    "cout": 40,
+    "saison": "toute",
+    "type": "gastronomie",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Marché Saveurs du Monde",
+    "lieu": "Marché du Vieux-Port de Québec",
+    "duree": 60,
+    "cout": 10,
+    "saison": "toute",
+    "type": "shopping",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Soirée Musique Latine",
+    "lieu": "Agora du Vieux-Port de Québec",
+    "duree": 150,
+    "cout": 30,
+    "saison": "toute",
+    "type": "musique",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Cours Cuisine Mexicaine",
+    "lieu": "École hôtelière de la Capitale",
+    "duree": 180,
+    "cout": 70,
+    "saison": "toute",
+    "type": "apprentissage",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Exposition Art Latino-Américain",
+    "lieu": "Musée de la civilisation",
+    "duree": 90,
+    "cout": 18,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Mexique",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Cabane à Sucre",
+    "lieu": "Érablière Lac-Beauport",
+    "duree": 240,
+    "cout": 35,
+    "saison": "printemps",
+    "type": "tradition",
+    "origine": "Québec",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Randonnée Parc Jacques-Cartier",
+    "lieu": "Parc national de la Jacques-Cartier",
+    "duree": 90,
+    "cout": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Glissade Stoneham",
+    "lieu": "Station Stoneham",
+    "duree": 180,
+    "cout": 25,
+    "saison": "hiver",
+    "type": "sport",
+    "origine": "Québec",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Vieux-Québec Historique",
+    "lieu": "Vieux-Québec",
+    "duree": 300,
+    "cout": 50,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Festival d'Été de Québec",
+    "lieu": "Plaines d'Abraham",
+    "duree": 360,
+    "cout": 75,
+    "saison": "été",
+    "type": "festival",
+    "origine": "Québec",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Marché du Vieux-Port",
+    "lieu": "Marché du Vieux-Port de Québec",
+    "duree": 120,
+    "cout": 15,
+    "saison": "été",
+    "type": "shopping",
+    "origine": "Québec",
+    "exemple_claude": 1
+  },
+  {
+    "nom": "Spectacle Grand Théâtre",
+    "lieu": "Grand Théâtre de Québec",
+    "duree": 120,
+    "cout": 85,
+    "saison": "toute",
+    "type": "spectacle",
+    "origine": "Québec",
+    "exemple_claude": 1
+  }
+]
