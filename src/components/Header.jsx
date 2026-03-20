@@ -1,4 +1,23 @@
+import meta from '../data/meta.json';
+
+function formatSemaine(debut, fin) {
+  const opts = { day: 'numeric', month: 'long' };
+  const locale = 'fr-CA';
+  const d = new Date(debut + 'T12:00:00');
+  const f = new Date(fin + 'T12:00:00');
+  // Même mois → "16 – 22 mars 2026", mois différents → "28 mars – 3 avril 2026"
+  if (d.getMonth() === f.getMonth()) {
+    return `${d.getDate()} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
+  }
+  return `${d.toLocaleDateString(locale, opts)} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
+}
+
 export default function Header() {
+  const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
+  const source = meta.source === 'Ticketmaster' ? 'Ticketmaster · Québec' : 'Données statiques';
+  const maj = new Date(meta.lastUpdated + 'T12:00:00')
+    .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
+
   return (
     <header className="main-header">
       <div className="family-photo-container">
@@ -9,11 +28,18 @@ export default function Header() {
         />
         <div className="photo-caption">Famille · 2025</div>
       </div>
+
       <div className="header-content">
         <h1>Planning Hebdomadaire</h1>
-        <p className="header-subtitle">Repas &nbsp;·&nbsp; Exercices &nbsp;·&nbsp; Activités &nbsp;·&nbsp; Musique</p>
+        <p className="header-subtitle">
+          Repas &nbsp;·&nbsp; Exercices &nbsp;·&nbsp; Activités &nbsp;·&nbsp; Musique
+        </p>
       </div>
-      <div className="header-ornament">Vol. 2025</div>
+
+      <div className="header-meta">
+        <div className="header-semaine">{semaine}</div>
+        <div className="header-maj">Mis à jour le {maj} · {source}</div>
+      </div>
     </header>
   );
 }

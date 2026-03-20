@@ -101,15 +101,29 @@ body {
   margin-top: 12px;
 }
 
-.header-ornament {
+.header-meta {
+  text-align: right;
+  padding-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.header-semaine {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.header-maj {
   font-family: 'Inter', sans-serif;
   font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   color: var(--ink-3);
-  writing-mode: vertical-rl;
-  padding-bottom: 4px;
+  margin-top: 5px;
+  text-transform: uppercase;
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -452,6 +466,23 @@ input[type="range"] {
   color: var(--ink-2);
   margin-top: 4px;
   line-height: 1.5;
+}
+
+.planning-item__link {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.25;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-dark);
+  transition: border-color 0.15s, color 0.15s;
+  display: inline;
+}
+
+.planning-item__link:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
 }
 
 .planning-item__cost {

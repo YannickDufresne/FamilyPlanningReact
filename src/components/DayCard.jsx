@@ -91,11 +91,19 @@ export default function DayCard({ jour }) {
 
       {/* Activité */}
       <div className="planning-item">
-        <div className="planning-item__label">Activité</div>
-        <div className="planning-item__name">{activite.nom}</div>
+        <div className="planning-item__label">Activité · Québec</div>
+        {activite.url ? (
+          <a className="planning-item__name planning-item__link" href={activite.url} target="_blank" rel="noopener noreferrer">
+            {activite.nom}
+          </a>
+        ) : (
+          <div className="planning-item__name">{activite.nom}</div>
+        )}
         {activite.lieu && (
           <div className="planning-item__meta">
-            {activite.lieu}{activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
+            {activite.lieu}
+            {activite.date ? ` · ${new Date(activite.date + 'T12:00:00').toLocaleDateString('fr-CA', { weekday: 'short', day: 'numeric', month: 'short' })}` : ''}
+            {activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
           </div>
         )}
       </div>
