@@ -1,4 +1,4 @@
-// ─── Logique de planification (portée de R vers JS) ───────────────────────────
+// ─── Logique de planification ─────────────────────────────────────────────────
 
 export const THEMES_PAR_JOUR = [
   { jour: 'Lundi',    theme: 'pasta_rapido',    emoji: '🍝' },
@@ -14,7 +14,6 @@ const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
 const SEQUENCE_ENTRAINEMENT = ['échauffement', 'musculaire', 'cardio', 'finition', 'récupération'];
 
 function seededRandom(seed) {
-  // Simple LCG pseudo-random
   let s = seed % 2147483647;
   if (s <= 0) s += 2147483646;
   return () => {
@@ -28,51 +27,62 @@ function pickRandom(arr, rng) {
   return arr[Math.floor(rng() * arr.length)];
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed }) {
+// ── Calcule le lundi de la semaine courante ───────────────────────────────────
+export function getLundiSemaine() {
+  const today = new Date();
+  const day = today.getDay(); // 0=dim
+  const diff = day === 0 ? -6 : 1 - day;
+  const lundi = new Date(today);
+  lundi.setDate(today.getDate() + diff);
+  lundi.setHours(12, 0, 0, 0);
+  return lundi;
+}
+
+// ── Formate une date en "Vendredi, 20 mars" ───────────────────────────────────
+export function formatDateJour(date) {
+  return date.toLocaleDateString('fr-CA', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+  });
+}
+
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut }) {
   const { nbVegetarien, nbVegane, activerOrigine, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
   if (nbOmnivore < 0) return null;
+
+  // Lundi de référence (depuis meta.json ou calculé)
+  const lundi = semaineDebut
+    ? new Date(semaineDebut + 'T12:00:00')
+    : getLundiSemaine();
 
   let compteurOmnivore = 0;
   let compteurVegetarien = 0;
   let compteurVegane = 0;
   const planning = [];
 
-  // ── Shuffle seedé des activités — distribué sans répétition sur 7 jours ───
-  function shuffleSeeded(arr, s) {
-    const a = [...arr];
-    const rng = seededRandom(s);
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(rng() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
-
-  let activitesDispo = activites;
-  if (filtres.activerOrigine && filtres.origine)
-    activitesDispo = activitesDispo.filter(a => a.origine === filtres.origine);
-  if (activitesDispo.length === 0) activitesDispo = activites;
-  const activitesShuffled = shuffleSeeded(activitesDispo, seed + 9999);
-
   for (let i = 0; i < 7; i++) {
     const jourInfo = THEMES_PAR_JOUR[i];
     const themeCol = `theme_${jourInfo.theme}`;
     const rngRecette  = seededRandom(seed + i * 13);
     const rngExercice = seededRandom(seed + i * 17 + 500);
-    const rngActivite = seededRandom(seed + i * 19 + 1000);
     const rngMusique  = seededRandom(seed + i * 23 + 2000);
+
+    // Date réelle de ce jour dans la semaine
+    const dateJour = new Date(lundi);
+    dateJour.setDate(lundi.getDate() + i);
+    const dateStr = dateJour.toISOString().split('T')[0]; // "2026-03-20"
 
     // ── Recettes ──────────────────────────────────────────────────────────────
     let recettesDispo = recettes.filter(r => r[themeCol] === 1);
     if (activerOrigine && origine) recettesDispo = recettesDispo.filter(r => r.origine === origine);
-    if (activerCout)              recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
+    if (activerCout)               recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
 
-    // Déterminer le régime nécessaire
     let regimeNecessaire = null;
-    if      (compteurVegane      < nbVegane)      regimeNecessaire = 'végane';
-    else if (compteurVegetarien  < nbVegetarien)  regimeNecessaire = 'végétarien';
-    else if (compteurOmnivore    < nbOmnivore)     regimeNecessaire = 'omnivore';
+    if      (compteurVegane     < nbVegane)     regimeNecessaire = 'végane';
+    else if (compteurVegetarien < nbVegetarien) regimeNecessaire = 'végétarien';
+    else if (compteurOmnivore   < nbOmnivore)   regimeNecessaire = 'omnivore';
 
     if (regimeNecessaire) {
       const avecRegime = recettesDispo.filter(r => r.regime_alimentaire === regimeNecessaire);
@@ -103,10 +113,11 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       exercicesJour = [{ nom: '🛌 Jour de repos', duree: 0, objectif: 'récupération', fonction: 'repos' }];
     }
 
-    // ── Activité — distribuée via shuffle seedé global ────────────────────────
-    // (calculé avant la boucle et réutilisé ici via closure)
-    const activite = activitesShuffled[i % activitesShuffled.length]
-      || { nom: 'Activité à définir', lieu: 'À définir', cout: 0 };
+    // ── Activité — uniquement si un événement est prévu ce jour précis ────────
+    const activitesJour = activites.filter(a => a.date === dateStr);
+    const activite = activitesJour.length > 0
+      ? pickRandom(activitesJour, rngRecette) // rng stable
+      : null; // Aucun événement ce jour
 
     // ── Musique ───────────────────────────────────────────────────────────────
     let musiqueDispo = musique;
@@ -116,16 +127,17 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
 
     planning.push({
       jour: jourInfo.jour,
+      date: dateStr,
+      dateFormatee: formatDateJour(dateJour), // "Vendredi, 20 mars"
       theme: jourInfo.theme,
       emoji: jourInfo.emoji,
       recette: recetteJour,
       exercices: exercicesJour,
-      activite,
+      activite, // null si aucun événement
       musique: musiqueJour,
     });
   }
 
-  // Contrainte de temps total
   if (activerTemps) {
     const tempsTotal = planning.reduce((s, j) => s + (j.recette.temps_preparation || 0), 0);
     if (tempsTotal > tempsMax) return null;
@@ -137,10 +149,11 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
 export function calculerStats(planning) {
   if (!planning) return null;
   const valides = planning.filter(j => !j.recette.nom.startsWith('⚠️'));
-  const tempsTotal   = planning.reduce((s, j) => s + (j.recette.temps_preparation || 0), 0);
-  const coutRecettes = planning.reduce((s, j) => s + (j.recette.cout || 0), 0);
-  const coutActivites = valides.length > 0
-    ? Math.round(valides.reduce((s, j) => s + (j.activite.cout || 0), 0) / valides.length * 10) / 10
+  const tempsTotal    = planning.reduce((s, j) => s + (j.recette.temps_preparation || 0), 0);
+  const coutRecettes  = planning.reduce((s, j) => s + (j.recette.cout || 0), 0);
+  const activitesAvec = valides.filter(j => j.activite);
+  const coutActivites = activitesAvec.length > 0
+    ? Math.round(activitesAvec.reduce((s, j) => s + (j.activite.cout || 0), 0) / activitesAvec.length * 10) / 10
     : 0;
 
   const regimes = { omnivore: 0, végétarien: 0, végane: 0 };

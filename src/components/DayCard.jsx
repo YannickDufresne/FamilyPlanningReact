@@ -1,5 +1,4 @@
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
-
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
 
 function EvalRow({ recette }) {
@@ -12,7 +11,6 @@ function EvalRow({ recette }) {
   ];
   const hasEvals = membres.some(m => recette[m.key] != null && recette[m.key] !== '');
   if (!hasEvals) return null;
-
   return (
     <div className="eval-grid eval-grid--card">
       {membres.map(m => (
@@ -29,7 +27,7 @@ function EvalRow({ recette }) {
 }
 
 export default function DayCard({ jour }) {
-  const { recette, exercices, activite, musique, emoji } = jour;
+  const { recette, exercices, activite, musique, emoji, dateFormatee } = jour;
   const isWarning = recette.nom.startsWith('⚠️');
   const isTraining = JOURS_ENTRAINEMENT.includes(jour.jour);
   const isRepos = exercices.length === 1 && exercices[0].fonction === 'repos';
@@ -39,38 +37,36 @@ export default function DayCard({ jour }) {
     <article className={`day-card ${isWarning ? 'day-card--warning' : ''} ${isTraining ? 'day-card--training' : ''}`}>
       <div className="day-card__accent" />
 
+      {/* En-tête avec date */}
       <div className="day-card__header">
-        <span className="day-card__jour">{jour.jour}</span>
+        <div className="day-card__header-left">
+          <span className="day-card__jour">{jour.jour}</span>
+          <span className="day-card__date">{dateFormatee.split(', ')[1]}</span>
+        </div>
         <span className="day-card__emoji">{emoji}</span>
         <span className="day-card__theme">{jour.theme.replace(/_/g, '\u00a0')}</span>
       </div>
 
-      {/* Recette */}
+      {/* Repas */}
       <div className="planning-item">
         <div className="planning-item__label">Repas</div>
         <div className="planning-item__name">
           {recette.nom}
-          {regimeLabel && !isWarning && (
-            <span className="regime-badge">{regimeLabel}</span>
-          )}
+          {regimeLabel && !isWarning && <span className="regime-badge">{regimeLabel}</span>}
         </div>
         {!isWarning && (
-          <div className="planning-item__cost">
-            {recette.cout}$ &nbsp;·&nbsp; {recette.temps_preparation} min
-          </div>
+          <div className="planning-item__cost">{recette.cout}$ · {recette.temps_preparation} min</div>
         )}
         {!isWarning && recette.ingredients && (
           <div className="planning-item__meta">{recette.ingredients}</div>
         )}
         {isWarning && (
-          <div className="planning-item__meta" style={{ color: '#C91D21' }}>
-            {recette.ingredients}
-          </div>
+          <div className="planning-item__meta" style={{ color: '#C91D21' }}>{recette.ingredients}</div>
         )}
         {!isWarning && <EvalRow recette={recette} />}
       </div>
 
-      {/* Exercice */}
+      {/* Entraînement */}
       <div className="planning-item">
         <div className="planning-item__label">Entraînement</div>
         {isRepos ? (
@@ -81,30 +77,34 @@ export default function DayCard({ jour }) {
           <div className="exercice-list">
             {exercices.map((ex, i) => (
               <div key={i} className="exercice-item">
-                {ex.nom}
-                <span style={{ opacity: 0.55, fontSize: '0.75rem' }}> · {ex.duree} min</span>
+                {ex.nom}<span style={{ opacity: 0.5, fontSize: '0.75rem' }}> · {ex.duree} min</span>
               </div>
             ))}
           </div>
         )}
       </div>
 
-      {/* Activité */}
+      {/* Activité — seulement si événement ce jour-là */}
       <div className="planning-item">
         <div className="planning-item__label">Activité · Québec</div>
-        {activite.url ? (
-          <a className="planning-item__name planning-item__link" href={activite.url} target="_blank" rel="noopener noreferrer">
-            {activite.nom}
-          </a>
+        {activite ? (
+          <>
+            {activite.url ? (
+              <a className="planning-item__name planning-item__link"
+                href={activite.url} target="_blank" rel="noopener noreferrer">
+                {activite.nom}
+              </a>
+            ) : (
+              <div className="planning-item__name">{activite.nom}</div>
+            )}
+            {activite.lieu && (
+              <div className="planning-item__meta">
+                {activite.lieu}{activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
+              </div>
+            )}
+          </>
         ) : (
-          <div className="planning-item__name">{activite.nom}</div>
-        )}
-        {activite.lieu && (
-          <div className="planning-item__meta">
-            {activite.lieu}
-            {activite.date ? ` · ${new Date(activite.date + 'T12:00:00').toLocaleDateString('fr-CA', { weekday: 'short', day: 'numeric', month: 'short' })}` : ''}
-            {activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
-          </div>
+          <div className="planning-item__empty">Aucun événement planifié</div>
         )}
       </div>
 

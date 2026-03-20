@@ -412,6 +412,12 @@ input[type="range"] {
   gap: 10px;
 }
 
+.day-card__header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .day-card__jour {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
@@ -421,10 +427,19 @@ input[type="range"] {
   letter-spacing: -0.01em;
 }
 
+.day-card__date {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+
 .day-card__emoji {
   font-size: 1rem;
   opacity: 0.7;
   line-height: 1;
+  margin-left: 6px;
 }
 
 .day-card__theme {
@@ -434,6 +449,14 @@ input[type="range"] {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-3);
+}
+
+.planning-item__empty {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--ink-3);
+  font-style: italic;
+  font-weight: 300;
 }
 
 /* Sections */

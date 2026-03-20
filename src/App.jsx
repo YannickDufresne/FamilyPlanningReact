@@ -8,6 +8,7 @@ import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
 import activites from './data/activites.json';
 import musique from './data/musique.json';
+import meta from './data/meta.json';
 import './App.css';
 
 const DEFAULT_FILTRES = {
@@ -26,7 +27,10 @@ export default function App() {
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 100000));
 
   const planning = useMemo(() =>
-    genererPlanning({ recettes, exercices, activites, musique, filtres, seed }),
+    genererPlanning({
+      recettes, exercices, activites, musique, filtres, seed,
+      semaineDebut: meta.semaine.debut,
+    }),
     [filtres, seed]
   );
 
