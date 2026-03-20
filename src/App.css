@@ -386,9 +386,6 @@ input[type="range"] {
 /* Ligne de couleur en haut : rouge pour jour d'entraînement, neutre sinon */
 .day-card__accent {
   height: 3px;
-  background: var(--border);
-}
-.day-card--training .day-card__accent {
   background: var(--ink);
 }
 
