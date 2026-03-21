@@ -1,12 +1,13 @@
 /* ══════════════════════════════════════════════════════════════════════════════
    PLANNING FAMILIAL — NYT Editorial · Marie Kondo Clarity
-   Blanc · Encre · Rouge retenu · Espace qui respire
+   Palette tirée de la photo de famille : vert forêt · sauge · terracotta · lin
    ══════════════════════════════════════════════════════════════════════════════ */
 
 :root {
+  /* ── Neutres ── */
   --bg:          #FFFFFF;
   --surface:     #FAFAF8;
-  --surface-2:   #F3F1EC;
+  --surface-2:   #F3F1EC;   /* lin chaud, rappel du haut de Patricia */
   --border:      #E4E2DC;
   --border-dark: #C8C5BC;
 
@@ -14,7 +15,17 @@
   --ink-2:       #555550;
   --ink-3:       #999990;
 
-  --red:         #C91D21;
+  /* ── Palette photo de famille ── */
+  --forest:      #3A5C26;   /* vert forêt profond — arbres derrière la famille */
+  --sage:        #6E9050;   /* vert sauge — herbe éclairée */
+  --sage-light:  #EEF4E8;   /* surface sauge très pâle */
+  --terra:       #A85F38;   /* terracotta — robe fleurie de Luce */
+  --terra-light: #F5EBE4;   /* surface terracotta très pâle */
+  --bark:        #5C3D22;   /* brun écorce — chandail de Yannick */
+
+  /* ── Accent principal (remplace rouge) ── */
+  --accent:      var(--forest);
+  --accent-warm: var(--terra);
 
   --col-gap: 32px;
 }
@@ -140,7 +151,7 @@ body {
 .data-status {
   padding: 16px 20px;
   border-bottom: 1px solid var(--border);
-  background: var(--surface-2);
+  background: var(--sage-light);
 }
 
 .data-status-title {
@@ -167,10 +178,10 @@ body {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--forest);
   margin: 24px 0 14px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--sage-light);
 }
 
 .sidebar-section-title:first-child { margin-top: 0; }
@@ -264,7 +275,7 @@ input[type="range"] {
   gap: 10px;
 }
 
-.btn-rebrasser:hover { background: var(--red); }
+.btn-rebrasser:hover { background: var(--forest); }
 
 /* ── Stats ─────────────────────────────────────────────────────────────────── */
 .stats-container { margin-top: 4px; }
@@ -464,7 +475,10 @@ input[type="range"] {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--terra);
+  background: var(--terra-light);
+  padding: 0.1rem 0.45rem;
+  border-radius: 2rem;
   margin-top: 5px;
 }
 
@@ -513,8 +527,8 @@ input[type="range"] {
 }
 
 .planning-item__link:hover {
-  color: var(--red);
-  border-bottom-color: var(--red);
+  color: var(--forest);
+  border-bottom-color: var(--forest);
 }
 
 .planning-item__cost {
@@ -694,7 +708,7 @@ input[type="range"] {
   transition: color 0.15s, opacity 0.15s;
   opacity: 1;
 }
-.header-nav-link:hover { color: var(--red); }
+.header-nav-link:hover { color: var(--forest); }
 
 /* ══════════════════════════════════════════════════════════════════════════════
    SIDEBAR SELECT — Origine toujours visible
@@ -836,9 +850,9 @@ input[type="range"] {
 }
 .filtre-pill:hover { border-color: var(--ink); }
 .filtre-pill--active {
-  background: var(--ink);
+  background: var(--forest);
   color: var(--bg);
-  border-color: var(--ink);
+  border-color: var(--forest);
 }
 
 /* Grille */
@@ -882,8 +896,8 @@ input[type="range"] {
   border-radius: 2rem;
 }
 .recette-tag--theme {
-  background: var(--surface-2);
-  color: var(--ink-2);
+  background: var(--sage-light);
+  color: var(--forest);
 }
 .recette-tag--regime {
   background: transparent;
@@ -912,7 +926,7 @@ input[type="range"] {
 }
 .recette-card__dot { opacity: 0.35; }
 .recette-card__cout { color: var(--ink-3); letter-spacing: 0.02em; }
-.recette-card__avg { color: var(--ink); font-weight: 500; }
+.recette-card__avg { color: var(--sage); font-weight: 500; }
 
 .recette-card__ingredients {
   font-family: 'Inter', sans-serif;

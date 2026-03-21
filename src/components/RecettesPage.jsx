@@ -21,9 +21,9 @@ const MEMBRES = [
 ];
 
 const REGIME_CONFIG = {
-  omnivore:    { label: 'Omnivore',    color: '#7a4f2a' },
-  végétarien:  { label: 'Végétarien', color: '#2e7d32' },
-  végane:      { label: 'Végane',      color: '#1a5928' },
+  omnivore:   { label: 'Omnivore',    color: '#5C3D22' }, /* bark */
+  végétarien: { label: 'Végétarien', color: '#3A5C26' }, /* forest */
+  végane:     { label: 'Végane',      color: '#6E9050' }, /* sage */
 };
 
 // ── Carte recette ──────────────────────────────────────────────────────────
