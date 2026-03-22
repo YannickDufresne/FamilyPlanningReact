@@ -6,11 +6,13 @@ import GroceryList from './components/GroceryList';
 import RecettesPage from './components/RecettesPage';
 import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
+import ProfilsModal from './components/ProfilsModal';
 import { genererPlanning, calculerStats } from './utils/planning';
 import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
 import activites from './data/activites.json';
 import musique from './data/musique.json';
+import familleDefaut from './data/famille.json';
 import meta from './data/meta.json';
 import './App.css';
 
@@ -42,6 +44,14 @@ export default function App() {
   });
   const [view, setView] = useState('planning'); // 'planning' | 'recettes'
   const [showUpdateModal, setShowUpdateModal] = useState(false);
+  const [showProfilsModal, setShowProfilsModal] = useState(false);
+  const [profils, setProfils] = useState(() => {
+    try {
+      const saved = localStorage.getItem('fp_profils');
+      if (saved) return JSON.parse(saved);
+    } catch {}
+    return familleDefaut;
+  });
 
   if (!authentifie) {
     return <LoginScreen onSuccess={() => setAuthentifie(true)} />;
@@ -51,8 +61,9 @@ export default function App() {
     genererPlanning({
       recettes, exercices, activites, musique, filtres, seed,
       semaineDebut: meta.semaine.debut,
+      profils,
     }),
-    [filtres, seed]
+    [filtres, seed, profils]
   );
 
   const stats = useMemo(() => calculerStats(planning), [planning]);
@@ -62,6 +73,7 @@ export default function App() {
       <Header
         onViewRecettes={() => setView('recettes')}
         onViewUpdate={() => setShowUpdateModal(true)}
+        onViewProfils={() => setShowProfilsModal(true)}
       />
       {view === 'recettes' ? (
         <RecettesPage onRetour={() => setView('planning')} />
@@ -80,6 +92,17 @@ export default function App() {
         </div>
       )}
       {showUpdateModal && <UpdateModal onClose={() => setShowUpdateModal(false)} />}
+      {showProfilsModal && (
+        <ProfilsModal
+          profils={profils}
+          onSave={(nouveauxProfils) => {
+            setProfils(nouveauxProfils);
+            localStorage.setItem('fp_profils', JSON.stringify(nouveauxProfils));
+            setShowProfilsModal(false);
+          }}
+          onClose={() => setShowProfilsModal(false)}
+        />
+      )}
     </div>
   );
 }

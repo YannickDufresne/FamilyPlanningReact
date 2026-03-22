@@ -1,7 +1,37 @@
 [
-  { "prenom": "Patricia", "emoji": "💚", "naissance": "1993-05-29" },
-  { "prenom": "Yannick",  "emoji": "🦉", "naissance": "1981-01-23" },
-  { "prenom": "Joseph",   "emoji": "🐤", "naissance": "2012-07-07" },
-  { "prenom": "Mika",     "emoji": "🍒", "naissance": "2024-08-25" },
-  { "prenom": "Luce",     "emoji": "🍒", "naissance": "2024-08-25" }
+  {
+    "prenom": "Patricia",
+    "emoji": "💚",
+    "naissance": "1993-05-29",
+    "aime": "culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre, expositions",
+    "note": "Apprécie les sorties culturelles raffinées et les moments de détente en famille"
+  },
+  {
+    "prenom": "Yannick",
+    "emoji": "🦉",
+    "naissance": "1981-01-23",
+    "aime": "histoire, architecture, gastronomie, randonnée, découvertes intellectuelles, patrimoine",
+    "note": "Curieux et passionné d'histoire, aime explorer la ville et ses quartiers"
+  },
+  {
+    "prenom": "Joseph",
+    "emoji": "🐤",
+    "naissance": "2012-07-07",
+    "aime": "sport, plein air, aventure, animaux, activités physiques, ado actif, skateboard, escalade",
+    "note": "Adolescent énergique, préfère les activités avec de l'action et du mouvement"
+  },
+  {
+    "prenom": "Mika",
+    "emoji": "🍒",
+    "naissance": "2024-08-25",
+    "aime": "jeux, animaux, couleurs, musique, tout ce qui est joyeux et coloré",
+    "note": "Tout-petit curieux et joyeux, aime tout ce qui bouge et fait du bruit"
+  },
+  {
+    "prenom": "Luce",
+    "emoji": "🍒",
+    "naissance": "2024-08-25",
+    "aime": "nature, câlins, famille, douceur, eau, fleurs, exploration douce",
+    "note": "Jumelle de Mika, plus calme et observatrice, aime la nature et les activités douces"
+  }
 ]

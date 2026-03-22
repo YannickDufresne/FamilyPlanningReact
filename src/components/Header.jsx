@@ -25,7 +25,7 @@ function SourceDot({ statut, label }) {
   );
 }
 
-export default function Header({ onViewRecettes, onViewUpdate }) {
+export default function Header({ onViewRecettes, onViewUpdate, onViewProfils }) {
   const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
   const maj = new Date((meta.lastUpdated || '').split('T')[0] + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -39,13 +39,19 @@ export default function Header({ onViewRecettes, onViewUpdate }) {
 
   return (
     <header className="main-header">
-      <div className="family-photo-container">
+      <button
+        className="family-photo-container family-photo-btn"
+        onClick={onViewProfils}
+        title="Voir et modifier les profils de la famille"
+        aria-label="Profils de la famille"
+      >
         <img
           src={`${import.meta.env.BASE_URL}family_photo.jpg`}
           alt="Portrait de famille"
           className="family-photo"
         />
-      </div>
+        <span className="family-photo-hint">✏️</span>
+      </button>
 
       <div className="header-content">
         <h1>Planning Hebdomadaire</h1>

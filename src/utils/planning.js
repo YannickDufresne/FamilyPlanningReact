@@ -1,5 +1,31 @@
 // ─── Logique de planification ─────────────────────────────────────────────────
 
+// ── Score d'affinité activité ↔ profils famille ───────────────────────────────
+// Compare les mots-clés des préférences de chaque membre avec le texte de l'activité.
+// Retourne un score entier (plus élevé = meilleure correspondance).
+function scorerActivite(activite, profils, pourQui = 'famille') {
+  if (!profils || profils.length === 0) return 0;
+  const texte = `${activite.nom || ''} ${activite.description || ''} ${activite.lieu || ''}`.toLowerCase();
+
+  const membres = pourQui === 'adultes'
+    ? profils.filter(p => {
+        const n = new Date(p.naissance + 'T12:00:00');
+        const age = new Date().getFullYear() - n.getFullYear();
+        return age >= 18;
+      })
+    : profils;
+
+  let score = 0;
+  for (const m of membres) {
+    const mots = (m.aime || '').toLowerCase().split(/[,;]+/).map(s => s.trim()).filter(Boolean);
+    for (const mot of mots) {
+      if (mot.length >= 3 && texte.includes(mot)) score++;
+    }
+  }
+  if (activite.incontournable) score += 20;
+  return score;
+}
+
 export const THEMES_PAR_JOUR = [
   { jour: 'Lundi',    theme: 'pasta_rapido',    emoji: '🍝' },
   { jour: 'Mardi',    theme: 'bol_nwich',        emoji: '🌮' },
@@ -55,7 +81,7 @@ function shuffleSeeded(arr, seed) {
   return a;
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut }) {
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [] }) {
   const { nbVegetarien, nbVegane, nbGratuit = 1, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
@@ -160,26 +186,32 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     const fallbackGratuits = activitesFallback.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0);
     const fallbackPayants  = activitesFallback.filter(a => !a.gratuit && (a.cout_adulte ?? a.cout ?? 0) > 0);
 
-    let activite = null;
+    // ── Construire le pool famille (toutes activités valides ce jour) ─────────
+    let poolFamille = [];
     if (incontournablesJour.length > 0) {
-      // Incontournable ce jour-là → toujours prioritaire
-      activite = incontournablesJour[0];
+      poolFamille = [...incontournablesJour, ...activitesJour.filter(a => !a.incontournable), ...activitesFallback];
     } else if (activitesJour.length > 0) {
-      activite = pickRandom(activitesJour, rngRecette);
+      poolFamille = [...activitesJour, ...activitesFallback];
     } else if (activitesFallback.length > 0) {
-      // Jours désignés "gratuits" : sélectionnés via shuffle seeded pour répartition dans la semaine
+      // Respecte le quota gratuit : si ce jour est désigné gratuit, les gratuits en premier
       if (joursGratuitsSet.has(i) && fallbackGratuits.length > 0) {
-        const idxG = [...joursGratuitsSet].sort((a, b) => a - b).indexOf(i);
-        activite = fallbackGratuits[idxG % fallbackGratuits.length];
+        poolFamille = [...fallbackGratuits, ...fallbackPayants];
       } else {
         const poolPayant = fallbackPayants.length > 0 ? fallbackPayants : activitesFallback;
-        const idxP = joursPayantsSeq[i] ?? (i % poolPayant.length);
-        activite = poolPayant[idxP % poolPayant.length];
+        poolFamille = [...poolPayant, ...activitesFallback.filter(a => !poolPayant.includes(a))];
       }
     }
 
-    // ── Activité adultes (alternative pour mode adultes-seulement) ────────────
-    const rngAdultes = seededRandom(seed + i * 37 + 7777);
+    // Score + déduplique + prend top-3 famille
+    const familleSeen = new Set();
+    const topFamille = poolFamille
+      .filter(a => { if (familleSeen.has(a.nom)) return false; familleSeen.add(a.nom); return true; })
+      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'famille') }))
+      .sort((a, b) => b._score - a._score)
+      .slice(0, 3);
+    const activite = topFamille[0] ?? null;
+
+    // ── Pool adultes ──────────────────────────────────────────────────────────
     const adultesFallback = activites.filter(a =>
       (!a.date || a.date === '') &&
       (a.pourQui === 'adultes' || a.pourQui === 'adulte')
@@ -188,14 +220,19 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       a.date === dateStr &&
       (a.pourQui === 'adultes' || a.pourQui === 'adulte')
     );
-    let activiteAdultes = null;
-    if (adultesJour.length > 0) {
-      activiteAdultes = pickRandom(adultesJour, rngAdultes);
-    } else if (adultesFallback.length > 0) {
-      activiteAdultes = adultesFallback[i % adultesFallback.length];
-    }
-    // Si aucune activité adultes spécifique, on garde l'activité famille
-    if (!activiteAdultes) activiteAdultes = activite;
+    let poolAdultes = adultesJour.length > 0
+      ? [...adultesJour, ...adultesFallback]
+      : adultesFallback.length > 0
+        ? adultesFallback
+        : poolFamille; // fallback sur famille si aucune activité adultes
+
+    const adultesSeen = new Set();
+    const topAdultes = poolAdultes
+      .filter(a => { if (adultesSeen.has(a.nom)) return false; adultesSeen.add(a.nom); return true; })
+      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'adultes') }))
+      .sort((a, b) => b._score - a._score)
+      .slice(0, 3);
+    const activiteAdultes = topAdultes[0] ?? activite;
 
     // ── Musique : calquée sur l'origine culturelle de la recette ─────────────
     const origineRecette = recetteJour?.origine;
@@ -219,6 +256,8 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       exercices: exercicesJour,
       activite,
       activiteAdultes,
+      topFamille,
+      topAdultes,
       musique: musiqueJour,
     });
   }

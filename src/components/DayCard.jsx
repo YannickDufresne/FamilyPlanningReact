@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { calculerPrixFamille } from '../utils/prixFamille';
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
@@ -63,10 +64,16 @@ function PrixFamille({ activite, date }) {
 }
 
 export default function DayCard({ jour, modeActivite = 'famille', onToggleModeActivite }) {
-  const { recette, exercices, activite, activiteAdultes, musique, emoji, dateCourte } = jour;
-  const activiteAffichee = modeActivite === 'adultes' && activiteAdultes ? activiteAdultes : activite;
-  // Ne montrer le toggle que si les deux activités sont différentes
-  const hasAlternative = activiteAdultes && activiteAdultes !== activite;
+  const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
+  const [indexFamille, setIndexFamille] = useState(0);
+  const [indexAdultes, setIndexAdultes] = useState(0);
+
+  const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
+  const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
+  const setIdx = modeActivite === 'adultes' ? setIndexAdultes : setIndexFamille;
+
+  const activiteAffichee = pool.length > 0 ? pool[Math.min(idx, pool.length - 1)] : (modeActivite === 'adultes' ? activiteAdultes : activite);
+
   const isWarning = recette.nom.startsWith('⚠️');
   const isTraining = JOURS_ENTRAINEMENT.includes(jour.jour);
   const isRepos = exercices.length === 1 && exercices[0].fonction === 'repos';
@@ -132,20 +139,18 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
               <span className="incontournable-badge">⭐ À ne pas manquer</span>
             )}
           </span>
-          {hasAlternative && (
-            <div className="activite-mode-toggle">
-              <button
-                className={`mode-btn${modeActivite === 'famille' ? ' mode-btn--active' : ''}`}
-                onClick={() => onToggleModeActivite('famille')}
-                title="Activité pour toute la famille"
-              >👨‍👩‍👧 Famille</button>
-              <button
-                className={`mode-btn${modeActivite === 'adultes' ? ' mode-btn--active' : ''}`}
-                onClick={() => onToggleModeActivite('adultes')}
-                title="Activité adultes seulement"
-              >🍷 Adultes</button>
-            </div>
-          )}
+          <div className="activite-mode-toggle">
+            <button
+              className={`mode-btn${modeActivite === 'famille' ? ' mode-btn--active' : ''}`}
+              onClick={() => { onToggleModeActivite('famille'); setIndexFamille(0); }}
+              title="Activité pour toute la famille"
+            >👨‍👩‍👧 Famille</button>
+            <button
+              className={`mode-btn${modeActivite === 'adultes' ? ' mode-btn--active' : ''}`}
+              onClick={() => { onToggleModeActivite('adultes'); setIndexAdultes(0); }}
+              title="Activité adultes seulement"
+            >🍷 Adultes</button>
+          </div>
         </div>
         {activiteAffichee ? (
           <>
@@ -177,6 +182,23 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
             <PrixFamille activite={activiteAffichee} date={jour.date} />
             {activiteAffichee.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
+            )}
+            {/* Navigation top-3 */}
+            {pool.length > 1 && (
+              <div className="activite-top3">
+                {pool.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`top3-dot${i === Math.min(idx, pool.length - 1) ? ' top3-dot--active' : ''}`}
+                    onClick={() => setIdx(i)}
+                    title={pool[i]?.nom}
+                    aria-label={`Option ${i + 1}`}
+                  />
+                ))}
+                <span className="top3-label">
+                  {Math.min(idx, pool.length - 1) + 1} / {pool.length}
+                </span>
+              </div>
             )}
           </>
         ) : (
