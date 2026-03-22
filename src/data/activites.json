@@ -1,5 +1,25 @@
 [
   {
+    "nom": "Défilé de la Saint-Patrick de Québec",
+    "lieu": "Avenue Cartier → Château Frontenac, Québec",
+    "duree": 180,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "printemps",
+    "type": "festival",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-03-28",
+    "url": "https://qcpatrick.com/festivites/defile-de-la-saint-patrick-de-quebec",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "famille",
+    "gratuit": true,
+    "description": "Le grand défilé annuel de la Saint-Patrick à Québec — fanfares, costumes verts, chars allégoriques. Départ avenue Cartier à 14h. Gratuit et incontournable pour toute la famille! 🍀🟢"
+  },
+  {
     "nom": "Webdiffusion LHJMQ 25-26",
     "lieu": "Centre Vidéotron",
     "duree": 120,

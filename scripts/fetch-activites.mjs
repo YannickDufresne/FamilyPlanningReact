@@ -369,20 +369,25 @@ async function fetchIncontournables(anthropicKey, semaine, existantes) {
 
 Utilise l'outil de recherche web pour trouver les événements INCONTOURNABLES et MAJEURS de la semaine du ${semaine.debutLisible} au ${semaine.finLisible} à Québec.
 
-SITES À CONSULTER EN PRIORITÉ :
-- https://quoifaire.com/quebec (consulte cette URL directement)
-- https://www.quebecregion.com/fr/evenements/
-- Recherche "événements incontournables Québec ${semaine.debut}"
-- Recherche "parade Saint-Patrick Québec 2026" si la semaine inclut le 17 mars ou un week-end proche
-- Recherche "festival Québec ${semaine.debut.substring(0, 7)}"
-- Recherche "grands événements Québec semaine ${semaine.debutLisible}"
+RECHERCHES OBLIGATOIRES À FAIRE (dans cet ordre) :
+1. Cherche "événements Québec ${semaine.debut} ${semaine.fin} incontournable"
+2. Consulte https://macommunaute.ca/evenements/?ville=quebec pour la semaine concernée
+3. Cherche "${semaine.debut.substring(0, 7)} Québec festival parade défilé"
+4. Cherche des événements annuels spécifiques si la période s'y prête :
+   - Mars : "défilé Saint-Patrick Québec 2026" → Le défilé de Québec est habituellement le DERNIER samedi de mars (pas le 17 mars), cherche la date exacte sur qcpatrick.com
+   - Juin : "Festival d'été Québec 2026"
+   - Juillet : "FEQ Festival d'été de Québec 2026"
+   - Hiver : "Carnaval de Québec 2026"
+5. Consulte https://quoifaire.com/quebec pour la semaine
 
 CRITÈRES pour qu'un événement soit "incontournable" :
 - Parade ou défilé annuel (Saint-Patrick, Carnaval, etc.)
 - Festival reconnu (Jazz, Films, FEQ, etc.)
 - Événement unique ou rare cette semaine
 - Plus de 500 personnes attendues
-- Événement familial ou culturel majeur
+- Événement familial ou culturel majeur de la région
+
+IMPORTANT : Vérifie que la date de l'événement tombe BIEN entre ${semaine.debut} et ${semaine.fin}. Sinon, ne l'inclus pas.
 
 Déjà listés (ne pas dupliquer) :
 ${dejaListes}
