@@ -29,15 +29,20 @@ function EvalRow({ recette }) {
 }
 
 // ── Ventilation du prix par membre de la famille ──────────────────────────
-function PrixFamille({ cout, date }) {
-  if (!cout || cout === 0) return null;
+function PrixFamille({ activite, date }) {
+  const prixRef = activite.cout_adulte ?? activite.cout ?? 0;
+  if (prixRef === 0) return null;
 
-  const ventilation = calculerPrixFamille(cout, date);
+  const ventilation = calculerPrixFamille(activite, date);
   const total = ventilation.reduce((s, m) => s + m.prix, 0);
+  const hasTieredPricing = activite.cout_adulte !== undefined && activite.cout_adulte !== null;
 
   return (
     <div className="prix-famille">
-      <div className="prix-famille__titre">Prix famille</div>
+      <div className="prix-famille__titre">
+        Prix famille
+        {!hasTieredPricing && <span className="prix-famille__estime"> · estimé</span>}
+      </div>
       <div className="prix-famille__grille">
         {ventilation.map(m => (
           <div key={m.prenom} className="prix-membre">
@@ -140,7 +145,7 @@ export default function DayCard({ jour }) {
                 {activite.description}
               </div>
             )}
-            <PrixFamille cout={activite.cout} date={jour.date} />
+            <PrixFamille activite={activite} date={jour.date} />
             {activite.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
             )}

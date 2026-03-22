@@ -17,14 +17,22 @@ import Anthropic from '@anthropic-ai/sdk';
 const __dir = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dir, '..', 'src', 'data');
 
-// ── Profils de la famille (préférences et émojis) ─────────────────────────────
+// ── Profils de la famille (avec dates de naissance pour calcul d'âge réel) ──
 const FAMILLE = [
-  { prenom: 'Patricia', emoji: '💚', gouts: 'culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre' },
-  { prenom: 'Yannick',  emoji: '🦉', gouts: 'histoire, architecture, gastronomie, randonnée, découvertes intellectuelles' },
-  { prenom: 'Joseph',   emoji: '🐤', gouts: 'sport, plein air, aventure, animaux, activités physiques énergiques, enfant actif' },
-  { prenom: 'Mika',     emoji: '🍒', gouts: 'créativité, arts, jeux, activités amusantes et colorées, enfant curieux' },
-  { prenom: 'Luce',     emoji: '🍒', gouts: 'activités douces, nature, famille, jeux simples, tout-petit' },
+  { prenom: 'Patricia', emoji: '💚', naissance: '1993-05-29', gouts: 'culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre' },
+  { prenom: 'Yannick',  emoji: '🦉', naissance: '1981-01-23', gouts: 'histoire, architecture, gastronomie, randonnée, découvertes intellectuelles' },
+  { prenom: 'Joseph',   emoji: '🐤', naissance: '2012-07-07', gouts: 'sport, plein air, aventure, animaux, activités physiques énergiques, adolescent actif' },
+  { prenom: 'Mika',     emoji: '🍒', naissance: '2024-08-25', gouts: 'créativité, arts, jeux, activités amusantes et colorées, tout-petit curieux' },
+  { prenom: 'Luce',     emoji: '🍒', naissance: '2024-08-25', gouts: 'activités douces, nature, famille, jeux simples, jumelle de Mika, tout-petite' },
 ];
+
+function calculerAge(naissance, dateRef = new Date()) {
+  const n = new Date(naissance + 'T12:00:00');
+  let age = dateRef.getFullYear() - n.getFullYear();
+  const dm = dateRef.getMonth() - n.getMonth();
+  if (dm < 0 || (dm === 0 && dateRef.getDate() < n.getDate())) age--;
+  return age;
+}
 
 // ── Dates de la semaine courante ──────────────────────────────────────────────
 function getSemaine() {
@@ -42,6 +50,28 @@ function getSemaine() {
     fin: fmt(dimanche),
     debutLisible: fmtLisible(lundi),
     finLisible: fmtLisible(dimanche),
+  };
+}
+
+// ── Extrait les tarifs depuis les priceRanges Ticketmaster ───────────────────
+// TM retourne parfois plusieurs types : "standard", "standard including fees",
+// "platinum", "vip"... Rarement "child" ou "family" mais on vérifie quand même.
+function extraireTarifs(priceRanges) {
+  if (!priceRanges || priceRanges.length === 0) {
+    return { cout_adulte: 0, cout_enfant: null, cout_bebe: 0 };
+  }
+
+  const find = (...types) =>
+    priceRanges.find(p => types.some(t => p.type?.toLowerCase().includes(t)));
+
+  const adulte  = find('standard', 'adult', 'general') ?? priceRanges[0];
+  const enfant  = find('child', 'children', 'youth', 'junior');
+  const famille = find('family');
+
+  return {
+    cout_adulte: Math.round(adulte.min ?? 0),
+    cout_enfant: enfant  ? Math.round(enfant.min)  : (famille ? Math.round(famille.min / 4) : null),
+    cout_bebe:   0, // les bébés n'ont généralement pas besoin de billet
   };
 }
 
@@ -67,35 +97,50 @@ async function fetchTicketmaster(apiKey, semaine) {
   const events = data?._embedded?.events ?? [];
   console.log(`  ${events.length} événements trouvés`);
 
-  const typeMap = { 'Music': 'musique', 'Sports': 'sport', 'Arts & Theatre': 'culturel', 'Film': 'cinéma', 'Family': 'famille' };
+  const typeMap = {
+    'Music': 'musique', 'Sports': 'sport',
+    'Arts & Theatre': 'culturel', 'Film': 'cinéma', 'Family': 'famille',
+  };
 
-  return events.map(e => ({
-    nom: e.name,
-    lieu: e._embedded?.venues?.[0]?.name ?? 'Québec',
-    duree: 120,
-    cout: Math.round(e.priceRanges?.[0]?.min ?? 0),
-    saison: 'toute',
-    type: typeMap[e.classifications?.[0]?.segment?.name] ?? 'événement',
-    origine: 'Québec',
-    exemple_claude: 1,
-    date: e.dates?.start?.localDate ?? '',
-    url: e.url ?? '',
-    source: 'ticketmaster',
-  })).filter(e => e.date); // garder seulement ceux avec une date précise
+  return events.map(e => {
+    const tarifs = extraireTarifs(e.priceRanges);
+    return {
+      nom: e.name,
+      lieu: e._embedded?.venues?.[0]?.name ?? 'Québec',
+      duree: 120,
+      cout: tarifs.cout_adulte,          // compat rétroactive
+      cout_adulte: tarifs.cout_adulte,
+      cout_enfant: tarifs.cout_enfant,   // null si inconnu
+      cout_bebe:   tarifs.cout_bebe,
+      saison: 'toute',
+      type: typeMap[e.classifications?.[0]?.segment?.name] ?? 'événement',
+      origine: 'Québec',
+      exemple_claude: 1,
+      date: e.dates?.start?.localDate ?? '',
+      url: e.url ?? '',
+      source: 'ticketmaster',
+    };
+  }).filter(e => e.date);
 }
 
-// ── 2. Claude — suggestions personnalisées ────────────────────────────────────
+// ── 2. Claude — suggestions avec vrais tarifs par tranche d'âge ───────────────
 async function fetchSuggestionsIA(anthropicKey, semaine, evenementsExistants) {
   const client = new Anthropic({ apiKey: anthropicKey });
 
   const dejaListes = evenementsExistants.map(e => `- ${e.nom} (${e.date})`).join('\n') || '(aucun)';
-  const profilsFamille = FAMILLE.map(m => `  • ${m.prenom} ${m.emoji} : ${m.gouts}`).join('\n');
 
-  const prompt = `Tu es un expert de la ville de Québec et des sorties familiales.
+  // Calcul des âges actuels pour le prompt
+  const profilsFamille = FAMILLE.map(m => {
+    const age = calculerAge(m.naissance);
+    const categorie = age < 5 ? 'bébé' : age < 13 ? 'enfant' : age < 18 ? 'adolescent' : 'adulte';
+    return `  • ${m.prenom} ${m.emoji} (${age} ans, ${categorie}) : ${m.gouts}`;
+  }).join('\n');
+
+  const prompt = `Tu es un expert de la ville de Québec et des sorties familiales. Tu connais les tarifs réels des lieux culturels, sportifs et de loisirs de la région de Québec.
 
 Génère exactement 8 suggestions d'activités pour la famille Dufresne pour la semaine du ${semaine.debutLisible} au ${semaine.finLisible} à Québec (ville).
 
-Profils de la famille :
+Composition de la famille avec âges actuels :
 ${profilsFamille}
 
 Événements Ticketmaster déjà trouvés pour cette semaine (ne pas dupliquer) :
@@ -107,6 +152,7 @@ Contraintes :
 - Variété de coûts : certaines gratuites, certaines payantes
 - Saison actuelle : ${getSaisonActuelle()}
 - Certaines pour toute la famille, certaines pour adultes seulement, certaines pour enfants
+- IMPORTANT : Pour cout_adulte, cout_enfant (5-12 ans), cout_bebe (0-4 ans), indique les VRAIS tarifs du lieu en dollars canadiens (ex. Aquarium : adulte 23$, enfant 15$, bébé 0$). Si l'activité est gratuite, mets 0. Si les tarifs enfant/bébé sont inconnus pour une activité payante, mets null.
 
 Réponds UNIQUEMENT avec un tableau JSON valide, sans texte avant ni après :
 [
@@ -115,6 +161,9 @@ Réponds UNIQUEMENT avec un tableau JSON valide, sans texte avant ni après :
     "lieu": "Nom du lieu précis à Québec",
     "duree": 90,
     "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
     "saison": "toute",
     "type": "plein air",
     "origine": "Québec",
@@ -123,26 +172,30 @@ Réponds UNIQUEMENT avec un tableau JSON valide, sans texte avant ni après :
     "url": "",
     "source": "claude",
     "pourQui": "famille",
-    "description": "Courte description enthousiaste"
+    "description": "Courte description enthousiaste avec émojis des membres concernés"
   }
 ]
 
 Types valides : plein air, culturel, gastronomique, sport, famille, musique, apprentissage, festival, social`;
 
-  console.log('→ Claude : génération des suggestions IA...');
+  console.log('→ Claude : génération des suggestions IA avec tarifs réels...');
   const message = await client.messages.create({
     model: 'claude-opus-4-5',
-    max_tokens: 2000,
+    max_tokens: 2500,
     messages: [{ role: 'user', content: prompt }],
   });
 
   const texte = message.content[0].text.trim();
-
-  // Extraire le JSON même si Claude ajoute du texte autour
   const match = texte.match(/\[[\s\S]*\]/);
   if (!match) throw new Error('Claude n\'a pas retourné de JSON valide');
 
   const suggestions = JSON.parse(match[0]);
+  // Assurer rétrocompatibilité : cout = cout_adulte si non défini
+  suggestions.forEach(s => {
+    if (s.cout_adulte !== undefined && s.cout === undefined) s.cout = s.cout_adulte;
+    if (s.cout !== undefined && s.cout_adulte === undefined) s.cout_adulte = s.cout;
+  });
+
   console.log(`  ${suggestions.length} suggestions Claude générées`);
   return suggestions;
 }
@@ -194,10 +247,8 @@ async function main() {
     console.log('  ℹ️  ANTHROPIC_API_KEY absente — suggestions IA ignorées');
   }
 
-  // Fallback : garder les anciennes données statiques (sans date) si rien de nouveau
   const activitesFinales = resultats.length > 0 ? resultats : anciennes;
 
-  // Écrire
   writeFileSync(ancienFichier, JSON.stringify(activitesFinales, null, 2) + '\n');
 
   const meta = {

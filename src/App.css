@@ -490,6 +490,13 @@ input[type="range"] {
   margin-bottom: 7px;
 }
 
+.prix-famille__estime {
+  font-weight: 400;
+  color: var(--ink-3);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 .prix-famille__grille {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

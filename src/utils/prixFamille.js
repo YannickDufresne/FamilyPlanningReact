@@ -10,27 +10,64 @@ function calculerAge(naissance, dateRef) {
   return age;
 }
 
-// ── Catégorie tarifaire selon l'âge ──────────────────────────────────────
-// Basé sur les tarifs typiques des institutions culturelles au Québec :
-//   0–4  : bébé/tout-petit → gratuit
-//   5–12 : enfant          → ~55 % du tarif adulte
-//   13–17: adolescent      → ~80 % (tarif étudiant souvent)
-//   18+  : adulte          → tarif plein
+// ── Catégorie tarifaire selon l'âge ─────────────────────────────────────────
 function categorieAge(age) {
-  if (age < 5)  return { label: 'bébé',   ratio: 0    };
-  if (age < 13) return { label: 'enfant', ratio: 0.55 };
-  if (age < 18) return { label: 'ado',    ratio: 0.80 };
-  return              { label: 'adulte',  ratio: 1.0  };
+  if (age < 5)  return { label: 'bébé',   tier: 'bebe'   };
+  if (age < 13) return { label: 'enfant', tier: 'enfant' };
+  if (age < 18) return { label: 'ado',    tier: 'ado'    };
+  return              { label: 'adulte',  tier: 'adulte' };
 }
 
-// ── Calcule la ventilation tarifaire pour toute la famille ───────────────
-// coutAdulte : prix adulte de l'activité (champ `cout` dans activites.json)
-// dateActivite : date ISO "2026-03-22" pour calculer les âges au bon moment
-export function calculerPrixFamille(coutAdulte, dateActivite) {
+// ── Ratio de fallback quand le tarif par tranche n'est pas connu ─────────────
+// Basé sur les tarifs typiques des institutions culturelles au Québec
+const RATIO_FALLBACK = { bebe: 0, enfant: 0.55, ado: 0.80, adulte: 1.0 };
+
+// ── Calcule la ventilation tarifaire pour toute la famille ───────────────────
+// activite : objet complet avec cout, cout_adulte, cout_enfant, cout_bebe
+// dateActivite : chaîne ISO "2026-03-22" pour calculer les âges au bon moment
+export function calculerPrixFamille(activite, dateActivite) {
+  const {
+    cout_adulte,
+    cout_enfant,  // null = inconnu (utiliser ratio), 0 = vraiment gratuit
+    cout_bebe,
+    cout,
+  } = activite;
+
+  // Prix adulte de référence : cout_adulte prioritaire, sinon cout
+  const prixAdulte = cout_adulte ?? cout ?? 0;
+
+  // Détermine si on a des tarifs réels par tranche (depuis Claude ou TM)
+  const hasTieredPricing = cout_adulte !== undefined && cout_adulte !== null;
+
   return famille.map(m => {
     const age = calculerAge(m.naissance, dateActivite);
-    const { label, ratio } = categorieAge(age);
-    const prix = coutAdulte > 0 ? Math.round(coutAdulte * ratio) : 0;
+    const { label, tier } = categorieAge(age);
+
+    let prix;
+
+    if (hasTieredPricing) {
+      // Vrais tarifs disponibles
+      if (tier === 'bebe') {
+        prix = cout_bebe ?? 0;
+      } else if (tier === 'enfant') {
+        // null = inconnu → ratio sur adulte; 0 = gratuit
+        prix = cout_enfant !== null && cout_enfant !== undefined
+          ? cout_enfant
+          : Math.round(prixAdulte * RATIO_FALLBACK.enfant);
+      } else if (tier === 'ado') {
+        // Les ados paient souvent le tarif enfant ou adulte selon les lieux
+        // On utilise le tarif enfant si disponible (souvent similaire), sinon 80%
+        prix = cout_enfant !== null && cout_enfant !== undefined
+          ? Math.round(cout_enfant * 1.1)   // ado légèrement plus que enfant
+          : Math.round(prixAdulte * RATIO_FALLBACK.ado);
+      } else {
+        prix = prixAdulte;
+      }
+    } else {
+      // Fallback : ratio sur cout
+      prix = prixAdulte > 0 ? Math.round(prixAdulte * RATIO_FALLBACK[tier]) : 0;
+    }
+
     return { ...m, age, categorie: label, prix };
   });
 }
