@@ -5,7 +5,8 @@
     "fin": "2026-03-22"
   },
   "source": "ticketmaster+claude",
-  "count": 8,
+  "count": 11,
   "ticketmaster": 0,
-  "claude": 8
+  "claude": 11,
+  "gratuites": 3
 }
