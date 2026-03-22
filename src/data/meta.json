@@ -1,47 +1,41 @@
 {
-  "lastUpdated": "2026-03-22T02:28:00.000Z",
+  "lastUpdated": "2026-03-22T18:47:52.125Z",
   "semaine": {
-    "debut": "2026-03-16",
-    "fin": "2026-03-22"
+    "debut": "2026-03-23",
+    "fin": "2026-03-29"
   },
   "source": "ticketmaster+claude+websearch",
-  "count": 22,
-  "ticketmaster": 0,
+  "count": 27,
+  "ticketmaster": 6,
   "claude": 11,
   "gratuites": 3,
   "sources": {
     "ticketmaster": {
       "statut": "ok",
-      "count": 0,
-      "url": "https://app.ticketmaster.com/discovery/v2/events.json?city=Quebec&stateCode=QC&countryCode=CA&startDateTime=2026-03-16T00:00:00Z&endDateTime=2026-03-22T23:59:59Z&size=60&sort=date,asc",
+      "count": 6,
+      "url": "https://app.ticketmaster.com/discovery/v2/events.json?city=Quebec&stateCode=QC&countryCode=CA&startDateTime=2026-03-23T00:00:00Z&endDateTime=2026-03-29T23:59:59Z&size=60&sort=date,asc",
       "erreur": null
     },
     "claude": {
       "statut": "ok",
       "count": 8,
       "modele": "claude-opus-4-5",
-      "prompt": "Tu es un expert de la ville de Québec et des sorties familiales. Tu connais les tarifs réels des lieux culturels, sportifs et de loisirs de la région de Québec.\n\nGénère exactement 8 suggestions d'activités pour la famille Dufresne pour la semaine du 16 mars 2026 au 22 mars 2026 à Québec (ville).\n\nComposition de la famille avec âges actuels :\n  • Patricia 💚 (32 ans, adulte) : culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre\n  • Yannick 🦉 (45 ans, adulte) : histoire, architecture, gastronomie, randonnée, découvertes intellectuelles\n  • Joseph 🐤 (13 ans, adolescent) : sport, plein air, aventure, animaux, activités physiques énergiques\n  • Mika 🍒 (1 an, bébé) : créativité, arts, jeux, activités amusantes et colorées\n  • Luce 🍒 (1 an, bébé) : activités douces, nature, famille, jeux simples\n\nContraintes : activités réelles à Québec, mix plein air/culturel/gastronomique/sportif/familial, tarifs réels en dollars canadiens.",
+      "prompt": "Tu es un expert de la ville de Québec et des sorties familiales. Tu connais les tarifs réels des lieux culturels, sportifs et de loisirs de la région de Québec.\n\nGénère exactement 8 suggestions d'activités pour la famille Dufresne pour la semaine du 23 mars 2026 au 29 mars 2026 à Québec (ville).\n\nComposition de la famille avec âges actuels :\n  • Patricia 💚 (32 ans, adulte) : culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre\n  • Yannick 🦉 (45 ans, adulte) : histoire, architecture, gastronomie, randonnée, découvertes intellectuelles\n  • Joseph 🐤 (13 ans, adolescent) : sport, plein air, aventure, animaux, activités physiques énergiques, adolescent actif\n  • Mika 🍒 (1 ans, bébé) : créativité, arts, jeux, activités amusantes et colorées, tout-petit curieux\n  • Luce 🍒 (1 ans, bébé) : activités douces, nature, famille, jeux simples, jumelle de Mika, tout-petite\n\nÉvénements Ticketmaster déjà trouvés pour cette semaine (ne pas dupliquer) :\n- Webdiffusion LHJMQ 25-26 (2026-03-23)\n- Hamlet - Scolaire (2026-03-24)\n- Daraîche & Filles (2026-03-27)\n- Hamlet (2026-03-28)\n- Parabolus - Complete Tool Experience (2026-03-28)\n- Hamlet (2026-03-29)\n\nContraintes :\n- Activités réelles et réalisables à Québec (ville), pas inventées\n- Mix : plein air, culturel, gastronomique, sportif, familial\n- Variété de coûts : certaines gratuites, certaines payantes\n- Saison actuelle : printemps\n- Certaines pour toute la famille, certaines pour adultes seulement, certaines pour enfants\n- IMPORTANT : Pour cout_adulte, cout_enfant (5-12 ans), cout_bebe (0-4 ans), indique les VRAIS tarifs du lieu en dollars canadiens (ex. Aquarium : adulte 23$, enfant 15$, bébé 0$). Si l'activité est gratuite, mets 0. Si les tarifs enfant/bébé sont inconnus pour une activité payante, mets null.\n\nRéponds UNIQUEMENT avec un tableau JSON valide, sans texte avant ni après :\n[\n  {\n    \"nom\": \"Nom de l'activité\",\n    \"lieu\": \"Nom du lieu précis à Québec\",\n    \"duree\": 90,\n    \"cout\": 0,\n    \"cout_adulte\": 0,\n    \"cout_enfant\": 0,\n    \"cout_bebe\": 0,\n    \"saison\": \"toute\",\n    \"type\": \"plein air\",\n    \"origine\": \"Québec\",\n    \"exemple_claude\": 1,\n    \"date\": \"\",\n    \"url\": \"\",\n    \"source\": \"claude\",\n    \"pourQui\": \"famille\",\n    \"description\": \"Courte description enthousiaste avec émojis des membres concernés\"\n  }\n]\n\nTypes valides : plein air, culturel, gastronomique, sport, famille, musique, apprentissage, festival, social",
       "erreur": null
     },
     "claude_gratuites": {
       "statut": "ok",
       "count": 3,
       "modele": "claude-opus-4-5",
-      "prompt": "Tu es un expert des sorties familiales gratuites à Québec (ville).\n\nGénère exactement 3 activités ENTIÈREMENT GRATUITES pour la famille Dufresne, semaine du 16 mars 2026 au 22 mars 2026.\n\nCONTRAINTES STRICTES :\n- 100 % gratuites : entrée, stationnement, matériel — tout compris\n- Activités réelles existant à Québec (ville)\n- Variées : nature, patrimoine, communautaire, marché, parc, bibliothèque…\n- Saison : printemps\n- Conviennent à la famille avec des tout-petits (Mika et Luce, 1 an)",
+      "prompt": "Tu es un expert des sorties familiales gratuites à Québec (ville).\n\nGénère exactement 3 activités ENTIÈREMENT GRATUITES pour la famille Dufresne, semaine du 23 mars 2026 au 29 mars 2026.\n\nFamille :\n  • Patricia 💚 (32 ans, adulte) : culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre\n  • Yannick 🦉 (45 ans, adulte) : histoire, architecture, gastronomie, randonnée, découvertes intellectuelles\n  • Joseph 🐤 (13 ans, ado) : sport, plein air, aventure, animaux, activités physiques énergiques, adolescent actif\n  • Mika 🍒 (1 ans, bébé) : créativité, arts, jeux, activités amusantes et colorées, tout-petit curieux\n  • Luce 🍒 (1 ans, bébé) : activités douces, nature, famille, jeux simples, jumelle de Mika, tout-petite\n\nDéjà listées (ne pas dupliquer) :\n- Webdiffusion LHJMQ 25-26\n- Hamlet - Scolaire\n- Daraîche & Filles\n- Hamlet\n- Parabolus - Complete Tool Experience\n- Hamlet\n- Visite de l'Aquarium du Québec\n- Randonnée printanière aux Plaines d'Abraham\n- Musée national des beaux-arts du Québec\n- Glissade et jeux au Domaine de Maizerets\n- Brunch gastronomique au Café du Monde\n- Centre de jeux Récréofun\n- Visite guidée du Vieux-Québec historique\n- Musée de la civilisation - Dimanche en famille\n\nCONTRAINTES STRICTES :\n- 100 % gratuites : entrée, stationnement, matériel — tout compris\n- Activités réelles existant à Québec (ville)\n- Variées : nature, patrimoine, communautaire, marché, parc, bibliothèque…\n- Saison : printemps\n- Conviennent à la famille avec des tout-petits (Mika et Luce, 1 an)\n\nRéponds UNIQUEMENT avec un tableau JSON valide :\n[{\n  \"nom\": \"Nom précis\",\n  \"lieu\": \"Lieu exact avec adresse si possible\",\n  \"duree\": 90,\n  \"cout\": 0, \"cout_adulte\": 0, \"cout_enfant\": 0, \"cout_bebe\": 0,\n  \"saison\": \"toute\",\n  \"type\": \"plein air\",\n  \"origine\": \"Québec\",\n  \"exemple_claude\": 1,\n  \"date\": \"\",\n  \"url\": \"\",\n  \"source\": \"claude\",\n  \"gratuit\": true,\n  \"pourQui\": \"famille\",\n  \"description\": \"Description enthousiaste avec émojis des membres concernés\"\n}]",
       "erreur": null
     },
     "web_search": {
       "statut": "ok",
-      "count": 0,
+      "count": 10,
       "modele": "claude-opus-4-5",
-      "prompt": "Tu es un agent de découverte d'événements locaux à Québec (ville), Canada. Utilise l'outil de recherche web pour trouver des événements RÉELS de la semaine du 16 mars 2026 au 22 mars 2026 à Québec. Recherche en priorité les événements MOINS CONNUS, underground ou de niche : Le Pantoum, Le Vegas 3.0, L'Anti Bar & Spectacles, Le Scanner Bistro-Bar, pop quiz, soirées trivia, conférences, vernissages, marchés spéciaux.",
-      "recherches": [
-        "shows Québec semaine 16 mars 2026",
-        "concerts Québec mars 2026",
-        "Le Pantoum programmation mars 2026",
-        "événements underground Québec mars 2026",
-        "quiz Québec bars mars 2026"
-      ],
+      "prompt": "Tu es un agent de découverte d'événements locaux à Québec (ville), Canada.\n\nUtilise l'outil de recherche web pour trouver des événements RÉELS de la semaine du 23 mars 2026 au 29 mars 2026 à Québec.\n\nRecherche en priorité les événements MOINS CONNUS, underground ou de niche :\n- Shows et concerts dans les petites salles : Le Pantoum, Le Vegas 3.0, L'Anti Bar & Spectacles, Le Scanner Bistro-Bar, Le Knock-Out, Le Bal du Lézard, Chez Maurice, La Foulocratie\n- Pop quiz, soirées trivia, quiz en bars\n- Conférences, causeries, talks intellectuels ou politiques\n- Vernissages et expositions dans les galeries indépendantes\n- Marchés spéciaux, événements de quartier, happenings\n- Soirées thématiques (jeux de société, karaoké, comédie, impro)\n\nFais plusieurs recherches : \"shows Québec semaine 23 mars 2026\", \"concerts Québec 2026-03-23\", \"Le Pantoum programmation\", \"événements underground Québec\", \"quiz Québec bars\", etc.\n\nDéjà listés (ne pas dupliquer) :\n- Webdiffusion LHJMQ 25-26\n- Hamlet - Scolaire\n- Daraîche & Filles\n- Hamlet\n- Parabolus - Complete Tool Experience\n- Hamlet\n- Visite de l'Aquarium du Québec\n- Randonnée printanière aux Plaines d'Abraham\n- Musée national des beaux-arts du Québec\n- Glissade et jeux au Domaine de Maizerets\n- Brunch gastronomique au Café du Monde\n- Centre de jeux Récréofun\n- Visite guidée du Vieux-Québec historique\n- Musée de la civilisation - Dimanche en famille\n- Exploration du Parc linéaire de la Rivière-Saint-Charles\n- Heure du conte à la Bibliothèque Gabrielle-Roy\n- Découverte du Parc Cartier-Brébeuf - Site historique national\n\nAprès tes recherches, retourne UNIQUEMENT un tableau JSON des événements réels trouvés.\nSi une date précise est connue, indique-la. Laisse \"date\": \"\" si tu n'es pas sûr.\nRetourne [] si rien de concret trouvé pour cette semaine.\n\n[{\n  \"nom\": \"Titre exact de l'événement\",\n  \"lieu\": \"Nom de la salle / lieu\",\n  \"duree\": 120,\n  \"cout\": 15,\n  \"cout_adulte\": 15,\n  \"cout_enfant\": null,\n  \"cout_bebe\": 0,\n  \"saison\": \"toute\",\n  \"type\": \"musique\",\n  \"origine\": \"Québec\",\n  \"exemple_claude\": 1,\n  \"date\": \"2026-03-22\",\n  \"url\": \"https://...\",\n  \"source\": \"web_search\",\n  \"pourQui\": \"adultes\",\n  \"description\": \"Description de l'événement\"\n}]",
+      "recherches": [],
       "sitesVisites": [],
       "erreur": null
     }
