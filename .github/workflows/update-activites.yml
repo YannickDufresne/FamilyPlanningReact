@@ -66,6 +66,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/activites.json src/data/meta.json
           git commit -m "🗓 Activités Québec — semaine du $(TZ='America/Toronto' date '+%d %b %Y')"
+          git pull --rebase origin main
           git push
 
   deploy:
