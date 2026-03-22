@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-03-20",
+  "lastUpdated": "2026-03-22",
   "semaine": {
     "debut": "2026-03-16",
     "fin": "2026-03-22"
   },
   "source": "ticketmaster+claude",
-  "count": 11,
-  "ticketmaster": 3,
+  "count": 8,
+  "ticketmaster": 0,
   "claude": 8
 }
