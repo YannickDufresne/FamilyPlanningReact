@@ -266,6 +266,81 @@ Types valides : plein air, culturel, gastronomique, sport, famille, musique, app
   return suggestions;
 }
 
+// ── 3. Recherche web autonome — événements underground et petites salles ─────
+// Utilise l'outil web_search d'Anthropic (claude-opus-4-5 avec accès web).
+// Si l'outil n'est pas disponible sur le compte, la fonction retourne [] sans planter.
+async function fetchEvenementsWebSearch(anthropicKey, semaine, existantes) {
+  const client = new Anthropic({ apiKey: anthropicKey });
+
+  const dejaListes = existantes.map(e => `- ${e.nom}`).join('\n') || '(aucun)';
+
+  const prompt = `Tu es un agent de découverte d'événements locaux à Québec (ville), Canada.
+
+Utilise l'outil de recherche web pour trouver des événements RÉELS de la semaine du ${semaine.debutLisible} au ${semaine.finLisible} à Québec.
+
+Recherche en priorité les événements MOINS CONNUS, underground ou de niche :
+- Shows et concerts dans les petites salles : Le Pantoum, Le Vegas 3.0, L'Anti Bar & Spectacles, Le Scanner Bistro-Bar, Le Knock-Out, Le Bal du Lézard, Chez Maurice, La Foulocratie
+- Pop quiz, soirées trivia, quiz en bars
+- Conférences, causeries, talks intellectuels ou politiques
+- Vernissages et expositions dans les galeries indépendantes
+- Marchés spéciaux, événements de quartier, happenings
+- Soirées thématiques (jeux de société, karaoké, comédie, impro)
+
+Fais plusieurs recherches : "shows Québec semaine ${semaine.debutLisible}", "concerts Québec ${semaine.debut}", "Le Pantoum programmation", "événements underground Québec", "quiz Québec bars", etc.
+
+Déjà listés (ne pas dupliquer) :
+${dejaListes}
+
+Après tes recherches, retourne UNIQUEMENT un tableau JSON des événements réels trouvés.
+Si une date précise est connue, indique-la. Laisse "date": "" si tu n'es pas sûr.
+Retourne [] si rien de concret trouvé pour cette semaine.
+
+[{
+  "nom": "Titre exact de l'événement",
+  "lieu": "Nom de la salle / lieu",
+  "duree": 120,
+  "cout": 15,
+  "cout_adulte": 15,
+  "cout_enfant": null,
+  "cout_bebe": 0,
+  "saison": "toute",
+  "type": "musique",
+  "origine": "Québec",
+  "exemple_claude": 1,
+  "date": "2026-03-22",
+  "url": "https://...",
+  "source": "web_search",
+  "pourQui": "adultes",
+  "description": "Description de l'événement"
+}]`;
+
+  console.log('→ Claude (web_search) : chasse aux événements underground...');
+
+  const message = await client.messages.create({
+    model: 'claude-opus-4-5',
+    max_tokens: 4000,
+    tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  // Extraire le JSON de la réponse texte finale (après les tool_use blocks)
+  const texte = message.content
+    .filter(b => b.type === 'text')
+    .map(b => b.text)
+    .join('');
+
+  const match = texte.match(/\[[\s\S]*\]/);
+  if (!match) {
+    console.log('  Aucun événement structuré retourné');
+    return [];
+  }
+
+  const events = JSON.parse(match[0]);
+  events.forEach(e => { e.source = 'web_search'; });
+  console.log(`  ${events.length} événements trouvés via web_search`);
+  return events;
+}
+
 function getSaisonActuelle() {
   const m = new Date().getMonth() + 1;
   if (m >= 3 && m <= 5) return 'printemps';
@@ -314,6 +389,22 @@ async function main() {
       resultats.push(...gratuites);
     } catch (err) {
       console.warn('  ⚠️  Claude (gratuites) échoué:', err.message);
+    }
+
+    // 3. Web search — événements underground, petites salles, niche
+    try {
+      const webEvents = await fetchEvenementsWebSearch(anthKey, semaine, resultats);
+      if (webEvents.length > 0) {
+        resultats.push(...webEvents);
+        sourceLabel += '+websearch';
+      }
+    } catch (err) {
+      // L'outil web_search peut ne pas être activé sur tous les comptes Anthropic
+      if (err.status === 400 || err.message?.toLowerCase().includes('web_search') || err.message?.toLowerCase().includes('tool')) {
+        console.log('  ℹ️  web_search non disponible sur ce compte — étape ignorée');
+      } else {
+        console.warn('  ⚠️  Web search échoué:', err.message);
+      }
     }
   } else {
     console.log('  ℹ️  ANTHROPIC_API_KEY absente — suggestions IA ignorées');
