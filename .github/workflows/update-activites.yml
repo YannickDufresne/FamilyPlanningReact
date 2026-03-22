@@ -2,8 +2,9 @@ name: Mise à jour des activités — Québec
 
 on:
   schedule:
-    # Chaque dimanche à midi HNDE (16:00 UTC)
-    - cron: '0 16 * * 0'
+    # Deux crons pour couvrir heure d'été (UTC-4) et heure d'hiver (UTC-5)
+    - cron: '0 16 * * 0'   # Midi HNDE / heure d'été  (avril → octobre)
+    - cron: '0 17 * * 0'   # Midi HNE  / heure d'hiver (novembre → mars)
   workflow_dispatch:
     # Permettre le déclenchement manuel depuis GitHub
 
@@ -13,7 +14,25 @@ permissions:
   id-token: write
 
 jobs:
+  check-heure:
+    runs-on: ubuntu-latest
+    outputs:
+      est-midi: ${{ steps.verif.outputs.est-midi }}
+    steps:
+      - name: Vérifier si c'est midi à Québec
+        id: verif
+        run: |
+          HEURE=$(TZ='America/Toronto' date '+%H')
+          echo "Heure locale Québec : $HEURE h"
+          if [ "$HEURE" = "12" ]; then
+            echo "est-midi=true" >> $GITHUB_OUTPUT
+          else
+            echo "est-midi=false" >> $GITHUB_OUTPUT
+          fi
+
   update:
+    needs: check-heure
+    if: needs.check-heure.outputs.est-midi == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
@@ -46,7 +65,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/activites.json src/data/meta.json
-          git commit -m "🗓 Activités Québec — semaine du $(date '+%d %b %Y')"
+          git commit -m "🗓 Activités Québec — semaine du $(TZ='America/Toronto' date '+%d %b %Y')"
           git push
 
   deploy:
