@@ -30,12 +30,13 @@ function EvalRow({ recette }) {
 
 // ── Ventilation du prix par membre de la famille ──────────────────────────
 function PrixFamille({ activite, date }) {
-  const prixRef = activite.cout_adulte ?? activite.cout ?? 0;
-  if (prixRef === 0) return null;
-
   const ventilation = calculerPrixFamille(activite, date);
   const total = ventilation.reduce((s, m) => s + m.prix, 0);
   const hasTieredPricing = activite.cout_adulte !== undefined && activite.cout_adulte !== null;
+
+  // Afficher seulement si au moins un membre paie quelque chose
+  const aucunPrix = !hasTieredPricing && (activite.cout ?? 0) === 0;
+  if (aucunPrix || total === 0) return null;
 
   return (
     <div className="prix-famille">
@@ -135,9 +136,13 @@ export default function DayCard({ jour }) {
             {activite.lieu && (
               <div className="planning-item__meta">
                 {activite.lieu}
-                {activite.cout > 0
-                  ? <> · <span className="prix-adulte">{activite.cout} $ / adulte</span></>
-                  : ' · gratuit'}
+                {(() => {
+                  const adulte = activite.cout_adulte ?? activite.cout ?? 0;
+                  const enfant = activite.cout_enfant;
+                  if (adulte > 0) return <> · <span className="prix-adulte">{adulte} $ / adulte</span></>;
+                  if (enfant > 0) return <> · <span className="prix-adulte">gratuit adultes</span></>;
+                  return ' · gratuit';
+                })()}
               </div>
             )}
             {activite.description && (
