@@ -4,8 +4,8 @@
     "debut": "2026-03-16",
     "fin": "2026-03-22"
   },
-  "source": "ticketmaster+claude",
-  "count": 11,
+  "source": "ticketmaster+claude+websearch",
+  "count": 22,
   "ticketmaster": 0,
   "claude": 11,
   "gratuites": 3
