@@ -5,6 +5,7 @@ import WeeklyPlanning from './components/WeeklyPlanning';
 import GroceryList from './components/GroceryList';
 import RecettesPage from './components/RecettesPage';
 import UpdateModal from './components/UpdateModal';
+import LoginScreen from './components/LoginScreen';
 import { genererPlanning, calculerStats } from './utils/planning';
 import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
@@ -12,6 +13,8 @@ import activites from './data/activites.json';
 import musique from './data/musique.json';
 import meta from './data/meta.json';
 import './App.css';
+
+const HASH = 'UEBtcGxlbW91c3NlMjAxMiE=';
 
 const DEFAULT_FILTRES = {
   nbVegetarien: 2,
@@ -25,10 +28,17 @@ const DEFAULT_FILTRES = {
 };
 
 export default function App() {
+  const [authentifie, setAuthentifie] = useState(
+    () => localStorage.getItem('fp_auth') === HASH
+  );
   const [filtres, setFiltres] = useState(DEFAULT_FILTRES);
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 100000));
   const [view, setView] = useState('planning'); // 'planning' | 'recettes'
   const [showUpdateModal, setShowUpdateModal] = useState(false);
+
+  if (!authentifie) {
+    return <LoginScreen onSuccess={() => setAuthentifie(true)} />;
+  }
 
   const planning = useMemo(() =>
     genererPlanning({

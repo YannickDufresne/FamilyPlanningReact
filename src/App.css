@@ -1357,3 +1357,106 @@ input[type="range"] {
   padding: 4rem 2rem;
   background: var(--bg);
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   ÉCRAN DE CONNEXION
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.login-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem 2.5rem 2.5rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(58,92,38,0.10);
+}
+
+@keyframes login-shake {
+  0%,100% { transform: translateX(0); }
+  20%      { transform: translateX(-10px); }
+  40%      { transform: translateX(10px); }
+  60%      { transform: translateX(-8px); }
+  80%      { transform: translateX(8px); }
+}
+.login-shake { animation: login-shake 0.5s ease; }
+
+.login-avatar {
+  font-size: 2.8rem;
+  margin-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.login-titre {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.login-sous-titre {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.login-input:focus { border-color: var(--sage); }
+.login-input--erreur { border-color: var(--terra) !important; }
+
+.login-erreur {
+  font-size: 0.75rem;
+  color: var(--terra);
+  text-align: left;
+  margin-top: -0.25rem;
+}
+
+.login-btn {
+  margin-top: 0.25rem;
+  padding: 0.8rem 1rem;
+  background: var(--forest);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.login-btn:hover  { background: var(--sage); }
+.login-btn:active { transform: scale(0.98); }
