@@ -34,9 +34,9 @@ function PrixFamille({ activite, date }) {
   const total = ventilation.reduce((s, m) => s + m.prix, 0);
   const hasTieredPricing = activite.cout_adulte !== undefined && activite.cout_adulte !== null;
 
-  // Afficher seulement si au moins un membre paie quelque chose
-  const aucunPrix = !hasTieredPricing && (activite.cout ?? 0) === 0;
-  if (aucunPrix || total === 0) return null;
+  // Masquer seulement si aucune info de prix du tout
+  const aucuneInfo = !hasTieredPricing && (activite.cout ?? 0) === 0;
+  if (aucuneInfo) return null;
 
   return (
     <div className="prix-famille">
@@ -50,13 +50,13 @@ function PrixFamille({ activite, date }) {
             <span className="prix-membre__emoji">{m.emoji}</span>
             <span className="prix-membre__cat">{m.categorie}</span>
             <span className="prix-membre__prix">
-              {m.prix > 0 ? `${m.prix} $` : '—'}
+              {m.prix > 0 ? `${m.prix} $` : 'grat.'}
             </span>
           </div>
         ))}
       </div>
       <div className="prix-famille__total">
-        Total <strong>{total} $</strong>
+        Total <strong>{total > 0 ? `${total} $` : 'gratuit'}</strong>
       </div>
     </div>
   );
