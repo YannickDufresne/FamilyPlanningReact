@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import DayCard from './DayCard';
 
 export default function WeeklyPlanning({ planning }) {
+  const [modesActivite, setModesActivite] = useState(() =>
+    Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
+  );
+
   if (!planning) {
     return (
       <div className="alert-warning">
@@ -20,7 +25,14 @@ export default function WeeklyPlanning({ planning }) {
       <h2 className="section-heading">Calendrier de la semaine</h2>
       <div className="week-grid">
         {planning.map(jour => (
-          <DayCard key={jour.jour} jour={jour} />
+          <DayCard
+            key={jour.jour}
+            jour={jour}
+            modeActivite={modesActivite[jour.jour] ?? 'famille'}
+            onToggleModeActivite={(mode) =>
+              setModesActivite(prev => ({ ...prev, [jour.jour]: mode }))
+            }
+          />
         ))}
       </div>
     </section>

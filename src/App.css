@@ -1476,3 +1476,48 @@ input[type="range"] {
   vertical-align: middle;
 }
 .login-btn:active { transform: scale(0.98); }
+
+/* ── Toggle activité famille / adultes ────────────────────────────────────── */
+.activite-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.activite-mode-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mode-btn {
+  padding: 0.18rem 0.55rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: none;
+  background: var(--bg);
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.mode-btn + .mode-btn {
+  border-left: 1px solid var(--border);
+}
+
+.mode-btn--active {
+  background: var(--forest);
+  color: #fff;
+}
+
+.mode-btn:hover:not(.mode-btn--active) {
+  background: var(--sage-light);
+  color: var(--forest);
+}

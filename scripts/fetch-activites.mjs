@@ -216,12 +216,15 @@ ${profilsFamille}
 ${dejaListes}
 
 Contraintes :
-- Activités réelles et réalisables à Québec (ville), pas inventées
-- Mix : plein air, culturel, gastronomique, sportif, familial
-- Variété de coûts : certaines gratuites, certaines payantes
+- Activités réelles et réalisables à Québec (ville) et villes proches (Lévis, Charlesbourg, Sainte-Foy), pas inventées
+- Mix varié : plein air, culturel, gastronomique, sportif, communautaire, familial
+- PRIORITÉ aux activités GRATUITES ou peu coûteuses : fêtes de quartier, bibliothèques, parcs, événements communautaires, marchés, concerts en plein air, vernissages
+- Inclure aussi : événements dans les bibliothèques (BAnQ, bibliothèques de quartier), événements religieux/culturels ouverts au public (concerts en église, etc.), fêtes de rue et de quartier
+- Variété de coûts : minimum 3 sur 8 entièrement gratuites
 - Saison actuelle : ${getSaisonActuelle()}
-- Certaines pour toute la famille, certaines pour adultes seulement, certaines pour enfants
-- IMPORTANT : Pour cout_adulte, cout_enfant (5-12 ans), cout_bebe (0-4 ans), indique les VRAIS tarifs du lieu en dollars canadiens (ex. Aquarium : adulte 23$, enfant 15$, bébé 0$). Si l'activité est gratuite, mets 0. Si les tarifs enfant/bébé sont inconnus pour une activité payante, mets null.
+- Mix pourQui : minimum 2 "adultes" (soirées, restaurants, spectacles), le reste "famille"
+- Pour pourQui adultes : soirées, restos, spectacles, événements nocturnes (18h+) — pas de bébés
+- IMPORTANT : Pour cout_adulte, cout_enfant (5-12 ans), cout_bebe (0-4 ans), indique les VRAIS tarifs du lieu. Si l'activité est gratuite, mets 0. Si les tarifs enfant/bébé sont inconnus pour une activité payante, mets null.
 
 Réponds UNIQUEMENT avec un tableau JSON valide, sans texte avant ni après :
 [
@@ -281,15 +284,30 @@ async function fetchEvenementsWebSearch(anthropicKey, semaine, existantes) {
 
 Utilise l'outil de recherche web pour trouver des événements RÉELS de la semaine du ${semaine.debutLisible} au ${semaine.finLisible} à Québec.
 
-Recherche en priorité les événements MOINS CONNUS, underground ou de niche :
-- Shows et concerts dans les petites salles : Le Pantoum, Le Vegas 3.0, L'Anti Bar & Spectacles, Le Scanner Bistro-Bar, Le Knock-Out, Le Bal du Lézard, Chez Maurice, La Foulocratie
-- Pop quiz, soirées trivia, quiz en bars
-- Conférences, causeries, talks intellectuels ou politiques
+Ratisse LARGE — cherche autant les événements communautaires gratuits que les sorties culturelles de niche :
+
+ÉVÉNEMENTS COMMUNAUTAIRES ET GRATUITS (priorité haute) :
+- Fêtes de quartier, fêtes de rue, événements de quartier
+- Activités dans les bibliothèques (BAnQ Grande Bibliothèque succursale Québec, bibliothèques Saint-Jean-Baptiste, Neufchâtel, etc.)
+- Marchés publics spéciaux, marchés de producteurs
+- Concerts gratuits, musique en plein air
+- Événements religieux culturels ouverts (concerts en église, etc.)
+- Activités dans les centres communautaires
+
+PETITES SALLES ET CULTURE DE NICHE :
+- Shows et concerts : Le Pantoum, Le Vegas 3.0, L'Anti Bar & Spectacles, Le Scanner Bistro-Bar, Le Knock-Out, Le Bal du Lézard, La Foulocratie, Chez Rioux & Pettigrew
+- Pop quiz, soirées trivia, escape game
+- Conférences, causeries, TEDx, talks politiques ou intellectuels
 - Vernissages et expositions dans les galeries indépendantes
-- Marchés spéciaux, événements de quartier, happenings
 - Soirées thématiques (jeux de société, karaoké, comédie, impro)
 
-Fais plusieurs recherches : "shows Québec semaine ${semaine.debutLisible}", "concerts Québec ${semaine.debut}", "Le Pantoum programmation", "événements underground Québec", "quiz Québec bars", etc.
+SITES À CONSULTER :
+- macommunaute.ca/evenements/?ville=quebec
+- quoifaire.com/quebec
+- "événements gratuits Québec ${semaine.debutLisible}"
+- "bibliothèque activité Québec ${semaine.debut.substring(0, 7)}"
+- "fête quartier Québec ${semaine.debut.substring(0, 7)}"
+- "Le Pantoum programmation ${semaine.debut.substring(0, 7)}"
 
 Déjà listés (ne pas dupliquer) :
 ${dejaListes}
@@ -315,7 +333,9 @@ Retourne [] si rien de concret trouvé pour cette semaine.
   "source": "web_search",
   "pourQui": "adultes",
   "description": "Description de l'événement"
-}]`;
+}]
+
+IMPORTANT pour pourQui : utilise "adultes" pour les événements nocturnes/bars/spectacles réservés aux adultes, "famille" pour tout ce qui convient aux enfants et bébés.`;
 
   console.log('→ Claude (web_search) : chasse aux événements underground...');
 

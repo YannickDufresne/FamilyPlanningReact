@@ -178,6 +178,25 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       }
     }
 
+    // ── Activité adultes (alternative pour mode adultes-seulement) ────────────
+    const rngAdultes = seededRandom(seed + i * 37 + 7777);
+    const adultesFallback = activites.filter(a =>
+      (!a.date || a.date === '') &&
+      (a.pourQui === 'adultes' || a.pourQui === 'adulte')
+    );
+    const adultesJour = activites.filter(a =>
+      a.date === dateStr &&
+      (a.pourQui === 'adultes' || a.pourQui === 'adulte')
+    );
+    let activiteAdultes = null;
+    if (adultesJour.length > 0) {
+      activiteAdultes = pickRandom(adultesJour, rngAdultes);
+    } else if (adultesFallback.length > 0) {
+      activiteAdultes = adultesFallback[i % adultesFallback.length];
+    }
+    // Si aucune activité adultes spécifique, on garde l'activité famille
+    if (!activiteAdultes) activiteAdultes = activite;
+
     // ── Musique : calquée sur l'origine culturelle de la recette ─────────────
     const origineRecette = recetteJour?.origine;
     let musiqueJour;
@@ -198,7 +217,8 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       emoji: jourInfo.emoji,
       recette: recetteJour,
       exercices: exercicesJour,
-      activite, // null si aucun événement
+      activite,
+      activiteAdultes,
       musique: musiqueJour,
     });
   }

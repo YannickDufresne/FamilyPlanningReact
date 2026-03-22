@@ -62,8 +62,11 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour }) {
-  const { recette, exercices, activite, musique, emoji, dateCourte } = jour;
+export default function DayCard({ jour, modeActivite = 'famille', onToggleModeActivite }) {
+  const { recette, exercices, activite, activiteAdultes, musique, emoji, dateCourte } = jour;
+  const activiteAffichee = modeActivite === 'adultes' && activiteAdultes ? activiteAdultes : activite;
+  // Ne montrer le toggle que si les deux activités sont différentes
+  const hasAlternative = activiteAdultes && activiteAdultes !== activite;
   const isWarning = recette.nom.startsWith('⚠️');
   const isTraining = JOURS_ENTRAINEMENT.includes(jour.jour);
   const isRepos = exercices.length === 1 && exercices[0].fonction === 'repos';
@@ -122,41 +125,57 @@ export default function DayCard({ jour }) {
 
       {/* Activité */}
       <div className="planning-item">
-        <div className="planning-item__label">
-          Activité · Québec
-          {activite?.incontournable && (
-            <span className="incontournable-badge">⭐ À ne pas manquer</span>
+        <div className="planning-item__label activite-label-row">
+          <span>
+            Activité · Québec
+            {activiteAffichee?.incontournable && (
+              <span className="incontournable-badge">⭐ À ne pas manquer</span>
+            )}
+          </span>
+          {hasAlternative && (
+            <div className="activite-mode-toggle">
+              <button
+                className={`mode-btn${modeActivite === 'famille' ? ' mode-btn--active' : ''}`}
+                onClick={() => onToggleModeActivite('famille')}
+                title="Activité pour toute la famille"
+              >👨‍👩‍👧 Famille</button>
+              <button
+                className={`mode-btn${modeActivite === 'adultes' ? ' mode-btn--active' : ''}`}
+                onClick={() => onToggleModeActivite('adultes')}
+                title="Activité adultes seulement"
+              >🍷 Adultes</button>
+            </div>
           )}
         </div>
-        {activite ? (
+        {activiteAffichee ? (
           <>
-            {activite.url ? (
+            {activiteAffichee.url ? (
               <a className="planning-item__name planning-item__link"
-                href={activite.url} target="_blank" rel="noopener noreferrer">
-                {activite.nom}
+                href={activiteAffichee.url} target="_blank" rel="noopener noreferrer">
+                {activiteAffichee.nom}
               </a>
             ) : (
-              <div className="planning-item__name">{activite.nom}</div>
+              <div className="planning-item__name">{activiteAffichee.nom}</div>
             )}
-            {activite.lieu && (
+            {activiteAffichee.lieu && (
               <div className="planning-item__meta">
-                {activite.lieu}
+                {activiteAffichee.lieu}
                 {(() => {
-                  const adulte = activite.cout_adulte ?? activite.cout ?? 0;
-                  const enfant = activite.cout_enfant;
+                  const adulte = activiteAffichee.cout_adulte ?? activiteAffichee.cout ?? 0;
+                  const enfant = activiteAffichee.cout_enfant;
                   if (adulte > 0) return <> · <span className="prix-adulte">{adulte} $ / adulte</span></>;
                   if (enfant > 0) return <> · <span className="prix-adulte">gratuit adultes</span></>;
                   return ' · gratuit';
                 })()}
               </div>
             )}
-            {activite.description && (
+            {activiteAffichee.description && (
               <div className="planning-item__meta" style={{ marginTop: 3 }}>
-                {activite.description}
+                {activiteAffichee.description}
               </div>
             )}
-            <PrixFamille activite={activite} date={jour.date} />
-            {activite.source === 'claude' && (
+            <PrixFamille activite={activiteAffichee} date={jour.date} />
+            {activiteAffichee.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
             )}
           </>
