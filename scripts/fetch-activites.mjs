@@ -495,14 +495,24 @@ async function fetchEventbrite(semaine) {
         continue;
       }
 
-      const jsonStart = markerIdx + marker.length;
-      const scriptEnd = html.indexOf('</script>', jsonStart);
-      if (scriptEnd === -1) continue;
+      // Extraction robuste : compter les accolades pour trouver la fin du JSON
+      // (évite le bug où </script> apparaît dans une URL à l'intérieur du JSON)
+      const jsonStart = html.indexOf('{', markerIdx + marker.length);
+      if (jsonStart === -1) continue;
 
-      let jsonStr = html.slice(jsonStart, scriptEnd).trim();
-      if (jsonStr.endsWith(';')) jsonStr = jsonStr.slice(0, -1);
+      let depth = 0, inString = false, escaped = false, jsonEnd = -1;
+      for (let i = jsonStart; i < Math.min(jsonStart + 2_000_000, html.length); i++) {
+        const ch = html[i];
+        if (escaped)      { escaped = false; continue; }
+        if (ch === '\\' && inString) { escaped = true; continue; }
+        if (ch === '"')   { inString = !inString; continue; }
+        if (inString)     continue;
+        if (ch === '{')   depth++;
+        else if (ch === '}') { if (--depth === 0) { jsonEnd = i; break; } }
+      }
+      if (jsonEnd === -1) { console.log(`  Eventbrite: JSON non délimité sur ${url}`); continue; }
 
-      const data = JSON.parse(jsonStr);
+      const data = JSON.parse(html.slice(jsonStart, jsonEnd + 1));
       const events = data?.search_data?.events?.results ?? [];
       console.log(`  Eventbrite (${isFree ? 'gratuit' : 'général'}): ${events.length} résultats`);
 
