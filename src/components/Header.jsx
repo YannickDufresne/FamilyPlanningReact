@@ -44,7 +44,6 @@ export default function Header({ onViewRecettes, onViewUpdate }) {
           alt="Portrait de famille"
           className="family-photo"
         />
-        <div className="photo-caption">Famille · 2025</div>
       </div>
 
       <div className="header-content">
