@@ -1,3 +1,5 @@
+import { calculerPrixFamille } from '../utils/prixFamille';
+
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
 
@@ -22,6 +24,34 @@ function EvalRow({ recette }) {
           </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+// ── Ventilation du prix par membre de la famille ──────────────────────────
+function PrixFamille({ cout, date }) {
+  if (!cout || cout === 0) return null;
+
+  const ventilation = calculerPrixFamille(cout, date);
+  const total = ventilation.reduce((s, m) => s + m.prix, 0);
+
+  return (
+    <div className="prix-famille">
+      <div className="prix-famille__titre">Prix famille</div>
+      <div className="prix-famille__grille">
+        {ventilation.map(m => (
+          <div key={m.prenom} className="prix-membre">
+            <span className="prix-membre__emoji">{m.emoji}</span>
+            <span className="prix-membre__cat">{m.categorie}</span>
+            <span className="prix-membre__prix">
+              {m.prix > 0 ? `${m.prix} $` : '—'}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="prix-famille__total">
+        Total <strong>{total} $</strong>
+      </div>
     </div>
   );
 }
@@ -84,7 +114,7 @@ export default function DayCard({ jour }) {
         )}
       </div>
 
-      {/* Activité — seulement si événement ce jour-là */}
+      {/* Activité */}
       <div className="planning-item">
         <div className="planning-item__label">Activité · Québec</div>
         {activite ? (
@@ -99,7 +129,10 @@ export default function DayCard({ jour }) {
             )}
             {activite.lieu && (
               <div className="planning-item__meta">
-                {activite.lieu}{activite.cout > 0 ? ` · ${activite.cout} $` : ' · gratuit'}
+                {activite.lieu}
+                {activite.cout > 0
+                  ? <> · <span className="prix-adulte">{activite.cout} $ / adulte</span></>
+                  : ' · gratuit'}
               </div>
             )}
             {activite.description && (
@@ -107,6 +140,7 @@ export default function DayCard({ jour }) {
                 {activite.description}
               </div>
             )}
+            <PrixFamille cout={activite.cout} date={jour.date} />
             {activite.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
             )}
