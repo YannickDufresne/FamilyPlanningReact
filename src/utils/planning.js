@@ -66,11 +66,20 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     ? new Date(semaineDebut + 'T12:00:00')
     : getLundiSemaine();
 
-  // ── Musique : shuffle seeded une seule fois → chanson différente chaque jour ─
-  const musiqueBase = filtrerOrigine
-    ? (musique.filter(m => m.origine === origine).length > 0 ? musique.filter(m => m.origine === origine) : musique)
-    : musique;
-  const musiqueShuffled = shuffleSeeded(musiqueBase, seed + 9999);
+  // ── Musique : shuffle par origine culturelle → cohérence avec la recette ──────
+  // Chaque origine a sa propre liste shufflée + un pointeur de lecture
+  const originesMusique = [...new Set(musique.map(m => m.origine).filter(Boolean))];
+  const musiqueParOrigine = {};
+  originesMusique.forEach(orig => {
+    musiqueParOrigine[orig] = shuffleSeeded(
+      musique.filter(m => m.origine === orig),
+      seed + orig.split('').reduce((a, c) => a + c.charCodeAt(0), 0)
+    );
+  });
+  const musiqueIndexParOrigine = {};
+  originesMusique.forEach(orig => { musiqueIndexParOrigine[orig] = 0; });
+  // Fallback global si l'origine de la recette ne correspond à aucune musique
+  const musiqueFallback = shuffleSeeded(musique, seed + 9999);
 
   let compteurOmnivore = 0;
   let compteurVegetarien = 0;
@@ -142,9 +151,17 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       activite = activitesFallback[i % activitesFallback.length];
     }
 
-    // ── Musique ───────────────────────────────────────────────────────────────
-    const musiqueJour = musiqueShuffled[i % musiqueShuffled.length]
-      || { nom: 'Musique à définir', genre: 'Variété', ambiance: 'Relaxante' };
+    // ── Musique : calquée sur l'origine culturelle de la recette ─────────────
+    const origineRecette = recetteJour?.origine;
+    let musiqueJour;
+    if (origineRecette && musiqueParOrigine[origineRecette]?.length > 0) {
+      const pool = musiqueParOrigine[origineRecette];
+      musiqueJour = pool[musiqueIndexParOrigine[origineRecette] % pool.length];
+      musiqueIndexParOrigine[origineRecette]++;
+    } else {
+      musiqueJour = musiqueFallback[i % musiqueFallback.length];
+    }
+    musiqueJour = musiqueJour || { nom: 'Musique à définir', genre: 'Variété', ambiance: 'Relaxante' };
 
     planning.push({
       jour: jourInfo.jour,
