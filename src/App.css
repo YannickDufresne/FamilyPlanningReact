@@ -678,15 +678,39 @@ input[type="range"] {
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   .header-ornament { display: none; }
+
+  /* Header : photo + titre sur la 1re ligne, date sur la 2e */
+  .main-header {
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  .header-content { flex: 1; min-width: 0; }
+  .header-meta {
+    flex-basis: 100%;   /* pousse la date sur une nouvelle ligne */
+    text-align: left;
+    padding-bottom: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin-top: 0;
+  }
+  .header-semaine { font-size: 0.95rem; }
 }
 
 @media (max-width: 620px) {
-  .header-content h1 { font-size: 2.2rem; }
+  .header-content h1 { font-size: 2rem; }
+  .header-subtitle { font-size: 0.58rem; letter-spacing: 0.14em; }
   .week-grid { grid-template-columns: 1fr; }
   .epicerie-list ul { columns: 1; }
   .eval-grid { grid-template-columns: repeat(3, 1fr); }
   .stats-main { grid-template-columns: 1fr; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+
+  /* Filtres recettes en colonne sur très petit écran */
+  .recettes-filtres__row { gap: 0.25rem; }
+  .recettes-filtres__label { min-width: 3.5rem; font-size: 0.55rem; }
+  .recettes-titre { font-size: 2rem; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
