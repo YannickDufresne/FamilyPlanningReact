@@ -122,7 +122,12 @@ export default function DayCard({ jour }) {
 
       {/* Activité */}
       <div className="planning-item">
-        <div className="planning-item__label">Activité · Québec</div>
+        <div className="planning-item__label">
+          Activité · Québec
+          {activite?.incontournable && (
+            <span className="incontournable-badge">⭐ À ne pas manquer</span>
+          )}
+        </div>
         {activite ? (
           <>
             {activite.url ? (

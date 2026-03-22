@@ -151,16 +151,20 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
 
     // ── Activité ──────────────────────────────────────────────────────────────
-    // Priorité 1 : événement avec date précise ce jour-là (Ticketmaster)
-    // Priorité 2 : suggestion sans date (Claude / statique) comme fallback
-    //   → en respectant le quota nbGratuit : N jours seront des activités gratuites
+    // Priorité 1 : incontournable avec date précise ce jour-là (toujours affiché)
+    // Priorité 2 : événement daté régulier (Ticketmaster, etc.)
+    // Priorité 3 : suggestion sans date comme fallback (quota nbGratuit respecté)
     const activitesJour = activites.filter(a => a.date === dateStr);
+    const incontournablesJour = activitesJour.filter(a => a.incontournable === true);
     const activitesFallback = activites.filter(a => !a.date || a.date === '');
     const fallbackGratuits = activitesFallback.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0);
     const fallbackPayants  = activitesFallback.filter(a => !a.gratuit && (a.cout_adulte ?? a.cout ?? 0) > 0);
 
     let activite = null;
-    if (activitesJour.length > 0) {
+    if (incontournablesJour.length > 0) {
+      // Incontournable ce jour-là → toujours prioritaire
+      activite = incontournablesJour[0];
+    } else if (activitesJour.length > 0) {
       activite = pickRandom(activitesJour, rngRecette);
     } else if (activitesFallback.length > 0) {
       // Jours désignés "gratuits" : sélectionnés via shuffle seeded pour répartition dans la semaine

@@ -1459,4 +1459,20 @@ input[type="range"] {
   transition: background 0.15s, transform 0.1s;
 }
 .login-btn:hover  { background: var(--sage); }
+
+/* ── Badge incontournable ─────────────────────────────────────────────────── */
+.incontournable-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  background: var(--terra-light);
+  color: var(--terra);
+  border: 1px solid var(--terra);
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
 .login-btn:active { transform: scale(0.98); }

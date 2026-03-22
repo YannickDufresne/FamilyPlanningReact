@@ -359,6 +359,88 @@ Retourne [] si rien de concret trouvé pour cette semaine.
   return { resultats: events, prompt, modele: 'claude-opus-4-5', recherches, sitesVisites };
 }
 
+// ── 3b. Recherche web — grands événements incontournables ──────────────────
+// Parades, festivals majeurs, événements annuels récurrents à ne pas manquer.
+async function fetchIncontournables(anthropicKey, semaine, existantes) {
+  const client = new Anthropic({ apiKey: anthropicKey });
+  const dejaListes = existantes.map(e => `- ${e.nom}`).join('\n') || '(aucun)';
+
+  const prompt = `Tu es un expert des grands événements de Québec (ville), Canada.
+
+Utilise l'outil de recherche web pour trouver les événements INCONTOURNABLES et MAJEURS de la semaine du ${semaine.debutLisible} au ${semaine.finLisible} à Québec.
+
+SITES À CONSULTER EN PRIORITÉ :
+- https://quoifaire.com/quebec (consulte cette URL directement)
+- https://www.quebecregion.com/fr/evenements/
+- Recherche "événements incontournables Québec ${semaine.debut}"
+- Recherche "parade Saint-Patrick Québec 2026" si la semaine inclut le 17 mars ou un week-end proche
+- Recherche "festival Québec ${semaine.debut.substring(0, 7)}"
+- Recherche "grands événements Québec semaine ${semaine.debutLisible}"
+
+CRITÈRES pour qu'un événement soit "incontournable" :
+- Parade ou défilé annuel (Saint-Patrick, Carnaval, etc.)
+- Festival reconnu (Jazz, Films, FEQ, etc.)
+- Événement unique ou rare cette semaine
+- Plus de 500 personnes attendues
+- Événement familial ou culturel majeur
+
+Déjà listés (ne pas dupliquer) :
+${dejaListes}
+
+Retourne UNIQUEMENT un tableau JSON ([] si rien d'incontournable cette semaine précise) :
+[{
+  "nom": "Titre exact",
+  "lieu": "Lieu précis",
+  "duree": 180,
+  "cout": 0,
+  "cout_adulte": 0,
+  "cout_enfant": 0,
+  "cout_bebe": 0,
+  "saison": "toute",
+  "type": "festival",
+  "origine": "Québec",
+  "exemple_claude": 1,
+  "date": "2026-03-23",
+  "url": "https://...",
+  "source": "web_search",
+  "incontournable": true,
+  "pourQui": "famille",
+  "description": "Pourquoi c'est incontournable cette semaine"
+}]`;
+
+  console.log('→ Claude (web_search) : chasse aux événements incontournables...');
+
+  const message = await client.messages.create({
+    model: 'claude-opus-4-5',
+    max_tokens: 3000,
+    tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const texte = message.content.filter(b => b.type === 'text').map(b => b.text).join('');
+  const match = texte.match(/\[[\s\S]*\]/);
+  if (!match) {
+    console.log('  Aucun incontournable trouvé cette semaine');
+    return { resultats: [], prompt, modele: 'claude-opus-4-5', recherches: [], sitesVisites: [] };
+  }
+
+  const events = JSON.parse(match[0]);
+  events.forEach(e => { e.source = 'web_search'; e.incontournable = true; });
+  console.log(`  ${events.length} incontournable(s) trouvé(s)`);
+
+  const recherches = message.content
+    .filter(b => b.type === 'tool_use' && b.name === 'web_search')
+    .map(b => b.input?.query).filter(Boolean);
+
+  const sitesVisites = [];
+  message.content.filter(b => b.type === 'tool_result').forEach(b => {
+    const content = Array.isArray(b.content) ? b.content : [];
+    content.forEach(c => { if (c.url) sitesVisites.push(c.url); });
+  });
+
+  return { resultats: events, prompt, modele: 'claude-opus-4-5', recherches, sitesVisites };
+}
+
 function getSaisonActuelle() {
   const m = new Date().getMonth() + 1;
   if (m >= 3 && m <= 5) return 'printemps';
@@ -380,10 +462,11 @@ async function main() {
 
   // Suivi détaillé par source pour le journal de mise à jour
   const sourcesLog = {
-    ticketmaster: { statut: 'absent', count: 0, url: null, erreur: null },
-    claude:        { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
+    ticketmaster:     { statut: 'absent', count: 0, url: null, erreur: null },
+    claude:           { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
     claude_gratuites: { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
-    web_search:    { statut: 'absent', count: 0, modele: null, prompt: null, recherches: [], sitesVisites: [], erreur: null },
+    incontournables:  { statut: 'absent', count: 0, modele: null, prompt: null, recherches: [], sitesVisites: [], erreur: null },
+    web_search:       { statut: 'absent', count: 0, modele: null, prompt: null, recherches: [], sitesVisites: [], erreur: null },
   };
 
   // 1. Ticketmaster
@@ -420,6 +503,25 @@ async function main() {
     } catch (err) {
       console.warn('  ⚠️  Claude (gratuites) échoué:', err.message);
       sourcesLog.claude_gratuites = { statut: 'erreur', count: 0, modele: 'claude-opus-4-5', prompt: null, erreur: err.message };
+    }
+
+    // 3a. Web search — grands événements incontournables (parades, festivals majeurs)
+    try {
+      const { resultats: incoEvents, prompt: incoPrompt, modele: incoModele, recherches: incoRecherches, sitesVisites: incoSites } = await fetchIncontournables(anthKey, semaine, resultats);
+      if (incoEvents.length > 0) {
+        resultats.push(...incoEvents);
+        sourceLabel += '+incontournables';
+      }
+      sourcesLog.incontournables = { statut: 'ok', count: incoEvents.length, modele: incoModele, prompt: incoPrompt, recherches: incoRecherches, sitesVisites: incoSites, erreur: null };
+    } catch (err) {
+      if (err.status === 400 || err.message?.toLowerCase().includes('web_search') || err.message?.toLowerCase().includes('tool')) {
+        console.log('  ℹ️  web_search (incontournables) non disponible — étape ignorée');
+        sourcesLog.incontournables.statut = 'absent';
+        sourcesLog.incontournables.erreur = 'Outil web_search non activé sur ce compte Anthropic';
+      } else {
+        console.warn('  ⚠️  Incontournables échoué:', err.message);
+        sourcesLog.incontournables = { statut: 'erreur', count: 0, modele: 'claude-opus-4-5', prompt: null, recherches: [], sitesVisites: [], erreur: err.message };
+      }
     }
 
     // 3. Web search — événements underground, petites salles, niche

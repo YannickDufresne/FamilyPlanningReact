@@ -32,7 +32,14 @@ export default function App() {
     () => localStorage.getItem('fp_auth') === HASH
   );
   const [filtres, setFiltres] = useState(DEFAULT_FILTRES);
-  const [seed, setSeed] = useState(() => Math.floor(Math.random() * 100000));
+  const [seed, setSeed] = useState(() => {
+    // Seed dérivé de la date du lundi → plannings différents chaque semaine,
+    // identiques sur tous les appareils. Rebrassage = seed aléatoire.
+    const debut = meta.semaine.debut; // ex. "2026-03-23"
+    let h = 5381;
+    for (const c of debut) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
+    return (h % 2147483646) + 1;
+  });
   const [view, setView] = useState('planning'); // 'planning' | 'recettes'
   const [showUpdateModal, setShowUpdateModal] = useState(false);
 
