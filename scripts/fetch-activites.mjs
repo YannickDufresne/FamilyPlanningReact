@@ -466,6 +466,92 @@ Retourne UNIQUEMENT un tableau JSON ([] si rien d'incontournable cette semaine p
   return { resultats: events, prompt, modele: 'claude-opus-4-5', recherches, sitesVisites };
 }
 
+// ── 0b. Eventbrite — événements Quebec via JSON embarqué dans le HTML ─────────
+// Eventbrite expose window.__SERVER_DATA__ dans le HTML — pas d'API key requise.
+async function fetchEventbrite(semaine) {
+  const pages = [
+    { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/free--events/', isFree: true },
+    { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/events--this-week/', isFree: false },
+    { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/events--next-week/', isFree: false },
+  ];
+
+  const vus = new Set();
+  const resultats = [];
+
+  for (const { url, isFree } of pages) {
+    try {
+      const html = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        },
+      }).then(r => r.text());
+
+      const marker = 'window.__SERVER_DATA__ = ';
+      const markerIdx = html.indexOf(marker);
+      if (markerIdx === -1) {
+        console.log(`  Eventbrite: __SERVER_DATA__ non trouvé sur ${url}`);
+        continue;
+      }
+
+      const jsonStart = markerIdx + marker.length;
+      const scriptEnd = html.indexOf('</script>', jsonStart);
+      if (scriptEnd === -1) continue;
+
+      let jsonStr = html.slice(jsonStart, scriptEnd).trim();
+      if (jsonStr.endsWith(';')) jsonStr = jsonStr.slice(0, -1);
+
+      const data = JSON.parse(jsonStr);
+      const events = data?.search_data?.events?.results ?? [];
+      console.log(`  Eventbrite (${isFree ? 'gratuit' : 'général'}): ${events.length} résultats`);
+
+      for (const e of events) {
+        // Filtre: ville Québec seulement (pas Montréal, etc.)
+        const city = (e.primary_venue?.address?.city ?? '').toLowerCase();
+        const isQC = city.includes('québec') || city.includes('quebec');
+        if (!isQC) continue;
+
+        // Filtre: dans la semaine ciblée
+        if (!e.start_date || e.start_date < semaine.debut || e.start_date > semaine.fin) continue;
+
+        // Déduplique par ID ou nom+date
+        const key = e.eid ?? (e.name + '|' + e.start_date);
+        if (vus.has(key)) continue;
+        vus.add(key);
+
+        const lieu = [e.primary_venue?.name, e.primary_venue?.address?.address_1]
+          .filter(Boolean).join(', ');
+
+        resultats.push({
+          nom: e.name,
+          lieu,
+          duree: 120,
+          cout: isFree ? 0 : null,
+          cout_adulte: isFree ? 0 : null,
+          cout_enfant: isFree ? 0 : null,
+          cout_bebe: 0,
+          saison: 'toute',
+          type: 'culturel',
+          origine: 'Québec',
+          exemple_claude: 0,
+          date: e.start_date,
+          url: e.url ?? '',
+          source: 'eventbrite',
+          gratuit: isFree,
+          pourQui: 'famille',
+          description: e.summary ?? '',
+        });
+      }
+    } catch (err) {
+      console.warn(`  Eventbrite ${url} : ${err.message}`);
+    }
+  }
+
+  console.log(`  → ${resultats.length} événements Eventbrite retenus pour la semaine ${semaine.debut}→${semaine.fin}`);
+  return resultats;
+}
+
 function getSaisonActuelle() {
   const m = new Date().getMonth() + 1;
   if (m >= 3 && m <= 5) return 'printemps';
@@ -488,6 +574,7 @@ async function main() {
   // Suivi détaillé par source pour le journal de mise à jour
   const sourcesLog = {
     ticketmaster:     { statut: 'absent', count: 0, url: null, erreur: null },
+    eventbrite:       { statut: 'absent', count: 0, urls: [], erreur: null },
     claude:           { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
     claude_gratuites: { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
     incontournables:  { statut: 'absent', count: 0, modele: null, prompt: null, recherches: [], sitesVisites: [], erreur: null },
@@ -506,6 +593,28 @@ async function main() {
       console.warn('  ⚠️  Ticketmaster échoué:', err.message);
       sourcesLog.ticketmaster = { statut: 'erreur', count: 0, url: null, erreur: err.message };
     }
+  }
+
+  // 1b. Eventbrite — événements Québec (JSON embarqué dans HTML, sans API key)
+  try {
+    const ebEvents = await fetchEventbrite(semaine);
+    if (ebEvents.length > 0) {
+      resultats.push(...ebEvents);
+      sourceLabel = sourceLabel ? sourceLabel + '+eventbrite' : 'eventbrite';
+    }
+    sourcesLog.eventbrite = {
+      statut: 'ok',
+      count: ebEvents.length,
+      urls: [
+        'eventbrite.ca/d/canada--québec/free--events/',
+        'eventbrite.ca/d/canada--québec/events--this-week/',
+        'eventbrite.ca/d/canada--québec/events--next-week/',
+      ],
+      erreur: null,
+    };
+  } catch (err) {
+    console.warn('  ⚠️  Eventbrite échoué:', err.message);
+    sourcesLog.eventbrite = { statut: 'erreur', count: 0, urls: [], erreur: err.message };
   }
 
   // 2. Claude — suggestions générales + activités gratuites garanties

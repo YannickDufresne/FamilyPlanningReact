@@ -35,6 +35,7 @@ export default function Header({ onViewRecettes, onViewUpdate }) {
   const claudeStatut = (sources.claude?.statut === 'ok' || sources.claude_gratuites?.statut === 'ok') ? 'ok'
                      : (sources.claude?.statut === 'erreur') ? 'erreur' : 'absent';
   const wsStatut     = sources.web_search?.statut      ?? 'absent';
+  const ebStatut     = sources.eventbrite?.statut      ?? 'absent';
 
   return (
     <header className="main-header">
@@ -69,6 +70,13 @@ export default function Header({ onViewRecettes, onViewUpdate }) {
               &nbsp;·&nbsp;
               <SourceDot statut={wsStatut} label="Web Search" />
               <span className="source-label">Web</span>
+            </>
+          )}
+          {ebStatut !== 'absent' && (
+            <>
+              &nbsp;·&nbsp;
+              <SourceDot statut={ebStatut} label="Eventbrite" />
+              <span className="source-label">Eventbrite</span>
             </>
           )}
         </button>

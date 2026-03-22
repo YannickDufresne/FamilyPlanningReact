@@ -18,6 +18,11 @@ const SOURCE_CONFIG = {
     icon: '🎟',
     description: 'Événements officiels avec billetterie',
   },
+  eventbrite: {
+    label: 'Eventbrite',
+    icon: '🎪',
+    description: 'Événements gratuits et culturels à Québec (JSON embarqué, sans clé API)',
+  },
   claude: {
     label: 'Claude IA — Suggestions',
     icon: '🤖',
@@ -83,6 +88,16 @@ function SourceSection({ sourceKey, data }) {
             <div className="update-detail">
               <span className="update-detail-label">URL</span>
               <code className="update-url">{data.url}</code>
+            </div>
+          )}
+
+          {/* URLs Eventbrite */}
+          {data.urls && data.urls.length > 0 && (
+            <div className="update-detail">
+              <span className="update-detail-label">Pages consultées</span>
+              <ul className="update-list">
+                {data.urls.map((u, i) => <li key={i}><code>{u}</code></li>)}
+              </ul>
             </div>
           )}
 
@@ -186,7 +201,7 @@ export default function UpdateModal({ onClose }) {
         </div>
 
         <p className="update-footnote">
-          La mise à jour automatique a lieu chaque <strong>dimanche à 8h</strong> (HNE).
+          La mise à jour automatique a lieu chaque <strong>dimanche à midi</strong> (heure de Québec).
           Vous pouvez aussi la déclencher manuellement depuis GitHub Actions.
         </p>
       </div>
