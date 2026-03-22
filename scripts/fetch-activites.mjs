@@ -38,7 +38,7 @@ function calculerAge(naissance, dateRef = new Date()) {
 function getSemaine() {
   const today = new Date();
   const day = today.getDay();
-  const diff = day === 0 ? -6 : 1 - day;
+  const diff = day === 0 ? 1 : 1 - day;  // dimanche → prochain lundi
   const lundi = new Date(today);
   lundi.setDate(today.getDate() + diff);
   const dimanche = new Date(lundi);
