@@ -1,149 +1,92 @@
 [
-  {
-    "nom": "Lucio Dalla - Caruso",
-    "origine": "Italie",
-    "genre": "chanson italienne",
-    "ambiance": "émotionnelle",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Ennio Morricone - Cinema Paradiso",
-    "origine": "Italie",
-    "genre": "musique de film",
-    "ambiance": "nostalgique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Paolo Conte - Via con me",
-    "origine": "Italie",
-    "genre": "jazz italien",
-    "ambiance": "sophistiquée",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Andrea Bocelli - Con te partirò",
-    "origine": "Italie",
-    "genre": "opéra populaire",
-    "ambiance": "majestueuse",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Fabrizio De André - La canzone dell'amore perduto",
-    "origine": "Italie",
-    "genre": "folk italien",
-    "ambiance": "mélancolique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Modena City Ramblers - I cento passi",
-    "origine": "Italie",
-    "genre": "folk rock",
-    "ambiance": "énergique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Zucchero - Senza una donna",
-    "origine": "Italie",
-    "genre": "blues italien",
-    "ambiance": "passionnée",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Manu Chao - Clandestino",
-    "origine": "Mexique",
-    "genre": "latin alternative",
-    "ambiance": "énergique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Jesse & Joy - ¡Corre!",
-    "origine": "Mexique",
-    "genre": "pop latino",
-    "ambiance": "joyeuse",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Lila Downs - La Llorona",
-    "origine": "Mexique",
-    "genre": "folk mexicain",
-    "ambiance": "mystique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Mariachi Vargas - El Son de la Negra",
-    "origine": "Mexique",
-    "genre": "mariachi",
-    "ambiance": "festive",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Natalia Lafourcade - Hasta la Raíz",
-    "origine": "Mexique",
-    "genre": "indie latino",
-    "ambiance": "introspective",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Café Tacvba - La Ingrata",
-    "origine": "Mexique",
-    "genre": "rock alternatif",
-    "ambiance": "rebelle",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Manu Chao - Me gustas tú",
-    "origine": "Mexique",
-    "genre": "reggae latino",
-    "ambiance": "décontractée",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Félix Leclerc - Moi mes souliers",
-    "origine": "Québec",
-    "genre": "chanson québécoise",
-    "ambiance": "nostalgique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Les Cowboys Fringants - L'Amérique pleure",
-    "origine": "Québec",
-    "genre": "folk rock québécois",
-    "ambiance": "engagée",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Céline Dion - Pour que tu m'aimes encore",
-    "origine": "Québec",
-    "genre": "pop québécoise",
-    "ambiance": "passionnée",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Daniel Bélanger - Opium",
-    "origine": "Québec",
-    "genre": "rock alternatif québécois",
-    "ambiance": "contemplative",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "La Bottine Souriante - La Ziguezon",
-    "origine": "Québec",
-    "genre": "musique traditionnelle",
-    "ambiance": "festive",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Beau Dommage - La complainte du phoque en Alaska",
-    "origine": "Québec",
-    "genre": "chanson québécoise",
-    "ambiance": "humoristique",
-    "exemple_claude": 1
-  },
-  {
-    "nom": "Harmonium - Pour un instant",
-    "origine": "Québec",
-    "genre": "rock progressif québécois",
-    "ambiance": "spirituelle",
-    "exemple_claude": 1
-  }
+  { "nom": "Lucio Dalla - Caruso",                              "origine": "Italie",         "genre": "chanson italienne",         "ambiance": "émotionnelle",    "exemple_claude": 1 },
+  { "nom": "Ennio Morricone - Cinema Paradiso",                 "origine": "Italie",         "genre": "musique de film",           "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "Paolo Conte - Via con me",                          "origine": "Italie",         "genre": "jazz italien",              "ambiance": "sophistiquée",    "exemple_claude": 1 },
+  { "nom": "Andrea Bocelli - Con te partirò",                   "origine": "Italie",         "genre": "opéra populaire",           "ambiance": "majestueuse",     "exemple_claude": 1 },
+  { "nom": "Fabrizio De André - La canzone dell'amore perduto", "origine": "Italie",         "genre": "folk italien",              "ambiance": "mélancolique",    "exemple_claude": 1 },
+  { "nom": "Modena City Ramblers - I cento passi",              "origine": "Italie",         "genre": "folk rock",                 "ambiance": "énergique",       "exemple_claude": 1 },
+  { "nom": "Zucchero - Senza una donna",                        "origine": "Italie",         "genre": "blues italien",             "ambiance": "passionnée",      "exemple_claude": 1 },
+
+  { "nom": "Manu Chao - Clandestino",                           "origine": "Mexique",        "genre": "latin alternative",         "ambiance": "énergique",       "exemple_claude": 1 },
+  { "nom": "Jesse & Joy - ¡Corre!",                             "origine": "Mexique",        "genre": "pop latino",                "ambiance": "joyeuse",         "exemple_claude": 1 },
+  { "nom": "Lila Downs - La Llorona",                           "origine": "Mexique",        "genre": "folk mexicain",             "ambiance": "mystique",        "exemple_claude": 1 },
+  { "nom": "Mariachi Vargas - El Son de la Negra",              "origine": "Mexique",        "genre": "mariachi",                  "ambiance": "festive",         "exemple_claude": 1 },
+  { "nom": "Natalia Lafourcade - Hasta la Raíz",                "origine": "Mexique",        "genre": "indie latino",              "ambiance": "introspective",   "exemple_claude": 1 },
+  { "nom": "Café Tacvba - La Ingrata",                          "origine": "Mexique",        "genre": "rock alternatif",           "ambiance": "rebelle",         "exemple_claude": 1 },
+  { "nom": "Manu Chao - Me gustas tú",                          "origine": "Mexique",        "genre": "reggae latino",             "ambiance": "décontractée",    "exemple_claude": 1 },
+
+  { "nom": "Félix Leclerc - Moi mes souliers",                  "origine": "Québec",         "genre": "chanson québécoise",        "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "Les Cowboys Fringants - L'Amérique pleure",          "origine": "Québec",         "genre": "folk rock québécois",       "ambiance": "engagée",         "exemple_claude": 1 },
+  { "nom": "Céline Dion - Pour que tu m'aimes encore",          "origine": "Québec",         "genre": "pop québécoise",            "ambiance": "passionnée",      "exemple_claude": 1 },
+  { "nom": "Daniel Bélanger - Opium",                           "origine": "Québec",         "genre": "rock alternatif québécois", "ambiance": "contemplative",   "exemple_claude": 1 },
+  { "nom": "La Bottine Souriante - La Ziguezon",                 "origine": "Québec",         "genre": "musique traditionnelle",    "ambiance": "festive",         "exemple_claude": 1 },
+  { "nom": "Beau Dommage - La complainte du phoque en Alaska",  "origine": "Québec",         "genre": "chanson québécoise",        "ambiance": "humoristique",    "exemple_claude": 1 },
+  { "nom": "Harmonium - Pour un instant",                       "origine": "Québec",         "genre": "rock progressif québécois", "ambiance": "spirituelle",     "exemple_claude": 1 },
+
+  { "nom": "Édith Piaf - La Vie en rose",                       "origine": "France",         "genre": "chanson française",         "ambiance": "romantique",      "exemple_claude": 1 },
+  { "nom": "Jacques Brel - Ne me quitte pas",                   "origine": "France",         "genre": "chanson française",         "ambiance": "intense",         "exemple_claude": 1 },
+  { "nom": "Georges Brassens - La Mauvaise Réputation",         "origine": "France",         "genre": "chanson française",         "ambiance": "satirique",       "exemple_claude": 1 },
+  { "nom": "Charles Aznavour - La Bohème",                      "origine": "France",         "genre": "chanson française",         "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "Francis Cabrel - Je l'aime à mourir",               "origine": "France",         "genre": "folk français",             "ambiance": "tendre",          "exemple_claude": 1 },
+  { "nom": "Stromae - Papaoutai",                               "origine": "France",         "genre": "électro-pop francophone",   "ambiance": "poignante",       "exemple_claude": 1 },
+
+  { "nom": "Paco de Lucía - Entre dos aguas",                   "origine": "Espagne",        "genre": "flamenco",                  "ambiance": "enflammée",       "exemple_claude": 1 },
+  { "nom": "Joan Manuel Serrat - Mediterráneo",                  "origine": "Espagne",        "genre": "chanson méditerranéenne",   "ambiance": "poétique",        "exemple_claude": 1 },
+  { "nom": "Rosalía - Malamente",                               "origine": "Espagne",        "genre": "flamenco moderne",          "ambiance": "ardente",         "exemple_claude": 1 },
+  { "nom": "Camarón de la Isla - La Leyenda del Tiempo",        "origine": "Espagne",        "genre": "flamenco",                  "ambiance": "mystique",        "exemple_claude": 1 },
+
+  { "nom": "Joe Hisaishi - Summer",                             "origine": "Japon",          "genre": "musique de film",           "ambiance": "mélancolique",    "exemple_claude": 1 },
+  { "nom": "Ryuichi Sakamoto - Merry Christmas Mr. Lawrence",   "origine": "Japon",          "genre": "piano minimaliste",         "ambiance": "contemplative",   "exemple_claude": 1 },
+  { "nom": "Ryu Fukui - Scenery",                               "origine": "Japon",          "genre": "jazz japonais",             "ambiance": "sophistiquée",    "exemple_claude": 1 },
+  { "nom": "Cornelius - Drop",                                  "origine": "Japon",          "genre": "indie pop japonais",        "ambiance": "joyeuse",         "exemple_claude": 1 },
+
+  { "nom": "Ravi Shankar - Raga Yaman",                         "origine": "Inde",           "genre": "musique classique indienne","ambiance": "méditante",       "exemple_claude": 1 },
+  { "nom": "A.R. Rahman - Jai Ho",                              "origine": "Inde",           "genre": "bollywood",                 "ambiance": "festive",         "exemple_claude": 1 },
+  { "nom": "Zakir Hussain - Tabla Solo",                        "origine": "Inde",           "genre": "musique classique indienne","ambiance": "hypnotique",      "exemple_claude": 1 },
+  { "nom": "Nusrat Fateh Ali Khan - Mustt Mustt",               "origine": "Inde",           "genre": "qawwali fusion",            "ambiance": "transcendante",   "exemple_claude": 1 },
+
+  { "nom": "Oum - Soul of Morocco",                             "origine": "Maroc",          "genre": "jazz gnawa",                "ambiance": "envoûtante",      "exemple_claude": 1 },
+  { "nom": "Nass El Ghiwane - Ya Marhaba",                      "origine": "Maroc",          "genre": "folk marocain",             "ambiance": "engagée",         "exemple_claude": 1 },
+  { "nom": "Hassan Hakmoun - Trance",                           "origine": "Maroc",          "genre": "gnawa",                     "ambiance": "hypnotique",      "exemple_claude": 1 },
+
+  { "nom": "Miles Davis - Kind of Blue",                        "origine": "États-Unis",     "genre": "jazz modal",                "ambiance": "cool",            "exemple_claude": 1 },
+  { "nom": "Joni Mitchell - Both Sides Now",                    "origine": "États-Unis",     "genre": "folk américain",            "ambiance": "contemplative",   "exemple_claude": 1 },
+  { "nom": "Bill Evans - Waltz for Debby",                      "origine": "États-Unis",     "genre": "jazz piano",                "ambiance": "délicate",        "exemple_claude": 1 },
+  { "nom": "Tom Waits - Jersey Girl",                           "origine": "États-Unis",     "genre": "americana",                 "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "John Coltrane - A Love Supreme Pt. 1",              "origine": "États-Unis",     "genre": "jazz spirituel",            "ambiance": "transcendante",   "exemple_claude": 1 },
+
+  { "nom": "Leonard Cohen - Hallelujah",                        "origine": "Canada",         "genre": "folk canadien",             "ambiance": "mélancolique",    "exemple_claude": 1 },
+  { "nom": "Neil Young - Harvest Moon",                         "origine": "Canada",         "genre": "country folk",              "ambiance": "douce",           "exemple_claude": 1 },
+  { "nom": "Gordon Lightfoot - The Wreck of the Edmund Fitzgerald", "origine": "Canada",     "genre": "folk canadien",             "ambiance": "épique",          "exemple_claude": 1 },
+
+  { "nom": "The Beatles - Here Comes the Sun",                  "origine": "Royaume-Uni",    "genre": "rock britannique",          "ambiance": "lumineuse",       "exemple_claude": 1 },
+  { "nom": "David Bowie - Heroes",                              "origine": "Royaume-Uni",    "genre": "rock art",                  "ambiance": "épique",          "exemple_claude": 1 },
+  { "nom": "Nick Drake - Pink Moon",                            "origine": "Royaume-Uni",    "genre": "folk acoustique",           "ambiance": "intime",          "exemple_claude": 1 },
+  { "nom": "Radiohead - Exit Music (For a Film)",               "origine": "Royaume-Uni",    "genre": "rock alternatif",           "ambiance": "cinématique",     "exemple_claude": 1 },
+
+  { "nom": "Fairuz - La Beitna",                                "origine": "Liban",          "genre": "chanson arabe",             "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "Marcel Khalifé - Promises of the Storm",            "origine": "Liban",          "genre": "jazz arabe",                "ambiance": "poétique",        "exemple_claude": 1 },
+  { "nom": "Fairuz - Nassam Alayna Al Hawa",                    "origine": "Liban",          "genre": "chanson arabe classique",   "ambiance": "romantique",      "exemple_claude": 1 },
+
+  { "nom": "Chabuca Granda - La Flor de la Canela",             "origine": "Pérou",          "genre": "vals péruvien",             "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "Susana Baca - María Landó",                         "origine": "Pérou",          "genre": "afro-péruvien",             "ambiance": "sensuelle",       "exemple_claude": 1 },
+  { "nom": "Gipsy Kings - Bamboléo",                            "origine": "Pérou",          "genre": "rumba latine",              "ambiance": "festive",         "exemple_claude": 1 },
+
+  { "nom": "Bach - Variations Goldberg (Glenn Gould)",           "origine": "Allemagne",      "genre": "musique baroque",           "ambiance": "contemplative",   "exemple_claude": 1 },
+  { "nom": "Beethoven - Sonate au Clair de Lune",               "origine": "Allemagne",      "genre": "musique classique",         "ambiance": "mélancolique",    "exemple_claude": 1 },
+  { "nom": "Nena - 99 Luftballons",                             "origine": "Allemagne",      "genre": "new wave",                  "ambiance": "nostalgique",     "exemple_claude": 1 },
+
+  { "nom": "Israel Kamakawiwoʻole - Somewhere Over the Rainbow","origine": "Hawaï",          "genre": "hawaiien ukulele",          "ambiance": "douce",           "exemple_claude": 1 },
+  { "nom": "Jack Johnson - Banana Pancakes",                     "origine": "Hawaï",          "genre": "acoustic pop",              "ambiance": "décontractée",    "exemple_claude": 1 },
+
+  { "nom": "Brassens / Morricone - Mélange de genres",          "origine": "Méditerranéen",  "genre": "compilation méditerranée",  "ambiance": "ensoleillée",     "exemple_claude": 1 },
+  { "nom": "Goran Bregovic - Bella Ciao",                       "origine": "Méditerranéen",  "genre": "balkanique festif",         "ambiance": "festive",         "exemple_claude": 1 },
+  { "nom": "Reinhardt & Grappelli - Minor Swing",               "origine": "Méditerranéen",  "genre": "jazz manouche",             "ambiance": "légère",          "exemple_claude": 1 },
+
+  { "nom": "Carabao - Made in Thailand",                         "origine": "Thaïlande",      "genre": "rock thaï",                 "ambiance": "énergique",       "exemple_claude": 1 },
+  { "nom": "Thongchai McIntyre - Yang Ngo Hai Tur",             "origine": "Thaïlande",      "genre": "pop thaïlandaise",          "ambiance": "romantique",      "exemple_claude": 1 },
+
+  { "nom": "Sade - No Ordinary Love",                           "origine": "Fusion",         "genre": "soul jazz",                 "ambiance": "sensuelle",       "exemple_claude": 1 },
+  { "nom": "Buena Vista Social Club - Chan Chan",               "origine": "Fusion",         "genre": "son cubain",                "ambiance": "nostalgique",     "exemple_claude": 1 },
+  { "nom": "Ibrahim Maalouf - True Sorry",                      "origine": "Fusion",         "genre": "jazz oriental",             "ambiance": "introspective",   "exemple_claude": 1 }
 ]
