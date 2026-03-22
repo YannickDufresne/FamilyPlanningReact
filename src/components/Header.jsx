@@ -11,11 +11,30 @@ function formatSemaine(debut, fin) {
   return `${d.toLocaleDateString(locale, opts)} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
 }
 
-export default function Header({ onViewRecettes }) {
+// Petit rond coloré selon le statut de la source
+function SourceDot({ statut, label }) {
+  const color = statut === 'ok' ? 'var(--sage)' : statut === 'erreur' ? '#c0392b' : 'var(--ink-3)';
+  const title = statut === 'ok' ? `${label} — OK` : statut === 'erreur' ? `${label} — Erreur` : `${label} — Non utilisé`;
+  return (
+    <span
+      className="source-dot"
+      style={{ background: color }}
+      title={title}
+      aria-label={title}
+    />
+  );
+}
+
+export default function Header({ onViewRecettes, onViewUpdate }) {
   const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
-  const sourceLabel = meta.source?.includes('ticketmaster') ? 'Ticketmaster · Claude IA' : 'Données statiques';
-  const maj = new Date(meta.lastUpdated + 'T12:00:00')
+  const maj = new Date((meta.lastUpdated || '').split('T')[0] + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  const sources = meta.sources || {};
+  const tmStatut     = sources.ticketmaster?.statut    ?? 'absent';
+  const claudeStatut = (sources.claude?.statut === 'ok' || sources.claude_gratuites?.statut === 'ok') ? 'ok'
+                     : (sources.claude?.statut === 'erreur') ? 'erreur' : 'absent';
+  const wsStatut     = sources.web_search?.statut      ?? 'absent';
 
   return (
     <header className="main-header">
@@ -38,7 +57,22 @@ export default function Header({ onViewRecettes }) {
 
       <div className="header-meta">
         <div className="header-semaine">{semaine}</div>
-        <div className="header-maj">Mis à jour le {maj} · {sourceLabel}</div>
+        <button className="header-maj header-maj--btn" onClick={onViewUpdate} title="Voir les détails de la mise à jour">
+          Mis à jour le {maj}
+          &nbsp;·&nbsp;
+          <SourceDot statut={tmStatut} label="Ticketmaster" />
+          <span className="source-label">Ticketmaster</span>
+          &nbsp;·&nbsp;
+          <SourceDot statut={claudeStatut} label="Claude IA" />
+          <span className="source-label">Claude IA</span>
+          {wsStatut !== 'absent' && (
+            <>
+              &nbsp;·&nbsp;
+              <SourceDot statut={wsStatut} label="Web Search" />
+              <span className="source-label">Web</span>
+            </>
+          )}
+        </button>
       </div>
     </header>
   );

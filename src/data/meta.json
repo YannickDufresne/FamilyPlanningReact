@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-22",
+  "lastUpdated": "2026-03-22T02:28:00.000Z",
   "semaine": {
     "debut": "2026-03-16",
     "fin": "2026-03-22"
@@ -8,5 +8,42 @@
   "count": 22,
   "ticketmaster": 0,
   "claude": 11,
-  "gratuites": 3
+  "gratuites": 3,
+  "sources": {
+    "ticketmaster": {
+      "statut": "ok",
+      "count": 0,
+      "url": "https://app.ticketmaster.com/discovery/v2/events.json?city=Quebec&stateCode=QC&countryCode=CA&startDateTime=2026-03-16T00:00:00Z&endDateTime=2026-03-22T23:59:59Z&size=60&sort=date,asc",
+      "erreur": null
+    },
+    "claude": {
+      "statut": "ok",
+      "count": 8,
+      "modele": "claude-opus-4-5",
+      "prompt": "Tu es un expert de la ville de Québec et des sorties familiales. Tu connais les tarifs réels des lieux culturels, sportifs et de loisirs de la région de Québec.\n\nGénère exactement 8 suggestions d'activités pour la famille Dufresne pour la semaine du 16 mars 2026 au 22 mars 2026 à Québec (ville).\n\nComposition de la famille avec âges actuels :\n  • Patricia 💚 (32 ans, adulte) : culture, arts, gastronomie, sorties calmes et élégantes, musées, théâtre\n  • Yannick 🦉 (45 ans, adulte) : histoire, architecture, gastronomie, randonnée, découvertes intellectuelles\n  • Joseph 🐤 (13 ans, adolescent) : sport, plein air, aventure, animaux, activités physiques énergiques\n  • Mika 🍒 (1 an, bébé) : créativité, arts, jeux, activités amusantes et colorées\n  • Luce 🍒 (1 an, bébé) : activités douces, nature, famille, jeux simples\n\nContraintes : activités réelles à Québec, mix plein air/culturel/gastronomique/sportif/familial, tarifs réels en dollars canadiens.",
+      "erreur": null
+    },
+    "claude_gratuites": {
+      "statut": "ok",
+      "count": 3,
+      "modele": "claude-opus-4-5",
+      "prompt": "Tu es un expert des sorties familiales gratuites à Québec (ville).\n\nGénère exactement 3 activités ENTIÈREMENT GRATUITES pour la famille Dufresne, semaine du 16 mars 2026 au 22 mars 2026.\n\nCONTRAINTES STRICTES :\n- 100 % gratuites : entrée, stationnement, matériel — tout compris\n- Activités réelles existant à Québec (ville)\n- Variées : nature, patrimoine, communautaire, marché, parc, bibliothèque…\n- Saison : printemps\n- Conviennent à la famille avec des tout-petits (Mika et Luce, 1 an)",
+      "erreur": null
+    },
+    "web_search": {
+      "statut": "ok",
+      "count": 0,
+      "modele": "claude-opus-4-5",
+      "prompt": "Tu es un agent de découverte d'événements locaux à Québec (ville), Canada. Utilise l'outil de recherche web pour trouver des événements RÉELS de la semaine du 16 mars 2026 au 22 mars 2026 à Québec. Recherche en priorité les événements MOINS CONNUS, underground ou de niche : Le Pantoum, Le Vegas 3.0, L'Anti Bar & Spectacles, Le Scanner Bistro-Bar, pop quiz, soirées trivia, conférences, vernissages, marchés spéciaux.",
+      "recherches": [
+        "shows Québec semaine 16 mars 2026",
+        "concerts Québec mars 2026",
+        "Le Pantoum programmation mars 2026",
+        "événements underground Québec mars 2026",
+        "quiz Québec bars mars 2026"
+      ],
+      "sitesVisites": [],
+      "erreur": null
+    }
+  }
 }

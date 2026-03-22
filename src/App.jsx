@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import WeeklyPlanning from './components/WeeklyPlanning';
 import GroceryList from './components/GroceryList';
 import RecettesPage from './components/RecettesPage';
+import UpdateModal from './components/UpdateModal';
 import { genererPlanning, calculerStats } from './utils/planning';
 import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
@@ -27,6 +28,7 @@ export default function App() {
   const [filtres, setFiltres] = useState(DEFAULT_FILTRES);
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 100000));
   const [view, setView] = useState('planning'); // 'planning' | 'recettes'
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
 
   const planning = useMemo(() =>
     genererPlanning({
@@ -40,7 +42,10 @@ export default function App() {
 
   return (
     <div className="app">
-      <Header onViewRecettes={() => setView('recettes')} />
+      <Header
+        onViewRecettes={() => setView('recettes')}
+        onViewUpdate={() => setShowUpdateModal(true)}
+      />
       {view === 'recettes' ? (
         <RecettesPage onRetour={() => setView('planning')} />
       ) : (
@@ -57,6 +62,7 @@ export default function App() {
           </main>
         </div>
       )}
+      {showUpdateModal && <UpdateModal onClose={() => setShowUpdateModal(false)} />}
     </div>
   );
 }

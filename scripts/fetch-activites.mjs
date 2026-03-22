@@ -88,8 +88,9 @@ async function fetchTicketmaster(apiKey, semaine) {
     sort: 'date,asc',
   });
 
+  const urlSansClef = `https://app.ticketmaster.com/discovery/v2/events.json?city=Quebec&stateCode=QC&countryCode=CA&startDateTime=${semaine.debut}T00:00:00Z&endDateTime=${semaine.fin}T23:59:59Z&size=60&sort=date,asc`;
   const url = `https://app.ticketmaster.com/discovery/v2/events.json?${params}`;
-  console.log('→ Ticketmaster:', url.replace(apiKey, '***'));
+  console.log('→ Ticketmaster:', urlSansClef);
 
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Ticketmaster HTTP ${res.status}`);
@@ -102,15 +103,15 @@ async function fetchTicketmaster(apiKey, semaine) {
     'Arts & Theatre': 'culturel', 'Film': 'cinéma', 'Family': 'famille',
   };
 
-  return events.map(e => {
+  const resultats = events.map(e => {
     const tarifs = extraireTarifs(e.priceRanges);
     return {
       nom: e.name,
       lieu: e._embedded?.venues?.[0]?.name ?? 'Québec',
       duree: 120,
-      cout: tarifs.cout_adulte,          // compat rétroactive
+      cout: tarifs.cout_adulte,
       cout_adulte: tarifs.cout_adulte,
-      cout_enfant: tarifs.cout_enfant,   // null si inconnu
+      cout_enfant: tarifs.cout_enfant,
       cout_bebe:   tarifs.cout_bebe,
       saison: 'toute',
       type: typeMap[e.classifications?.[0]?.segment?.name] ?? 'événement',
@@ -121,6 +122,8 @@ async function fetchTicketmaster(apiKey, semaine) {
       source: 'ticketmaster',
     };
   }).filter(e => e.date);
+
+  return { resultats, urlSansClef };
 }
 
 // ── 2a. Claude — 3 activités 100 % gratuites garanties ───────────────────────
@@ -186,7 +189,7 @@ Réponds UNIQUEMENT avec un tableau JSON valide :
     s.cout = 0; s.cout_adulte = 0; s.cout_enfant = 0; s.cout_bebe = 0; s.gratuit = true;
   });
   console.log(`  ${suggestions.length} activités gratuites générées`);
-  return suggestions;
+  return { resultats: suggestions, prompt, modele: 'claude-opus-4-5' };
 }
 
 // ── 2b. Claude — suggestions avec vrais tarifs par tranche d'âge ───────────────
@@ -263,7 +266,7 @@ Types valides : plein air, culturel, gastronomique, sport, famille, musique, app
   });
 
   console.log(`  ${suggestions.length} suggestions Claude générées`);
-  return suggestions;
+  return { resultats: suggestions, prompt, modele: 'claude-opus-4-5' };
 }
 
 // ── 3. Recherche web autonome — événements underground et petites salles ─────
@@ -338,7 +341,22 @@ Retourne [] si rien de concret trouvé pour cette semaine.
   const events = JSON.parse(match[0]);
   events.forEach(e => { e.source = 'web_search'; });
   console.log(`  ${events.length} événements trouvés via web_search`);
-  return events;
+
+  // Extraire les requêtes et sites visités depuis les blocs de contenu
+  const recherches = message.content
+    .filter(b => b.type === 'tool_use' && b.name === 'web_search')
+    .map(b => b.input?.query)
+    .filter(Boolean);
+
+  const sitesVisites = [];
+  message.content
+    .filter(b => b.type === 'tool_result')
+    .forEach(b => {
+      const content = Array.isArray(b.content) ? b.content : [];
+      content.forEach(c => { if (c.url) sitesVisites.push(c.url); });
+    });
+
+  return { resultats: events, prompt, modele: 'claude-opus-4-5', recherches, sitesVisites };
 }
 
 function getSaisonActuelle() {
@@ -360,54 +378,73 @@ async function main() {
   const resultats = [];
   let sourceLabel = 'statique';
 
+  // Suivi détaillé par source pour le journal de mise à jour
+  const sourcesLog = {
+    ticketmaster: { statut: 'absent', count: 0, url: null, erreur: null },
+    claude:        { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
+    claude_gratuites: { statut: 'absent', count: 0, modele: null, prompt: null, erreur: null },
+    web_search:    { statut: 'absent', count: 0, modele: null, prompt: null, recherches: [], sitesVisites: [], erreur: null },
+  };
+
   // 1. Ticketmaster
   const tmKey = process.env.TICKETMASTER_API_KEY;
   if (tmKey) {
     try {
-      const tmEvents = await fetchTicketmaster(tmKey, semaine);
+      const { resultats: tmEvents, urlSansClef } = await fetchTicketmaster(tmKey, semaine);
       resultats.push(...tmEvents);
       sourceLabel = 'ticketmaster';
+      sourcesLog.ticketmaster = { statut: 'ok', count: tmEvents.length, url: urlSansClef, erreur: null };
     } catch (err) {
       console.warn('  ⚠️  Ticketmaster échoué:', err.message);
+      sourcesLog.ticketmaster = { statut: 'erreur', count: 0, url: null, erreur: err.message };
     }
-  } else {
-    console.log('  ℹ️  TICKETMASTER_API_KEY absente — étape ignorée');
   }
 
   // 2. Claude — suggestions générales + activités gratuites garanties
   const anthKey = process.env.ANTHROPIC_API_KEY;
   if (anthKey) {
     try {
-      const suggestions = await fetchSuggestionsIA(anthKey, semaine, resultats);
+      const { resultats: suggestions, prompt, modele } = await fetchSuggestionsIA(anthKey, semaine, resultats);
       resultats.push(...suggestions);
       sourceLabel = tmKey ? 'ticketmaster+claude' : 'claude';
+      sourcesLog.claude = { statut: 'ok', count: suggestions.length, modele, prompt, erreur: null };
     } catch (err) {
       console.warn('  ⚠️  Claude (suggestions) échoué:', err.message);
+      sourcesLog.claude = { statut: 'erreur', count: 0, modele: 'claude-opus-4-5', prompt: null, erreur: err.message };
     }
+
     try {
-      const gratuites = await fetchActivitesGratuites(anthKey, semaine, resultats);
+      const { resultats: gratuites, prompt, modele } = await fetchActivitesGratuites(anthKey, semaine, resultats);
       resultats.push(...gratuites);
+      sourcesLog.claude_gratuites = { statut: 'ok', count: gratuites.length, modele, prompt, erreur: null };
     } catch (err) {
       console.warn('  ⚠️  Claude (gratuites) échoué:', err.message);
+      sourcesLog.claude_gratuites = { statut: 'erreur', count: 0, modele: 'claude-opus-4-5', prompt: null, erreur: err.message };
     }
 
     // 3. Web search — événements underground, petites salles, niche
     try {
-      const webEvents = await fetchEvenementsWebSearch(anthKey, semaine, resultats);
+      const { resultats: webEvents, prompt, modele, recherches, sitesVisites } = await fetchEvenementsWebSearch(anthKey, semaine, resultats);
       if (webEvents.length > 0) {
         resultats.push(...webEvents);
         sourceLabel += '+websearch';
       }
+      sourcesLog.web_search = { statut: 'ok', count: webEvents.length, modele, prompt, recherches, sitesVisites, erreur: null };
     } catch (err) {
-      // L'outil web_search peut ne pas être activé sur tous les comptes Anthropic
       if (err.status === 400 || err.message?.toLowerCase().includes('web_search') || err.message?.toLowerCase().includes('tool')) {
         console.log('  ℹ️  web_search non disponible sur ce compte — étape ignorée');
+        sourcesLog.web_search.statut = 'absent';
+        sourcesLog.web_search.erreur = 'Outil web_search non activé sur ce compte Anthropic';
       } else {
         console.warn('  ⚠️  Web search échoué:', err.message);
+        sourcesLog.web_search = { statut: 'erreur', count: 0, modele: 'claude-opus-4-5', prompt: null, recherches: [], sitesVisites: [], erreur: err.message };
       }
     }
   } else {
     console.log('  ℹ️  ANTHROPIC_API_KEY absente — suggestions IA ignorées');
+    sourcesLog.claude.erreur = 'ANTHROPIC_API_KEY absente';
+    sourcesLog.claude_gratuites.erreur = 'ANTHROPIC_API_KEY absente';
+    sourcesLog.web_search.erreur = 'ANTHROPIC_API_KEY absente';
   }
 
   const activitesFinales = resultats.length > 0 ? resultats : anciennes;
@@ -415,18 +452,19 @@ async function main() {
   writeFileSync(ancienFichier, JSON.stringify(activitesFinales, null, 2) + '\n');
 
   const meta = {
-    lastUpdated: new Date().toISOString().split('T')[0],
+    lastUpdated: new Date().toISOString(),
     semaine: { debut: semaine.debut, fin: semaine.fin },
     source: sourceLabel,
     count: activitesFinales.length,
     ticketmaster: resultats.filter(e => e.source === 'ticketmaster').length,
     claude: resultats.filter(e => e.source === 'claude').length,
     gratuites: resultats.filter(e => e.gratuit === true).length,
+    sources: sourcesLog,
   };
   writeFileSync(join(DATA_DIR, 'meta.json'), JSON.stringify(meta, null, 2) + '\n');
 
   console.log(`\n✅ ${activitesFinales.length} activités sauvegardées (${sourceLabel})`);
-  console.log('   meta.json :', meta);
+  console.log('   meta.json :', { ...meta, sources: '(voir fichier)' });
 }
 
 main().catch(err => { console.error('❌', err); process.exit(1); });
