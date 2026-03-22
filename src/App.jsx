@@ -15,6 +15,7 @@ import './App.css';
 const DEFAULT_FILTRES = {
   nbVegetarien: 2,
   nbVegane: 1,
+  nbGratuit: 1,
   origine: 'Tous',
   activerCout: false,
   coutMax: 6,

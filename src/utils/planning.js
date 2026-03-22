@@ -56,7 +56,7 @@ function shuffleSeeded(arr, seed) {
 }
 
 export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut }) {
-  const { nbVegetarien, nbVegane, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
+  const { nbVegetarien, nbVegane, nbGratuit = 1, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
   if (nbOmnivore < 0) return null;
@@ -80,6 +80,19 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   originesMusique.forEach(orig => { musiqueIndexParOrigine[orig] = 0; });
   // Fallback global si l'origine de la recette ne correspond à aucune musique
   const musiqueFallback = shuffleSeeded(musique, seed + 9999);
+
+  // ── Activités gratuites : pré-sélectionner quels jours seront gratuits ────
+  // Shuffle les 7 jours et prendre les N premiers → répartition variée chaque semaine
+  const fallbackGratuitsGlobal = activites.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0).filter(a => !a.date || a.date === '');
+  const nbGratuitEffectif = Math.min(nbGratuit, 7, fallbackGratuitsGlobal.length);
+  const joursShuffles = shuffleSeeded([0, 1, 2, 3, 4, 5, 6], seed + 3737);
+  const joursGratuitsSet = new Set(joursShuffles.slice(0, nbGratuitEffectif));
+  // Index payant cyclique par jour (pour éviter répétitions)
+  const joursPayantsSeq = {};
+  let payantCounter = 0;
+  [0,1,2,3,4,5,6].forEach(j => {
+    if (!joursGratuitsSet.has(j)) { joursPayantsSeq[j] = payantCounter++; }
+  });
 
   let compteurOmnivore = 0;
   let compteurVegetarien = 0;
@@ -140,15 +153,25 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // ── Activité ──────────────────────────────────────────────────────────────
     // Priorité 1 : événement avec date précise ce jour-là (Ticketmaster)
     // Priorité 2 : suggestion sans date (Claude / statique) comme fallback
+    //   → en respectant le quota nbGratuit : N jours seront des activités gratuites
     const activitesJour = activites.filter(a => a.date === dateStr);
     const activitesFallback = activites.filter(a => !a.date || a.date === '');
+    const fallbackGratuits = activitesFallback.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0);
+    const fallbackPayants  = activitesFallback.filter(a => !a.gratuit && (a.cout_adulte ?? a.cout ?? 0) > 0);
 
     let activite = null;
     if (activitesJour.length > 0) {
       activite = pickRandom(activitesJour, rngRecette);
     } else if (activitesFallback.length > 0) {
-      // Distribution cyclique pour éviter les répétitions
-      activite = activitesFallback[i % activitesFallback.length];
+      // Jours désignés "gratuits" : sélectionnés via shuffle seeded pour répartition dans la semaine
+      if (joursGratuitsSet.has(i) && fallbackGratuits.length > 0) {
+        const idxG = [...joursGratuitsSet].sort((a, b) => a - b).indexOf(i);
+        activite = fallbackGratuits[idxG % fallbackGratuits.length];
+      } else {
+        const poolPayant = fallbackPayants.length > 0 ? fallbackPayants : activitesFallback;
+        const idxP = joursPayantsSeq[i] ?? (i % poolPayant.length);
+        activite = poolPayant[idxP % poolPayant.length];
+      }
     }
 
     // ── Musique : calquée sur l'origine culturelle de la recette ─────────────

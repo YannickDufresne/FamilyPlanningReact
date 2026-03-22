@@ -40,7 +40,17 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
             onChange={e => set('nbVegane', +e.target.value)} />
         </div>
 
-        <div className="sidebar-section-title">Filtres</div>
+        <div className="sidebar-section-title">Activités</div>
+
+        <div className="control-group">
+          <label className="control-label">
+            Sorties gratuites — <strong>{filtres.nbGratuit} / sem.</strong>
+          </label>
+          <input type="range" min={0} max={3} step={1} value={filtres.nbGratuit}
+            onChange={e => set('nbGratuit', +e.target.value)} />
+        </div>
+
+        <div className="sidebar-section-title">Filtres recettes</div>
 
         <div className="control-group">
           <label className="control-label">Origine culturelle</label>

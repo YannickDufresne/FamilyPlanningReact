@@ -123,7 +123,73 @@ async function fetchTicketmaster(apiKey, semaine) {
   }).filter(e => e.date);
 }
 
-// ── 2. Claude — suggestions avec vrais tarifs par tranche d'âge ───────────────
+// ── 2a. Claude — 3 activités 100 % gratuites garanties ───────────────────────
+async function fetchActivitesGratuites(anthropicKey, semaine, existantes) {
+  const client = new Anthropic({ apiKey: anthropicKey });
+
+  const dejaListes = existantes.map(e => `- ${e.nom}`).join('\n') || '(aucun)';
+  const profilsFamille = FAMILLE.map(m => {
+    const age = calculerAge(m.naissance);
+    const cat = age < 5 ? 'bébé' : age < 13 ? 'enfant' : age < 18 ? 'ado' : 'adulte';
+    return `  • ${m.prenom} ${m.emoji} (${age} ans, ${cat}) : ${m.gouts}`;
+  }).join('\n');
+
+  const prompt = `Tu es un expert des sorties familiales gratuites à Québec (ville).
+
+Génère exactement 3 activités ENTIÈREMENT GRATUITES pour la famille Dufresne, semaine du ${semaine.debutLisible} au ${semaine.finLisible}.
+
+Famille :
+${profilsFamille}
+
+Déjà listées (ne pas dupliquer) :
+${dejaListes}
+
+CONTRAINTES STRICTES :
+- 100 % gratuites : entrée, stationnement, matériel — tout compris
+- Activités réelles existant à Québec (ville)
+- Variées : nature, patrimoine, communautaire, marché, parc, bibliothèque…
+- Saison : ${getSaisonActuelle()}
+- Conviennent à la famille avec des tout-petits (Mika et Luce, 1 an)
+
+Réponds UNIQUEMENT avec un tableau JSON valide :
+[{
+  "nom": "Nom précis",
+  "lieu": "Lieu exact avec adresse si possible",
+  "duree": 90,
+  "cout": 0, "cout_adulte": 0, "cout_enfant": 0, "cout_bebe": 0,
+  "saison": "toute",
+  "type": "plein air",
+  "origine": "Québec",
+  "exemple_claude": 1,
+  "date": "",
+  "url": "",
+  "source": "claude",
+  "gratuit": true,
+  "pourQui": "famille",
+  "description": "Description enthousiaste avec émojis des membres concernés"
+}]`;
+
+  console.log('→ Claude : génération des activités gratuites...');
+  const message = await client.messages.create({
+    model: 'claude-opus-4-5',
+    max_tokens: 1200,
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const texte = message.content[0].text.trim();
+  const match = texte.match(/\[[\s\S]*\]/);
+  if (!match) throw new Error('Pas de JSON valide pour les activités gratuites');
+
+  const suggestions = JSON.parse(match[0]);
+  // Sécurité : forcer cout = 0 quoi qu'il arrive
+  suggestions.forEach(s => {
+    s.cout = 0; s.cout_adulte = 0; s.cout_enfant = 0; s.cout_bebe = 0; s.gratuit = true;
+  });
+  console.log(`  ${suggestions.length} activités gratuites générées`);
+  return suggestions;
+}
+
+// ── 2b. Claude — suggestions avec vrais tarifs par tranche d'âge ───────────────
 async function fetchSuggestionsIA(anthropicKey, semaine, evenementsExistants) {
   const client = new Anthropic({ apiKey: anthropicKey });
 
@@ -233,7 +299,7 @@ async function main() {
     console.log('  ℹ️  TICKETMASTER_API_KEY absente — étape ignorée');
   }
 
-  // 2. Claude
+  // 2. Claude — suggestions générales + activités gratuites garanties
   const anthKey = process.env.ANTHROPIC_API_KEY;
   if (anthKey) {
     try {
@@ -241,7 +307,13 @@ async function main() {
       resultats.push(...suggestions);
       sourceLabel = tmKey ? 'ticketmaster+claude' : 'claude';
     } catch (err) {
-      console.warn('  ⚠️  Claude échoué:', err.message);
+      console.warn('  ⚠️  Claude (suggestions) échoué:', err.message);
+    }
+    try {
+      const gratuites = await fetchActivitesGratuites(anthKey, semaine, resultats);
+      resultats.push(...gratuites);
+    } catch (err) {
+      console.warn('  ⚠️  Claude (gratuites) échoué:', err.message);
     }
   } else {
     console.log('  ℹ️  ANTHROPIC_API_KEY absente — suggestions IA ignorées');
@@ -258,6 +330,7 @@ async function main() {
     count: activitesFinales.length,
     ticketmaster: resultats.filter(e => e.source === 'ticketmaster').length,
     claude: resultats.filter(e => e.source === 'claude').length,
+    gratuites: resultats.filter(e => e.gratuit === true).length,
   };
   writeFileSync(join(DATA_DIR, 'meta.json'), JSON.stringify(meta, null, 2) + '\n');
 
