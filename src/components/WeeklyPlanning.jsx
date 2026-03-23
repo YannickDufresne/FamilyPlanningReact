@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DayCard from './DayCard';
 
-export default function WeeklyPlanning({ planning }) {
+export default function WeeklyPlanning({ planning, profils = [] }) {
   const [modesActivite, setModesActivite] = useState(() =>
     Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
   );
@@ -32,6 +32,7 @@ export default function WeeklyPlanning({ planning }) {
             onToggleModeActivite={(mode) =>
               setModesActivite(prev => ({ ...prev, [jour.jour]: mode }))
             }
+            profils={profils}
           />
         ))}
       </div>

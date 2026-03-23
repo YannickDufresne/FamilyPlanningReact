@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import WeeklyPlanning from './components/WeeklyPlanning';
 import GroceryList from './components/GroceryList';
 import RecettesPage from './components/RecettesPage';
+import ActivitesPage from './components/ActivitesPage';
 import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
@@ -42,7 +43,7 @@ export default function App() {
     for (const c of debut) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
     return (h % 2147483646) + 1;
   });
-  const [view, setView] = useState('planning'); // 'planning' | 'recettes'
+  const [view, setView] = useState('planning'); // 'planning' | 'recettes' | 'activites'
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showProfilsModal, setShowProfilsModal] = useState(false);
   const [profils, setProfils] = useState(() => {
@@ -72,11 +73,15 @@ export default function App() {
     <div className="app">
       <Header
         onViewRecettes={() => setView('recettes')}
+        onViewActivites={() => setView('activites')}
         onViewUpdate={() => setShowUpdateModal(true)}
         onViewProfils={() => setShowProfilsModal(true)}
+        activeView={view}
       />
       {view === 'recettes' ? (
         <RecettesPage onRetour={() => setView('planning')} />
+      ) : view === 'activites' ? (
+        <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} />
       ) : (
         <div className="layout">
           <Sidebar
@@ -86,7 +91,7 @@ export default function App() {
             stats={stats}
           />
           <main className="main-content">
-            <WeeklyPlanning planning={planning} />
+            <WeeklyPlanning planning={planning} profils={profils} />
             <GroceryList planning={planning} />
           </main>
         </div>

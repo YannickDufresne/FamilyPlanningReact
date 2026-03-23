@@ -2,6 +2,39 @@ import { useState } from 'react';
 import { calculerPrixFamille } from '../utils/prixFamille';
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
+const RANG_MEDALS  = ['🥇', '🥈', '🥉'];
+const RANG_LABELS  = ['1er choix', '2e choix', '3e choix'];
+
+// ── Génère une phrase expliquant pourquoi cette activité a été suggérée ───────
+function genererExplication(activite, profils, pourQui = 'famille') {
+  if (!activite || !profils || profils.length === 0) return null;
+  const texte = `${activite.nom || ''} ${activite.description || ''} ${activite.lieu || ''}`.toLowerCase();
+
+  const membres = pourQui === 'adultes'
+    ? profils.filter(p => {
+        const n = new Date(p.naissance + 'T12:00:00');
+        let age = new Date().getFullYear() - n.getFullYear();
+        const dm = new Date().getMonth() - n.getMonth();
+        if (dm < 0 || (dm === 0 && new Date().getDate() < n.getDate())) age--;
+        return age >= 18;
+      })
+    : profils;
+
+  const matches = [];
+  for (const m of membres) {
+    const mots = (m.aime || '').toLowerCase().split(/[,;]+/).map(s => s.trim()).filter(Boolean);
+    const found = mots.filter(mot => mot.length >= 3 && texte.includes(mot));
+    if (found.length > 0) matches.push({ prenom: m.prenom, emoji: m.emoji, mots: found.slice(0, 2) });
+  }
+
+  if (matches.length === 0) return null;
+
+  const noms = matches.length <= 2
+    ? matches.map(m => `${m.emoji} ${m.prenom}`).join(' et ')
+    : `${matches.slice(0, -1).map(m => `${m.emoji} ${m.prenom}`).join(', ')} et ${matches[matches.length - 1].emoji} ${matches[matches.length - 1].prenom}`;
+  const motsCles = [...new Set(matches.flatMap(m => m.mots))].slice(0, 3).join(', ');
+  return `Pour ${noms} · ${motsCles}`;
+}
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
 
 function EvalRow({ recette }) {
@@ -63,7 +96,7 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour, modeActivite = 'famille', onToggleModeActivite }) {
+export default function DayCard({ jour, modeActivite = 'famille', onToggleModeActivite, profils = [] }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
@@ -183,21 +216,29 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
             {activiteAffichee.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
             )}
-            {/* Navigation top-3 */}
+            {/* Explication basée sur les profils */}
+            {genererExplication(activiteAffichee, profils, modeActivite) && (
+              <div className="activite-explication">
+                {genererExplication(activiteAffichee, profils, modeActivite)}
+              </div>
+            )}
+            {/* Navigation top-3 avec médailles */}
             {pool.length > 1 && (
-              <div className="activite-top3">
-                {pool.map((_, i) => (
-                  <button
-                    key={i}
-                    className={`top3-dot${i === Math.min(idx, pool.length - 1) ? ' top3-dot--active' : ''}`}
-                    onClick={() => setIdx(i)}
-                    title={pool[i]?.nom}
-                    aria-label={`Option ${i + 1}`}
-                  />
-                ))}
-                <span className="top3-label">
-                  {Math.min(idx, pool.length - 1) + 1} / {pool.length}
-                </span>
+              <div className="activite-rang-nav">
+                {pool.map((a, i) => {
+                  const isCurrent = i === Math.min(idx, pool.length - 1);
+                  return (
+                    <button
+                      key={i}
+                      className={`rang-btn${isCurrent ? ' rang-btn--active' : ''}`}
+                      onClick={() => setIdx(i)}
+                      title={a?.nom}
+                    >
+                      <span className="rang-medal">{RANG_MEDALS[i]}</span>
+                      <span className="rang-label">{RANG_LABELS[i]}</span>
+                    </button>
+                  );
+                })}
               </div>
             )}
           </>
