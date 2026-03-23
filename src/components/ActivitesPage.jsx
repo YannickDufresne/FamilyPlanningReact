@@ -140,12 +140,14 @@ function CarteActivite({ activite, mode, profils }) {
         <div className="acti-carte__lieu">📍 {activite.lieu}</div>
       )}
 
-      {explication && (
-        <div className="acti-carte__explication">{explication}</div>
+      {(activite.description_generee || activite.description) && (
+        <div className="acti-carte__desc">
+          {activite.description_generee || activite.description}
+        </div>
       )}
 
-      {!explication && activite.description && (
-        <div className="acti-carte__desc">{activite.description}</div>
+      {explication && (
+        <div className="acti-carte__explication">{explication}</div>
       )}
 
       {/* Score principal */}
