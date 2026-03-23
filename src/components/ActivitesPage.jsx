@@ -145,17 +145,31 @@ function CarteActivite({ activite, mode }) {
   );
 }
 
+const PALIERS = [
+  { label: 'Tout',  val: 0,  title: 'Afficher toutes les activités' },
+  { label: '20%+',  val: 20, title: 'Pertinence minimale 20 %' },
+  { label: '50%+',  val: 50, title: 'Pertinence minimale 50 %' },
+  { label: '80%+',  val: 80, title: 'Pertinence minimale 80 %' },
+];
+
 export default function ActivitesPage({ onRetour, semaine }) {
-  const [mode, setMode] = useState('famille'); // 'famille' | 'adultes'
-  const [tri, setTri]   = useState('score');   // 'score' | 'date' | 'gratuit'
+  const [mode, setMode]       = useState('famille'); // 'famille' | 'adultes'
+  const [tri, setTri]         = useState('score');   // 'score' | 'date' | 'gratuit'
+  const [scoreMin, setScoreMin] = useState(0);       // palier de pertinence
 
   const debutSemaine = semaine?.debut;
   const finSemaine   = semaine?.fin;
   const dansSemaine  = d => debutSemaine && finSemaine && d >= debutSemaine && d <= finSemaine;
 
+  // Filtrer par pertinence minimale
+  const scoreKey = mode === 'adultes' ? 'score_adultes' : 'score_famille';
+  const activitesFiltrees = scoreMin === 0
+    ? activites
+    : activites.filter(a => (a[scoreKey] ?? 0) >= scoreMin);
+
   // Séparer datées / non-datées
-  const datees    = activites.filter(a => a.date && a.date.trim() !== '');
-  const nonDatees = activites.filter(a => !a.date || a.date.trim() === '');
+  const datees    = activitesFiltrees.filter(a => a.date && a.date.trim() !== '');
+  const nonDatees = activitesFiltrees.filter(a => !a.date || a.date.trim() === '');
 
   // Fonction de tri
   const trierActivites = (arr) => {
@@ -195,6 +209,8 @@ export default function ActivitesPage({ onRetour, semaine }) {
         return avg(parDate[b]) - avg(parDate[a]);
       });
 
+  const nbTotal  = activites.length;
+  const nbAffichees = activitesFiltrees.length;
   const nbScores = activites.filter(a =>
     (mode === 'adultes' ? a.score_adultes : a.score_famille) != null
   ).length;
@@ -207,7 +223,10 @@ export default function ActivitesPage({ onRetour, semaine }) {
         <div style={{ flex: 1 }}>
           <h2 className="acti-page__titre">Toutes les activités</h2>
           <p className="acti-page__intro">
-            {activites.length} activités sur 4 semaines
+            {scoreMin > 0
+              ? <><strong>{nbAffichees}</strong> sur {nbTotal} activités</>
+              : <><strong>{nbTotal}</strong> activités</>
+            }
             {nbScores > 0 && ` · ${nbScores} analysées par IA`}
             {' '}· mise à jour chaque dimanche
           </p>
@@ -226,6 +245,24 @@ export default function ActivitesPage({ onRetour, semaine }) {
               onClick={() => setMode('adultes')}
             >🍷 Adultes</button>
           </div>
+
+          {/* Filtre pertinence */}
+          <div className="acti-filtre-pertinence">
+            <span className="acti-filtre-pertinence__label">Pertinence</span>
+            <div className="acti-paliers">
+              {PALIERS.map(p => (
+                <button
+                  key={p.val}
+                  className={`acti-palier-btn${scoreMin === p.val ? ' acti-palier-btn--active' : ''}`}
+                  onClick={() => setScoreMin(p.val)}
+                  title={p.title}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Tri */}
           <select
             className="acti-tri-select"

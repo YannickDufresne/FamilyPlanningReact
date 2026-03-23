@@ -2072,6 +2072,57 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   flex-wrap: wrap;
 }
 
+/* ── Filtre pertinence par paliers ─────────────────────────────────────────── */
+.acti-filtre-pertinence {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-left: 1px solid var(--border);
+  padding-left: 10px;
+}
+
+.acti-filtre-pertinence__label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.acti-paliers {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.acti-palier-btn {
+  padding: 0.18rem 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: none;
+  background: var(--bg);
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.acti-palier-btn + .acti-palier-btn { border-left: 1px solid var(--border); }
+
+.acti-palier-btn--active {
+  background: var(--forest);
+  color: #fff;
+}
+
+.acti-palier-btn:hover:not(.acti-palier-btn--active) {
+  background: var(--sage-light);
+  color: var(--forest);
+}
+
 .acti-tri-select {
   border: 1px solid var(--border-dark);
   border-radius: 0;
