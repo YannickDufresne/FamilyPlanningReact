@@ -146,10 +146,11 @@ function CarteActivite({ activite, mode }) {
 }
 
 const PALIERS = [
-  { label: 'Tout',  val: 0,  title: 'Afficher toutes les activités' },
-  { label: '20%+',  val: 20, title: 'Pertinence minimale 20 %' },
-  { label: '50%+',  val: 50, title: 'Pertinence minimale 50 %' },
-  { label: '80%+',  val: 80, title: 'Pertinence minimale 80 %' },
+  { label: 'Tout',    val: 0,  title: 'Afficher toutes les activités' },
+  { label: 'Sans 0%', val: 1,  title: 'Masquer les activités non pertinentes (score 0)' },
+  { label: '20%+',    val: 20, title: 'Pertinence minimale 20 %' },
+  { label: '50%+',    val: 50, title: 'Pertinence minimale 50 %' },
+  { label: '80%+',    val: 80, title: 'Pertinence minimale 80 %' },
 ];
 
 export default function ActivitesPage({ onRetour, semaine }) {
