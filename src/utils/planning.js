@@ -222,7 +222,12 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     //
     // IMPORTANT : on filtre TOUJOURS les activités inadaptées hors du pool famille
     // (speed dating, événements célibataires, etc.) — même sans scores pré-calculés.
-    const activitesFamilleCompat = activites.filter(a => !estInadapteFamille(a));
+    // Exclure : activités inadaptées famille + activités explicitement scorées 0 par Claude
+    // score_famille null = pas encore scorée → on la garde (fallback keyword)
+    // score_famille === 0 = Claude a jugé inadaptée → on exclut totalement
+    const activitesFamilleCompat = activites.filter(a =>
+      !estInadapteFamille(a) && (a.score_famille == null || a.score_famille > 0)
+    );
 
     const activitesJour = activitesFamilleCompat.filter(a => a.date === dateStr);
     const incontournablesJour = activitesJour.filter(a => a.incontournable === true);
@@ -260,22 +265,32 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // ── Pool adultes ──────────────────────────────────────────────────────────
     // Toutes les activités sont éligibles pour adultes (y compris les family-friendly)
     // mais les spécifiquement marquées 'adultes' sont priorisées par le score.
+    // score_adultes === 0 → Claude a jugé non pertinent même pour adultes → exclu
     const adultesExplicites = activites.filter(a =>
-      a.pourQui === 'adultes' || a.pourQui === 'adulte'
+      (a.pourQui === 'adultes' || a.pourQui === 'adulte') &&
+      (a.score_adultes == null || a.score_adultes > 0)
     );
     const adultesExplicitesJour     = adultesExplicites.filter(a => a.date === dateStr);
     const adultesExplicitesFallback = adultesExplicites.filter(a => !a.date || a.date === '');
 
+    // Pool adultes : activités explicitement adultes + toutes les activités avec score_adultes > 0
+    const activitesAdultesCompat = activites.filter(a =>
+      a.score_adultes == null || a.score_adultes > 0
+    );
+    const activitesAdultesJour     = activitesAdultesCompat.filter(a => a.date === dateStr);
+    const activitesAdultesFallback = activitesAdultesCompat.filter(a => !a.date || a.date === '');
+
     let poolAdultes;
     if (adultesExplicitesJour.length > 0 || adultesExplicitesFallback.length > 0) {
-      // Adultes explicites en tête, complétés par activités famille compatibles
       poolAdultes = [
         ...adultesExplicitesJour,
         ...adultesExplicitesFallback,
-        ...poolFamille, // les activités famille peuvent aussi convenir aux adultes
+        ...activitesAdultesJour,
+        ...activitesAdultesFallback,
       ];
     } else {
-      poolAdultes = poolFamille; // fallback complet sur pool famille
+      poolAdultes = [...activitesAdultesJour, ...activitesAdultesFallback];
+      if (poolAdultes.length === 0) poolAdultes = poolFamille;
     }
 
     const rngJitterA = seededRandom(seed + i * 43 + 9999);
