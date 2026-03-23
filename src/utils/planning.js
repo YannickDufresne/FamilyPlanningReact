@@ -1,9 +1,18 @@
 // ─── Logique de planification ─────────────────────────────────────────────────
 
 // ── Score d'affinité activité ↔ profils famille ───────────────────────────────
-// Compare les mots-clés des préférences de chaque membre avec le texte de l'activité.
-// Retourne un score entier (plus élevé = meilleure correspondance).
+// Priorité 1 : scores pré-calculés par Claude (dans activites.json)
+// Priorité 2 : correspondance mot-clé client-side (fallback)
 function scorerActivite(activite, profils, pourQui = 'famille') {
+  // Utilise les scores pré-calculés par Claude si disponibles (0-100)
+  if (pourQui === 'adultes' && activite.score_adultes != null) {
+    return activite.score_adultes + (activite.incontournable ? 20 : 0);
+  }
+  if (pourQui !== 'adultes' && activite.score_famille != null) {
+    return activite.score_famille + (activite.incontournable ? 20 : 0);
+  }
+
+  // Fallback : correspondance mot-clé
   if (!profils || profils.length === 0) return 0;
   const texte = `${activite.nom || ''} ${activite.description || ''} ${activite.lieu || ''}`.toLowerCase();
 

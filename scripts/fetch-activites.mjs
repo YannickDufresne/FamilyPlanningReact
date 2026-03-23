@@ -53,6 +53,14 @@ function getSemaine() {
   };
 }
 
+// ── Période élargie (N semaines à partir du lundi courant) ───────────────────
+function getPeriodeElargie(semaine, nbSemaines = 4) {
+  const finElargie = new Date(semaine.fin + 'T12:00:00');
+  finElargie.setDate(finElargie.getDate() + (nbSemaines - 1) * 7);
+  const fmt = d => d.toISOString().split('T')[0];
+  return { debut: semaine.debut, fin: fmt(finElargie) };
+}
+
 // ── Extrait les tarifs depuis les priceRanges Ticketmaster ───────────────────
 // TM retourne parfois plusieurs types : "standard", "standard including fees",
 // "platinum", "vip"... Rarement "child" ou "family" mais on vérifie quand même.
@@ -77,18 +85,19 @@ function extraireTarifs(priceRanges) {
 
 // ── 1. Ticketmaster ───────────────────────────────────────────────────────────
 async function fetchTicketmaster(apiKey, semaine) {
+  const periode = getPeriodeElargie(semaine, 4); // 4 semaines de visibilité
   const params = new URLSearchParams({
     apikey: apiKey,
     city: 'Quebec',
     stateCode: 'QC',
     countryCode: 'CA',
-    startDateTime: `${semaine.debut}T00:00:00Z`,
-    endDateTime: `${semaine.fin}T23:59:59Z`,
-    size: 60,
+    startDateTime: `${periode.debut}T00:00:00Z`,
+    endDateTime: `${periode.fin}T23:59:59Z`,
+    size: 100,
     sort: 'date,asc',
   });
 
-  const urlSansClef = `https://app.ticketmaster.com/discovery/v2/events.json?city=Quebec&stateCode=QC&countryCode=CA&startDateTime=${semaine.debut}T00:00:00Z&endDateTime=${semaine.fin}T23:59:59Z&size=60&sort=date,asc`;
+  const urlSansClef = `https://app.ticketmaster.com/discovery/v2/events.json?city=Quebec&stateCode=QC&countryCode=CA&startDateTime=${periode.debut}T00:00:00Z&endDateTime=${periode.fin}T23:59:59Z&size=100&sort=date,asc`;
   const url = `https://app.ticketmaster.com/discovery/v2/events.json?${params}`;
   console.log('→ Ticketmaster:', urlSansClef);
 
@@ -469,10 +478,12 @@ Retourne UNIQUEMENT un tableau JSON ([] si rien d'incontournable cette semaine p
 // ── 0b. Eventbrite — événements Quebec via JSON embarqué dans le HTML ─────────
 // Eventbrite expose window.__SERVER_DATA__ dans le HTML — pas d'API key requise.
 async function fetchEventbrite(semaine) {
+  const periode = getPeriodeElargie(semaine, 4);
   const pages = [
     { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/free--events/', isFree: true },
     { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/events--this-week/', isFree: false },
     { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/events--next-week/', isFree: false },
+    { url: 'https://www.eventbrite.ca/d/canada--qu%C3%A9bec/events--this-month/', isFree: false },
   ];
 
   const vus = new Set();
@@ -522,8 +533,8 @@ async function fetchEventbrite(semaine) {
         const isQC = city.includes('québec') || city.includes('quebec');
         if (!isQC) continue;
 
-        // Filtre: dans la semaine ciblée
-        if (!e.start_date || e.start_date < semaine.debut || e.start_date > semaine.fin) continue;
+        // Filtre: dans la période de 4 semaines
+        if (!e.start_date || e.start_date < periode.debut || e.start_date > periode.fin) continue;
 
         // Déduplique par ID ou nom+date
         const key = e.eid ?? (e.name + '|' + e.start_date);
@@ -558,8 +569,83 @@ async function fetchEventbrite(semaine) {
     }
   }
 
-  console.log(`  → ${resultats.length} événements Eventbrite retenus pour la semaine ${semaine.debut}→${semaine.fin}`);
+  console.log(`  → ${resultats.length} événements Eventbrite retenus pour ${semaine.debut}→${periode.fin}`);
   return resultats;
+}
+
+// ── 5. Analyse IA de toutes les activités — scores + explications ─────────────
+// Passe chaque activité à Claude pour obtenir :
+//   score_famille (0-100), score_adultes (0-100),
+//   explication_famille, explication_adultes, scores_membres
+async function scorerEtExpliquer(anthropicKey, activites) {
+  const client = new Anthropic({ apiKey: anthropicKey });
+
+  const profilsFamille = FAMILLE.map(m => {
+    const age = calculerAge(m.naissance);
+    const cat = age < 5 ? 'bébé' : age < 13 ? 'enfant' : age < 18 ? 'ado' : 'adulte';
+    return `${m.prenom} ${m.emoji} (${age} ans, ${cat}): ${m.gouts}`;
+  }).join('\n');
+
+  const BATCH = 25; // activités par appel Claude
+  const scored = activites.map(a => ({ ...a }));
+
+  for (let i = 0; i < activites.length; i += BATCH) {
+    const batch = activites.slice(i, i + BATCH);
+    const liste = batch.map((a, j) =>
+      `${j + 1}. "${a.nom}" | ${a.lieu ?? ''} | audience: ${a.pourQui ?? 'famille'} | ${a.description ?? ''}`
+    ).join('\n');
+
+    const prompt = `Famille Dufresne, Québec — évalue la pertinence de ces activités :
+
+MEMBRES DE LA FAMILLE :
+${profilsFamille}
+
+ACTIVITÉS À ÉVALUER (${batch.length}) :
+${liste}
+
+Pour chaque activité (dans le même ordre), retourne :
+- score_famille : 0-100 (pertinence pour sortie en famille complète)
+- score_adultes : 0-100 (pertinence pour sortie Patricia + Yannick seulement, sans enfants)
+- explication_famille : max 90 car., style «Pour 💚 Patricia et 🐤 Joseph · arts, aventure» — explique le match avec les préférences
+- explication_adultes : max 90 car., style «Soirée idéale pour 🦉 Yannick · histoire, gastronomie»
+- scores_membres : { "Patricia": 0-100, "Yannick": 0-100, "Joseph": 0-100, "Mika": 0-100, "Luce": 0-100 }
+
+Règles : score 0 si l'activité est vraiment inadaptée, 100 si parfaite. Les bébés (Mika, Luce) ont des scores élevés pour parcs, nature, marchés, zoos, fêtes en plein air. Joseph aime le sport et l'aventure. Patricia et Yannick apprécient la culture et la gastronomie.
+
+Réponds UNIQUEMENT avec un tableau JSON (${batch.length} éléments, même ordre) :
+[{ "score_famille": 85, "score_adultes": 60, "explication_famille": "...", "explication_adultes": "...", "scores_membres": { "Patricia": 90, "Yannick": 80, "Joseph": 70, "Mika": 50, "Luce": 50 } }]`;
+
+    try {
+      console.log(`  Scoring batch ${i + 1}–${Math.min(i + BATCH, activites.length)} / ${activites.length}...`);
+      const message = await client.messages.create({
+        model: 'claude-opus-4-5',
+        max_tokens: 4000,
+        messages: [{ role: 'user', content: prompt }],
+      });
+
+      const texte = message.content[0].text.trim();
+      const match = texte.match(/\[[\s\S]*\]/);
+      if (!match) { console.warn('  Scoring: réponse JSON invalide'); continue; }
+
+      const batchScores = JSON.parse(match[0]);
+      batchScores.forEach((s, j) => {
+        const idx = i + j;
+        if (idx < scored.length) {
+          scored[idx].score_famille    = s.score_famille    ?? null;
+          scored[idx].score_adultes    = s.score_adultes    ?? null;
+          scored[idx].explication_famille  = s.explication_famille  ?? null;
+          scored[idx].explication_adultes  = s.explication_adultes  ?? null;
+          scored[idx].scores_membres   = s.scores_membres   ?? null;
+        }
+      });
+    } catch (err) {
+      console.warn(`  ⚠️  Scoring batch ${i}–${i + BATCH}: ${err.message}`);
+    }
+  }
+
+  const ok = scored.filter(a => a.score_famille != null).length;
+  console.log(`  ${ok} / ${activites.length} activités scorées`);
+  return scored;
 }
 
 function getSaisonActuelle() {
@@ -693,7 +779,17 @@ async function main() {
     sourcesLog.web_search.erreur = 'ANTHROPIC_API_KEY absente';
   }
 
-  const activitesFinales = resultats.length > 0 ? resultats : anciennes;
+  let activitesFinales = resultats.length > 0 ? resultats : anciennes;
+
+  // ── 5. Scoring IA de toutes les activités (si clé Anthropic disponible) ────
+  if (anthKey && activitesFinales.length > 0) {
+    try {
+      console.log('\n→ Scoring IA : analyse de toutes les activités selon les profils famille...');
+      activitesFinales = await scorerEtExpliquer(anthKey, activitesFinales);
+    } catch (err) {
+      console.warn('  ⚠️  Scoring global échoué:', err.message);
+    }
+  }
 
   writeFileSync(ancienFichier, JSON.stringify(activitesFinales, null, 2) + '\n');
 

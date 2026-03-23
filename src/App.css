@@ -1977,6 +1977,13 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   color: var(--ink-3);
 }
 
+.acti-carte__explication {
+  font-size: 0.75rem;
+  color: var(--sage);
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .acti-carte__desc {
   font-size: 0.78rem;
   color: var(--ink-2);
@@ -2001,8 +2008,89 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .acti-badge--adultes  { background: var(--terra-light); color: var(--terra); }
 .acti-badge--source   { background: var(--surface-2);   color: var(--ink-3); }
 
+/* ── Score barre ─────────────────────────────────────────────────────────────── */
+.score-barre {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 6px;
+}
+
+.score-barre__piste {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.score-barre__fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.score-barre__val {
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: right;
+}
+
+.score-barre__label {
+  font-size: 0.62rem;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+/* ── Scores membres ────────────────────────────────────────────────────────── */
+.scores-membres {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.membre-chip {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 2px 7px 2px 5px;
+  font-size: 0.65rem;
+}
+
+.membre-chip__emoji { font-size: 0.75rem; }
+.membre-chip__score { font-weight: 700; }
+
+/* ── Contrôles page activités ─────────────────────────────────────────────── */
+.acti-controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.acti-tri-select {
+  border: 1px solid var(--border-dark);
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  padding: 5px 28px 5px 10px;
+  background: var(--bg);
+  color: var(--ink);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999990'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .acti-groupe { grid-template-columns: 1fr; }
   .acti-groupe__date { text-align: left; padding-top: 0; border-top: 1px solid var(--border); padding-top: 10px; }
   .acti-grille { grid-template-columns: 1fr; }
+  .acti-page__header { flex-wrap: wrap; gap: 14px; }
+  .acti-controles { width: 100%; }
 }

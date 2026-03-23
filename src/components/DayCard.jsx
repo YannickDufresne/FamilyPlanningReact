@@ -216,12 +216,16 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
             {activiteAffichee.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
             )}
-            {/* Explication basée sur les profils */}
-            {genererExplication(activiteAffichee, profils, modeActivite) && (
-              <div className="activite-explication">
-                {genererExplication(activiteAffichee, profils, modeActivite)}
-              </div>
-            )}
+            {/* Explication : pré-calculée par Claude ou générée client-side */}
+            {(() => {
+              const preCalc = modeActivite === 'adultes'
+                ? activiteAffichee.explication_adultes
+                : activiteAffichee.explication_famille;
+              const explication = preCalc || genererExplication(activiteAffichee, profils, modeActivite);
+              return explication ? (
+                <div className="activite-explication">{explication}</div>
+              ) : null;
+            })()}
             {/* Navigation top-3 avec médailles */}
             {pool.length > 1 && (
               <div className="activite-rang-nav">
