@@ -129,6 +129,7 @@ async function fetchTicketmaster(apiKey, semaine) {
       date: e.dates?.start?.localDate ?? '',
       url: e.url ?? '',
       source: 'ticketmaster',
+      pourQui: detecterAudience(e.name, e.info ?? ''),
     };
   }).filter(e => e.date);
 
@@ -560,7 +561,7 @@ async function fetchEventbrite(semaine) {
           url: e.url ?? '',
           source: 'eventbrite',
           gratuit: isFree,
-          pourQui: 'famille',
+          pourQui: detecterAudience(e.name, e.summary ?? ''),
           description: e.summary ?? '',
         });
       }
@@ -646,6 +647,29 @@ Réponds UNIQUEMENT avec un tableau JSON (${batch.length} éléments, même ordr
   const ok = scored.filter(a => a.score_famille != null).length;
   console.log(`  ${ok} / ${activites.length} activités scorées`);
   return scored;
+}
+
+// ── Détecte automatiquement l'audience d'un événement ────────────────────────
+// Retourne 'adultes' si les mots-clés indiquent un événement inadapté aux familles,
+// 'famille' sinon. Utilisé pour Ticketmaster et Eventbrite.
+const KEYWORDS_ADULTES_ONLY = [
+  'speed dating', 'speed-dating', 'speedating', 'speeddating',
+  'célibataires', 'celibataires', 'célibataire', 'celibataire',
+  'singles night', 'singles event', 'singles party',
+  'dating event', 'dating night', 'rencontre adulte',
+  'soirée pour adultes', 'soirée adultes', 'soirée adulte',
+  'adults only', 'adultes seulement', 'réservé aux adultes',
+  '18 ans et plus', '18+ seulement', '18+', '19+', '21+',
+  'strip-tease', 'striptease', 'cabaret adulte', 'burlesque',
+  'bachelorette', 'bachelor party', 'bachelorette party',
+  'hen night', 'hen party', 'stag night',
+  'séduction', 'hookup', 'rencontre romantique',
+  'lapdance', 'gentlemen club', 'night club exclusif',
+];
+
+function detecterAudience(nom, description = '') {
+  const texte = `${nom} ${description}`.toLowerCase();
+  return KEYWORDS_ADULTES_ONLY.some(k => texte.includes(k)) ? 'adultes' : 'famille';
 }
 
 function getSaisonActuelle() {

@@ -1,8 +1,31 @@
 // ─── Logique de planification ─────────────────────────────────────────────────
 
+// ── Mots-clés indiquant un événement INADAPTÉ à une sortie en famille ─────────
+// Ces termes détectent automatiquement les événements pour adultes célibataires,
+// contenus pour adultes, ou situations clairement non-familiales.
+const MOTS_INADAPTES_FAMILLE = [
+  'speed dating', 'speed-dating', 'speeddating', 'speedating',
+  'célibataires', 'celibataires', 'célibataire', 'celibataire',
+  'singles night', 'singles event', 'dating event', 'dating night',
+  'rencontre adulte', 'soirée pour adultes', 'soirée adultes',
+  'adults only', 'adultes seulement', 'réservé aux adultes',
+  '18 ans et plus', '18+ seulement', '18+', '19+', '21+',
+  'strip-tease', 'striptease', 'cabaret adulte', 'burlesque',
+  'bachelorette', 'bachelor party', 'bachelorette party',
+  'hen night', 'hen party', 'stag night',
+  'séduction', 'hookup', 'rencontre romantique',
+];
+
+// Retourne true si l'activité est clairement inadaptée pour une sortie famille
+function estInadapteFamille(activite) {
+  if (activite.pourQui === 'adultes' || activite.pourQui === 'adulte') return true;
+  const texte = `${activite.nom || ''} ${activite.description || ''}`.toLowerCase();
+  return MOTS_INADAPTES_FAMILLE.some(m => texte.includes(m));
+}
+
 // ── Score d'affinité activité ↔ profils famille ───────────────────────────────
 // Priorité 1 : scores pré-calculés par Claude (dans activites.json)
-// Priorité 2 : correspondance mot-clé client-side (fallback)
+// Priorité 2 : correspondance mot-clé client-side avec pénalité pour inadaptés
 function scorerActivite(activite, profils, pourQui = 'famille') {
   // Utilise les scores pré-calculés par Claude si disponibles (0-100)
   if (pourQui === 'adultes' && activite.score_adultes != null) {
@@ -12,8 +35,13 @@ function scorerActivite(activite, profils, pourQui = 'famille') {
     return activite.score_famille + (activite.incontournable ? 20 : 0);
   }
 
-  // Fallback : correspondance mot-clé
-  if (!profils || profils.length === 0) return 0;
+  // Fallback client-side : événement inadapté pour famille → score plancher négatif
+  if (pourQui !== 'adultes' && estInadapteFamille(activite)) {
+    return -9999; // Toujours dernier dans le classement famille
+  }
+
+  // Correspondance mot-clé avec les préférences des membres
+  if (!profils || profils.length === 0) return 1; // score neutre minimal
   const texte = `${activite.nom || ''} ${activite.description || ''} ${activite.lieu || ''}`.toLowerCase();
 
   const membres = pourQui === 'adultes'
@@ -24,14 +52,16 @@ function scorerActivite(activite, profils, pourQui = 'famille') {
       })
     : profils;
 
-  let score = 0;
+  let score = 1; // Neutre (pas 0, pour distinguer du score de pénalité)
   for (const m of membres) {
     const mots = (m.aime || '').toLowerCase().split(/[,;]+/).map(s => s.trim()).filter(Boolean);
     for (const mot of mots) {
-      if (mot.length >= 3 && texte.includes(mot)) score++;
+      if (mot.length >= 3 && texte.includes(mot)) score += 5;
     }
   }
-  if (activite.incontournable) score += 20;
+  if (activite.incontournable) score += 100;
+  // Bonus source : les suggestions Claude et incontournables ont déjà été filtrées
+  if (activite.source === 'claude' || activite.source === 'claude_gratuites') score += 3;
   return score;
 }
 
@@ -189,9 +219,14 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // Priorité 1 : incontournable avec date précise ce jour-là (toujours affiché)
     // Priorité 2 : événement daté régulier (Ticketmaster, etc.)
     // Priorité 3 : suggestion sans date comme fallback (quota nbGratuit respecté)
-    const activitesJour = activites.filter(a => a.date === dateStr);
+    //
+    // IMPORTANT : on filtre TOUJOURS les activités inadaptées hors du pool famille
+    // (speed dating, événements célibataires, etc.) — même sans scores pré-calculés.
+    const activitesFamilleCompat = activites.filter(a => !estInadapteFamille(a));
+
+    const activitesJour = activitesFamilleCompat.filter(a => a.date === dateStr);
     const incontournablesJour = activitesJour.filter(a => a.incontournable === true);
-    const activitesFallback = activites.filter(a => !a.date || a.date === '');
+    const activitesFallback = activitesFamilleCompat.filter(a => !a.date || a.date === '');
     const fallbackGratuits = activitesFallback.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0);
     const fallbackPayants  = activitesFallback.filter(a => !a.gratuit && (a.cout_adulte ?? a.cout ?? 0) > 0);
 
@@ -212,33 +247,42 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
 
     // Score + déduplique + prend top-3 famille
+    // Le jitter seeded brise les égalités de façon stable (même résultat sur tous les appareils)
+    const rngJitter = seededRandom(seed + i * 41 + 8888);
     const familleSeen = new Set();
     const topFamille = poolFamille
       .filter(a => { if (familleSeen.has(a.nom)) return false; familleSeen.add(a.nom); return true; })
-      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'famille') }))
+      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'famille') + rngJitter() * 0.5 }))
       .sort((a, b) => b._score - a._score)
       .slice(0, 3);
     const activite = topFamille[0] ?? null;
 
     // ── Pool adultes ──────────────────────────────────────────────────────────
-    const adultesFallback = activites.filter(a =>
-      (!a.date || a.date === '') &&
-      (a.pourQui === 'adultes' || a.pourQui === 'adulte')
+    // Toutes les activités sont éligibles pour adultes (y compris les family-friendly)
+    // mais les spécifiquement marquées 'adultes' sont priorisées par le score.
+    const adultesExplicites = activites.filter(a =>
+      a.pourQui === 'adultes' || a.pourQui === 'adulte'
     );
-    const adultesJour = activites.filter(a =>
-      a.date === dateStr &&
-      (a.pourQui === 'adultes' || a.pourQui === 'adulte')
-    );
-    let poolAdultes = adultesJour.length > 0
-      ? [...adultesJour, ...adultesFallback]
-      : adultesFallback.length > 0
-        ? adultesFallback
-        : poolFamille; // fallback sur famille si aucune activité adultes
+    const adultesExplicitesJour     = adultesExplicites.filter(a => a.date === dateStr);
+    const adultesExplicitesFallback = adultesExplicites.filter(a => !a.date || a.date === '');
 
+    let poolAdultes;
+    if (adultesExplicitesJour.length > 0 || adultesExplicitesFallback.length > 0) {
+      // Adultes explicites en tête, complétés par activités famille compatibles
+      poolAdultes = [
+        ...adultesExplicitesJour,
+        ...adultesExplicitesFallback,
+        ...poolFamille, // les activités famille peuvent aussi convenir aux adultes
+      ];
+    } else {
+      poolAdultes = poolFamille; // fallback complet sur pool famille
+    }
+
+    const rngJitterA = seededRandom(seed + i * 43 + 9999);
     const adultesSeen = new Set();
     const topAdultes = poolAdultes
       .filter(a => { if (adultesSeen.has(a.nom)) return false; adultesSeen.add(a.nom); return true; })
-      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'adultes') }))
+      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'adultes') + rngJitterA() * 0.5 }))
       .sort((a, b) => b._score - a._score)
       .slice(0, 3);
     const activiteAdultes = topAdultes[0] ?? activite;
