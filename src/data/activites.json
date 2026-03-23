@@ -16,7 +16,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Venez rencontrer toute notre équipe, échanger sur vos projets de vacances et assister à des conférences sur nos voyages."
+    "description": "Venez rencontrer toute notre équipe, échanger sur vos projets de vacances et assister à des conférences sur nos voyages.",
+    "score_famille": 45,
+    "score_adultes": 62,
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · voyages, découvertes · bébés peu adaptés",
+    "explication_adultes": "Soirée idéale pour 🦉 Yannick et 💚 Patricia · voyages, découvertes",
+    "scores_membres": {
+      "Patricia": 65,
+      "Yannick": 68,
+      "Joseph": 35,
+      "Mika": 15,
+      "Luce": 18
+    }
   },
   {
     "nom": "Journée ERP Epicor Kinetic - Événement clients Concerti & EC Solutions",
@@ -35,7 +46,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Une journée pour repenser vos opérations, accélérer votre croissance et découvrir comment maximiser la puissance d’Epicor Kinetic."
+    "description": "Une journée pour repenser vos opérations, accélérer votre croissance et découvrir comment maximiser la puissance d'Epicor Kinetic.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · événement professionnel ERP",
+    "explication_adultes": "Non pertinent pour adultes · conférence d'affaires technique",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Créez vos propres dominos avec STAEDTLER à Bureau Duplessis Magasin 221",
@@ -54,7 +76,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Préparez-vous pour une séance ludique et créative où les enfants concevront, construiront et joueront à leur propre jeu de dominos illustrés"
+    "description": "Préparez-vous pour une séance ludique et créative où les enfants concevront, construiront et joueront à leur propre jeu de dominos illustrés",
+    "score_famille": 85,
+    "score_adultes": 15,
+    "explication_famille": "Pour 🐤 Joseph et 💚 Patricia · créativité, arts, jeux famille",
+    "explication_adultes": "Peu pertinent seuls · activité conçue pour enfants",
+    "scores_membres": {
+      "Patricia": 72,
+      "Yannick": 55,
+      "Joseph": 80,
+      "Mika": 60,
+      "Luce": 60
+    }
   },
   {
     "nom": "Projection commentée du film \"Premières Lunes\" (27 mars 2026 à Québec)",
@@ -73,7 +106,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Premières Lunes (Mélanie Mélot, 2025) donne la parole à des jeunes filles et femmes du monde entier autour de leurs premières règles."
+    "description": "Premières Lunes (Mélanie Mélot, 2025) donne la parole à des jeunes filles et femmes du monde entier autour de leurs premières règles.",
+    "score_famille": 42,
+    "score_adultes": 58,
+    "explication_famille": "Pour 💚 Patricia · cinéma documentaire · peu adapté bébés et ado",
+    "explication_adultes": "Soirée pour 💚 Patricia · cinéma documentaire féministe culturel",
+    "scores_membres": {
+      "Patricia": 72,
+      "Yannick": 38,
+      "Joseph": 25,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Des données aux decisions",
@@ -92,7 +136,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Ce programme vise à renforcer vos connaissances et compétences pratiques en matière de mesure, notification et vérification (MNV)."
+    "description": "Ce programme vise à renforcer vos connaissances et compétences pratiques en matière de mesure, notification et vérification (MNV).",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation professionnelle technique",
+    "explication_adultes": "Non pertinent pour adultes · formation professionnelle MNV",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Lancement de VISIBLE à Québec",
@@ -111,7 +166,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Assistez au lancement du livre VISIBLE de Marie-Ève Martel et Kim Auclair.\nGratuit. Bouchées offertes et vente de livres sur place."
+    "description": "Assistez au lancement du livre VISIBLE de Marie-Ève Martel et Kim Auclair.\nGratuit. Bouchées offertes et vente de livres sur place.",
+    "score_famille": 38,
+    "score_adultes": 68,
+    "explication_famille": "Pour 💚 Patricia · lancement livre culturel · peu adapté bébés/ado",
+    "explication_adultes": "Soirée idéale pour 💚 Patricia · lancement livre, culture, bouchées",
+    "scores_membres": {
+      "Patricia": 78,
+      "Yannick": 62,
+      "Joseph": 18,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "2026 QUÉBEC CITY MAKERS MARKET",
@@ -130,7 +196,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Viens shopper des créations uniques et cools au Marché des Makers de Québec en 2026, en direct!"
+    "description": "Viens shopper des créations uniques et cools au Marché des Makers de Québec en 2026, en direct!",
+    "score_famille": 82,
+    "score_adultes": 65,
+    "explication_famille": "Pour 💚 Patricia, 🦉 Yannick et 🐤 Joseph · marché plein air, créations",
+    "explication_adultes": "Soirée idéale pour 💚 Patricia · arts, artisanat, plein air Plaines",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 78,
+      "Joseph": 65,
+      "Mika": 55,
+      "Luce": 58
+    }
   },
   {
     "nom": "PREMIER ÉVÉNEMENT OFFICIEL - La communauté Unreal de Québec",
@@ -149,7 +226,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Venez échanger, apprendre et rester à jour sur les dernières nouveautés, dans une ambiance détendue, ouverte au partage et au réseautage."
+    "description": "Venez échanger, apprendre et rester à jour sur les dernières nouveautés, dans une ambiance détendue, ouverte au partage et au réseautage.",
+    "score_famille": 22,
+    "score_adultes": 28,
+    "explication_famille": "Non adapté famille · réseautage tech/jeux vidéo professionnel",
+    "explication_adultes": "Peu pertinent pour adultes · meetup tech Unreal Engine",
+    "scores_membres": {
+      "Patricia": 18,
+      "Yannick": 22,
+      "Joseph": 42,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Code @ Québec",
@@ -168,7 +256,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Des rencontres mensuelles dans la ville de Québec où les développeurs parlent de code."
+    "description": "Des rencontres mensuelles dans la ville de Québec où les développeurs parlent de code.",
+    "score_famille": 5,
+    "score_adultes": 12,
+    "explication_famille": "Non adapté famille · meetup développeurs professionnel",
+    "explication_adultes": "Non pertinent pour adultes · meetup développeurs spécialisé",
+    "scores_membres": {
+      "Patricia": 8,
+      "Yannick": 10,
+      "Joseph": 15,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Soirée de lancement GENTIL HOMME",
@@ -187,7 +286,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Vous êtes formellement invité à la soirée de lancement Gentil Homme. Une soirée qui est pour nous une manière de vous remercier!"
+    "description": "Vous êtes formellement invité à la soirée de lancement Gentil Homme. Une soirée qui est pour nous une manière de vous remercier!",
+    "score_famille": 20,
+    "score_adultes": 45,
+    "explication_famille": "Non adapté famille · soirée lancement adultes, lieu gourmet",
+    "explication_adultes": "Pour 🦉 Yannick et 💚 Patricia · soirée lancement, ambiance festive",
+    "scores_membres": {
+      "Patricia": 48,
+      "Yannick": 50,
+      "Joseph": 15,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Le Tour Vers la carboneutralité des PME- Québec, QC",
@@ -206,7 +316,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Rejoignez ECO Canada pour cet arrêt à Québec du Tour Vers la carboneutralite des PME"
+    "description": "Rejoignez ECO Canada pour cet arrêt à Québec du Tour Vers la carboneutralite des PME",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · événement professionnel PME",
+    "explication_adultes": "Non pertinent pour adultes · conférence d'affaires environnement",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 8,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Installation de produits de jointoiements et protection de pavés 101",
@@ -225,7 +346,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Maîtrisez l’art du jointoiement et protégez vos pavés pour un résultat impeccable et durable !"
+    "description": "Maîtrisez l'art du jointoiement et protégez vos pavés pour un résultat impeccable et durable !",
+    "score_famille": 5,
+    "score_adultes": 10,
+    "explication_famille": "Non adapté famille · atelier technique professionnel pavés",
+    "explication_adultes": "Non pertinent pour adultes · formation technique spécialisée",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 12,
+      "Joseph": 8,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Reclaim Your Calm: A Working Mom's Guide to Self-Care - Québec City",
@@ -244,7 +376,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Break free from the stress, frustration and overwhelm & step into a life of peace, calm, passion and joy.  Join us to find out how."
+    "description": "Break free from the stress, frustration and overwhelm & step into a life of peace, calm, passion and joy.  Join us to find out how.",
+    "score_famille": 0,
+    "score_adultes": 15,
+    "explication_famille": "Non adapté famille · webinaire Zoom virtuel",
+    "explication_adultes": "Pour 💚 Patricia · webinaire bien-être maman",
+    "scores_membres": {
+      "Patricia": 28,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Concert méditatif - Gongs et voix",
@@ -263,7 +406,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Le Monastère vous accueille pour vivre une expérience unique en compagnie de Médita-son."
+    "description": "Le Monastère vous accueille pour vivre une expérience unique en compagnie de Médita-son.",
+    "score_famille": 52,
+    "score_adultes": 72,
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · concert méditatif, patrimoine · bébés difficiles",
+    "explication_adultes": "Soirée idéale pour 💚 Patricia · concert méditatif, culture, Monastère",
+    "scores_membres": {
+      "Patricia": 78,
+      "Yannick": 72,
+      "Joseph": 28,
+      "Mika": 18,
+      "Luce": 22
+    }
   },
   {
     "nom": "Entretien Brave avec Olga Farman, ville de Québec",
@@ -282,7 +436,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Entrevue avec Olga Farman, présidente-directrice générale du Port de Québec"
+    "description": "Entrevue avec Olga Farman, présidente-directrice générale du Port de Québec",
+    "score_famille": 25,
+    "score_adultes": 62,
+    "explication_famille": "Non adapté famille · conférence adultes, peu adapté bébés/ado",
+    "explication_adultes": "Pour 🦉 Yannick · découverte intellectuelle, Port de Québec, patrimoine",
+    "scores_membres": {
+      "Patricia": 58,
+      "Yannick": 70,
+      "Joseph": 15,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Québec | Speed Dating Hétéro  | Âges 34-43 | 23 Mars",
@@ -301,7 +466,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "adultes",
-    "description": "Dites adieu au swipe avec Flare Events ! Une soirée fun pour rencontrer des célibataires sérieux. Rejoins-nous à Québec !"
+    "description": "Dites adieu au swipe avec Flare Events ! Une soirée fun pour rencontrer des célibataires sérieux. Rejoins-nous à Québec !",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · speed dating célibataires",
+    "explication_adultes": "Non pertinent pour adultes · speed dating, famille mariée",
+    "scores_membres": {
+      "Patricia": 0,
+      "Yannick": 0,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Yoga famille - 4 à 6 ans",
@@ -320,7 +496,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Parents et grands-parents sont invités au Monastère avec leurs enfants et petits-enfants de 4 à 6 ans à découvrir les bienfaits du yoga."
+    "description": "Parents et grands-parents sont invités au Monastère avec leurs enfants et petits-enfants de 4 à 6 ans à découvrir les bienfaits du yoga.",
+    "score_famille": 48,
+    "score_adultes": 10,
+    "explication_famille": "Pour 💚 Patricia · yoga famille · groupe cible 4-6 ans, pas bébés ni ado",
+    "explication_adultes": "Peu pertinent seuls · activité conçue pour enfants 4-6 ans",
+    "scores_membres": {
+      "Patricia": 62,
+      "Yannick": 45,
+      "Joseph": 25,
+      "Mika": 30,
+      "Luce": 32
+    }
   },
   {
     "nom": "L'expérience client  - Une approche novatrice",
@@ -339,7 +526,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Levio et l’ACMP :   L'expérience client pour transformer la culture organisationnelle. En apprendre plus lors de cet événement en personne !"
+    "description": "Levio et l'ACMP :   L'expérience client pour transformer la culture organisationnelle. En apprendre plus lors de cet événement en personne !",
+    "score_famille": 0,
+    "score_adultes": 8,
+    "explication_famille": "Non adapté famille · conférence professionnelle gestion du changement",
+    "explication_adultes": "Non pertinent pour adultes · conférence d'affaires organisationnelle",
+    "scores_membres": {
+      "Patricia": 8,
+      "Yannick": 8,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Golf virtuel YEA ASHRAE Québec 2026",
@@ -358,7 +556,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Événement de réseautage organisé par le comité des jeunes ingénieurs de l'ASHRAE (YEA)."
+    "description": "Événement de réseautage organisé par le comité des jeunes ingénieurs de l'ASHRAE (YEA).",
+    "score_famille": 12,
+    "score_adultes": 22,
+    "explication_famille": "Non adapté famille · réseautage ingénieurs professionnel",
+    "explication_adultes": "Peu pertinent pour adultes · networking jeunes ingénieurs ASHRAE",
+    "scores_membres": {
+      "Patricia": 12,
+      "Yannick": 20,
+      "Joseph": 15,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Café franco : Harmonies féminines",
@@ -377,7 +586,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Venez savourer dans une ambiance intimiste les voix féminines du Café franco de mars!"
+    "description": "Venez savourer dans une ambiance intimiste les voix féminines du Café franco de mars!",
+    "score_famille": 38,
+    "score_adultes": 65,
+    "explication_famille": "Pour 💚 Patricia · concert voix féminines · peu adapté bébés/ado",
+    "explication_adultes": "Soirée idéale pour 💚 Patricia · concert intime, voix féminines, culture",
+    "scores_membres": {
+      "Patricia": 78,
+      "Yannick": 55,
+      "Joseph": 20,
+      "Mika": 12,
+      "Luce": 15
+    }
   },
   {
     "nom": "PMP Certification 4 Days Classroom Training in Quebec, QC",
@@ -396,7 +616,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "PMP Certification 4 Days Classroom Training"
+    "description": "PMP Certification 4 Days Classroom Training",
+    "score_famille": 0,
+    "score_adultes": 0,
+    "explication_famille": "Non adapté famille · formation certifiante PMP professionnelle",
+    "explication_adultes": "Non pertinent pour adultes · cours certifiant PMP",
+    "scores_membres": {
+      "Patricia": 0,
+      "Yannick": 0,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "A Night Out in Quebec City | Dinner with Strangers",
@@ -415,7 +646,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Life can get lonely, even when you’re always working. Take the opportunity to meet locals over dinner!"
+    "description": "Life can get lonely, even when you're always working. Take the opportunity to meet locals over dinner!",
+    "score_famille": 10,
+    "score_adultes": 52,
+    "explication_famille": "Non adapté famille · souper avec inconnus, contexte adultes",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, rencontres sociales",
+    "scores_membres": {
+      "Patricia": 55,
+      "Yannick": 52,
+      "Joseph": 5,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Conférence Linda Valade",
@@ -434,7 +676,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Le non verbal en affaires"
+    "description": "Le non verbal en affaires",
+    "score_famille": 0,
+    "score_adultes": 12,
+    "explication_famille": "Non adapté famille · conférence d'affaires communication",
+    "explication_adultes": "Non pertinent pour adultes · conférence non-verbal en affaires",
+    "scores_membres": {
+      "Patricia": 12,
+      "Yannick": 12,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Decision-Making Under Uncertainty – 1 Day Session in Quebec City",
@@ -453,7 +706,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Strengthen your ability to make confident, informed decisions under uncertainty using practical frameworks to assess risk & act decisively."
+    "description": "Strengthen your ability to make confident, informed decisions under uncertainty using practical frameworks to assess risk & act decisively.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation professionnelle décision",
+    "explication_adultes": "Non pertinent pour adultes · formation pro 1 jour",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Peak Energy & Productivity Skills – 1 Day Workshop in Quebec City",
@@ -472,7 +736,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Discover strategies to manage physical, emotional, and mental energy for sustained productivity, creativity, and resilience."
+    "description": "Discover strategies to manage physical, emotional, and mental energy for sustained productivity, creativity, and resilience.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · atelier productivité professionnel",
+    "explication_adultes": "Non pertinent pour adultes · formation pro 1 jour productivité",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "QUÉBEC Marche et connexion - tous les vendredis",
@@ -491,7 +766,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Marcher. Connecter. S'inspirer. Pour le grand public et les gens d'affaires."
+    "description": "Marcher. Connecter. S'inspirer. Pour le grand public et les gens d'affaires.",
+    "score_famille": 55,
+    "score_adultes": 48,
+    "explication_famille": "Pour 🦉 Yannick et 🐤 Joseph · marche plein air, découverte ville",
+    "explication_adultes": "Pour 🦉 Yannick · marche, connexion, plein air urbain",
+    "scores_membres": {
+      "Patricia": 50,
+      "Yannick": 65,
+      "Joseph": 60,
+      "Mika": 38,
+      "Luce": 40
+    }
   },
   {
     "nom": "QuebecSec - Rencontres mensuelles 2026",
@@ -510,7 +796,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "QuébecSec est une rencontre mensuelle ayant lieu à chaque 4e jeudi pour discuter et présenter des sujets de sécurité informatique"
+    "description": "QuébecSec est une rencontre mensuelle ayant lieu à chaque 4e jeudi pour discuter et présenter des sujets de sécurité informatique",
+    "score_famille": 5,
+    "score_adultes": 15,
+    "explication_famille": "Non adapté famille · meetup sécurité informatique professionnel",
+    "explication_adultes": "Non pertinent pour adultes · meetup tech cybersécurité",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 15,
+      "Joseph": 18,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Digital Emotional Intelligence for Hybrid Teams: 1 Day Course, Quebec City",
@@ -529,7 +826,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Develop empathy, tone control, and connection in virtual environments. Master the human side of digital collaboration."
+    "description": "Develop empathy, tone control, and connection in virtual environments. Master the human side of digital collaboration.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation professionnelle intelligence émotionnelle",
+    "explication_adultes": "Non pertinent pour adultes · formation pro 1 jour équipes hybrides",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Concert lyrique - Chant, orgue et flûte",
@@ -548,7 +856,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Laissez-vous transporter par le répertoire de Bach interprété par un trio de musiciens."
+    "description": "Laissez-vous transporter par le répertoire de Bach interprété par un trio de musiciens.",
+    "score_famille": 58,
+    "score_adultes": 80,
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · concert Bach, arts, patrimoine Monastère",
+    "explication_adultes": "Soirée idéale pour 💚 Patricia et 🦉 Yannick · Bach, culture, Monastère",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 80,
+      "Joseph": 25,
+      "Mika": 15,
+      "Luce": 18
+    }
   },
   {
     "nom": "Québec | Speed Dating Hétéro  | Âges 40+ | 31 Mars",
@@ -567,7 +886,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "adultes",
-    "description": "Dites adieu au swipe avec Flare Events ! Une soirée fun pour rencontrer des célibataires sérieux. Rejoins-nous à Québec !"
+    "description": "Dites adieu au swipe avec Flare Events ! Une soirée fun pour rencontrer des célibataires sérieux. Rejoins-nous à Québec !",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · speed dating célibataires",
+    "explication_adultes": "Non pertinent pour adultes · speed dating, famille mariée",
+    "scores_membres": {
+      "Patricia": 0,
+      "Yannick": 0,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Fashion and Business Networking | Elevating Your Potential  - Québec City",
@@ -586,7 +916,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Strive welcomes you to 'Fashion and Business Networking', an event for tenured and newcomers at 3 Brasseurs! Event is 18+."
+    "description": "Strive welcomes you to 'Fashion and Business Networking', an event for tenured and newcomers at 3 Brasseurs! Event is 18+.",
+    "score_famille": 0,
+    "score_adultes": 28,
+    "explication_famille": "Non adapté famille · networking pro 18+",
+    "explication_adultes": "Pour 💚 Patricia · networking mode et affaires, ambiance festive",
+    "scores_membres": {
+      "Patricia": 38,
+      "Yannick": 22,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "QUÉBEC Café Croissance: réseautage, atelier-conférence et coworking",
@@ -605,7 +946,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Pour femmes d'affaires, solopreneures ambitieuses et femmes de cœur!"
+    "description": "Pour femmes d'affaires, solopreneures ambitieuses et femmes de cœur!",
+    "score_famille": 0,
+    "score_adultes": 18,
+    "explication_famille": "Non adapté famille · réseautage femmes d'affaires professionnel",
+    "explication_adultes": "Pour 💚 Patricia · réseautage femmes d'affaires",
+    "scores_membres": {
+      "Patricia": 35,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Law and Business Networking | Elevating Your Potential - Québec City",
@@ -624,7 +976,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Strive welcomes you to 'Law and Business Networking', an event for tenured and newcomers at 3 Brasseurs! Event is 18+. Limited Tickets"
+    "description": "Strive welcomes you to 'Law and Business Networking', an event for tenured and newcomers at 3 Brasseurs! Event is 18+. Limited Tickets",
+    "score_famille": 0,
+    "score_adultes": 22,
+    "explication_famille": "Non adapté famille · networking pro droit 18+",
+    "explication_adultes": "Peu pertinent pour adultes · networking droit et affaires",
+    "scores_membres": {
+      "Patricia": 20,
+      "Yannick": 25,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Intermediate Public Speaking: 1 Day Workshop in Quebec City",
@@ -643,7 +1006,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "From foundational confidence to advanced mastery—build stage control, persuasive skills, and professional presence"
+    "description": "From foundational confidence to advanced mastery—build stage control, persuasive skills, and professional presence",
+    "score_famille": 0,
+    "score_adultes": 8,
+    "explication_famille": "Non adapté famille · formation prise de parole professionnelle",
+    "explication_adultes": "Non pertinent pour adultes · formation pro prise de parole",
+    "scores_membres": {
+      "Patricia": 8,
+      "Yannick": 8,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Public Speaking for Career Shifters: 1 Day Session in Quebec City",
@@ -662,7 +1036,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Build lasting classroom impact—develop a confident speaking style that connects, inspires, and motivates learners."
+    "description": "Build lasting classroom impact—develop a confident speaking style that connects, inspires, and motivates learners.",
+    "score_famille": 0,
+    "score_adultes": 8,
+    "explication_famille": "Non adapté famille · formation prise de parole professionnelle",
+    "explication_adultes": "Non pertinent pour adultes · formation pro reconversion",
+    "scores_membres": {
+      "Patricia": 8,
+      "Yannick": 8,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "A Night Out in Quebec City | Dinner with Strangers",
@@ -681,7 +1066,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Life can get lonely, even when you’re always working. Take the opportunity to meet locals over dinner!"
+    "description": "Life can get lonely, even when you're always working. Take the opportunity to meet locals over dinner!",
+    "score_famille": 10,
+    "score_adultes": 52,
+    "explication_famille": "Non adapté famille · souper avec inconnus, contexte adultes",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, rencontres sociales",
+    "scores_membres": {
+      "Patricia": 55,
+      "Yannick": 52,
+      "Joseph": 5,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Sales Speaking Essentials: 1 Day Course in Quebec City",
@@ -700,7 +1096,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Redefine your sales conversations—speak with authority, build rapport fast, and convert interest into results."
+    "description": "Redefine your sales conversations—speak with authority, build rapport fast, and convert interest into results.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation vente professionnelle",
+    "explication_adultes": "Non pertinent pour adultes · formation pro ventes",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Public Speaking Mastery: 1 Day Workshop in Quebec City",
@@ -719,7 +1126,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Go beyond confidence—learn advanced techniques to deliver persuasive, engaging, and authentic presentations."
+    "description": "Go beyond confidence—learn advanced techniques to deliver persuasive, engaging, and authentic presentations.",
+    "score_famille": 0,
+    "score_adultes": 8,
+    "explication_famille": "Non adapté famille · formation avancée prise de parole",
+    "explication_adultes": "Non pertinent pour adultes · formation pro prise de parole avancée",
+    "scores_membres": {
+      "Patricia": 8,
+      "Yannick": 8,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Audience Engagement Toolkit: 1 Day Training in Quebec City",
@@ -738,7 +1156,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Engage every listener with proven strategies for storytelling, visuals, and interactive communication."
+    "description": "Engage every listener with proven strategies for storytelling, visuals, and interactive communication.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation storytelling professionnel",
+    "explication_adultes": "Non pertinent pour adultes · formation pro engagement audience",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Social & Emotional Development: 1 Day Session in Quebec City, QC",
@@ -757,7 +1186,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Strengthen your emotional core—become the leader who inspires, understands, and unites people through emotional awareness."
+    "description": "Strengthen your emotional core—become the leader who inspires, understands, and unites people through emotional awareness.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation leadership professionnel",
+    "explication_adultes": "Non pertinent pour adultes · formation pro développement émotionnel",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Speaking Skills for Hospitality: 1 Day Training in Quebec City",
@@ -776,7 +1216,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Speak with confidence, empathy, and precision—enhancing both your professional image and customer satisfaction."
+    "description": "Speak with confidence, empathy, and precision—enhancing both your professional image and customer satisfaction.",
+    "score_famille": 0,
+    "score_adultes": 5,
+    "explication_famille": "Non adapté famille · formation hôtellerie professionnelle",
+    "explication_adultes": "Non pertinent pour adultes · formation pro hôtellerie",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 5,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "QUÉBEC Marche et connexion - tous les vendredis",
@@ -795,7 +1246,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Marcher. Connecter. S'inspirer. Pour le grand public et les gens d'affaires."
+    "description": "Marcher. Connecter. S'inspirer. Pour le grand public et les gens d'affaires.",
+    "score_famille": 55,
+    "score_adultes": 48,
+    "explication_famille": "Pour 🦉 Yannick et 🐤 Joseph · marche plein air, découverte ville",
+    "explication_adultes": "Pour 🦉 Yannick · marche, connexion, plein air urbain",
+    "scores_membres": {
+      "Patricia": 50,
+      "Yannick": 65,
+      "Joseph": 60,
+      "Mika": 38,
+      "Luce": 40
+    }
   },
   {
     "nom": "Flavor and Fun (Odyssée - Le voyage culinaire)",
@@ -814,7 +1276,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Préparez-vous à une journée savoureuse remplie de délicieuses bouchées, d'une ambiance décontractée et de divertissement non-stop."
+    "description": "Préparez-vous à une journée savoureuse remplie de délicieuses bouchées, d'une ambiance décontractée et de divertissement non-stop.",
+    "score_famille": 68,
+    "score_adultes": 78,
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, bouchées, ambiance festive",
+    "explication_adultes": "Soirée idéale pour 🦉 Yannick et 💚 Patricia · gastronomie, découvertes",
+    "scores_membres": {
+      "Patricia": 82,
+      "Yannick": 80,
+      "Joseph": 55,
+      "Mika": 42,
+      "Luce": 40
+    }
   },
   {
     "nom": "PMP Certification Bootcamp – Weekend Classroom Training in Quebec, QC",
@@ -833,7 +1306,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Boost your career with our PMP Certification bootcamp! Our program provides 35 contact hours, expert training, and practice to pass the PMP"
+    "description": "Boost your career with our PMP Certification bootcamp! Our program provides 35 contact hours, expert training, and practice to pass the PMP",
+    "score_famille": 0,
+    "score_adultes": 0,
+    "explication_famille": "Non adapté famille · formation certifiante PMP weekend",
+    "explication_adultes": "Non pertinent pour adultes · cours certifiant PMP",
+    "scores_membres": {
+      "Patricia": 0,
+      "Yannick": 0,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Quebec City Quest Scavenger Hunt",
@@ -852,7 +1336,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Explore the hidden gems of the town while getting creative and having fun!"
+    "description": "Explore the hidden gems of the town while getting creative and having fun!",
+    "score_famille": 78,
+    "score_adultes": 68,
+    "explication_famille": "Pour 💚 Patricia, 🦉 Yannick et 🐤 Joseph · chasse trésor ville, aventure",
+    "explication_adultes": "Pour 🦉 Yannick et 💚 Patricia · exploration ville, patrimoine, aventure",
+    "scores_membres": {
+      "Patricia": 78,
+      "Yannick": 82,
+      "Joseph": 85,
+      "Mika": 35,
+      "Luce": 35
+    }
   },
   {
     "nom": "Atelier de dessin d'après modèle vivant - Betty Cayenne",
@@ -871,7 +1366,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Joins-toi aux Sketcheur.e.s de Québec pour un atelier de dessin d'après modèle vivant décomplexé à la Ninkasi Bar et Bistro!"
+    "description": "Joins-toi aux Sketcheur.e.s de Québec pour un atelier de dessin d'après modèle vivant décomplexé à la Ninkasi Bar et Bistro!",
+    "score_famille": 5,
+    "score_adultes": 72,
+    "explication_famille": "Non adapté famille · atelier dessin nu adultes, bar",
+    "explication_adultes": "Soirée idéale pour 💚 Patricia · arts, dessin, ambiance créative bar",
+    "scores_membres": {
+      "Patricia": 82,
+      "Yannick": 65,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Représentation #3 - Québec - The Spirit of Gravel",
@@ -890,7 +1396,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Le talentueux Philip Rouleau a réalisé un film magnifique sur la saison 2025 de notre athlète Alexis Cartier. Venez le visionner!"
+    "description": "Le talentueux Philip Rouleau a réalisé un film magnifique sur la saison 2025 de notre athlète Alexis Cartier. Venez le visionner!",
+    "score_famille": 55,
+    "score_adultes": 65,
+    "explication_famille": "Pour 🐤 Joseph et 🦉 Yannick · film sport aventure vélo gravel",
+    "explication_adultes": "Pour 🦉 Yannick · film sport, aventure, bar ambiance",
+    "scores_membres": {
+      "Patricia": 42,
+      "Yannick": 72,
+      "Joseph": 78,
+      "Mika": 10,
+      "Luce": 8
+    }
   },
   {
     "nom": "CAPM Certification 4 Days Classroom Training in Quebec, QC",
@@ -909,6 +1426,17 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "CAPM Certification 4 Days Classroom Training"
+    "description": "CAPM Certification 4 Days Classroom Training",
+    "score_famille": 0,
+    "score_adultes": 0,
+    "explication_famille": "Non adapté famille · formation certifiante CAPM professionnelle",
+    "explication_adultes": "Non pertinent pour adultes · cours certifiant CAPM",
+    "scores_membres": {
+      "Patricia": 0,
+      "Yannick": 0,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   }
 ]
