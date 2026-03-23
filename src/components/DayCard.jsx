@@ -68,9 +68,11 @@ function PrixFamille({ activite, date }) {
   const total = ventilation.reduce((s, m) => s + m.prix, 0);
   const hasTieredPricing = activite.cout_adulte !== undefined && activite.cout_adulte !== null;
 
-  // Masquer seulement si vraiment aucune info ET pas marqué gratuit
-  const aucuneInfo = !hasTieredPricing && (activite.cout ?? 0) === 0 && !activite.gratuit;
-  if (aucuneInfo) return null;
+  // Masquer seulement si on sait que c'est payant mais qu'on n'a pas les tarifs
+  // Si le prix calculé est 0 (null → 0 par défaut) → afficher "gratuit"
+  const prixEffectif = activite.cout_adulte ?? activite.cout ?? 0;
+  const effectivementGratuit = prixEffectif === 0;
+  if (!hasTieredPricing && !effectivementGratuit && !activite.gratuit) return null;
 
   return (
     <div className="prix-famille">
