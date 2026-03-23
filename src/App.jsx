@@ -81,7 +81,7 @@ export default function App() {
       {view === 'recettes' ? (
         <RecettesPage onRetour={() => setView('planning')} />
       ) : view === 'activites' ? (
-        <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} />
+        <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} profils={profils} />
       ) : (
         <div className="layout">
           <Sidebar

@@ -2064,6 +2064,71 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .membre-chip__emoji { font-size: 0.75rem; }
 .membre-chip__score { font-weight: 700; }
 
+/* ── Scores membres détaillés (page Activités) ──────────────────────────────── */
+.scores-membres-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.membre-ligne {
+  display: grid;
+  grid-template-columns: 1.2rem 4.5rem 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 7px;
+  row-gap: 1px;
+}
+
+.membre-ligne__emoji {
+  font-size: 0.85rem;
+  line-height: 1;
+  grid-row: 1 / 3;
+}
+
+.membre-ligne__nom {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.membre-ligne__barre {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.membre-ligne__fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.membre-ligne__score {
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.membre-ligne__raison {
+  grid-column: 2 / 5;
+  font-size: 0.65rem;
+  color: var(--ink-3);
+  font-style: italic;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ── Contrôles page activités ─────────────────────────────────────────────── */
 .acti-controles {
   display: flex;

@@ -2,6 +2,24 @@ import { useState } from 'react';
 import activites from '../data/activites.json';
 import familleDefaut from '../data/famille.json';
 
+// ── Génère une courte raison personnalisée pour un membre ─────────────────────
+function genererRaisonMembre(membre, activite) {
+  const score = activite.scores_membres?.[membre.prenom];
+  if (score == null) return null;
+
+  const texte = `${activite.nom} ${activite.description || ''} ${activite.lieu || ''}`.toLowerCase();
+  const mots  = (membre.aime || '').toLowerCase()
+    .split(/[,;]+/).map(s => s.trim()).filter(m => m.length >= 3);
+  const matches = mots.filter(m => texte.includes(m));
+  const top = matches.slice(0, 2).join(', ');
+
+  if (score === 0)  return 'Pas adapté à ses goûts';
+  if (score >= 80)  return top || 'Excellente activité';
+  if (score >= 55)  return top || 'Activité intéressante';
+  if (score >= 30)  return top || 'Peu en lien avec ses préférences';
+  return 'Peu adapté à ses goûts';
+}
+
 // ── Source config ─────────────────────────────────────────────────────────────
 const SOURCE_ICONE = {
   ticketmaster:    '🎫',
@@ -61,21 +79,30 @@ function ScoreBarre({ score, label }) {
   );
 }
 
-// ── Scores par membre ─────────────────────────────────────────────────────────
-function ScoresMembres({ scores }) {
+// ── Scores détaillés par membre ───────────────────────────────────────────────
+function ScoresMembres({ scores, activite, profils }) {
   if (!scores) return null;
-  const membres = familleDefaut.filter(m => scores[m.prenom] != null);
+  const source = profils?.length ? profils : familleDefaut;
+  const membres = source.filter(m => scores[m.prenom] != null);
   if (membres.length === 0) return null;
   return (
-    <div className="scores-membres">
+    <div className="scores-membres-detail">
       {membres.map(m => {
-        const s = scores[m.prenom];
+        const s      = scores[m.prenom];
+        const raison = genererRaisonMembre(m, activite);
         const couleur = couleurScore(s);
         return (
-          <span key={m.prenom} className="membre-chip" title={`${m.prenom} : ${s}%`}>
-            <span className="membre-chip__emoji">{m.emoji}</span>
-            <span className="membre-chip__score" style={{ color: couleur }}>{s}</span>
-          </span>
+          <div key={m.prenom} className="membre-ligne">
+            <span className="membre-ligne__emoji">{m.emoji}</span>
+            <span className="membre-ligne__nom">{m.prenom}</span>
+            <div className="membre-ligne__barre">
+              <div className="membre-ligne__fill" style={{ width: `${s}%`, background: couleur }} />
+            </div>
+            <span className="membre-ligne__score" style={{ color: couleur }}>{s}%</span>
+            {raison && (
+              <span className="membre-ligne__raison">{raison}</span>
+            )}
+          </div>
         );
       })}
     </div>
@@ -83,7 +110,7 @@ function ScoresMembres({ scores }) {
 }
 
 // ── Carte activité ─────────────────────────────────────────────────────────────
-function CarteActivite({ activite, mode }) {
+function CarteActivite({ activite, mode, profils }) {
   const prix = formatPrix(activite);
   const icone = SOURCE_ICONE[activite.source] ?? '•';
   const sourceLabel = SOURCE_LABEL[activite.source] ?? activite.source ?? '';
@@ -128,7 +155,7 @@ function CarteActivite({ activite, mode }) {
       />
 
       {/* Scores par membre */}
-      <ScoresMembres scores={activite.scores_membres} />
+      <ScoresMembres scores={activite.scores_membres} activite={activite} profils={profils} />
 
       <div className="acti-carte__footer">
         {activite.pourQui === 'adultes' && (
@@ -153,7 +180,7 @@ const PALIERS = [
   { label: '80%+',    val: 80, title: 'Pertinence minimale 80 %' },
 ];
 
-export default function ActivitesPage({ onRetour, semaine }) {
+export default function ActivitesPage({ onRetour, semaine, profils }) {
   const [mode, setMode]       = useState('famille'); // 'famille' | 'adultes'
   const [tri, setTri]         = useState('score');   // 'score' | 'date' | 'gratuit'
   const [scoreMin, setScoreMin] = useState(0);       // palier de pertinence
@@ -293,7 +320,7 @@ export default function ActivitesPage({ onRetour, semaine }) {
                 </div>
                 <div className="acti-groupe__cartes">
                   {parDate[date].map((a, i) => (
-                    <CarteActivite key={`${date}-${i}`} activite={a} mode={mode} />
+                    <CarteActivite key={`${date}-${i}`} activite={a} mode={mode} profils={profils} />
                   ))}
                 </div>
               </div>
@@ -311,7 +338,7 @@ export default function ActivitesPage({ onRetour, semaine }) {
           </h3>
           <div className="acti-grille">
             {nonDateesSorted.map((a, i) => (
-              <CarteActivite key={i} activite={a} mode={mode} />
+              <CarteActivite key={i} activite={a} mode={mode} profils={profils} />
             ))}
           </div>
         </section>
