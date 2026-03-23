@@ -216,40 +216,54 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
 
     // ── Activité ──────────────────────────────────────────────────────────────
-    // Priorité 1 : incontournable avec date précise ce jour-là (toujours affiché)
-    // Priorité 2 : événement daté régulier (Ticketmaster, etc.)
-    // Priorité 3 : suggestion sans date comme fallback (quota nbGratuit respecté)
-    //
-    // IMPORTANT : on filtre TOUJOURS les activités inadaptées hors du pool famille
-    // (speed dating, événements célibataires, etc.) — même sans scores pré-calculés.
-    // Exclure : activités inadaptées famille + activités explicitement scorées 0 par Claude
-    // score_famille null = pas encore scorée → on la garde (fallback keyword)
-    // score_famille === 0 = Claude a jugé inadaptée → on exclut totalement
-    const activitesFamilleCompat = activites.filter(a =>
-      !estInadapteFamille(a) && (a.score_famille == null || a.score_famille > 0)
+    // Seuils de score famille :
+    //   score_famille null  → pas encore scorée, keyword-matching comme fallback
+    //   score_famille 0     → Claude a explicitement jugé inadaptée → exclu
+    //   score_famille 1-29  → très peu pertinent → exclu du pool principal, seulement
+    //                         utilisé en dernier recours si rien d'autre n'existe
+    //   score_famille ≥ 30  → acceptable pour une sortie famille
+    const SEUIL_FAMILLE = 30;
+
+    // Pool idéal : vraiment adapté famille (score ≥ SEUIL ou pas encore scoré)
+    const activitesFamilleIdeal = activites.filter(a =>
+      !estInadapteFamille(a) &&
+      (a.score_famille == null || a.score_famille >= SEUIL_FAMILLE)
+    );
+    // Pool de secours : score > 0 mais < SEUIL (meilleur que rien)
+    const activitesFamilleSecours = activites.filter(a =>
+      !estInadapteFamille(a) &&
+      a.score_famille != null && a.score_famille > 0 && a.score_famille < SEUIL_FAMILLE
     );
 
-    const activitesJour = activitesFamilleCompat.filter(a => a.date === dateStr);
-    const incontournablesJour = activitesJour.filter(a => a.incontournable === true);
-    const activitesFallback = activitesFamilleCompat.filter(a => !a.date || a.date === '');
-    const fallbackGratuits = activitesFallback.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0);
-    const fallbackPayants  = activitesFallback.filter(a => !a.gratuit && (a.cout_adulte ?? a.cout ?? 0) > 0);
-
-    // ── Construire le pool famille (toutes activités valides ce jour) ─────────
-    let poolFamille = [];
-    if (incontournablesJour.length > 0) {
-      poolFamille = [...incontournablesJour, ...activitesJour.filter(a => !a.incontournable), ...activitesFallback];
-    } else if (activitesJour.length > 0) {
-      poolFamille = [...activitesJour, ...activitesFallback];
-    } else if (activitesFallback.length > 0) {
-      // Respecte le quota gratuit : si ce jour est désigné gratuit, les gratuits en premier
-      if (joursGratuitsSet.has(i) && fallbackGratuits.length > 0) {
-        poolFamille = [...fallbackGratuits, ...fallbackPayants];
-      } else {
-        const poolPayant = fallbackPayants.length > 0 ? fallbackPayants : activitesFallback;
-        poolFamille = [...poolPayant, ...activitesFallback.filter(a => !poolPayant.includes(a))];
+    // Fonction pour construire le pool d'un jour depuis un ensemble d'activités compat
+    function construirePool(compat) {
+      const jour      = compat.filter(a => a.date === dateStr);
+      const incon     = jour.filter(a => a.incontournable === true);
+      const fallback  = compat.filter(a => !a.date || a.date === '');
+      const fbGratuit = fallback.filter(a => a.gratuit === true || (a.cout_adulte ?? a.cout ?? 0) === 0);
+      const fbPayant  = fallback.filter(a => !a.gratuit && (a.cout_adulte ?? a.cout ?? 0) > 0);
+      if (incon.length > 0) return [...incon, ...jour.filter(a => !a.incontournable), ...fallback];
+      if (jour.length > 0)  return [...jour, ...fallback];
+      if (fallback.length > 0) {
+        if (joursGratuitsSet.has(i) && fbGratuit.length > 0) return [...fbGratuit, ...fbPayant];
+        const poolP = fbPayant.length > 0 ? fbPayant : fallback;
+        return [...poolP, ...fallback.filter(a => !poolP.includes(a))];
       }
+      return [];
     }
+
+    // Construire le pool famille : idéal d'abord, puis secours si vide
+    let poolFamille = construirePool(activitesFamilleIdeal);
+    if (poolFamille.length === 0) {
+      poolFamille = construirePool(activitesFamilleSecours);
+    }
+    // Dernier recours absolu : n'importe quelle activité non-inadaptée (évite "aucun événement")
+    if (poolFamille.length === 0) {
+      poolFamille = activitesFamilleIdeal.concat(activitesFamilleSecours)
+        .filter(a => !a.date || a.date === '');
+    }
+
+    const activitesFallback = activitesFamilleIdeal.filter(a => !a.date || a.date === '');
 
     // Score + déduplique + prend top-3 famille
     // Le jitter seeded brise les égalités de façon stable (même résultat sur tous les appareils)
