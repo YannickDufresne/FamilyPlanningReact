@@ -68,8 +68,8 @@ function PrixFamille({ activite, date }) {
   const total = ventilation.reduce((s, m) => s + m.prix, 0);
   const hasTieredPricing = activite.cout_adulte !== undefined && activite.cout_adulte !== null;
 
-  // Masquer seulement si aucune info de prix du tout
-  const aucuneInfo = !hasTieredPricing && (activite.cout ?? 0) === 0;
+  // Masquer seulement si vraiment aucune info ET pas marqué gratuit
+  const aucuneInfo = !hasTieredPricing && (activite.cout ?? 0) === 0 && !activite.gratuit;
   if (aucuneInfo) return null;
 
   return (
@@ -207,24 +207,38 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
                 })()}
               </div>
             )}
-            {activiteAffichee.description && (
+            {(activiteAffichee.description_generee || activiteAffichee.description) && (
               <div className="planning-item__meta" style={{ marginTop: 3 }}>
-                {activiteAffichee.description}
+                {activiteAffichee.description_generee || activiteAffichee.description}
               </div>
             )}
             <PrixFamille activite={activiteAffichee} date={jour.date} />
             {activiteAffichee.source === 'claude' && (
               <div className="planning-item__badge">✦ Suggestion IA</div>
             )}
-            {/* Explication : pré-calculée par Claude ou générée client-side */}
+            {/* Score de pertinence + explication */}
             {(() => {
+              const score = modeActivite === 'adultes'
+                ? activiteAffichee.score_adultes
+                : activiteAffichee.score_famille;
               const preCalc = modeActivite === 'adultes'
                 ? activiteAffichee.explication_adultes
                 : activiteAffichee.explication_famille;
               const explication = preCalc || genererExplication(activiteAffichee, profils, modeActivite);
-              return explication ? (
-                <div className="activite-explication">{explication}</div>
-              ) : null;
+              if (!score && !explication) return null;
+              const couleur = score >= 70 ? 'var(--forest)' : score >= 40 ? 'var(--sage)' : score >= 20 ? 'var(--terra)' : 'var(--ink-3)';
+              return (
+                <div className="activite-pertinence">
+                  {score != null && (
+                    <span className="activite-pertinence__score" style={{ color: couleur }}>
+                      {score}%
+                    </span>
+                  )}
+                  {explication && (
+                    <span className="activite-pertinence__explication">{explication}</span>
+                  )}
+                </div>
+              );
             })()}
             {/* Navigation top-3 avec médailles */}
             {pool.length > 1 && (

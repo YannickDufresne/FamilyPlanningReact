@@ -1765,7 +1765,31 @@ input[type="range"] {
   .profils-modal { padding: 24px 16px 32px; }
 }
 
-/* ── Explication affinité ─────────────────────────────────────────────────── */
+/* ── Score pertinence + explication (page principale) ────────────────────── */
+.activite-pertinence {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 7px;
+  flex-wrap: wrap;
+}
+
+.activite-pertinence__score {
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.activite-pertinence__explication {
+  font-size: 0.72rem;
+  color: var(--sage);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Ancienne classe (compat) */
 .activite-explication {
   margin-top: 7px;
   font-size: 0.72rem;
