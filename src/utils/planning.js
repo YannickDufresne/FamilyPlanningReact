@@ -66,13 +66,13 @@ function scorerActivite(activite, profils, pourQui = 'famille') {
 }
 
 export const THEMES_PAR_JOUR = [
-  { jour: 'Lundi',    theme: 'pasta_rapido',    emoji: '🍝' },
-  { jour: 'Mardi',    theme: 'bol_nwich',        emoji: '🌮' },
-  { jour: 'Mercredi', theme: 'criiions_poisson', emoji: '🐟' },
-  { jour: 'Jeudi',    theme: 'plat_en_sauce',    emoji: '🍲' },
-  { jour: 'Vendredi', theme: 'confort_grille',   emoji: '🔥' },
-  { jour: 'Samedi',   theme: 'pizza',            emoji: '🍕' },
-  { jour: 'Dimanche', theme: 'slow_chic',        emoji: '🍷' },
+  { jour: 'Lundi',    theme: 'pasta_rapido',    emoji: '🍝', origineMusique: 'Italie'         },
+  { jour: 'Mardi',    theme: 'bol_nwich',        emoji: '🌮', origineMusique: 'Liban'          },
+  { jour: 'Mercredi', theme: 'criiions_poisson', emoji: '🐟', origineMusique: 'Méditerranéen'  },
+  { jour: 'Jeudi',    theme: 'plat_en_sauce',    emoji: '🍲', origineMusique: 'France'         },
+  { jour: 'Vendredi', theme: 'confort_grille',   emoji: '🔥', origineMusique: 'États-Unis'     },
+  { jour: 'Samedi',   theme: 'pizza',            emoji: '🍕', origineMusique: 'Italie'         },
+  { jour: 'Dimanche', theme: 'slow_chic',        emoji: '🍷', origineMusique: 'France'         },
 ];
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
@@ -322,7 +322,9 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     const activiteAdultes = topAdultes[0] ?? activite;
 
     // ── Musique : calquée sur l'origine culturelle de la recette ─────────────
-    const origineRecette = recetteJour?.origine;
+    // Si la recette est manquante (⚠️), on utilise l'origine associée au thème du jour
+    const origineRecette = recetteJour?.origine
+      || (recetteJour?.nom?.startsWith('⚠️') ? jourInfo.origineMusique : null);
     let musiqueJour;
     if (origineRecette && musiqueParOrigine[origineRecette]?.length > 0) {
       const pool = musiqueParOrigine[origineRecette];
