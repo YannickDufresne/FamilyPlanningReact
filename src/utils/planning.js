@@ -321,15 +321,18 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       .slice(0, 3);
     const activiteAdultes = topAdultes[0] ?? activite;
 
-    // ── Musique : calquée sur l'origine culturelle de la recette ─────────────
-    // Si la recette est manquante (⚠️), on utilise l'origine associée au thème du jour
-    const origineRecette = recetteJour?.origine
-      || (recetteJour?.nom?.startsWith('⚠️') ? jourInfo.origineMusique : null);
+    // ── Musique : origine par priorité décroissante ───────────────────────────
+    // 1. Filtre d'origine actif (ex: "Japon") → toute la semaine dans cette origine
+    // 2. Origine de la recette du jour (quand recette trouvée normalement)
+    // 3. Origine par défaut du thème du jour (quand recette manquante, sans filtre)
+    const origineMusique = filtrerOrigine
+      ? origine
+      : (recetteJour?.origine || jourInfo.origineMusique);
     let musiqueJour;
-    if (origineRecette && musiqueParOrigine[origineRecette]?.length > 0) {
-      const pool = musiqueParOrigine[origineRecette];
-      musiqueJour = pool[musiqueIndexParOrigine[origineRecette] % pool.length];
-      musiqueIndexParOrigine[origineRecette]++;
+    if (origineMusique && musiqueParOrigine[origineMusique]?.length > 0) {
+      const pool = musiqueParOrigine[origineMusique];
+      musiqueJour = pool[musiqueIndexParOrigine[origineMusique] % pool.length];
+      musiqueIndexParOrigine[origineMusique]++;
     } else {
       musiqueJour = musiqueFallback[i % musiqueFallback.length];
     }
