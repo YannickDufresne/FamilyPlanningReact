@@ -2235,83 +2235,50 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   .acti-controles { width: 100%; }
 }
 
-/* ── Musique avec albums/compilations iTunes ────────────────────────────────── */
-.musique-card {
+/* ── Musique — un album iTunes ──────────────────────────────────────────────── */
+.musique-card { display: flex; }
+
+.musique-album-link {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.musique-album-link:hover .musique-album-art { opacity: 0.8; }
+
+.musique-album-art {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: opacity 0.15s;
 }
 
 .musique-info {
   display: flex;
   flex-direction: column;
   gap: 2px;
-}
-
-.musique-genre {
-  font-size: 0.78rem;
-  color: var(--ink-2);
-  font-weight: 500;
-}
-
-.musique-inspiré {
-  font-size: 0.7rem;
-  color: var(--ink-3);
-}
-
-.musique-inspiré em { font-style: italic; }
-
-/* Grille 4 albums */
-.musique-albums {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.musique-album-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.musique-album-item:hover .musique-album-art {
-  opacity: 0.82;
-  transform: scale(1.03);
-}
-
-.musique-album-art {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 3px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.14);
-  transition: opacity 0.15s, transform 0.15s;
-  display: block;
-}
-
-.musique-album-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  min-width: 0;
 }
 
 .musique-album-titre {
-  font-size: 0.62rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--ink);
   line-height: 1.3;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 .musique-album-artiste {
-  font-size: 0.58rem;
+  font-size: 0.72rem;
+  color: var(--ink-2);
+}
+
+.musique-genre {
+  font-size: 0.68rem;
   color: var(--ink-3);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  margin-top: 2px;
 }
