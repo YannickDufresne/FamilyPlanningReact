@@ -193,8 +193,15 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
       <div className="planning-item">
         <div className="planning-item__label">Repas</div>
         <div className="planning-item__name">
-          {recette.nom}
+          {recette.url && !isWarning ? (
+            <a className="planning-item__link" href={recette.url} target="_blank" rel="noopener noreferrer">
+              {recette.nom}
+            </a>
+          ) : recette.nom}
           {regimeLabel && !isWarning && <span className="regime-badge">{regimeLabel}</span>}
+          {recette.source === 'nyt_cooking' && !isWarning && (
+            <span className="nyt-badge" title="Coup de cœur NYT Cooking">♥ NYT</span>
+          )}
         </div>
         {!isWarning && (
           <div className="planning-item__cost">{recette.cout}$ · {recette.temps_preparation} min</div>

@@ -163,6 +163,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   let compteurVegetarien = 0;
   let compteurVegane = 0;
   const planning = [];
+  const recettesUtilisees = new Set(); // anti-doublon sur la semaine
 
   for (let i = 0; i < 7; i++) {
     const jourInfo = THEMES_PAR_JOUR[i];
@@ -191,10 +192,16 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       if (avecRegime.length > 0) recettesDispo = avecRegime;
     }
 
-    let recetteJour = pickRandom(recettesDispo, rngRecette);
+    // Exclure les recettes déjà utilisées cette semaine (anti-doublon)
+    const recettesDispoUniques = recettesDispo.filter(r => !recettesUtilisees.has(r.nom));
+    // Si l'exclusion vide complètement le pool, on accepte les doublons plutôt que rien
+    const poolRecettes = recettesDispoUniques.length > 0 ? recettesDispoUniques : recettesDispo;
+
+    let recetteJour = pickRandom(poolRecettes, rngRecette);
     if (!recetteJour) {
       recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: 'Aucune recette disponible', regime_alimentaire: 'inconnu' };
     } else {
+      recettesUtilisees.add(recetteJour.nom);
       if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;
       else if (recetteJour.regime_alimentaire === 'végétarien') compteurVegetarien++;
       else if (recetteJour.regime_alimentaire === 'végane')     compteurVegane++;

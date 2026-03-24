@@ -52,7 +52,16 @@ function RecetteCard({ recette }) {
         )}
       </div>
 
-      <h3 className="recette-card__nom">{recette.nom}</h3>
+      <h3 className="recette-card__nom">
+        {recette.url ? (
+          <a className="recette-card__lien" href={recette.url} target="_blank" rel="noopener noreferrer">
+            {recette.nom}
+          </a>
+        ) : recette.nom}
+        {recette.source === 'nyt_cooking' && (
+          <span className="nyt-badge" title="Coup de cœur NYT Cooking">♥ NYT</span>
+        )}
+      </h3>
 
       <div className="recette-card__meta">
         <span className="recette-card__cout">{dollarSigns}</span>
