@@ -37,48 +37,84 @@ function genererExplication(activite, profils, pourQui = 'famille') {
 }
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
 
-// ── Récupère l'artwork iTunes pour un artiste/titre ───────────────────────────
-function useAlbumArt(nom) {
-  const [art, setArt] = useState(null);
+// ── Cherche des albums/compilations iTunes selon genre + artiste ──────────────
+function useAlbums(musique) {
+  const [albums, setAlbums] = useState([]);
+
   useEffect(() => {
-    if (!nom) return;
-    // Parsing "Artiste - Titre"
-    const sep = nom.indexOf(' - ');
-    const artiste = sep > 0 ? nom.slice(0, sep) : nom;
-    const titre   = sep > 0 ? nom.slice(sep + 3) : '';
-    const q = encodeURIComponent(`${artiste} ${titre}`.trim());
+    if (!musique?.nom) return;
     let cancelled = false;
-    fetch(`https://itunes.apple.com/search?term=${q}&media=music&entity=song&limit=3`)
-      .then(r => r.json())
-      .then(data => {
-        if (cancelled) return;
-        const url = data.results?.[0]?.artworkUrl100;
-        if (url) setArt(url.replace('100x100bb', '300x300bb'));
-      })
-      .catch(() => {});
+
+    const sep     = musique.nom.indexOf(' - ');
+    const artiste = sep > 0 ? musique.nom.slice(0, sep) : musique.nom;
+    const genre   = musique.genre || '';
+    const ambiance = musique.ambiance || '';
+
+    // Deux recherches en parallèle : albums de l'artiste + compilations du genre
+    const search = (q, entity = 'album') =>
+      fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(q)}&media=music&entity=${entity}&limit=5&country=CA`)
+        .then(r => r.json())
+        .then(d => d.results || [])
+        .catch(() => []);
+
+    Promise.all([
+      search(artiste),                              // albums de l'artiste
+      search(`${genre} ${ambiance} compilation`),  // compilations du genre/ambiance
+      search(`${genre} best of`),                  // best-of du genre
+    ]).then(([artisteAlbums, compilations, bestof]) => {
+      if (cancelled) return;
+
+      const seen = new Set();
+      const dedup = arr => arr.filter(a => {
+        if (!a.artworkUrl100 || seen.has(a.collectionId)) return false;
+        seen.add(a.collectionId);
+        return true;
+      });
+
+      // Priorise : artiste d'abord, puis compilations, puis best-of
+      const merged = dedup([...artisteAlbums, ...compilations, ...bestof]);
+      setAlbums(merged.slice(0, 4));
+    });
+
     return () => { cancelled = true; };
-  }, [nom]);
-  return art;
+  }, [musique?.nom, musique?.genre]);
+
+  return albums;
 }
 
 function MusiqueCard({ musique }) {
-  const art = useAlbumArt(musique.nom);
+  const albums = useAlbums(musique);
   return (
     <div className="musique-card">
-      {art && (
-        <img
-          src={art}
-          alt={musique.nom}
-          className="musique-album-art"
-          loading="lazy"
-        />
-      )}
       <div className="musique-info">
-        <div className="planning-item__name">{musique.nom}</div>
-        {musique.genre && (
-          <div className="planning-item__meta">{musique.genre} · {musique.ambiance}</div>
-        )}
+        <div className="musique-genre">{musique.genre} · {musique.ambiance}</div>
+        <div className="musique-inspiré">Inspiré de : <em>{musique.nom}</em></div>
       </div>
+      {albums.length > 0 && (
+        <div className="musique-albums">
+          {albums.map(a => (
+            <a
+              key={a.collectionId}
+              href={a.collectionViewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="musique-album-item"
+              title={`${a.collectionName} — ${a.artistName}`}
+            >
+              <img
+                src={a.artworkUrl100.replace('100x100bb', '200x200bb')}
+                alt={a.collectionName}
+                className="musique-album-art"
+                loading="lazy"
+              />
+              <div className="musique-album-meta">
+                <span className="musique-album-titre">{a.collectionName}</span>
+                <span className="musique-album-artiste">{a.artistName}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
