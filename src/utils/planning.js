@@ -257,10 +257,15 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     if (poolFamille.length === 0) {
       poolFamille = construirePool(activitesFamilleSecours);
     }
-    // Dernier recours absolu : n'importe quelle activité non-inadaptée (évite "aucun événement")
+    // Dernier recours absolu : prendre les meilleures activités famille du JSON entier
+    // (peu importe la date) pour éviter "aucun événement planifié"
     if (poolFamille.length === 0) {
-      poolFamille = activitesFamilleIdeal.concat(activitesFamilleSecours)
-        .filter(a => !a.date || a.date === '');
+      const tout = activitesFamilleIdeal.length > 0
+        ? activitesFamilleIdeal
+        : activitesFamilleSecours;
+      poolFamille = [...tout]
+        .sort((a, b) => (b.score_famille ?? 0) - (a.score_famille ?? 0))
+        .slice(0, 10);
     }
 
     const activitesFallback = activitesFamilleIdeal.filter(a => !a.date || a.date === '');

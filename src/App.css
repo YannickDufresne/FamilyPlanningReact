@@ -2234,3 +2234,24 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   .acti-page__header { flex-wrap: wrap; gap: 14px; }
   .acti-controles { width: 100%; }
 }
+
+/* ── Musique avec album art ─────────────────────────────────────────────────── */
+.musique-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.musique-album-art {
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.musique-info {
+  flex: 1;
+  min-width: 0;
+}

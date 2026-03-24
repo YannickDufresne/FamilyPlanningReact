@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { calculerPrixFamille } from '../utils/prixFamille';
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
@@ -36,6 +36,52 @@ function genererExplication(activite, profils, pourQui = 'famille') {
   return `Pour ${noms} · ${motsCles}`;
 }
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
+
+// ── Récupère l'artwork iTunes pour un artiste/titre ───────────────────────────
+function useAlbumArt(nom) {
+  const [art, setArt] = useState(null);
+  useEffect(() => {
+    if (!nom) return;
+    // Parsing "Artiste - Titre"
+    const sep = nom.indexOf(' - ');
+    const artiste = sep > 0 ? nom.slice(0, sep) : nom;
+    const titre   = sep > 0 ? nom.slice(sep + 3) : '';
+    const q = encodeURIComponent(`${artiste} ${titre}`.trim());
+    let cancelled = false;
+    fetch(`https://itunes.apple.com/search?term=${q}&media=music&entity=song&limit=3`)
+      .then(r => r.json())
+      .then(data => {
+        if (cancelled) return;
+        const url = data.results?.[0]?.artworkUrl100;
+        if (url) setArt(url.replace('100x100bb', '300x300bb'));
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [nom]);
+  return art;
+}
+
+function MusiqueCard({ musique }) {
+  const art = useAlbumArt(musique.nom);
+  return (
+    <div className="musique-card">
+      {art && (
+        <img
+          src={art}
+          alt={musique.nom}
+          className="musique-album-art"
+          loading="lazy"
+        />
+      )}
+      <div className="musique-info">
+        <div className="planning-item__name">{musique.nom}</div>
+        {musique.genre && (
+          <div className="planning-item__meta">{musique.genre} · {musique.ambiance}</div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function EvalRow({ recette }) {
   const membres = [
@@ -270,10 +316,7 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
       {/* Musique */}
       <div className="planning-item">
         <div className="planning-item__label">Musique</div>
-        <div className="planning-item__name">{musique.nom}</div>
-        {musique.genre && (
-          <div className="planning-item__meta">{musique.genre} · {musique.ambiance}</div>
-        )}
+        <MusiqueCard musique={musique} />
       </div>
     </article>
   );
