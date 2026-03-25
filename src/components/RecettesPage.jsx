@@ -70,7 +70,7 @@ APPAREILS À IGNORER (ne déterminent pas l'origine) :
 cocotte-minute, Instant Pot, slow cooker, air fryer, Thermomix, mijoteuse → tous neutres
 
 ━━ CHAMPS ATTENDUS ━━
-- "nom" : string — titre naturel en français, minuscules sauf noms propres
+- "nom" : string — titre naturel en français, première lettre en majuscule puis minuscules sauf noms propres
 - "nom_original" : string — titre original en anglais (si connu, sinon null)
 - "origine" : string — en français, ex: "Chine", "Corée", "Japon", "Thaïlande", "Vietnam", "Inde", "Liban", "Maroc", "Moyen-Orient", "Grèce", "Italie", "France", "Espagne", "Mexique", "États-Unis", "Méditerranéen", "Pérou"
 - "regime_alimentaire" : "omnivore" | "végétarien" | "végane"

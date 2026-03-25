@@ -1334,7 +1334,7 @@
     "eval_luce": 4.4
   },
   {
-    "nom": "pâtes aux haricots verts et gremolata d'amandes",
+    "nom": "Pâtes aux haricots verts et gremolata d'amandes",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1352,7 +1352,7 @@
     "nom_original": "Pasta With Green Beans and Almond Gremolata"
   },
   {
-    "nom": "linguine à la sauce au citron",
+    "nom": "Linguine à la sauce au citron",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1370,7 +1370,7 @@
     "nom_original": "Linguine With Lemon Sauce"
   },
   {
-    "nom": "spaghetti aux tomates fraîches et sauce au basilic",
+    "nom": "Spaghetti aux tomates fraîches et sauce au basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1388,7 +1388,7 @@
     "nom_original": "Spaghetti With Fresh Tomato and Basil Sauce"
   },
   {
-    "nom": "pâtes crémeuses au maïs et basilic",
+    "nom": "Pâtes crémeuses au maïs et basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1406,7 +1406,7 @@
     "nom_original": "Creamy Corn Pasta With Basil"
   },
   {
-    "nom": "pâtes épicées aux tomates cerises en sauce",
+    "nom": "Pâtes épicées aux tomates cerises en sauce",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1424,7 +1424,7 @@
     "nom_original": "Spicy and Saucy Cherry Tomato Pasta"
   },
   {
-    "nom": "fettuccine aux courgettes",
+    "nom": "Fettuccine aux courgettes",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1442,7 +1442,7 @@
     "nom_original": "Fettuccine With Zucchini"
   },
   {
-    "nom": "scampi de crevettes d'été aux tomates et maïs",
+    "nom": "Scampi de crevettes d'été aux tomates et maïs",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1460,7 +1460,7 @@
     "nom_original": "Summer Shrimp Scampi With Tomatoes and Corn"
   },
   {
-    "nom": "soupe de haricots noirs à la noix de coco",
+    "nom": "Soupe de haricots noirs à la noix de coco",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1478,7 +1478,7 @@
     "nom_original": "Coconut Black Bean Soup"
   },
   {
-    "nom": "linguine au citron et à l'ail",
+    "nom": "Linguine au citron et à l'ail",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1496,7 +1496,7 @@
     "nom_original": "Lemon-Garlic Linguine"
   },
   {
-    "nom": "curry de chou-fleur, noix de cajou, petits pois et noix de coco",
+    "nom": "Curry de chou-fleur, noix de cajou, petits pois et noix de coco",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1514,7 +1514,7 @@
     "nom_original": "Cauliflower, Cashew, Pea and Coconut Curry"
   },
   {
-    "nom": "salade de couscous citronnée au brocoli et feta",
+    "nom": "Salade de couscous citronnée au brocoli et feta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1532,7 +1532,7 @@
     "nom_original": "Citrusy Couscous Salad With Broccoli and Feta"
   },
   {
-    "nom": "haricots blancs au romarin avec oignons frits et tomate",
+    "nom": "Haricots blancs au romarin avec oignons frits et tomate",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1550,7 +1550,7 @@
     "nom_original": "Rosemary White Beans With Frizzled Onions and Tomato"
   },
   {
-    "nom": "sauté épicé de dinde au gingembre et ail croustillant",
+    "nom": "Sauté épicé de dinde au gingembre et ail croustillant",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1568,7 +1568,7 @@
     "nom_original": "Spicy Turkey Stir-Fry With Crisp Garlic and Ginger"
   },
   {
-    "nom": "salade hachée aux pois chiches, feta et avocat",
+    "nom": "Salade hachée aux pois chiches, feta et avocat",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1586,7 +1586,7 @@
     "nom_original": "Chopped Salad With Chickpeas, Feta and Avocado"
   },
   {
-    "nom": "poulet grillé au za'atar avec yaourt à l'ail et coriandre",
+    "nom": "Poulet grillé au za'atar avec yaourt à l'ail et coriandre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1604,7 +1604,7 @@
     "nom_original": "Grilled Za'atar Chicken With Garlic Yogurt and Cilantro"
   },
   {
-    "nom": "morue noire grillée au miso",
+    "nom": "Morue noire grillée au miso",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1622,7 +1622,7 @@
     "nom_original": "Black Cod Broiled With Miso"
   },
   {
-    "nom": "ragoût grec de poulet, épinards et pommes de terre au citron",
+    "nom": "Ragoût grec de poulet, épinards et pommes de terre au citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1640,7 +1640,7 @@
     "nom_original": "Lemony Greek Chicken, Spinach and Potato Stew"
   },
   {
-    "nom": "saumon rôti aux petits pois et radis",
+    "nom": "Saumon rôti aux petits pois et radis",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1658,7 +1658,7 @@
     "nom_original": "Roasted Salmon With Peas and Radishes"
   },
   {
-    "nom": "saumon au beurre noisette, citron et harissa",
+    "nom": "Saumon au beurre noisette, citron et harissa",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1676,7 +1676,7 @@
     "nom_original": "Brown-Butter Salmon With Lemon and Harissa"
   },
   {
-    "nom": "saumon à la plaque avec miso et sirop d'érable et haricots verts",
+    "nom": "Saumon à la plaque avec miso et sirop d'érable et haricots verts",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1694,7 +1694,7 @@
     "nom_original": "Maple and Miso Sheet-Pan Salmon With Green Beans"
   },
   {
-    "nom": "saumon rôti au beurre",
+    "nom": "Saumon rôti au beurre",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1712,7 +1712,7 @@
     "nom_original": "Salmon Roasted in Butter"
   },
   {
-    "nom": "poisson rôti à la plaque avec poivrons doux",
+    "nom": "Poisson rôti à la plaque avec poivrons doux",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1730,7 +1730,7 @@
     "nom_original": "Sheet-Pan Roasted Fish With Sweet Peppers"
   },
   {
-    "nom": "sandwichs à la tomate",
+    "nom": "Sandwichs à la tomate",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1748,7 +1748,7 @@
     "nom_original": "Tomato Sandwiches"
   },
   {
-    "nom": "salade de tomates cerises et haricots blancs",
+    "nom": "Salade de tomates cerises et haricots blancs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1766,7 +1766,7 @@
     "nom_original": "Cherry Tomato and White Bean Salad"
   },
   {
-    "nom": "salade de brocoli à l'ail et sésame",
+    "nom": "Salade de brocoli à l'ail et sésame",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1784,7 +1784,7 @@
     "nom_original": "Broccoli Salad With Garlic and Sesame"
   },
   {
-    "nom": "salade grecque de tomates",
+    "nom": "Salade grecque de tomates",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1802,7 +1802,7 @@
     "nom_original": "Greek Tomato Salad"
   },
   {
-    "nom": "salade grecque",
+    "nom": "Salade grecque",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1820,7 +1820,7 @@
     "nom_original": "Greek Salad"
   },
   {
-    "nom": "le meilleur rôti de boeuf pour sandwichs",
+    "nom": "Le meilleur rôti de boeuf pour sandwichs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1838,7 +1838,7 @@
     "nom_original": "The Best Roast Beef for Sandwiches"
   },
   {
-    "nom": "steak à la poêle en fonte",
+    "nom": "Steak à la poêle en fonte",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1856,7 +1856,7 @@
     "nom_original": "Cast-Iron Steak"
   },
   {
-    "nom": "poulet à la plaque avec pommes de terre, roquette et yaourt à l'ail",
+    "nom": "Poulet à la plaque avec pommes de terre, roquette et yaourt à l'ail",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1874,7 +1874,7 @@
     "nom_original": "Sheet-Pan Chicken With Potatoes, Arugula and Garlic Yogurt"
   },
   {
-    "nom": "chili végétarien à la poêle",
+    "nom": "Chili végétarien à la poêle",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1892,7 +1892,7 @@
     "nom_original": "Vegetarian Skillet Chili"
   },
   {
-    "nom": "salade de farro à la Charlie Bird",
+    "nom": "Salade de farro à la Charlie Bird",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1910,7 +1910,7 @@
     "nom_original": "Charlie Bird's Farro Salad"
   },
   {
-    "nom": "feta au four à la plaque avec broccolini, tomates et citron",
+    "nom": "Feta au four à la plaque avec broccolini, tomates et citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1928,7 +1928,7 @@
     "nom_original": "Sheet-Pan Baked Feta With Broccolini, Tomatoes and Lemon"
   },
   {
-    "nom": "tofu makhani (beurre de tofu indien)",
+    "nom": "Tofu makhani (beurre de tofu indien)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1963,7 +1963,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "masoor dal (lentilles rouges épicées)",
+    "nom": "Masoor dal (lentilles rouges épicées)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1981,7 +1981,7 @@
     "nom_original": "Masoor Dal (Spiced Red Lentils)"
   },
   {
-    "nom": "cuisses de poulet à la plaque avec maïs épicé",
+    "nom": "Cuisses de poulet à la plaque avec maïs épicé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1999,7 +1999,7 @@
     "nom_original": "Sheet-Pan Chicken Thighs With Spicy Corn"
   },
   {
-    "nom": "poulet au sésame avec noix de cajou et dattes",
+    "nom": "Poulet au sésame avec noix de cajou et dattes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2017,7 +2017,7 @@
     "nom_original": "Sesame Chicken With Cashews and Dates"
   },
   {
-    "nom": "gnocchi croustillants aux choux de Bruxelles et beurre noisette",
+    "nom": "Gnocchi croustillants aux choux de Bruxelles et beurre noisette",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2035,7 +2035,7 @@
     "nom_original": "Crisp Gnocchi With Brussels Sprouts and Brown Butter"
   },
   {
-    "nom": "chili à la dinde",
+    "nom": "Chili à la dinde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2053,7 +2053,7 @@
     "nom_original": "Turkey Chili"
   },
   {
-    "nom": "ragoût de tomates rôties et haricots blancs",
+    "nom": "Ragoût de tomates rôties et haricots blancs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2071,7 +2071,7 @@
     "nom_original": "Roasted Tomato and White Bean Stew"
   },
   {
-    "nom": "courge butternut rôtie aux lentilles et feta",
+    "nom": "Courge butternut rôtie aux lentilles et feta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2089,7 +2089,7 @@
     "nom_original": "Roasted Butternut Squash With Lentils and Feta"
   },
   {
-    "nom": "pois chiches au curry de noix de coco avec courge et lime",
+    "nom": "Pois chiches au curry de noix de coco avec courge et lime",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2107,7 +2107,7 @@
     "nom_original": "Coconut Curry Chickpeas With Pumpkin and Lime"
   },
   {
-    "nom": "orzo au beurre noisette avec courge butternut",
+    "nom": "Orzo au beurre noisette avec courge butternut",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2125,7 +2125,7 @@
     "nom_original": "Brown-Butter Orzo With Butternut Squash"
   },
   {
-    "nom": "courge et pois chiches rôtis au miel piquant",
+    "nom": "Courge et pois chiches rôtis au miel piquant",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2143,7 +2143,7 @@
     "nom_original": "Roasted Honey Nut Squash and Chickpeas With Hot Honey"
   },
   {
-    "nom": "salade de lentilles et patate douce au beurre noisette",
+    "nom": "Salade de lentilles et patate douce au beurre noisette",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2161,7 +2161,7 @@
     "nom_original": "Brown Butter Lentil and Sweet Potato Salad"
   },
   {
-    "nom": "poulet aux échalotes de Rishia Zimmern",
+    "nom": "Poulet aux échalotes de Rishia Zimmern",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2179,7 +2179,7 @@
     "nom_original": "Rishia Zimmern's Chicken With Shallots"
   },
   {
-    "nom": "poulet rôti péruvien avec sauce épicée à la coriandre",
+    "nom": "Poulet rôti péruvien avec sauce épicée à la coriandre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2197,7 +2197,7 @@
     "nom_original": "Peruvian Roasted Chicken With Spicy Cilantro Sauce"
   },
   {
-    "nom": "boulettes de poulet aux épices marocaines",
+    "nom": "Boulettes de poulet aux épices marocaines",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2215,7 +2215,7 @@
     "nom_original": "Moroccan-Spiced Chicken Meatballs"
   },
   {
-    "nom": "pâtes aux saucisses, courge et beurre noisette à la sauge",
+    "nom": "Pâtes aux saucisses, courge et beurre noisette à la sauge",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2233,7 +2233,7 @@
     "nom_original": "Pasta With Sausage, Squash and Sage Brown Butter"
   },
   {
-    "nom": "orzo en une casserole avec épinards et feta",
+    "nom": "Orzo en une casserole avec épinards et feta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2251,7 +2251,7 @@
     "nom_original": "One-Pan Orzo With Spinach and Feta"
   },
   {
-    "nom": "ragoût de pois chiches épicés à la noix de coco et curcuma",
+    "nom": "Ragoût de pois chiches épicés à la noix de coco et curcuma",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2269,7 +2269,7 @@
     "nom_original": "Spiced Chickpea Stew With Coconut and Turmeric"
   },
   {
-    "nom": "poulet aux boulettes de pâte",
+    "nom": "Poulet aux boulettes de pâte",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2287,7 +2287,7 @@
     "nom_original": "Chicken and Dumplings"
   },
   {
-    "nom": "poulet à la poêle avec tomates, pancetta et mozzarella",
+    "nom": "Poulet à la poêle avec tomates, pancetta et mozzarella",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2305,7 +2305,7 @@
     "nom_original": "Skillet Chicken With Tomatoes, Pancetta and Mozzarella"
   },
   {
-    "nom": "farro aux champignons",
+    "nom": "Farro aux champignons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2323,7 +2323,7 @@
     "nom_original": "Farro With Mushrooms"
   },
   {
-    "nom": "poulet gochujang à la plaque avec légumes rôtis",
+    "nom": "Poulet gochujang à la plaque avec légumes rôtis",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2341,7 +2341,7 @@
     "nom_original": "Sheet-Pan Gochujang Chicken and Roasted Vegetables"
   },
   {
-    "nom": "poulet à la poêle avec champignons et oignons caramélisés",
+    "nom": "Poulet à la poêle avec champignons et oignons caramélisés",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2359,7 +2359,7 @@
     "nom_original": "Skillet Chicken With Mushrooms and Caramelized Onions"
   },
   {
-    "nom": "gnocchi croustillants aux tomates et oignon rouge",
+    "nom": "Gnocchi croustillants aux tomates et oignon rouge",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2377,7 +2377,7 @@
     "nom_original": "Crispy Gnocchi With Tomato and Red Onion"
   },
   {
-    "nom": "mussakhan (poulet rôti au sumac et oignons rouges)",
+    "nom": "Mussakhan (poulet rôti au sumac et oignons rouges)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2395,7 +2395,7 @@
     "nom_original": "Mussakhan (Roast Chicken With Sumac and Red Onions)"
   },
   {
-    "nom": "shawarma de poulet rôti au four",
+    "nom": "Shawarma de poulet rôti au four",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2447,7 +2447,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "soupe de poulet aux tortillas",
+    "nom": "Soupe de poulet aux tortillas",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2465,7 +2465,7 @@
     "nom_original": "Chicken Tortilla Soup"
   },
   {
-    "nom": "soupe de farro et haricots",
+    "nom": "Soupe de farro et haricots",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2483,7 +2483,7 @@
     "nom_original": "Farro and Bean Soup"
   },
   {
-    "nom": "soupe hivernale de tomates au boulgour",
+    "nom": "Soupe hivernale de tomates au boulgour",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2501,7 +2501,7 @@
     "nom_original": "Winter Tomato Soup With Bulgur"
   },
   {
-    "nom": "ragoût de pommes de terre au gochujang",
+    "nom": "Ragoût de pommes de terre au gochujang",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2519,7 +2519,7 @@
     "nom_original": "Gochujang Potato Stew"
   },
   {
-    "nom": "bol de riz au thon et mayo",
+    "nom": "Bol de riz au thon et mayo",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -2537,7 +2537,7 @@
     "nom_original": "Tuna Mayo Rice Bowl"
   },
   {
-    "nom": "sandwich au thon à l'italienne",
+    "nom": "Sandwich au thon à l'italienne",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -2555,7 +2555,7 @@
     "nom_original": "Italian-Style Tuna Sandwich"
   },
   {
-    "nom": "schnitzel de poulet croustillant avec salade d'herbes citronnée",
+    "nom": "Schnitzel de poulet croustillant avec salade d'herbes citronnée",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2573,7 +2573,7 @@
     "nom_original": "Crisp Chicken Schnitzel With Lemony Herb Salad"
   },
   {
-    "nom": "poulet au citron et à l'ail avec tomates cerises",
+    "nom": "Poulet au citron et à l'ail avec tomates cerises",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2591,7 +2591,7 @@
     "nom_original": "Lemon and Garlic Chicken With Cherry Tomatoes"
   },
   {
-    "nom": "poitrines de poulet grillées au sésame et lime",
+    "nom": "Poitrines de poulet grillées au sésame et lime",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2609,7 +2609,7 @@
     "nom_original": "Grilled Sesame Lime Chicken Breasts"
   },
   {
-    "nom": "gyeran bap (riz à l'oeuf)",
+    "nom": "Gyeran bap (riz à l'oeuf)",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2627,7 +2627,7 @@
     "nom_original": "Gyeran Bap (Egg Rice)"
   },
   {
-    "nom": "pâtes aux tomates cerises éclatées",
+    "nom": "Pâtes aux tomates cerises éclatées",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2645,7 +2645,7 @@
     "nom_original": "Pasta With Burst Cherry Tomatoes"
   },
   {
-    "nom": "gnocchi croustillants aux tomates éclatées et mozzarella",
+    "nom": "Gnocchi croustillants aux tomates éclatées et mozzarella",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2663,7 +2663,7 @@
     "nom_original": "Crispy Gnocchi With Burst Tomatoes and Mozzarella"
   },
   {
-    "nom": "pâtes aux échalotes caramélisées",
+    "nom": "Pâtes aux échalotes caramélisées",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2681,7 +2681,7 @@
     "nom_original": "Caramelized Shallot Pasta"
   },
   {
-    "nom": "gnocchi croustillants aux saucisses et petits pois",
+    "nom": "Gnocchi croustillants aux saucisses et petits pois",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2699,7 +2699,7 @@
     "nom_original": "Crisp Gnocchi With Sausage and Peas"
   },
   {
-    "nom": "nouilles au beurre gochujang",
+    "nom": "Nouilles au beurre gochujang",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2717,7 +2717,7 @@
     "nom_original": "Gochujang Buttered Noodles"
   },
   {
-    "nom": "salade César végane aux pois chiches croustillants",
+    "nom": "Salade César végane aux pois chiches croustillants",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2735,7 +2735,7 @@
     "nom_original": "Vegan Caesar Salad With Crisp Chickpeas"
   },
   {
-    "nom": "salade de tomates et haricots verts aux pois chiches, feta et aneth",
+    "nom": "Salade de tomates et haricots verts aux pois chiches, feta et aneth",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2753,7 +2753,7 @@
     "nom_original": "Tomato-Green Bean Salad With Chickpeas, Feta and Dill"
   },
   {
-    "nom": "soupe à l'oignon française",
+    "nom": "Soupe à l'oignon française",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2771,7 +2771,7 @@
     "nom_original": "French Onion Soup"
   },
   {
-    "nom": "soupe aux lentilles rouges",
+    "nom": "Soupe aux lentilles rouges",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2806,7 +2806,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "saumon rôti glacé au sucre brun et moutarde",
+    "nom": "Saumon rôti glacé au sucre brun et moutarde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -2824,7 +2824,7 @@
     "nom_original": "Roasted Salmon Glazed With Brown Sugar and Mustard"
   },
   {
-    "nom": "soupe de nouilles somen aux champignons",
+    "nom": "Soupe de nouilles somen aux champignons",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2842,7 +2842,7 @@
     "nom_original": "Somen Noodle Soup With Mushrooms"
   },
   {
-    "nom": "ratatouille à la plaque avec fromage de chèvre et olives",
+    "nom": "Ratatouille à la plaque avec fromage de chèvre et olives",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2860,7 +2860,7 @@
     "nom_original": "Sheet-Pan Ratatouille With Goat Cheese and Olives"
   },
   {
-    "nom": "dinde en saumure sèche",
+    "nom": "Dinde en saumure sèche",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2878,7 +2878,7 @@
     "nom_original": "Dry-Brined Turkey"
   },
   {
-    "nom": "ragoût de pois chiches à l'orzo et feuilles de moutarde",
+    "nom": "Ragoût de pois chiches à l'orzo et feuilles de moutarde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2896,7 +2896,7 @@
     "nom_original": "Chickpea Stew With Orzo and Mustard Greens"
   },
   {
-    "nom": "pâtes crémeuses au miso en cinq ingrédients",
+    "nom": "Pâtes crémeuses au miso en cinq ingrédients",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2931,7 +2931,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "soupe italienne au mariage avec boulettes de dinde",
+    "nom": "Soupe italienne au mariage avec boulettes de dinde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2949,7 +2949,7 @@
     "nom_original": "Italian Wedding Soup With Turkey Meatballs"
   },
   {
-    "nom": "ragoût crémeux de poulet aux épinards et artichauts",
+    "nom": "Ragoût crémeux de poulet aux épinards et artichauts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2967,7 +2967,7 @@
     "nom_original": "Creamy Spinach-Artichoke Chicken Stew"
   },
   {
-    "nom": "ragoût de boeuf à l'ancienne",
+    "nom": "Ragoût de boeuf à l'ancienne",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2985,7 +2985,7 @@
     "nom_original": "Old-Fashioned Beef Stew"
   },
   {
-    "nom": "khoresh-e ghormeh sabzi (ragoût persan aux herbes, haricots et agneau)",
+    "nom": "Khoresh-e ghormeh sabzi (ragoût persan aux herbes, haricots et agneau)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3003,7 +3003,7 @@
     "nom_original": "Khoresh-e Ghormeh Sabzi (Persian Herb, Bean and Lamb Stew)"
   },
   {
-    "nom": "saucisses et choux de Bruxelles à la plaque avec moutarde au miel",
+    "nom": "Saucisses et choux de Bruxelles à la plaque avec moutarde au miel",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3021,7 +3021,7 @@
     "nom_original": "Sheet-Pan Sausages and Brussels Sprouts With Honey Mustard"
   },
   {
-    "nom": "soupe de courge butternut au curry vert",
+    "nom": "Soupe de courge butternut au curry vert",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3039,7 +3039,7 @@
     "nom_original": "Butternut Squash and Green Curry Soup"
   },
   {
-    "nom": "cuisses de poulet braisées de Cal Peternell",
+    "nom": "Cuisses de poulet braisées de Cal Peternell",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3057,7 +3057,7 @@
     "nom_original": "Cal Peternell's Braised Chicken Legs"
   },
   {
-    "nom": "pâtes aux panais et lard",
+    "nom": "Pâtes aux panais et lard",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3075,7 +3075,7 @@
     "nom_original": "Pasta With Parsnips and Bacon"
   },
   {
-    "nom": "poulet aux 40 gousses d'ail",
+    "nom": "Poulet aux 40 gousses d'ail",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3093,7 +3093,7 @@
     "nom_original": "Chicken With 40 Cloves of Garlic"
   },
   {
-    "nom": "côtelettes de porc aux pommes et cidre",
+    "nom": "Côtelettes de porc aux pommes et cidre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3111,7 +3111,7 @@
     "nom_original": "Pork Chops With Apples and Cider"
   },
   {
-    "nom": "shawarma de chou-fleur au tahini épicé",
+    "nom": "Shawarma de chou-fleur au tahini épicé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3129,7 +3129,7 @@
     "nom_original": "Cauliflower Shawarma With Spicy Tahini"
   },
   {
-    "nom": "pâtes en un pot aux courgettes et basilic",
+    "nom": "Pâtes en un pot aux courgettes et basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3147,7 +3147,7 @@
     "nom_original": "One-Pot Zucchini-Basil Pasta"
   },
   {
-    "nom": "chou-fleur rôti à la chermoula douce et yaourt",
+    "nom": "Chou-fleur rôti à la chermoula douce et yaourt",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3165,7 +3165,7 @@
     "nom_original": "Roasted Cauliflower With Sweet Chermoula and Yogurt"
   },
   {
-    "nom": "poisson et tomates au four à la noix de coco",
+    "nom": "Poisson et tomates au four à la noix de coco",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3183,7 +3183,7 @@
     "nom_original": "Coconut Fish and Tomato Bake"
   },
   {
-    "nom": "minestrone d'été au basilic frais",
+    "nom": "Minestrone d'été au basilic frais",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3201,7 +3201,7 @@
     "nom_original": "Summer Minestrone With Fresh Basil"
   },
   {
-    "nom": "ragoût du pêcheur grec",
+    "nom": "Ragoût du pêcheur grec",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3219,7 +3219,7 @@
     "nom_original": "Greek Fisherman's Stew"
   },
   {
-    "nom": "tacos au poisson",
+    "nom": "Tacos au poisson",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -3237,7 +3237,7 @@
     "nom_original": "Fish Tacos"
   },
   {
-    "nom": "pâtes d'été aux courgettes, ricotta et basilic",
+    "nom": "Pâtes d'été aux courgettes, ricotta et basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3255,7 +3255,7 @@
     "nom_original": "Summer Pasta With Zucchini, Ricotta and Basil"
   },
   {
-    "nom": "schnitzel de porc aux pickles rapides",
+    "nom": "Schnitzel de porc aux pickles rapides",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3273,7 +3273,7 @@
     "nom_original": "Pork Schnitzel With Quick Pickles"
   },
   {
-    "nom": "tofu rôti au za'atar avec pois chiches, tomates et tahini citronné",
+    "nom": "Tofu rôti au za'atar avec pois chiches, tomates et tahini citronné",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3291,7 +3291,7 @@
     "nom_original": "Za'atar Roasted Tofu With Chickpeas, Tomatoes and Lemony Tahini"
   },
   {
-    "nom": "chou-fleur rôti à la sauce tahini-persil",
+    "nom": "Chou-fleur rôti à la sauce tahini-persil",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3309,7 +3309,7 @@
     "nom_original": "Roasted Cauliflower With Tahini-Parsley Sauce"
   },
   {
-    "nom": "aubergine chermoula de Yotam Ottolenghi avec boulgour et yaourt",
+    "nom": "Aubergine chermoula de Yotam Ottolenghi avec boulgour et yaourt",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3327,7 +3327,7 @@
     "nom_original": "Yotam Ottolenghi's Chermoula Eggplant With Bulgur and Yogurt"
   },
   {
-    "nom": "salade de pois chiches épicés au tahini et chips de pita",
+    "nom": "Salade de pois chiches épicés au tahini et chips de pita",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3345,7 +3345,7 @@
     "nom_original": "Spiced Chickpea Salad With Tahini and Pita Chips"
   },
   {
-    "nom": "salade de jeunes épinards aux dattes et amandes",
+    "nom": "Salade de jeunes épinards aux dattes et amandes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3363,7 +3363,7 @@
     "nom_original": "Baby Spinach Salad With Dates and Almonds"
   },
   {
-    "nom": "poisson persan au tamarin",
+    "nom": "Poisson persan au tamarin",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3381,7 +3381,7 @@
     "nom_original": "Persian Tamarind Fish"
   },
   {
-    "nom": "salade de concombre et tomates à la coriandre et menthe",
+    "nom": "Salade de concombre et tomates à la coriandre et menthe",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3399,7 +3399,7 @@
     "nom_original": "Cucumber and Tomato Salad With Cilantro and Mint"
   },
   {
-    "nom": "salade de tomates et grenade de Yotam Ottolenghi",
+    "nom": "Salade de tomates et grenade de Yotam Ottolenghi",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3417,7 +3417,7 @@
     "nom_original": "Yotam Ottolenghi's Tomato and Pomegranate Salad"
   },
   {
-    "nom": "nouilles froides aux tomates",
+    "nom": "Nouilles froides aux tomates",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3435,7 +3435,7 @@
     "nom_original": "Cold Noodles With Tomatoes"
   },
   {
-    "nom": "juk de poulet (autocuiseur) avec sauce aux oignons verts",
+    "nom": "Juk de poulet (autocuiseur) avec sauce aux oignons verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3453,7 +3453,7 @@
     "nom_original": "Instant Pot Chicken Juk With Scallion Sauce"
   },
   {
-    "nom": "sliders bulgogi avec salsa aux oignons verts",
+    "nom": "Sliders bulgogi avec salsa aux oignons verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3471,7 +3471,7 @@
     "nom_original": "Bulgogi Sliders With Scallion Salsa"
   },
   {
-    "nom": "poulet glacé au gochujang et noix de coco avec brocoli",
+    "nom": "Poulet glacé au gochujang et noix de coco avec brocoli",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3489,7 +3489,7 @@
     "nom_original": "Coconut-Gochujang Glazed Chicken With Broccoli"
   },
   {
-    "nom": "riz frit au kimchi",
+    "nom": "Riz frit au kimchi",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3507,7 +3507,7 @@
     "nom_original": "Kimchi Fried Rice"
   },
   {
-    "nom": "nouilles froides épicées au kimchi",
+    "nom": "Nouilles froides épicées au kimchi",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3525,7 +3525,7 @@
     "nom_original": "Cold Spicy Kimchi Noodles"
   },
   {
-    "nom": "buldak fromage de Maangchi (poulet de feu)",
+    "nom": "Buldak fromage de Maangchi (poulet de feu)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3543,7 +3543,7 @@
     "nom_original": "Maangchi's Cheese Buldak (Fire Chicken)"
   },
   {
-    "nom": "poulet frit coréen",
+    "nom": "Poulet frit coréen",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3561,7 +3561,7 @@
     "nom_original": "Korean Fried Chicken"
   },
   {
-    "nom": "saumon au gochugaru avec riz croustillant",
+    "nom": "Saumon au gochugaru avec riz croustillant",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3579,7 +3579,7 @@
     "nom_original": "Gochugaru Salmon With Crispy Rice"
   },
   {
-    "nom": "soupe de farro toscane",
+    "nom": "Soupe de farro toscane",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3597,7 +3597,7 @@
     "nom_original": "Tuscan Farro Soup"
   },
   {
-    "nom": "risotto aux épinards et taleggio",
+    "nom": "Risotto aux épinards et taleggio",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3615,7 +3615,7 @@
     "nom_original": "Spinach Risotto With Taleggio"
   },
   {
-    "nom": "la grande lasagne",
+    "nom": "La grande lasagne",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3633,7 +3633,7 @@
     "nom_original": "The Big Lasagna"
   },
   {
-    "nom": "gnocchi à la ricotta",
+    "nom": "Gnocchi à la ricotta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3651,7 +3651,7 @@
     "nom_original": "Ricotta Cheese Gnocchi"
   },
   {
-    "nom": "lasagne au chou-fleur rôti épicé",
+    "nom": "Lasagne au chou-fleur rôti épicé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3669,7 +3669,7 @@
     "nom_original": "Lasagna With Spicy Roasted Cauliflower"
   },
   {
-    "nom": "orecchiette à la sauce tomate et chou kale",
+    "nom": "Orecchiette à la sauce tomate et chou kale",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3687,7 +3687,7 @@
     "nom_original": "Orecchiette With Tomato Sauce and Kale"
   },
   {
-    "nom": "pâtes au chou caramélisé, anchois et chapelure",
+    "nom": "Pâtes au chou caramélisé, anchois et chapelure",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3705,7 +3705,7 @@
     "nom_original": "Pasta With Caramelized Cabbage, Anchovies and Bread Crumbs"
   },
   {
-    "nom": "soupe aux lentilles et tomates",
+    "nom": "Soupe aux lentilles et tomates",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3723,7 +3723,7 @@
     "nom_original": "Lentil Tomato Soup"
   },
   {
-    "nom": "pâtes aux palourdes de Mark Bittman",
+    "nom": "Pâtes aux palourdes de Mark Bittman",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3741,7 +3741,7 @@
     "nom_original": "Mark Bittman's Pasta With Clams"
   },
   {
-    "nom": "lasagne aux épinards et courgettes rôties",
+    "nom": "Lasagne aux épinards et courgettes rôties",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3759,7 +3759,7 @@
     "nom_original": "Lasagna With Spinach and Roasted Zucchini"
   },
   {
-    "nom": "poulet rôti aux citrons de Marcella Hazan",
+    "nom": "Poulet rôti aux citrons de Marcella Hazan",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3777,7 +3777,7 @@
     "nom_original": "Marcella Hazan's Roast Chicken With Lemons"
   },
   {
-    "nom": "minestrone rapide",
+    "nom": "Minestrone rapide",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3812,7 +3812,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "boulettes de viande de Rao avec sauce marinara",
+    "nom": "Boulettes de viande de Rao avec sauce marinara",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3847,7 +3847,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "pâtes gratinées aux saucisses et ricotta",
+    "nom": "Pâtes gratinées aux saucisses et ricotta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3865,7 +3865,7 @@
     "nom_original": "Cheesy Baked Pasta With Sausage and Ricotta"
   },
   {
-    "nom": "pâtes à la sauce saucisse blanche",
+    "nom": "Pâtes à la sauce saucisse blanche",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3883,7 +3883,7 @@
     "nom_original": "Pasta With White Sausage Sauce"
   },
   {
-    "nom": "spaghetti à la chapelure aillée et anchois",
+    "nom": "Spaghetti à la chapelure aillée et anchois",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3901,7 +3901,7 @@
     "nom_original": "Spaghetti With Garlicky Bread Crumbs and Anchovies"
   },
   {
-    "nom": "pâtes citronnées aux pois chiches et persil",
+    "nom": "Pâtes citronnées aux pois chiches et persil",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3936,7 +3936,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "pâtes ultra-rapides à la sauce aux épinards",
+    "nom": "Pâtes ultra-rapides à la sauce aux épinards",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3971,7 +3971,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "scampi de crevettes à l'orzo",
+    "nom": "Scampi de crevettes à l'orzo",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3989,7 +3989,7 @@
     "nom_original": "Shrimp Scampi With Orzo"
   },
   {
-    "nom": "spaghetti aux oeufs frits",
+    "nom": "Spaghetti aux oeufs frits",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4007,7 +4007,7 @@
     "nom_original": "Spaghetti With Fried Eggs"
   },
   {
-    "nom": "haricots blancs braisés aux légumes verts et parmesan",
+    "nom": "Haricots blancs braisés aux légumes verts et parmesan",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4025,7 +4025,7 @@
     "nom_original": "Braised White Beans and Greens With Parmesan"
   },
   {
-    "nom": "poulet marsala aux champignons",
+    "nom": "Poulet marsala aux champignons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4043,7 +4043,7 @@
     "nom_original": "Chicken Marsala and Mushrooms"
   },
   {
-    "nom": "salade Canlis",
+    "nom": "Salade Canlis",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4061,7 +4061,7 @@
     "nom_original": "Canlis Salad"
   },
   {
-    "nom": "flétan poêlé aux anchois, câpres et ail",
+    "nom": "Flétan poêlé aux anchois, câpres et ail",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4079,7 +4079,7 @@
     "nom_original": "Seared Halibut With Anchovies, Capers And Garlic"
   },
   {
-    "nom": "oeufs au four aux haricots et légumes verts",
+    "nom": "Oeufs au four aux haricots et légumes verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4131,7 +4131,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "pâtes à la saucisse épicée, brocoli rabe et pois chiches",
+    "nom": "Pâtes à la saucisse épicée, brocoli rabe et pois chiches",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4149,7 +4149,7 @@
     "nom_original": "Pasta With Spicy Sausage, Broccoli Rabe and Chickpeas"
   },
   {
-    "nom": "spaghetti aux palourdes",
+    "nom": "Spaghetti aux palourdes",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4167,7 +4167,7 @@
     "nom_original": "Spaghetti With Clams"
   },
   {
-    "nom": "salade toscane de chou kale",
+    "nom": "Salade toscane de chou kale",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4185,7 +4185,7 @@
     "nom_original": "Tuscan Kale Salad"
   },
   {
-    "nom": "frittata aux légumes (plus de légumes que d'oeufs)",
+    "nom": "Frittata aux légumes (plus de légumes que d'oeufs)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4203,7 +4203,7 @@
     "nom_original": "More-Vegetable-Than-Egg Frittata"
   },
   {
-    "nom": "pizza verte et blanche",
+    "nom": "Pizza verte et blanche",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4221,7 +4221,7 @@
     "nom_original": "Green and White Pizza"
   },
   {
-    "nom": "burrata aux fèves, fenouil et céleri",
+    "nom": "Burrata aux fèves, fenouil et céleri",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4239,7 +4239,7 @@
     "nom_original": "Burrata With Fava Beans, Fennel and Celery"
   },
   {
-    "nom": "pâtes à la sauce de tomates fraîches et ricotta",
+    "nom": "Pâtes à la sauce de tomates fraîches et ricotta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4274,7 +4274,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "risotto aux tomates",
+    "nom": "Risotto aux tomates",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4292,7 +4292,7 @@
     "nom_original": "Tomato Risotto"
   },
   {
-    "nom": "oeufs en purgatoire",
+    "nom": "Oeufs en purgatoire",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4344,7 +4344,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "saucisses aux poivrons et oignons",
+    "nom": "Saucisses aux poivrons et oignons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4362,7 +4362,7 @@
     "nom_original": "Sausage With Peppers and Onions"
   },
   {
-    "nom": "bol de nouilles aux champignons, épinards et saumon",
+    "nom": "Bol de nouilles aux champignons, épinards et saumon",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -4380,7 +4380,7 @@
     "nom_original": "Noodle Bowl With Mushrooms, Spinach and Salmon"
   },
   {
-    "nom": "poulet au miso",
+    "nom": "Poulet au miso",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4398,7 +4398,7 @@
     "nom_original": "Miso Chicken"
   },
   {
-    "nom": "nouilles soba froides avec sauce de trempage",
+    "nom": "Nouilles soba froides avec sauce de trempage",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4416,7 +4416,7 @@
     "nom_original": "Cold Soba Noodles With Dipping Sauce"
   },
   {
-    "nom": "katsu de porc aux concombres marinés et shiso",
+    "nom": "Katsu de porc aux concombres marinés et shiso",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4434,7 +4434,7 @@
     "nom_original": "Pork Katsu With Pickled Cucumbers and Shiso"
   },
   {
-    "nom": "yakitori (brochettes de poulet grillé)",
+    "nom": "Yakitori (brochettes de poulet grillé)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4469,7 +4469,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "tofu sucré-épicé aux nouilles soba",
+    "nom": "Tofu sucré-épicé aux nouilles soba",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4487,7 +4487,7 @@
     "nom_original": "Sweet and Spicy Tofu With Soba Noodles"
   },
   {
-    "nom": "soupe miso de poulet printanière",
+    "nom": "Soupe miso de poulet printanière",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4505,7 +4505,7 @@
     "nom_original": "Spring Chicken Miso Soup"
   },
   {
-    "nom": "bol de nouilles udon aux champignons",
+    "nom": "Bol de nouilles udon aux champignons",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4523,7 +4523,7 @@
     "nom_original": "Mushroom Udon Noodle Bowl"
   },
   {
-    "nom": "burgers japonais au ketchup wasabi",
+    "nom": "Burgers japonais au ketchup wasabi",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4541,7 +4541,7 @@
     "nom_original": "Japanese Burgers With Wasabi Ketchup"
   },
   {
-    "nom": "ragoût de boeuf à la japonaise",
+    "nom": "Ragoût de boeuf à la japonaise",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4559,7 +4559,7 @@
     "nom_original": "Japanese-Style Beef Stew"
   },
   {
-    "nom": "tagine de poulet aux olives et citrons confits",
+    "nom": "Tagine de poulet aux olives et citrons confits",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4577,7 +4577,7 @@
     "nom_original": "Chicken Tagine With Olives and Preserved Lemons"
   },
   {
-    "nom": "tagine de poulet et pois chiches",
+    "nom": "Tagine de poulet et pois chiches",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4595,7 +4595,7 @@
     "nom_original": "Chicken and Chickpea Tagine"
   },
   {
-    "nom": "couscous aux moules et crevettes",
+    "nom": "Couscous aux moules et crevettes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4613,7 +4613,7 @@
     "nom_original": "Couscous With Mussels and Shrimp"
   },
   {
-    "nom": "chili à la texane",
+    "nom": "Chili à la texane",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4631,7 +4631,7 @@
     "nom_original": "Texas-Style Chili"
   },
   {
-    "nom": "karaage (poulet frit japonais)",
+    "nom": "Karaage (poulet frit japonais)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4649,7 +4649,7 @@
     "nom_original": "Karaage (Japanese Fried Chicken)"
   },
   {
-    "nom": "butter chicken (poulet au beurre)",
+    "nom": "Butter chicken (poulet au beurre)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4667,7 +4667,7 @@
     "nom_original": "Butter Chicken"
   },
   {
-    "nom": "soupe de courge butternut au beurre noisette de Thomas Keller",
+    "nom": "Soupe de courge butternut au beurre noisette de Thomas Keller",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4685,7 +4685,7 @@
     "nom_original": "Thomas Keller's Butternut Squash Soup With Brown Butter"
   },
   {
-    "nom": "boeuf rôti au four du week-end",
+    "nom": "Boeuf rôti au four du week-end",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4703,7 +4703,7 @@
     "nom_original": "Oven-Roasted Weekend Beef"
   },
   {
-    "nom": "poulet rôti au beurre de sauce de poisson",
+    "nom": "Poulet rôti au beurre de sauce de poisson",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4721,7 +4721,7 @@
     "nom_original": "Roasted Chicken With Fish-Sauce Butter"
   },
   {
-    "nom": "haricots rouges au riz",
+    "nom": "Haricots rouges au riz",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4739,7 +4739,7 @@
     "nom_original": "Red Beans and Rice"
   },
   {
-    "nom": "poulet au curcuma et poivre noir avec asperges",
+    "nom": "Poulet au curcuma et poivre noir avec asperges",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4757,7 +4757,7 @@
     "nom_original": "Turmeric-Black Pepper Chicken With Asparagus"
   },
   {
-    "nom": "gyoza rapides (raviolis poêlés)",
+    "nom": "Gyoza rapides (raviolis poêlés)",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4775,7 +4775,7 @@
     "nom_original": "Fast Pot-Stickers"
   },
   {
-    "nom": "la meilleure chaudrée de palourdes",
+    "nom": "La meilleure chaudrée de palourdes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4793,7 +4793,7 @@
     "nom_original": "The Best Clam Chowder"
   },
   {
-    "nom": "ragoût de boeuf au dijon et cognac",
+    "nom": "Ragoût de boeuf au dijon et cognac",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4811,7 +4811,7 @@
     "nom_original": "Dijon and Cognac Beef Stew"
   },
   {
-    "nom": "rigatoni au bolognese blanc",
+    "nom": "Rigatoni au bolognese blanc",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4829,7 +4829,7 @@
     "nom_original": "Rigatoni With White Bolognese"
   },
   {
-    "nom": "laab de porc aux herbes fraîches et piment",
+    "nom": "Laab de porc aux herbes fraîches et piment",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4847,7 +4847,7 @@
     "nom_original": "Herby Pork Laab With Chile"
   },
   {
-    "nom": "ragoût de porc à la noix de coco et garam masala",
+    "nom": "Ragoût de porc à la noix de coco et garam masala",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4882,7 +4882,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "épaule de porc rôtie à la salsa verde",
+    "nom": "Épaule de porc rôtie à la salsa verde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4900,7 +4900,7 @@
     "nom_original": "Roast Pork Butt With Salsa Verde"
   },
   {
-    "nom": "sandwichs au porc effiloché",
+    "nom": "Sandwichs au porc effiloché",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4918,7 +4918,7 @@
     "nom_original": "Pulled Pork Sandwiches"
   },
   {
-    "nom": "tacos de porc grésillant",
+    "nom": "Tacos de porc grésillant",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4936,7 +4936,7 @@
     "nom_original": "Sizzling Pork Tacos"
   },
   {
-    "nom": "porc cubain à l'ail à la cocotte minute",
+    "nom": "Porc cubain à l'ail à la cocotte minute",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4954,7 +4954,7 @@
     "nom_original": "Pressure Cooker Garlicky Cuban Pork"
   },
   {
-    "nom": "poulet parmesan",
+    "nom": "Poulet parmesan",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4972,7 +4972,7 @@
     "nom_original": "Chicken Parmesan"
   },
   {
-    "nom": "ragù de porc puttanesca à la mijoteuse",
+    "nom": "Ragù de porc puttanesca à la mijoteuse",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4990,7 +4990,7 @@
     "nom_original": "Slow Cooker Pork Puttanesca Ragù"
   },
   {
-    "nom": "pho à la dinde",
+    "nom": "Pho à la dinde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5008,7 +5008,7 @@
     "nom_original": "Turkey Pho"
   },
   {
-    "nom": "galettes grecques de courgettes",
+    "nom": "Galettes grecques de courgettes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5026,7 +5026,7 @@
     "nom_original": "Greek Zucchini Fritters"
   },
   {
-    "nom": "ragoût épicé de haricots blancs au brocoli rabe",
+    "nom": "Ragoût épicé de haricots blancs au brocoli rabe",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5044,7 +5044,7 @@
     "nom_original": "Spicy White Bean Stew With Broccoli Rabe"
   },
   {
-    "nom": "poulet à la plaque avec pommes de terre, feta, citron et aneth",
+    "nom": "Poulet à la plaque avec pommes de terre, feta, citron et aneth",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5062,7 +5062,7 @@
     "nom_original": "Sheet-Pan Chicken and Potatoes With Feta, Lemon and Dill"
   },
   {
-    "nom": "chou-fleur rôti à la feta, amandes et olives",
+    "nom": "Chou-fleur rôti à la feta, amandes et olives",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5080,7 +5080,7 @@
     "nom_original": "Roasted Cauliflower With Feta, Almonds and Olives"
   },
   {
-    "nom": "couscous perlé à la feta crémeuse et pois chiches",
+    "nom": "Couscous perlé à la feta crémeuse et pois chiches",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5098,7 +5098,7 @@
     "nom_original": "Pearl Couscous With Creamy Feta and Chickpeas"
   },
   {
-    "nom": "pâtes crémeuses aux pois chiches, épinards et romarin",
+    "nom": "Pâtes crémeuses aux pois chiches, épinards et romarin",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5116,7 +5116,7 @@
     "nom_original": "Creamy Chickpea Pasta With Spinach and Rosemary"
   },
   {
-    "nom": "pâtes de minuit à l'ail, anchois, câpres et piment rouge",
+    "nom": "Pâtes de minuit à l'ail, anchois, câpres et piment rouge",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5134,7 +5134,7 @@
     "nom_original": "Midnight Pasta With Garlic, Anchovy, Capers and Red Pepper"
   },
   {
-    "nom": "sandwich classique à la salade de thon",
+    "nom": "Sandwich classique à la salade de thon",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -5152,7 +5152,7 @@
     "nom_original": "Classic Tuna Salad Sandwich"
   },
   {
-    "nom": "salade du Nouvel An aux pois aux yeux noirs",
+    "nom": "Salade du Nouvel An aux pois aux yeux noirs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5170,7 +5170,7 @@
     "nom_original": "New Year's Black-Eyed Pea Salad"
   },
   {
-    "nom": "pâtes au thon et olives",
+    "nom": "Pâtes au thon et olives",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5188,7 +5188,7 @@
     "nom_original": "Pasta With Tuna and Olives"
   },
   {
-    "nom": "poêlée de légumes avec oeuf poché",
+    "nom": "Poêlée de légumes avec oeuf poché",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5206,7 +5206,7 @@
     "nom_original": "Vegetable Hash With Poached Egg"
   },
   {
-    "nom": "tortilla espagnole avec salade tomates-poivrons",
+    "nom": "Tortilla espagnole avec salade tomates-poivrons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5224,7 +5224,7 @@
     "nom_original": "Spanish Tortilla With Tomato-Pepper Salad"
   },
   {
-    "nom": "puttanesca blond (linguine au thon, roquette et câpres)",
+    "nom": "Puttanesca blond (linguine au thon, roquette et câpres)",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5259,7 +5259,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "poulet rôti au beurre d'érable et romarin",
+    "nom": "Poulet rôti au beurre d'érable et romarin",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5277,7 +5277,7 @@
     "nom_original": "Roast Chicken With Maple Butter and Rosemary"
   },
   {
-    "nom": "poulet rôti au babeurre",
+    "nom": "Poulet rôti au babeurre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5295,7 +5295,7 @@
     "nom_original": "Buttermilk Roast Chicken"
   },
   {
-    "nom": "poulet rôti au curry, façon Durban",
+    "nom": "Poulet rôti au curry, façon Durban",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5313,7 +5313,7 @@
     "nom_original": "Curried Roast Chicken, Durban Style"
   },
   {
-    "nom": "poulet rôti",
+    "nom": "Poulet rôti",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5331,7 +5331,7 @@
     "nom_original": "Roast Chicken"
   },
   {
-    "nom": "poulet rôti mariné à la feta",
+    "nom": "Poulet rôti mariné à la feta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5349,7 +5349,7 @@
     "nom_original": "Feta-Brined Roast Chicken"
   },
   {
-    "nom": "poulet rôti à la déesse verte",
+    "nom": "Poulet rôti à la déesse verte",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5367,7 +5367,7 @@
     "nom_original": "Green Goddess Roasted Chicken"
   },
   {
-    "nom": "macaroni au fromage crémeux",
+    "nom": "Macaroni au fromage crémeux",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5385,7 +5385,7 @@
     "nom_original": "Creamy Macaroni and Cheese"
   },
   {
-    "nom": "soupe de haricots blancs citronnée à la dinde et légumes verts",
+    "nom": "Soupe de haricots blancs citronnée à la dinde et légumes verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5403,7 +5403,7 @@
     "nom_original": "Lemony White Bean Soup With Turkey and Greens"
   },
   {
-    "nom": "poitrines de poulet au curry",
+    "nom": "Poitrines de poulet au curry",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5421,7 +5421,7 @@
     "nom_original": "Chicken Breasts With Curry"
   },
   {
-    "nom": "salade de freekeh, pois chiches et herbes fraîches",
+    "nom": "Salade de freekeh, pois chiches et herbes fraîches",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5439,7 +5439,7 @@
     "nom_original": "Freekeh, Chickpea and Herb Salad"
   },
   {
-    "nom": "risotto aux champignons et petits pois",
+    "nom": "Risotto aux champignons et petits pois",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5457,7 +5457,7 @@
     "nom_original": "Mushroom Risotto With Peas"
   },
   {
-    "nom": "poitrines de poulet grillées au citron et thym",
+    "nom": "Poitrines de poulet grillées au citron et thym",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5475,7 +5475,7 @@
     "nom_original": "Lemon and Thyme Grilled Chicken Breasts"
   },
   {
-    "nom": "spaghetti et boulettes de viande à la sauce tomate",
+    "nom": "Spaghetti et boulettes de viande à la sauce tomate",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5493,7 +5493,7 @@
     "nom_original": "Spaghetti and Drop Meatballs With Tomato Sauce"
   },
   {
-    "nom": "ragoût de pois chiches croustillants aux légumes verts et citron",
+    "nom": "Ragoût de pois chiches croustillants aux légumes verts et citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5511,7 +5511,7 @@
     "nom_original": "Crispy Chickpea Stew With Greens and Lemon"
   },
   {
-    "nom": "moules à la vapeur de bière avec ail et moutarde",
+    "nom": "Moules à la vapeur de bière avec ail et moutarde",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5529,7 +5529,7 @@
     "nom_original": "Ale-Steamed Mussels With Garlic and Mustard"
   },
   {
-    "nom": "moules grillées au beurre d'herbes aillé",
+    "nom": "Moules grillées au beurre d'herbes aillé",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5547,7 +5547,7 @@
     "nom_original": "Broiled Mussels With Garlicky Herb Butter"
   },
   {
-    "nom": "pâtes aux moules en sauce tomate",
+    "nom": "Pâtes aux moules en sauce tomate",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5565,7 +5565,7 @@
     "nom_original": "Pasta With Mussels in Tomato Sauce"
   },
   {
-    "nom": "moules au chorizo",
+    "nom": "Moules au chorizo",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5583,7 +5583,7 @@
     "nom_original": "Mussels With Chorizo"
   },
   {
-    "nom": "moules à la vapeur à l'ail et persil",
+    "nom": "Moules à la vapeur à l'ail et persil",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5601,7 +5601,7 @@
     "nom_original": "Steamed Mussels With Garlic and Parsley"
   },
   {
-    "nom": "pâtes crémeuses en une casserole au poulet et champignons",
+    "nom": "Pâtes crémeuses en une casserole au poulet et champignons",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5619,7 +5619,7 @@
     "nom_original": "Creamy One-Pot Pasta With Chicken and Mushrooms"
   },
   {
-    "nom": "gratin provençal de tomates et haricots",
+    "nom": "Gratin provençal de tomates et haricots",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5637,7 +5637,7 @@
     "nom_original": "Provençal Tomato and Bean Gratin"
   },
   {
-    "nom": "soupe de légumes aux pois chiches avec parmesan, romarin et citron",
+    "nom": "Soupe de légumes aux pois chiches avec parmesan, romarin et citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5689,7 +5689,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "porc mijoté aux lentilles et céleri",
+    "nom": "Porc mijoté aux lentilles et céleri",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5707,7 +5707,7 @@
     "nom_original": "Pork Stewed With Lentils and Celery"
   },
   {
-    "nom": "soupe épicée de poulet à l'ail vert",
+    "nom": "Soupe épicée de poulet à l'ail vert",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5742,7 +5742,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "tacos de porc à la mijoteuse avec hoisin et gingembre",
+    "nom": "Tacos de porc à la mijoteuse avec hoisin et gingembre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5760,7 +5760,7 @@
     "nom_original": "Slow Cooker Pork Tacos With Hoisin and Ginger"
   },
   {
-    "nom": "fricassée de poulet au vermouth",
+    "nom": "Fricassée de poulet au vermouth",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5778,7 +5778,7 @@
     "nom_original": "Chicken Fricassee With Vermouth"
   },
   {
-    "nom": "pois chiches épicés au gingembre",
+    "nom": "Pois chiches épicés au gingembre",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5813,7 +5813,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "poulet étouffé de Craig Claiborne",
+    "nom": "Poulet étouffé de Craig Claiborne",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5848,7 +5848,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "côtelettes de porc au cumin et four",
+    "nom": "Côtelettes de porc au cumin et four",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5866,7 +5866,7 @@
     "nom_original": "Cumin-Baked Pork Chops"
   },
   {
-    "nom": "truite poêlée au romarin, citron et câpres",
+    "nom": "Truite poêlée au romarin, citron et câpres",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5901,7 +5901,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "poitrines de poulet au citron",
+    "nom": "Poitrines de poulet au citron",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5919,7 +5919,7 @@
     "nom_original": "Chicken Breasts With Lemon"
   },
   {
-    "nom": "pâtes au pesto de chou kale et courge butternut rôtie",
+    "nom": "Pâtes au pesto de chou kale et courge butternut rôtie",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5937,7 +5937,7 @@
     "nom_original": "Pasta With Kale Pesto and Roasted Butternut Squash"
   },
   {
-    "nom": "rigatoni au four avec tomates, olives et poivrons",
+    "nom": "Rigatoni au four avec tomates, olives et poivrons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5955,7 +5955,7 @@
     "nom_original": "Baked Rigatoni With Tomatoes, Olives and Pepper"
   },
   {
-    "nom": "flétan rôti aux citrons, olives et romarin",
+    "nom": "Flétan rôti aux citrons, olives et romarin",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5973,7 +5973,7 @@
     "nom_original": "Roasted Halibut With Lemons, Olives and Rosemary"
   },
   {
-    "nom": "paprikash de poulet",
+    "nom": "Paprikash de poulet",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5991,7 +5991,7 @@
     "nom_original": "Chicken Paprikash"
   },
   {
-    "nom": "poitrines de poulet aux tomates et câpres",
+    "nom": "Poitrines de poulet aux tomates et câpres",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6009,7 +6009,7 @@
     "nom_original": "Chicken Breasts With Tomatoes and Capers"
   },
   {
-    "nom": "tantanmen végane avec tofu poêlé",
+    "nom": "Tantanmen végane avec tofu poêlé",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6027,7 +6027,7 @@
     "nom_original": "Vegan Tantanmen With Pan-Fried Tofu"
   },
   {
-    "nom": "filet de porc cuit deux fois",
+    "nom": "Filet de porc cuit deux fois",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6045,7 +6045,7 @@
     "nom_original": "Twice-Cooked Pork Tenderloin"
   },
   {
-    "nom": "poitrine de boeuf acidulée au gingembre",
+    "nom": "Poitrine de boeuf acidulée au gingembre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6063,7 +6063,7 @@
     "nom_original": "Tangy Brisket With Ginger"
   },
   {
-    "nom": "agneau braisé au vin rouge et pruneaux",
+    "nom": "Agneau braisé au vin rouge et pruneaux",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6081,7 +6081,7 @@
     "nom_original": "Braised Lamb With Red Wine and Prunes"
   },
   {
-    "nom": "rôti du Mississippi",
+    "nom": "Rôti du Mississippi",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6099,7 +6099,7 @@
     "nom_original": "Mississippi Roast"
   },
   {
-    "nom": "tacos de poulet chipotle-miel à la mijoteuse",
+    "nom": "Tacos de poulet chipotle-miel à la mijoteuse",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -6117,7 +6117,7 @@
     "nom_original": "Slow Cooker Chipotle-Honey Chicken Tacos"
   },
   {
-    "nom": "soupe de boulettes de poulet d'inspiration thaïe",
+    "nom": "Soupe de boulettes de poulet d'inspiration thaïe",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6135,7 +6135,7 @@
     "nom_original": "Thai-Inspired Chicken Meatball Soup"
   },
   {
-    "nom": "ramen instantané parfait",
+    "nom": "Ramen instantané parfait",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6153,7 +6153,7 @@
     "nom_original": "Perfect Instant Ramen"
   },
   {
-    "nom": "soupe santé",
+    "nom": "Soupe santé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6171,7 +6171,7 @@
     "nom_original": "Health Soup"
   },
   {
-    "nom": "griot haïtien de porc",
+    "nom": "Griot haïtien de porc",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6206,7 +6206,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "curry de saumon à la noix de coco et miso",
+    "nom": "Curry de saumon à la noix de coco et miso",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -6224,7 +6224,7 @@
     "nom_original": "Coconut-Miso Salmon Curry"
   },
   {
-    "nom": "shakshuka à la feta",
+    "nom": "Shakshuka à la feta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6242,7 +6242,7 @@
     "nom_original": "Shakshuka With Feta"
   },
   {
-    "nom": "boulettes de viande d'inspiration nord-africaine",
+    "nom": "Boulettes de viande d'inspiration nord-africaine",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6260,7 +6260,7 @@
     "nom_original": "North African-Inspired Meatballs"
   },
   {
-    "nom": "côtelettes de porc au glaçage confiture-moutarde",
+    "nom": "Côtelettes de porc au glaçage confiture-moutarde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6295,7 +6295,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "lentilles au curry rouge avec patates douces et épinards",
+    "nom": "Lentilles au curry rouge avec patates douces et épinards",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
