@@ -1281,6 +1281,7 @@ input[type="range"] {
 
 /* Carte */
 .recette-card {
+  position: relative;
   background: var(--bg);
   padding: 1.1rem 1.2rem 1.2rem;
   display: flex;
@@ -1389,6 +1390,301 @@ input[type="range"] {
   padding: 4rem 2rem;
   background: var(--bg);
 }
+
+/* ── En-tête actions ─────────────────────────────────────────────────────── */
+.recettes-header__actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.recettes-action-btn {
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--border-dark);
+  background: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+.recettes-action-btn:hover { border-color: var(--ink); color: var(--ink); }
+.recettes-action-btn--primary {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+}
+.recettes-action-btn--primary:hover { background: var(--sage); border-color: var(--sage); color: #fff; }
+
+/* ── Bouton modifier sur la carte ──────────────────────────────────────────── */
+.recette-card__edit-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+  padding: 0.2rem 0.35rem;
+  line-height: 1;
+}
+.recette-card:hover .recette-card__edit-btn { opacity: 1; }
+.recette-card__edit-btn:hover { color: var(--forest); }
+
+/* ── Tag "ajoutée" ─────────────────────────────────────────────────────────── */
+.recette-tag--local {
+  background: var(--terra-light);
+  color: var(--terra);
+}
+
+/* ── Notes libres sur la carte ───────────────────────────────────────────── */
+.recette-card__notes {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: var(--ink-3);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* ── Drawer ──────────────────────────────────────────────────────────────── */
+.recette-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  justify-content: flex-end;
+}
+.recette-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+.recette-drawer__panel {
+  position: relative;
+  width: min(540px, 100vw);
+  height: 100vh;
+  background: var(--bg);
+  overflow-y: auto;
+  box-shadow: -4px 0 32px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Formulaire ──────────────────────────────────────────────────────────── */
+.recette-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+.recette-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 1;
+}
+.recette-form__titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0;
+}
+.recette-form__close {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--ink-3);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.12s;
+}
+.recette-form__close:hover { color: var(--ink); }
+
+.recette-form__section {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.recette-form__section-titre {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0;
+}
+.recette-form__section-sub {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.recette-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+.recette-form__field > span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: var(--ink-2);
+}
+.recette-form__field > span em {
+  font-style: normal;
+  color: var(--ink-3);
+}
+.recette-form__input {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border-dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: var(--bg);
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.15s;
+  appearance: none;
+}
+.recette-form__input:focus { border-color: var(--ink); }
+.recette-form__select { cursor: pointer; }
+.recette-form__textarea { resize: vertical; }
+
+.recette-form__row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+/* Coût en $$ cliquables */
+.recette-form__cout-stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 0.1rem;
+}
+.recette-form__cout-btn {
+  background: none;
+  border: 1px solid var(--border-dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.12s;
+  border-radius: 2px;
+  line-height: 1;
+}
+.recette-form__cout-btn--on {
+  background: var(--bark);
+  color: #fff;
+  border-color: var(--bark);
+}
+
+/* Checkboxes thèmes */
+.recette-form__themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.recette-form__theme-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--border-dark);
+  border-radius: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.12s;
+  user-select: none;
+}
+.recette-form__theme-pill input { display: none; }
+.recette-form__theme-pill--on {
+  background: var(--sage-light);
+  border-color: var(--sage);
+  color: var(--forest);
+  font-weight: 500;
+}
+
+/* Ratings famille */
+.recette-form__ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.recette-form__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.recette-form__rating-emoji { font-size: 1rem; width: 1.5rem; text-align: center; }
+.recette-form__rating-nom {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--ink-2);
+  flex: 1;
+}
+.recette-form__rating-input {
+  width: 5rem !important;
+  text-align: center;
+}
+
+/* Boutons d'action */
+.recette-form__actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.25rem 1.75rem;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  bottom: 0;
+}
+.recette-form__btn {
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--border-dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.12s;
+  border-radius: 0;
+  background: none;
+  color: var(--ink);
+}
+.recette-form__btn--annuler { color: var(--ink-3); }
+.recette-form__btn--annuler:hover { color: var(--ink); border-color: var(--ink); }
+.recette-form__btn--sauver {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+  margin-left: auto;
+}
+.recette-form__btn--sauver:hover { background: var(--sage); border-color: var(--sage); }
+.recette-form__btn--suppr { color: #c0392b; border-color: #c0392b; }
+.recette-form__btn--suppr:hover { background: #fdecea; }
 
 /* ══════════════════════════════════════════════════════════════════════════════
    ÉCRAN DE CONNEXION
