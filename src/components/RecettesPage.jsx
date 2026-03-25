@@ -41,8 +41,40 @@ const RECETTE_VIDE = {
   eval_patricia: '', eval_yannick: '', eval_joseph: '', eval_mika: '', eval_luce: '',
 };
 
-const STORAGE_KEY   = 'recettes_custom_v1';
-const API_KEY_STORE = 'anthropic_key';
+const STORAGE_KEY    = 'recettes_custom_v1';
+const API_KEY_STORE  = 'anthropic_key';
+const PROMPT_STORE   = 'recettes_prompt_v1';
+
+const PROMPT_DEFAULT = `Tu analyses une recette et retournes UNIQUEMENT un objet JSON valide (sans markdown, sans explication).
+
+⚠ RÈGLE CRITIQUE pour "origine" :
+Détermine l'origine selon les SAVEURS et les INGRÉDIENTS, jamais selon l'appareil ou la méthode de cuisson.
+- Cocotte-minute / Instant Pot / slow cooker = appareils nord-américains → ignorés pour l'origine
+- Sauce hoisin, gingembre, bok choy, sésame → "Chine" ou "Asie"
+- Gochujang, doenjang, kimchi → "Corée"
+- Miso, dashi, soja, sake → "Japon"
+- Tahini, za'atar, sumac, harissa → "Moyen-Orient" ou "Maroc" ou "Liban"
+- Curcuma, garam masala, ghee → "Inde"
+- Si les ingrédients sont très génériques, cherche la sauce ou les épices dominantes
+
+Champs attendus :
+- "nom" : string — titre naturel en français, minuscules sauf noms propres (ex: "poulet rôti au citron", "tacos au boeuf", "riz sauté à l'oeuf")
+- "origine" : string — en français : "Chine", "Japon", "Corée", "Inde", "Thaïlande", "Vietnam", "Liban", "Maroc", "Moyen-Orient", "Grèce", "Italie", "France", "Espagne", "Mexique", "États-Unis", "Méditerranéen", "Pérou"
+- "regime_alimentaire" : "omnivore" | "végétarien" | "végane"
+- "temps_preparation" : number — minutes totales réelles (prép + cuisson + repos si significatif), ou null
+- "cout" : number 1–6 — coût par portion : 1=moins de 4$, 2=4-7$, 3=7-12$, 4=12-18$, 5=18-25$, 6=plus de 25$
+- "ingredients" : string — 5 à 8 ingrédients caractéristiques en français, séparés par des virgules
+- "themes" : array — clés exactes parmi :
+    "theme_pasta_rapido"     → pâtes, nouilles, gnocchi
+    "theme_bol_nwich"        → bols repas, sandwichs, wraps, salades-repas
+    "theme_criiions_poisson" → poisson, fruits de mer, crustacés
+    "theme_plat_en_sauce"    → ragoûts, currys, plats mijotés avec sauce
+    "theme_confort_grille"   → viandes/légumes grillés, BBQ, burgers
+    "theme_pizza"            → pizza, focaccia, flatbread
+    "theme_slow_chic"        → cuisine raffinée et lente, risotto, dîner élaboré
+
+Données de la recette :
+{CONTEXTE}`;
 
 // ── Helpers généraux ──────────────────────────────────────────────────────────
 function loadStorage() {
@@ -87,27 +119,9 @@ function extraireJsonLd(html) {
 }
 
 // ── Enrichissement IA ─────────────────────────────────────────────────────────
-async function enrichirAvecClaude(apiKey, contexte) {
-  const PROMPT = `Tu analyses une recette et retournes UNIQUEMENT un objet JSON (sans markdown).
-
-Champs attendus :
-- "nom" : string — nom de la recette en français, naturel, sans majuscules inutiles
-- "origine" : string — pays/région d'origine culturelle en français (ex : "Italie", "Japon", "Moyen-Orient")
-- "regime_alimentaire" : "omnivore" | "végétarien" | "végane"
-- "temps_preparation" : number — temps total en minutes (préparation + cuisson), ou null
-- "cout" : number 1–6 — estimation du coût par portion (1=très économique, 3=moyen, 6=très cher)
-- "ingredients" : string — 5 à 8 ingrédients clés en français, séparés par des virgules
-- "themes" : array — thèmes applicables parmi :
-    "theme_pasta_rapido"     → pâtes, nouilles, gnocchi, plats italiens rapides
-    "theme_bol_nwich"        → bols repas, sandwichs, wraps, salades-repas
-    "theme_criiions_poisson" → poisson, fruits de mer, crustacés
-    "theme_plat_en_sauce"    → ragoûts, currys, daubes, plats mijotés en sauce épaisse
-    "theme_confort_grille"   → viandes grillées, BBQ, burgers, comfort food
-    "theme_pizza"            → pizza, focaccia, tarte flambée, flatbread
-    "theme_slow_chic"        → cuisine raffinée, risotto, plats lents élaborés, dîner chic
-
-Contexte de la recette :
-${JSON.stringify(contexte, null, 2)}`;
+async function enrichirAvecClaude(apiKey, contexte, promptTemplate) {
+  const PROMPT = (promptTemplate || PROMPT_DEFAULT)
+    .replace('{CONTEXTE}', JSON.stringify(contexte, null, 2));
 
   const resp = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -131,7 +145,7 @@ ${JSON.stringify(contexte, null, 2)}`;
   return jsonMatch ? JSON.parse(jsonMatch[0]) : null;
 }
 
-async function enrichirDepuisUrl(url, apiKey, setForm, setStatut) {
+async function enrichirDepuisUrl(url, apiKey, setForm, setStatut, promptTemplate) {
   setStatut('chargement');
   let jsonLd = null;
 
@@ -180,7 +194,7 @@ async function enrichirDepuisUrl(url, apiKey, setForm, setStatut) {
         }
       : { url, nom_depuis_url: nomDepuisUrl(url) };
 
-    const ai = await enrichirAvecClaude(apiKey, contexte);
+    const ai = await enrichirAvecClaude(apiKey, contexte, promptTemplate);
     if (!ai) throw new Error('Réponse vide');
 
     setForm(f => {
@@ -214,6 +228,17 @@ function useApiKey() {
     else localStorage.removeItem(API_KEY_STORE);
   }, []);
   return [key, save];
+}
+
+// ── Hook prompt ───────────────────────────────────────────────────────────────
+function usePrompt() {
+  const [prompt, setPrompt] = useState(() => localStorage.getItem(PROMPT_STORE) || PROMPT_DEFAULT);
+  const save = useCallback(p => {
+    setPrompt(p);
+    if (p === PROMPT_DEFAULT) localStorage.removeItem(PROMPT_STORE);
+    else localStorage.setItem(PROMPT_STORE, p);
+  }, []);
+  return [prompt, save];
 }
 
 // ── Hook custom storage ───────────────────────────────────────────────────────
@@ -265,12 +290,13 @@ function StatutBadge({ statut }) {
 }
 
 // ── Formulaire recette ────────────────────────────────────────────────────────
-function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey }) {
-  const [form, setForm]     = useState(() => { const { _id, _source, ...r } = recette; return { ...RECETTE_VIDE, ...r }; });
-  const [statut, setStatut] = useState(null);
-  // Ouvrir automatiquement le panneau clé si nouvelle recette sans clé
+function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey, prompt, onSavePrompt }) {
+  const [form, setForm]         = useState(() => { const { _id, _source, ...r } = recette; return { ...RECETTE_VIDE, ...r }; });
+  const [statut, setStatut]     = useState(null);
   const [afficherCle, setAfficherCle] = useState(isNew && !apiKey);
-  const [cleTemp, setCleTemp]         = useState(apiKey);
+  const [cleTemp, setCleTemp]   = useState(apiKey);
+  const [promptTemp, setPromptTemp]   = useState(prompt);
+  const [afficherPrompt, setAfficherPrompt] = useState(false);
   const timerRef = useRef(null);
 
   function set(key, val) { setForm(f => ({ ...f, [key]: val })); }
@@ -286,7 +312,7 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
     const url = urlOverride ?? form.url;
     const key = keyOverride ?? apiKey;
     if (!url.startsWith('http')) return;
-    enrichirDepuisUrl(url, key, setForm, setStatut);
+    enrichirDepuisUrl(url, key, setForm, setStatut, prompt);
   }
 
   function handleSubmit(e) {
@@ -315,8 +341,16 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
         <div className="recette-form__header-actions">
           <button
             type="button"
+            className="recette-form__cle-btn"
+            onClick={() => { setAfficherPrompt(v => !v); setAfficherCle(false); }}
+            title="Modifier le prompt IA"
+          >
+            ✦
+          </button>
+          <button
+            type="button"
             className={`recette-form__cle-btn ${!apiKey ? 'recette-form__cle-btn--alerte' : ''}`}
-            onClick={() => setAfficherCle(v => !v)}
+            onClick={() => { setAfficherCle(v => !v); setAfficherPrompt(false); }}
             title={apiKey ? 'Clé API Anthropic configurée' : 'Configurer la clé API pour l\'analyse auto'}
           >
             🔑{!apiKey && <span className="recette-form__cle-dot" />}
@@ -344,6 +378,33 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
             />
             <button type="button" className="recette-form__btn recette-form__btn--sauver" onClick={sauverCle}>
               OK
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Éditeur de prompt */}
+      {afficherPrompt && (
+        <div className="recette-form__cle-panel">
+          <p className="recette-form__cle-info">
+            Prompt envoyé à Claude lors de l'analyse. Modifiez pour affiner les résultats.
+            Le placeholder <code>{'{CONTEXTE}'}</code> sera remplacé par les données de la recette.
+          </p>
+          <textarea
+            className="recette-form__input recette-form__prompt-editor"
+            value={promptTemp}
+            rows={14}
+            onChange={e => setPromptTemp(e.target.value)}
+            spellCheck={false}
+          />
+          <div className="recette-form__cle-row">
+            <button type="button" className="recette-form__btn recette-form__btn--annuler"
+              onClick={() => { setPromptTemp(PROMPT_DEFAULT); onSavePrompt(PROMPT_DEFAULT); }}>
+              Réinitialiser
+            </button>
+            <button type="button" className="recette-form__btn recette-form__btn--sauver"
+              onClick={() => { onSavePrompt(promptTemp); setAfficherPrompt(false); }}>
+              Sauvegarder
             </button>
           </div>
         </div>
@@ -626,6 +687,7 @@ function Pill({ label, active, onClick }) {
 export default function RecettesPage({ onRetour }) {
   const { custom, ajouter, modifier, supprimer } = useRecettesCustom();
   const [apiKey, setApiKey] = useApiKey();
+  const [prompt, setPrompt] = usePrompt();
   const toutesRecettes = useToutesRecettes(custom);
 
   const [recherche, setRecherche]       = useState('');
@@ -716,6 +778,8 @@ export default function RecettesPage({ onRetour }) {
           onClose={() => setDrawerOpen(false)}
           apiKey={apiKey}
           onSaveApiKey={setApiKey}
+          prompt={prompt}
+          onSavePrompt={setPrompt}
         />
       </Drawer>
 

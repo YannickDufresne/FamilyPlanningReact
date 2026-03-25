@@ -1637,6 +1637,21 @@ input[type="range"] {
 .recette-form__input:focus { border-color: var(--ink); }
 .recette-form__select { cursor: pointer; }
 .recette-form__textarea { resize: vertical; }
+.recette-form__prompt-editor {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  resize: vertical;
+  white-space: pre;
+  overflow-x: auto;
+}
+.recette-form__cle-panel code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  background: var(--border);
+  padding: 0 3px;
+  border-radius: 2px;
+}
 
 /* Rangée URL + bouton Analyser */
 .recette-form__url-row {
