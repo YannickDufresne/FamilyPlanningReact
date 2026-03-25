@@ -33,7 +33,7 @@ const ORIGINES_SUGGEREES = [
 ];
 
 const RECETTE_VIDE = {
-  nom: '', url: '', origine: '', regime_alimentaire: 'omnivore',
+  nom: '', nom_original: '', url: '', origine: '', regime_alimentaire: 'omnivore',
   temps_preparation: '', cout: 3, ingredients: '', livre: '', notes: '',
   source: 'manuel',
   theme_pasta_rapido: 0, theme_bol_nwich: 0, theme_criiions_poisson: 0,
@@ -43,26 +43,39 @@ const RECETTE_VIDE = {
 
 const STORAGE_KEY    = 'recettes_custom_v1';
 const API_KEY_STORE  = 'anthropic_key';
-const PROMPT_STORE   = 'recettes_prompt_v1';
+const PROMPT_STORE   = 'recettes_prompt_v2';   // bump = efface l'ancien prompt sauvegardé
 
 const PROMPT_DEFAULT = `Tu analyses une recette et retournes UNIQUEMENT un objet JSON valide (sans markdown, sans explication).
 
-⚠ RÈGLE CRITIQUE pour "origine" :
-Détermine l'origine selon les SAVEURS et les INGRÉDIENTS, jamais selon l'appareil ou la méthode de cuisson.
-- Cocotte-minute / Instant Pot / slow cooker = appareils nord-américains → ignorés pour l'origine
-- Sauce hoisin, gingembre, bok choy, sésame → "Chine" ou "Asie"
-- Gochujang, doenjang, kimchi → "Corée"
-- Miso, dashi, soja, sake → "Japon"
-- Tahini, za'atar, sumac, harissa → "Moyen-Orient" ou "Maroc" ou "Liban"
-- Curcuma, garam masala, ghee → "Inde"
-- Si les ingrédients sont très génériques, cherche la sauce ou les épices dominantes
+━━ RÈGLE ABSOLUE — ORIGINE ━━
+L'origine = la TRADITION CULINAIRE des ingrédients et des saveurs. JAMAIS l'appareil ni la méthode.
 
-Champs attendus :
-- "nom" : string — titre naturel en français, minuscules sauf noms propres (ex: "poulet rôti au citron", "tacos au boeuf", "riz sauté à l'oeuf")
-- "origine" : string — en français : "Chine", "Japon", "Corée", "Inde", "Thaïlande", "Vietnam", "Liban", "Maroc", "Moyen-Orient", "Grèce", "Italie", "France", "Espagne", "Mexique", "États-Unis", "Méditerranéen", "Pérou"
+DÉCODEUR D'INGRÉDIENTS → ORIGINE (applique cette logique en priorité) :
+• sauce hoisin, sauce aux huîtres, wok, cinq-épices, bok choy, tofu mapo → "Chine"
+• gochujang, doenjang, gochugaru, kimchi, sésame coréen → "Corée"
+• miso, dashi, mirin, sake, wasabi, katsuobushi, soba, ramen → "Japon"
+• fish sauce (nam pla), citronnelle, lait de coco + curry vert/rouge, galanga → "Thaïlande"
+• fish sauce + citronnelle + pho, bun, nem → "Vietnam"
+• tahini, za'atar, sumac, boulgour, grenade, pomme de grenade → "Liban" ou "Moyen-Orient"
+• harissa, ras-el-hanout, chermoula, preserved lemon → "Maroc"
+• curcuma + garam masala + ghee + dhal → "Inde"
+• chorizo ibérique, pimentón, safran + riz → "Espagne"
+• guajillo, chipotle, tomatillo, epazote, masa → "Mexique"
+• olives + féta + origan → "Grèce" ; pesto + parmesan + basilic → "Italie"
+• moutarde de Dijon, herbes de Provence, crème fraîche, vin blanc → "France"
+
+RÉSERVÉ À "États-Unis" : hamburger, ribs, mac and cheese, buffalo wings, ranch dressing, Cajun/Creole, chili con carne traditionnel. Si le plat utilise juste du poulet + ail + oignon sans marqueur culturel clair → préfère "France" ou "Méditerranéen".
+
+APPAREILS À IGNORER (ne déterminent pas l'origine) :
+cocotte-minute, Instant Pot, slow cooker, air fryer, Thermomix, mijoteuse → tous neutres
+
+━━ CHAMPS ATTENDUS ━━
+- "nom" : string — titre naturel en français, minuscules sauf noms propres
+- "nom_original" : string — titre original en anglais (si connu, sinon null)
+- "origine" : string — en français, ex: "Chine", "Corée", "Japon", "Thaïlande", "Vietnam", "Inde", "Liban", "Maroc", "Moyen-Orient", "Grèce", "Italie", "France", "Espagne", "Mexique", "États-Unis", "Méditerranéen", "Pérou"
 - "regime_alimentaire" : "omnivore" | "végétarien" | "végane"
-- "temps_preparation" : number — minutes totales réelles (prép + cuisson + repos si significatif), ou null
-- "cout" : number 1–6 — coût par portion : 1=moins de 4$, 2=4-7$, 3=7-12$, 4=12-18$, 5=18-25$, 6=plus de 25$
+- "temps_preparation" : number — minutes totales (prép + cuisson + repos si > 10 min), ou null
+- "cout" : number 1–6 — coût par portion : 1=<4$, 2=4-7$, 3=7-12$, 4=12-18$, 5=18-25$, 6=>25$
 - "ingredients" : string — 5 à 8 ingrédients caractéristiques en français, séparés par des virgules
 - "themes" : array — clés exactes parmi :
     "theme_pasta_rapido"     → pâtes, nouilles, gnocchi
@@ -203,6 +216,7 @@ async function enrichirDepuisUrl(url, apiKey, setForm, setStatut, promptTemplate
       return {
         ...f,
         nom: ai.nom || f.nom,
+        nom_original: ai.nom_original || f.nom_original,
         origine: ai.origine || f.origine,
         regime_alimentaire: ['omnivore','végétarien','végane'].includes(ai.regime_alimentaire)
           ? ai.regime_alimentaire : f.regime_alimentaire,
@@ -290,14 +304,18 @@ function StatutBadge({ statut }) {
 }
 
 // ── Formulaire recette ────────────────────────────────────────────────────────
-function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey, prompt, onSavePrompt }) {
+function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey, prompt, onSavePrompt, toutesRecettes }) {
   const [form, setForm]         = useState(() => { const { _id, _source, ...r } = recette; return { ...RECETTE_VIDE, ...r }; });
   const [statut, setStatut]     = useState(null);
   const [afficherCle, setAfficherCle] = useState(isNew && !apiKey);
   const [cleTemp, setCleTemp]   = useState(apiKey);
   const [promptTemp, setPromptTemp]   = useState(prompt);
   const [afficherPrompt, setAfficherPrompt] = useState(false);
+  const [doublonUrl, setDoublonUrl]     = useState(null);
+  const [doublonNom, setDoublonNom]     = useState(null);
   const timerRef = useRef(null);
+
+  function norm(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim(); }
 
   function set(key, val) { setForm(f => ({ ...f, [key]: val })); }
 
@@ -306,6 +324,11 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
     set('source', sourceDepuisUrl(url));
     const nom = nomDepuisUrl(url);
     if (nom && !form.nom) set('nom', nom);
+    // Toujours stocker le nom anglais extrait du slug
+    if (nom) set('nom_original', nom);
+    // Détection doublon URL
+    const doublon = toutesRecettes.find(r => r.url && r.url === url && r._id !== recette._id);
+    setDoublonUrl(doublon || null);
   }
 
   function lancer(urlOverride, keyOverride) {
@@ -318,6 +341,17 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
   function handleSubmit(e) {
     e.preventDefault();
     if (!form.nom.trim()) return;
+    // Détection doublon par nom (si pas encore confirmé)
+    if (!doublonNom) {
+      const n = norm(form.nom);
+      const d = toutesRecettes.find(r => {
+        if (r._id === recette._id) return false;
+        return norm(r.nom) === n ||
+               (r.nom_original && norm(r.nom_original) === n) ||
+               (n.length > 7 && (norm(r.nom).includes(n) || n.includes(norm(r.nom))));
+      });
+      if (d) { setDoublonNom(d); return; }
+    }
     onSave(form);
   }
 
@@ -412,6 +446,26 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
 
       {/* Statut enrichissement */}
       <StatutBadge statut={statut} />
+
+      {/* Doublon URL */}
+      {doublonUrl && (
+        <div className="recette-form__doublon">
+          <span>⚠ Cette URL existe déjà :</span>
+          <strong> {doublonUrl.nom}</strong>
+          <button type="button" className="recette-form__doublon-btn" onClick={() => setDoublonUrl(null)}>Ignorer</button>
+        </div>
+      )}
+
+      {/* Confirmation doublon nom */}
+      {doublonNom && (
+        <div className="recette-form__doublon recette-form__doublon--confirm">
+          <p>⚠ Ressemble à une recette existante : <strong>{doublonNom.nom}</strong></p>
+          <div className="recette-form__doublon-actions">
+            <button type="button" className="recette-form__btn recette-form__btn--annuler" onClick={() => setDoublonNom(null)}>Annuler</button>
+            <button type="button" className="recette-form__btn recette-form__btn--sauver" onClick={() => { setDoublonNom(null); onSave(form); }}>Sauvegarder quand même</button>
+          </div>
+        </div>
+      )}
 
       {/* Section : Identification */}
       <section className="recette-form__section">
@@ -713,7 +767,10 @@ export default function RecettesPage({ onRetour }) {
       if (filtreCout > 0 && r.cout > filtreCout) return false;
       if (recherche.trim()) {
         const q = recherche.trim().toLowerCase();
-        if (!r.nom.toLowerCase().includes(q) && !(r.ingredients || '').toLowerCase().includes(q)) return false;
+        const inNom = r.nom.toLowerCase().includes(q);
+        const inOriginal = (r.nom_original || '').toLowerCase().includes(q);
+        const inIng = (r.ingredients || '').toLowerCase().includes(q);
+        if (!inNom && !inOriginal && !inIng) return false;
       }
       return true;
     });
@@ -780,6 +837,7 @@ export default function RecettesPage({ onRetour }) {
           onSaveApiKey={setApiKey}
           prompt={prompt}
           onSavePrompt={setPrompt}
+          toutesRecettes={toutesRecettes}
         />
       </Drawer>
 
