@@ -1334,7 +1334,7 @@
     "eval_luce": 4.4
   },
   {
-    "nom": "Pasta With Green Beans and Almond Gremolata",
+    "nom": "pâtes aux haricots verts et gremolata d'amandes",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1348,10 +1348,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019488-pasta-with-green-beans-and-almond-gremolata",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Green Beans and Almond Gremolata"
   },
   {
-    "nom": "Linguine With Lemon Sauce",
+    "nom": "linguine à la sauce au citron",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1365,10 +1366,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1589-linguine-with-lemon-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Linguine With Lemon Sauce"
   },
   {
-    "nom": "Spaghetti With Fresh Tomato and Basil Sauce",
+    "nom": "spaghetti aux tomates fraîches et sauce au basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1382,10 +1384,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/8663-spaghetti-with-fresh-tomato-and-basil-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spaghetti With Fresh Tomato and Basil Sauce"
   },
   {
-    "nom": "Creamy Corn Pasta With Basil",
+    "nom": "pâtes crémeuses au maïs et basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1399,10 +1402,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1018212-creamy-corn-pasta-with-basil",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Creamy Corn Pasta With Basil"
   },
   {
-    "nom": "Spicy and Saucy Cherry Tomato Pasta",
+    "nom": "pâtes épicées aux tomates cerises en sauce",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1416,10 +1420,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020690-spicy-and-saucy-cherry-tomato-pasta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spicy and Saucy Cherry Tomato Pasta"
   },
   {
-    "nom": "Fettuccine With Zucchini",
+    "nom": "fettuccine aux courgettes",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1433,10 +1438,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1012688-fettuccine-with-zucchini",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Fettuccine With Zucchini"
   },
   {
-    "nom": "Summer Shrimp Scampi With Tomatoes and Corn",
+    "nom": "scampi de crevettes d'été aux tomates et maïs",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1450,10 +1456,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1021184-summer-shrimp-scampi-with-tomatoes-and-corn",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Summer Shrimp Scampi With Tomatoes and Corn"
   },
   {
-    "nom": "Coconut Black Bean Soup",
+    "nom": "soupe de haricots noirs à la noix de coco",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1467,10 +1474,11 @@
     "origine": "Amérique centrale",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1025039-coconut-black-bean-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Coconut Black Bean Soup"
   },
   {
-    "nom": "Lemon-Garlic Linguine",
+    "nom": "linguine au citron et à l'ail",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1484,10 +1492,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1025371-lemon-garlic-linguine",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lemon-Garlic Linguine"
   },
   {
-    "nom": "Cauliflower, Cashew, Pea and Coconut Curry",
+    "nom": "curry de chou-fleur, noix de cajou, petits pois et noix de coco",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1501,10 +1510,11 @@
     "origine": "Inde",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1019911-cauliflower-cashew-pea-and-coconut-curry",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cauliflower, Cashew, Pea and Coconut Curry"
   },
   {
-    "nom": "Citrusy Couscous Salad With Broccoli and Feta",
+    "nom": "salade de couscous citronnée au brocoli et feta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1518,10 +1528,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1023515-citrusy-couscous-salad-with-broccoli-and-feta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Citrusy Couscous Salad With Broccoli and Feta"
   },
   {
-    "nom": "Rosemary White Beans With Frizzled Onions and Tomato",
+    "nom": "haricots blancs au romarin avec oignons frits et tomate",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1535,10 +1546,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1023775-rosemary-white-beans-with-frizzled-onions-and-tomato",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Rosemary White Beans With Frizzled Onions and Tomato"
   },
   {
-    "nom": "Spicy Turkey Stir-Fry With Crisp Garlic and Ginger",
+    "nom": "sauté épicé de dinde au gingembre et ail croustillant",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1552,10 +1564,11 @@
     "origine": "Asie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020222-spicy-turkey-stir-fry-with-crisp-garlic-and-ginger",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spicy Turkey Stir-Fry With Crisp Garlic and Ginger"
   },
   {
-    "nom": "Chopped Salad With Chickpeas, Feta and Avocado",
+    "nom": "salade hachée aux pois chiches, feta et avocat",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1569,10 +1582,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021454-chopped-salad-with-chickpeas-feta-and-avocado",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chopped Salad With Chickpeas, Feta and Avocado"
   },
   {
-    "nom": "Grilled Za'atar Chicken With Garlic Yogurt and Cilantro",
+    "nom": "poulet grillé au za'atar avec yaourt à l'ail et coriandre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1586,10 +1600,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022300-grilled-zaatar-chicken-with-garlic-yogurt-and-cilantro",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Grilled Za'atar Chicken With Garlic Yogurt and Cilantro"
   },
   {
-    "nom": "Black Cod Broiled With Miso",
+    "nom": "morue noire grillée au miso",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1603,10 +1618,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/6450-black-cod-broiled-with-miso",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Black Cod Broiled With Miso"
   },
   {
-    "nom": "Lemony Greek Chicken, Spinach and Potato Stew",
+    "nom": "ragoût grec de poulet, épinards et pommes de terre au citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1620,10 +1636,11 @@
     "origine": "Grèce",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1024015-lemony-greek-chicken-spinach-and-potato-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lemony Greek Chicken, Spinach and Potato Stew"
   },
   {
-    "nom": "Roasted Salmon With Peas and Radishes",
+    "nom": "saumon rôti aux petits pois et radis",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1637,10 +1654,11 @@
     "origine": "Scandinavie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020992-roasted-salmon-with-peas-and-radishes",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Salmon With Peas and Radishes"
   },
   {
-    "nom": "Brown-Butter Salmon With Lemon and Harissa",
+    "nom": "saumon au beurre noisette, citron et harissa",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1654,10 +1672,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019813-brown-butter-salmon-with-lemon-and-harissa",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Brown-Butter Salmon With Lemon and Harissa"
   },
   {
-    "nom": "Maple and Miso Sheet-Pan Salmon With Green Beans",
+    "nom": "saumon à la plaque avec miso et sirop d'érable et haricots verts",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1668,13 +1687,14 @@
     "cout": 10,
     "temps_preparation": 30,
     "ingredients": "saumon, haricots verts, miso, sirop d'érable, gingembre, ail",
-    "origine": "Asie",
+    "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019857-maple-and-miso-sheet-pan-salmon-with-green-beans",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Maple and Miso Sheet-Pan Salmon With Green Beans"
   },
   {
-    "nom": "Salmon Roasted in Butter",
+    "nom": "saumon rôti au beurre",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1688,10 +1708,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/5703-salmon-roasted-in-butter",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Salmon Roasted in Butter"
   },
   {
-    "nom": "Sheet-Pan Roasted Fish With Sweet Peppers",
+    "nom": "poisson rôti à la plaque avec poivrons doux",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -1705,10 +1726,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017725-sheet-pan-roasted-fish-with-sweet-peppers",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Roasted Fish With Sweet Peppers"
   },
   {
-    "nom": "Tomato Sandwiches",
+    "nom": "sandwichs à la tomate",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1722,10 +1744,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017666-tomato-sandwiches",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tomato Sandwiches"
   },
   {
-    "nom": "Cherry Tomato and White Bean Salad",
+    "nom": "salade de tomates cerises et haricots blancs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1739,10 +1762,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1016692-greek-tomato-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cherry Tomato and White Bean Salad"
   },
   {
-    "nom": "Broccoli Salad With Garlic and Sesame",
+    "nom": "salade de brocoli à l'ail et sésame",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1756,10 +1780,11 @@
     "origine": "Asie",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1016146-broccoli-salad-with-garlic-and-sesame",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Broccoli Salad With Garlic and Sesame"
   },
   {
-    "nom": "Greek Tomato Salad",
+    "nom": "salade grecque de tomates",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1773,10 +1798,11 @@
     "origine": "Grèce",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020387-cherry-tomato-and-white-bean-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Greek Tomato Salad"
   },
   {
-    "nom": "Greek Salad",
+    "nom": "salade grecque",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1790,10 +1816,11 @@
     "origine": "Grèce",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021079-greek-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Greek Salad"
   },
   {
-    "nom": "The Best Roast Beef for Sandwiches",
+    "nom": "le meilleur rôti de boeuf pour sandwichs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1807,10 +1834,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017348-the-best-roast-beef-for-sandwiches",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "The Best Roast Beef for Sandwiches"
   },
   {
-    "nom": "Cast-Iron Steak",
+    "nom": "steak à la poêle en fonte",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1824,10 +1852,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016334-cast-iron-steak",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cast-Iron Steak"
   },
   {
-    "nom": "Sheet-Pan Chicken With Potatoes, Arugula and Garlic Yogurt",
+    "nom": "poulet à la plaque avec pommes de terre, roquette et yaourt à l'ail",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1841,10 +1870,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017359-sheet-pan-chicken-with-potatoes-arugula-and-garlic-yogurt",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Chicken With Potatoes, Arugula and Garlic Yogurt"
   },
   {
-    "nom": "Vegetarian Skillet Chili",
+    "nom": "chili végétarien à la poêle",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1858,10 +1888,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017704-vegetarian-skillet-chili",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Vegetarian Skillet Chili"
   },
   {
-    "nom": "Charlie Bird's Farro Salad",
+    "nom": "salade de farro à la Charlie Bird",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -1875,10 +1906,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1015843-charlie-birds-farro-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Charlie Bird's Farro Salad"
   },
   {
-    "nom": "Sheet-Pan Baked Feta With Broccolini, Tomatoes and Lemon",
+    "nom": "feta au four à la plaque avec broccolini, tomates et citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1892,10 +1924,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021277-sheet-pan-baked-feta-with-broccolini-tomatoes-and-lemon",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Baked Feta With Broccolini, Tomatoes and Lemon"
   },
   {
-    "nom": "Tofu Makhani (Indian Butter Tofu)",
+    "nom": "tofu makhani (beurre de tofu indien)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1909,7 +1942,8 @@
     "origine": "Inde",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020094-tofu-makhani-indian-butter-tofu",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tofu Makhani (Indian Butter Tofu)"
   },
   {
     "nom": "Ricotta Pasta Alla Vodka",
@@ -1929,7 +1963,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Masoor Dal (Spiced Red Lentils)",
+    "nom": "masoor dal (lentilles rouges épicées)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1943,10 +1977,11 @@
     "origine": "Inde",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/7517-masoor-dal-spiced-red-lentils",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Masoor Dal (Spiced Red Lentils)"
   },
   {
-    "nom": "Sheet-Pan Chicken Thighs With Spicy Corn",
+    "nom": "cuisses de poulet à la plaque avec maïs épicé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1960,10 +1995,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1024458-sheet-pan-chicken-thighs-with-spicy-corn",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Chicken Thighs With Spicy Corn"
   },
   {
-    "nom": "Sesame Chicken With Cashews and Dates",
+    "nom": "poulet au sésame avec noix de cajou et dattes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1977,10 +2013,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019218-sesame-chicken-with-cashews-and-dates",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sesame Chicken With Cashews and Dates"
   },
   {
-    "nom": "Crisp Gnocchi With Brussels Sprouts and Brown Butter",
+    "nom": "gnocchi croustillants aux choux de Bruxelles et beurre noisette",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -1994,10 +2031,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020453-crisp-gnocchi-with-brussels-sprouts-and-brown-butter",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Crisp Gnocchi With Brussels Sprouts and Brown Butter"
   },
   {
-    "nom": "Turkey Chili",
+    "nom": "chili à la dinde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2011,10 +2049,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/7985-turkey-chili",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Turkey Chili"
   },
   {
-    "nom": "Roasted Tomato and White Bean Stew",
+    "nom": "ragoût de tomates rôties et haricots blancs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2028,10 +2067,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1020926-roasted-tomato-and-white-bean-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Tomato and White Bean Stew"
   },
   {
-    "nom": "Roasted Butternut Squash With Lentils and Feta",
+    "nom": "courge butternut rôtie aux lentilles et feta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2045,10 +2085,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021467-roasted-butternut-squash-with-lentils-and-feta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Butternut Squash With Lentils and Feta"
   },
   {
-    "nom": "Coconut Curry Chickpeas With Pumpkin and Lime",
+    "nom": "pois chiches au curry de noix de coco avec courge et lime",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2062,10 +2103,11 @@
     "origine": "Inde",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1020463-coconut-curry-chickpeas-with-pumpkin-and-lime",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Coconut Curry Chickpeas With Pumpkin and Lime"
   },
   {
-    "nom": "Brown-Butter Orzo With Butternut Squash",
+    "nom": "orzo au beurre noisette avec courge butternut",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2079,10 +2121,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1022791-brown-butter-orzo-with-butternut-squash",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Brown-Butter Orzo With Butternut Squash"
   },
   {
-    "nom": "Roasted Honey Nut Squash and Chickpeas With Hot Honey",
+    "nom": "courge et pois chiches rôtis au miel piquant",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2096,10 +2139,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1023687-roasted-honey-nut-squash-and-chickpeas-with-hot-honey",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Honey Nut Squash and Chickpeas With Hot Honey"
   },
   {
-    "nom": "Brown Butter Lentil and Sweet Potato Salad",
+    "nom": "salade de lentilles et patate douce au beurre noisette",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2113,10 +2157,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021511-brown-butter-lentil-and-sweet-potato-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Brown Butter Lentil and Sweet Potato Salad"
   },
   {
-    "nom": "Rishia Zimmern's Chicken With Shallots",
+    "nom": "poulet aux échalotes de Rishia Zimmern",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2130,10 +2175,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016135-rishia-zimmerns-chicken-with-shallots",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Rishia Zimmern's Chicken With Shallots"
   },
   {
-    "nom": "Peruvian Roasted Chicken With Spicy Cilantro Sauce",
+    "nom": "poulet rôti péruvien avec sauce épicée à la coriandre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2147,10 +2193,11 @@
     "origine": "Pérou",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018974-peruvian-roasted-chicken-with-spicy-cilantro-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Peruvian Roasted Chicken With Spicy Cilantro Sauce"
   },
   {
-    "nom": "Moroccan-Spiced Chicken Meatballs",
+    "nom": "boulettes de poulet aux épices marocaines",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2164,10 +2211,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022719-moroccan-spiced-chicken-meatballs",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Moroccan-Spiced Chicken Meatballs"
   },
   {
-    "nom": "Pasta With Sausage, Squash and Sage Brown Butter",
+    "nom": "pâtes aux saucisses, courge et beurre noisette à la sauge",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2181,10 +2229,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019554-pasta-with-sausage-squash-and-sage-brown-butter",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Sausage, Squash and Sage Brown Butter"
   },
   {
-    "nom": "One-Pan Orzo With Spinach and Feta",
+    "nom": "orzo en une casserole avec épinards et feta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2198,10 +2247,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021485-one-pan-orzo-with-spinach-and-feta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "One-Pan Orzo With Spinach and Feta"
   },
   {
-    "nom": "Spiced Chickpea Stew With Coconut and Turmeric",
+    "nom": "ragoût de pois chiches épicés à la noix de coco et curcuma",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2215,10 +2265,11 @@
     "origine": "Inde",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1019772-spiced-chickpea-stew-with-coconut-and-turmeric",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spiced Chickpea Stew With Coconut and Turmeric"
   },
   {
-    "nom": "Chicken and Dumplings",
+    "nom": "poulet aux boulettes de pâte",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2232,10 +2283,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019108-chicken-and-dumplings",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken and Dumplings"
   },
   {
-    "nom": "Skillet Chicken With Tomatoes, Pancetta and Mozzarella",
+    "nom": "poulet à la poêle avec tomates, pancetta et mozzarella",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2249,10 +2301,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017910-skillet-chicken-with-tomatoes-pancetta-and-mozzarella",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Skillet Chicken With Tomatoes, Pancetta and Mozzarella"
   },
   {
-    "nom": "Farro With Mushrooms",
+    "nom": "farro aux champignons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2266,10 +2319,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1013008-farro-with-mushrooms",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Farro With Mushrooms"
   },
   {
-    "nom": "Sheet-Pan Gochujang Chicken and Roasted Vegetables",
+    "nom": "poulet gochujang à la plaque avec légumes rôtis",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2283,10 +2337,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020829-sheet-pan-gochujang-chicken-and-roasted-vegetables",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Gochujang Chicken and Roasted Vegetables"
   },
   {
-    "nom": "Skillet Chicken With Mushrooms and Caramelized Onions",
+    "nom": "poulet à la poêle avec champignons et oignons caramélisés",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2300,10 +2355,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022068-skillet-chicken-with-mushrooms-and-caramelized-onions",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Skillet Chicken With Mushrooms and Caramelized Onions"
   },
   {
-    "nom": "Crispy Gnocchi With Tomato and Red Onion",
+    "nom": "gnocchi croustillants aux tomates et oignon rouge",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2317,10 +2373,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1023260-crispy-gnocchi-with-tomato-and-red-onion",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Crispy Gnocchi With Tomato and Red Onion"
   },
   {
-    "nom": "Mussakhan (Roast Chicken With Sumac and Red Onions)",
+    "nom": "mussakhan (poulet rôti au sumac et oignons rouges)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2334,10 +2391,11 @@
     "origine": "Liban",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019936-mussakhan-roast-chicken-with-sumac-and-red-onions",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Mussakhan (Roast Chicken With Sumac and Red Onions)"
   },
   {
-    "nom": "Oven-Roasted Chicken Shawarma",
+    "nom": "shawarma de poulet rôti au four",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2351,7 +2409,8 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017161-oven-roasted-chicken-shawarma",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Oven-Roasted Chicken Shawarma"
   },
   {
     "nom": "Pasta Puttanesca",
@@ -2388,7 +2447,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Chicken Tortilla Soup",
+    "nom": "soupe de poulet aux tortillas",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2402,10 +2461,11 @@
     "origine": "Mexique",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013866-chicken-tortilla-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Tortilla Soup"
   },
   {
-    "nom": "Farro and Bean Soup",
+    "nom": "soupe de farro et haricots",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2419,10 +2479,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017896-farro-and-bean-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Farro and Bean Soup"
   },
   {
-    "nom": "Winter Tomato Soup With Bulgur",
+    "nom": "soupe hivernale de tomates au boulgour",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2436,10 +2497,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1014581-winter-tomato-soup-with-bulgur",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Winter Tomato Soup With Bulgur"
   },
   {
-    "nom": "Gochujang Potato Stew",
+    "nom": "ragoût de pommes de terre au gochujang",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2453,10 +2515,11 @@
     "origine": "Corée",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1024082-gochujang-potato-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Gochujang Potato Stew"
   },
   {
-    "nom": "Tuna Mayo Rice Bowl",
+    "nom": "bol de riz au thon et mayo",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -2470,10 +2533,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1023224-tuna-mayo-rice-bowl",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tuna Mayo Rice Bowl"
   },
   {
-    "nom": "Italian-Style Tuna Sandwich",
+    "nom": "sandwich au thon à l'italienne",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -2487,10 +2551,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017347-italian-style-tuna-sandwich",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Italian-Style Tuna Sandwich"
   },
   {
-    "nom": "Crisp Chicken Schnitzel With Lemony Herb Salad",
+    "nom": "schnitzel de poulet croustillant avec salade d'herbes citronnée",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2504,10 +2569,11 @@
     "origine": "Autriche",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1012564-crisp-chicken-schnitzel-with-lemony-herb-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Crisp Chicken Schnitzel With Lemony Herb Salad"
   },
   {
-    "nom": "Lemon and Garlic Chicken With Cherry Tomatoes",
+    "nom": "poulet au citron et à l'ail avec tomates cerises",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2521,10 +2587,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016151-lemon-and-garlic-chicken-with-cherry-tomatoes",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lemon and Garlic Chicken With Cherry Tomatoes"
   },
   {
-    "nom": "Grilled Sesame Lime Chicken Breasts",
+    "nom": "poitrines de poulet grillées au sésame et lime",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2535,13 +2602,14 @@
     "cout": 6,
     "temps_preparation": 25,
     "ingredients": "poulet, sésame, lime, ail, sauce soja, gingembre",
-    "origine": "Asie du Sud-Est",
+    "origine": "Asie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017482-grilled-sesame-lime-chicken-breasts",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Grilled Sesame Lime Chicken Breasts"
   },
   {
-    "nom": "Gyeran Bap (Egg Rice)",
+    "nom": "gyeran bap (riz à l'oeuf)",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2555,10 +2623,11 @@
     "origine": "Corée",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1022530-gyeran-bap-egg-rice",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Gyeran Bap (Egg Rice)"
   },
   {
-    "nom": "Pasta With Burst Cherry Tomatoes",
+    "nom": "pâtes aux tomates cerises éclatées",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2572,10 +2641,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1016634-pasta-with-burst-cherry-tomatoes",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Burst Cherry Tomatoes"
   },
   {
-    "nom": "Crispy Gnocchi With Burst Tomatoes and Mozzarella",
+    "nom": "gnocchi croustillants aux tomates éclatées et mozzarella",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2589,10 +2659,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1022024-crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Crispy Gnocchi With Burst Tomatoes and Mozzarella"
   },
   {
-    "nom": "Caramelized Shallot Pasta",
+    "nom": "pâtes aux échalotes caramélisées",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2606,10 +2677,11 @@
     "origine": "France",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020830-caramelized-shallot-pasta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Caramelized Shallot Pasta"
   },
   {
-    "nom": "Crisp Gnocchi With Sausage and Peas",
+    "nom": "gnocchi croustillants aux saucisses et petits pois",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2623,10 +2695,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1024164-crisp-gnocchi-with-sausage-and-peas",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Crisp Gnocchi With Sausage and Peas"
   },
   {
-    "nom": "Gochujang Buttered Noodles",
+    "nom": "nouilles au beurre gochujang",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2640,10 +2713,11 @@
     "origine": "Corée",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1024066-gochujang-buttered-noodles",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Gochujang Buttered Noodles"
   },
   {
-    "nom": "Vegan Caesar Salad With Crisp Chickpeas",
+    "nom": "salade César végane aux pois chiches croustillants",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2657,10 +2731,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1020763-vegan-caesar-salad-with-crisp-chickpeas",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Vegan Caesar Salad With Crisp Chickpeas"
   },
   {
-    "nom": "Tomato-Green Bean Salad With Chickpeas, Feta and Dill",
+    "nom": "salade de tomates et haricots verts aux pois chiches, feta et aneth",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -2674,10 +2749,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1022380-tomato-green-bean-salad-with-chickpeas-feta-and-dill",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tomato-Green Bean Salad With Chickpeas, Feta and Dill"
   },
   {
-    "nom": "French Onion Soup",
+    "nom": "soupe à l'oignon française",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2691,10 +2767,11 @@
     "origine": "France",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017256-french-onion-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "French Onion Soup"
   },
   {
-    "nom": "Red Lentil Soup",
+    "nom": "soupe aux lentilles rouges",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2708,7 +2785,8 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1016062-red-lentil-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Red Lentil Soup"
   },
   {
     "nom": "Beef Bourguignon",
@@ -2728,7 +2806,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Roasted Salmon Glazed With Brown Sugar and Mustard",
+    "nom": "saumon rôti glacé au sucre brun et moutarde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -2742,10 +2820,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017244-roasted-salmon-glazed-with-brown-sugar-and-mustard",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Salmon Glazed With Brown Sugar and Mustard"
   },
   {
-    "nom": "Somen Noodle Soup With Mushrooms",
+    "nom": "soupe de nouilles somen aux champignons",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2759,10 +2838,11 @@
     "origine": "Japon",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020047-somen-noodle-soup-with-mushrooms",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Somen Noodle Soup With Mushrooms"
   },
   {
-    "nom": "Sheet-Pan Ratatouille With Goat Cheese and Olives",
+    "nom": "ratatouille à la plaque avec fromage de chèvre et olives",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2776,10 +2856,11 @@
     "origine": "France",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020424-sheet-pan-ratatouille-with-goat-cheese-and-olives",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Ratatouille With Goat Cheese and Olives"
   },
   {
-    "nom": "Dry-Brined Turkey",
+    "nom": "dinde en saumure sèche",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2793,10 +2874,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1012869-dry-brined-turkey",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Dry-Brined Turkey"
   },
   {
-    "nom": "Chickpea Stew With Orzo and Mustard Greens",
+    "nom": "ragoût de pois chiches à l'orzo et feuilles de moutarde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2810,10 +2892,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1015767-chickpea-stew-with-orzo-and-mustard-greens",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chickpea Stew With Orzo and Mustard Greens"
   },
   {
-    "nom": "Five-Ingredient Creamy Miso Pasta",
+    "nom": "pâtes crémeuses au miso en cinq ingrédients",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2827,7 +2910,8 @@
     "origine": "Japon",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020979-five-ingredient-creamy-miso-pasta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Five-Ingredient Creamy Miso Pasta"
   },
   {
     "nom": "Lasagna",
@@ -2847,7 +2931,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Italian Wedding Soup With Turkey Meatballs",
+    "nom": "soupe italienne au mariage avec boulettes de dinde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2861,10 +2945,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019925-italian-wedding-soup-with-turkey-meatballs",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Italian Wedding Soup With Turkey Meatballs"
   },
   {
-    "nom": "Creamy Spinach-Artichoke Chicken Stew",
+    "nom": "ragoût crémeux de poulet aux épinards et artichauts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2878,10 +2963,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1021794-creamy-spinach-artichoke-chicken-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Creamy Spinach-Artichoke Chicken Stew"
   },
   {
-    "nom": "Old-Fashioned Beef Stew",
+    "nom": "ragoût de boeuf à l'ancienne",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2895,10 +2981,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/4735-old-fashioned-beef-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Old-Fashioned Beef Stew"
   },
   {
-    "nom": "Khoresh-e Ghormeh Sabzi (Persian Herb, Bean and Lamb Stew)",
+    "nom": "khoresh-e ghormeh sabzi (ragoût persan aux herbes, haricots et agneau)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2912,10 +2999,11 @@
     "origine": "Perse/Iran",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020209-khoresh-e-ghormeh-sabzi-persian-herb-bean-and-lamb-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Khoresh-e Ghormeh Sabzi (Persian Herb, Bean and Lamb Stew)"
   },
   {
-    "nom": "Sheet-Pan Sausages and Brussels Sprouts With Honey Mustard",
+    "nom": "saucisses et choux de Bruxelles à la plaque avec moutarde au miel",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2929,10 +3017,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020747-sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Sausages and Brussels Sprouts With Honey Mustard"
   },
   {
-    "nom": "Butternut Squash and Green Curry Soup",
+    "nom": "soupe de courge butternut au curry vert",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2946,10 +3035,11 @@
     "origine": "Thaïlande",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1018491-butternut-squash-and-green-curry-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Butternut Squash and Green Curry Soup"
   },
   {
-    "nom": "Cal Peternell's Braised Chicken Legs",
+    "nom": "cuisses de poulet braisées de Cal Peternell",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2963,10 +3053,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017108-cal-peternells-braised-chicken-legs",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cal Peternell's Braised Chicken Legs"
   },
   {
-    "nom": "Pasta With Parsnips and Bacon",
+    "nom": "pâtes aux panais et lard",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2980,10 +3071,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015979-pasta-with-parsnips-and-bacon",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Parsnips and Bacon"
   },
   {
-    "nom": "Chicken With 40 Cloves of Garlic",
+    "nom": "poulet aux 40 gousses d'ail",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -2997,10 +3089,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/3764-chicken-with-40-cloves-of-garlic",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken With 40 Cloves of Garlic"
   },
   {
-    "nom": "Pork Chops With Apples and Cider",
+    "nom": "côtelettes de porc aux pommes et cidre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3014,10 +3107,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/12817-pork-chops-with-apples-and-cider",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pork Chops With Apples and Cider"
   },
   {
-    "nom": "Cauliflower Shawarma With Spicy Tahini",
+    "nom": "shawarma de chou-fleur au tahini épicé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3031,10 +3125,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1023019-cauliflower-shawarma-with-spicy-tahini",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cauliflower Shawarma With Spicy Tahini"
   },
   {
-    "nom": "One-Pot Zucchini-Basil Pasta",
+    "nom": "pâtes en un pot aux courgettes et basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3048,10 +3143,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020395-one-pot-zucchini-basil-pasta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "One-Pot Zucchini-Basil Pasta"
   },
   {
-    "nom": "Roasted Cauliflower With Sweet Chermoula and Yogurt",
+    "nom": "chou-fleur rôti à la chermoula douce et yaourt",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3065,10 +3161,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1023540-roasted-cauliflower-with-sweet-chermoula-and-yogurt",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Cauliflower With Sweet Chermoula and Yogurt"
   },
   {
-    "nom": "Coconut Fish and Tomato Bake",
+    "nom": "poisson et tomates au four à la noix de coco",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3082,10 +3179,11 @@
     "origine": "Thaïlande",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022129-coconut-fish-and-tomato-bake",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Coconut Fish and Tomato Bake"
   },
   {
-    "nom": "Summer Minestrone With Fresh Basil",
+    "nom": "minestrone d'été au basilic frais",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3099,10 +3197,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1016431-summer-minestrone-with-fresh-basil",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Summer Minestrone With Fresh Basil"
   },
   {
-    "nom": "Greek Fisherman's Stew",
+    "nom": "ragoût du pêcheur grec",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3116,10 +3215,11 @@
     "origine": "Grèce",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017534-greek-fishermans-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Greek Fisherman's Stew"
   },
   {
-    "nom": "Fish Tacos",
+    "nom": "tacos au poisson",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -3133,10 +3233,11 @@
     "origine": "Mexique",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1012445-fish-tacos",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Fish Tacos"
   },
   {
-    "nom": "Summer Pasta With Zucchini, Ricotta and Basil",
+    "nom": "pâtes d'été aux courgettes, ricotta et basilic",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3150,10 +3251,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Summer Pasta With Zucchini, Ricotta and Basil"
   },
   {
-    "nom": "Pork Schnitzel With Quick Pickles",
+    "nom": "schnitzel de porc aux pickles rapides",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3167,10 +3269,11 @@
     "origine": "Autriche",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016866-pork-schnitzel-with-quick-pickles",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pork Schnitzel With Quick Pickles"
   },
   {
-    "nom": "Za'atar Roasted Tofu With Chickpeas, Tomatoes and Lemony Tahini",
+    "nom": "tofu rôti au za'atar avec pois chiches, tomates et tahini citronné",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3184,10 +3287,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1023630-zaatar-roasted-tofu-with-chickpeas-tomatoes-and-lemony-tahini",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Za'atar Roasted Tofu With Chickpeas, Tomatoes and Lemony Tahini"
   },
   {
-    "nom": "Roasted Cauliflower With Tahini-Parsley Sauce",
+    "nom": "chou-fleur rôti à la sauce tahini-persil",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3201,10 +3305,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1012834-roasted-cauliflower-with-tahini-parsley-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Cauliflower With Tahini-Parsley Sauce"
   },
   {
-    "nom": "Yotam Ottolenghi's Chermoula Eggplant With Bulgur and Yogurt",
+    "nom": "aubergine chermoula de Yotam Ottolenghi avec boulgour et yaourt",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3218,10 +3323,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/12957-yotam-ottolenghis-chermoula-eggplant-with-bulgur-and-yogurt",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Yotam Ottolenghi's Chermoula Eggplant With Bulgur and Yogurt"
   },
   {
-    "nom": "Spiced Chickpea Salad With Tahini and Pita Chips",
+    "nom": "salade de pois chiches épicés au tahini et chips de pita",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3235,10 +3341,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1020187-spiced-chickpea-salad-with-tahini-and-pita-chips",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spiced Chickpea Salad With Tahini and Pita Chips"
   },
   {
-    "nom": "Baby Spinach Salad With Dates and Almonds",
+    "nom": "salade de jeunes épinards aux dattes et amandes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3252,10 +3359,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1014942-baby-spinach-salad-with-dates-and-almonds",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Baby Spinach Salad With Dates and Almonds"
   },
   {
-    "nom": "Persian Tamarind Fish",
+    "nom": "poisson persan au tamarin",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3269,10 +3377,11 @@
     "origine": "Perse",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018063-persian-tamarind-fish",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Persian Tamarind Fish"
   },
   {
-    "nom": "Cucumber and Tomato Salad With Cilantro and Mint",
+    "nom": "salade de concombre et tomates à la coriandre et menthe",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3286,10 +3395,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1014916-cucumber-and-tomato-salad-with-cilantro-and-mint",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cucumber and Tomato Salad With Cilantro and Mint"
   },
   {
-    "nom": "Yotam Ottolenghi's Tomato and Pomegranate Salad",
+    "nom": "salade de tomates et grenade de Yotam Ottolenghi",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3303,10 +3413,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1018121-yotam-ottolenghis-tomato-and-pomegranate-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Yotam Ottolenghi's Tomato and Pomegranate Salad"
   },
   {
-    "nom": "Cold Noodles With Tomatoes",
+    "nom": "nouilles froides aux tomates",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3320,10 +3431,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1022543-cold-noodles-with-tomatoes",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cold Noodles With Tomatoes"
   },
   {
-    "nom": "Instant Pot Chicken Juk With Scallion Sauce",
+    "nom": "juk de poulet (autocuiseur) avec sauce aux oignons verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3337,10 +3449,11 @@
     "origine": "Chine",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1021778-instant-pot-chicken-juk-with-scallion-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Instant Pot Chicken Juk With Scallion Sauce"
   },
   {
-    "nom": "Bulgogi Sliders With Scallion Salsa",
+    "nom": "sliders bulgogi avec salsa aux oignons verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3354,10 +3467,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014203-bulgogi-sliders-with-scallion-salsa",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Bulgogi Sliders With Scallion Salsa"
   },
   {
-    "nom": "Coconut-Gochujang Glazed Chicken With Broccoli",
+    "nom": "poulet glacé au gochujang et noix de coco avec brocoli",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3371,10 +3485,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020308-coconut-gochujang-glazed-chicken-with-broccoli",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Coconut-Gochujang Glazed Chicken With Broccoli"
   },
   {
-    "nom": "Kimchi Fried Rice",
+    "nom": "riz frit au kimchi",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3388,10 +3503,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018097-kimchi-fried-rice",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Kimchi Fried Rice"
   },
   {
-    "nom": "Cold Spicy Kimchi Noodles",
+    "nom": "nouilles froides épicées au kimchi",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3405,10 +3521,11 @@
     "origine": "Corée",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1018199-cold-spicy-kimchi-noodles",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cold Spicy Kimchi Noodles"
   },
   {
-    "nom": "Maangchi's Cheese Buldak (Fire Chicken)",
+    "nom": "buldak fromage de Maangchi (poulet de feu)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3422,10 +3539,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020366-maangchis-cheese-buldak-fire-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Maangchi's Cheese Buldak (Fire Chicken)"
   },
   {
-    "nom": "Korean Fried Chicken",
+    "nom": "poulet frit coréen",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3439,10 +3557,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1012801-korean-fried-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Korean Fried Chicken"
   },
   {
-    "nom": "Gochugaru Salmon With Crispy Rice",
+    "nom": "saumon au gochugaru avec riz croustillant",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3456,10 +3575,11 @@
     "origine": "Corée",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022132-gochugaru-salmon-with-crispy-rice",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Gochugaru Salmon With Crispy Rice"
   },
   {
-    "nom": "Tuscan Farro Soup",
+    "nom": "soupe de farro toscane",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3473,10 +3593,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1845-tuscan-farro-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tuscan Farro Soup"
   },
   {
-    "nom": "Spinach Risotto With Taleggio",
+    "nom": "risotto aux épinards et taleggio",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3490,10 +3611,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019267-spinach-risotto-with-taleggio",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spinach Risotto With Taleggio"
   },
   {
-    "nom": "The Big Lasagna",
+    "nom": "la grande lasagne",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3507,10 +3629,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1021031-the-big-lasagna",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "The Big Lasagna"
   },
   {
-    "nom": "Ricotta Cheese Gnocchi",
+    "nom": "gnocchi à la ricotta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3524,10 +3647,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1013318-ricotta-cheese-gnocchi",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Ricotta Cheese Gnocchi"
   },
   {
-    "nom": "Lasagna With Spicy Roasted Cauliflower",
+    "nom": "lasagne au chou-fleur rôti épicé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3541,10 +3665,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/12477-lasagna-with-spicy-roasted-cauliflower",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lasagna With Spicy Roasted Cauliflower"
   },
   {
-    "nom": "Orecchiette With Tomato Sauce and Kale",
+    "nom": "orecchiette à la sauce tomate et chou kale",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3558,10 +3683,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/12279-orecchiette-with-tomato-sauce-and-kale",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Orecchiette With Tomato Sauce and Kale"
   },
   {
-    "nom": "Pasta With Caramelized Cabbage, Anchovies and Bread Crumbs",
+    "nom": "pâtes au chou caramélisé, anchois et chapelure",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3575,10 +3701,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/12373-pasta-with-caramelized-cabbage-anchovies-and-bread-crumbs",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Caramelized Cabbage, Anchovies and Bread Crumbs"
   },
   {
-    "nom": "Lentil Tomato Soup",
+    "nom": "soupe aux lentilles et tomates",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3592,10 +3719,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1012956-lentil-tomato-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lentil Tomato Soup"
   },
   {
-    "nom": "Mark Bittman's Pasta With Clams",
+    "nom": "pâtes aux palourdes de Mark Bittman",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3609,10 +3737,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014678-mark-bittmans-pasta-with-clams",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Mark Bittman's Pasta With Clams"
   },
   {
-    "nom": "Lasagna With Spinach and Roasted Zucchini",
+    "nom": "lasagne aux épinards et courgettes rôties",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3626,10 +3755,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/12474-lasagna-with-spinach-and-roasted-zucchini",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lasagna With Spinach and Roasted Zucchini"
   },
   {
-    "nom": "Marcella Hazan's Roast Chicken With Lemons",
+    "nom": "poulet rôti aux citrons de Marcella Hazan",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3643,10 +3773,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015182-marcella-hazans-roast-chicken-with-lemons",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Marcella Hazan's Roast Chicken With Lemons"
   },
   {
-    "nom": "Quick Minestrone",
+    "nom": "minestrone rapide",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3660,7 +3791,8 @@
     "origine": "Italie",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1018940-quick-minestrone",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Quick Minestrone"
   },
   {
     "nom": "Chicken Cacciatore",
@@ -3680,7 +3812,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Rao's Meatballs With Marinara Sauce",
+    "nom": "boulettes de viande de Rao avec sauce marinara",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3694,7 +3826,8 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015971-raos-meatballs-with-marinara-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Rao's Meatballs With Marinara Sauce"
   },
   {
     "nom": "Marcella Hazan's Bolognese Sauce",
@@ -3714,7 +3847,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Cheesy Baked Pasta With Sausage and Ricotta",
+    "nom": "pâtes gratinées aux saucisses et ricotta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3728,10 +3861,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020811-cheesy-baked-pasta-with-sausage-and-ricotta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cheesy Baked Pasta With Sausage and Ricotta"
   },
   {
-    "nom": "Pasta With White Sausage Sauce",
+    "nom": "pâtes à la sauce saucisse blanche",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3745,10 +3879,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/5443-pasta-with-white-sausage-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With White Sausage Sauce"
   },
   {
-    "nom": "Spaghetti With Garlicky Bread Crumbs and Anchovies",
+    "nom": "spaghetti à la chapelure aillée et anchois",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3762,10 +3897,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016264-spaghetti-with-garlicky-bread-crumbs-and-anchovies",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spaghetti With Garlicky Bread Crumbs and Anchovies"
   },
   {
-    "nom": "Lemony Pasta With Chickpeas and Parsley",
+    "nom": "pâtes citronnées aux pois chiches et persil",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3779,7 +3915,8 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1018591-lemony-pasta-with-chickpeas-and-parsley",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lemony Pasta With Chickpeas and Parsley"
   },
   {
     "nom": "Porchetta Pork Chops",
@@ -3799,7 +3936,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Fastest Pasta With Spinach Sauce",
+    "nom": "pâtes ultra-rapides à la sauce aux épinards",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3813,7 +3950,8 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/7759-fastest-pasta-with-spinach-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Fastest Pasta With Spinach Sauce"
   },
   {
     "nom": "Classic Shrimp Scampi",
@@ -3833,7 +3971,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Shrimp Scampi With Orzo",
+    "nom": "scampi de crevettes à l'orzo",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3847,10 +3985,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020330-shrimp-scampi-with-orzo",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Shrimp Scampi With Orzo"
   },
   {
-    "nom": "Spaghetti With Fried Eggs",
+    "nom": "spaghetti aux oeufs frits",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3864,10 +4003,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/8357-spaghetti-with-fried-eggs",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spaghetti With Fried Eggs"
   },
   {
-    "nom": "Braised White Beans and Greens With Parmesan",
+    "nom": "haricots blancs braisés aux légumes verts et parmesan",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3881,10 +4021,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1021902-braised-white-beans-and-greens-with-parmesan",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Braised White Beans and Greens With Parmesan"
   },
   {
-    "nom": "Chicken Marsala and Mushrooms",
+    "nom": "poulet marsala aux champignons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -3898,10 +4039,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/7344-chicken-marsala-and-mushrooms",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Marsala and Mushrooms"
   },
   {
-    "nom": "Canlis Salad",
+    "nom": "salade Canlis",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3915,10 +4057,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014572-canlis-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Canlis Salad"
   },
   {
-    "nom": "Seared Halibut With Anchovies, Capers And Garlic",
+    "nom": "flétan poêlé aux anchois, câpres et ail",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -3932,10 +4075,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/10603-seared-halibut-with-anchovies-capers-and-garlic",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Seared Halibut With Anchovies, Capers And Garlic"
   },
   {
-    "nom": "Baked Eggs With Beans and Greens",
+    "nom": "oeufs au four aux haricots et légumes verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -3949,7 +4093,8 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019704-baked-eggs-with-beans-and-greens",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Baked Eggs With Beans and Greens"
   },
   {
     "nom": "Pasta Alla Vodka",
@@ -3986,7 +4131,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Pasta With Spicy Sausage, Broccoli Rabe and Chickpeas",
+    "nom": "pâtes à la saucisse épicée, brocoli rabe et pois chiches",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4000,10 +4145,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020968-pasta-with-spicy-sausage-broccoli-rabe-and-chickpeas",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Spicy Sausage, Broccoli Rabe and Chickpeas"
   },
   {
-    "nom": "Spaghetti With Clams",
+    "nom": "spaghetti aux palourdes",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4017,10 +4163,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/11952-spaghetti-with-clams",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spaghetti With Clams"
   },
   {
-    "nom": "Tuscan Kale Salad",
+    "nom": "salade toscane de chou kale",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4034,10 +4181,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/11746-tuscan-kale-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tuscan Kale Salad"
   },
   {
-    "nom": "More-Vegetable-Than-Egg Frittata",
+    "nom": "frittata aux légumes (plus de légumes que d'oeufs)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4051,10 +4199,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1012629-more-vegetable-than-egg-frittata",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "More-Vegetable-Than-Egg Frittata"
   },
   {
-    "nom": "Green and White Pizza",
+    "nom": "pizza verte et blanche",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4068,10 +4217,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1016233-green-and-white-pizza",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Green and White Pizza"
   },
   {
-    "nom": "Burrata With Fava Beans, Fennel and Celery",
+    "nom": "burrata aux fèves, fenouil et céleri",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4085,10 +4235,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1018767-burrata-with-fava-beans-fennel-and-celery",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Burrata With Fava Beans, Fennel and Celery"
   },
   {
-    "nom": "Pasta With Fresh Tomato Sauce and Ricotta",
+    "nom": "pâtes à la sauce de tomates fraîches et ricotta",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4102,7 +4253,8 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017651-pasta-with-fresh-tomato-sauce-and-ricotta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Fresh Tomato Sauce and Ricotta"
   },
   {
     "nom": "Chicken Saltimbocca",
@@ -4122,7 +4274,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Tomato Risotto",
+    "nom": "risotto aux tomates",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4136,10 +4288,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020378-tomato-risotto",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tomato Risotto"
   },
   {
-    "nom": "Eggs in Purgatory",
+    "nom": "oeufs en purgatoire",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4153,7 +4306,8 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019109-eggs-in-purgatory",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Eggs in Purgatory"
   },
   {
     "nom": "Spaghetti Carbonara",
@@ -4190,7 +4344,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Sausage With Peppers and Onions",
+    "nom": "saucisses aux poivrons et oignons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4204,10 +4358,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018931-sausage-with-peppers-and-onions",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sausage With Peppers and Onions"
   },
   {
-    "nom": "Noodle Bowl With Mushrooms, Spinach and Salmon",
+    "nom": "bol de nouilles aux champignons, épinards et saumon",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -4221,10 +4376,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014778-noodle-bowl-with-mushrooms-spinach-and-salmon",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Noodle Bowl With Mushrooms, Spinach and Salmon"
   },
   {
-    "nom": "Miso Chicken",
+    "nom": "poulet au miso",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4238,10 +4394,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017699-miso-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Miso Chicken"
   },
   {
-    "nom": "Cold Soba Noodles With Dipping Sauce",
+    "nom": "nouilles soba froides avec sauce de trempage",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4255,10 +4412,11 @@
     "origine": "Japon",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/10549-cold-soba-noodles-with-dipping-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cold Soba Noodles With Dipping Sauce"
   },
   {
-    "nom": "Pork Katsu With Pickled Cucumbers and Shiso",
+    "nom": "katsu de porc aux concombres marinés et shiso",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4272,10 +4430,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013858-pork-katsu-with-pickled-cucumbers-and-shiso",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pork Katsu With Pickled Cucumbers and Shiso"
   },
   {
-    "nom": "Yakitori (Grilled Chicken Skewers)",
+    "nom": "yakitori (brochettes de poulet grillé)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4289,7 +4448,8 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013201-yakitori-grilled-chicken-skewers",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Yakitori (Grilled Chicken Skewers)"
   },
   {
     "nom": "Chicken Teriyaki",
@@ -4309,7 +4469,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Sweet and Spicy Tofu With Soba Noodles",
+    "nom": "tofu sucré-épicé aux nouilles soba",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4323,10 +4483,11 @@
     "origine": "Japon",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1019471-sweet-and-spicy-tofu-with-soba-noodles",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sweet and Spicy Tofu With Soba Noodles"
   },
   {
-    "nom": "Spring Chicken Miso Soup",
+    "nom": "soupe miso de poulet printanière",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4340,10 +4501,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017330-spring-chicken-miso-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spring Chicken Miso Soup"
   },
   {
-    "nom": "Mushroom Udon Noodle Bowl",
+    "nom": "bol de nouilles udon aux champignons",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4357,10 +4519,11 @@
     "origine": "Japon",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019223-mushroom-udon-noodle-bowl",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Mushroom Udon Noodle Bowl"
   },
   {
-    "nom": "Japanese Burgers With Wasabi Ketchup",
+    "nom": "burgers japonais au ketchup wasabi",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4374,10 +4537,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014175-japanese-burgers-with-wasabi-ketchup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Japanese Burgers With Wasabi Ketchup"
   },
   {
-    "nom": "Japanese-Style Beef Stew",
+    "nom": "ragoût de boeuf à la japonaise",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4391,10 +4555,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017398-japanese-style-beef-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Japanese-Style Beef Stew"
   },
   {
-    "nom": "Chicken Tagine With Olives and Preserved Lemons",
+    "nom": "tagine de poulet aux olives et citrons confits",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4408,10 +4573,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/6555-chicken-tagine-with-olives-and-preserved-lemons",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Tagine With Olives and Preserved Lemons"
   },
   {
-    "nom": "Chicken and Chickpea Tagine",
+    "nom": "tagine de poulet et pois chiches",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4425,10 +4591,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/7794-chicken-and-chickpea-tagine",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken and Chickpea Tagine"
   },
   {
-    "nom": "Couscous With Mussels and Shrimp",
+    "nom": "couscous aux moules et crevettes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4442,10 +4609,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016592-couscous-with-mussels-and-shrimp",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Couscous With Mussels and Shrimp"
   },
   {
-    "nom": "Texas-Style Chili",
+    "nom": "chili à la texane",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4459,10 +4627,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017160-texas-style-chili",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Texas-Style Chili"
   },
   {
-    "nom": "Karaage (Japanese Fried Chicken)",
+    "nom": "karaage (poulet frit japonais)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4476,10 +4645,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019428-karaage-japanese-fried-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Karaage (Japanese Fried Chicken)"
   },
   {
-    "nom": "Butter Chicken",
+    "nom": "butter chicken (poulet au beurre)",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4493,10 +4663,11 @@
     "origine": "Inde",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016754-butter-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Butter Chicken"
   },
   {
-    "nom": "Thomas Keller's Butternut Squash Soup With Brown Butter",
+    "nom": "soupe de courge butternut au beurre noisette de Thomas Keller",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4510,10 +4681,11 @@
     "origine": "France",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1857-thomas-kellers-butternut-squash-soup-with-brown-butter",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Thomas Keller's Butternut Squash Soup With Brown Butter"
   },
   {
-    "nom": "Oven-Roasted Weekend Beef",
+    "nom": "boeuf rôti au four du week-end",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4527,10 +4699,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013006-oven-roasted-weekend-beef",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Oven-Roasted Weekend Beef"
   },
   {
-    "nom": "Roasted Chicken With Fish-Sauce Butter",
+    "nom": "poulet rôti au beurre de sauce de poisson",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4544,10 +4717,11 @@
     "origine": "Thaïlande",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022086-roasted-chicken-with-fish-sauce-butter",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Chicken With Fish-Sauce Butter"
   },
   {
-    "nom": "Red Beans and Rice",
+    "nom": "haricots rouges au riz",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4561,10 +4735,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1016675-red-beans-and-rice",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Red Beans and Rice"
   },
   {
-    "nom": "Turmeric-Black Pepper Chicken With Asparagus",
+    "nom": "poulet au curcuma et poivre noir avec asperges",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4578,10 +4753,11 @@
     "origine": "Inde",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020970-turmeric-black-pepper-chicken-with-asparagus",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Turmeric-Black Pepper Chicken With Asparagus"
   },
   {
-    "nom": "Fast Pot-Stickers",
+    "nom": "gyoza rapides (raviolis poêlés)",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4595,10 +4771,11 @@
     "origine": "Chine",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/8185-fast-pot-stickers",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Fast Pot-Stickers"
   },
   {
-    "nom": "The Best Clam Chowder",
+    "nom": "la meilleure chaudrée de palourdes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4612,10 +4789,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016717-the-best-clam-chowder",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "The Best Clam Chowder"
   },
   {
-    "nom": "Dijon and Cognac Beef Stew",
+    "nom": "ragoût de boeuf au dijon et cognac",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4629,10 +4807,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017085-dijon-and-cognac-beef-stew",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Dijon and Cognac Beef Stew"
   },
   {
-    "nom": "Rigatoni With White Bolognese",
+    "nom": "rigatoni au bolognese blanc",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4646,10 +4825,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/11111-rigatoni-with-white-bolognese",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Rigatoni With White Bolognese"
   },
   {
-    "nom": "Herby Pork Laab With Chile",
+    "nom": "laab de porc aux herbes fraîches et piment",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4663,10 +4843,11 @@
     "origine": "Laos",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019406-herby-pork-laab-with-chile",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Herby Pork Laab With Chile"
   },
   {
-    "nom": "Coconut Pork Stew With Garam Masala",
+    "nom": "ragoût de porc à la noix de coco et garam masala",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4680,7 +4861,8 @@
     "origine": "Inde",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018372-coconut-pork-stew-with-garam-masala",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Coconut Pork Stew With Garam Masala"
   },
   {
     "nom": "Tacos de Carnitas",
@@ -4700,7 +4882,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Roast Pork Butt With Salsa Verde",
+    "nom": "épaule de porc rôtie à la salsa verde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4714,10 +4896,11 @@
     "origine": "Mexique",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013400-roast-pork-butt-with-salsa-verde",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roast Pork Butt With Salsa Verde"
   },
   {
-    "nom": "Pulled Pork Sandwiches",
+    "nom": "sandwichs au porc effiloché",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4731,10 +4914,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014733-pulled-pork-sandwiches",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pulled Pork Sandwiches"
   },
   {
-    "nom": "Sizzling Pork Tacos",
+    "nom": "tacos de porc grésillant",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4748,10 +4932,11 @@
     "origine": "Mexique",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013755-sizzling-pork-tacos",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sizzling Pork Tacos"
   },
   {
-    "nom": "Pressure Cooker Garlicky Cuban Pork",
+    "nom": "porc cubain à l'ail à la cocotte minute",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4765,10 +4950,11 @@
     "origine": "Cuba",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018851-pressure-cooker-garlicky-cuban-pork",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pressure Cooker Garlicky Cuban Pork"
   },
   {
-    "nom": "Chicken Parmesan",
+    "nom": "poulet parmesan",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4782,10 +4968,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017169-chicken-parmesan",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Parmesan"
   },
   {
-    "nom": "Slow Cooker Pork Puttanesca Ragù",
+    "nom": "ragù de porc puttanesca à la mijoteuse",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4799,10 +4986,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019788-slow-cooker-pork-puttanesca-ragu",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Slow Cooker Pork Puttanesca Ragù"
   },
   {
-    "nom": "Turkey Pho",
+    "nom": "pho à la dinde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4816,10 +5004,11 @@
     "origine": "Viêtnam",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018424-turkey-pho",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Turkey Pho"
   },
   {
-    "nom": "Greek Zucchini Fritters",
+    "nom": "galettes grecques de courgettes",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4833,10 +5022,11 @@
     "origine": "Grèce",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1013043-greek-zucchini-fritters",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Greek Zucchini Fritters"
   },
   {
-    "nom": "Spicy White Bean Stew With Broccoli Rabe",
+    "nom": "ragoût épicé de haricots blancs au brocoli rabe",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4850,10 +5040,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1020754-spicy-white-bean-stew-with-broccoli-rabe",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spicy White Bean Stew With Broccoli Rabe"
   },
   {
-    "nom": "Sheet-Pan Chicken and Potatoes With Feta, Lemon and Dill",
+    "nom": "poulet à la plaque avec pommes de terre, feta, citron et aneth",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4867,10 +5058,11 @@
     "origine": "Grèce",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020726-sheet-pan-chicken-and-potatoes-with-feta-lemon-and-dill",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Sheet-Pan Chicken and Potatoes With Feta, Lemon and Dill"
   },
   {
-    "nom": "Roasted Cauliflower With Feta, Almonds and Olives",
+    "nom": "chou-fleur rôti à la feta, amandes et olives",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4884,10 +5076,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019657-roasted-cauliflower-with-feta-almonds-and-olives",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Cauliflower With Feta, Almonds and Olives"
   },
   {
-    "nom": "Pearl Couscous With Creamy Feta and Chickpeas",
+    "nom": "couscous perlé à la feta crémeuse et pois chiches",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4901,10 +5094,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1019916-pearl-couscous-with-creamy-feta-and-chickpeas",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pearl Couscous With Creamy Feta and Chickpeas"
   },
   {
-    "nom": "Creamy Chickpea Pasta With Spinach and Rosemary",
+    "nom": "pâtes crémeuses aux pois chiches, épinards et romarin",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -4918,10 +5112,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1020529-creamy-chickpea-pasta-with-spinach-and-rosemary",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Creamy Chickpea Pasta With Spinach and Rosemary"
   },
   {
-    "nom": "Midnight Pasta With Garlic, Anchovy, Capers and Red Pepper",
+    "nom": "pâtes de minuit à l'ail, anchois, câpres et piment rouge",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4935,10 +5130,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/12168-midnight-pasta-with-garlic-anchovy-capers-and-red-pepper",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Midnight Pasta With Garlic, Anchovy, Capers and Red Pepper"
   },
   {
-    "nom": "Classic Tuna Salad Sandwich",
+    "nom": "sandwich classique à la salade de thon",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 1,
@@ -4952,10 +5148,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017337-classic-tuna-salad-sandwich",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Classic Tuna Salad Sandwich"
   },
   {
-    "nom": "New Year's Black-Eyed Pea Salad",
+    "nom": "salade du Nouvel An aux pois aux yeux noirs",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -4969,10 +5166,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1016521-new-years-black-eyed-pea-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "New Year's Black-Eyed Pea Salad"
   },
   {
-    "nom": "Pasta With Tuna and Olives",
+    "nom": "pâtes au thon et olives",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -4986,10 +5184,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016459-pasta-with-tuna-and-olives",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Tuna and Olives"
   },
   {
-    "nom": "Vegetable Hash With Poached Egg",
+    "nom": "poêlée de légumes avec oeuf poché",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5003,10 +5202,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1014138-vegetable-hash-with-poached-egg",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Vegetable Hash With Poached Egg"
   },
   {
-    "nom": "Spanish Tortilla With Tomato-Pepper Salad",
+    "nom": "tortilla espagnole avec salade tomates-poivrons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5020,10 +5220,11 @@
     "origine": "Espagne",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1015851-spanish-tortilla-with-tomato-pepper-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spanish Tortilla With Tomato-Pepper Salad"
   },
   {
-    "nom": "Blond Puttanesca (Linguine With Tuna, Arugula and Capers)",
+    "nom": "puttanesca blond (linguine au thon, roquette et câpres)",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5037,7 +5238,8 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019399-blond-puttanesca-linguine-with-tuna-arugula-and-capers",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Blond Puttanesca (Linguine With Tuna, Arugula and Capers)"
   },
   {
     "nom": "Sausage Ragù",
@@ -5057,7 +5259,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Roast Chicken With Maple Butter and Rosemary",
+    "nom": "poulet rôti au beurre d'érable et romarin",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5071,10 +5273,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019624-roast-chicken-with-maple-butter-and-rosemary",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roast Chicken With Maple Butter and Rosemary"
   },
   {
-    "nom": "Buttermilk Roast Chicken",
+    "nom": "poulet rôti au babeurre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5088,10 +5291,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/7264-buttermilk-roast-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Buttermilk Roast Chicken"
   },
   {
-    "nom": "Curried Roast Chicken, Durban Style",
+    "nom": "poulet rôti au curry, façon Durban",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5105,10 +5309,11 @@
     "origine": "Afrique du Sud",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/8930-curried-roast-chicken-durban-style",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Curried Roast Chicken, Durban Style"
   },
   {
-    "nom": "Roast Chicken",
+    "nom": "poulet rôti",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5122,10 +5327,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015812-roast-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roast Chicken"
   },
   {
-    "nom": "Feta-Brined Roast Chicken",
+    "nom": "poulet rôti mariné à la feta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5139,10 +5345,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017152-feta-brined-roast-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Feta-Brined Roast Chicken"
   },
   {
-    "nom": "Green Goddess Roasted Chicken",
+    "nom": "poulet rôti à la déesse verte",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5156,10 +5363,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015232-green-goddess-roasted-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Green Goddess Roasted Chicken"
   },
   {
-    "nom": "Creamy Macaroni and Cheese",
+    "nom": "macaroni au fromage crémeux",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5173,10 +5381,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1015825-creamy-macaroni-and-cheese",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Creamy Macaroni and Cheese"
   },
   {
-    "nom": "Lemony White Bean Soup With Turkey and Greens",
+    "nom": "soupe de haricots blancs citronnée à la dinde et légumes verts",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5190,10 +5399,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1021776-lemony-white-bean-soup-with-turkey-and-greens",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lemony White Bean Soup With Turkey and Greens"
   },
   {
-    "nom": "Chicken Breasts With Curry",
+    "nom": "poitrines de poulet au curry",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5207,10 +5417,11 @@
     "origine": "Inde",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/4797-chicken-breasts-with-curry",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Breasts With Curry"
   },
   {
-    "nom": "Freekeh, Chickpea and Herb Salad",
+    "nom": "salade de freekeh, pois chiches et herbes fraîches",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5224,10 +5435,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1017122-freekeh-chickpea-and-herb-salad",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Freekeh, Chickpea and Herb Salad"
   },
   {
-    "nom": "Mushroom Risotto With Peas",
+    "nom": "risotto aux champignons et petits pois",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5241,10 +5453,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017022-mushroom-risotto-with-peas",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Mushroom Risotto With Peas"
   },
   {
-    "nom": "Lemon and Thyme Grilled Chicken Breasts",
+    "nom": "poitrines de poulet grillées au citron et thym",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5258,10 +5471,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017485-lemon-and-thyme-grilled-chicken-breasts",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Lemon and Thyme Grilled Chicken Breasts"
   },
   {
-    "nom": "Spaghetti and Drop Meatballs With Tomato Sauce",
+    "nom": "spaghetti et boulettes de viande à la sauce tomate",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5275,10 +5489,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016833-spaghetti-and-drop-meatballs-with-tomato-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spaghetti and Drop Meatballs With Tomato Sauce"
   },
   {
-    "nom": "Crispy Chickpea Stew With Greens and Lemon",
+    "nom": "ragoût de pois chiches croustillants aux légumes verts et citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5292,10 +5507,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1023467-crispy-chickpea-stew-with-greens-and-lemon",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Crispy Chickpea Stew With Greens and Lemon"
   },
   {
-    "nom": "Ale-Steamed Mussels With Garlic and Mustard",
+    "nom": "moules à la vapeur de bière avec ail et moutarde",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5309,10 +5525,11 @@
     "origine": "Belgique",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1012477-ale-steamed-mussels-with-garlic-and-mustard",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Ale-Steamed Mussels With Garlic and Mustard"
   },
   {
-    "nom": "Broiled Mussels With Garlicky Herb Butter",
+    "nom": "moules grillées au beurre d'herbes aillé",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5326,10 +5543,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015835-broiled-mussels-with-garlicky-herb-butter",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Broiled Mussels With Garlicky Herb Butter"
   },
   {
-    "nom": "Pasta With Mussels in Tomato Sauce",
+    "nom": "pâtes aux moules en sauce tomate",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5343,10 +5561,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017313-pasta-with-mussels-in-tomato-sauce",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Mussels in Tomato Sauce"
   },
   {
-    "nom": "Mussels With Chorizo",
+    "nom": "moules au chorizo",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5360,10 +5579,11 @@
     "origine": "Espagne",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1014508-mussels-with-chorizo",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Mussels With Chorizo"
   },
   {
-    "nom": "Steamed Mussels With Garlic and Parsley",
+    "nom": "moules à la vapeur à l'ail et persil",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5377,10 +5597,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017709-steamed-mussels-with-garlic-and-parsley",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Steamed Mussels With Garlic and Parsley"
   },
   {
-    "nom": "Creamy One-Pot Pasta With Chicken and Mushrooms",
+    "nom": "pâtes crémeuses en une casserole au poulet et champignons",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5394,10 +5615,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1012898-creamy-one-pot-pasta-with-chicken-and-mushrooms",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Creamy One-Pot Pasta With Chicken and Mushrooms"
   },
   {
-    "nom": "Provençal Tomato and Bean Gratin",
+    "nom": "gratin provençal de tomates et haricots",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5411,10 +5633,11 @@
     "origine": "France",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1012947-provencal-tomato-and-bean-gratin",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Provençal Tomato and Bean Gratin"
   },
   {
-    "nom": "Chickpea Vegetable Soup With Parmesan, Rosemary and Lemon",
+    "nom": "soupe de légumes aux pois chiches avec parmesan, romarin et citron",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5428,7 +5651,8 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1013535-chickpea-vegetable-soup-with-parmesan-rosemary-and-lemon",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chickpea Vegetable Soup With Parmesan, Rosemary and Lemon"
   },
   {
     "nom": "Pasta e Fagioli",
@@ -5465,7 +5689,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Pork Stewed With Lentils and Celery",
+    "nom": "porc mijoté aux lentilles et céleri",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5479,10 +5703,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016042-pork-stewed-with-lentils-and-celery",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pork Stewed With Lentils and Celery"
   },
   {
-    "nom": "Spicy Green Garlic Chicken Soup",
+    "nom": "soupe épicée de poulet à l'ail vert",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5496,7 +5721,8 @@
     "origine": "Asie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016326-spicy-green-garlic-chicken-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spicy Green Garlic Chicken Soup"
   },
   {
     "nom": "Pasta Alla Genovese",
@@ -5516,7 +5742,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Slow Cooker Pork Tacos With Hoisin and Ginger",
+    "nom": "tacos de porc à la mijoteuse avec hoisin et gingembre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5527,13 +5753,14 @@
     "cout": 6,
     "temps_preparation": 480,
     "ingredients": "porc, hoisin, gingembre, tortillas, oignons verts",
-    "origine": "Fusion",
+    "origine": "Chine",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017230-slow-cooker-pork-tacos-with-hoisin-and-ginger",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Slow Cooker Pork Tacos With Hoisin and Ginger"
   },
   {
-    "nom": "Chicken Fricassee With Vermouth",
+    "nom": "fricassée de poulet au vermouth",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5547,10 +5774,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/6850-chicken-fricassee-with-vermouth",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Fricassee With Vermouth"
   },
   {
-    "nom": "Spicy Chickpeas With Ginger",
+    "nom": "pois chiches épicés au gingembre",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5564,7 +5792,8 @@
     "origine": "Inde",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1335-spicy-chickpeas-with-ginger",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Spicy Chickpeas With Ginger"
   },
   {
     "nom": "Billi Bi",
@@ -5584,7 +5813,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Craig Claiborne's Smothered Chicken",
+    "nom": "poulet étouffé de Craig Claiborne",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5598,7 +5827,8 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016832-craig-claibornes-smothered-chicken",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Craig Claiborne's Smothered Chicken"
   },
   {
     "nom": "Porchetta Pork Roast",
@@ -5618,7 +5848,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Cumin-Baked Pork Chops",
+    "nom": "côtelettes de porc au cumin et four",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5632,10 +5862,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/10397-cumin-baked-pork-chops",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Cumin-Baked Pork Chops"
   },
   {
-    "nom": "Pan-Fried Trout With Rosemary, Lemon and Capers",
+    "nom": "truite poêlée au romarin, citron et câpres",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5649,7 +5880,8 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/3511-pan-fried-trout-with-rosemary-lemon-and-capers",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pan-Fried Trout With Rosemary, Lemon and Capers"
   },
   {
     "nom": "Currywurst",
@@ -5669,7 +5901,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Chicken Breasts With Lemon",
+    "nom": "poitrines de poulet au citron",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5683,10 +5915,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/4117-chicken-breasts-with-lemon",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Breasts With Lemon"
   },
   {
-    "nom": "Pasta With Kale Pesto and Roasted Butternut Squash",
+    "nom": "pâtes au pesto de chou kale et courge butternut rôtie",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5700,10 +5933,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1012888-pasta-with-kale-pesto-and-roasted-butternut-squash",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pasta With Kale Pesto and Roasted Butternut Squash"
   },
   {
-    "nom": "Baked Rigatoni With Tomatoes, Olives and Pepper",
+    "nom": "rigatoni au four avec tomates, olives et poivrons",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5717,10 +5951,11 @@
     "origine": "Italie",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017830-baked-rigatoni-with-tomatoes-olives-and-pepper",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Baked Rigatoni With Tomatoes, Olives and Pepper"
   },
   {
-    "nom": "Roasted Halibut With Lemons, Olives and Rosemary",
+    "nom": "flétan rôti aux citrons, olives et romarin",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5734,10 +5969,11 @@
     "origine": "Méditerranéen",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1013079-roasted-halibut-with-lemons-olives-and-rosemary",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Roasted Halibut With Lemons, Olives and Rosemary"
   },
   {
-    "nom": "Chicken Paprikash",
+    "nom": "paprikash de poulet",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5751,10 +5987,11 @@
     "origine": "Hongrie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1018068-chicken-paprikash",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Paprikash"
   },
   {
-    "nom": "Chicken Breasts With Tomatoes and Capers",
+    "nom": "poitrines de poulet aux tomates et câpres",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5768,10 +6005,11 @@
     "origine": "Italie",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/4406-chicken-breasts-with-tomatoes-and-capers",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Chicken Breasts With Tomatoes and Capers"
   },
   {
-    "nom": "Vegan Tantanmen With Pan-Fried Tofu",
+    "nom": "tantanmen végane avec tofu poêlé",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5785,10 +6023,11 @@
     "origine": "Japon",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1022099-vegan-tantanmen-with-pan-fried-tofu",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Vegan Tantanmen With Pan-Fried Tofu"
   },
   {
-    "nom": "Twice-Cooked Pork Tenderloin",
+    "nom": "filet de porc cuit deux fois",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5802,10 +6041,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/11897-twice-cooked-pork-tenderloin",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Twice-Cooked Pork Tenderloin"
   },
   {
-    "nom": "Tangy Brisket With Ginger",
+    "nom": "poitrine de boeuf acidulée au gingembre",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5819,10 +6059,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016867-tangy-brisket-with-ginger",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Tangy Brisket With Ginger"
   },
   {
-    "nom": "Braised Lamb With Red Wine and Prunes",
+    "nom": "agneau braisé au vin rouge et pruneaux",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5836,10 +6077,11 @@
     "origine": "France",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1015744-braised-lamb-with-red-wine-and-prunes",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Braised Lamb With Red Wine and Prunes"
   },
   {
-    "nom": "Mississippi Roast",
+    "nom": "rôti du Mississippi",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5853,10 +6095,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017937-mississippi-roast",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Mississippi Roast"
   },
   {
-    "nom": "Slow Cooker Chipotle-Honey Chicken Tacos",
+    "nom": "tacos de poulet chipotle-miel à la mijoteuse",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 1,
     "theme_criiions_poisson": 0,
@@ -5870,10 +6113,11 @@
     "origine": "Mexique",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1019693-slow-cooker-chipotle-honey-chicken-tacos",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Slow Cooker Chipotle-Honey Chicken Tacos"
   },
   {
-    "nom": "Thai-Inspired Chicken Meatball Soup",
+    "nom": "soupe de boulettes de poulet d'inspiration thaïe",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5887,10 +6131,11 @@
     "origine": "Thaïlande",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020631-thai-inspired-chicken-meatball-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Thai-Inspired Chicken Meatball Soup"
   },
   {
-    "nom": "Perfect Instant Ramen",
+    "nom": "ramen instantané parfait",
     "theme_pasta_rapido": 1,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5904,10 +6149,11 @@
     "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1016583-perfect-instant-ramen",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Perfect Instant Ramen"
   },
   {
-    "nom": "Health Soup",
+    "nom": "soupe santé",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5921,10 +6167,11 @@
     "origine": "États-Unis",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1017000-health-soup",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Health Soup"
   },
   {
-    "nom": "Haitian Pork Griot",
+    "nom": "griot haïtien de porc",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5938,7 +6185,8 @@
     "origine": "Haïti",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1017276-haitian-pork-griot",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Haitian Pork Griot"
   },
   {
     "nom": "Pork Ragù al Maialino",
@@ -5958,7 +6206,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Coconut-Miso Salmon Curry",
+    "nom": "curry de saumon à la noix de coco et miso",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 1,
@@ -5969,13 +6217,14 @@
     "cout": 10,
     "temps_preparation": 35,
     "ingredients": "saumon, lait de coco, miso, légumes, riz",
-    "origine": "Thaïlande",
+    "origine": "Japon",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1020045-coconut-miso-salmon-curry",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Coconut-Miso Salmon Curry"
   },
   {
-    "nom": "Shakshuka With Feta",
+    "nom": "shakshuka à la feta",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -5989,10 +6238,11 @@
     "origine": "Moyen-Orient",
     "regime_alimentaire": "végétarien",
     "url": "https://cooking.nytimes.com/recipes/1014721-shakshuka-with-feta",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Shakshuka With Feta"
   },
   {
-    "nom": "North African-Inspired Meatballs",
+    "nom": "boulettes de viande d'inspiration nord-africaine",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6006,10 +6256,11 @@
     "origine": "Maroc",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/12763-north-african-inspired-meatballs",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "North African-Inspired Meatballs"
   },
   {
-    "nom": "Pork Chops With Jammy-Mustard Glaze",
+    "nom": "côtelettes de porc au glaçage confiture-moutarde",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6023,7 +6274,8 @@
     "origine": "États-Unis",
     "regime_alimentaire": "omnivore",
     "url": "https://cooking.nytimes.com/recipes/1022893-pork-chops-with-jammy-mustard-glaze",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Pork Chops With Jammy-Mustard Glaze"
   },
   {
     "nom": "Momofuku's Bo Ssam",
@@ -6043,7 +6295,7 @@
     "source": "nyt_cooking"
   },
   {
-    "nom": "Red Curry Lentils With Sweet Potatoes and Spinach",
+    "nom": "lentilles au curry rouge avec patates douces et épinards",
     "theme_pasta_rapido": 0,
     "theme_bol_nwich": 0,
     "theme_criiions_poisson": 0,
@@ -6057,6 +6309,7 @@
     "origine": "Thaïlande",
     "regime_alimentaire": "végane",
     "url": "https://cooking.nytimes.com/recipes/1020766-red-curry-lentils-with-sweet-potatoes-and-spinach",
-    "source": "nyt_cooking"
+    "source": "nyt_cooking",
+    "nom_original": "Red Curry Lentils With Sweet Potatoes and Spinach"
   }
 ]
