@@ -1638,6 +1638,37 @@ input[type="range"] {
 .recette-form__select { cursor: pointer; }
 .recette-form__textarea { resize: vertical; }
 
+/* Rangée URL + bouton Analyser */
+.recette-form__url-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+.recette-form__url-row .recette-form__input { flex: 1; }
+.recette-form__analyser-btn {
+  flex-shrink: 0;
+  padding: 0 0.9rem;
+  border: 1px solid var(--forest);
+  background: var(--sage-light);
+  color: var(--forest);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, color 0.12s;
+}
+.recette-form__analyser-btn:hover:not(:disabled) {
+  background: var(--forest);
+  color: #fff;
+}
+.recette-form__analyser-btn:disabled,
+.recette-form__analyser-btn--loading {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .recette-form__row {
   display: flex;
   gap: 0.75rem;

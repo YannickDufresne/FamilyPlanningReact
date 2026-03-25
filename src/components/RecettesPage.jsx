@@ -280,17 +280,14 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
     set('source', sourceDepuisUrl(url));
     const nom = nomDepuisUrl(url);
     if (nom && !form.nom) set('nom', nom);
-
-    // Déclenchement après 600 ms d'inactivité sur l'URL
-    clearTimeout(timerRef.current);
-    if (url.startsWith('http') && isNew) {
-      timerRef.current = setTimeout(() => {
-        enrichirDepuisUrl(url, apiKey, setForm, setStatut);
-      }, 600);
-    }
   }
 
-  useEffect(() => () => clearTimeout(timerRef.current), []);
+  function lancer(urlOverride, keyOverride) {
+    const url = urlOverride ?? form.url;
+    const key = keyOverride ?? apiKey;
+    if (!url.startsWith('http')) return;
+    enrichirDepuisUrl(url, key, setForm, setStatut);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -299,11 +296,10 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
   }
 
   function sauverCle() {
-    onSaveApiKey(cleTemp.trim());
+    const k = cleTemp.trim();
+    onSaveApiKey(k);
     setAfficherCle(false);
-    if (form.url.startsWith('http') && isNew) {
-      enrichirDepuisUrl(form.url, cleTemp.trim(), setForm, setStatut);
-    }
+    if (form.url.startsWith('http')) lancer(form.url, k);
   }
 
   const isLocal = recette._source === 'local';
@@ -354,21 +350,34 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
       )}
 
       {/* Statut enrichissement */}
-      {isNew && <StatutBadge statut={statut} />}
+      <StatutBadge statut={statut} />
 
       {/* Section : Identification */}
       <section className="recette-form__section">
         <h3 className="recette-form__section-titre">Identification</h3>
 
         <label className="recette-form__field">
-          <span>URL de la recette {isNew && apiKey && <em>(coller pour analyser automatiquement)</em>}</span>
-          <input
-            type="url"
-            className="recette-form__input"
-            placeholder="https://cooking.nytimes.com/recipes/…"
-            value={form.url}
-            onChange={e => handleUrl(e.target.value)}
-          />
+          <span>URL de la recette</span>
+          <div className="recette-form__url-row">
+            <input
+              type="url"
+              className="recette-form__input"
+              placeholder="https://cooking.nytimes.com/recipes/…"
+              value={form.url}
+              onChange={e => handleUrl(e.target.value)}
+            />
+            {form.url.startsWith('http') && (
+              <button
+                type="button"
+                className={`recette-form__analyser-btn ${statut === 'chargement' ? 'recette-form__analyser-btn--loading' : ''}`}
+                onClick={() => lancer()}
+                disabled={statut === 'chargement'}
+                title={apiKey ? 'Analyser avec l\'IA' : 'Clé API manquante'}
+              >
+                {statut === 'chargement' ? '…' : '✦ Analyser'}
+              </button>
+            )}
+          </div>
         </label>
 
         <label className="recette-form__field">
