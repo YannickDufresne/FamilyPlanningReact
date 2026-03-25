@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import recettesBase from '../data/recettes.json';
 
 // ── Métadonnées ──────────────────────────────────────────────────────────────
@@ -41,9 +41,10 @@ const RECETTE_VIDE = {
   eval_patricia: '', eval_yannick: '', eval_joseph: '', eval_mika: '', eval_luce: '',
 };
 
-const STORAGE_KEY = 'recettes_custom_v1';
+const STORAGE_KEY   = 'recettes_custom_v1';
+const API_KEY_STORE = 'anthropic_key';
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// ── Helpers généraux ──────────────────────────────────────────────────────────
 function loadStorage() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || { ajoutees: [], modifiees: {} }; }
   catch { return { ajoutees: [], modifiees: {} }; }
@@ -53,8 +54,10 @@ function nomDepuisUrl(url) {
   try {
     const m = url.match(/cooking\.nytimes\.com\/recipes\/\d+-(.+?)(?:\?|$)/);
     if (m) return m[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-  } catch {}
-  return '';
+    const segments = new URL(url).pathname.split('/').filter(Boolean);
+    const last = segments[segments.length - 1] || '';
+    return last.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  } catch { return ''; }
 }
 
 function sourceDepuisUrl(url) {
@@ -63,37 +66,174 @@ function sourceDepuisUrl(url) {
   return 'web';
 }
 
+function parseDuration(iso) {
+  if (!iso) return '';
+  const m = String(iso).match(/PT(?:(\d+)H)?(?:(\d+)M)?/i);
+  if (!m) return '';
+  return (parseInt(m[1] || 0) * 60) + parseInt(m[2] || 0) || '';
+}
+
+function extraireJsonLd(html) {
+  const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+  for (const m of matches) {
+    try {
+      const raw = JSON.parse(m[1]);
+      const candidates = Array.isArray(raw) ? raw : (raw['@graph'] || [raw]);
+      const recipe = candidates.find(d => d['@type'] === 'Recipe' || (Array.isArray(d['@type']) && d['@type'].includes('Recipe')));
+      if (recipe) return recipe;
+    } catch {}
+  }
+  return null;
+}
+
+// ── Enrichissement IA ─────────────────────────────────────────────────────────
+async function enrichirAvecClaude(apiKey, contexte) {
+  const PROMPT = `Tu analyses une recette et retournes UNIQUEMENT un objet JSON (sans markdown).
+
+Champs attendus :
+- "nom" : string — nom de la recette en français, naturel, sans majuscules inutiles
+- "origine" : string — pays/région d'origine culturelle en français (ex : "Italie", "Japon", "Moyen-Orient")
+- "regime_alimentaire" : "omnivore" | "végétarien" | "végane"
+- "temps_preparation" : number — temps total en minutes (préparation + cuisson), ou null
+- "cout" : number 1–6 — estimation du coût par portion (1=très économique, 3=moyen, 6=très cher)
+- "ingredients" : string — 5 à 8 ingrédients clés en français, séparés par des virgules
+- "themes" : array — thèmes applicables parmi :
+    "theme_pasta_rapido"     → pâtes, nouilles, gnocchi, plats italiens rapides
+    "theme_bol_nwich"        → bols repas, sandwichs, wraps, salades-repas
+    "theme_criiions_poisson" → poisson, fruits de mer, crustacés
+    "theme_plat_en_sauce"    → ragoûts, currys, daubes, plats mijotés en sauce épaisse
+    "theme_confort_grille"   → viandes grillées, BBQ, burgers, comfort food
+    "theme_pizza"            → pizza, focaccia, tarte flambée, flatbread
+    "theme_slow_chic"        → cuisine raffinée, risotto, plats lents élaborés, dîner chic
+
+Contexte de la recette :
+${JSON.stringify(contexte, null, 2)}`;
+
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 512,
+      messages: [{ role: 'user', content: PROMPT }],
+    }),
+  });
+
+  if (!resp.ok) throw new Error(`API ${resp.status}`);
+  const data = await resp.json();
+  const text = data.content?.[0]?.text || '';
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  return jsonMatch ? JSON.parse(jsonMatch[0]) : null;
+}
+
+async function enrichirDepuisUrl(url, apiKey, setForm, setStatut) {
+  setStatut('chargement');
+  let jsonLd = null;
+
+  // Étape 1 : tenter la récupération de la page via proxy CORS
+  try {
+    const proxy = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+    const r = await fetch(proxy, { signal: AbortSignal.timeout(8000) });
+    if (r.ok) {
+      const html = await r.text();
+      jsonLd = extraireJsonLd(html);
+    }
+  } catch { /* proxy échoué, on continue */ }
+
+  if (!apiKey) {
+    // Pas de clé : on remplit ce qu'on peut avec le JSON-LD seul
+    if (jsonLd) {
+      const dur = parseDuration(jsonLd.totalTime || jsonLd.cookTime || jsonLd.prepTime);
+      setForm(f => ({
+        ...f,
+        nom: jsonLd.name || f.nom,
+        ingredients: Array.isArray(jsonLd.recipeIngredient)
+          ? jsonLd.recipeIngredient.slice(0, 7).join(', ')
+          : f.ingredients,
+        temps_preparation: dur || f.temps_preparation,
+        origine: jsonLd.recipeCuisine || f.origine,
+      }));
+      setStatut('partiel');
+    } else {
+      setStatut('cle-manquante');
+    }
+    return;
+  }
+
+  // Étape 2 : enrichissement IA
+  try {
+    const contexte = jsonLd
+      ? {
+          nom_original: jsonLd.name,
+          ingredients: jsonLd.recipeIngredient || [],
+          description: jsonLd.description || '',
+          temps_total: jsonLd.totalTime,
+          temps_cuisson: jsonLd.cookTime,
+          cuisine: jsonLd.recipeCuisine,
+          categorie: jsonLd.recipeCategory,
+          regime: jsonLd.suitableForDiet,
+        }
+      : { url, nom_depuis_url: nomDepuisUrl(url) };
+
+    const ai = await enrichirAvecClaude(apiKey, contexte);
+    if (!ai) throw new Error('Réponse vide');
+
+    setForm(f => {
+      const themes = {};
+      (ai.themes || []).forEach(t => { if (t in f) themes[t] = 1; });
+      return {
+        ...f,
+        nom: ai.nom || f.nom,
+        origine: ai.origine || f.origine,
+        regime_alimentaire: ['omnivore','végétarien','végane'].includes(ai.regime_alimentaire)
+          ? ai.regime_alimentaire : f.regime_alimentaire,
+        temps_preparation: ai.temps_preparation || f.temps_preparation,
+        cout: ai.cout || f.cout,
+        ingredients: ai.ingredients || f.ingredients,
+        ...themes,
+      };
+    });
+    setStatut('ok');
+  } catch (e) {
+    console.error('Enrichissement IA :', e);
+    setStatut('erreur');
+  }
+}
+
+// ── Hook API key ──────────────────────────────────────────────────────────────
+function useApiKey() {
+  const [key, setKey] = useState(() => localStorage.getItem(API_KEY_STORE) || '');
+  const save = useCallback(k => {
+    setKey(k);
+    if (k) localStorage.setItem(API_KEY_STORE, k);
+    else localStorage.removeItem(API_KEY_STORE);
+  }, []);
+  return [key, save];
+}
+
 // ── Hook custom storage ───────────────────────────────────────────────────────
 function useRecettesCustom() {
   const [custom, setCustom] = useState(loadStorage);
 
-  const save = useCallback((next) => {
-    setCustom(next);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+  const save = useCallback((fn) => {
+    setCustom(prev => {
+      const next = typeof fn === 'function' ? fn(prev) : fn;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+      return next;
+    });
   }, []);
 
-  const ajouter = useCallback((recette) => {
-    const r = { ...recette, _id: `custom-${Date.now()}`, _source: 'local' };
-    save(c => ({ ...c, ajoutees: [...c.ajoutees, r] }));
+  const ajouter   = useCallback(r  => save(c => ({ ...c, ajoutees: [...c.ajoutees, { ...r, _id: `custom-${Date.now()}`, _source: 'local' }] })), [save]);
+  const modifier  = useCallback((id, changes) => {
+    if (id.startsWith('json-')) save(c => ({ ...c, modifiees: { ...c.modifiees, [id]: { ...(c.modifiees[id] || {}), ...changes } } }));
+    else save(c => ({ ...c, ajoutees: c.ajoutees.map(r => r._id === id ? { ...r, ...changes } : r) }));
   }, [save]);
-
-  const modifier = useCallback((id, changes) => {
-    if (id.startsWith('json-')) {
-      save(c => ({
-        ...c,
-        modifiees: { ...c.modifiees, [id]: { ...(c.modifiees[id] || {}), ...changes } },
-      }));
-    } else {
-      save(c => ({
-        ...c,
-        ajoutees: c.ajoutees.map(r => r._id === id ? { ...r, ...changes } : r),
-      }));
-    }
-  }, [save]);
-
-  const supprimer = useCallback((id) => {
-    save(c => ({ ...c, ajoutees: c.ajoutees.filter(r => r._id !== id) }));
-  }, [save]);
+  const supprimer = useCallback(id => save(c => ({ ...c, ajoutees: c.ajoutees.filter(r => r._id !== id) })), [save]);
 
   return { custom, ajouter, modifier, supprimer };
 }
@@ -111,23 +251,45 @@ function useToutesRecettes(custom) {
   }, [custom]);
 }
 
-// ── Formulaire recette (panneau latéral) ─────────────────────────────────────
-function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
-  const [form, setForm] = useState(() => {
-    const { _id, _source, ...rest } = recette;
-    return { ...RECETTE_VIDE, ...rest };
-  });
+// ── Statut enrichissement ─────────────────────────────────────────────────────
+function StatutBadge({ statut }) {
+  const cfg = {
+    chargement: { txt: 'Analyse en cours…',         cls: 'statut--loading'  },
+    ok:         { txt: '✓ Champs pré-remplis',       cls: 'statut--ok'       },
+    partiel:    { txt: '⚠ Partiel (sans clé API)',  cls: 'statut--warn'     },
+    erreur:     { txt: "✕ Erreur — vérifiez l'URL", cls: 'statut--erreur'   },
+    'cle-manquante': { txt: "Ajoutez une clé API pour l'analyse automatique", cls: 'statut--warn' },
+  }[statut];
+  if (!cfg) return null;
+  return <div className={`recette-form__statut ${cfg.cls}`}>{cfg.txt}</div>;
+}
+
+// ── Formulaire recette ────────────────────────────────────────────────────────
+function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey }) {
+  const [form, setForm]     = useState(() => { const { _id, _source, ...r } = recette; return { ...RECETTE_VIDE, ...r }; });
+  const [statut, setStatut] = useState(null);
+  const [afficherCle, setAfficherCle] = useState(false);
+  const [cleTemp, setCleTemp]         = useState(apiKey);
+  const timerRef = useRef(null);
 
   function set(key, val) { setForm(f => ({ ...f, [key]: val })); }
 
   function handleUrl(url) {
     set('url', url);
-    if (isNew) {
-      const nom = nomDepuisUrl(url);
-      if (nom) set('nom', nom);
-      set('source', sourceDepuisUrl(url));
+    set('source', sourceDepuisUrl(url));
+    const nom = nomDepuisUrl(url);
+    if (nom && !form.nom) set('nom', nom);
+
+    // Déclenchement après 600 ms d'inactivité sur l'URL
+    clearTimeout(timerRef.current);
+    if (url.startsWith('http') && isNew) {
+      timerRef.current = setTimeout(() => {
+        enrichirDepuisUrl(url, apiKey, setForm, setStatut);
+      }, 600);
     }
   }
+
+  useEffect(() => () => clearTimeout(timerRef.current), []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -135,23 +297,63 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
     onSave(form);
   }
 
+  function sauverCle() {
+    onSaveApiKey(cleTemp.trim());
+    setAfficherCle(false);
+    if (form.url.startsWith('http') && isNew) {
+      enrichirDepuisUrl(form.url, cleTemp.trim(), setForm, setStatut);
+    }
+  }
+
   const isLocal = recette._source === 'local';
 
   return (
     <form className="recette-form" onSubmit={handleSubmit}>
+
+      {/* En-tête */}
       <div className="recette-form__header">
         <h2 className="recette-form__titre">
           {isNew ? 'Ajouter une recette' : 'Modifier la recette'}
         </h2>
-        <button type="button" className="recette-form__close" onClick={onClose}>✕</button>
+        <div className="recette-form__header-actions">
+          <button type="button" className="recette-form__cle-btn" onClick={() => setAfficherCle(v => !v)} title="Clé API Anthropic">
+            🔑
+          </button>
+          <button type="button" className="recette-form__close" onClick={onClose}>✕</button>
+        </div>
       </div>
+
+      {/* Clé API (panneau rétractable) */}
+      {afficherCle && (
+        <div className="recette-form__cle-panel">
+          <p className="recette-form__cle-info">
+            Clé API Anthropic pour l'analyse automatique des recettes.<br />
+            <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer">Obtenir une clé →</a>
+          </p>
+          <div className="recette-form__cle-row">
+            <input
+              type="password"
+              className="recette-form__input"
+              placeholder="sk-ant-…"
+              value={cleTemp}
+              onChange={e => setCleTemp(e.target.value)}
+            />
+            <button type="button" className="recette-form__btn recette-form__btn--sauver" onClick={sauverCle}>
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Statut enrichissement */}
+      {isNew && <StatutBadge statut={statut} />}
 
       {/* Section : Identification */}
       <section className="recette-form__section">
         <h3 className="recette-form__section-titre">Identification</h3>
 
         <label className="recette-form__field">
-          <span>URL de la recette</span>
+          <span>URL de la recette {isNew && apiKey && <em>(coller pour analyser automatiquement)</em>}</span>
           <input
             type="url"
             className="recette-form__input"
@@ -210,11 +412,7 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
         <div className="recette-form__themes">
           {Object.entries(THEMES).map(([key, t]) => (
             <label key={key} className={`recette-form__theme-pill ${form[key] ? 'recette-form__theme-pill--on' : ''}`}>
-              <input
-                type="checkbox"
-                checked={!!form[key]}
-                onChange={e => set(key, e.target.checked ? 1 : 0)}
-              />
+              <input type="checkbox" checked={!!form[key]} onChange={e => set(key, e.target.checked ? 1 : 0)} />
               {t.emoji} {t.label}
             </label>
           ))}
@@ -224,29 +422,26 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
       {/* Section : Infos pratiques */}
       <section className="recette-form__section">
         <h3 className="recette-form__section-titre">Infos pratiques</h3>
+
         <div className="recette-form__row">
           <label className="recette-form__field">
-            <span>Temps (min)</span>
+            <span>Temps total (min)</span>
             <input
               type="number"
               className="recette-form__input"
               placeholder="30"
-              min="1"
-              max="480"
+              min="1" max="480"
               value={form.temps_preparation}
               onChange={e => set('temps_preparation', e.target.value === '' ? '' : Number(e.target.value))}
             />
           </label>
           <label className="recette-form__field">
-            <span>Coût (1–6 $)</span>
+            <span>Coût par portion</span>
             <div className="recette-form__cout-stars">
               {[1,2,3,4,5,6].map(n => (
-                <button
-                  key={n}
-                  type="button"
+                <button key={n} type="button"
                   className={`recette-form__cout-btn ${form.cout >= n ? 'recette-form__cout-btn--on' : ''}`}
-                  onClick={() => set('cout', n)}
-                >$</button>
+                  onClick={() => set('cout', n)}>$</button>
               ))}
             </div>
           </label>
@@ -288,7 +483,9 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
 
       {/* Section : Notes famille */}
       <section className="recette-form__section">
-        <h3 className="recette-form__section-titre">Notes de la famille <span className="recette-form__section-sub">(0 – 10)</span></h3>
+        <h3 className="recette-form__section-titre">
+          Notes de la famille <span className="recette-form__section-sub">(0 – 10)</span>
+        </h3>
         <div className="recette-form__ratings">
           {MEMBRES.map(m => (
             <label key={m.key} className="recette-form__rating">
@@ -297,9 +494,7 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
               <input
                 type="number"
                 className="recette-form__input recette-form__rating-input"
-                min="0"
-                max="10"
-                step="0.5"
+                min="0" max="10" step="0.5"
                 placeholder="–"
                 value={form[m.key]}
                 onChange={e => set(m.key, e.target.value === '' ? '' : parseFloat(e.target.value))}
@@ -312,11 +507,8 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
       {/* Actions */}
       <div className="recette-form__actions">
         {!isNew && isLocal && (
-          <button
-            type="button"
-            className="recette-form__btn recette-form__btn--suppr"
-            onClick={() => { onSupprimer(recette._id); onClose(); }}
-          >
+          <button type="button" className="recette-form__btn recette-form__btn--suppr"
+            onClick={() => { onSupprimer(recette._id); onClose(); }}>
             Supprimer
           </button>
         )}
@@ -331,32 +523,27 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose }) {
   );
 }
 
-// ── Drawer ───────────────────────────────────────────────────────────────────
+// ── Drawer ────────────────────────────────────────────────────────────────────
 function Drawer({ open, onClose, children }) {
   if (!open) return null;
   return (
     <div className="recette-drawer" role="dialog" aria-modal="true">
       <div className="recette-drawer__backdrop" onClick={onClose} />
-      <div className="recette-drawer__panel">
-        {children}
-      </div>
+      <div className="recette-drawer__panel">{children}</div>
     </div>
   );
 }
 
-// ── Carte recette ──────────────────────────────────────────────────────────
+// ── Carte recette ─────────────────────────────────────────────────────────────
 function RecetteCard({ recette, onEdit }) {
   const themes = Object.entries(THEMES).filter(([key]) => recette[key] === 1);
-
   const evalsValides = MEMBRES.filter(m => recette[m.key] != null && recette[m.key] !== '' && !isNaN(parseFloat(recette[m.key])));
   const hasRatings = evalsValides.length > 0;
-  const avgRating = hasRatings
+  const avgRating  = hasRatings
     ? (evalsValides.reduce((s, m) => s + parseFloat(recette[m.key]), 0) / evalsValides.length).toFixed(1)
     : null;
-
-  const regime = REGIME_CONFIG[recette.regime_alimentaire];
+  const regime      = REGIME_CONFIG[recette.regime_alimentaire];
   const dollarSigns = '$'.repeat(Math.min(recette.cout || 1, 6));
-  const isModifiee = recette._source === 'json' && recette._id; // base modifiée
 
   return (
     <article className="recette-card">
@@ -365,9 +552,7 @@ function RecetteCard({ recette, onEdit }) {
           <span key={key} className="recette-tag recette-tag--theme">{t.emoji} {t.label}</span>
         ))}
         {regime && (
-          <span className="recette-tag recette-tag--regime" style={{ color: regime.color }}>
-            {regime.label}
-          </span>
+          <span className="recette-tag recette-tag--regime" style={{ color: regime.color }}>{regime.label}</span>
         )}
         {recette._source === 'local' && (
           <span className="recette-tag recette-tag--local">✦ ajoutée</span>
@@ -389,50 +574,29 @@ function RecetteCard({ recette, onEdit }) {
         {recette.cout > 0 && <span className="recette-card__cout">{dollarSigns}</span>}
         {recette.cout > 0 && recette.temps_preparation > 0 && <span className="recette-card__dot">·</span>}
         {recette.temps_preparation > 0 && <span>{recette.temps_preparation} min</span>}
-        {recette.origine && (
-          <>
-            <span className="recette-card__dot">·</span>
-            <span>{recette.origine}</span>
-          </>
-        )}
-        {avgRating && (
-          <>
-            <span className="recette-card__dot">·</span>
-            <span className="recette-card__avg">★ {avgRating}</span>
-          </>
-        )}
+        {recette.origine && <><span className="recette-card__dot">·</span><span>{recette.origine}</span></>}
+        {avgRating && <><span className="recette-card__dot">·</span><span className="recette-card__avg">★ {avgRating}</span></>}
       </div>
 
-      {recette.ingredients && (
-        <p className="recette-card__ingredients">{recette.ingredients}</p>
-      )}
-
-      {recette.notes && (
-        <p className="recette-card__notes">{recette.notes}</p>
-      )}
+      {recette.ingredients && <p className="recette-card__ingredients">{recette.ingredients}</p>}
+      {recette.notes        && <p className="recette-card__notes">{recette.notes}</p>}
 
       {hasRatings && (
         <div className="recette-card__evals">
           {evalsValides.map(m => (
-            <span key={m.key} className="recette-eval-chip">
-              {m.emoji} {recette[m.key]}
-            </span>
+            <span key={m.key} className="recette-eval-chip">{m.emoji} {recette[m.key]}</span>
           ))}
         </div>
       )}
 
-      {recette.livre && (
-        <div className="recette-card__livre">📖 {recette.livre}</div>
-      )}
+      {recette.livre && <div className="recette-card__livre">📖 {recette.livre}</div>}
 
-      <button className="recette-card__edit-btn" onClick={() => onEdit(recette)} title="Modifier">
-        ✏
-      </button>
+      <button className="recette-card__edit-btn" onClick={() => onEdit(recette)} title="Modifier">✏</button>
     </article>
   );
 }
 
-// ── Bouton filtre pill ─────────────────────────────────────────────────────
+// ── Pill filtre ───────────────────────────────────────────────────────────────
 function Pill({ label, active, onClick }) {
   return (
     <button className={`filtre-pill ${active ? 'filtre-pill--active' : ''}`} onClick={onClick}>
@@ -441,22 +605,21 @@ function Pill({ label, active, onClick }) {
   );
 }
 
-// ── Page principale ────────────────────────────────────────────────────────
+// ── Page principale ───────────────────────────────────────────────────────────
 export default function RecettesPage({ onRetour }) {
   const { custom, ajouter, modifier, supprimer } = useRecettesCustom();
+  const [apiKey, setApiKey] = useApiKey();
   const toutesRecettes = useToutesRecettes(custom);
 
-  const [recherche, setRecherche] = useState('');
+  const [recherche, setRecherche]       = useState('');
   const [filtreRegime, setFiltreRegime] = useState('Tous');
-  const [filtreTheme, setFiltreTheme] = useState('');
+  const [filtreTheme, setFiltreTheme]   = useState('');
   const [filtreOrigine, setFiltreOrigine] = useState('Tous');
-  const [filtreCout, setFiltreCout] = useState(0);
-  const [tri, setTri] = useState('nom');
+  const [filtreCout, setFiltreCout]     = useState(0);
+  const [tri, setTri]                   = useState('nom');
 
-  // Drawer état
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [recetteEnEdition, setRecetteEnEdition] = useState(null); // null = nouvelle recette
-
+  const [drawerOpen, setDrawerOpen]         = useState(false);
+  const [recetteEnEdition, setRecetteEnEdition] = useState(null);
   const importRef = useRef();
 
   const origines = useMemo(() =>
@@ -475,7 +638,6 @@ export default function RecettesPage({ onRetour }) {
       }
       return true;
     });
-
     return [...liste].sort((a, b) => {
       if (tri === 'cout')  return (a.cout || 0) - (b.cout || 0);
       if (tri === 'temps') return (a.temps_preparation || 0) - (b.temps_preparation || 0);
@@ -490,42 +652,23 @@ export default function RecettesPage({ onRetour }) {
     });
   }, [toutesRecettes, filtreRegime, filtreTheme, filtreOrigine, filtreCout, recherche, tri]);
 
-  function ouvrirAjout() {
-    setRecetteEnEdition(null);
-    setDrawerOpen(true);
-  }
-
-  function ouvrirEdition(recette) {
-    setRecetteEnEdition(recette);
-    setDrawerOpen(true);
-  }
-
+  function ouvrirAjout()        { setRecetteEnEdition(null); setDrawerOpen(true); }
+  function ouvrirEdition(r)     { setRecetteEnEdition(r);    setDrawerOpen(true); }
   function handleSave(form) {
-    if (recetteEnEdition) {
-      modifier(recetteEnEdition._id, form);
-    } else {
-      ajouter(form);
-    }
+    if (recetteEnEdition) modifier(recetteEnEdition._id, form);
+    else ajouter(form);
     setDrawerOpen(false);
   }
 
-  function handleSupprimer(id) {
-    supprimer(id);
-  }
-
-  // Export JSON
   function telecharger() {
     const clean = toutesRecettes.map(({ _id, _source, ...r }) => r);
-    const blob = new Blob([JSON.stringify(clean, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'recettes.json';
-    a.click();
+    const blob  = new Blob([JSON.stringify(clean, null, 2)], { type: 'application/json' });
+    const url   = URL.createObjectURL(blob);
+    const a     = document.createElement('a');
+    a.href = url; a.download = 'recettes.json'; a.click();
     URL.revokeObjectURL(url);
   }
 
-  // Import JSON
   function handleImport(e) {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -534,12 +677,9 @@ export default function RecettesPage({ onRetour }) {
       try {
         const data = JSON.parse(ev.target.result);
         if (!Array.isArray(data)) throw new Error();
-        // Ajouter toutes les recettes du fichier qui ont un nom
         data.filter(r => r.nom).forEach(r => ajouter({ ...r, source: r.source || 'import' }));
         alert(`${data.filter(r => r.nom).length} recettes importées.`);
-      } catch {
-        alert('Fichier JSON invalide.');
-      }
+      } catch { alert('Fichier JSON invalide.'); }
     };
     reader.readAsText(file);
     e.target.value = '';
@@ -550,14 +690,15 @@ export default function RecettesPage({ onRetour }) {
   return (
     <div className="recettes-page">
 
-      {/* Drawer */}
       <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <RecetteForm
           recette={recetteFormulaire}
           isNew={!recetteEnEdition}
           onSave={handleSave}
-          onSupprimer={handleSupprimer}
+          onSupprimer={supprimer}
           onClose={() => setDrawerOpen(false)}
+          apiKey={apiKey}
+          onSaveApiKey={setApiKey}
         />
       </Drawer>
 
@@ -574,7 +715,7 @@ export default function RecettesPage({ onRetour }) {
             <button className="recettes-action-btn" onClick={telecharger} title="Télécharger toute la base en JSON">
               ↓ JSON
             </button>
-            <button className="recettes-action-btn" onClick={() => importRef.current?.click()} title="Importer un fichier JSON">
+            <button className="recettes-action-btn" onClick={() => importRef.current?.click()} title="Importer un JSON">
               ↑ Import
             </button>
             <input ref={importRef} type="file" accept=".json" style={{ display: 'none' }} onChange={handleImport} />
@@ -582,7 +723,7 @@ export default function RecettesPage({ onRetour }) {
         </div>
       </div>
 
-      {/* Filtres sticky */}
+      {/* Filtres */}
       <div className="recettes-filtres">
         <input
           type="search"
@@ -591,14 +732,12 @@ export default function RecettesPage({ onRetour }) {
           value={recherche}
           onChange={e => setRecherche(e.target.value)}
         />
-
         <div className="recettes-filtres__row">
           <span className="recettes-filtres__label">Régime</span>
           {['Tous', 'omnivore', 'végétarien', 'végane'].map(r => (
             <Pill key={r} label={r} active={filtreRegime === r} onClick={() => setFiltreRegime(r)} />
           ))}
         </div>
-
         <div className="recettes-filtres__row">
           <span className="recettes-filtres__label">Thème</span>
           <Pill label="Tous" active={filtreTheme === ''} onClick={() => setFiltreTheme('')} />
@@ -607,22 +746,18 @@ export default function RecettesPage({ onRetour }) {
               onClick={() => setFiltreTheme(filtreTheme === key ? '' : key)} />
           ))}
         </div>
-
         <div className="recettes-filtres__row">
           <span className="recettes-filtres__label">Origine</span>
-          {origines.map(o => (
-            <Pill key={o} label={o} active={filtreOrigine === o} onClick={() => setFiltreOrigine(o)} />
-          ))}
+          {origines.map(o => <Pill key={o} label={o} active={filtreOrigine === o} onClick={() => setFiltreOrigine(o)} />)}
         </div>
-
         <div className="recettes-filtres__row">
           <span className="recettes-filtres__label">Coût max</span>
-          {[[0, 'Tous'], [3, '≤ 3 $'], [5, '≤ 5 $'], [7, '≤ 7 $']].map(([v, l]) => (
+          {[[0,'Tous'],[3,'≤ 3 $'],[5,'≤ 5 $'],[7,'≤ 7 $']].map(([v,l]) => (
             <Pill key={v} label={l} active={filtreCout === v} onClick={() => setFiltreCout(v)} />
           ))}
           <span className="recettes-filtres__sep" />
           <span className="recettes-filtres__label">Trier</span>
-          {[['nom', 'A–Z'], ['cout', 'Coût ↑'], ['temps', 'Temps ↑'], ['note', 'Note ↓']].map(([v, l]) => (
+          {[['nom','A–Z'],['cout','Coût ↑'],['temps','Temps ↑'],['note','Note ↓']].map(([v,l]) => (
             <Pill key={v} label={l} active={tri === v} onClick={() => setTri(v)} />
           ))}
         </div>

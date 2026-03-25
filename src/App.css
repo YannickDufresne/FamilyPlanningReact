@@ -1504,6 +1504,11 @@ input[type="range"] {
   color: var(--ink);
   margin: 0;
 }
+.recette-form__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 .recette-form__close {
   background: none;
   border: none;
@@ -1514,6 +1519,50 @@ input[type="range"] {
   transition: color 0.12s;
 }
 .recette-form__close:hover { color: var(--ink); }
+.recette-form__cle-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  opacity: 0.45;
+  transition: opacity 0.12s;
+}
+.recette-form__cle-btn:hover { opacity: 1; }
+
+/* Panneau clé API */
+.recette-form__cle-panel {
+  padding: 0.9rem 1.75rem;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.recette-form__cle-info {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+.recette-form__cle-info a { color: var(--forest); }
+.recette-form__cle-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Statut enrichissement */
+.recette-form__statut {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  padding: 0.55rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.statut--loading { color: var(--ink-3); background: var(--surface); }
+.statut--ok      { color: var(--forest); background: var(--sage-light); }
+.statut--warn    { color: var(--bark);   background: var(--terra-light); }
+.statut--erreur  { color: #c0392b;       background: #fdecea; }
 
 .recette-form__section {
   padding: 1.25rem 1.75rem;
