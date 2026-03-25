@@ -268,7 +268,8 @@ function StatutBadge({ statut }) {
 function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey }) {
   const [form, setForm]     = useState(() => { const { _id, _source, ...r } = recette; return { ...RECETTE_VIDE, ...r }; });
   const [statut, setStatut] = useState(null);
-  const [afficherCle, setAfficherCle] = useState(false);
+  // Ouvrir automatiquement le panneau clé si nouvelle recette sans clé
+  const [afficherCle, setAfficherCle] = useState(isNew && !apiKey);
   const [cleTemp, setCleTemp]         = useState(apiKey);
   const timerRef = useRef(null);
 
@@ -316,8 +317,13 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
           {isNew ? 'Ajouter une recette' : 'Modifier la recette'}
         </h2>
         <div className="recette-form__header-actions">
-          <button type="button" className="recette-form__cle-btn" onClick={() => setAfficherCle(v => !v)} title="Clé API Anthropic">
-            🔑
+          <button
+            type="button"
+            className={`recette-form__cle-btn ${!apiKey ? 'recette-form__cle-btn--alerte' : ''}`}
+            onClick={() => setAfficherCle(v => !v)}
+            title={apiKey ? 'Clé API Anthropic configurée' : 'Configurer la clé API pour l\'analyse auto'}
+          >
+            🔑{!apiKey && <span className="recette-form__cle-dot" />}
           </button>
           <button type="button" className="recette-form__close" onClick={onClose}>✕</button>
         </div>
@@ -327,8 +333,10 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
       {afficherCle && (
         <div className="recette-form__cle-panel">
           <p className="recette-form__cle-info">
-            Clé API Anthropic pour l'analyse automatique des recettes.<br />
-            <a href="https://console.anthropic.com/" target="_blank" rel="noopener noreferrer">Obtenir une clé →</a>
+            {apiKey
+              ? <>Clé API configurée. <button type="button" className="recette-form__cle-effacer" onClick={() => { onSaveApiKey(''); setCleTemp(''); }}>Supprimer</button></>
+              : <>Entrez votre clé API Anthropic pour que l'app analyse et remplisse automatiquement les champs (nom en français, ingrédients, thèmes, coût…) quand vous collez une URL.<br /><a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">Créer une clé sur console.anthropic.com →</a></>
+            }
           </p>
           <div className="recette-form__cle-row">
             <input

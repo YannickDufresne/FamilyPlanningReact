@@ -1520,6 +1520,7 @@ input[type="range"] {
 }
 .recette-form__close:hover { color: var(--ink); }
 .recette-form__cle-btn {
+  position: relative;
   background: none;
   border: none;
   font-size: 0.85rem;
@@ -1529,6 +1530,26 @@ input[type="range"] {
   transition: opacity 0.12s;
 }
 .recette-form__cle-btn:hover { opacity: 1; }
+.recette-form__cle-btn--alerte { opacity: 1; }
+.recette-form__cle-dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--terra);
+  display: block;
+}
+.recette-form__cle-effacer {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
 
 /* Panneau clé API */
 .recette-form__cle-panel {
