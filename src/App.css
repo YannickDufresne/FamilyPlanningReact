@@ -1176,6 +1176,71 @@ input[type="range"] {
   gap: 1.25rem;
   flex-wrap: wrap;
 }
+.recettes-header__titre-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Sync status pills */
+.sync-pill {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  position: relative;
+  top: -1px;
+}
+.sync-pill--idle    { color: var(--ink-3); }
+.sync-pill--loading { color: var(--bark); background: var(--terra-light); animation: pulse 1.2s ease-in-out infinite; }
+.sync-pill--ok      { color: var(--forest); background: var(--sage-light); }
+.sync-pill--erreur  { color: #c0392b; background: #fdecea; cursor: help; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.5; } }
+
+/* Bouton sync actif */
+.recettes-action-btn--sync-on {
+  color: var(--forest);
+  border-color: var(--sage);
+}
+
+/* Panneau GitHub */
+.github-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.github-panel__info {
+  font-size: 0.78rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.github-panel__info a { color: var(--forest); }
+.github-panel__effacer {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+.github-panel__row {
+  display: flex;
+  gap: 0.5rem;
+}
+.github-panel__input {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+}
 
 .recettes-titre {
   font-family: 'Cormorant Garamond', serif;

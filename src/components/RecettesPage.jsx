@@ -41,9 +41,47 @@ const RECETTE_VIDE = {
   eval_patricia: '', eval_yannick: '', eval_joseph: '', eval_mika: '', eval_luce: '',
 };
 
-const STORAGE_KEY    = 'recettes_custom_v1';
-const API_KEY_STORE  = 'anthropic_key';
-const PROMPT_STORE   = 'recettes_prompt_v2';   // bump = efface l'ancien prompt sauvegardé
+const STORAGE_KEY        = 'recettes_custom_v1';
+const API_KEY_STORE      = 'anthropic_key';
+const PROMPT_STORE       = 'recettes_prompt_v2';
+const GITHUB_TOKEN_STORE = 'github_token';
+const GITHUB_REPO        = 'YannickDufresne/FamilyPlanningReact';
+const RECETTES_PATH      = 'src/data/recettes.json';
+
+// UTF-8 → base64 (btoa ne gère pas l'Unicode nativement)
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  return btoa(Array.from(bytes, b => String.fromCharCode(b)).join(''));
+}
+
+async function syncToGitHub(toutesRecettes, token) {
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+  };
+  // 1. Lire le SHA actuel du fichier
+  const r1 = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${RECETTES_PATH}`, { headers });
+  if (!r1.ok) throw new Error(`Lecture GitHub : ${r1.status}`);
+  const { sha } = await r1.json();
+
+  // 2. Construire le JSON propre (sans champs internes _id/_source)
+  const clean   = toutesRecettes.map(({ _id, _source, ...r }) => r);
+  const content = utf8ToBase64(JSON.stringify(clean, null, 2));
+  const dateStr = new Date().toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  // 3. Committer
+  const r2 = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${RECETTES_PATH}`, {
+    method: 'PUT',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Recettes — ${dateStr}`, content, sha }),
+  });
+  if (!r2.ok) {
+    const err = await r2.json().catch(() => ({}));
+    throw new Error(err.message || `Écriture GitHub : ${r2.status}`);
+  }
+  return r2.json();
+}
 
 const PROMPT_DEFAULT = `Tu analyses une recette et retournes UNIQUEMENT un objet JSON valide (sans markdown, sans explication).
 
@@ -255,6 +293,35 @@ function usePrompt() {
   return [prompt, save];
 }
 
+// ── Hook GitHub sync ──────────────────────────────────────────────────────────
+function useGitHubSync() {
+  const [token, setTokenState] = useState(() => localStorage.getItem(GITHUB_TOKEN_STORE) || '');
+  const [statut, setStatut]    = useState(null); // null | 'syncing' | 'ok' | {type:'erreur', msg}
+  const timerRef = useRef(null);
+
+  const sauverToken = useCallback(t => {
+    setTokenState(t);
+    if (t) localStorage.setItem(GITHUB_TOKEN_STORE, t);
+    else   localStorage.removeItem(GITHUB_TOKEN_STORE);
+  }, []);
+
+  const sync = useCallback(async (recettes) => {
+    if (!token) return;
+    clearTimeout(timerRef.current);
+    setStatut('syncing');
+    try {
+      await syncToGitHub(recettes, token);
+      setStatut('ok');
+      timerRef.current = setTimeout(() => setStatut(null), 9000);
+    } catch (e) {
+      console.error('Sync GitHub :', e);
+      setStatut({ type: 'erreur', msg: e.message });
+    }
+  }, [token]);
+
+  return { token, sauverToken, sync, statut };
+}
+
 // ── Hook custom storage ───────────────────────────────────────────────────────
 function useRecettesCustom() {
   const [custom, setCustom] = useState(loadStorage);
@@ -277,7 +344,7 @@ function useRecettesCustom() {
   return { custom, ajouter, modifier, supprimer };
 }
 
-// ── Fusion base + custom ─────────────────────────────────────────────────────
+// ── Fusion base + custom (avec déduplication post-rebuild) ───────────────────
 function useToutesRecettes(custom) {
   return useMemo(() => {
     const base = recettesBase.map((r, i) => ({
@@ -286,7 +353,15 @@ function useToutesRecettes(custom) {
       _id: `json-${i}`,
       _source: 'json',
     }));
-    return [...base, ...custom.ajoutees];
+    // Après un rebuild GitHub, les recettes ajoutées localement se retrouvent
+    // dans le bundle → on évite les doublons par URL puis par nom
+    const urlsBase  = new Set(base.map(r => r.url).filter(Boolean));
+    const nomsBase  = new Set(base.map(r => (r.nom || '').toLowerCase().trim()));
+    const ajouteesFiltrees = custom.ajoutees.filter(r =>
+      !(r.url && urlsBase.has(r.url)) &&
+      !nomsBase.has((r.nom || '').toLowerCase().trim())
+    );
+    return [...base, ...ajouteesFiltrees];
   }, [custom]);
 }
 
@@ -740,20 +815,31 @@ function Pill({ label, active, onClick }) {
 // ── Page principale ───────────────────────────────────────────────────────────
 export default function RecettesPage({ onRetour }) {
   const { custom, ajouter, modifier, supprimer } = useRecettesCustom();
-  const [apiKey, setApiKey] = useApiKey();
-  const [prompt, setPrompt] = usePrompt();
-  const toutesRecettes = useToutesRecettes(custom);
+  const [apiKey, setApiKey]   = useApiKey();
+  const [prompt, setPrompt]   = usePrompt();
+  const { token: ghToken, sauverToken: sauverGhToken, sync, statut: syncStatut } = useGitHubSync();
+  const toutesRecettes        = useToutesRecettes(custom);
 
-  const [recherche, setRecherche]       = useState('');
-  const [filtreRegime, setFiltreRegime] = useState('Tous');
-  const [filtreTheme, setFiltreTheme]   = useState('');
+  const [recherche, setRecherche]         = useState('');
+  const [filtreRegime, setFiltreRegime]   = useState('Tous');
+  const [filtreTheme, setFiltreTheme]     = useState('');
   const [filtreOrigine, setFiltreOrigine] = useState('Tous');
-  const [filtreCout, setFiltreCout]     = useState(0);
-  const [tri, setTri]                   = useState('nom');
+  const [filtreCout, setFiltreCout]       = useState(0);
+  const [tri, setTri]                     = useState('nom');
 
-  const [drawerOpen, setDrawerOpen]         = useState(false);
+  const [drawerOpen, setDrawerOpen]           = useState(false);
   const [recetteEnEdition, setRecetteEnEdition] = useState(null);
-  const importRef = useRef();
+  const [afficherGithub, setAfficherGithub]   = useState(false);
+  const [ghTokenTemp, setGhTokenTemp]         = useState(ghToken);
+  const importRef    = useRef();
+  const isFirstLoad  = useRef(true);
+
+  // Auto-sync vers GitHub à chaque modification du custom store
+  useEffect(() => {
+    if (isFirstLoad.current) { isFirstLoad.current = false; return; }
+    if (ghToken) sync(toutesRecettes);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [custom]);
 
   const origines = useMemo(() =>
     ['Tous', ...[...new Set(toutesRecettes.map(r => r.origine).filter(Boolean))].sort()],
@@ -845,11 +931,33 @@ export default function RecettesPage({ onRetour }) {
       <div className="recettes-header">
         <button className="recettes-back" onClick={onRetour}>← Retour au planning</button>
         <div className="recettes-header__main">
-          <h2 className="recettes-titre">Bibliothèque de recettes</h2>
+          <div className="recettes-header__titre-row">
+            <h2 className="recettes-titre">Bibliothèque de recettes</h2>
+            {/* Indicateur de sync */}
+            {syncStatut === 'syncing' && (
+              <span className="sync-pill sync-pill--loading">☁ Synchronisation…</span>
+            )}
+            {syncStatut === 'ok' && (
+              <span className="sync-pill sync-pill--ok">☁ Synchronisé · rebuild ~1 min</span>
+            )}
+            {syncStatut?.type === 'erreur' && (
+              <span className="sync-pill sync-pill--erreur" title={syncStatut.msg}>☁ Erreur sync</span>
+            )}
+            {!syncStatut && ghToken && (
+              <span className="sync-pill sync-pill--idle" title="Sync GitHub actif">☁</span>
+            )}
+          </div>
           <span className="recettes-compte">{resultats.length} / {toutesRecettes.length} recettes</span>
           <div className="recettes-header__actions">
             <button className="recettes-action-btn recettes-action-btn--primary" onClick={ouvrirAjout}>
               + Ajouter
+            </button>
+            <button
+              className={`recettes-action-btn ${ghToken ? 'recettes-action-btn--sync-on' : ''}`}
+              onClick={() => setAfficherGithub(v => !v)}
+              title={ghToken ? 'Sync GitHub actif' : 'Configurer la sync GitHub'}
+            >
+              ☁ GitHub
             </button>
             <button className="recettes-action-btn" onClick={telecharger} title="Télécharger toute la base en JSON">
               ↓ JSON
@@ -861,6 +969,43 @@ export default function RecettesPage({ onRetour }) {
           </div>
         </div>
       </div>
+
+      {/* Panneau GitHub sync */}
+      {afficherGithub && (
+        <div className="github-panel">
+          <p className="github-panel__info">
+            {ghToken
+              ? <>Token GitHub configuré — les recettes sont synchronisées automatiquement à chaque sauvegarde.{' '}
+                  <button className="github-panel__effacer" onClick={() => { sauverGhToken(''); setGhTokenTemp(''); }}>
+                    Supprimer le token
+                  </button>
+                </>
+              : <>Entrez un Personal Access Token GitHub pour que vos recettes soient sauvegardées de façon permanente
+                  sur tous vos appareils. Chaque ajout ou modification déclenchera un commit automatique.<br />
+                  <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">
+                    Créer un token →
+                  </a>
+                  {' '}(Fine-grained · dépôt <strong>FamilyPlanningReact</strong> · Permission <strong>Contents : Read & Write</strong>)
+                </>
+            }
+          </p>
+          <div className="github-panel__row">
+            <input
+              type="password"
+              className="recettes-search github-panel__input"
+              placeholder="github_pat_…"
+              value={ghTokenTemp}
+              onChange={e => setGhTokenTemp(e.target.value)}
+            />
+            <button
+              className="recettes-action-btn recettes-action-btn--primary"
+              onClick={() => { sauverGhToken(ghTokenTemp.trim()); setAfficherGithub(false); }}
+            >
+              Sauvegarder
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Filtres */}
       <div className="recettes-filtres">
