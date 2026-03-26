@@ -20,7 +20,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 3.8,
     "eval_mika": 4.6,
-    "eval_luce": 4.3
+    "eval_luce": 4.3,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/BasilPesto.JPG"
   },
   {
     "nom": "Carbonara Express",
@@ -43,7 +44,8 @@
     "eval_yannick": 4.5,
     "eval_joseph": 4.2,
     "eval_mika": 4.7,
-    "eval_luce": 4.4
+    "eval_luce": 4.4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg"
   },
   {
     "nom": "Aglio e Olio",
@@ -66,7 +68,8 @@
     "eval_yannick": 4,
     "eval_joseph": 3.5,
     "eval_mika": 4.1,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Aglio_e_olio.jpg"
   },
   {
     "nom": "Cacio e Pepe",
@@ -89,7 +92,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.7,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Cacio_e_pepe.jpg"
   },
   {
     "nom": "Puttanesca Rapide",
@@ -112,7 +116,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 3.6,
     "eval_mika": 4.4,
-    "eval_luce": 4.1
+    "eval_luce": 4.1,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Pasta_Puttanesca.jpg"
   },
   {
     "nom": "Spaghetti Bolognaise",
@@ -135,7 +140,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 4.1,
     "eval_mika": 4.5,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tagliatelle_al_rag%C3%B9_%28image_modified%29.jpg"
   },
   {
     "nom": "Penne Arrabiata",
@@ -158,7 +164,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 3.8,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Penne_Arrabbiata.jpg"
   },
   {
     "nom": "Mac and Cheese",
@@ -181,7 +188,8 @@
     "eval_yannick": 3.8,
     "eval_joseph": 4.3,
     "eval_mika": 4.1,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Original_Mac_n_Cheese_.jpg"
   },
   {
     "nom": "Tacos Mexicains",
@@ -204,7 +212,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 4,
     "eval_mika": 4.5,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"
   },
   {
     "nom": "Poke Bowl",
@@ -227,7 +236,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.9,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Shoyu_and_onion_poke.jpg"
   },
   {
     "nom": "Ramen Express",
@@ -250,7 +260,8 @@
     "eval_yannick": 4,
     "eval_joseph": 3.7,
     "eval_mika": 4.1,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Shoyu_ramen%2C_at_Kasukabe_Station_%282014.05.05%29_1.jpg"
   },
   {
     "nom": "Buddha Bowl",
@@ -273,7 +284,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.5,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/BuddhaBowlLot.jpg"
   },
   {
     "nom": "Burrito Bowl",
@@ -296,7 +308,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 3.6,
     "eval_mika": 4,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Burrito.JPG"
   },
   {
     "nom": "Saumon Teriyaki",
@@ -319,7 +332,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 3.8,
     "eval_mika": 4.4,
-    "eval_luce": 4.1
+    "eval_luce": 4.1,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/22nd_June_2012_Teriyaki_Duck.jpg"
   },
   {
     "nom": "Fish and Chips",
@@ -342,7 +356,8 @@
     "eval_yannick": 4,
     "eval_joseph": 4.1,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Fish_and_chips_blackpool.jpg"
   },
   {
     "nom": "Paella aux Fruits de Mer",
@@ -365,7 +380,8 @@
     "eval_yannick": 4.4,
     "eval_joseph": 3.9,
     "eval_mika": 4.6,
-    "eval_luce": 4.3
+    "eval_luce": 4.3,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/01_Paella_Valenciana_original.jpg"
   },
   {
     "nom": "Ceviche Péruvien",
@@ -388,7 +404,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.7,
     "eval_mika": 4.2,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Cebiche_de_corvina.JPG"
   },
   {
     "nom": "Truite aux Amandes",
@@ -411,7 +428,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 3.8,
     "eval_mika": 4,
-    "eval_luce": 3.7
+    "eval_luce": 3.7,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Sole_Meuniere_with_Shrimp.jpg"
   },
   {
     "nom": "Sushi Bowl",
@@ -434,7 +452,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 3.9,
     "eval_mika": 4.3,
-    "eval_luce": 4.1
+    "eval_luce": 4.1,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Rokusanen_Wakayama_Japan08bs.jpg"
   },
   {
     "nom": "Pad Thaï aux Crevettes",
@@ -457,7 +476,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 4,
     "eval_mika": 4.4,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg"
   },
   {
     "nom": "Bouillabaisse Express",
@@ -480,7 +500,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.6,
     "eval_mika": 4.2,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Bullabessa.jpg"
   },
   {
     "nom": "Falafel Libanais",
@@ -503,7 +524,8 @@
     "eval_yannick": 4,
     "eval_joseph": 3.8,
     "eval_mika": 4.1,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Falafels_2.jpg"
   },
   {
     "nom": "Curry Végétarien",
@@ -526,7 +548,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 3.7,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Indian_Curry.jpg"
   },
   {
     "nom": "Ratatouille Provençale",
@@ -549,7 +572,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 3.5,
     "eval_mika": 4,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ratatouille_home_cooked.jpg"
   },
   {
     "nom": "Pad Thai Végé",
@@ -572,7 +596,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.9,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg"
   },
   {
     "nom": "Taboulé Libanais",
@@ -595,7 +620,8 @@
     "eval_yannick": 3.8,
     "eval_joseph": 3.6,
     "eval_mika": 3.9,
-    "eval_luce": 3.7
+    "eval_luce": 3.7,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Tabouleh_1.JPG"
   },
   {
     "nom": "Risotto aux Champignons",
@@ -618,7 +644,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 3.8,
     "eval_mika": 4.4,
-    "eval_luce": 4.1
+    "eval_luce": 4.1,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Risotto_with_speck_and_goat_cheese_%286101067436%29.jpg"
   },
   {
     "nom": "Burger Végétarien",
@@ -641,7 +668,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 4.2,
     "eval_mika": 4,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/%D7%94%D7%9E%D7%91%D7%95%D7%A8%D7%92%D7%A8_%D7%98%D7%91%D7%A2%D7%95%D7%A0%D7%99.jpg"
   },
   {
     "nom": "Quinoa aux Légumes Rôtis",
@@ -664,7 +692,8 @@
     "eval_yannick": 4,
     "eval_joseph": 3.7,
     "eval_mika": 4.1,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Reismelde.jpg"
   },
   {
     "nom": "Salade de Lentilles",
@@ -687,7 +716,8 @@
     "eval_yannick": 3.7,
     "eval_joseph": 3.5,
     "eval_mika": 3.8,
-    "eval_luce": 3.6
+    "eval_luce": 3.6,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/EgFoodLentilSoup.jpg"
   },
   {
     "nom": "Couscous Végétarien",
@@ -710,7 +740,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 3.6,
     "eval_mika": 4,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Moroccan_cuscus%2C_from_Casablanca%2C_September_2018.jpg"
   },
   {
     "nom": "Chili Végétarien",
@@ -733,7 +764,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.8,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Bowl_of_chili.jpg"
   },
   {
     "nom": "Steak Grillé",
@@ -756,7 +788,8 @@
     "eval_yannick": 4.4,
     "eval_joseph": 4.3,
     "eval_mika": 4.5,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Steak_frites_-_yummy.jpg"
   },
   {
     "nom": "Brochettes de Poulet",
@@ -779,7 +812,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 4.1,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ayiti%26DR_2007_085.jpg"
   },
   {
     "nom": "BBQ Ribs",
@@ -802,7 +836,8 @@
     "eval_yannick": 4.5,
     "eval_joseph": 4.4,
     "eval_mika": 4.6,
-    "eval_luce": 4.3
+    "eval_luce": 4.3,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Spareribs_20160506_182617113.jpg"
   },
   {
     "nom": "Saucisses Grillées",
@@ -825,7 +860,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 4.2,
     "eval_mika": 4,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/German_Bratw%C3%BCrste.jpg"
   },
   {
     "nom": "Hamburger Classique",
@@ -848,7 +884,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 4.5,
     "eval_mika": 4.4,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/RedDot_Burger.jpg"
   },
   {
     "nom": "Magret de Canard",
@@ -871,7 +908,8 @@
     "eval_yannick": 4.6,
     "eval_joseph": 4.1,
     "eval_mika": 4.7,
-    "eval_luce": 4.4
+    "eval_luce": 4.4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Duck_breast.jpg"
   },
   {
     "nom": "Côtelettes d'Agneau",
@@ -894,7 +932,8 @@
     "eval_yannick": 4.4,
     "eval_joseph": 4,
     "eval_mika": 4.5,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Grilled_lamb_chops.jpg"
   },
   {
     "nom": "Hot-Dogs Maison",
@@ -917,7 +956,8 @@
     "eval_yannick": 3.8,
     "eval_joseph": 4.3,
     "eval_mika": 3.9,
-    "eval_luce": 3.7
+    "eval_luce": 3.7,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png"
   },
   {
     "nom": "Porc Effiloché",
@@ -940,7 +980,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 4.1,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Pulled_pork_while_pulling.JPG"
   },
   {
     "nom": "Pizza Margherita",
@@ -963,7 +1004,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 4.2,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg"
   },
   {
     "nom": "Pizza Pepperoni",
@@ -986,7 +1028,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 4.4,
     "eval_mika": 4.4,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Pepperoni_Pizza_%2829204589095%29.jpg"
   },
   {
     "nom": "Pizza Végétarienne",
@@ -1009,7 +1052,8 @@
     "eval_yannick": 4,
     "eval_joseph": 3.9,
     "eval_mika": 4.1,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"
   },
   {
     "nom": "Pizza Québécoise",
@@ -1032,7 +1076,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 4.3,
     "eval_mika": 4.3,
-    "eval_luce": 4.1
+    "eval_luce": 4.1,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"
   },
   {
     "nom": "Pizza Blanche",
@@ -1055,7 +1100,8 @@
     "eval_yannick": 3.9,
     "eval_joseph": 3.8,
     "eval_mika": 4,
-    "eval_luce": 3.8
+    "eval_luce": 3.8,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/White_cheese_pizza.jpg"
   },
   {
     "nom": "Pizza aux Fruits de Mer",
@@ -1078,7 +1124,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.9,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Seafood_pizza_%281%29.jpg"
   },
   {
     "nom": "Pizza 4 Fromages",
@@ -1101,7 +1148,8 @@
     "eval_yannick": 4,
     "eval_joseph": 4.1,
     "eval_mika": 4.1,
-    "eval_luce": 3.9
+    "eval_luce": 3.9,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F_4_%D1%81%D1%8B%D1%80_%D0%BF%D0%B8%D1%86%D1%86%D0%B0%D1%81%D1%8B.jpg"
   },
   {
     "nom": "Boeuf Bourguignon",
@@ -1124,7 +1172,8 @@
     "eval_yannick": 4.6,
     "eval_joseph": 4.2,
     "eval_mika": 4.7,
-    "eval_luce": 4.4
+    "eval_luce": 4.4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Beef_bourguignon_NYT.jpg"
   },
   {
     "nom": "Coq au Vin",
@@ -1147,7 +1196,8 @@
     "eval_yannick": 4.5,
     "eval_joseph": 4.1,
     "eval_mika": 4.6,
-    "eval_luce": 4.3
+    "eval_luce": 4.3,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Gourmet_coq_au_vin.jpg"
   },
   {
     "nom": "Osso Buco",
@@ -1170,7 +1220,8 @@
     "eval_yannick": 4.4,
     "eval_joseph": 4,
     "eval_mika": 4.5,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ossobuco.jpg"
   },
   {
     "nom": "Confit de Canard",
@@ -1193,7 +1244,8 @@
     "eval_yannick": 4.3,
     "eval_joseph": 3.9,
     "eval_mika": 4.4,
-    "eval_luce": 4.1
+    "eval_luce": 4.1,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Confitdecanard.jpg"
   },
   {
     "nom": "Gigot d'Agneau",
@@ -1216,7 +1268,8 @@
     "eval_yannick": 4.5,
     "eval_joseph": 4.2,
     "eval_mika": 4.6,
-    "eval_luce": 4.3
+    "eval_luce": 4.3,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Leg_of_lamb.jpg"
   },
   {
     "nom": "Filet de Boeuf Wellington",
@@ -1239,7 +1292,8 @@
     "eval_yannick": 4.7,
     "eval_joseph": 4.3,
     "eval_mika": 4.8,
-    "eval_luce": 4.5
+    "eval_luce": 4.5,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Beef_Wellington_2019.jpg"
   },
   {
     "nom": "Rôti de Porc aux Pommes",
@@ -1262,7 +1316,8 @@
     "eval_yannick": 4.2,
     "eval_joseph": 4.1,
     "eval_mika": 4.3,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Roast_pork.jpg"
   },
   {
     "nom": "Cassoulet Toulousain",
@@ -1285,7 +1340,8 @@
     "eval_yannick": 4.4,
     "eval_joseph": 4,
     "eval_mika": 4.5,
-    "eval_luce": 4.2
+    "eval_luce": 4.2,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Bowl_of_cassoulet.JPG"
   },
   {
     "nom": "Pot-au-Feu",
@@ -1308,7 +1364,8 @@
     "eval_yannick": 4.1,
     "eval_joseph": 3.9,
     "eval_mika": 4.2,
-    "eval_luce": 4
+    "eval_luce": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Pot-au-feu_SAM_2724.JPG"
   },
   {
     "nom": "Bouillabaisse",
@@ -1331,7 +1388,8 @@
     "eval_yannick": 4.6,
     "eval_joseph": 4.1,
     "eval_mika": 4.7,
-    "eval_luce": 4.4
+    "eval_luce": 4.4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Bullabessa.jpg"
   },
   {
     "nom": "Pâtes aux haricots verts et gremolata d'amandes",

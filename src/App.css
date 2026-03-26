@@ -1357,21 +1357,30 @@ input[type="range"] {
 }
 .recette-card:hover { background: var(--surface); }
 
-/* ── Image watercolor ── */
+/* ── Image aquarelle ────────────────────────────────────────────────────────
+   Technique : mix-blend-mode: multiply sur fond parchemin.
+   Les zones claires de la photo prennent la teinte du fond (ivoire chaud),
+   les zones foncées restent foncées → effet encre/aquarelle sur papier.
+   Aucun blur → aucun grain.
+────────────────────────────────────────────────────────────────────────── */
 .recette-card__img-wrapper {
   position: relative;
   width: 100%;
   height: 148px;
   overflow: hidden;
   flex-shrink: 0;
-  background: var(--surface-2);
+  /* fond parchemin chaud visible dans les zones claires de la photo */
+  background: #f2ebe0;
 }
 .recette-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: saturate(0.32) contrast(0.74) brightness(1.28) sepia(0.32) hue-rotate(-8deg) blur(0.5px);
+  /* désaturation douce + luminosité haute + teinte sépia → tons pastels */
+  filter: saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
+  /* les blancs deviennent la couleur du fond = effet aquarelle sur parchemin */
+  mix-blend-mode: multiply;
   transition: transform 0.6s ease;
 }
 .recette-card:hover .recette-card__img { transform: scale(1.04); }
@@ -1379,9 +1388,12 @@ input[type="range"] {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(250,250,248,0) 25%, rgba(250,250,248,0.82) 100%),
-    linear-gradient(135deg, rgba(238,244,232,0.22) 0%, rgba(245,235,228,0.22) 100%);
+  /* fondu vers le bas pour laisser place au texte */
+  background: linear-gradient(
+    to bottom,
+    rgba(242,235,224,0) 35%,
+    rgba(242,235,224,0.88) 100%
+  );
   pointer-events: none;
 }
 .recette-card__img-placeholder {
@@ -1560,17 +1572,37 @@ input[type="range"] {
 .recette-card__edit-btn:hover { color: var(--forest); }
 
 /* ── Image recette dans le planning ───────────────────────────────────────── */
+.planning-repas__img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.55rem;
+  background: #f2ebe0;
+}
 .planning-repas__img {
   display: block;
   width: 100%;
-  height: 110px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 0.55rem;
-  filter: saturate(0.32) contrast(0.74) brightness(1.28) sepia(0.32) hue-rotate(-8deg) blur(0.5px);
+  filter: saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
+  mix-blend-mode: multiply;
+}
+.planning-repas__img-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(242,235,224,0) 50%,
+    rgba(242,235,224,0.55) 100%
+  );
+  pointer-events: none;
 }
 .recette-form__img-preview img {
-  filter: saturate(0.32) contrast(0.74) brightness(1.28) sepia(0.32) hue-rotate(-8deg) blur(0.5px);
+  filter: saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
+  mix-blend-mode: multiply;
 }
 
 /* ── Prévisualisation image dans le formulaire ─────────────────────────────── */
