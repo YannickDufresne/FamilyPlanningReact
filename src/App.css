@@ -1371,7 +1371,7 @@ input[type="range"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: url(#aquarelle) saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
+  filter: saturate(0.32) contrast(0.74) brightness(1.28) sepia(0.32) hue-rotate(-8deg) blur(0.5px);
   transition: transform 0.6s ease;
 }
 .recette-card:hover .recette-card__img { transform: scale(1.04); }
@@ -1567,10 +1567,10 @@ input[type="range"] {
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 0.55rem;
-  filter: url(#aquarelle) saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
+  filter: saturate(0.32) contrast(0.74) brightness(1.28) sepia(0.32) hue-rotate(-8deg) blur(0.5px);
 }
 .recette-form__img-preview img {
-  filter: url(#aquarelle) saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
+  filter: saturate(0.32) contrast(0.74) brightness(1.28) sepia(0.32) hue-rotate(-8deg) blur(0.5px);
 }
 
 /* ── Prévisualisation image dans le formulaire ─────────────────────────────── */
