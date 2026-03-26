@@ -33,7 +33,7 @@ const ORIGINES_SUGGEREES = [
 ];
 
 const RECETTE_VIDE = {
-  nom: '', nom_original: '', url: '', origine: '', regime_alimentaire: 'omnivore',
+  nom: '', nom_original: '', url: '', image_url: '', origine: '', regime_alimentaire: 'omnivore',
   temps_preparation: '', cout: 3, ingredients: '', livre: '', notes: '',
   source: 'manuel',
   theme_pasta_rapido: 0, theme_bol_nwich: 0, theme_criiions_poisson: 0,
@@ -156,6 +156,20 @@ function parseDuration(iso) {
   return (parseInt(m[1] || 0) * 60) + parseInt(m[2] || 0) || '';
 }
 
+function extraireOgImage(html) {
+  const patterns = [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
+  ];
+  for (const p of patterns) {
+    const m = html.match(p);
+    if (m?.[1]?.startsWith('http')) return m[1];
+  }
+  return null;
+}
+
 function extraireJsonLd(html) {
   const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   for (const m of matches) {
@@ -201,14 +215,17 @@ async function enrichirDepuisUrl(url, apiKey, setForm, setStatut, promptTemplate
   let jsonLd = null;
 
   // Étape 1 : tenter la récupération de la page via proxy CORS
+  let ogImage = null;
   try {
     const proxy = `https://corsproxy.io/?${encodeURIComponent(url)}`;
     const r = await fetch(proxy, { signal: AbortSignal.timeout(8000) });
     if (r.ok) {
       const html = await r.text();
-      jsonLd = extraireJsonLd(html);
+      jsonLd  = extraireJsonLd(html);
+      ogImage = extraireOgImage(html);
     }
   } catch { /* proxy échoué, on continue */ }
+  if (ogImage) setForm(f => ({ ...f, image_url: f.image_url || ogImage }));
 
   if (!apiKey) {
     // Pas de clé : on remplit ce qu'on peut avec le JSON-LD seul
@@ -582,6 +599,24 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
           />
         </label>
 
+        <label className="recette-form__field">
+          <span>Image <em>(URL)</em></span>
+          <div className="recette-form__img-row">
+            <input
+              type="url"
+              className="recette-form__input"
+              placeholder="https://… (rempli automatiquement par Analyser)"
+              value={form.image_url}
+              onChange={e => set('image_url', e.target.value)}
+            />
+            {form.image_url && (
+              <div className="recette-form__img-preview">
+                <img src={form.image_url} alt="" onError={e => e.target.style.display='none'} />
+              </div>
+            )}
+          </div>
+        </label>
+
         <div className="recette-form__row">
           <label className="recette-form__field">
             <span>Origine culturelle</span>
@@ -752,51 +787,61 @@ function RecetteCard({ recette, onEdit }) {
   const regime      = REGIME_CONFIG[recette.regime_alimentaire];
   const dollarSigns = '$'.repeat(Math.min(recette.cout || 1, 6));
 
+  const themeEmoji = themes[0]?.[1]?.emoji || '🍽';
+
   return (
     <article className="recette-card">
-      <div className="recette-card__top">
-        {themes.map(([key, t]) => (
-          <span key={key} className="recette-tag recette-tag--theme">{t.emoji} {t.label}</span>
-        ))}
-        {regime && (
-          <span className="recette-tag recette-tag--regime" style={{ color: regime.color }}>{regime.label}</span>
-        )}
-        {recette._source === 'local' && (
-          <span className="recette-tag recette-tag--local">✦ ajoutée</span>
-        )}
+      <div className="recette-card__img-wrapper">
+        {recette.image_url
+          ? <img className="recette-card__img" src={recette.image_url} alt={recette.nom} loading="lazy" />
+          : <div className="recette-card__img-placeholder">{themeEmoji}</div>
+        }
       </div>
-
-      <h3 className="recette-card__nom">
-        {recette.url ? (
-          <a className="recette-card__lien" href={recette.url} target="_blank" rel="noopener noreferrer">
-            {recette.nom}
-          </a>
-        ) : recette.nom}
-        {recette.source === 'nyt_cooking' && (
-          <span className="nyt-badge" title="Coup de cœur NYT Cooking">♥ NYT</span>
-        )}
-      </h3>
-
-      <div className="recette-card__meta">
-        {recette.cout > 0 && <span className="recette-card__cout">{dollarSigns}</span>}
-        {recette.cout > 0 && recette.temps_preparation > 0 && <span className="recette-card__dot">·</span>}
-        {recette.temps_preparation > 0 && <span>{recette.temps_preparation} min</span>}
-        {recette.origine && <><span className="recette-card__dot">·</span><span>{recette.origine}</span></>}
-        {avgRating && <><span className="recette-card__dot">·</span><span className="recette-card__avg">★ {avgRating}</span></>}
-      </div>
-
-      {recette.ingredients && <p className="recette-card__ingredients">{recette.ingredients}</p>}
-      {recette.notes        && <p className="recette-card__notes">{recette.notes}</p>}
-
-      {hasRatings && (
-        <div className="recette-card__evals">
-          {evalsValides.map(m => (
-            <span key={m.key} className="recette-eval-chip">{m.emoji} {recette[m.key]}</span>
+      <div className="recette-card__body">
+        <div className="recette-card__top">
+          {themes.map(([key, t]) => (
+            <span key={key} className="recette-tag recette-tag--theme">{t.emoji} {t.label}</span>
           ))}
+          {regime && (
+            <span className="recette-tag recette-tag--regime" style={{ color: regime.color }}>{regime.label}</span>
+          )}
+          {recette._source === 'local' && (
+            <span className="recette-tag recette-tag--local">✦ ajoutée</span>
+          )}
         </div>
-      )}
 
-      {recette.livre && <div className="recette-card__livre">📖 {recette.livre}</div>}
+        <h3 className="recette-card__nom">
+          {recette.url ? (
+            <a className="recette-card__lien" href={recette.url} target="_blank" rel="noopener noreferrer">
+              {recette.nom}
+            </a>
+          ) : recette.nom}
+          {recette.source === 'nyt_cooking' && (
+            <span className="nyt-badge" title="Coup de cœur NYT Cooking">♥ NYT</span>
+          )}
+        </h3>
+
+        <div className="recette-card__meta">
+          {recette.cout > 0 && <span className="recette-card__cout">{dollarSigns}</span>}
+          {recette.cout > 0 && recette.temps_preparation > 0 && <span className="recette-card__dot">·</span>}
+          {recette.temps_preparation > 0 && <span>{recette.temps_preparation} min</span>}
+          {recette.origine && <><span className="recette-card__dot">·</span><span>{recette.origine}</span></>}
+          {avgRating && <><span className="recette-card__dot">·</span><span className="recette-card__avg">★ {avgRating}</span></>}
+        </div>
+
+        {recette.ingredients && <p className="recette-card__ingredients">{recette.ingredients}</p>}
+        {recette.notes        && <p className="recette-card__notes">{recette.notes}</p>}
+
+        {hasRatings && (
+          <div className="recette-card__evals">
+            {evalsValides.map(m => (
+              <span key={m.key} className="recette-eval-chip">{m.emoji} {recette[m.key]}</span>
+            ))}
+          </div>
+        )}
+
+        {recette.livre && <div className="recette-card__livre">📖 {recette.livre}</div>}
+      </div>
 
       <button className="recette-card__edit-btn" onClick={() => onEdit(recette)} title="Modifier">✏</button>
     </article>

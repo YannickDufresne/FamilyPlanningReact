@@ -191,6 +191,14 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
 
       {/* Repas */}
       <div className="planning-item">
+        {recette.image_url && !isWarning && (
+          <img
+            className="planning-repas__img"
+            src={recette.image_url}
+            alt={recette.nom}
+            loading="lazy"
+          />
+        )}
         <div className="planning-item__label">Repas</div>
         <div className="planning-item__name">
           {recette.url && !isWarning ? (
