@@ -1,12 +1,13 @@
-name: Mise à jour des activités — Québec
+name: Préparation semaine — vendredi soir
 
 on:
   schedule:
-    # Deux crons pour couvrir heure d'été (UTC-4) et heure d'hiver (UTC-5)
-    - cron: '0 16 * * 0'   # Midi HNDE / heure d'été  (avril → octobre)
-    - cron: '0 17 * * 0'   # Midi HNE  / heure d'hiver (novembre → mars)
-  workflow_dispatch:
-    # Permettre le déclenchement manuel depuis GitHub
+    # Vendredi 23h heure de Québec (samedi matin UTC)
+    # Heure d'été  (UTC-4) : vendredi 23h = samedi 03h UTC
+    # Heure d'hiver (UTC-5) : vendredi 23h = samedi 04h UTC
+    - cron: '0 3 * * 6'   # Heure d'été  (avril → octobre)
+    - cron: '0 4 * * 6'   # Heure d'hiver (novembre → mars)
+  workflow_dispatch:      # Déclenchement manuel depuis GitHub si besoin
 
 permissions:
   contents: write
@@ -14,25 +15,7 @@ permissions:
   id-token: write
 
 jobs:
-  check-heure:
-    runs-on: ubuntu-latest
-    outputs:
-      est-midi: ${{ steps.verif.outputs.est-midi }}
-    steps:
-      - name: Vérifier si c'est midi à Québec
-        id: verif
-        run: |
-          HEURE=$(TZ='America/Toronto' date '+%H')
-          echo "Heure locale Québec : $HEURE h"
-          if [ "$HEURE" = "12" ]; then
-            echo "est-midi=true" >> $GITHUB_OUTPUT
-          else
-            echo "est-midi=false" >> $GITHUB_OUTPUT
-          fi
-
   update:
-    needs: check-heure
-    if: needs.check-heure.outputs.est-midi == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
@@ -48,24 +31,31 @@ jobs:
       - name: Installer les dépendances
         run: npm ci
 
-      - name: Fetcher les événements et suggestions IA
+      - name: Activités & événements (Ticketmaster + IA)
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-activites.mjs
 
+      # ── Prochains scripts à ajouter ici ─────────────────────────────────────
+      # - name: Circulaires & aubaines (Maxi, Costco, Lufa)
+      #   run: node scripts/fetch-aubaines.mjs
+      #
+      # - name: Recommandations épicerie
+      #   run: node scripts/generer-liste-epicerie.mjs
+
       - name: Vérifier s'il y a des changements
         id: check
         run: |
-          git diff --quiet src/data/activites.json src/data/meta.json || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
 
-      - name: Commit et push si changements
+      - name: Commit et push
         if: steps.check.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/activites.json src/data/meta.json
-          git commit -m "🗓 Activités Québec — semaine du $(TZ='America/Toronto' date '+%d %b %Y')"
+          git add -A
+          git commit -m "🌙 Préparation semaine du $(TZ='America/Toronto' date '+%d %b %Y' -d 'next monday')"
           git pull --rebase origin main
           git push
 
@@ -79,7 +69,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main  # Prendre le commit mis à jour
+          ref: main
 
       - uses: actions/setup-node@v4
         with:

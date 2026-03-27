@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import WeeklyPlanning from './components/WeeklyPlanning';
@@ -18,6 +18,22 @@ import meta from './data/meta.json';
 import './App.css';
 
 const HASH = 'UEBtcGxlbW91c3NlMjAxMiE=';
+const HISTORIQUE_STORE = 'planning_historique';
+const MAX_HISTORIQUE   = 8; // semaines conservées
+
+function lundiISO(dateStr, deltaJours) {
+  const d = new Date(dateStr + 'T12:00:00');
+  d.setDate(d.getDate() + deltaJours);
+  return d.toISOString().split('T')[0];
+}
+function formatSemaineNav(lundiStr) {
+  const lundi   = new Date(lundiStr + 'T12:00:00');
+  const dimanche = new Date(lundiStr + 'T12:00:00');
+  dimanche.setDate(lundi.getDate() + 6);
+  const fL = new Intl.DateTimeFormat('fr-CA', { day: 'numeric', month: 'short' }).format(lundi);
+  const fD = new Intl.DateTimeFormat('fr-CA', { day: 'numeric', month: 'short', year: 'numeric' }).format(dimanche);
+  return `${fL} – ${fD}`;
+}
 
 const DEFAULT_FILTRES = {
   nbVegetarien: 2,
@@ -43,7 +59,8 @@ export default function App() {
     for (const c of debut) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
     return (h % 2147483646) + 1;
   });
-  const [view, setView] = useState('planning'); // 'planning' | 'recettes' | 'activites'
+  const [view, setView]           = useState('planning');
+  const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showProfilsModal, setShowProfilsModal] = useState(false);
   const [profils, setProfils] = useState(() => {
@@ -67,7 +84,32 @@ export default function App() {
     [filtres, seed, profils]
   );
 
-  const stats = useMemo(() => calculerStats(planning), [planning]);
+  // ── Historique ───────────────────────────────────────────────────────────────
+  // Sauvegarde automatique du planning courant
+  useEffect(() => {
+    if (!planning || planning.length === 0) return;
+    try {
+      const stored = JSON.parse(localStorage.getItem(HISTORIQUE_STORE) || '{}');
+      stored[meta.semaine.debut] = { planning, savedAt: new Date().toISOString() };
+      const keys    = Object.keys(stored).sort().reverse().slice(0, MAX_HISTORIQUE);
+      const trimmed = Object.fromEntries(keys.map(k => [k, stored[k]]));
+      localStorage.setItem(HISTORIQUE_STORE, JSON.stringify(trimmed));
+    } catch (e) { console.warn('Historique planning:', e); }
+  }, [planning]);
+
+  const historique = useMemo(() => {
+    try { return JSON.parse(localStorage.getItem(HISTORIQUE_STORE) || '{}'); }
+    catch { return {}; }
+  }, []);
+
+  const estSemaineActuelle = semaineVue === meta.semaine.debut;
+  const planningVue        = estSemaineActuelle ? planning : (historique[semaineVue]?.planning || []);
+  const semainePrecedente  = lundiISO(semaineVue, -7);
+  const semaineSuivante    = lundiISO(semaineVue, +7);
+  const peutReculer        = !!historique[semainePrecedente];
+  const peutAvancer        = semaineVue < meta.semaine.debut;
+
+  const stats = useMemo(() => calculerStats(planningVue), [planningVue]);
 
   return (
     <div className="app">
@@ -87,12 +129,36 @@ export default function App() {
           <Sidebar
             filtres={filtres}
             setFiltres={setFiltres}
-            onRebrasser={() => setSeed(Math.floor(Math.random() * 1e9))}
+            onRebrasser={estSemaineActuelle ? () => setSeed(Math.floor(Math.random() * 1e9)) : null}
             stats={stats}
+            lectureSeule={!estSemaineActuelle}
           />
           <main className="main-content">
-            <WeeklyPlanning planning={planning} profils={profils} />
-            <GroceryList planning={planning} />
+            {/* Navigation entre semaines */}
+            <div className="semaine-nav">
+              <button
+                className="semaine-nav__btn"
+                onClick={() => peutReculer && setSemaineVue(semainePrecedente)}
+                disabled={!peutReculer}
+                title="Semaine précédente"
+              >← Préc.</button>
+              <span className="semaine-nav__label">
+                {formatSemaineNav(semaineVue)}
+                {!estSemaineActuelle && (
+                  <button className="semaine-nav__retour" onClick={() => setSemaineVue(meta.semaine.debut)}>
+                    Semaine actuelle
+                  </button>
+                )}
+              </span>
+              <button
+                className="semaine-nav__btn"
+                onClick={() => peutAvancer && setSemaineVue(semaineSuivante)}
+                disabled={!peutAvancer}
+                title="Semaine suivante"
+              >Suiv. →</button>
+            </div>
+            <WeeklyPlanning planning={planningVue} profils={profils} />
+            <GroceryList planning={planningVue} />
           </main>
         </div>
       )}

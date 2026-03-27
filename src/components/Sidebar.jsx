@@ -4,7 +4,7 @@ import exercices from '../data/exercices.json';
 import activites from '../data/activites.json';
 import musique from '../data/musique.json';
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
+export default function Sidebar({ filtres, setFiltres, onRebrasser, stats, lectureSeule }) {
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
@@ -96,9 +96,10 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats }) {
 
         <hr className="sidebar-rule" />
 
-        <button className="btn-rebrasser" onClick={onRebrasser}>
-          Rebrasser les cartes
-        </button>
+        {lectureSeule
+          ? <p className="sidebar-lecture-seule">📖 Semaine passée — lecture seule</p>
+          : <button className="btn-rebrasser" onClick={onRebrasser}>Rebrasser les cartes</button>
+        }
 
         <hr className="sidebar-rule" />
 

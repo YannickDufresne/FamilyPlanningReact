@@ -38,7 +38,9 @@ function calculerAge(naissance, dateRef = new Date()) {
 function getSemaine() {
   const today = new Date();
   const day = today.getDay();
-  const diff = day === 0 ? 1 : 1 - day;  // dimanche → prochain lundi
+  // Toujours cibler le prochain lundi (ou aujourd'hui si lundi)
+  // Permet d'exécuter le script le vendredi soir pour préparer la semaine suivante
+  const diff = day === 1 ? 0 : (8 - day) % 7;
   const lundi = new Date(today);
   lundi.setDate(today.getDate() + diff);
   const dimanche = new Date(lundi);
