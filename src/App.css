@@ -2477,6 +2477,28 @@ input[type="range"] {
   margin-bottom: 6px;
 }
 
+.profils-photo-section {
+  display: flex; align-items: center; gap: 16px;
+  padding: 12px 16px; margin-bottom: 12px;
+  background: var(--ink-0); border-radius: 12px;
+}
+.profils-photo-preview {
+  width: 72px; height: 72px; border-radius: 50%;
+  object-fit: cover; border: 2px solid var(--ink-2);
+  flex-shrink: 0;
+}
+.profils-photo-actions {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.profils-photo-btn {
+  background: white; border: 1px solid var(--ink-2); border-radius: 8px;
+  padding: 5px 12px; font-size: 0.8rem; cursor: pointer; color: var(--ink-5);
+  text-align: left;
+}
+.profils-photo-btn:hover { border-color: var(--forest); color: var(--forest); }
+.profils-photo-btn--reset { color: var(--ink-3); font-size: 0.75rem; }
+.profils-photo-erreur { font-size: 0.75rem; color: #c0392b; }
+
 .profils-modal__intro {
   font-size: 0.8rem;
   color: var(--ink-3);

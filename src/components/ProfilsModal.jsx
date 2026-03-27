@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function calculerAge(naissance) {
   if (!naissance) return null;
@@ -50,12 +50,38 @@ function CarteMembreEdit({ membre, onChange }) {
   );
 }
 
-export default function ProfilsModal({ profils, onSave, onClose }) {
+export default function ProfilsModal({ profils, onSave, onClose, photoUrl, onPhotoChange }) {
   const [local, setLocal] = useState(profils.map(p => ({ ...p })));
+  const [photoPreview, setPhotoPreview] = useState(photoUrl || null);
+  const [photoErreur, setPhotoErreur] = useState('');
+  const fileInputRef = useRef(null);
 
   const handleChange = (i, updated) => {
     setLocal(prev => prev.map((p, j) => j === i ? updated : p));
   };
+
+  function handlePhotoSelect(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      setPhotoErreur('Veuillez choisir une image (JPG, PNG, WebP…)');
+      return;
+    }
+    if (file.size > 4 * 1024 * 1024) {
+      setPhotoErreur('Image trop grande (max 4 Mo)');
+      return;
+    }
+    setPhotoErreur('');
+    const reader = new FileReader();
+    reader.onload = ev => {
+      const dataUrl = ev.target.result;
+      setPhotoPreview(dataUrl);
+      onPhotoChange?.(dataUrl);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  const photoAffichee = photoPreview || `${import.meta.env.BASE_URL}family_photo.jpg`;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -63,6 +89,33 @@ export default function ProfilsModal({ profils, onSave, onClose }) {
         <button className="modal-close" onClick={onClose} aria-label="Fermer">✕</button>
 
         <h2 className="profils-modal__titre">Profils de la famille</h2>
+
+        {/* Photo de famille */}
+        <div className="profils-photo-section">
+          <img src={photoAffichee} alt="Photo de famille" className="profils-photo-preview" />
+          <div className="profils-photo-actions">
+            <button className="profils-photo-btn" onClick={() => fileInputRef.current?.click()}>
+              📷 Changer la photo
+            </button>
+            {photoPreview && photoPreview !== `${import.meta.env.BASE_URL}family_photo.jpg` && (
+              <button className="profils-photo-btn profils-photo-btn--reset" onClick={() => {
+                setPhotoPreview(null);
+                onPhotoChange?.(null);
+              }}>
+                ↺ Photo par défaut
+              </button>
+            )}
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              style={{ display: 'none' }}
+              onChange={handlePhotoSelect}
+            />
+            {photoErreur && <span className="profils-photo-erreur">{photoErreur}</span>}
+          </div>
+        </div>
+
         <p className="profils-modal__intro">
           Ces préférences permettent de classer les activités selon les goûts de chacun.
         </p>

@@ -25,7 +25,7 @@ function SourceDot({ statut, label }) {
   );
 }
 
-export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie, onViewUpdate, onViewProfils, activeView }) {
+export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie, onViewUpdate, onViewProfils, photoUrl, activeView }) {
   const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
   const maj = new Date((meta.lastUpdated || '').split('T')[0] + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -46,7 +46,7 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
         aria-label="Profils de la famille"
       >
         <img
-          src={`${import.meta.env.BASE_URL}family_photo.jpg`}
+          src={photoUrl || `${import.meta.env.BASE_URL}family_photo.jpg`}
           alt="Portrait de famille"
           className="family-photo"
         />

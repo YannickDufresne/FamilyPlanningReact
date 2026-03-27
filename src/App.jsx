@@ -75,6 +75,9 @@ export default function App() {
     } catch {}
     return familleDefaut;
   });
+  const [photoFamille, setPhotoFamille] = useState(
+    () => localStorage.getItem('fp_photo_famille') || null
+  );
 
   // ── État par semaine (rechargé à chaque navigation) ───────────────────────
   const [joursVerrouilles, setJoursVerrouilles] = useState(() => {
@@ -281,6 +284,7 @@ export default function App() {
         onViewEpicerie={() => setView('epicerie')}
         onViewUpdate={() => setShowUpdateModal(true)}
         onViewProfils={() => setShowProfilsModal(true)}
+        photoUrl={photoFamille}
         activeView={view}
       />
       {view === 'recettes' ? (
@@ -352,6 +356,15 @@ export default function App() {
             setShowProfilsModal(false);
           }}
           onClose={() => setShowProfilsModal(false)}
+          photoUrl={photoFamille}
+          onPhotoChange={(dataUrl) => {
+            if (dataUrl) {
+              localStorage.setItem('fp_photo_famille', dataUrl);
+            } else {
+              localStorage.removeItem('fp_photo_famille');
+            }
+            setPhotoFamille(dataUrl);
+          }}
         />
       )}
     </div>
