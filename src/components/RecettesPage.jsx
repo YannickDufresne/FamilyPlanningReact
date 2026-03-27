@@ -51,6 +51,15 @@ const GITHUB_TOKEN_STORE = 'github_token';
 const GITHUB_REPO        = 'YannickDufresne/FamilyPlanningReact';
 
 // ── Génération aquarelle via Together AI ─────────────────────────────────────
+function toSlug(nom) {
+  return nom.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/'/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// Génère en b64_json pour pouvoir committer directement sur GitHub
 async function genererAquarelleTogether(nom, nomOriginal, togetherKey) {
   if (!togetherKey) return null;
   const dish   = nomOriginal || nom;
@@ -60,13 +69,36 @@ async function genererAquarelleTogether(nom, nomOriginal, togetherKey) {
     headers: { 'Authorization': `Bearer ${togetherKey}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       model: 'black-forest-labs/FLUX.1-schnell',
-      prompt, width: 512, height: 512, steps: 4, n: 1, response_format: 'url',
+      prompt, width: 512, height: 512, steps: 4, n: 1, response_format: 'b64_json',
     }),
     signal: AbortSignal.timeout(60000),
   });
   if (!resp.ok) throw new Error(`Together AI ${resp.status}`);
   const json = await resp.json();
-  return json?.data?.[0]?.url || null;
+  return json?.data?.[0]?.b64_json || null; // base64 brut
+}
+
+// Committe l'image (base64) dans le repo GitHub → permanent à jamais
+async function commitImageGitHub(slug, b64, ghToken) {
+  const path    = `public/images/recettes/${slug}.jpg`;
+  const apiBase = `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`;
+  const headers = { Authorization: `Bearer ${ghToken}`, 'Content-Type': 'application/json' };
+
+  // Vérifie si le fichier existe déjà (pour obtenir son sha)
+  let sha;
+  try {
+    const check = await fetch(apiBase, { headers });
+    if (check.ok) { const d = await check.json(); sha = d.sha; }
+  } catch { /* nouveau fichier */ }
+
+  const body = {
+    message: `Aquarelle : ${slug}`,
+    content: b64,
+    branch: 'main',
+    ...(sha ? { sha } : {}),
+  };
+  const put = await fetch(apiBase, { method: 'PUT', headers, body: JSON.stringify(body) });
+  if (!put.ok) throw new Error(`GitHub commit image ${put.status}`);
 }
 const RECETTES_PATH      = 'src/data/recettes.json';
 
@@ -383,7 +415,7 @@ function useRecettesCustom() {
     });
   }, []);
 
-  const ajouter   = useCallback(r  => save(c => ({ ...c, ajoutees: [...c.ajoutees, { ...r, _id: `custom-${Date.now()}`, _source: 'local' }] })), [save]);
+  const ajouter   = useCallback((r, idOverride) => save(c => ({ ...c, ajoutees: [...c.ajoutees, { ...r, _id: idOverride || `custom-${Date.now()}`, _source: 'local' }] })), [save]);
   const modifier  = useCallback((id, changes) => {
     if (id.startsWith('json-')) save(c => ({ ...c, modifiees: { ...c.modifiees, [id]: { ...(c.modifiees[id] || {}), ...changes } } }));
     else save(c => ({ ...c, ajoutees: c.ajoutees.map(r => r._id === id ? { ...r, ...changes } : r) }));
@@ -976,19 +1008,24 @@ export default function RecettesPage({ onRetour }) {
   function ouvrirAjout()        { setRecetteEnEdition(null); setDrawerOpen(true); }
   function ouvrirEdition(r)     { setRecetteEnEdition(r);    setDrawerOpen(true); }
   function handleSave(form) {
-    // Sauvegarde immédiatement
-    if (recetteEnEdition) modifier(recetteEnEdition._id, form);
-    else ajouter(form);
+    const isEdit    = !!recetteEnEdition;
+    const recetteId = isEdit ? recetteEnEdition._id : `custom-${Date.now()}`;
+
+    if (isEdit) modifier(recetteId, form);
+    else        ajouter(form, recetteId);
     setDrawerOpen(false);
 
-    // Génère l'aquarelle en arrière-plan si absente et clé Together AI configurée
+    // Génère + committe l'aquarelle en arrière-plan si absente
     if (!form.image_aquarelle && togetherKey && form.nom) {
+      const slug      = toSlug(form.nom);
+      const localPath = `images/recettes/${slug}.jpg`;
+
       genererAquarelleTogether(form.nom, form.nom_original, togetherKey)
-        .then(url => {
-          if (url) {
-            const id = recetteEnEdition?._id ?? form.nom;
-            modifier(id, { ...form, image_aquarelle: url });
-          }
+        .then(async b64 => {
+          if (!b64) return;
+          if (ghToken) await commitImageGitHub(slug, b64, ghToken);
+          const aquarelleVal = ghToken ? localPath : `data:image/jpeg;base64,${b64}`;
+          modifier(recetteId, { ...form, image_aquarelle: aquarelleVal });
         })
         .catch(e => console.warn('Génération aquarelle échouée :', e));
     }
