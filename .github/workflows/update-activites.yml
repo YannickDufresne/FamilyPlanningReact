@@ -37,7 +37,16 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-activites.mjs
 
-      - name: Circulaires & aubaines (Maxi, Costco, Lufa)
+      # Note : fetch-costco-catalogue.mjs n'est PAS ici — il doit être exécuté
+      # manuellement une fois par mois (catalogue complet Costco).
+      # Commande : node scripts/fetch-costco-catalogue.mjs
+
+      - name: Circulaire Maxi (Loblaws API)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/fetch-maxi-loblaws.mjs
+
+      - name: Aubaines & liste épicerie
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-aubaines.mjs

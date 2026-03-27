@@ -1,9 +1,9 @@
 /**
  * fetch-aubaines.mjs
  * Sources des aubaines de la semaine :
- *   1. Maxi (René-Lévesque, Québec) → via Flipp API
- *   2. Costco (Québec) → via site web
- *   3. Analyse Claude → matching ingrédients, liste par magasin, recommandations Lufa
+ *   1. Maxi  → lit src/data/maxi_aubaines.json (généré par fetch-maxi-loblaws.mjs)
+ *   2. Costco → lit src/data/costco_catalogue.json (généré mensuellement par fetch-costco-catalogue.mjs)
+ *   3. Claude → analyse textuelle + sélection items Costco pertinents + fallback si données absentes
  *
  * Variables d'environnement :
  *   ANTHROPIC_API_KEY — requis pour l'analyse IA
@@ -11,7 +11,7 @@
  * Usage : node scripts/fetch-aubaines.mjs
  */
 
-import { writeFileSync, readFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import Anthropic from '@anthropic-ai/sdk';
@@ -33,166 +33,73 @@ function getSemaine() {
   return { debut: fmt(lundi), fin: fmt(dimanche), debutLisible: fmtLisible(lundi), finLisible: fmtLisible(dimanche) };
 }
 
-// ── Fetch circulaire Maxi via Flipp (scraping page web) ──────────────────────
-async function fetchMaxi() {
-  console.log('📦 Récupération circulaire Maxi (Flipp)…');
-  const headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Cache-Control': 'no-cache',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'none',
-  };
-
-  // Essai 1 : page Flipp Maxi → __NEXT_DATA__ JSON embarqué
-  try {
-    const res = await fetch('https://flipp.com/fr-ca/flyers/maxi?postal_code=G1R3Z9', { headers });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
-
-    const nextDataMatch = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
-    if (nextDataMatch) {
-      const data = JSON.parse(nextDataMatch[1]);
-      // Naviguer dans la structure Next.js pour trouver les items
-      const flyerItems = [];
-      const findItems = (obj) => {
-        if (!obj || typeof obj !== 'object') return;
-        if (Array.isArray(obj)) { obj.forEach(findItems); return; }
-        if (obj.name && (obj.current_price || obj.display_price || obj.sale_story)) {
-          flyerItems.push(obj);
-        }
-        Object.values(obj).forEach(findItems);
-      };
-      findItems(data);
-
-      if (flyerItems.length > 0) {
-        const results = flyerItems.map(item => ({
-          nom: item.name,
-          mots_cles: item.name.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-          prix: item.current_price,
-          prix_texte: item.display_price || (item.current_price ? `${item.current_price}$` : ''),
-          unite: item.size || '',
-          categorie: detecterCategorie(item.name),
-          rabais: item.sale_story || '',
-        })).filter(item => item.prix || item.prix_texte);
-
-        console.log(`  ✅ Maxi (__NEXT_DATA__): ${results.length} produits`);
-        return results;
-      }
-    }
-
-    // Essai 2 : chercher du JSON embarqué dans des balises <script> génériques
-    const scriptMatches = html.matchAll(/<script[^>]*>([\s\S]{100,50000}?)<\/script>/g);
-    for (const m of scriptMatches) {
-      const src = m[1];
-      if (!src.includes('"current_price"') && !src.includes('"sale_story"')) continue;
-      try {
-        // Extraire les objets item du script
-        const itemMatches = src.matchAll(/\{"name":"([^"]+)"[^}]*"current_price":([0-9.]+)[^}]*\}/g);
-        const results = [];
-        for (const im of itemMatches) {
-          results.push({
-            nom: im[1],
-            mots_cles: im[1].toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-            prix: parseFloat(im[2]),
-            prix_texte: `${im[2]}$`,
-            categorie: detecterCategorie(im[1]),
-            rabais: '',
-          });
-        }
-        if (results.length > 0) {
-          console.log(`  ✅ Maxi (script inline): ${results.length} produits`);
-          return results;
-        }
-      } catch {}
-    }
-
-    console.warn('  ⚠️ Maxi: page Flipp récupérée mais aucun item extrait — Claude génèrera des suggestions');
+// ── Lire maxi_aubaines.json si disponible et de la bonne semaine ──────────────
+function lireMaxiAubaines(semaine) {
+  const path = join(DATA_DIR, 'maxi_aubaines.json');
+  if (!existsSync(path)) {
+    console.log('  ℹ️  maxi_aubaines.json absent — Claude génèrera des soldes Maxi');
     return [];
+  }
+
+  try {
+    const data = JSON.parse(readFileSync(path, 'utf-8'));
+    const items = data.items ?? [];
+
+    // Vérifier que c'est bien la bonne semaine
+    if (data.semaine && data.semaine !== semaine.debut) {
+      console.warn(`  ⚠️  maxi_aubaines.json est de la semaine ${data.semaine} (attendu: ${semaine.debut}) — Claude génèrera des soldes frais`);
+      return [];
+    }
+
+    if (items.length === 0) {
+      console.log('  ℹ️  maxi_aubaines.json vide — Claude génèrera des soldes Maxi');
+      return [];
+    }
+
+    console.log(`  ✅ maxi_aubaines.json: ${items.length} aubaines (storeId: ${data.storeId || 'N/A'})`);
+    return items;
   } catch (e) {
-    console.warn(`  ⚠️ Flipp Maxi échoué: ${e.message}`);
+    console.warn(`  ⚠️  Lecture maxi_aubaines.json échouée: ${e.message}`);
     return [];
   }
 }
 
-// ── Fetch aubaines Costco ─────────────────────────────────────────────────────
-async function fetchCostco() {
-  console.log('📦 Récupération aubaines Costco…');
-  const headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
-    'Cache-Control': 'no-cache',
-  };
-
-  // Essayer plusieurs URLs Costco
-  const urls = [
-    'https://www.costco.ca/hot-buys.html',
-    'https://www.costco.ca/instant-savings.html',
-    'https://www.costco.ca/savings-event.html',
-  ];
-
-  for (const url of urls) {
-    try {
-      const res = await fetch(url, { headers });
-      if (!res.ok) { console.warn(`  ⚠️ Costco ${url}: HTTP ${res.status}`); continue; }
-      const html = await res.text();
-
-      const products = [];
-
-      // Essai 1: JSON-LD
-      for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
-        try {
-          const data = JSON.parse(match[1]);
-          const items = Array.isArray(data) ? data : [data];
-          items.filter(d => d['@type'] === 'Product' && d.name).forEach(p => {
-            products.push({
-              nom: p.name,
-              mots_cles: p.name.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-              prix: p.offers?.price ? parseFloat(p.offers.price) : null,
-              prix_texte: p.offers?.price ? `${parseFloat(p.offers.price).toFixed(2)}$` : '',
-              categorie: detecterCategorie(p.name),
-              rabais: '',
-            });
-          });
-        } catch {}
-      }
-
-      // Essai 2: regex produits + prix
-      if (products.length === 0) {
-        const pairRe = /(?:product[-_](?:title|name|description))[^>]*>([^<]{5,80})<[\s\S]{0,200}?\$\s*([0-9]{1,4}\.[0-9]{2})/g;
-        for (const m of html.matchAll(pairRe)) {
-          const nom = m[1].trim().replace(/&amp;/g, '&');
-          products.push({
-            nom,
-            mots_cles: nom.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-            prix: parseFloat(m[2]),
-            prix_texte: `${m[2]}$`,
-            categorie: detecterCategorie(nom),
-            rabais: '',
-          });
-        }
-      }
-
-      if (products.length > 0) {
-        console.log(`  ✅ Costco (${url}): ${products.length} produits`);
-        return products.slice(0, 30);
-      }
-    } catch (e) {
-      console.warn(`  ⚠️ Costco ${url}: ${e.message}`);
-    }
+// ── Lire costco_catalogue.json si disponible ──────────────────────────────────
+function lireCostcoCatalogue() {
+  const path = join(DATA_DIR, 'costco_catalogue.json');
+  if (!existsSync(path)) {
+    console.log('  ℹ️  costco_catalogue.json absent — Claude génèrera des aubaines Costco');
+    return [];
   }
 
-  console.warn('  ⚠️ Costco: aucune donnée récupérée — Claude génèrera des suggestions');
-  return [];
+  try {
+    const data = JSON.parse(readFileSync(path, 'utf-8'));
+    const produits = data.produits ?? [];
+
+    if (produits.length === 0) {
+      console.log('  ℹ️  costco_catalogue.json vide — Claude génèrera des aubaines Costco');
+      return [];
+    }
+
+    // Vérifier l'âge du catalogue (avertissement si > 45 jours)
+    if (data.genereeLe) {
+      const age = (Date.now() - new Date(data.genereeLe).getTime()) / (1000 * 60 * 60 * 24);
+      if (age > 45) {
+        console.warn(`  ⚠️  costco_catalogue.json a ${Math.round(age)} jours — pensez à le régénérer avec fetch-costco-catalogue.mjs`);
+      }
+    }
+
+    console.log(`  ✅ costco_catalogue.json: ${produits.length} produits`);
+    return produits;
+  } catch (e) {
+    console.warn(`  ⚠️  Lecture costco_catalogue.json échouée: ${e.message}`);
+    return [];
+  }
 }
 
 // ── Détection de catégorie par mots-clés ─────────────────────────────────────
 function detecterCategorie(nom) {
-  const n = nom.toLowerCase();
+  const n = (nom || '').toLowerCase();
   if (/poulet|boeuf|porc|veau|agneau|dinde|viande|côte|steak|bacon|saucisse/.test(n)) return 'viande';
   if (/saumon|thon|crevette|poisson|morue|tilapia|truite|fruits de mer/.test(n)) return 'poisson';
   if (/laitue|épinard|carotte|brocoli|tomate|oignon|ail|courgette|patate|légume|céleri|poivron|chou|champignon/.test(n)) return 'legumes';
@@ -238,36 +145,53 @@ function parseJsonSafe(text) {
 }
 
 // ── Analyse Claude ─────────────────────────────────────────────────────────────
-// Rôle limité : générer les soldes Maxi/Costco + l'analyse textuelle.
-// La liste Lufa et la répartition par magasin sont calculées côté client (toujours fraîches).
-async function analyserAvecClaude(semaine, maxiRaw, costcoRaw) {
-  console.log('🤖 Analyse Claude — soldes Maxi/Costco + analyse hebdomadaire…');
+// Rôle :
+//   - Si données Maxi réelles disponibles : analyse textuelle + sélection Costco pertinents
+//   - Si données absentes : génère des soldes Maxi/Costco réalistes + analyse
+async function analyserAvecClaude(semaine, maxiItems, costcoProduits) {
+  const aMaxiReels = maxiItems.length > 0;
+  const aCostcoReels = costcoProduits.length > 0;
 
-  const maxiStr = maxiRaw.length > 0
-    ? maxiRaw.slice(0, 40).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
-    : '(circulaire non disponible — génère des soldes typiques réalistes pour Maxi Québec cette saison)';
+  console.log(`\n🤖 Analyse Claude — Maxi ${aMaxiReels ? 'réel' : 'généré'} / Costco ${aCostcoReels ? 'catalogue réel' : 'généré'}…`);
 
-  const costcoStr = costcoRaw.length > 0
-    ? costcoRaw.slice(0, 20).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}`).join('\n')
-    : '(données non disponibles — génère des aubaines réalistes Costco Canada cette saison)';
+  const maxiStr = aMaxiReels
+    ? maxiItems.slice(0, 40).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
+    : '(circulaire non disponible — génère des soldes typiques réalistes pour Maxi Québec cette saison, 8 à 12 produits)';
+
+  const costcoStr = aCostcoReels
+    ? `Catalogue complet disponible (${costcoProduits.length} produits). Voici un échantillon représentatif :\n` +
+      costcoProduits
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 30)
+        .map(p => `- ${p.nom} : ${p.prix_texte}`)
+        .join('\n') +
+      `\n\nSélectionne 5 à 8 produits Costco les plus pertinents pour une famille québécoise cette semaine.`
+    : '(catalogue non disponible — génère des aubaines réalistes Costco Canada cette saison, 5 à 8 produits)';
 
   const prompt = `Tu es l'assistant d'une famille québécoise (Québec ville).
 Magasins : Maxi René-Lévesque, Costco Québec, Lufa (bio local).
 Semaine : ${semaine.debutLisible} au ${semaine.finLisible}
 
-**Circulaire MAXI :**
+**Circulaire MAXI ${aMaxiReels ? '(données réelles API Loblaws)' : '(à générer)'}:**
 ${maxiStr}
 
-**Aubaines COSTCO :**
+**Aubaines COSTCO ${aCostcoReels ? '(catalogue réel — sélectionne les plus pertinents)' : '(à générer)'}:**
 ${costcoStr}
 
 **Ta mission :** Retourne UNIQUEMENT du JSON valide, sans texte autour, sans commentaires, sans virgules en trop.
+
+${aMaxiReels
+    ? `Les données Maxi sont réelles. Utilise-les telles quelles dans "maxi_aubaines" (en conservant nom, prix_texte, prix_regulier_texte, rabais, mots_cles, categorie).
+Ajoute "prix" (nombre) et "prix_regulier" (nombre ou null) si tu peux les déduire du texte.`
+    : `Génère des soldes Maxi réalistes pour cette saison au Québec.`}
 
 {
   "maxi_aubaines": [
     {
       "nom": "Poulet entier frais",
+      "prix": 7.99,
       "prix_texte": "7.99$/kg",
+      "prix_regulier": 11.99,
       "prix_regulier_texte": "11.99$/kg",
       "rabais": "33% de rabais",
       "mots_cles": ["poulet"],
@@ -277,7 +201,9 @@ ${costcoStr}
   "costco_aubaines": [
     {
       "nom": "Saumon atlantique côté",
+      "prix": 14.99,
       "prix_texte": "14.99$/kg",
+      "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": ["saumon"],
@@ -286,9 +212,7 @@ ${costcoStr}
   ],
   "analyse": "2-3 phrases sur les meilleures aubaines de la semaine pour cette famille, avec produits et économies précis.",
   "economies_estimees": "~18$"
-}
-
-Génère 8 à 12 aubaines Maxi et 5 à 8 aubaines Costco réalistes pour cette saison au Québec.`;
+}`;
 
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const response = await anthropic.messages.create({
@@ -306,29 +230,55 @@ async function main() {
   const semaine = getSemaine();
   console.log(`\n🛒 Fetch aubaines — semaine du ${semaine.debutLisible}\n`);
 
-  const [maxiRaw, costcoRaw] = await Promise.all([fetchMaxi(), fetchCostco()]);
+  console.log('📦 Lecture des données locales…');
+  const maxiItems = lireMaxiAubaines(semaine);
+  const costcoProduits = lireCostcoCatalogue();
 
   let analyse;
   if (process.env.ANTHROPIC_API_KEY) {
-    analyse = await analyserAvecClaude(semaine, maxiRaw, costcoRaw);
+    analyse = await analyserAvecClaude(semaine, maxiItems, costcoProduits);
   } else {
-    console.warn('⚠️  ANTHROPIC_API_KEY manquante — analyse IA désactivée');
+    console.warn('\n⚠️  ANTHROPIC_API_KEY manquante — analyse IA désactivée');
+
+    // Sans Claude : utiliser les données disponibles directement
+    const costcoSlice = costcoProduits.length > 0
+      ? costcoProduits.sort(() => Math.random() - 0.5).slice(0, 8).map(p => ({
+          nom: p.nom,
+          prix: p.prix,
+          prix_texte: p.prix_texte,
+          prix_regulier: null,
+          prix_regulier_texte: '',
+          rabais: '',
+          mots_cles: p.mots_cles || [],
+          categorie: p.categorie || detecterCategorie(p.nom),
+        }))
+      : [];
+
     analyse = {
-      maxi_aubaines: maxiRaw.slice(0, 20),
-      costco_aubaines: costcoRaw.slice(0, 10),
+      maxi_aubaines: maxiItems.slice(0, 20),
+      costco_aubaines: costcoSlice,
       analyse: 'Analyse IA non disponible (clé ANTHROPIC_API_KEY manquante).',
       economies_estimees: '',
     };
   }
 
-  // aubaines.json : seulement les soldes Maxi/Costco + analyse textuelle.
+  // aubaines.json : soldes Maxi/Costco + analyse textuelle.
   // La liste Lufa et la répartition par magasin sont calculées dynamiquement
   // côté client dans GroceryList.jsx — toujours synchronisées avec le planning réel.
   const result = {
     semaine: semaine.debut,
     genereeLe: new Date().toISOString(),
-    maxi: analyse.maxi_aubaines || maxiRaw.slice(0, 20),
-    costco: analyse.costco_aubaines || costcoRaw.slice(0, 10),
+    maxi: analyse.maxi_aubaines || maxiItems.slice(0, 20),
+    costco: analyse.costco_aubaines || costcoProduits.slice(0, 8).map(p => ({
+      nom: p.nom,
+      prix: p.prix,
+      prix_texte: p.prix_texte,
+      prix_regulier: null,
+      prix_regulier_texte: '',
+      rabais: '',
+      mots_cles: p.mots_cles || [],
+      categorie: p.categorie || detecterCategorie(p.nom),
+    })),
     analyse: analyse.analyse || '',
     economies_estimees: analyse.economies_estimees || '',
   };
