@@ -10,6 +10,7 @@ import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
 import { genererPlanning, calculerStats } from './utils/planning';
+import { syncWrite, syncRead, syncSubscribe } from './utils/sync';
 import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
 import activites from './data/activites.json';
@@ -68,6 +69,7 @@ export default function App() {
   const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showProfilsModal, setShowProfilsModal] = useState(false);
+  const [syncLoaded, setSyncLoaded] = useState(false);
   const [profils, setProfils] = useState(() => {
     try {
       const saved = localStorage.getItem('fp_profils');
@@ -93,6 +95,65 @@ export default function App() {
       return s ? new Map(JSON.parse(s)) : new Map();
     } catch { return new Map(); }
   });
+
+  // ── Cloud sync ────────────────────────────────────────────────────────────
+  useEffect(() => {
+    if (!authentifie) return;
+
+    // Initial load from Firestore
+    syncRead().then(data => {
+      if (data) {
+        if (data.profils) {
+          setProfils(data.profils);
+          localStorage.setItem('fp_profils', JSON.stringify(data.profils));
+        }
+        if (data.photo !== undefined) {
+          setPhotoFamille(data.photo || null);
+          if (data.photo) localStorage.setItem('fp_photo_famille', data.photo);
+          else localStorage.removeItem('fp_photo_famille');
+        }
+        // Load per-week data for all semaines in cloud
+        if (data.semaines) {
+          Object.entries(data.semaines).forEach(([semaine, val]) => {
+            if (val.locks) localStorage.setItem(`planning_locks_${semaine}`, JSON.stringify(val.locks));
+            if (val.semaineLockee !== undefined) localStorage.setItem(`semaine_lockee_${semaine}`, val.semaineLockee ? 'true' : 'false');
+            if (val.forcees) localStorage.setItem(`fp_forcees_${semaine}`, JSON.stringify(val.forcees));
+          });
+          // Reload current week state from updated localStorage
+          const sv = semaineVue; // capture current value
+          try { setJoursVerrouilles(new Set(JSON.parse(localStorage.getItem(`planning_locks_${sv}`) || '[]'))); } catch {}
+          setSemaineLockee(localStorage.getItem(`semaine_lockee_${sv}`) === 'true');
+          try {
+            const s = localStorage.getItem(`fp_forcees_${sv}`);
+            setRecettesForcees(s ? new Map(JSON.parse(s)) : new Map());
+          } catch {}
+        }
+      }
+      setSyncLoaded(true);
+    });
+
+    // Real-time subscription
+    const unsub = syncSubscribe(data => {
+      if (data.profils) {
+        setProfils(data.profils);
+        localStorage.setItem('fp_profils', JSON.stringify(data.profils));
+      }
+      if (data.photo !== undefined) {
+        setPhotoFamille(data.photo || null);
+        if (data.photo) localStorage.setItem('fp_photo_famille', data.photo);
+        else localStorage.removeItem('fp_photo_famille');
+      }
+      if (data.semaines) {
+        Object.entries(data.semaines).forEach(([semaine, val]) => {
+          if (val.locks !== undefined) localStorage.setItem(`planning_locks_${semaine}`, JSON.stringify(val.locks));
+          if (val.semaineLockee !== undefined) localStorage.setItem(`semaine_lockee_${semaine}`, val.semaineLockee ? 'true' : 'false');
+          if (val.forcees !== undefined) localStorage.setItem(`fp_forcees_${semaine}`, JSON.stringify(val.forcees));
+        });
+      }
+    });
+
+    return () => unsub();
+  }, [authentifie]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Recharger l'état quand on change de semaine
   useEffect(() => {
@@ -178,6 +239,15 @@ export default function App() {
 
   const stats = useMemo(() => calculerStats(planningVue), [planningVue]);
 
+  // ── Sync helper ───────────────────────────────────────────────────────────
+  function syncSemaine(semaine, updates) {
+    const firestoreUpdates = {};
+    Object.entries(updates).forEach(([k, v]) => {
+      firestoreUpdates[`semaines.${semaine}.${k}`] = v;
+    });
+    syncWrite(firestoreUpdates);
+  }
+
   // ── Handlers ──────────────────────────────────────────────────────────────
   function toggleLockJour(i) {
     if (semaineLockee || !estSemaineEditable) return;
@@ -190,6 +260,7 @@ export default function App() {
           const nextF = new Map(prevF);
           nextF.delete(i);
           localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...nextF]));
+          syncSemaine(semaineVue, { forcees: [...nextF] });
           return nextF;
         });
       } else {
@@ -201,11 +272,13 @@ export default function App() {
             const nextF = new Map(prevF);
             nextF.set(i, recetteActuelle);
             localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...nextF]));
+            syncSemaine(semaineVue, { forcees: [...nextF] });
             return nextF;
           });
         }
       }
       localStorage.setItem(locksKey(semaineVue), JSON.stringify([...next]));
+      syncSemaine(semaineVue, { locks: [...next] });
       return next;
     });
   }
@@ -225,6 +298,11 @@ export default function App() {
     const tous = new Set([0,1,2,3,4,5,6]);
     setJoursVerrouilles(tous);
     localStorage.setItem(locksKey(semaineVue), JSON.stringify([0,1,2,3,4,5,6]));
+    syncSemaine(semaineVue, {
+      locks: [0,1,2,3,4,5,6],
+      semaineLockee: true,
+      forcees: [...toutesLesRecettes],
+    });
   }
 
   function delockerSemaine() {
@@ -234,6 +312,11 @@ export default function App() {
     localStorage.removeItem(locksKey(semaineVue));
     setRecettesForcees(new Map());
     localStorage.removeItem(forceesKey(semaineVue));
+    syncSemaine(semaineVue, {
+      locks: [],
+      semaineLockee: false,
+      forcees: [],
+    });
   }
 
   function choisirRecette(dayIndex, recetteNom) {
@@ -245,6 +328,7 @@ export default function App() {
         next.delete(dayIndex);
       }
       localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...next]));
+      syncSemaine(semaineVue, { forcees: [...next] });
       return next;
     });
   }
@@ -353,6 +437,7 @@ export default function App() {
           onSave={(nouveauxProfils) => {
             setProfils(nouveauxProfils);
             localStorage.setItem('fp_profils', JSON.stringify(nouveauxProfils));
+            syncWrite({ profils: nouveauxProfils });
             setShowProfilsModal(false);
           }}
           onClose={() => setShowProfilsModal(false)}
@@ -364,6 +449,7 @@ export default function App() {
               localStorage.removeItem('fp_photo_famille');
             }
             setPhotoFamille(dataUrl);
+            syncWrite({ photo: dataUrl || null }).catch(e => console.warn('Photo sync error (may be too large):', e));
           }}
         />
       )}
