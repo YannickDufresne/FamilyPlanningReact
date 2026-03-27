@@ -564,6 +564,86 @@ input[type="range"] {
 
 .btn-rebrasser:hover { background: var(--forest); }
 
+/* ── Hold-to-reshuffle button ──────────────────────────────────────────────── */
+.btn-rebrasser {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.btn-rebrasser__text { position: relative; z-index: 1; pointer-events: none; }
+.btn-rebrasser__bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--forest);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* ── Lock bouton par jour ──────────────────────────────────────────────────── */
+.day-card__lock {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+  line-height: 1;
+  z-index: 10;
+}
+.day-card:hover .day-card__lock,
+.day-card__lock--locked { opacity: 1; }
+.day-card--locked { box-shadow: 0 0 0 2px var(--forest) inset; }
+
+/* ── Verrouiller la semaine ────────────────────────────────────────────────── */
+.btn-locker-semaine {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  background: none;
+  border: 1px dashed var(--border-dark);
+  border-radius: 6px;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-locker-semaine:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+  background: var(--sage-light);
+}
+.semaine-lockee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0;
+}
+.semaine-lockee__label {
+  font-size: 0.8rem;
+  color: var(--forest);
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+.semaine-lockee__btn-unlock {
+  font-size: 0.7rem;
+  background: none;
+  border: none;
+  color: var(--ink-3);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+.semaine-lockee__btn-unlock:hover { color: var(--ink); }
+
 .sidebar-lecture-seule {
   font-size: 0.75rem;
   color: var(--ink-3);
@@ -740,6 +820,7 @@ input[type="range"] {
    CARTE DE JOUR — NYT section card
    ══════════════════════════════════════════════════════════════════════════════ */
 .day-card {
+  position: relative;
   background: var(--bg);
   border: 1px solid var(--border);
   display: flex;

@@ -120,7 +120,7 @@ function shuffleSeeded(arr, seed) {
   return a;
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [] }) {
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel }) {
   const { nbVegetarien, nbVegane, nbGratuit = 1, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
@@ -166,6 +166,18 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   const recettesUtilisees = new Set(); // anti-doublon sur la semaine
 
   for (let i = 0; i < 7; i++) {
+    // If day is locked, keep current recipe + update counters
+    if (joursVerrouilles?.has(i) && planningActuel?.[i]) {
+      const jourExistant = planningActuel[i];
+      planning.push(jourExistant);
+      const r = jourExistant.recette;
+      if (r?.nom) recettesUtilisees.add(r.nom);
+      if (r?.regime_alimentaire === 'omnivore') compteurOmnivore++;
+      else if (r?.regime_alimentaire === 'végétarien') compteurVegetarien++;
+      else if (r?.regime_alimentaire === 'végane') compteurVegane++;
+      continue;
+    }
+
     const jourInfo = THEMES_PAR_JOUR[i];
     const themeCol = `theme_${jourInfo.theme}`;
     const rngRecette  = seededRandom(seed + i * 13);

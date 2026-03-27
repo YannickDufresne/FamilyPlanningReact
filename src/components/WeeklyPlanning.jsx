@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DayCard from './DayCard';
 
-export default function WeeklyPlanning({ planning, profils = [] }) {
+export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), onToggleLockJour, lectureSeule }) {
   const [modesActivite, setModesActivite] = useState(() =>
     Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
   );
@@ -24,15 +24,18 @@ export default function WeeklyPlanning({ planning, profils = [] }) {
     <section>
       <h2 className="section-heading">Calendrier de la semaine</h2>
       <div className="week-grid">
-        {planning.map(jour => (
+        {planning.map((jour, i) => (
           <DayCard
             key={jour.jour}
             jour={jour}
+            index={i}
             modeActivite={modesActivite[jour.jour] ?? 'famille'}
             onToggleModeActivite={(mode) =>
               setModesActivite(prev => ({ ...prev, [jour.jour]: mode }))
             }
             profils={profils}
+            estVerrouille={joursVerrouilles.has(i)}
+            onToggleLock={onToggleLockJour && !lectureSeule ? () => onToggleLockJour(i) : null}
           />
         ))}
       </div>

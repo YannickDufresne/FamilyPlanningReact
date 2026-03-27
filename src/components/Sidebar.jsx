@@ -1,10 +1,52 @@
-import { useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import recettes from '../data/recettes.json';
 import exercices from '../data/exercices.json';
 import activites from '../data/activites.json';
 import musique from '../data/musique.json';
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, stats, lectureSeule }) {
+function BoutonRebrasser({ onRebrasser }) {
+  const [progress, setProgress] = useState(0);
+  const intervalRef = useRef(null);
+  const startRef = useRef(null);
+  const HOLD_MS = 1500;
+
+  function startHold(e) {
+    e.preventDefault();
+    if (!onRebrasser) return;
+    startRef.current = Date.now();
+    intervalRef.current = setInterval(() => {
+      const p = Math.min((Date.now() - startRef.current) / HOLD_MS, 1);
+      setProgress(p);
+      if (p >= 1) {
+        clearInterval(intervalRef.current);
+        setProgress(0);
+        onRebrasser();
+      }
+    }, 30);
+  }
+
+  function endHold() {
+    clearInterval(intervalRef.current);
+    setProgress(0);
+  }
+
+  return (
+    <button
+      className="btn-rebrasser"
+      onMouseDown={startHold} onMouseUp={endHold} onMouseLeave={endHold}
+      onTouchStart={startHold} onTouchEnd={endHold} onTouchCancel={endHold}
+      disabled={!onRebrasser}
+      title="Maintenir pour rebrasser"
+    >
+      <span className="btn-rebrasser__text">
+        {progress > 0.05 ? 'Maintenir…' : 'Rebrasser les cartes'}
+      </span>
+      <span className="btn-rebrasser__bar" style={{ transform: `scaleX(${progress})` }} />
+    </button>
+  );
+}
+
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule }) {
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
@@ -96,10 +138,25 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, stats, lectu
 
         <hr className="sidebar-rule" />
 
-        {lectureSeule
-          ? <p className="sidebar-lecture-seule">📖 Semaine passée — lecture seule</p>
-          : <button className="btn-rebrasser" onClick={onRebrasser}>Rebrasser les cartes</button>
-        }
+        {lectureSeule ? (
+          <p className="sidebar-lecture-seule">📖 Semaine passée — lecture seule</p>
+        ) : semaineLockee ? (
+          <div className="semaine-lockee">
+            <span className="semaine-lockee__label">🔒 Semaine verrouillée</span>
+            <button className="semaine-lockee__btn-unlock" onClick={onDelockerSemaine}>
+              Déverrouiller
+            </button>
+          </div>
+        ) : (
+          <>
+            <BoutonRebrasser onRebrasser={onRebrasser} />
+            {onLockerSemaine && (
+              <button className="btn-locker-semaine" onClick={onLockerSemaine}>
+                🔒 Verrouiller la semaine
+              </button>
+            )}
+          </>
+        )}
 
         <hr className="sidebar-rule" />
 

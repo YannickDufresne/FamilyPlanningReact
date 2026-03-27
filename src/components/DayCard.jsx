@@ -159,7 +159,7 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour, modeActivite = 'famille', onToggleModeActivite, profils = [] }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, onToggleLock = null }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
@@ -176,7 +176,16 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
   const regimeLabel = REGIME_LABEL[recette.regime_alimentaire];
 
   return (
-    <article className={`day-card ${isWarning ? 'day-card--warning' : ''} ${isTraining ? 'day-card--training' : ''}`}>
+    <article className={`day-card ${isWarning ? 'day-card--warning' : ''} ${isTraining ? 'day-card--training' : ''} ${estVerrouille ? 'day-card--locked' : ''}`}>
+      {onToggleLock && (
+        <button
+          className={`day-card__lock ${estVerrouille ? 'day-card__lock--locked' : ''}`}
+          onClick={onToggleLock}
+          title={estVerrouille ? 'Déverrouiller ce jour' : 'Verrouiller ce jour'}
+        >
+          {estVerrouille ? '🔒' : '🔓'}
+        </button>
+      )}
       <div className="day-card__accent" />
 
       {/* En-tête avec date */}
