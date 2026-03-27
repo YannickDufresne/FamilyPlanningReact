@@ -3112,3 +3112,187 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   color: var(--ink-3);
   margin-top: 2px;
 }
+
+/* ── Épicerie organisée par magasin ────────────────────────────────────────── */
+.epicerie-economies {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: var(--sage-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.epicerie-analyse {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: linear-gradient(135deg, var(--sage-light), var(--terra-light));
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.epicerie-analyse__icon {
+  font-size: 1rem;
+  color: var(--forest);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.epicerie-note-aubaines {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  background: var(--surface-2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 10px 0;
+}
+
+.epicerie-magasins {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.epicerie-magasin {
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  border-top: 3px solid var(--magasin-couleur, var(--forest));
+}
+.epicerie-magasin--lufa {
+  --magasin-couleur: #4A7C3F;
+}
+
+.epicerie-magasin__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.epicerie-magasin__emoji { font-size: 1.1rem; }
+.epicerie-magasin__nom {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+  flex: 1;
+}
+.epicerie-magasin__count {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  background: var(--surface-2);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* Soldes section */
+.epicerie-soldes {
+  padding: 10px 16px;
+  background: #FFFBF0;
+  border-bottom: 1px dashed var(--border);
+}
+.epicerie-soldes__titre {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.epicerie-solde-item {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 0.8rem;
+  padding: 2px 0;
+  flex-wrap: wrap;
+}
+.epicerie-solde-nom { color: var(--ink); flex: 1; min-width: 120px; }
+.epicerie-solde-prix { font-weight: 700; color: var(--forest); }
+.epicerie-solde-rabais {
+  font-size: 0.72rem;
+  color: var(--terra);
+  background: var(--terra-light);
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+/* Items de la liste */
+.epicerie-items {
+  list-style: none;
+  padding: 8px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.epicerie-items--lufa {
+  padding: 8px 12px 12px;
+}
+
+.epicerie-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 0.85rem;
+  user-select: none;
+}
+.epicerie-item:hover { background: var(--surface-2); }
+.epicerie-item--coche { opacity: 0.45; text-decoration: line-through; }
+.epicerie-item--solde { background: #FFFBEE; }
+.epicerie-item--solde:hover { background: #FFF6D6; }
+
+.epicerie-item__check {
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  color: var(--forest);
+}
+.epicerie-item__nom { flex: 1; color: var(--ink); }
+
+.aubaine-badge {
+  font-size: 0.7rem;
+  background: #FFF3CD;
+  color: #856404;
+  border: 1px solid #FFE082;
+  padding: 1px 7px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+/* Lufa */
+.lufa-alerte {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  background: #F0F7F0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.83rem;
+}
+.lufa-alerte__icon { font-size: 1rem; flex-shrink: 0; }
+.lufa-alerte__detail { color: var(--ink-2); margin-top: 2px; font-size: 0.8rem; }
+.lufa-min-warning { color: var(--terra); }
+
+.epicerie-item--lufa { align-items: flex-start; }
+.epicerie-item__lufa-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+}
+.epicerie-item__unite { font-size: 0.75rem; color: var(--ink-3); }
+.epicerie-item__prix { font-size: 0.78rem; font-weight: 600; color: var(--forest); }
+.epicerie-item__raison { font-size: 0.73rem; color: var(--ink-3); font-style: italic; }

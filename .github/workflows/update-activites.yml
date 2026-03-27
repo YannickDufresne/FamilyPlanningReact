@@ -37,10 +37,12 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-activites.mjs
 
+      - name: Circulaires & aubaines (Maxi, Costco, Lufa)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/fetch-aubaines.mjs
+
       # ── Prochains scripts à ajouter ici ─────────────────────────────────────
-      # - name: Circulaires & aubaines (Maxi, Costco, Lufa)
-      #   run: node scripts/fetch-aubaines.mjs
-      #
       # - name: Recommandations épicerie
       #   run: node scripts/generer-liste-epicerie.mjs
 

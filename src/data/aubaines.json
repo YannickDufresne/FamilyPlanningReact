@@ -1,0 +1,11 @@
+{
+  "semaine": "",
+  "genereeLe": "",
+  "maxi": [],
+  "costco": [],
+  "lufa": [],
+  "par_magasin": { "maxi": [], "costco": [], "lufa": [], "autres": [] },
+  "analyse": "",
+  "economies_estimees": "",
+  "lufa_min_atteint": false
+}
