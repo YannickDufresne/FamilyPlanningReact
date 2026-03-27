@@ -238,48 +238,30 @@ function parseJsonSafe(text) {
 }
 
 // ── Analyse Claude ─────────────────────────────────────────────────────────────
+// Rôle limité : générer les soldes Maxi/Costco + l'analyse textuelle.
+// La liste Lufa et la répartition par magasin sont calculées côté client (toujours fraîches).
 async function analyserAvecClaude(semaine, maxiRaw, costcoRaw) {
-  console.log('🤖 Analyse Claude — matching recettes + organisation par magasin…');
-
-  const recettes = JSON.parse(readFileSync(join(DATA_DIR, 'recettes.json'), 'utf-8'));
-
-  // Échantillon représentatif de recettes (tous les thèmes)
-  const themes = ['pasta_rapido', 'bol_nwich', 'criiions_poisson', 'plat_en_sauce', 'confort_grille', 'pizza', 'slow_chic'];
-  const sample = themes.flatMap(t =>
-    recettes.filter(r => r[`theme_${t}`] === 1).slice(0, 4)
-  ).map(r => `${r.nom} (${r.ingredients})`);
+  console.log('🤖 Analyse Claude — soldes Maxi/Costco + analyse hebdomadaire…');
 
   const maxiStr = maxiRaw.length > 0
     ? maxiRaw.slice(0, 40).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
-    : '(circulaire non disponible cette semaine — génère des soldes typiques réalistes pour Maxi Québec cette saison)';
+    : '(circulaire non disponible — génère des soldes typiques réalistes pour Maxi Québec cette saison)';
 
   const costcoStr = costcoRaw.length > 0
     ? costcoRaw.slice(0, 20).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}`).join('\n')
     : '(données non disponibles — génère des aubaines réalistes Costco Canada cette saison)';
 
-  const prompt = `Tu es l'assistant d'une famille québécoise (Québec ville). Tu gères leur planification familiale hebdomadaire.
+  const prompt = `Tu es l'assistant d'une famille québécoise (Québec ville).
+Magasins : Maxi René-Lévesque, Costco Québec, Lufa (bio local).
+Semaine : ${semaine.debutLisible} au ${semaine.finLisible}
 
-Membres : Patricia (💚, 32 ans, cuisine, culture), Yannick (🦉, 45 ans, gastronomie, histoire), Joseph (🐤, 13 ans, ado actif), Mika & Luce (🍒, jumeaux 1 an).
-
-Magasins habituels :
-- **Maxi** sur René-Lévesque, Québec — épicerie principale
-- **Costco** Québec — achats en gros (membres)
-- **Lufa** (abonnement paniers biologiques) — commande en ligne hebdomadaire OBLIGATOIRE avec montant minimum (~50-60$). Patricia passe la commande — liste claire et précise très importante.
-- **Autres** — épiceries spécialisées ou en ligne pour produits rares
-
-Semaine planifiée : ${semaine.debutLisible} au ${semaine.finLisible}
-
-**Circulaire MAXI cette semaine :**
+**Circulaire MAXI :**
 ${maxiStr}
 
 **Aubaines COSTCO :**
 ${costcoStr}
 
-**Exemples de recettes que la famille cuisine (avec leurs ingrédients) :**
-${sample.join('\n')}
-
-**Ta mission :** Générer un JSON complet pour organiser les achats de la semaine.
-IMPORTANT : Retourne UNIQUEMENT du JSON valide, sans aucun texte avant ou après, sans commentaires, sans virgules en trop.
+**Ta mission :** Retourne UNIQUEMENT du JSON valide, sans texte autour, sans commentaires, sans virgules en trop.
 
 {
   "maxi_aubaines": [
@@ -302,29 +284,11 @@ IMPORTANT : Retourne UNIQUEMENT du JSON valide, sans aucun texte avant ou après
       "categorie": "poisson"
     }
   ],
-  "lufa_commande": [
-    {
-      "nom": "Épinards biologiques",
-      "prix_estime": "4.99$",
-      "unite": "500g",
-      "raison": "Salade lundi, pesto mercredi",
-      "mots_cles": ["épinard", "épinards"],
-      "categorie": "legumes"
-    }
-  ],
-  "lufa_total_estime": "58.50$",
-  "lufa_min_atteint": true,
-  "par_magasin": {
-    "maxi": ["pâtes", "tomates", "oignons", "ail"],
-    "costco": ["parmesan", "huile olive", "saumon"],
-    "lufa": ["épinards", "carottes", "courgettes", "lait"],
-    "autres": ["câpres", "anchois"]
-  },
-  "analyse": "Cette semaine, le poulet est en solde chez Maxi à 7.99$/kg (33% de rabais), idéal pour le poulet rôti de lundi et le tajine de jeudi. Le saumon chez Costco complète parfaitement le thème poisson du mercredi.",
+  "analyse": "2-3 phrases sur les meilleures aubaines de la semaine pour cette famille, avec produits et économies précis.",
   "economies_estimees": "~18$"
 }
 
-Génère 8 à 15 items Lufa représentant des produits réels de leur catalogue : légumes biologiques du Québec, lait local, œufs de ferme, fromages artisanaux québécois, pain de boulangerie. Minimum de commande ~50-60$.`;
+Génère 8 à 12 aubaines Maxi et 5 à 8 aubaines Costco réalistes pour cette saison au Québec.`;
 
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const response = await anthropic.messages.create({
@@ -352,24 +316,19 @@ async function main() {
     analyse = {
       maxi_aubaines: maxiRaw.slice(0, 20),
       costco_aubaines: costcoRaw.slice(0, 10),
-      lufa_commande: [],
-      lufa_total_estime: '0$',
-      lufa_min_atteint: false,
-      par_magasin: { maxi: [], costco: [], lufa: [], autres: [] },
       analyse: 'Analyse IA non disponible (clé ANTHROPIC_API_KEY manquante).',
       economies_estimees: '',
     };
   }
 
+  // aubaines.json : seulement les soldes Maxi/Costco + analyse textuelle.
+  // La liste Lufa et la répartition par magasin sont calculées dynamiquement
+  // côté client dans GroceryList.jsx — toujours synchronisées avec le planning réel.
   const result = {
     semaine: semaine.debut,
     genereeLe: new Date().toISOString(),
     maxi: analyse.maxi_aubaines || maxiRaw.slice(0, 20),
     costco: analyse.costco_aubaines || costcoRaw.slice(0, 10),
-    lufa: analyse.lufa_commande || [],
-    lufa_total_estime: analyse.lufa_total_estime || '',
-    lufa_min_atteint: analyse.lufa_min_atteint ?? false,
-    par_magasin: analyse.par_magasin || { maxi: [], costco: [], lufa: [], autres: [] },
     analyse: analyse.analyse || '',
     economies_estimees: analyse.economies_estimees || '',
   };
@@ -378,9 +337,8 @@ async function main() {
   writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf-8');
 
   console.log(`\n✅ aubaines.json sauvegardé !`);
-  console.log(`   Maxi    : ${result.maxi.length} aubaines`);
-  console.log(`   Costco  : ${result.costco.length} aubaines`);
-  console.log(`   Lufa    : ${result.lufa.length} items (${result.lufa_total_estime})`);
+  console.log(`   Maxi   : ${result.maxi.length} aubaines`);
+  console.log(`   Costco : ${result.costco.length} aubaines`);
   if (result.analyse) console.log(`\n💬 ${result.analyse}`);
 }
 
