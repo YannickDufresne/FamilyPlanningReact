@@ -1371,8 +1371,10 @@ input[type="range"] {
   flex-shrink: 0;
   background: #f2ebe0;
 }
-.recette-card__img-wrapper--aquarelle { background: #fff; }
-.recette-card__img-wrapper--photo     { background: #f2ebe0; }
+.recette-card__img-wrapper--aquarelle {
+  background: radial-gradient(ellipse at 50% 35%, #f5f2ea 0%, #e8dfd0 100%);
+}
+.recette-card__img-wrapper--photo { background: #1a1a1a; }
 
 .recette-card__img {
   width: 100%;
@@ -1613,8 +1615,10 @@ input[type="range"] {
   margin-bottom: 0.55rem;
   background: #f2ebe0;
 }
-.planning-repas__img-wrapper--aquarelle { background: #fff; }
-.planning-repas__img-wrapper--photo     { background: #f2ebe0; }
+.planning-repas__img-wrapper--aquarelle {
+  background: radial-gradient(ellipse at 50% 35%, #f5f2ea 0%, #e8dfd0 100%);
+}
+.planning-repas__img-wrapper--photo { background: #1a1a1a; }
 
 .planning-repas__img {
   display: block;
