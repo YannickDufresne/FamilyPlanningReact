@@ -48,6 +48,19 @@ const API_KEY_STORE      = 'anthropic_key';
 const PROMPT_STORE       = 'recettes_prompt_v2';
 const GITHUB_TOKEN_STORE = 'github_token';
 const GITHUB_REPO        = 'YannickDufresne/FamilyPlanningReact';
+
+// ── Génération automatique d'illustration aquarelle (Pollinations, URL permanente) ──
+function strHash(s) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = (h * 0x01000193) >>> 0; }
+  return h % 99999;
+}
+function genererAquarelleUrl(nom, nomOriginal) {
+  const dish   = nomOriginal || nom;
+  const prompt = `watercolor painting of ${dish}, loose wet watercolor brushstrokes, paint bleeds and washes, soft pastel tones, white background, hand-painted food illustration, no text, no border`;
+  const seed   = strHash(nom);
+  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?seed=${seed}&width=512&height=512&nologo=true&model=flux`;
+}
 const RECETTES_PATH      = 'src/data/recettes.json';
 
 // UTF-8 → base64 (btoa ne gère pas l'Unicode nativement)
@@ -943,8 +956,12 @@ export default function RecettesPage({ onRetour }) {
   function ouvrirAjout()        { setRecetteEnEdition(null); setDrawerOpen(true); }
   function ouvrirEdition(r)     { setRecetteEnEdition(r);    setDrawerOpen(true); }
   function handleSave(form) {
-    if (recetteEnEdition) modifier(recetteEnEdition._id, form);
-    else ajouter(form);
+    // Auto-génère l'URL aquarelle si absente
+    const formComplet = form.image_aquarelle
+      ? form
+      : { ...form, image_aquarelle: genererAquarelleUrl(form.nom, form.nom_original) };
+    if (recetteEnEdition) modifier(recetteEnEdition._id, formComplet);
+    else ajouter(formComplet);
     setDrawerOpen(false);
   }
 

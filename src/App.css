@@ -1372,7 +1372,7 @@ input[type="range"] {
   background: #f2ebe0;
 }
 .recette-card__img-wrapper--aquarelle {
-  background: linear-gradient(135deg, #eef4e8 0%, #f5ebe4 100%);
+  background: linear-gradient(135deg, #f5f9f2 0%, #fdf5f0 100%);
 }
 .recette-card__img-wrapper--photo { background: #1a1a1a; }
 
@@ -1616,7 +1616,7 @@ input[type="range"] {
   background: #f2ebe0;
 }
 .planning-repas__img-wrapper--aquarelle {
-  background: linear-gradient(135deg, #eef4e8 0%, #f5ebe4 100%);
+  background: linear-gradient(135deg, #f5f9f2 0%, #fdf5f0 100%);
 }
 .planning-repas__img-wrapper--photo { background: #1a1a1a; }
 
