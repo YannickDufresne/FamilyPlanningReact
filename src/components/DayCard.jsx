@@ -159,12 +159,13 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, onToggleLock = null, recettes = [], recetteForceNom = null, onChoisirRecette = null }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [voirTout, setVoirTout] = useState(false);
 
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
@@ -385,39 +386,77 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
       </div>
 
       {/* Recherche de recette */}
-      {searchOpen && (
-        <div className="recette-search-overlay" onClick={() => { setSearchOpen(false); setSearchQuery(''); }}>
-          <div className="recette-search-modal" onClick={e => e.stopPropagation()}>
-            <div className="recette-search-header">
-              <span>Choisir une recette · {jour.jour}</span>
-              <button onClick={() => { setSearchOpen(false); setSearchQuery(''); }}>✕</button>
-            </div>
-            <input
-              autoFocus
-              className="recette-search-input"
-              placeholder="Rechercher..."
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-            />
-            <ul className="recette-search-list">
-              {recettes
-                .filter(r => r.nom.toLowerCase().includes(searchQuery.toLowerCase()))
-                .slice(0, 30)
-                .map(r => (
+      {searchOpen && (() => {
+        const themeCol = `theme_${jour.theme}`;
+        const filtreOrigine = filtres.origine && filtres.origine !== 'Tous';
+
+        // Pool du thème du jour (+ origine si filtre actif)
+        const poolTheme = recettes.filter(r =>
+          r[themeCol] === 1 &&
+          (!filtreOrigine || r.origine === filtres.origine)
+        );
+
+        // Pool affiché : thème seul, ou tout si "Voir tout" coché / recherche active
+        const afficherTout = voirTout || searchQuery.trim().length > 0;
+        const poolBase = afficherTout ? recettes : poolTheme;
+        const resultats = poolBase
+          .filter(r => r.nom.toLowerCase().includes(searchQuery.toLowerCase()))
+          .slice(0, 40);
+
+        const labelFiltre = [
+          `thème ${jour.theme.replace(/_/g, ' ')}`,
+          filtreOrigine ? filtres.origine : null,
+        ].filter(Boolean).join(' · ');
+
+        return (
+          <div className="recette-search-overlay" onClick={() => { setSearchOpen(false); setSearchQuery(''); setVoirTout(false); }}>
+            <div className="recette-search-modal" onClick={e => e.stopPropagation()}>
+              <div className="recette-search-header">
+                <span>Choisir une recette · {jour.jour}</span>
+                <button onClick={() => { setSearchOpen(false); setSearchQuery(''); setVoirTout(false); }}>✕</button>
+              </div>
+              <input
+                autoFocus
+                className="recette-search-input"
+                placeholder="Rechercher..."
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+              />
+              {!afficherTout && (
+                <div className="recette-search-filtre-info">
+                  <span>🎯 Filtré : {labelFiltre} ({poolTheme.length} recettes)</span>
+                  <button className="recette-search-voir-tout" onClick={() => setVoirTout(true)}>
+                    Voir tout le catalogue →
+                  </button>
+                </div>
+              )}
+              {afficherTout && !searchQuery && (
+                <div className="recette-search-filtre-info">
+                  <span>📚 Tout le catalogue ({recettes.length} recettes)</span>
+                  <button className="recette-search-voir-tout" onClick={() => setVoirTout(false)}>
+                    ← Revenir au thème
+                  </button>
+                </div>
+              )}
+              <ul className="recette-search-list">
+                {resultats.map(r => (
                   <li
                     key={r.nom}
                     className={`recette-search-item ${r.nom === recette.nom ? 'recette-search-item--current' : ''}`}
-                    onClick={() => { onChoisirRecette(r.nom); setSearchOpen(false); setSearchQuery(''); }}
+                    onClick={() => { onChoisirRecette(r.nom); setSearchOpen(false); setSearchQuery(''); setVoirTout(false); }}
                   >
                     <span className="recette-search-nom">{r.nom}</span>
                     <span className="recette-search-meta">{r.regime_alimentaire} · {r.cout}$ · {r.temps_preparation}min</span>
                   </li>
-                ))
-              }
-            </ul>
+                ))}
+                {resultats.length === 0 && (
+                  <li className="recette-search-vide">Aucun résultat</li>
+                )}
+              </ul>
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
     </article>
   );
 }

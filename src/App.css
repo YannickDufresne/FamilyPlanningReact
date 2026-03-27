@@ -3358,6 +3358,20 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .recette-search-item--current { background: color-mix(in srgb, var(--forest) 10%, white); }
 .recette-search-nom { font-size: 0.9rem; font-weight: 500; }
 .recette-search-meta { font-size: 0.75rem; color: var(--ink-3); }
+.recette-search-filtre-info {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 6px 12px;
+  background: color-mix(in srgb, var(--forest) 8%, white);
+  border-bottom: 1px solid var(--ink-1);
+  font-size: 0.75rem; color: var(--ink-4);
+}
+.recette-search-voir-tout {
+  background: none; border: 1px solid var(--forest); border-radius: 6px;
+  color: var(--forest); cursor: pointer; font-size: 0.72rem;
+  padding: 2px 8px; white-space: nowrap; flex-shrink: 0;
+}
+.recette-search-voir-tout:hover { background: color-mix(in srgb, var(--forest) 10%, white); }
+.recette-search-vide { padding: 16px; text-align: center; color: var(--ink-3); font-size: 0.9rem; list-style: none; }
 
 /* ── Semaine nav améliorée ───────────────────────────── */
 .semaine-nav__status {

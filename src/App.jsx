@@ -335,6 +335,7 @@ export default function App() {
               onToggleLockJour={estSemaineEditable ? toggleLockJour : null}
               lectureSeule={!estSemaineEditable || semaineLockee}
               recettes={recettes}
+              filtres={filtres}
               recettesForcees={estSemaineEditable ? recettesForcees : new Map()}
               onChoisirRecette={estSemaineEditable && !semaineLockee ? choisirRecette : null}
             />
