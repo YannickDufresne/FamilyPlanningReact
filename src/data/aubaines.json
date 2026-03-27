@@ -1,11 +1,393 @@
 {
-  "semaine": "",
-  "genereeLe": "",
-  "maxi": [],
-  "costco": [],
-  "lufa": [],
-  "par_magasin": { "maxi": [], "costco": [], "lufa": [], "autres": [] },
-  "analyse": "",
-  "economies_estimees": "",
-  "lufa_min_atteint": false
+  "semaine": "2026-03-30",
+  "genereeLe": "2026-03-27T16:53:18.857Z",
+  "maxi": [
+    {
+      "nom": "Poulet entier frais",
+      "prix_texte": "7.99$/kg",
+      "prix_regulier_texte": "11.99$/kg",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "poulet",
+        "volaille"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Boeuf haché mi-maigre",
+      "prix_texte": "9.99$/lb",
+      "prix_regulier_texte": "13.99$/lb",
+      "rabais": "29% de rabais",
+      "mots_cles": [
+        "boeuf",
+        "haché"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Bacon tranché 500g",
+      "prix_texte": "5.99$",
+      "prix_regulier_texte": "8.49$",
+      "rabais": "29% de rabais",
+      "mots_cles": [
+        "bacon",
+        "porc"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Tomates italiennes en conserve 796ml",
+      "prix_texte": "1.49$",
+      "prix_regulier_texte": "2.29$",
+      "rabais": "35% de rabais",
+      "mots_cles": [
+        "tomates",
+        "conserve"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Pâtes Barilla 454g",
+      "prix_texte": "1.77$",
+      "prix_regulier_texte": "2.99$",
+      "rabais": "41% de rabais",
+      "mots_cles": [
+        "pâtes",
+        "spaghetti",
+        "penne"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Pommes de terre blanches 10lb",
+      "prix_texte": "3.99$",
+      "prix_regulier_texte": "5.99$",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "pommes de terre",
+        "patates"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Oignons jaunes 3lb",
+      "prix_texte": "1.99$",
+      "prix_regulier_texte": "3.49$",
+      "rabais": "43% de rabais",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Poivrons tricolores 3 unités",
+      "prix_texte": "3.99$",
+      "prix_regulier_texte": "5.99$",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "poivrons"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Ail frais 3 têtes",
+      "prix_texte": "1.49$",
+      "prix_regulier_texte": "2.49$",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "ail"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Tortillas de blé 10po (10)",
+      "prix_texte": "2.49$",
+      "prix_regulier_texte": "3.99$",
+      "rabais": "38% de rabais",
+      "mots_cles": [
+        "tortillas",
+        "tacos"
+      ],
+      "categorie": "epicerie"
+    }
+  ],
+  "costco": [
+    {
+      "nom": "Saumon atlantique frais filet",
+      "prix_texte": "14.99$/kg",
+      "prix_regulier_texte": "17.99$/kg",
+      "rabais": "3$/kg de rabais",
+      "mots_cles": [
+        "saumon",
+        "poisson"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Huile d'olive extra vierge Kirkland 2L",
+      "prix_texte": "16.99$",
+      "prix_regulier_texte": "19.99$",
+      "rabais": "3$ de rabais",
+      "mots_cles": [
+        "huile",
+        "olive"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Parmesan Reggiano 1kg",
+      "prix_texte": "34.99$",
+      "prix_regulier_texte": "42.99$",
+      "rabais": "8$ de rabais",
+      "mots_cles": [
+        "parmesan",
+        "fromage"
+      ],
+      "categorie": "fromage"
+    },
+    {
+      "nom": "Poitrines de poulet désossées 2kg",
+      "prix_texte": "24.99$",
+      "prix_regulier_texte": "29.99$",
+      "rabais": "5$ de rabais",
+      "mots_cles": [
+        "poulet",
+        "poitrine"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Mozzarella fraîche 2x250g",
+      "prix_texte": "9.99$",
+      "prix_regulier_texte": "12.99$",
+      "rabais": "3$ de rabais",
+      "mots_cles": [
+        "mozzarella",
+        "fromage"
+      ],
+      "categorie": "fromage"
+    },
+    {
+      "nom": "Riz basmati 8kg",
+      "prix_texte": "16.99$",
+      "prix_regulier_texte": "21.99$",
+      "rabais": "5$ de rabais",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Crevettes crues décortiquées 907g",
+      "prix_texte": "18.99$",
+      "prix_regulier_texte": "24.99$",
+      "rabais": "6$ de rabais",
+      "mots_cles": [
+        "crevettes",
+        "fruits de mer"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Pepperoni tranché 500g",
+      "prix_texte": "8.99$",
+      "prix_regulier_texte": "11.99$",
+      "rabais": "3$ de rabais",
+      "mots_cles": [
+        "pepperoni",
+        "pizza"
+      ],
+      "categorie": "charcuterie"
+    }
+  ],
+  "lufa": [
+    {
+      "nom": "Épinards biologiques",
+      "prix_estime": "5.49$",
+      "unite": "227g",
+      "raison": "Buddha bowl, salades, accompagnements",
+      "mots_cles": [
+        "épinard",
+        "épinards"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Carottes biologiques",
+      "prix_estime": "4.29$",
+      "unite": "2lb",
+      "raison": "Ramen, buddha bowl, collations jumeaux",
+      "mots_cles": [
+        "carottes",
+        "carotte"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Courgettes biologiques",
+      "prix_estime": "5.99$",
+      "unite": "2 unités",
+      "raison": "Ratatouille, légumes grillés",
+      "mots_cles": [
+        "courgettes",
+        "courgette"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Lait entier Laiterie Chalifoux",
+      "prix_estime": "6.49$",
+      "unite": "2L",
+      "raison": "Jumeaux, cuisine quotidienne",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Œufs de ferme biologiques",
+      "prix_estime": "7.99$",
+      "unite": "12 unités",
+      "raison": "Carbonara, ramen, déjeuners famille",
+      "mots_cles": [
+        "oeufs",
+        "œufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Fromage cheddar vieilli Perron",
+      "prix_estime": "8.49$",
+      "unite": "200g",
+      "raison": "Tacos, pizza québécoise, collations",
+      "mots_cles": [
+        "cheddar",
+        "fromage"
+      ],
+      "categorie": "fromage"
+    },
+    {
+      "nom": "Pain au levain Boulangerie Borderon",
+      "prix_estime": "6.29$",
+      "unite": "1 miche",
+      "raison": "Déjeuners, accompagnement soupers",
+      "mots_cles": [
+        "pain",
+        "levain"
+      ],
+      "categorie": "boulangerie"
+    },
+    {
+      "nom": "Basilic frais en pot",
+      "prix_estime": "4.99$",
+      "unite": "1 pot",
+      "raison": "Pesto genovese, pizza margherita",
+      "mots_cles": [
+        "basilic",
+        "herbes"
+      ],
+      "categorie": "fines_herbes"
+    },
+    {
+      "nom": "Champignons blancs biologiques",
+      "prix_estime": "4.79$",
+      "unite": "227g",
+      "raison": "Pizza québécoise, ramen",
+      "mots_cles": [
+        "champignons"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Avocat biologique",
+      "prix_estime": "3.99$",
+      "unite": "2 unités",
+      "raison": "Poke bowl, buddha bowl",
+      "mots_cles": [
+        "avocat"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Yogourt nature Liberté",
+      "prix_estime": "5.99$",
+      "unite": "750g",
+      "raison": "Déjeuners jumeaux et famille",
+      "mots_cles": [
+        "yogourt",
+        "yaourt"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Tomates cerises biologiques",
+      "prix_estime": "5.49$",
+      "unite": "pinte",
+      "raison": "Salades, poke bowl, collations Joseph",
+      "mots_cles": [
+        "tomates",
+        "cerises"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Concombre anglais biologique",
+      "prix_estime": "3.29$",
+      "unite": "1 unité",
+      "raison": "Poke bowl, salades",
+      "mots_cles": [
+        "concombre"
+      ],
+      "categorie": "legumes"
+    }
+  ],
+  "lufa_total_estime": "73.56$",
+  "lufa_min_atteint": true,
+  "par_magasin": {
+    "maxi": [
+      "pâtes Barilla",
+      "tomates en conserve",
+      "pommes de terre",
+      "oignons",
+      "ail",
+      "poivrons",
+      "tortillas",
+      "bacon",
+      "boeuf haché"
+    ],
+    "costco": [
+      "saumon atlantique",
+      "huile olive 2L",
+      "parmesan Reggiano",
+      "mozzarella fraîche",
+      "riz basmati",
+      "crevettes",
+      "pepperoni",
+      "poitrines poulet"
+    ],
+    "lufa": [
+      "épinards bio",
+      "carottes bio",
+      "courgettes bio",
+      "lait Chalifoux",
+      "œufs ferme",
+      "cheddar Perron",
+      "pain levain",
+      "basilic frais",
+      "champignons",
+      "avocats",
+      "yogourt Liberté",
+      "tomates cerises",
+      "concombre"
+    ],
+    "autres": [
+      "câpres (épicerie fine)",
+      "anchois (Avril ou IGA)",
+      "pignons de pin (vrac)",
+      "pecorino romano (fromagerie)",
+      "safran (épices spécialisées)"
+    ]
+  },
+  "analyse": "Semaine bien équilibrée pour la famille! Le boeuf haché en solde chez Maxi (9.99$/lb) est parfait pour les tacos mexicains et le spaghetti bolognaise. Le saumon Costco à 14.99$/kg permet de faire le poke bowl et le saumon teriyaki à bon prix. Le bacon en aubaine complète la carbonara. Les légumes frais Lufa (épinards, courgettes, champignons) assurent la qualité bio pour les jumeaux et les recettes de Patricia. Le parmesan Costco en gros format (8$ de rabais) servira pour plusieurs recettes italiennes. Joseph aura ses tortillas pour les tacos avec le boeuf haché. Le basilic frais Lufa est essentiel pour le pesto maison de Yannick.",
+  "economies_estimees": "~42$"
 }

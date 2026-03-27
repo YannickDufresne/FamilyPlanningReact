@@ -33,61 +33,85 @@ function getSemaine() {
   return { debut: fmt(lundi), fin: fmt(dimanche), debutLisible: fmtLisible(lundi), finLisible: fmtLisible(dimanche) };
 }
 
-// ── Fetch circulaire Maxi via Flipp ───────────────────────────────────────────
+// ── Fetch circulaire Maxi via Flipp (scraping page web) ──────────────────────
 async function fetchMaxi() {
   console.log('📦 Récupération circulaire Maxi (Flipp)…');
   const headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'application/json, text/html, */*',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
     'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Cache-Control': 'no-cache',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
   };
 
+  // Essai 1 : page Flipp Maxi → __NEXT_DATA__ JSON embarqué
   try {
-    // Maxi René-Lévesque, Québec ~ 46.8139° N, 71.2080° W
-    const storeRes = await fetch(
-      'https://flipp.com/api/stores/search?latitude=46.8139&longitude=-71.2080&locale=fr_CA&radius=3&tags[]=maxi',
-      { headers }
-    );
-    if (!storeRes.ok) throw new Error(`Store search HTTP ${storeRes.status}`);
-    const stores = await storeRes.json();
-    const maxiStore = (stores || []).find(s =>
-      s.merchant_name_identifier === 'maxi' || s.name?.toLowerCase().includes('maxi')
-    );
-    if (!maxiStore) throw new Error('Maxi introuvable dans les résultats Flipp');
-    console.log(`  → Maxi trouvé: "${maxiStore.name}" (id ${maxiStore.id})`);
+    const res = await fetch('https://flipp.com/fr-ca/flyers/maxi?postal_code=G1R3Z9', { headers });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const html = await res.text();
 
-    const flyerRes = await fetch(
-      `https://flipp.com/api/stores/${maxiStore.id}/flyers?locale=fr_CA`,
-      { headers }
-    );
-    if (!flyerRes.ok) throw new Error(`Flyers HTTP ${flyerRes.status}`);
-    const flyers = await flyerRes.json();
-    const flyer = flyers?.[0];
-    if (!flyer) throw new Error('Aucun flyer disponible');
+    const nextDataMatch = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+    if (nextDataMatch) {
+      const data = JSON.parse(nextDataMatch[1]);
+      // Naviguer dans la structure Next.js pour trouver les items
+      const flyerItems = [];
+      const findItems = (obj) => {
+        if (!obj || typeof obj !== 'object') return;
+        if (Array.isArray(obj)) { obj.forEach(findItems); return; }
+        if (obj.name && (obj.current_price || obj.display_price || obj.sale_story)) {
+          flyerItems.push(obj);
+        }
+        Object.values(obj).forEach(findItems);
+      };
+      findItems(data);
 
-    const itemsRes = await fetch(
-      `https://flipp.com/api/flyer_items?flyer_id=${flyer.id}&locale=fr_CA`,
-      { headers }
-    );
-    if (!itemsRes.ok) throw new Error(`Items HTTP ${itemsRes.status}`);
-    const items = await itemsRes.json();
+      if (flyerItems.length > 0) {
+        const results = flyerItems.map(item => ({
+          nom: item.name,
+          mots_cles: item.name.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
+          prix: item.current_price,
+          prix_texte: item.display_price || (item.current_price ? `${item.current_price}$` : ''),
+          unite: item.size || '',
+          categorie: detecterCategorie(item.name),
+          rabais: item.sale_story || '',
+        })).filter(item => item.prix || item.prix_texte);
 
-    const results = (items || [])
-      .filter(item => item.name)
-      .map(item => ({
-        nom: item.name,
-        mots_cles: item.name.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-        prix: item.current_price,
-        prix_regulier: item.original_price || null,
-        prix_texte: item.display_price || (item.current_price ? `${item.current_price}$` : ''),
-        unite: item.size || '',
-        categorie: detecterCategorie(item.name),
-        rabais: item.sale_story || '',
-      }))
-      .filter(item => item.prix || item.prix_texte);
+        console.log(`  ✅ Maxi (__NEXT_DATA__): ${results.length} produits`);
+        return results;
+      }
+    }
 
-    console.log(`  ✅ Maxi: ${results.length} produits en solde`);
-    return results;
+    // Essai 2 : chercher du JSON embarqué dans des balises <script> génériques
+    const scriptMatches = html.matchAll(/<script[^>]*>([\s\S]{100,50000}?)<\/script>/g);
+    for (const m of scriptMatches) {
+      const src = m[1];
+      if (!src.includes('"current_price"') && !src.includes('"sale_story"')) continue;
+      try {
+        // Extraire les objets item du script
+        const itemMatches = src.matchAll(/\{"name":"([^"]+)"[^}]*"current_price":([0-9.]+)[^}]*\}/g);
+        const results = [];
+        for (const im of itemMatches) {
+          results.push({
+            nom: im[1],
+            mots_cles: im[1].toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
+            prix: parseFloat(im[2]),
+            prix_texte: `${im[2]}$`,
+            categorie: detecterCategorie(im[1]),
+            rabais: '',
+          });
+        }
+        if (results.length > 0) {
+          console.log(`  ✅ Maxi (script inline): ${results.length} produits`);
+          return results;
+        }
+      } catch {}
+    }
+
+    console.warn('  ⚠️ Maxi: page Flipp récupérée mais aucun item extrait — Claude génèrera des suggestions');
+    return [];
   } catch (e) {
     console.warn(`  ⚠️ Flipp Maxi échoué: ${e.message}`);
     return [];
@@ -99,59 +123,71 @@ async function fetchCostco() {
   console.log('📦 Récupération aubaines Costco…');
   const headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'fr-CA,fr;q=0.9',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
+    'Cache-Control': 'no-cache',
   };
 
-  try {
-    const res = await fetch('https://www.costco.ca/savings-event.html', { headers });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
+  // Essayer plusieurs URLs Costco
+  const urls = [
+    'https://www.costco.ca/hot-buys.html',
+    'https://www.costco.ca/instant-savings.html',
+    'https://www.costco.ca/savings-event.html',
+  ];
 
-    // Essai 1: JSON-LD
-    const jsonLdMatches = html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g);
-    const products = [];
-    for (const match of jsonLdMatches) {
-      try {
-        const data = JSON.parse(match[1]);
-        const items = Array.isArray(data) ? data : [data];
-        items.filter(d => d['@type'] === 'Product' && d.name).forEach(p => {
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { headers });
+      if (!res.ok) { console.warn(`  ⚠️ Costco ${url}: HTTP ${res.status}`); continue; }
+      const html = await res.text();
+
+      const products = [];
+
+      // Essai 1: JSON-LD
+      for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+        try {
+          const data = JSON.parse(match[1]);
+          const items = Array.isArray(data) ? data : [data];
+          items.filter(d => d['@type'] === 'Product' && d.name).forEach(p => {
+            products.push({
+              nom: p.name,
+              mots_cles: p.name.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
+              prix: p.offers?.price ? parseFloat(p.offers.price) : null,
+              prix_texte: p.offers?.price ? `${parseFloat(p.offers.price).toFixed(2)}$` : '',
+              categorie: detecterCategorie(p.name),
+              rabais: '',
+            });
+          });
+        } catch {}
+      }
+
+      // Essai 2: regex produits + prix
+      if (products.length === 0) {
+        const pairRe = /(?:product[-_](?:title|name|description))[^>]*>([^<]{5,80})<[\s\S]{0,200}?\$\s*([0-9]{1,4}\.[0-9]{2})/g;
+        for (const m of html.matchAll(pairRe)) {
+          const nom = m[1].trim().replace(/&amp;/g, '&');
           products.push({
-            nom: p.name,
-            mots_cles: p.name.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-            prix: p.offers?.price ? parseFloat(p.offers.price) : null,
-            prix_texte: p.offers?.price ? `${parseFloat(p.offers.price).toFixed(2)}$` : '',
-            categorie: detecterCategorie(p.name),
+            nom,
+            mots_cles: nom.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
+            prix: parseFloat(m[2]),
+            prix_texte: `${m[2]}$`,
+            categorie: detecterCategorie(nom),
             rabais: '',
           });
-        });
-      } catch {}
-    }
+        }
+      }
 
-    // Essai 2: regex sur les prix affichés
-    if (products.length === 0) {
-      const nameRe = /product-title[^>]*>([^<]{5,60})</g;
-      const priceRe = /\$\s*([0-9]{1,4}\.[0-9]{2})/g;
-      const names = [...html.matchAll(nameRe)].map(m => m[1].trim());
-      const prices = [...html.matchAll(priceRe)].map(m => parseFloat(m[1]));
-      names.slice(0, 25).forEach((nom, i) => {
-        products.push({
-          nom,
-          mots_cles: nom.toLowerCase().split(/\s+/).filter(w => w.length >= 3).slice(0, 3),
-          prix: prices[i] || null,
-          prix_texte: prices[i] ? `${prices[i].toFixed(2)}$` : '',
-          categorie: detecterCategorie(nom),
-          rabais: '',
-        });
-      });
+      if (products.length > 0) {
+        console.log(`  ✅ Costco (${url}): ${products.length} produits`);
+        return products.slice(0, 30);
+      }
+    } catch (e) {
+      console.warn(`  ⚠️ Costco ${url}: ${e.message}`);
     }
-
-    console.log(`  ✅ Costco: ${products.length} produits`);
-    return products.slice(0, 30);
-  } catch (e) {
-    console.warn(`  ⚠️ Costco échoué: ${e.message}`);
-    return [];
   }
+
+  console.warn('  ⚠️ Costco: aucune donnée récupérée — Claude génèrera des suggestions');
+  return [];
 }
 
 // ── Détection de catégorie par mots-clés ─────────────────────────────────────
@@ -165,6 +201,40 @@ function detecterCategorie(nom) {
   if (/pâte|riz|farine|pain|céréale|avoine|granola/.test(n)) return 'epicerie_seche';
   if (/huile|vinaigre|sauce|moutarde|épice|herbe/.test(n)) return 'condiments';
   return 'epicerie';
+}
+
+// ── Parsing JSON robuste (gère virgules en trop, commentaires, etc.) ──────────
+function parseJsonSafe(text) {
+  // Retirer les blocs markdown ```json ... ```
+  text = text.replace(/```json\s*/gi, '').replace(/```\s*/g, '');
+
+  // Extraire le bloc JSON principal
+  const match = text.match(/\{[\s\S]*\}/);
+  if (!match) throw new Error('Aucun bloc JSON trouvé dans la réponse');
+  let json = match[0];
+
+  // Supprimer les commentaires JS inline et de bloc
+  json = json.replace(/\/\/[^\n\r"]*/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
+
+  // Supprimer les virgules traînantes avant } ou ]
+  json = json.replace(/,(\s*[\}\]])/g, '$1');
+
+  // Corriger les valeurs null en texte : (ou null) → null
+  json = json.replace(/"[^"]*"\s*\(ou null\)/g, 'null');
+
+  try {
+    return JSON.parse(json);
+  } catch (e) {
+    // Dernière tentative : extraire les propriétés clés une par une
+    console.warn('  ⚠️ JSON malformé, tentative de récupération partielle…');
+    const partial = {};
+    const keyMatches = json.matchAll(/"(\w+)":\s*(\[[\s\S]*?\]|\{[\s\S]*?\}|"[^"]*"|true|false|null|-?\d+\.?\d*)/g);
+    for (const m of keyMatches) {
+      try { partial[m[1]] = JSON.parse(m[2]); } catch {}
+    }
+    if (Object.keys(partial).length === 0) throw e;
+    return partial;
+  }
 }
 
 // ── Analyse Claude ─────────────────────────────────────────────────────────────
@@ -208,52 +278,53 @@ ${costcoStr}
 **Exemples de recettes que la famille cuisine (avec leurs ingrédients) :**
 ${sample.join('\n')}
 
-**Ta mission :** Générer un JSON complet pour organiser les achats de la semaine. Retourne UNIQUEMENT un JSON valide (pas de texte autour) avec cette structure exacte :
+**Ta mission :** Générer un JSON complet pour organiser les achats de la semaine.
+IMPORTANT : Retourne UNIQUEMENT du JSON valide, sans aucun texte avant ou après, sans commentaires, sans virgules en trop.
 
 {
   "maxi_aubaines": [
     {
-      "nom": "nom exact du produit en solde",
-      "prix_texte": "X.XX$",
-      "prix_regulier_texte": "X.XX$ reg." (ou null),
-      "rabais": "description du rabais ex: 38% de rabais",
-      "mots_cles": ["mot-clé court", "autre-mot"],
-      "categorie": "viande|poisson|legumes|fruits|produits_laitiers|epicerie_seche|condiments|epicerie"
+      "nom": "Poulet entier frais",
+      "prix_texte": "7.99$/kg",
+      "prix_regulier_texte": "11.99$/kg",
+      "rabais": "33% de rabais",
+      "mots_cles": ["poulet"],
+      "categorie": "viande"
     }
   ],
   "costco_aubaines": [
     {
-      "nom": "produit Costco",
-      "prix_texte": "X.XX$",
+      "nom": "Saumon atlantique côté",
+      "prix_texte": "14.99$/kg",
+      "prix_regulier_texte": "",
       "rabais": "",
-      "mots_cles": ["mot-clé"],
-      "categorie": "..."
+      "mots_cles": ["saumon"],
+      "categorie": "poisson"
     }
   ],
   "lufa_commande": [
     {
-      "nom": "Nom exact d'un produit Lufa (légumes biologiques QC, lait, oeufs, fromages locaux, pain artisanal...)",
-      "prix_estime": "X.XX$",
-      "unite": "ex: 500g / 1kg / 1 unité",
-      "raison": "courte explication: pour quelle recette",
-      "mots_cles": ["mot-clé"],
-      "categorie": "legumes|fruits|produits_laitiers|boulangerie|autre"
+      "nom": "Épinards biologiques",
+      "prix_estime": "4.99$",
+      "unite": "500g",
+      "raison": "Salade lundi, pesto mercredi",
+      "mots_cles": ["épinard", "épinards"],
+      "categorie": "legumes"
     }
   ],
-  "lufa_total_estime": "XX.XX$",
+  "lufa_total_estime": "58.50$",
   "lufa_min_atteint": true,
   "par_magasin": {
-    "maxi": ["ingrédient 1", "ingrédient 2", "..."],
-    "costco": ["ingrédient en gros 1", "parmesan", "..."],
-    "lufa": ["légume bio 1", "..."],
-    "autres": ["ingrédient spécial ou introuvable ailleurs"]
+    "maxi": ["pâtes", "tomates", "oignons", "ail"],
+    "costco": ["parmesan", "huile olive", "saumon"],
+    "lufa": ["épinards", "carottes", "courgettes", "lait"],
+    "autres": ["câpres", "anchois"]
   },
-  "analyse": "2-3 phrases dynamiques en français sur les meilleures aubaines et économies de la semaine. Mentionne des produits spécifiques.",
-  "economies_estimees": "~XX$"
+  "analyse": "Cette semaine, le poulet est en solde chez Maxi à 7.99$/kg (33% de rabais), idéal pour le poulet rôti de lundi et le tajine de jeudi. Le saumon chez Costco complète parfaitement le thème poisson du mercredi.",
+  "economies_estimees": "~18$"
 }
 
-Pour la liste Lufa : sois précis et réaliste. Lufa vend des paniers de légumes du Québec + épicerie fine locale. Minimum ~50-60$ de commande requis pour Patricia.
-Génère entre 8 et 15 items Lufa couvrant les besoins de la semaine en légumes/fruits/laitiers.`;
+Génère 8 à 15 items Lufa représentant des produits réels de leur catalogue : légumes biologiques du Québec, lait local, œufs de ferme, fromages artisanaux québécois, pain de boulangerie. Minimum de commande ~50-60$.`;
 
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const response = await anthropic.messages.create({
@@ -263,9 +334,7 @@ Génère entre 8 et 15 items Lufa couvrant les besoins de la semaine en légumes
   });
 
   const text = response.content[0].text;
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('Pas de JSON dans la réponse Claude');
-  return JSON.parse(jsonMatch[0]);
+  return parseJsonSafe(text);
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
