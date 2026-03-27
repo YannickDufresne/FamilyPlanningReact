@@ -440,7 +440,7 @@
     "type": "plat",
     "livre": "Classique",
     "exemple_claude": 1,
-    "regime_alimentaire": "végétarien",
+    "regime_alimentaire": "omnivore",
     "eval_patricia": 4.1,
     "eval_yannick": 3.9,
     "eval_joseph": 3.8,
