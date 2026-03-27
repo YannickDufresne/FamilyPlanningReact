@@ -45,21 +45,28 @@ const RECETTE_VIDE = {
 
 const STORAGE_KEY        = 'recettes_custom_v1';
 const API_KEY_STORE      = 'anthropic_key';
+const TOGETHER_KEY_STORE = 'together_key';
 const PROMPT_STORE       = 'recettes_prompt_v2';
 const GITHUB_TOKEN_STORE = 'github_token';
 const GITHUB_REPO        = 'YannickDufresne/FamilyPlanningReact';
 
-// ── Génération automatique d'illustration aquarelle (Pollinations, URL permanente) ──
-function strHash(s) {
-  let h = 0x811c9dc5;
-  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = (h * 0x01000193) >>> 0; }
-  return h % 99999;
-}
-function genererAquarelleUrl(nom, nomOriginal) {
+// ── Génération aquarelle via Together AI ─────────────────────────────────────
+async function genererAquarelleTogether(nom, nomOriginal, togetherKey) {
+  if (!togetherKey) return null;
   const dish   = nomOriginal || nom;
   const prompt = `watercolor painting of ${dish}, loose wet watercolor brushstrokes, paint bleeds and washes, soft pastel tones, white background, hand-painted food illustration, no text, no border`;
-  const seed   = strHash(nom);
-  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?seed=${seed}&width=512&height=512&nologo=true&model=flux`;
+  const resp = await fetch('https://api.together.ai/v1/images/generations', {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${togetherKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: 'black-forest-labs/FLUX.1-schnell',
+      prompt, width: 512, height: 512, steps: 4, n: 1, response_format: 'url',
+    }),
+    signal: AbortSignal.timeout(60000),
+  });
+  if (!resp.ok) throw new Error(`Together AI ${resp.status}`);
+  const json = await resp.json();
+  return json?.data?.[0]?.url || null;
 }
 const RECETTES_PATH      = 'src/data/recettes.json';
 
@@ -310,6 +317,16 @@ function useApiKey() {
     setKey(k);
     if (k) localStorage.setItem(API_KEY_STORE, k);
     else localStorage.removeItem(API_KEY_STORE);
+  }, []);
+  return [key, save];
+}
+
+function useTogetherKey() {
+  const [key, setKey] = useState(() => localStorage.getItem(TOGETHER_KEY_STORE) || '');
+  const save = useCallback(k => {
+    setKey(k);
+    if (k) localStorage.setItem(TOGETHER_KEY_STORE, k);
+    else localStorage.removeItem(TOGETHER_KEY_STORE);
   }, []);
   return [key, save];
 }
@@ -885,7 +902,8 @@ function Pill({ label, active, onClick }) {
 // ── Page principale ───────────────────────────────────────────────────────────
 export default function RecettesPage({ onRetour }) {
   const { custom, ajouter, modifier, supprimer } = useRecettesCustom();
-  const [apiKey, setApiKey]   = useApiKey();
+  const [apiKey, setApiKey]         = useApiKey();
+  const [togetherKey, setTogetherKey] = useTogetherKey();
   const [prompt, setPrompt]   = usePrompt();
   const { token: ghToken, sauverToken: sauverGhToken, sync, statut: syncStatut } = useGitHubSync();
   const toutesRecettes        = useToutesRecettes(custom);
@@ -908,7 +926,9 @@ export default function RecettesPage({ onRetour }) {
 
   const [drawerOpen, setDrawerOpen]           = useState(false);
   const [recetteEnEdition, setRecetteEnEdition] = useState(null);
-  const [afficherGithub, setAfficherGithub]   = useState(false);
+  const [afficherGithub, setAfficherGithub]     = useState(false);
+  const [afficherTogether, setAfficherTogether] = useState(false);
+  const [togetherTemp, setTogetherTemp]         = useState(togetherKey);
   const [ghTokenTemp, setGhTokenTemp]         = useState(ghToken);
   const importRef    = useRef();
   const isFirstLoad  = useRef(true);
@@ -956,13 +976,22 @@ export default function RecettesPage({ onRetour }) {
   function ouvrirAjout()        { setRecetteEnEdition(null); setDrawerOpen(true); }
   function ouvrirEdition(r)     { setRecetteEnEdition(r);    setDrawerOpen(true); }
   function handleSave(form) {
-    // Auto-génère l'URL aquarelle si absente
-    const formComplet = form.image_aquarelle
-      ? form
-      : { ...form, image_aquarelle: genererAquarelleUrl(form.nom, form.nom_original) };
-    if (recetteEnEdition) modifier(recetteEnEdition._id, formComplet);
-    else ajouter(formComplet);
+    // Sauvegarde immédiatement
+    if (recetteEnEdition) modifier(recetteEnEdition._id, form);
+    else ajouter(form);
     setDrawerOpen(false);
+
+    // Génère l'aquarelle en arrière-plan si absente et clé Together AI configurée
+    if (!form.image_aquarelle && togetherKey && form.nom) {
+      genererAquarelleTogether(form.nom, form.nom_original, togetherKey)
+        .then(url => {
+          if (url) {
+            const id = recetteEnEdition?._id ?? form.nom;
+            modifier(id, { ...form, image_aquarelle: url });
+          }
+        })
+        .catch(e => console.warn('Génération aquarelle échouée :', e));
+    }
   }
 
   function telecharger() {
@@ -1049,8 +1078,15 @@ export default function RecettesPage({ onRetour }) {
               + Ajouter
             </button>
             <button
+              className={`recettes-action-btn ${togetherKey ? 'recettes-action-btn--sync-on' : ''}`}
+              onClick={() => { setAfficherTogether(v => !v); setAfficherGithub(false); }}
+              title={togetherKey ? 'Clé Together AI configurée — aquarelle auto activée' : 'Configurer Together AI pour générer les illustrations aquarelle'}
+            >
+              🎨 IA
+            </button>
+            <button
               className={`recettes-action-btn ${ghToken ? 'recettes-action-btn--sync-on' : ''}`}
-              onClick={() => setAfficherGithub(v => !v)}
+              onClick={() => { setAfficherGithub(v => !v); setAfficherTogether(false); }}
               title={ghToken ? 'Sync GitHub actif' : 'Configurer la sync GitHub'}
             >
               ☁ GitHub
@@ -1065,6 +1101,43 @@ export default function RecettesPage({ onRetour }) {
           </div>
         </div>
       </div>
+
+      {/* Panneau Together AI */}
+      {afficherTogether && (
+        <div className="github-panel">
+          <p className="github-panel__info">
+            {togetherKey
+              ? <>Clé Together AI configurée — l'illustration aquarelle est générée automatiquement à chaque ajout de recette.{' '}
+                  <button className="github-panel__effacer" onClick={() => { setTogetherKey(''); setTogetherTemp(''); }}>
+                    Supprimer la clé
+                  </button>
+                </>
+              : <>Entrez votre clé Together AI pour générer automatiquement des illustrations aquarelle lors de l'ajout de recettes.{' '}
+                  <a href="https://api.together.ai/settings/api-keys" target="_blank" rel="noopener noreferrer">
+                    Créer une clé sur together.ai →
+                  </a>
+                </>
+            }
+          </p>
+          {!togetherKey && (
+            <div className="github-panel__input-row">
+              <input
+                type="password"
+                className="github-panel__input"
+                placeholder="tgp_v1_..."
+                value={togetherTemp}
+                onChange={e => setTogetherTemp(e.target.value)}
+              />
+              <button
+                className="github-panel__btn"
+                onClick={() => { setTogetherKey(togetherTemp.trim()); setAfficherTogether(false); }}
+              >
+                Enregistrer
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Panneau GitHub sync */}
       {afficherGithub && (
