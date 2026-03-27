@@ -191,16 +191,23 @@ export default function DayCard({ jour, modeActivite = 'famille', onToggleModeAc
 
       {/* Repas */}
       <div className="planning-item">
-        {recette.image_url && !isWarning && (
-          <div className="planning-repas__img-wrapper">
-            <img
-              className="planning-repas__img"
-              src={recette.image_url}
-              alt={recette.nom}
-              loading="lazy"
-            />
-          </div>
-        )}
+        {!isWarning && (() => {
+          const styleImages = localStorage.getItem('style_images') || 'aquarelle';
+          const isAquarelle = styleImages === 'aquarelle' && recette.image_aquarelle;
+          const src = isAquarelle
+            ? import.meta.env.BASE_URL + recette.image_aquarelle
+            : recette.image_url;
+          return src ? (
+            <div className={`planning-repas__img-wrapper planning-repas__img-wrapper--${isAquarelle ? 'aquarelle' : 'photo'}`}>
+              <img
+                className={`planning-repas__img planning-repas__img--${isAquarelle ? 'aquarelle' : 'photo'}`}
+                src={src}
+                alt={recette.nom}
+                loading="lazy"
+              />
+            </div>
+          ) : null;
+        })()}
         <div className="planning-item__label">Repas</div>
         <div className="planning-item__name">
           {recette.url && !isWarning ? (

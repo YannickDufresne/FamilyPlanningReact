@@ -32,8 +32,10 @@ const ORIGINES_SUGGEREES = [
   'Moyen-Orient', 'Chine', 'Vietnam', 'Pérou',
 ];
 
+const IMAGE_STYLE_STORE = 'style_images'; // 'aquarelle' | 'photo'
+
 const RECETTE_VIDE = {
-  nom: '', nom_original: '', url: '', image_url: '', origine: '', regime_alimentaire: 'omnivore',
+  nom: '', nom_original: '', url: '', image_url: '', image_aquarelle: '', origine: '', regime_alimentaire: 'omnivore',
   temps_preparation: '', cout: 3, ingredients: '', livre: '', notes: '',
   source: 'manuel',
   theme_pasta_rapido: 0, theme_bol_nwich: 0, theme_criiions_poisson: 0,
@@ -777,7 +779,7 @@ function Drawer({ open, onClose, children }) {
 }
 
 // ── Carte recette ─────────────────────────────────────────────────────────────
-function RecetteCard({ recette, onEdit }) {
+function RecetteCard({ recette, onEdit, styleImages = 'aquarelle' }) {
   const themes = Object.entries(THEMES).filter(([key]) => recette[key] === 1);
   const evalsValides = MEMBRES.filter(m => recette[m.key] != null && recette[m.key] !== '' && !isNaN(parseFloat(recette[m.key])));
   const hasRatings = evalsValides.length > 0;
@@ -791,11 +793,21 @@ function RecetteCard({ recette, onEdit }) {
 
   return (
     <article className="recette-card">
-      <div className="recette-card__img-wrapper">
-        {recette.image_url
-          ? <img className="recette-card__img" src={recette.image_url} alt={recette.nom} loading="lazy" />
-          : <div className="recette-card__img-placeholder">{themeEmoji}</div>
-        }
+      <div className={`recette-card__img-wrapper recette-card__img-wrapper--${styleImages === 'aquarelle' && recette.image_aquarelle ? 'aquarelle' : 'photo'}`}>
+        {(() => {
+          const isAquarelle = styleImages === 'aquarelle' && recette.image_aquarelle;
+          const src = isAquarelle
+            ? import.meta.env.BASE_URL + recette.image_aquarelle
+            : recette.image_url;
+          return src
+            ? <img
+                className={`recette-card__img recette-card__img--${isAquarelle ? 'aquarelle' : 'photo'}`}
+                src={src}
+                alt={recette.nom}
+                loading="lazy"
+              />
+            : <div className="recette-card__img-placeholder">{themeEmoji}</div>;
+        })()}
       </div>
       <div className="recette-card__body">
         <div className="recette-card__top">
@@ -871,6 +883,15 @@ export default function RecettesPage({ onRetour }) {
   const [filtreOrigine, setFiltreOrigine] = useState('Tous');
   const [filtreCout, setFiltreCout]       = useState(0);
   const [tri, setTri]                     = useState('nom');
+
+  const [styleImages, setStyleImages] = useState(
+    () => localStorage.getItem(IMAGE_STYLE_STORE) || 'aquarelle'
+  );
+  const toggleStyleImages = () => setStyleImages(s => {
+    const next = s === 'aquarelle' ? 'photo' : 'aquarelle';
+    localStorage.setItem(IMAGE_STYLE_STORE, next);
+    return next;
+  });
 
   const [drawerOpen, setDrawerOpen]           = useState(false);
   const [recetteEnEdition, setRecetteEnEdition] = useState(null);
@@ -994,6 +1015,19 @@ export default function RecettesPage({ onRetour }) {
           </div>
           <span className="recettes-compte">{resultats.length} / {toutesRecettes.length} recettes</span>
           <div className="recettes-header__actions">
+            <button
+              className="img-style-toggle"
+              onClick={toggleStyleImages}
+              title={styleImages === 'aquarelle' ? 'Voir les photos originales' : 'Voir les illustrations aquarelle'}
+            >
+              <span className={`img-style-toggle__opt ${styleImages === 'aquarelle' ? 'img-style-toggle__opt--active' : ''}`}>
+                🎨 Aquarelle
+              </span>
+              <span className="img-style-toggle__sep" />
+              <span className={`img-style-toggle__opt ${styleImages === 'photo' ? 'img-style-toggle__opt--active' : ''}`}>
+                📷 Photo
+              </span>
+            </button>
             <button className="recettes-action-btn recettes-action-btn--primary" onClick={ouvrirAjout}>
               + Ajouter
             </button>
@@ -1094,7 +1128,7 @@ export default function RecettesPage({ onRetour }) {
 
       {/* Grille */}
       <div className="recettes-grid">
-        {resultats.map(r => <RecetteCard key={r._id || r.nom} recette={r} onEdit={ouvrirEdition} />)}
+        {resultats.map(r => <RecetteCard key={r._id || r.nom} recette={r} onEdit={ouvrirEdition} styleImages={styleImages} />)}
         {resultats.length === 0 && (
           <div className="recettes-vide">Aucune recette ne correspond à ces critères.</div>
         )}
