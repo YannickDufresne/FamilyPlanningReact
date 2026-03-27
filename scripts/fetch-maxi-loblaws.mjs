@@ -219,10 +219,104 @@ async function tryStoreId(storeId) {
   return null;
 }
 
+// ── Approche 5 : Scraping maxi.ca (page circulaire Next.js) ──────────────────
+// Le site maxi.ca est une app Next.js — la page circulaire embarque les données
+// dans __NEXT_DATA__ ou fait des appels API côté client qu'on peut intercepter.
+
+async function fetchMaxiWebsite() {
+  const WEB_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
+    'Cache-Control': 'no-cache',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+  };
+
+  const urls = [
+    'https://www.maxi.ca/fr/circulaire-electronique/',
+    'https://www.maxi.ca/fr/promotions/',
+    'https://www.maxi.ca/fr/soldes-de-la-semaine/',
+  ];
+
+  for (const url of urls) {
+    console.log(`  → Page web Maxi: ${url}`);
+    try {
+      // redirect: 'follow' est important — maxi.ca renvoie un 308 avant le 200
+      const res = await fetchWithTimeout(url, { headers: WEB_HEADERS, redirect: 'follow' }, 15000);
+      if (!res.ok) { console.warn(`    ⚠️ HTTP ${res.status}`); continue; }
+      const html = await res.text();
+
+      // Essai 1 : __NEXT_DATA__ (Next.js)
+      const nextMatch = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+      if (nextMatch) {
+        try {
+          const nextData = JSON.parse(nextMatch[1]);
+          const items = [];
+          // Parcourir récursivement pour trouver des produits avec prix
+          const findProducts = (obj, depth = 0) => {
+            if (depth > 8 || !obj || typeof obj !== 'object') return;
+            if (Array.isArray(obj)) { obj.slice(0, 200).forEach(o => findProducts(o, depth + 1)); return; }
+            const hasName = obj.name || obj.title || obj.productName;
+            const hasPrice = obj.prices || obj.price || obj.currentPrice || obj.displayPrice;
+            if (hasName && hasPrice) items.push(obj);
+            Object.values(obj).forEach(v => findProducts(v, depth + 1));
+          };
+          findProducts(nextData);
+          if (items.length > 0) {
+            console.log(`    ✅ __NEXT_DATA__: ${items.length} produits trouvés`);
+            return items.map(item => ({
+              ...item,
+              name: item.name || item.title || item.productName,
+            }));
+          }
+        } catch (e) { console.warn(`    ⚠️ __NEXT_DATA__ parse error: ${e.message}`); }
+      }
+
+      // Essai 2 : JSON dans des blocs script génériques
+      const scriptBlocks = [...html.matchAll(/<script[^>]*>([\s\S]{200,100000}?)<\/script>/g)];
+      for (const block of scriptBlocks) {
+        const src = block[1];
+        if (!src.includes('"price"') && !src.includes('"currentPrice"') && !src.includes('"displayPrice"')) continue;
+        // Chercher des tableaux de produits
+        const arrayMatch = src.match(/\[(\s*\{[^[\]]*"name"[^[\]]*"price[^[\]]*\}[\s\S]{0,5000}?)\]/);
+        if (arrayMatch) {
+          try {
+            const arr = JSON.parse('[' + arrayMatch[1] + ']');
+            if (arr.length > 0) { console.log(`    ✅ Script inline: ${arr.length} items`); return arr; }
+          } catch {}
+        }
+      }
+
+      // Essai 3 : extraction HTML brute
+      const nameRe = /<[^>]+(?:class|data-testid)="[^"]*(?:product|item|deal)[^"]*"[^>]*>\s*<[^>]+>\s*([^<]{5,80})\s*<\/[^>]+>/gi;
+      const priceRe = /(\d{1,3}[.,]\d{2})\s*\$/g;
+      const names = [...html.matchAll(nameRe)].map(m => m[1].trim()).filter(n => n.length > 3);
+      const prices = [...html.matchAll(priceRe)].map(m => parseFloat(m[1].replace(',', '.')));
+      if (names.length >= 3) {
+        console.log(`    ✅ HTML regex: ${names.length} noms, ${prices.length} prix`);
+        return names.slice(0, 30).map((name, i) => ({
+          name,
+          price: prices[i] || null,
+          displayPrice: prices[i] ? `${prices[i].toFixed(2)}$` : '',
+        }));
+      }
+
+    } catch (e) { console.warn(`    ⚠️ ${e.message}`); }
+  }
+
+  throw new Error('Toutes les URLs maxi.ca ont échoué');
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main() {
   console.log('\n🏪 Fetch circulaire Maxi (API Loblaws/PC Optimum)…\n');
+  console.log('💡 Pour utiliser la vraie clé API Loblaws :');
+  console.log('   1. Ouvre Chrome → maxi.ca → F12 → Network → cherche "api.pcexpress.ca"');
+  console.log('   2. Copie la valeur du header "x-apikey"');
+  console.log('   3. Ajoute comme GitHub Secret : LOBLAWS_API_KEY\n');
 
   let rawItems = null;
   let storeId = '';
@@ -255,6 +349,17 @@ async function main() {
         storeId = result.storeId;
         break;
       }
+    }
+  }
+
+  // Approche 5 : Scraping direct de maxi.ca
+  if (!rawItems) {
+    console.log('\n→ Approche 5 : Scraping maxi.ca (page circulaire)');
+    try {
+      rawItems = await fetchMaxiWebsite();
+      console.log(`  ✅ Approche 5 réussie: ${rawItems.length} items`);
+    } catch (e) {
+      console.warn(`  ⚠️ Approche 5 échouée: ${e.message}`);
     }
   }
 

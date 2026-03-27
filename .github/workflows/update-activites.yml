@@ -43,6 +43,9 @@ jobs:
 
       - name: Circulaire Maxi (Loblaws API)
         env:
+          # LOBLAWS_API_KEY : à ajouter dans GitHub Secrets
+          # Obtenir depuis Chrome DevTools sur maxi.ca → Network → api.pcexpress.ca → header x-apikey
+          LOBLAWS_API_KEY: ${{ secrets.LOBLAWS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-maxi-loblaws.mjs
 
