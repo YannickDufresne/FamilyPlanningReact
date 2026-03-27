@@ -61,7 +61,9 @@ export default function App() {
     () => localStorage.getItem('fp_auth') === HASH
   );
   const [filtres, setFiltres] = useState(DEFAULT_FILTRES);
-  const [seed, setSeed] = useState(() => seedForWeek(meta.semaine.debut));
+  // Seed aléatoire à chaque rechargement → plannings différents à chaque visite.
+  // Les jours verrouillés persistent via recettesForcees (localStorage), pas via le seed.
+  const [seed, setSeed] = useState(() => Math.floor(Math.random() * 1e9));
   const [view, setView]           = useState('planning');
   const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -178,13 +180,43 @@ export default function App() {
     if (semaineLockee || !estSemaineEditable) return;
     setJoursVerrouilles(prev => {
       const next = new Set(prev);
-      if (next.has(i)) next.delete(i); else next.add(i);
+      if (next.has(i)) {
+        // Déverrouiller : retirer aussi la recette forcée auto-sauvegardée
+        next.delete(i);
+        setRecettesForcees(prevF => {
+          const nextF = new Map(prevF);
+          nextF.delete(i);
+          localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...nextF]));
+          return nextF;
+        });
+      } else {
+        // Verrouiller : sauvegarder la recette courante pour qu'elle survive au rechargement
+        next.add(i);
+        const recetteActuelle = planningVue[i]?.recette?.nom;
+        if (recetteActuelle && !recetteActuelle.startsWith('⚠️')) {
+          setRecettesForcees(prevF => {
+            const nextF = new Map(prevF);
+            nextF.set(i, recetteActuelle);
+            localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...nextF]));
+            return nextF;
+          });
+        }
+      }
       localStorage.setItem(locksKey(semaineVue), JSON.stringify([...next]));
       return next;
     });
   }
 
   function lockerSemaine() {
+    // Sauvegarder toutes les recettes courantes avant de verrouiller
+    const toutesLesRecettes = new Map();
+    planningVue.forEach((jour, i) => {
+      const nom = jour?.recette?.nom;
+      if (nom && !nom.startsWith('⚠️')) toutesLesRecettes.set(i, nom);
+    });
+    setRecettesForcees(toutesLesRecettes);
+    localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...toutesLesRecettes]));
+
     setSemaineLockee(true);
     localStorage.setItem(semaineLockKey(semaineVue), 'true');
     const tous = new Set([0,1,2,3,4,5,6]);
