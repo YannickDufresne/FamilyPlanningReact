@@ -1385,11 +1385,9 @@ input[type="range"] {
   object-fit: contain;
   padding: 6px;
 }
-/* Mode photo : couvre tout, filtre pastel subtil */
+/* Mode photo : photo originale sans filtre */
 .recette-card__img--photo {
   object-fit: cover;
-  filter: saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
-  mix-blend-mode: multiply;
 }
 .recette-card:hover .recette-card__img { transform: scale(1.04); }
 .recette-card__img-wrapper--photo::after {
@@ -1651,8 +1649,6 @@ input[type="range"] {
 }
 .planning-repas__img--photo {
   object-fit: cover;
-  filter: saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
-  mix-blend-mode: multiply;
 }
 .planning-repas__img-wrapper--photo::after {
   content: '';
@@ -1666,8 +1662,7 @@ input[type="range"] {
   pointer-events: none;
 }
 .recette-form__img-preview img {
-  filter: saturate(0.38) contrast(0.78) brightness(1.22) sepia(0.28) hue-rotate(-6deg);
-  mix-blend-mode: multiply;
+  object-fit: cover;
 }
 
 /* ── Prévisualisation image dans le formulaire ─────────────────────────────── */
