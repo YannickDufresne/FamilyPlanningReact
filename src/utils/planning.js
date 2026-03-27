@@ -120,7 +120,7 @@ function shuffleSeeded(arr, seed) {
   return a;
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel }) {
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees }) {
   const { nbVegetarien, nbVegane, nbGratuit = 1, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
@@ -209,14 +209,30 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // Si l'exclusion vide complètement le pool, on accepte les doublons plutôt que rien
     const poolRecettes = recettesDispoUniques.length > 0 ? recettesDispoUniques : recettesDispo;
 
-    let recetteJour = pickRandom(poolRecettes, rngRecette);
-    if (!recetteJour) {
-      recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: 'Aucune recette disponible', regime_alimentaire: 'inconnu' };
-    } else {
+    // ── Recette forcée (choix manuel de l'utilisateur) ────────────────────────
+    let recetteForcee = null;
+    if (recettesForcees?.has(i)) {
+      const nomForce = recettesForcees.get(i);
+      recetteForcee = recettes.find(r => r.nom === nomForce) || null;
+    }
+
+    let recetteJour;
+    if (recetteForcee) {
+      recetteJour = recetteForcee;
       recettesUtilisees.add(recetteJour.nom);
       if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;
       else if (recetteJour.regime_alimentaire === 'végétarien') compteurVegetarien++;
       else if (recetteJour.regime_alimentaire === 'végane')     compteurVegane++;
+    } else {
+      recetteJour = pickRandom(poolRecettes, rngRecette);
+      if (!recetteJour) {
+        recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: 'Aucune recette disponible', regime_alimentaire: 'inconnu' };
+      } else {
+        recettesUtilisees.add(recetteJour.nom);
+        if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;
+        else if (recetteJour.regime_alimentaire === 'végétarien') compteurVegetarien++;
+        else if (recetteJour.regime_alimentaire === 'végane')     compteurVegane++;
+      }
     }
 
     // ── Exercices ─────────────────────────────────────────────────────────────

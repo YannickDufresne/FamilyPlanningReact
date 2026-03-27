@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import WeeklyPlanning from './components/WeeklyPlanning';
 import GroceryList from './components/GroceryList';
+import EpiceriePage from './components/EpiceriePage';
 import RecettesPage from './components/RecettesPage';
 import ActivitesPage from './components/ActivitesPage';
 import UpdateModal from './components/UpdateModal';
@@ -20,9 +21,7 @@ import './App.css';
 const HASH = 'UEBtcGxlbW91c3NlMjAxMiE=';
 const HISTORIQUE_STORE = 'planning_historique';
 const MAX_HISTORIQUE   = 8; // semaines conservées
-
-const LOCKS_STORE       = `planning_locks_${meta.semaine.debut}`;
-const SEMAINE_LOCK_STORE = `semaine_lockee_${meta.semaine.debut}`;
+const SEMAINES_AVANCE  = 2; // combien de semaines futures accessibles
 
 function lundiISO(dateStr, deltaJours) {
   const d = new Date(dateStr + 'T12:00:00');
@@ -37,6 +36,14 @@ function formatSemaineNav(lundiStr) {
   const fD = new Intl.DateTimeFormat('fr-CA', { day: 'numeric', month: 'short', year: 'numeric' }).format(dimanche);
   return `${fL} – ${fD}`;
 }
+function seedForWeek(lundiStr) {
+  let h = 5381;
+  for (const c of lundiStr) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
+  return (h % 2147483646) + 1;
+}
+function locksKey(semaine)     { return `planning_locks_${semaine}`; }
+function semaineLockKey(semaine) { return `semaine_lockee_${semaine}`; }
+function forceesKey(semaine)   { return `fp_forcees_${semaine}`; }
 
 const DEFAULT_FILTRES = {
   nbVegetarien: 2,
@@ -54,14 +61,7 @@ export default function App() {
     () => localStorage.getItem('fp_auth') === HASH
   );
   const [filtres, setFiltres] = useState(DEFAULT_FILTRES);
-  const [seed, setSeed] = useState(() => {
-    // Seed dérivé de la date du lundi → plannings différents chaque semaine,
-    // identiques sur tous les appareils. Rebrassage = seed aléatoire.
-    const debut = meta.semaine.debut; // ex. "2026-03-23"
-    let h = 5381;
-    for (const c of debut) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
-    return (h % 2147483646) + 1;
-  });
+  const [seed, setSeed] = useState(() => seedForWeek(meta.semaine.debut));
   const [view, setView]           = useState('planning');
   const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -74,20 +74,43 @@ export default function App() {
     return familleDefaut;
   });
 
+  // ── État par semaine (rechargé à chaque navigation) ───────────────────────
   const [joursVerrouilles, setJoursVerrouilles] = useState(() => {
-    try { return new Set(JSON.parse(localStorage.getItem(LOCKS_STORE) || '[]')); }
+    try { return new Set(JSON.parse(localStorage.getItem(locksKey(meta.semaine.debut)) || '[]')); }
     catch { return new Set(); }
   });
   const [semaineLockee, setSemaineLockee] = useState(
-    () => localStorage.getItem(SEMAINE_LOCK_STORE) === 'true'
+    () => localStorage.getItem(semaineLockKey(meta.semaine.debut)) === 'true'
   );
+  const [recettesForcees, setRecettesForcees] = useState(() => {
+    try {
+      const s = localStorage.getItem(forceesKey(meta.semaine.debut));
+      return s ? new Map(JSON.parse(s)) : new Map();
+    } catch { return new Map(); }
+  });
+
+  // Recharger l'état quand on change de semaine
+  useEffect(() => {
+    try {
+      setJoursVerrouilles(new Set(JSON.parse(localStorage.getItem(locksKey(semaineVue)) || '[]')));
+    } catch { setJoursVerrouilles(new Set()); }
+    setSemaineLockee(localStorage.getItem(semaineLockKey(semaineVue)) === 'true');
+    try {
+      const s = localStorage.getItem(forceesKey(semaineVue));
+      setRecettesForcees(s ? new Map(JSON.parse(s)) : new Map());
+    } catch { setRecettesForcees(new Map()); }
+  }, [semaineVue]);
 
   if (!authentifie) {
     return <LoginScreen onSuccess={() => setAuthentifie(true)} />;
   }
 
+  // ── Type de semaine ───────────────────────────────────────────────────────
   const estSemaineActuelle = semaineVue === meta.semaine.debut;
+  const estSemaineAVenir   = semaineVue > meta.semaine.debut;
+  const estSemaineEditable = estSemaineActuelle || estSemaineAVenir;
 
+  // ── Planning semaine actuelle (avec seed rebrassable) ─────────────────────
   const planningRef = useRef(null);
   const planning = useMemo(() => {
     const result = genererPlanning({
@@ -96,10 +119,25 @@ export default function App() {
       profils,
       joursVerrouilles: estSemaineActuelle ? joursVerrouilles : new Set(),
       planningActuel: planningRef.current,
+      recettesForcees: estSemaineActuelle ? recettesForcees : new Map(),
     });
     planningRef.current = result;
     return result;
-  }, [filtres, seed, profils, joursVerrouilles, estSemaineActuelle]);
+  }, [filtres, seed, profils, joursVerrouilles, estSemaineActuelle, recettesForcees]);
+
+  // ── Planning semaines à venir (déterministe par date) ─────────────────────
+  const planningFutur = useMemo(() => {
+    if (!estSemaineAVenir) return null;
+    return genererPlanning({
+      recettes, exercices, activites, musique,
+      filtres: DEFAULT_FILTRES,
+      seed: seedForWeek(semaineVue),
+      semaineDebut: semaineVue,
+      profils,
+      joursVerrouilles,
+      recettesForcees,
+    });
+  }, [estSemaineAVenir, semaineVue, profils, joursVerrouilles, recettesForcees]);
 
   // ── Historique ───────────────────────────────────────────────────────────────
   // Sauvegarde automatique du planning courant
@@ -119,50 +157,71 @@ export default function App() {
     catch { return {}; }
   }, []);
 
-  const planningVue        = estSemaineActuelle ? planning : (historique[semaineVue]?.planning || []);
-  const semainePrecedente  = lundiISO(semaineVue, -7);
-  const semaineSuivante    = lundiISO(semaineVue, +7);
-  const peutReculer        = !!historique[semainePrecedente];
-  const peutAvancer        = semaineVue < meta.semaine.debut;
+  // ── Planning affiché selon la semaine sélectionnée ────────────────────────
+  const planningVue = estSemaineActuelle
+    ? planning
+    : estSemaineAVenir
+      ? (planningFutur || [])
+      : (historique[semaineVue]?.planning || []);
+
+  // ── Navigation ────────────────────────────────────────────────────────────
+  const semainePrecedente = lundiISO(semaineVue, -7);
+  const semaineSuivante   = lundiISO(semaineVue, +7);
+  const limiteAvance      = lundiISO(meta.semaine.debut, SEMAINES_AVANCE * 7);
+  const peutReculer       = !!historique[semainePrecedente];
+  const peutAvancer       = semaineVue < limiteAvance;
 
   const stats = useMemo(() => calculerStats(planningVue), [planningVue]);
 
+  // ── Handlers ──────────────────────────────────────────────────────────────
   function toggleLockJour(i) {
-    if (semaineLockee || !estSemaineActuelle) return;
+    if (semaineLockee || !estSemaineEditable) return;
     setJoursVerrouilles(prev => {
       const next = new Set(prev);
       if (next.has(i)) next.delete(i); else next.add(i);
-      localStorage.setItem(LOCKS_STORE, JSON.stringify([...next]));
+      localStorage.setItem(locksKey(semaineVue), JSON.stringify([...next]));
       return next;
     });
   }
 
   function lockerSemaine() {
     setSemaineLockee(true);
-    localStorage.setItem(SEMAINE_LOCK_STORE, 'true');
+    localStorage.setItem(semaineLockKey(semaineVue), 'true');
     const tous = new Set([0,1,2,3,4,5,6]);
     setJoursVerrouilles(tous);
-    localStorage.setItem(LOCKS_STORE, JSON.stringify([0,1,2,3,4,5,6]));
+    localStorage.setItem(locksKey(semaineVue), JSON.stringify([0,1,2,3,4,5,6]));
   }
 
   function delockerSemaine() {
     setSemaineLockee(false);
-    localStorage.removeItem(SEMAINE_LOCK_STORE);
+    localStorage.removeItem(semaineLockKey(semaineVue));
     setJoursVerrouilles(new Set());
-    localStorage.removeItem(LOCKS_STORE);
+    localStorage.removeItem(locksKey(semaineVue));
+    setRecettesForcees(new Map());
+    localStorage.removeItem(forceesKey(semaineVue));
   }
 
+  function choisirRecette(dayIndex, recetteNom) {
+    setRecettesForcees(prev => {
+      const next = new Map(prev);
+      if (recetteNom) {
+        next.set(dayIndex, recetteNom);
+      } else {
+        next.delete(dayIndex);
+      }
+      localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...next]));
+      return next;
+    });
+  }
+
+  // ── Générer semaine précédente dans l'historique si absente ──────────────
   useEffect(() => {
     const lundiPrecedent = lundiISO(meta.semaine.debut, -7);
     const stored = JSON.parse(localStorage.getItem(HISTORIQUE_STORE) || '{}');
-    if (stored[lundiPrecedent]) return; // already exists
-    // Compute seed for previous week
-    let h = 5381;
-    for (const c of lundiPrecedent) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
-    const seedPrev = (h % 2147483646) + 1;
+    if (stored[lundiPrecedent]) return;
     const planningPrev = genererPlanning({
       recettes, exercices, activites, musique, filtres: DEFAULT_FILTRES,
-      seed: seedPrev, semaineDebut: lundiPrecedent, profils,
+      seed: seedForWeek(lundiPrecedent), semaineDebut: lundiPrecedent, profils,
     });
     if (planningPrev) {
       stored[lundiPrecedent] = { planning: planningPrev, savedAt: new Date().toISOString() };
@@ -170,11 +229,24 @@ export default function App() {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Badge statut semaine ──────────────────────────────────────────────────
+  const statusClass = estSemaineActuelle
+    ? 'semaine-nav__status--active'
+    : estSemaineAVenir
+      ? 'semaine-nav__status--future'
+      : 'semaine-nav__status--readonly';
+  const statusLabel = estSemaineActuelle
+    ? '📅 Semaine en cours'
+    : estSemaineAVenir
+      ? '🔮 Planification à venir'
+      : '📖 Lecture seule';
+
   return (
     <div className="app">
       <Header
         onViewRecettes={() => setView('recettes')}
         onViewActivites={() => setView('activites')}
+        onViewEpicerie={() => setView('epicerie')}
         onViewUpdate={() => setShowUpdateModal(true)}
         onViewProfils={() => setShowProfilsModal(true)}
         activeView={view}
@@ -183,17 +255,19 @@ export default function App() {
         <RecettesPage onRetour={() => setView('planning')} />
       ) : view === 'activites' ? (
         <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} profils={profils} />
+      ) : view === 'epicerie' ? (
+        <EpiceriePage planning={planningVue} onRetour={() => setView('planning')} />
       ) : (
         <div className="layout">
           <Sidebar
             filtres={filtres}
             setFiltres={setFiltres}
             onRebrasser={estSemaineActuelle && !semaineLockee ? () => setSeed(Math.floor(Math.random() * 1e9)) : null}
-            onLockerSemaine={estSemaineActuelle && !semaineLockee ? lockerSemaine : null}
+            onLockerSemaine={estSemaineEditable && !semaineLockee ? lockerSemaine : null}
             onDelockerSemaine={semaineLockee ? delockerSemaine : null}
             semaineLockee={semaineLockee}
             stats={stats}
-            lectureSeule={!estSemaineActuelle}
+            lectureSeule={!estSemaineEditable}
           />
           <main className="main-content">
             {/* Navigation entre semaines */}
@@ -212,6 +286,9 @@ export default function App() {
                   </button>
                 )}
               </span>
+              <span className={`semaine-nav__status ${statusClass}`}>
+                {statusLabel}
+              </span>
               <button
                 className="semaine-nav__btn"
                 onClick={() => peutAvancer && setSemaineVue(semaineSuivante)}
@@ -222,11 +299,13 @@ export default function App() {
             <WeeklyPlanning
               planning={planningVue}
               profils={profils}
-              joursVerrouilles={estSemaineActuelle ? joursVerrouilles : new Set()}
-              onToggleLockJour={estSemaineActuelle ? toggleLockJour : null}
-              lectureSeule={!estSemaineActuelle || semaineLockee}
+              joursVerrouilles={estSemaineEditable ? joursVerrouilles : new Set()}
+              onToggleLockJour={estSemaineEditable ? toggleLockJour : null}
+              lectureSeule={!estSemaineEditable || semaineLockee}
+              recettes={recettes}
+              recettesForcees={estSemaineEditable ? recettesForcees : new Map()}
+              onChoisirRecette={estSemaineEditable && !semaineLockee ? choisirRecette : null}
             />
-            <GroceryList planning={planningVue} />
           </main>
         </div>
       )}

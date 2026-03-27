@@ -25,7 +25,7 @@ function SourceDot({ statut, label }) {
   );
 }
 
-export default function Header({ onViewRecettes, onViewActivites, onViewUpdate, onViewProfils, activeView }) {
+export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie, onViewUpdate, onViewProfils, activeView }) {
   const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
   const maj = new Date((meta.lastUpdated || '').split('T')[0] + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -65,7 +65,11 @@ export default function Header({ onViewRecettes, onViewActivites, onViewUpdate, 
             className={`header-nav-link${activeView === 'activites' ? ' header-nav-link--active' : ''}`}
             onClick={onViewActivites}
           >Activités</button>
-          &nbsp;·&nbsp; Musique
+          &nbsp;·&nbsp; Musique &nbsp;·&nbsp;
+          <button
+            className={`header-nav-link${activeView === 'epicerie' ? ' header-nav-link--active' : ''}`}
+            onClick={onViewEpicerie}
+          >🛒 Épicerie</button>
         </p>
       </div>
 

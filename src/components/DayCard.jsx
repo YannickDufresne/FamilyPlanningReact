@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { calculerPrixFamille } from '../utils/prixFamille';
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
@@ -159,10 +159,12 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, onToggleLock = null }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, onToggleLock = null, recettes = [], recetteForceNom = null, onChoisirRecette = null }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
@@ -185,6 +187,13 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         >
           {estVerrouille ? '🔒' : '🔓'}
         </button>
+      )}
+      {onChoisirRecette && !isWarning && (
+        <button
+          className="recette-changer-btn"
+          onClick={() => setSearchOpen(true)}
+          title="Choisir une autre recette"
+        >✏️</button>
       )}
       <div className="day-card__accent" />
 
@@ -227,6 +236,14 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
           {regimeLabel && !isWarning && <span className="regime-badge">{regimeLabel}</span>}
           {recette.source === 'nyt_cooking' && !isWarning && (
             <span className="nyt-badge" title="Coup de cœur NYT Cooking">♥ NYT</span>
+          )}
+          {recetteForceNom && !isWarning && (
+            <span className="recette-force-badge">
+              🎯 Choix manuel
+              {onChoisirRecette && (
+                <button onClick={() => onChoisirRecette(null)} title="Annuler le choix manuel">✕</button>
+              )}
+            </span>
           )}
         </div>
         {!isWarning && (
@@ -366,6 +383,41 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         <div className="planning-item__label">Musique</div>
         <MusiqueCard musique={musique} />
       </div>
+
+      {/* Recherche de recette */}
+      {searchOpen && (
+        <div className="recette-search-overlay" onClick={() => { setSearchOpen(false); setSearchQuery(''); }}>
+          <div className="recette-search-modal" onClick={e => e.stopPropagation()}>
+            <div className="recette-search-header">
+              <span>Choisir une recette · {jour.jour}</span>
+              <button onClick={() => { setSearchOpen(false); setSearchQuery(''); }}>✕</button>
+            </div>
+            <input
+              autoFocus
+              className="recette-search-input"
+              placeholder="Rechercher..."
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+            />
+            <ul className="recette-search-list">
+              {recettes
+                .filter(r => r.nom.toLowerCase().includes(searchQuery.toLowerCase()))
+                .slice(0, 30)
+                .map(r => (
+                  <li
+                    key={r.nom}
+                    className={`recette-search-item ${r.nom === recette.nom ? 'recette-search-item--current' : ''}`}
+                    onClick={() => { onChoisirRecette(r.nom); setSearchOpen(false); setSearchQuery(''); }}
+                  >
+                    <span className="recette-search-nom">{r.nom}</span>
+                    <span className="recette-search-meta">{r.regime_alimentaire} · {r.cout}$ · {r.temps_preparation}min</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      )}
     </article>
   );
 }

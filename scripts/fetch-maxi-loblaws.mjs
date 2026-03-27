@@ -1,17 +1,16 @@
 /**
  * fetch-maxi-loblaws.mjs
- * Récupère les soldes Maxi de la semaine via l'API PC Optimum / Loblaws.
+ * Récupère les soldes Maxi via le scraping de __NEXT_DATA__ sur maxi.ca
  *
- * Approches (essayées en ordre, fallback à la suivante) :
- *   1. Store search + flyer (storeflyers endpoint)
- *   2. Product offer preview (weekly deals)
- *   3. Direct deals search (product-facade v3)
- *   4. IDs de magasins connus Maxi Québec avec approches 2 et 3
+ * Approche :
+ *   1. GET https://www.maxi.ca/fr/collection/deals-centre
+ *   2. Extraire le bloc <script id="__NEXT_DATA__"> du HTML
+ *   3. Parser le JSON → layout.sections.mainContentCollection.components[0].data.productTiles
+ *   4. Convertir en format maxi_aubaines.json
  *
- * Sauvegarde dans src/data/maxi_aubaines.json
+ * Aucune clé API requise — les données sont disponibles dans le HTML SSR de Next.js.
  *
  * Usage : node scripts/fetch-maxi-loblaws.mjs
- *         LOBLAWS_API_KEY=... node scripts/fetch-maxi-loblaws.mjs  (optionnel)
  */
 
 import { writeFileSync } from 'fs';
@@ -20,25 +19,10 @@ import { dirname, join } from 'path';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dir, '..', 'src', 'data');
-const OUT_PATH = join(DATA_DIR, 'maxi_aubaines.json');
 
-// Clé API connue extraite de l'application Loblaws (partagée publiquement dans des projets open-source)
-const LOBLAWS_API_KEY = process.env.LOBLAWS_API_KEY || '1im1hL52q9xvta16GlSdYDsTvG9OECD4';
+const MAXI_DEALS_URL = 'https://www.maxi.ca/fr/collection/deals-centre';
 
-const HEADERS = {
-  'x-apikey': LOBLAWS_API_KEY,
-  'x-application-type': 'Web',
-  'x-loblaw-tenant-id': 'MCX',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-};
-
-// IDs de magasins Maxi connus dans la région de Québec
-const KNOWN_STORE_IDS = ['1277', '1278', '1279', '3376', '3413', '3455', '3456'];
-
-// ── Utilitaires ───────────────────────────────────────────────────────────────
-
+// ── Dates de la semaine (prochain lundi) ──────────────────────────────────────
 function getSemaine() {
   const today = new Date();
   const day = today.getDay();
@@ -48,361 +32,214 @@ function getSemaine() {
   return lundi.toISOString().split('T')[0];
 }
 
+// ── Détection de catégorie par mots-clés ─────────────────────────────────────
 function detecterCategorie(nom) {
   const n = (nom || '').toLowerCase();
-  if (/poulet|boeuf|porc|veau|agneau|dinde|viande|côte|steak|bacon|saucisse/.test(n)) return 'viande';
-  if (/saumon|thon|crevette|poisson|morue|tilapia|truite|fruits de mer/.test(n)) return 'poisson';
-  if (/laitue|épinard|spinach|carotte|brocoli|tomate|oignon|ail|courgette|patate|légume|céleri|poivron|chou|champignon/.test(n)) return 'legumes';
-  if (/pomme|fraise|banane|orange|citron|mangue|raisin|poire|fruit|bleuet/.test(n)) return 'fruits';
-  if (/lait|fromage|beurre|yogourt|crème|œuf|oeuf|egg/.test(n)) return 'produits_laitiers';
-  if (/pâte|pasta|riz|farine|pain|céréale|avoine|granola/.test(n)) return 'epicerie_seche';
-  if (/huile|vinaigre|sauce|moutarde|épice|herbe/.test(n)) return 'condiments';
+  if (/poulet|boeuf|porc|veau|agneau|dinde|viande|côte|cote|steak|bacon|saucisse|haché|hache|bison/.test(n)) return 'viande';
+  if (/saumon|thon|crevette|poisson|morue|tilapia|truite|fruits de mer|homard|pétoncle|petoncle/.test(n)) return 'poisson';
+  if (/laitue|épinard|epinard|carotte|brocoli|tomate|oignon|ail|courgette|patate|pomme de terre|légume|legume|céleri|celeri|poivron|chou|champignon|asperge|courge/.test(n)) return 'legumes';
+  if (/pomme|fraise|banane|orange|citron|mangue|raisin|poire|fruit|bleuet|framboises|cerise|melon/.test(n)) return 'fruits';
+  if (/lait|fromage|beurre|yogourt|crème|creme|œuf|oeuf|mozzarella|cheddar|cottage/.test(n)) return 'produits_laitiers';
+  if (/pâte|pate|riz|farine|pain|céréale|cereale|avoine|granola|biscuit|craquelin/.test(n)) return 'epicerie_seche';
+  if (/huile|vinaigre|sauce|moutarde|épice|epice|herbe|condiment|ketchup|mayo/.test(n)) return 'condiments';
   return 'epicerie';
 }
 
-function extraireMotsCles(nom) {
-  const stopWords = new Set(['de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'avec', 'et', 'ou', 'en', 'au', 'aux', 'par', 'sur', 'pour']);
-  return (nom || '')
-    .toLowerCase()
-    .split(/[\s,\/\-]+/)
-    .filter(w => w.length >= 3 && !stopWords.has(w))
-    .slice(0, 4);
+// ── Extraire les mots-clés pertinents du nom de produit ──────────────────────
+function extraireMosCles(nom) {
+  const n = (nom || '').toLowerCase();
+  const cles = [];
+
+  // Viandes
+  if (/poulet/.test(n)) cles.push('poulet');
+  if (/bœuf|boeuf/.test(n)) cles.push('boeuf');
+  if (/porc/.test(n)) cles.push('porc');
+  if (/veau/.test(n)) cles.push('veau');
+  if (/agneau/.test(n)) cles.push('agneau');
+  if (/dinde/.test(n)) cles.push('dinde');
+  if (/bacon/.test(n)) cles.push('bacon');
+  if (/saucisse/.test(n)) cles.push('saucisse');
+  if (/jambon/.test(n)) cles.push('jambon');
+
+  // Poissons
+  if (/saumon/.test(n)) cles.push('saumon');
+  if (/thon/.test(n)) cles.push('thon');
+  if (/crevette/.test(n)) cles.push('crevettes');
+  if (/poisson/.test(n)) cles.push('poisson');
+  if (/morue|cabillaud/.test(n)) cles.push('morue');
+
+  // Légumes
+  if (/carotte/.test(n)) cles.push('carottes');
+  if (/brocoli/.test(n)) cles.push('brocoli');
+  if (/épinard|epinard/.test(n)) cles.push('épinards');
+  if (/tomate/.test(n)) cles.push('tomates');
+  if (/oignon/.test(n)) cles.push('oignons');
+  if (/pomme de terre|russet|yukon/.test(n)) cles.push('pommes de terre');
+  if (/poivron/.test(n)) cles.push('poivron');
+  if (/chou-fleur|choufleur/.test(n)) cles.push('chou-fleur');
+  if (/chou/.test(n) && !/chou-fleur|choufleur/.test(n)) cles.push('chou');
+  if (/champignon/.test(n)) cles.push('champignons');
+  if (/céleri|celeri/.test(n)) cles.push('céleri');
+  if (/courge|butternut|courgette/.test(n)) cles.push('courge');
+  if (/asperge/.test(n)) cles.push('asperges');
+
+  // Fruits
+  if (/pomme/.test(n) && !/pomme de terre/.test(n)) cles.push('pommes');
+  if (/fraise/.test(n)) cles.push('fraises');
+  if (/bleuet/.test(n)) cles.push('bleuets');
+  if (/framboise/.test(n)) cles.push('framboises');
+  if (/banane/.test(n)) cles.push('bananes');
+  if (/orange/.test(n)) cles.push('oranges');
+  if (/mangue/.test(n)) cles.push('mangue');
+  if (/ananas/.test(n)) cles.push('ananas');
+  if (/avocat/.test(n)) cles.push('avocat');
+
+  // Produits laitiers / œufs
+  if (/œuf|oeuf/.test(n)) cles.push('oeufs');
+  if (/lait/.test(n)) cles.push('lait');
+  if (/fromage/.test(n)) cles.push('fromage');
+  if (/mozzarella/.test(n)) cles.push('mozzarella');
+  if (/cheddar/.test(n)) cles.push('cheddar');
+  if (/beurre/.test(n)) cles.push('beurre');
+  if (/yogourt/.test(n)) cles.push('yogourt');
+  if (/crème sure|creme sure/.test(n)) cles.push('crème sure');
+
+  // Épicerie sèche
+  if (/pain/.test(n)) cles.push('pain');
+  if (/pâte|pate/.test(n) && !/patate|pâtisserie/.test(n)) cles.push('pâtes');
+  if (/riz/.test(n)) cles.push('riz');
+  if (/farine/.test(n)) cles.push('farine');
+  if (/huile/.test(n)) cles.push('huile');
+
+  return cles.length > 0 ? cles : [nom.split(' ')[0].toLowerCase()];
 }
 
-function parserixTexte(item) {
-  // Essayer plusieurs champs selon la structure retournée par l'API
-  const prix = item.prices?.price?.value
-    ?? item.prices?.wasPrice?.value
-    ?? item.price
-    ?? item.current_price
-    ?? null;
-
-  const prixReg = item.prices?.wasPrice?.value
-    ?? item.regularPrice
-    ?? item.was_price
-    ?? null;
-
-  const prixTexte = item.prices?.price?.text
-    ?? item.displayPrice
-    ?? item.display_price
-    ?? (prix != null ? `${Number(prix).toFixed(2)}$` : '');
-
-  const prixRegTexte = item.prices?.wasPrice?.text
-    ?? (prixReg != null ? `${Number(prixReg).toFixed(2)}$` : '');
-
-  let rabais = item.prices?.savedPrice?.text ?? item.badge?.label ?? item.sale_story ?? '';
-  if (!rabais && prix != null && prixReg != null && prixReg > prix) {
-    const pct = Math.round((1 - prix / prixReg) * 100);
-    rabais = `${pct}% de rabais`;
-  }
-
-  const unite = item.unit ?? item.packageSize ?? item.size ?? '';
-
-  return { prix: prix != null ? parseFloat(prix) : null, prix_texte: prixTexte, prix_regulier: prixReg != null ? parseFloat(prixReg) : null, prix_regulier_texte: prixRegTexte, rabais, unite };
+// ── Calculer le % de rabais ───────────────────────────────────────────────────
+function calculerRabais(prixActuel, wasPrice) {
+  if (!wasPrice) return '';
+  // wasPrice is a French-formatted string like "8,00 $"
+  const was = parseFloat(wasPrice.replace(/[^0-9,]/g, '').replace(',', '.'));
+  const now = parseFloat(prixActuel);
+  if (!was || !now || was <= now) return '';
+  const pct = Math.round(((was - now) / was) * 100);
+  return `${pct}% de rabais`;
 }
 
-function normaliserItems(rawItems) {
-  return rawItems
-    .filter(item => item && (item.name || item.brand))
-    .map(item => {
-      const nom = item.name ?? item.brand ?? '';
-      const { prix, prix_texte, prix_regulier, prix_regulier_texte, rabais, unite } = parserixTexte(item);
-      return {
-        nom,
-        prix,
-        prix_texte,
-        prix_regulier,
-        prix_regulier_texte,
-        rabais,
-        unite,
-        mots_cles: extraireMotsCles(nom),
-        categorie: detecterCategorie(nom),
-      };
-    })
-    .filter(item => item.prix != null || item.prix_texte);
-}
+// ── Convertir un productTile en item aubaine ──────────────────────────────────
+function convertirTile(tile) {
+  const nom = [tile.brand, tile.title].filter(Boolean).join(' ') || tile.title || '?';
+  const prixNum = parseFloat(tile.pricing?.price) || null;
+  const displayPrice = tile.pricing?.displayPrice || (prixNum ? `${prixNum.toFixed(2)}$` : '');
+  const wasPrice = tile.pricing?.wasPrice || null;
+  const wasNum = wasPrice ? parseFloat(wasPrice.replace(/[^0-9,]/g, '').replace(',', '.')) : null;
 
-async function fetchWithTimeout(url, options = {}, timeoutMs = 10000) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, { ...options, signal: controller.signal });
-    clearTimeout(timer);
-    return res;
-  } catch (e) {
-    clearTimeout(timer);
-    throw e;
-  }
-}
+  // Construire le texte de prix avec la taille si disponible
+  const prixTexte = tile.packageSizing
+    ? `${displayPrice} (${tile.packageSizing})`
+    : displayPrice;
 
-// ── Approche 1 : Store search → flyer ────────────────────────────────────────
+  // Texte de rabais : préférer le texte de l'API, sinon calculer
+  const rabaisTexte = tile.deal?.text
+    ? tile.deal.text
+    : calculerRabais(tile.pricing?.price, wasPrice);
 
-async function fetchStoreId(postalCode = 'G1R3Z9') {
-  const url = `https://api.pcexpress.ca/pcx-bff/api/v1/fulfillment/storeSearch?postalCode=${postalCode}&banner=maxi`;
-  console.log(`  → Store search: ${url}`);
-  const res = await fetchWithTimeout(url, { headers: HEADERS });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-
-  // La réponse peut être un tableau ou un objet avec une liste de magasins
-  const stores = Array.isArray(data) ? data : (data.stores ?? data.results ?? []);
-  if (!stores.length) throw new Error('Aucun magasin trouvé');
-
-  const storeId = stores[0]?.storeId ?? stores[0]?.id ?? stores[0]?.store_id;
-  if (!storeId) throw new Error('storeId introuvable dans la réponse');
-  console.log(`  → storeId trouvé : ${storeId}`);
-  return String(storeId);
-}
-
-async function fetchFlyer(storeId) {
-  const url = `https://api.pcexpress.ca/pcx-bff/api/v1/storeflyers?storeId=${storeId}&banner=maxi&lang=fr`;
-  console.log(`  → Flyer: ${url}`);
-  const res = await fetchWithTimeout(url, { headers: HEADERS });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-
-  const items = data.items ?? data.products ?? data.flyerItems ?? [];
-  if (!items.length) throw new Error('Flyer vide');
-  return items;
-}
-
-// ── Approche 2 : Product offer preview ───────────────────────────────────────
-
-async function fetchProductOffers(storeId) {
-  const url = `https://api.pcexpress.ca/pcx-bff/api/v1/product-offer-preview?storeId=${storeId}&lang=fr&banner=maxi`;
-  console.log(`  → Product offers: ${url}`);
-  const res = await fetchWithTimeout(url, { headers: HEADERS });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-
-  const items = data.results ?? data.items ?? data.products ?? (Array.isArray(data) ? data : []);
-  if (!items.length) throw new Error('Aucune offre trouvée');
-  return items;
-}
-
-// ── Approche 3 : Direct deals search ─────────────────────────────────────────
-
-async function fetchDealsSearch(storeId) {
-  const today = new Date().toISOString().split('T')[0];
-  const url = `https://api.pcexpress.ca/product-facade/v3/products/search?storeId=${storeId}&lang=fr&date=${today}&bannerId=maxi&categoryId=deals&pageSize=48`;
-  console.log(`  → Deals search: ${url}`);
-  const res = await fetchWithTimeout(url, { headers: HEADERS });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-
-  const items = data.results ?? data.items ?? data.products ?? (Array.isArray(data) ? data : []);
-  if (!items.length) throw new Error('Aucun deal trouvé');
-  return items;
-}
-
-// ── Séquence complète pour un storeId donné ───────────────────────────────────
-
-async function tryStoreId(storeId) {
-  // Approche 2
-  try {
-    const items = await fetchProductOffers(storeId);
-    console.log(`  ✅ Approche 2 (product-offer-preview) réussie pour storeId ${storeId}: ${items.length} items`);
-    return { items, storeId, approche: 2 };
-  } catch (e) {
-    console.warn(`  ⚠️ Approche 2 storeId=${storeId}: ${e.message}`);
-  }
-
-  // Approche 3
-  try {
-    const items = await fetchDealsSearch(storeId);
-    console.log(`  ✅ Approche 3 (deals search) réussie pour storeId ${storeId}: ${items.length} items`);
-    return { items, storeId, approche: 3 };
-  } catch (e) {
-    console.warn(`  ⚠️ Approche 3 storeId=${storeId}: ${e.message}`);
-  }
-
-  return null;
-}
-
-// ── Approche 5 : Scraping maxi.ca (page circulaire Next.js) ──────────────────
-// Le site maxi.ca est une app Next.js — la page circulaire embarque les données
-// dans __NEXT_DATA__ ou fait des appels API côté client qu'on peut intercepter.
-
-async function fetchMaxiWebsite() {
-  const WEB_HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-    'Accept-Language': 'fr-CA,fr;q=0.9,en;q=0.8',
-    'Cache-Control': 'no-cache',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'none',
+  return {
+    nom: nom.slice(0, 80),
+    prix: prixNum,
+    prix_texte: prixTexte,
+    prix_regulier: wasNum,
+    prix_regulier_texte: wasPrice ? `${wasPrice} (régulier)` : '',
+    rabais: rabaisTexte,
+    mots_cles: extraireMosCles(nom),
+    categorie: detecterCategorie(nom),
   };
+}
 
-  const urls = [
-    'https://www.maxi.ca/fr/circulaire-electronique/',
-    'https://www.maxi.ca/fr/promotions/',
-    'https://www.maxi.ca/fr/soldes-de-la-semaine/',
-  ];
+// ── Scraper __NEXT_DATA__ depuis maxi.ca ──────────────────────────────────────
+async function scrapeNextData() {
+  console.log(`\n🌐 Téléchargement de ${MAXI_DEALS_URL}…`);
 
-  for (const url of urls) {
-    console.log(`  → Page web Maxi: ${url}`);
-    try {
-      // redirect: 'follow' est important — maxi.ca renvoie un 308 avant le 200
-      const res = await fetchWithTimeout(url, { headers: WEB_HEADERS, redirect: 'follow' }, 15000);
-      if (!res.ok) { console.warn(`    ⚠️ HTTP ${res.status}`); continue; }
-      const html = await res.text();
+  const resp = await fetch(MAXI_DEALS_URL, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'fr-CA,fr;q=0.9',
+    },
+    redirect: 'follow',
+  });
 
-      // Essai 1 : __NEXT_DATA__ (Next.js)
-      const nextMatch = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
-      if (nextMatch) {
-        try {
-          const nextData = JSON.parse(nextMatch[1]);
-          const items = [];
-          // Parcourir récursivement pour trouver des produits avec prix
-          const findProducts = (obj, depth = 0) => {
-            if (depth > 8 || !obj || typeof obj !== 'object') return;
-            if (Array.isArray(obj)) { obj.slice(0, 200).forEach(o => findProducts(o, depth + 1)); return; }
-            const hasName = obj.name || obj.title || obj.productName;
-            const hasPrice = obj.prices || obj.price || obj.currentPrice || obj.displayPrice;
-            if (hasName && hasPrice) items.push(obj);
-            Object.values(obj).forEach(v => findProducts(v, depth + 1));
-          };
-          findProducts(nextData);
-          if (items.length > 0) {
-            console.log(`    ✅ __NEXT_DATA__: ${items.length} produits trouvés`);
-            return items.map(item => ({
-              ...item,
-              name: item.name || item.title || item.productName,
-            }));
-          }
-        } catch (e) { console.warn(`    ⚠️ __NEXT_DATA__ parse error: ${e.message}`); }
-      }
-
-      // Essai 2 : JSON dans des blocs script génériques
-      const scriptBlocks = [...html.matchAll(/<script[^>]*>([\s\S]{200,100000}?)<\/script>/g)];
-      for (const block of scriptBlocks) {
-        const src = block[1];
-        if (!src.includes('"price"') && !src.includes('"currentPrice"') && !src.includes('"displayPrice"')) continue;
-        // Chercher des tableaux de produits
-        const arrayMatch = src.match(/\[(\s*\{[^[\]]*"name"[^[\]]*"price[^[\]]*\}[\s\S]{0,5000}?)\]/);
-        if (arrayMatch) {
-          try {
-            const arr = JSON.parse('[' + arrayMatch[1] + ']');
-            if (arr.length > 0) { console.log(`    ✅ Script inline: ${arr.length} items`); return arr; }
-          } catch {}
-        }
-      }
-
-      // Essai 3 : extraction HTML brute
-      const nameRe = /<[^>]+(?:class|data-testid)="[^"]*(?:product|item|deal)[^"]*"[^>]*>\s*<[^>]+>\s*([^<]{5,80})\s*<\/[^>]+>/gi;
-      const priceRe = /(\d{1,3}[.,]\d{2})\s*\$/g;
-      const names = [...html.matchAll(nameRe)].map(m => m[1].trim()).filter(n => n.length > 3);
-      const prices = [...html.matchAll(priceRe)].map(m => parseFloat(m[1].replace(',', '.')));
-      if (names.length >= 3) {
-        console.log(`    ✅ HTML regex: ${names.length} noms, ${prices.length} prix`);
-        return names.slice(0, 30).map((name, i) => ({
-          name,
-          price: prices[i] || null,
-          displayPrice: prices[i] ? `${prices[i].toFixed(2)}$` : '',
-        }));
-      }
-
-    } catch (e) { console.warn(`    ⚠️ ${e.message}`); }
+  if (!resp.ok) {
+    throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
   }
 
-  throw new Error('Toutes les URLs maxi.ca ont échoué');
+  const html = await resp.text();
+  console.log(`  ✅ Page téléchargée (${Math.round(html.length / 1024)} Ko)`);
+
+  // Extraire le JSON __NEXT_DATA__
+  const match = html.match(/<script id="__NEXT_DATA__" type="application\/json">([\s\S]*?)<\/script>/);
+  if (!match) {
+    throw new Error('__NEXT_DATA__ introuvable dans le HTML');
+  }
+
+  const nextData = JSON.parse(match[1]);
+  console.log('  ✅ __NEXT_DATA__ extrait et parsé');
+
+  // Naviguer jusqu'aux productTiles
+  const productTiles =
+    nextData?.props?.pageProps?.initialData?.layout?.sections
+      ?.mainContentCollection?.components?.[0]?.data?.productTiles;
+
+  if (!productTiles || productTiles.length === 0) {
+    throw new Error('Aucun productTile trouvé dans __NEXT_DATA__');
+  }
+
+  console.log(`  ✅ ${productTiles.length} soldes trouvés dans __NEXT_DATA__`);
+  return productTiles;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
-
 async function main() {
-  console.log('\n🏪 Fetch circulaire Maxi (API Loblaws/PC Optimum)…\n');
-  console.log('💡 Pour utiliser la vraie clé API Loblaws :');
-  console.log('   1. Ouvre Chrome → maxi.ca → F12 → Network → cherche "api.pcexpress.ca"');
-  console.log('   2. Copie la valeur du header "x-apikey"');
-  console.log('   3. Ajoute comme GitHub Secret : LOBLAWS_API_KEY\n');
-
-  let rawItems = null;
-  let storeId = '';
-
-  // Approche 1 : store search → storeId → flyer
-  try {
-    console.log('→ Approche 1 : Store search + Flyer');
-    storeId = await fetchStoreId('G1R3Z9');
-    const items = await fetchFlyer(storeId);
-    console.log(`  ✅ Approche 1 (flyer) réussie: ${items.length} items`);
-    rawItems = items;
-  } catch (e) {
-    console.warn(`  ⚠️ Approche 1 échouée: ${e.message}`);
-  }
-
-  // Si approche 1 a trouvé un storeId, essayer approches 2 et 3 avec ce storeId
-  if (!rawItems && storeId) {
-    console.log(`\n→ Approches 2 et 3 avec storeId ${storeId} trouvé en approche 1`);
-    const result = await tryStoreId(storeId);
-    if (result) rawItems = result.items;
-  }
-
-  // Approche 4 : IDs connus Maxi Québec
-  if (!rawItems) {
-    console.log('\n→ Approche 4 : IDs de magasins connus Maxi Québec');
-    for (const sid of KNOWN_STORE_IDS) {
-      const result = await tryStoreId(sid);
-      if (result) {
-        rawItems = result.items;
-        storeId = result.storeId;
-        break;
-      }
-    }
-  }
-
-  // Approche 5 : Scraping direct de maxi.ca
-  if (!rawItems) {
-    console.log('\n→ Approche 5 : Scraping maxi.ca (page circulaire)');
-    try {
-      rawItems = await fetchMaxiWebsite();
-      console.log(`  ✅ Approche 5 réussie: ${rawItems.length} items`);
-    } catch (e) {
-      console.warn(`  ⚠️ Approche 5 échouée: ${e.message}`);
-    }
-  }
-
   const semaine = getSemaine();
-  const genereeLe = new Date().toISOString();
+  console.log(`\n🏪 Fetch circulaire Maxi — semaine du ${semaine}\n`);
 
-  if (!rawItems || rawItems.length === 0) {
-    console.warn('\n⚠️  Toutes les approches ont échoué. Sauvegarde d\'un fichier vide.');
-    const empty = { semaine, genereeLe, storeId: '', items: [] };
-    writeFileSync(OUT_PATH, JSON.stringify(empty, null, 2), 'utf-8');
-    console.log(`\n✅ maxi_aubaines.json sauvegardé (vide) — fetch-aubaines.mjs utilisera Claude pour les soldes.`);
+  let productTiles;
+  try {
+    productTiles = await scrapeNextData();
+  } catch (err) {
+    console.error(`❌ Scraping échoué : ${err.message}`);
+    console.log('\n⚠️  Aucune donnée Maxi disponible — fetch-aubaines.mjs générera des soldes via Claude.');
+
+    // Sauvegarder un fichier vide pour indiquer l'échec
+    const empty = { semaine: '', genereeLe: new Date().toISOString(), storeId: '', items: [] };
+    writeFileSync(join(DATA_DIR, 'maxi_aubaines.json'), JSON.stringify(empty, null, 2), 'utf-8');
     return;
   }
 
-  const items = normaliserItems(rawItems);
+  // Convertir les tiles en items aubaines
+  // Garder seulement les items avec un vrai rabais (wasPrice ou deal text intéressant)
+  const items = productTiles
+    .map(convertirTile)
+    .filter(item => item.prix !== null); // Exclure les items sans prix
 
-  const output = {
+  const result = {
     semaine,
-    genereeLe,
-    storeId,
+    genereeLe: new Date().toISOString(),
+    storeId: 'deals-centre',
+    source: 'maxi.ca/__NEXT_DATA__',
     items,
   };
 
-  writeFileSync(OUT_PATH, JSON.stringify(output, null, 2), 'utf-8');
+  const outPath = join(DATA_DIR, 'maxi_aubaines.json');
+  writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf-8');
 
   console.log(`\n✅ maxi_aubaines.json sauvegardé !`);
-  console.log(`   Magasin : ${storeId}`);
-  console.log(`   Semaine : ${semaine}`);
-  console.log(`   Items   : ${items.length} aubaines`);
-  if (items.length > 0) {
-    console.log('\n  Exemples :');
-    items.slice(0, 5).forEach(it => console.log(`    - ${it.nom} : ${it.prix_texte}${it.rabais ? ' (' + it.rabais + ')' : ''}`));
-  }
+  console.log(`   ${items.length} soldes pour la semaine du ${semaine}`);
+
+  // Aperçu des premiers items
+  console.log('\n📋 Aperçu (5 premiers) :');
+  items.slice(0, 5).forEach(item => {
+    console.log(`   • ${item.nom} — ${item.prix_texte}${item.rabais ? ` (${item.rabais})` : ''}`);
+  });
 }
 
-main().catch(e => {
-  console.error('❌ Erreur fatale:', e.message);
-  // En cas d'erreur, créer un fichier vide pour ne pas bloquer le pipeline
-  const semaine = new Date().toISOString().split('T')[0];
-  const empty = { semaine, genereeLe: new Date().toISOString(), storeId: '', items: [] };
-  try {
-    writeFileSync(OUT_PATH, JSON.stringify(empty, null, 2), 'utf-8');
-    console.log('  → maxi_aubaines.json vide sauvegardé (fallback)');
-  } catch {}
-  process.exit(0); // Ne pas faire échouer le workflow
-});
+main().catch(e => { console.error('❌', e.message); process.exit(1); });

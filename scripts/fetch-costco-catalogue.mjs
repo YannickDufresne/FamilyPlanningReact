@@ -15,7 +15,7 @@
  *         ANTHROPIC_API_KEY=... node scripts/fetch-costco-catalogue.mjs
  */
 
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import Anthropic from '@anthropic-ai/sdk';
@@ -289,11 +289,35 @@ function deduplicateProduits(produits) {
   });
 }
 
+// ── Vérification de fraîcheur ─────────────────────────────────────────────────
+
+const FRESHNESS_DAYS = 30;
+
+function catalogueEstFrais() {
+  if (!existsSync(OUT_PATH)) return false;
+  try {
+    const data = JSON.parse(readFileSync(OUT_PATH, 'utf-8'));
+    if (!data.genereeLe) return false;
+    const age = (Date.now() - new Date(data.genereeLe).getTime()) / (1000 * 60 * 60 * 24);
+    if (age < FRESHNESS_DAYS) {
+      const produits = data.produits?.length ?? 0;
+      console.log(`  ✅ Catalogue déjà frais (${Math.round(age)} jours, ${produits} produits) — aucune régénération nécessaire`);
+      return true;
+    }
+    console.log(`  ⚠️  Catalogue a ${Math.round(age)} jours (> ${FRESHNESS_DAYS}) — régénération…`);
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log('\n🏪 Fetch catalogue Costco Canada (mensuel)…\n');
-  console.log('Note : Ce script est conçu pour être exécuté une fois par mois.\n');
+  console.log('\n🏪 Vérification catalogue Costco Canada…\n');
+
+  // Skip si le catalogue est récent (< 30 jours)
+  if (catalogueEstFrais()) return;
 
   let produits = [];
   let source = '';

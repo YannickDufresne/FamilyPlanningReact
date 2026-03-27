@@ -37,26 +37,18 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-activites.mjs
 
-      # Note : fetch-costco-catalogue.mjs n'est PAS ici — il doit être exécuté
-      # manuellement une fois par mois (catalogue complet Costco).
-      # Commande : node scripts/fetch-costco-catalogue.mjs
-
-      - name: Circulaire Maxi (Loblaws API)
+      - name: Catalogue Costco (auto-refresh si > 30 jours)
         env:
-          # LOBLAWS_API_KEY : à ajouter dans GitHub Secrets
-          # Obtenir depuis Chrome DevTools sur maxi.ca → Network → api.pcexpress.ca → header x-apikey
-          LOBLAWS_API_KEY: ${{ secrets.LOBLAWS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/fetch-costco-catalogue.mjs
+
+      - name: Circulaire Maxi (scraping maxi.ca __NEXT_DATA__)
         run: node scripts/fetch-maxi-loblaws.mjs
 
       - name: Aubaines & liste épicerie
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/fetch-aubaines.mjs
-
-      # ── Prochains scripts à ajouter ici ─────────────────────────────────────
-      # - name: Recommandations épicerie
-      #   run: node scripts/generer-liste-epicerie.mjs
 
       - name: Vérifier s'il y a des changements
         id: check

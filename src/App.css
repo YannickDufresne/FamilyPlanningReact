@@ -12,8 +12,13 @@
   --border-dark: #C8C5BC;
 
   --ink:         #111111;
+  --ink-0:       #F7F6F3;   /* surface quasi-blanc */
+  --ink-1:       #ECEAE4;   /* border très léger */
   --ink-2:       #555550;
   --ink-3:       #999990;
+  --ink-4:       #777770;   /* texte secondaire */
+  --ink-5:       #333330;   /* texte semi-foncé */
+  --ink-6:       #111111;   /* même que --ink, texte principal */
 
   /* ── Palette photo de famille ── */
   --forest:      #3A5C26;   /* vert forêt profond — arbres derrière la famille */
@@ -3296,3 +3301,154 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .epicerie-item__unite { font-size: 0.75rem; color: var(--ink-3); }
 .epicerie-item__prix { font-size: 0.78rem; font-weight: 600; color: var(--forest); }
 .epicerie-item__raison { font-size: 0.73rem; color: var(--ink-3); font-style: italic; }
+
+/* ── Recette search modal ────────────────────────────── */
+.recette-changer-btn {
+  position: absolute; top: 8px; right: 36px;
+  background: none; border: none; cursor: pointer;
+  font-size: 0.85rem; opacity: 0.5; padding: 4px;
+  border-radius: 4px; transition: opacity 0.15s;
+}
+.recette-changer-btn:hover { opacity: 1; background: var(--ink-1); }
+
+.recette-force-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.7rem; background: var(--forest); color: white;
+  padding: 2px 6px; border-radius: 10px; margin-left: 6px;
+}
+.recette-force-badge button {
+  background: none; border: none; color: white; cursor: pointer;
+  font-size: 0.75rem; padding: 0; line-height: 1;
+}
+
+.recette-search-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 1000; display: flex; align-items: center; justify-content: center;
+}
+.recette-search-modal {
+  background: white; border-radius: 12px; width: 480px; max-width: 90vw;
+  max-height: 70vh; display: flex; flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.recette-search-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 20px; border-bottom: 1px solid var(--ink-1);
+  font-weight: 600; font-size: 0.95rem;
+}
+.recette-search-header button {
+  background: none; border: none; cursor: pointer;
+  font-size: 1.1rem; opacity: 0.5; padding: 4px 8px;
+}
+.recette-search-input {
+  margin: 12px 16px; padding: 10px 14px; border: 1.5px solid var(--ink-2);
+  border-radius: 8px; font-size: 0.95rem; outline: none;
+  font-family: inherit;
+}
+.recette-search-input:focus { border-color: var(--forest); }
+.recette-search-list {
+  list-style: none; margin: 0; padding: 0 8px 8px;
+  overflow-y: auto; flex: 1;
+}
+.recette-search-item {
+  padding: 10px 12px; border-radius: 8px; cursor: pointer;
+  display: flex; flex-direction: column; gap: 2px;
+  transition: background 0.1s;
+}
+.recette-search-item:hover { background: var(--ink-0); }
+.recette-search-item--current { background: color-mix(in srgb, var(--forest) 10%, white); }
+.recette-search-nom { font-size: 0.9rem; font-weight: 500; }
+.recette-search-meta { font-size: 0.75rem; color: var(--ink-3); }
+
+/* ── Semaine nav améliorée ───────────────────────────── */
+.semaine-nav__status {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 20px;
+}
+.semaine-nav__status--active {
+  background: color-mix(in srgb, var(--forest) 15%, white);
+  color: var(--forest);
+}
+.semaine-nav__status--readonly {
+  background: var(--ink-1); color: var(--ink-4);
+}
+.semaine-nav__status--future {
+  background: color-mix(in srgb, #7c3aed 12%, white);
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+/* ── Épicerie page ───────────────────────────────────── */
+.epicerie-page { max-width: 1100px; margin: 0 auto; padding: 20px 32px 60px; }
+.epicerie-page__back {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.9rem; color: var(--ink-4); padding: 4px 0;
+  margin-bottom: 24px; display: flex; align-items: center; gap: 6px;
+}
+.epicerie-page__back:hover { color: var(--forest); }
+
+.aubaines-section { margin-bottom: 40px; }
+.aubaines-section__titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 600;
+  margin-bottom: 4px; color: var(--ink-6);
+}
+.aubaines-section__sous-titre {
+  font-size: 0.85rem; color: var(--ink-4); margin-bottom: 16px;
+}
+
+.aubaines-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.aubaine-card {
+  background: white; border-radius: 12px; padding: 14px 16px;
+  border: 1px solid var(--ink-1); position: relative;
+  transition: box-shadow 0.15s;
+}
+.aubaine-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.aubaine-card--maxi { border-top: 3px solid #e3142c; }
+.aubaine-card--costco { border-top: 3px solid #00529F; }
+.aubaine-card--bonus { border-top: 3px solid var(--terra); }
+
+.aubaine-card__store {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 6px; opacity: 0.6;
+}
+.aubaine-card__nom {
+  font-size: 0.88rem; font-weight: 600; line-height: 1.3;
+  margin-bottom: 8px; color: var(--ink-6);
+}
+.aubaine-card__prix { font-size: 1.1rem; font-weight: 700; color: var(--forest); }
+.aubaine-card__rabais {
+  display: inline-block; background: #e3142c; color: white;
+  font-size: 0.65rem; font-weight: 700; padding: 2px 6px;
+  border-radius: 4px; margin-top: 4px;
+}
+.aubaine-card__recettes {
+  margin-top: 10px; padding-top: 10px;
+  border-top: 1px solid var(--ink-1);
+}
+.aubaine-card__recettes-label {
+  font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ink-3); margin-bottom: 4px; font-weight: 600;
+}
+.aubaine-card__recette-pill {
+  display: inline-block; background: var(--ink-0); border-radius: 10px;
+  padding: 2px 8px; font-size: 0.7rem; margin: 2px 2px 0 0;
+  color: var(--ink-5); border: 1px solid var(--ink-1);
+}
+
+.aubaines-stores-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  margin-bottom: 20px;
+}
+@media (max-width: 700px) { .aubaines-stores-grid { grid-template-columns: 1fr; } }
+
+.aubaines-store-section__header {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--ink-4);
+  margin-bottom: 10px; padding-bottom: 6px;
+  border-bottom: 2px solid var(--ink-1);
+}
