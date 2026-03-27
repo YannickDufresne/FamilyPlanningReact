@@ -10,7 +10,7 @@ import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
 import { genererPlanning, calculerStats } from './utils/planning';
-import { syncWrite, syncRead, syncSubscribe } from './utils/sync';
+import { syncWrite, syncRead, syncSubscribe, uploadPhoto, deletePhoto } from './utils/sync';
 import recettes from './data/recettes.json';
 import exercices from './data/exercices.json';
 import activites from './data/activites.json';
@@ -108,9 +108,14 @@ export default function App() {
           localStorage.setItem('fp_profils', JSON.stringify(data.profils));
         }
         if (data.photo !== undefined) {
-          setPhotoFamille(data.photo || null);
-          if (data.photo) localStorage.setItem('fp_photo_famille', data.photo);
-          else localStorage.removeItem('fp_photo_famille');
+          const photoVal = data.photo || null;
+          setPhotoFamille(photoVal);
+          // Only cache in localStorage if it's a base64 (not a Storage URL)
+          if (photoVal && !photoVal.startsWith('https://')) {
+            localStorage.setItem('fp_photo_famille', photoVal);
+          } else if (!photoVal) {
+            localStorage.removeItem('fp_photo_famille');
+          }
         }
         // Load per-week data for all semaines in cloud
         if (data.semaines) {
@@ -139,9 +144,13 @@ export default function App() {
         localStorage.setItem('fp_profils', JSON.stringify(data.profils));
       }
       if (data.photo !== undefined) {
-        setPhotoFamille(data.photo || null);
-        if (data.photo) localStorage.setItem('fp_photo_famille', data.photo);
-        else localStorage.removeItem('fp_photo_famille');
+        const photoVal = data.photo || null;
+        setPhotoFamille(photoVal);
+        if (photoVal && !photoVal.startsWith('https://')) {
+          localStorage.setItem('fp_photo_famille', photoVal);
+        } else if (!photoVal) {
+          localStorage.removeItem('fp_photo_famille');
+        }
       }
       if (data.semaines) {
         Object.entries(data.semaines).forEach(([semaine, val]) => {
@@ -445,11 +454,17 @@ export default function App() {
           onPhotoChange={(dataUrl) => {
             if (dataUrl) {
               localStorage.setItem('fp_photo_famille', dataUrl);
+              setPhotoFamille(dataUrl);
+              // Upload to Storage and save URL in Firestore
+              uploadPhoto(dataUrl).then(url => {
+                if (url) syncWrite({ photo: url });
+              });
             } else {
               localStorage.removeItem('fp_photo_famille');
+              setPhotoFamille(null);
+              deletePhoto();
+              syncWrite({ photo: null });
             }
-            setPhotoFamille(dataUrl);
-            syncWrite({ photo: dataUrl || null }).catch(e => console.warn('Photo sync error (may be too large):', e));
           }}
         />
       )}

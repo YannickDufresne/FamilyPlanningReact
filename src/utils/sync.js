@@ -1,5 +1,6 @@
-import { db, FAMILLE_DOC } from './firebase';
+import { db, storage, FAMILLE_DOC } from './firebase';
 import { setDoc, onSnapshot, getDoc } from 'firebase/firestore';
+import { ref, uploadString, getDownloadURL, deleteObject } from 'firebase/storage';
 
 // Write a partial update to Firestore (merges with existing data)
 export async function syncWrite(data) {
@@ -26,4 +27,27 @@ export function syncSubscribe(callback) {
   return onSnapshot(FAMILLE_DOC, (snap) => {
     if (snap.exists()) callback(snap.data());
   }, (e) => console.warn('Sync subscribe error:', e));
+}
+
+// Upload family photo to Firebase Storage, returns download URL
+export async function uploadPhoto(dataUrl) {
+  try {
+    const photoRef = ref(storage, 'famille-principale/photo-famille.jpg');
+    await uploadString(photoRef, dataUrl, 'data_url');
+    const url = await getDownloadURL(photoRef);
+    return url;
+  } catch (e) {
+    console.warn('Photo upload error:', e);
+    return null;
+  }
+}
+
+// Delete family photo from Firebase Storage
+export async function deletePhoto() {
+  try {
+    const photoRef = ref(storage, 'famille-principale/photo-famille.jpg');
+    await deleteObject(photoRef);
+  } catch (e) {
+    // Ignore if file doesn't exist
+  }
 }
