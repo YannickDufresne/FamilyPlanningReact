@@ -189,7 +189,7 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
           {estVerrouille ? '🔒' : '🔓'}
         </button>
       )}
-      {onChoisirRecette && !isWarning && (
+      {onChoisirRecette && !isWarning && !estVerrouille && (
         <button
           className="recette-changer-btn"
           onClick={() => setSearchOpen(true)}
