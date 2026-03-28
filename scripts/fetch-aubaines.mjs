@@ -2,8 +2,11 @@
  * fetch-aubaines.mjs
  * Sources des aubaines de la semaine :
  *   1. Maxi  → lit src/data/maxi_aubaines.json (généré par fetch-maxi-loblaws.mjs)
- *   2. Costco → lit src/data/costco_catalogue.json (généré mensuellement par fetch-costco-catalogue.mjs)
- *   3. Claude → analyse textuelle + sélection items Costco pertinents + fallback si données absentes
+ *   2. Metro → lit src/data/metro_aubaines.json (généré par fetch-metro.mjs)
+ *   3. Adonis → lit src/data/adonis_aubaines.json (généré par fetch-adonis.mjs)
+ *   4. Costco → lit src/data/costco_aubaines.json (généré par fetch-costco-flipp.mjs, Vision hebdo)
+ *              ou src/data/costco_catalogue.json en fallback (généré mensuellement)
+ *   5. Claude → analyse textuelle + sélection items Costco pertinents + fallback si données absentes
  *
  * Variables d'environnement :
  *   ANTHROPIC_API_KEY — requis pour l'analyse IA
@@ -64,7 +67,98 @@ function lireMaxiAubaines(semaine) {
   }
 }
 
-// ── Lire costco_catalogue.json si disponible ──────────────────────────────────
+// ── Lire metro_aubaines.json si disponible et de la bonne semaine ────────────
+function lireMetroAubaines(semaine) {
+  const path = join(DATA_DIR, 'metro_aubaines.json');
+  if (!existsSync(path)) {
+    console.log('  ℹ️  metro_aubaines.json absent — Claude génèrera des soldes Metro');
+    return [];
+  }
+
+  try {
+    const data = JSON.parse(readFileSync(path, 'utf-8'));
+    const items = data.items ?? [];
+
+    if (data.semaine && data.semaine !== semaine.debut) {
+      console.warn(`  ⚠️  metro_aubaines.json est de la semaine ${data.semaine} (attendu: ${semaine.debut}) — Claude génèrera des soldes frais`);
+      return [];
+    }
+
+    if (items.length === 0) {
+      console.log('  ℹ️  metro_aubaines.json vide — Claude génèrera des soldes Metro');
+      return [];
+    }
+
+    console.log(`  ✅ metro_aubaines.json: ${items.length} aubaines (storeId: ${data.storeId || 'N/A'})`);
+    return items;
+  } catch (e) {
+    console.warn(`  ⚠️  Lecture metro_aubaines.json échouée: ${e.message}`);
+    return [];
+  }
+}
+
+// ── Lire adonis_aubaines.json si disponible et de la bonne semaine ───────────
+function lireAdonisAubaines(semaine) {
+  const path = join(DATA_DIR, 'adonis_aubaines.json');
+  if (!existsSync(path)) {
+    console.log('  ℹ️  adonis_aubaines.json absent — pas d\'aubaines Adonis cette semaine');
+    return [];
+  }
+
+  try {
+    const data = JSON.parse(readFileSync(path, 'utf-8'));
+    const items = data.items ?? [];
+
+    if (data.semaine && data.semaine !== semaine.debut) {
+      console.warn(`  ⚠️  adonis_aubaines.json est de la semaine ${data.semaine} (attendu: ${semaine.debut}) — données ignorées`);
+      return [];
+    }
+
+    if (items.length === 0) {
+      console.log('  ℹ️  adonis_aubaines.json vide — pas d\'aubaines Adonis');
+      return [];
+    }
+
+    console.log(`  ✅ adonis_aubaines.json: ${items.length} aubaines (storeId: ${data.storeId || 'N/A'})`);
+    return items;
+  } catch (e) {
+    console.warn(`  ⚠️  Lecture adonis_aubaines.json échouée: ${e.message}`);
+    return [];
+  }
+}
+
+// ── Lire costco_aubaines.json (hebdo Flipp/Vision) si disponible ─────────────
+function lireCostcoAubaines(semaine) {
+  const path = join(DATA_DIR, 'costco_aubaines.json');
+  if (!existsSync(path)) {
+    console.log('  ℹ️  costco_aubaines.json absent — essai costco_catalogue.json');
+    return null; // null = non trouvé, fallback vers catalogue
+  }
+
+  try {
+    const data = JSON.parse(readFileSync(path, 'utf-8'));
+    const items = data.items ?? [];
+
+    if (items.length === 0) {
+      console.log('  ℹ️  costco_aubaines.json vide (pas de produits Flipp) — essai catalogue');
+      return null;
+    }
+
+    // Vérifier que c'est bien la bonne semaine (tolérance : même semaine ou récent)
+    if (data.semaine && data.semaine !== semaine.debut) {
+      console.warn(`  ⚠️  costco_aubaines.json est de la semaine ${data.semaine} (attendu: ${semaine.debut}) — essai catalogue`);
+      return null;
+    }
+
+    console.log(`  ✅ costco_aubaines.json: ${items.length} aubaines hebdo (Flipp/Vision, flyer ${data.flyerId || 'N/A'})`);
+    return items;
+  } catch (e) {
+    console.warn(`  ⚠️  Lecture costco_aubaines.json échouée: ${e.message}`);
+    return null;
+  }
+}
+
+// ── Lire costco_catalogue.json si disponible (fallback mensuel) ───────────────
 function lireCostcoCatalogue() {
   const path = join(DATA_DIR, 'costco_catalogue.json');
   if (!existsSync(path)) {
@@ -89,7 +183,7 @@ function lireCostcoCatalogue() {
       }
     }
 
-    console.log(`  ✅ costco_catalogue.json: ${produits.length} produits`);
+    console.log(`  ✅ costco_catalogue.json: ${produits.length} produits (catalogue mensuel fallback)`);
     return produits;
   } catch (e) {
     console.warn(`  ⚠️  Lecture costco_catalogue.json échouée: ${e.message}`);
@@ -146,44 +240,72 @@ function parseJsonSafe(text) {
 
 // ── Analyse Claude ─────────────────────────────────────────────────────────────
 // Rôle :
-//   - Si données Maxi réelles disponibles : analyse textuelle + sélection Costco pertinents
-//   - Si données absentes : génère des soldes Maxi/Costco réalistes + analyse
-async function analyserAvecClaude(semaine, maxiItems, costcoProduits) {
+//   - Si données réelles disponibles : analyse textuelle + sélection pertinente
+//   - Si données absentes : génère des soldes réalistes + analyse
+//
+// costcoAubaines : items hebdo (costco_aubaines.json, Vision) — déjà filtrés
+// costcoProduits : catalogue mensuel (costco_catalogue.json) — à sélectionner par Claude
+async function analyserAvecClaude(semaine, maxiItems, metroItems, adonisItems, costcoAubaines, costcoProduits) {
   const aMaxiReels = maxiItems.length > 0;
-  const aCostcoReels = costcoProduits.length > 0;
+  const aMetroReels = metroItems.length > 0;
+  const aAdonisReels = adonisItems.length > 0;
+  const aCostcoHebdo = costcoAubaines.length > 0;
+  const aCostcoCatalogue = costcoProduits.length > 0;
 
-  console.log(`\n🤖 Analyse Claude — Maxi ${aMaxiReels ? 'réel' : 'généré'} / Costco ${aCostcoReels ? 'catalogue réel' : 'généré'}…`);
+  console.log(`\n🤖 Analyse Claude — Maxi ${aMaxiReels ? 'réel' : 'généré'} / Metro ${aMetroReels ? 'réel' : 'généré'} / Adonis ${aAdonisReels ? 'réel' : 'ignoré'} / Costco ${aCostcoHebdo ? 'hebdo Vision' : aCostcoCatalogue ? 'catalogue' : 'généré'}…`);
 
   const maxiStr = aMaxiReels
-    ? maxiItems.slice(0, 40).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
-    : '(circulaire non disponible — génère des soldes typiques réalistes pour Maxi Québec cette saison, 8 à 12 produits)';
+    ? maxiItems.slice(0, 30).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
+    : '(circulaire non disponible — génère des soldes typiques réalistes pour Maxi Québec cette saison, 6 à 10 produits)';
 
-  const costcoStr = aCostcoReels
-    ? `Catalogue complet disponible (${costcoProduits.length} produits). Voici un échantillon représentatif :\n` +
+  const metroStr = aMetroReels
+    ? metroItems.slice(0, 30).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
+    : '(circulaire non disponible — génère des soldes typiques réalistes pour Metro Québec cette saison, 6 à 10 produits)';
+
+  const adonisStr = aAdonisReels
+    ? `Circulaire Adonis cette semaine — ${adonisItems.length} produits (épicerie méditerranéenne/spécialisée) :\n` +
+      adonisItems.slice(0, 20).map(a => `- ${a.nom}${a.prix_texte ? ` : ${a.prix_texte}` : ''}${a.rabais ? ` (${a.rabais})` : ''}`).join('\n')
+    : null;
+
+  let costcoStr;
+  if (aCostcoHebdo) {
+    costcoStr = `Circulaire hebdomadaire Costco (extrait via Claude Vision du circulaire Flipp) — ${costcoAubaines.length} produits alimentaires cette semaine :\n` +
+      costcoAubaines
+        .slice(0, 35)
+        .map(p => `- ${p.nom}${p.prix_texte ? ` : ${p.prix_texte}` : ''}${p.details ? ` (${p.details})` : ''}`)
+        .join('\n') +
+      `\n\nUtilise ces données réelles du circulaire. Sélectionne 5 à 8 des meilleures aubaines pour une famille québécoise.`;
+  } else if (aCostcoCatalogue) {
+    costcoStr = `Catalogue complet disponible (${costcoProduits.length} produits). Voici un échantillon représentatif :\n` +
       costcoProduits
         .sort(() => Math.random() - 0.5)
-        .slice(0, 30)
+        .slice(0, 25)
         .map(p => `- ${p.nom} : ${p.prix_texte}`)
         .join('\n') +
-      `\n\nSélectionne 5 à 8 produits Costco les plus pertinents pour une famille québécoise cette semaine.`
-    : '(catalogue non disponible — génère des aubaines réalistes Costco Canada cette saison, 5 à 8 produits)';
+      `\n\nSélectionne 5 à 8 produits Costco les plus pertinents pour une famille québécoise cette semaine.`;
+  } else {
+    costcoStr = '(catalogue non disponible — génère des aubaines réalistes Costco Canada cette saison, 5 à 8 produits)';
+  }
 
   const prompt = `Tu es l'assistant d'une famille québécoise (Québec ville).
-Magasins : Maxi René-Lévesque, Costco Québec, Lufa (bio local).
+Magasins : Maxi René-Lévesque, Metro, Costco Québec, Lufa (bio local)${aAdonisReels ? ', Adonis (épicerie méditerranéenne)' : ''}.
 Semaine : ${semaine.debutLisible} au ${semaine.finLisible}
 
 **Circulaire MAXI ${aMaxiReels ? '(données réelles API Loblaws)' : '(à générer)'}:**
 ${maxiStr}
 
-**Aubaines COSTCO ${aCostcoReels ? '(catalogue réel — sélectionne les plus pertinents)' : '(à générer)'}:**
+**Circulaire METRO ${aMetroReels ? '(données réelles API TC Digital)' : '(à générer)'}:**
+${metroStr}
+${adonisStr ? `\n**Circulaire ADONIS (données réelles — spécialités méditerranéennes):**\n${adonisStr}` : ''}
+
+**Aubaines COSTCO ${aCostcoHebdo ? '(circulaire hebdomadaire réel — extrait par Vision du Flipp)' : aCostcoCatalogue ? '(catalogue mensuel réel — sélectionne les plus pertinents)' : '(à générer)'}:**
 ${costcoStr}
 
 **Ta mission :** Retourne UNIQUEMENT du JSON valide, sans texte autour, sans commentaires, sans virgules en trop.
 
-${aMaxiReels
-    ? `Les données Maxi sont réelles. Utilise-les telles quelles dans "maxi_aubaines" (en conservant nom, prix_texte, prix_regulier_texte, rabais, mots_cles, categorie).
-Ajoute "prix" (nombre) et "prix_regulier" (nombre ou null) si tu peux les déduire du texte.`
-    : `Génère des soldes Maxi réalistes pour cette saison au Québec.`}
+${aMaxiReels ? `Les données Maxi sont réelles. Utilise-les telles quelles dans "maxi_aubaines" (conserve nom, prix_texte, rabais, mots_cles, categorie).` : `Génère des soldes Maxi réalistes pour cette saison au Québec.`}
+${aMetroReels ? `Les données Metro sont réelles. Utilise-les telles quelles dans "metro_aubaines".` : `Génère des soldes Metro réalistes pour cette saison au Québec.`}
+${aAdonisReels ? `Les données Adonis sont réelles. Sélectionne 5-8 des meilleures pour une famille, place-les dans "adonis_aubaines".` : ''}
 
 {
   "maxi_aubaines": [
@@ -196,6 +318,30 @@ Ajoute "prix" (nombre) et "prix_regulier" (nombre ou null) si tu peux les dédui
       "rabais": "33% de rabais",
       "mots_cles": ["poulet"],
       "categorie": "viande"
+    }
+  ],
+  "metro_aubaines": [
+    {
+      "nom": "Clémentines sac 3 lb",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6.99$ (régulier)",
+      "rabais": "43% de rabais",
+      "mots_cles": ["clémentines"],
+      "categorie": "fruits"
+    }
+  ],
+  "adonis_aubaines": [
+    {
+      "nom": "Labneh 500g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": ["fromage"],
+      "categorie": "produits_laitiers"
     }
   ],
   "costco_aubaines": [
@@ -232,53 +378,71 @@ async function main() {
 
   console.log('📦 Lecture des données locales…');
   const maxiItems = lireMaxiAubaines(semaine);
-  const costcoProduits = lireCostcoCatalogue();
+  const metroItems = lireMetroAubaines(semaine);
+  const adonisItems = lireAdonisAubaines(semaine);
+
+  // Costco : priorité aux aubaines hebdo Vision (Flipp), fallback catalogue mensuel
+  const costcoAubaines = lireCostcoAubaines(semaine) ?? [];
+  const costcoProduits = costcoAubaines.length === 0 ? lireCostcoCatalogue() : [];
 
   let analyse;
   if (process.env.ANTHROPIC_API_KEY) {
-    analyse = await analyserAvecClaude(semaine, maxiItems, costcoProduits);
+    analyse = await analyserAvecClaude(semaine, maxiItems, metroItems, adonisItems, costcoAubaines, costcoProduits);
   } else {
     console.warn('\n⚠️  ANTHROPIC_API_KEY manquante — analyse IA désactivée');
 
-    // Sans Claude : utiliser les données disponibles directement
-    const costcoSlice = costcoProduits.length > 0
-      ? costcoProduits.sort(() => Math.random() - 0.5).slice(0, 8).map(p => ({
-          nom: p.nom,
-          prix: p.prix,
-          prix_texte: p.prix_texte,
-          prix_regulier: null,
-          prix_regulier_texte: '',
-          rabais: '',
-          mots_cles: p.mots_cles || [],
-          categorie: p.categorie || detecterCategorie(p.nom),
-        }))
-      : [];
+    let costcoSlice;
+    if (costcoAubaines.length > 0) {
+      costcoSlice = costcoAubaines.slice(0, 8);
+    } else if (costcoProduits.length > 0) {
+      costcoSlice = costcoProduits.sort(() => Math.random() - 0.5).slice(0, 8).map(p => ({
+        nom: p.nom,
+        prix: p.prix,
+        prix_texte: p.prix_texte,
+        prix_regulier: null,
+        prix_regulier_texte: '',
+        rabais: '',
+        mots_cles: p.mots_cles || [],
+        categorie: p.categorie || detecterCategorie(p.nom),
+      }));
+    } else {
+      costcoSlice = [];
+    }
 
     analyse = {
       maxi_aubaines: maxiItems.slice(0, 20),
+      metro_aubaines: metroItems.slice(0, 20),
+      adonis_aubaines: adonisItems.slice(0, 8),
       costco_aubaines: costcoSlice,
       analyse: 'Analyse IA non disponible (clé ANTHROPIC_API_KEY manquante).',
       economies_estimees: '',
     };
   }
 
-  // aubaines.json : soldes Maxi/Costco + analyse textuelle.
+  // aubaines.json : soldes Maxi/Metro/Costco + analyse textuelle.
   // La liste Lufa et la répartition par magasin sont calculées dynamiquement
   // côté client dans GroceryList.jsx — toujours synchronisées avec le planning réel.
+  const costcoFallback = costcoAubaines.length > 0
+    ? costcoAubaines.slice(0, 8)
+    : costcoProduits.slice(0, 8).map(p => ({
+        nom: p.nom,
+        prix: p.prix,
+        prix_texte: p.prix_texte,
+        prix_regulier: null,
+        prix_regulier_texte: '',
+        rabais: '',
+        mots_cles: p.mots_cles || [],
+        categorie: p.categorie || detecterCategorie(p.nom),
+      }));
+
   const result = {
     semaine: semaine.debut,
     genereeLe: new Date().toISOString(),
+    costcoSource: costcoAubaines.length > 0 ? 'flipp/claude-vision' : (costcoProduits.length > 0 ? 'catalogue_mensuel' : 'claude_genere'),
     maxi: analyse.maxi_aubaines || maxiItems.slice(0, 20),
-    costco: analyse.costco_aubaines || costcoProduits.slice(0, 8).map(p => ({
-      nom: p.nom,
-      prix: p.prix,
-      prix_texte: p.prix_texte,
-      prix_regulier: null,
-      prix_regulier_texte: '',
-      rabais: '',
-      mots_cles: p.mots_cles || [],
-      categorie: p.categorie || detecterCategorie(p.nom),
-    })),
+    metro: analyse.metro_aubaines || metroItems.slice(0, 20),
+    adonis: analyse.adonis_aubaines || adonisItems.slice(0, 8),
+    costco: analyse.costco_aubaines || costcoFallback,
     analyse: analyse.analyse || '',
     economies_estimees: analyse.economies_estimees || '',
   };
@@ -288,6 +452,8 @@ async function main() {
 
   console.log(`\n✅ aubaines.json sauvegardé !`);
   console.log(`   Maxi   : ${result.maxi.length} aubaines`);
+  console.log(`   Metro  : ${result.metro.length} aubaines`);
+  console.log(`   Adonis : ${result.adonis.length} aubaines`);
   console.log(`   Costco : ${result.costco.length} aubaines`);
   if (result.analyse) console.log(`\n💬 ${result.analyse}`);
 }

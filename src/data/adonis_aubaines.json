@@ -1,0 +1,4663 @@
+{
+  "semaine": "2026-03-31",
+  "genereeLe": "2026-03-28T03:50:05.841Z",
+  "flyerId": "82882",
+  "storeId": "21943",
+  "source": "metrodigital-apim.azure-api.net (TC Digital)",
+  "items": [
+    {
+      "nom": "oeufs blancs moyens Burnbrae — 30 un.",
+      "prix": 7.44,
+      "prix_texte": "7.44$",
+      "prix_regulier": 9.99,
+      "prix_regulier_texte": "9,99 (régulier)",
+      "rabais": "26% de rabais",
+      "mots_cles": [
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "95231851",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/490700007667.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "boeuf haché extra-maigre — format économique",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "41%",
+      "mots_cles": [
+        "boeuf",
+        "oeufs"
+      ],
+      "categorie": "viande",
+      "sku": "13113301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13113301_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "raisins rouges, verts ou noirs — Afrique du Sud, Chili, Pérou",
+      "prix": 2.44,
+      "prix_texte": "2.44$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "59%",
+      "mots_cles": [
+        "raisins"
+      ],
+      "categorie": "fruits",
+      "sku": "10133881",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10133881.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "raisins rouges, verts ou noirs — Afrique du Sud, Chili, Pérou",
+      "prix": 2.44,
+      "prix_texte": "2.44$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "59%",
+      "mots_cles": [
+        "raisins"
+      ],
+      "categorie": "fruits",
+      "sku": "10003693",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003693.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "raisins rouges, verts ou noirs — Afrique du Sud, Chili, Pérou",
+      "prix": 2.44,
+      "prix_texte": "2.44$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "59%",
+      "mots_cles": [
+        "raisins"
+      ],
+      "categorie": "fruits",
+      "sku": "10003697",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003697_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mûres — Mexique, 150-170 g",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "60%",
+      "mots_cles": [
+        "mûres"
+      ],
+      "categorie": "legumes",
+      "sku": "10003349",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003349_2.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "poitrines de poulet désossées régulières ou marinées — choix varié",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "45%",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "38605601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38605601_7.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "couronne de brocoli ou champignons blancs 227 g — Canada, États-Unis, Mexique",
+      "prix": 1.5,
+      "prix_texte": "1.50$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "de 2,99 à 3,49 (régulier)",
+      "rabais": "50%",
+      "mots_cles": [
+        "brocoli"
+      ],
+      "categorie": "legumes",
+      "sku": "10003867",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003867.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "couronne de brocoli ou champignons blancs 227 g — Canada, États-Unis, Mexique",
+      "prix": 1.5,
+      "prix_texte": "1.50$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "de 2,99 à 3,49 (régulier)",
+      "rabais": "50%",
+      "mots_cles": [
+        "brocoli"
+      ],
+      "categorie": "legumes",
+      "sku": "10092732",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10092732.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "menthe en botte, oignons verts, persil italien ou frisé — États-Unis, Mexique",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.79,
+      "prix_regulier_texte": "de 1,79 à 1,99 (régulier)",
+      "rabais": "45% de rabais",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "10050725",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10050725.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "menthe en botte, oignons verts, persil italien ou frisé — États-Unis, Mexique",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.79,
+      "prix_regulier_texte": "de 1,79 à 1,99 (régulier)",
+      "rabais": "45% de rabais",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "89550863",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004084_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "menthe en botte, oignons verts, persil italien ou frisé — États-Unis, Mexique",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.79,
+      "prix_regulier_texte": "de 1,79 à 1,99 (régulier)",
+      "rabais": "45% de rabais",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "10004084",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004084_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "menthe en botte, oignons verts, persil italien ou frisé — États-Unis, Mexique",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.79,
+      "prix_regulier_texte": "de 1,79 à 1,99 (régulier)",
+      "rabais": "45% de rabais",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "10029862",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10029862.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "rôti de palette de veau de grain",
+      "prix": 10.99,
+      "prix_texte": "10.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "21%",
+      "mots_cles": [
+        "rôti"
+      ],
+      "categorie": "viande",
+      "sku": "38550401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38550401.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pieuvre nettoyée décongelée",
+      "prix": 10.99,
+      "prix_texte": "10.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "31%",
+      "mots_cles": [
+        "pieuvre"
+      ],
+      "categorie": "epicerie",
+      "sku": "10138639",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138639.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "darnes de saumon",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "47%",
+      "mots_cles": [
+        "saumon"
+      ],
+      "categorie": "poisson",
+      "sku": "10138328",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138328_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "filet de porc frais régulier ou mariné",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "50%",
+      "mots_cles": [
+        "filet"
+      ],
+      "categorie": "viande",
+      "sku": "22410301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22410301_2_ass_bleue.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "crevettes crues 31/40 décortiquage éclair Blue Tide — 400 g",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "1$",
+      "mots_cles": [
+        "crevettes"
+      ],
+      "categorie": "poisson",
+      "sku": "10138461",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138461.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "yogourt Iögo — 16 x 100 g, choix varié",
+      "prix": 6.47,
+      "prix_texte": "6.47$",
+      "prix_regulier": 9.29,
+      "prix_regulier_texte": "9,29 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "yogourt"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "28847801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/28847801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage bocconcini, mozzarella fresca ou ricotta di campagna Saputo — 190-400 g, choix varié",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "de 6,99 à 8,49 (régulier)",
+      "rabais": "53%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "39306701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39306701.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage bocconcini, mozzarella fresca ou ricotta di campagna Saputo — 190-400 g, choix varié",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "de 6,99 à 8,49 (régulier)",
+      "rabais": "53%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "13359302",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13359302.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "noix de Grenobles ou amandes Cedar — 454 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "noix"
+      ],
+      "categorie": "epicerie",
+      "sku": "10048944",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10048944.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "noix de Grenobles ou amandes Cedar — 454 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "noix"
+      ],
+      "categorie": "epicerie",
+      "sku": "10048798",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10048798.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "sauce à pâtes Classico — 218-600 ml, choix varié",
+      "prix": 2.97,
+      "prix_texte": "2.97$",
+      "prix_regulier": 6.29,
+      "prix_regulier_texte": "6,29 (régulier)",
+      "rabais": "53%",
+      "mots_cles": [
+        "pâtes"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "42694101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42694101.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pain Première Moisson — 500 g, choix varié",
+      "prix": 8,
+      "prix_texte": "8.00$",
+      "prix_regulier": 5.49,
+      "prix_regulier_texte": "de 5,49 à 6,99 (régulier)",
+      "rabais": "43%",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "31393701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/31393701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "poitrine de dinde Flamingo — choix varié",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "40%",
+      "mots_cles": [
+        "poitrine"
+      ],
+      "categorie": "viande",
+      "sku": "12992401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12992401.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "combo poulet grillé — servi avec patates, salade (format moyen) et sauce",
+      "prix": 25,
+      "prix_texte": "25.00$",
+      "prix_regulier": 32.99,
+      "prix_regulier_texte": "32,99 (régulier)",
+      "rabais": "7,99",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "38343801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38343801_1_groupshot_QUE.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "huile d'olive extra vierge Cleopatra ou huile de maïs et canola Mazola — 1-2,84 L",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": 13.99,
+      "prix_regulier_texte": "de 13,99 à 15,99 (régulier)",
+      "rabais": "7$",
+      "mots_cles": [
+        "huile"
+      ],
+      "categorie": "condiments",
+      "sku": "38804901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38804901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "huile d'olive extra vierge Cleopatra ou huile de maïs et canola Mazola — 1-2,84 L",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": 13.99,
+      "prix_regulier_texte": "de 13,99 à 15,99 (régulier)",
+      "rabais": "7$",
+      "mots_cles": [
+        "huile"
+      ],
+      "categorie": "condiments",
+      "sku": "16884201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/16884201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "riz basmati Tilda — 4,54 kg",
+      "prix": 13.99,
+      "prix_texte": "13.99$",
+      "prix_regulier": 19.99,
+      "prix_regulier_texte": "19,99 (régulier)",
+      "rabais": "6$",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "18410101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/18410101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légumineuse en conserve Cedar — 540 ml, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.29,
+      "prix_regulier_texte": "2,29 (régulier)",
+      "rabais": "45%",
+      "mots_cles": [
+        "légumineuse"
+      ],
+      "categorie": "epicerie",
+      "sku": "23846401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23846401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légumineuse en conserve Cedar — 540 ml, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.29,
+      "prix_regulier_texte": "2,29 (régulier)",
+      "rabais": "45%",
+      "mots_cles": [
+        "légumineuse"
+      ],
+      "categorie": "epicerie",
+      "sku": "17373205",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/17373205.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "semoule de blé Cedar 4 kg ou farine Selection 10 kg",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 11.99,
+      "prix_regulier_texte": "de 11,99 à 12,99 (régulier)",
+      "rabais": "38%",
+      "mots_cles": [
+        "semoule"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "22921501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22921501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "semoule de blé Cedar 4 kg ou farine Selection 10 kg",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 11.99,
+      "prix_regulier_texte": "de 11,99 à 12,99 (régulier)",
+      "rabais": "38%",
+      "mots_cles": [
+        "semoule"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "23057701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23057701.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "ghee végétale Aseel — 2 kg",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 15.99,
+      "prix_regulier_texte": "15,99 (régulier)",
+      "rabais": "38%",
+      "mots_cles": [
+        "ghee"
+      ],
+      "categorie": "epicerie",
+      "sku": "95723241",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/631583101022.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Bière Sapporo, Heineken ou Madri Excepcional — 12 x 330 - 355 ml, choix varié, consigne",
+      "prix": 17.99,
+      "prix_texte": "17.99$",
+      "prix_regulier": 26.99,
+      "prix_regulier_texte": "26,99 (régulier)",
+      "rabais": "9$",
+      "mots_cles": [
+        "bière"
+      ],
+      "categorie": "epicerie",
+      "sku": "28948401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/28948401.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Bière Sapporo, Heineken ou Madri Excepcional — 12 x 330 - 355 ml, choix varié, consigne",
+      "prix": 17.99,
+      "prix_texte": "17.99$",
+      "prix_regulier": 26.99,
+      "prix_regulier_texte": "26,99 (régulier)",
+      "rabais": "9$",
+      "mots_cles": [
+        "bière"
+      ],
+      "categorie": "epicerie",
+      "sku": "13754601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13754601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tahineh Alkanater — 900 g",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 11.99,
+      "prix_regulier_texte": "11,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "tahineh"
+      ],
+      "categorie": "epicerie",
+      "sku": "18407101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/18407101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "miel de fleurs sauvages Cedar ou café moulu Maatouk — 450 g-1 kg",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 12.99,
+      "prix_regulier_texte": "de 12,99 à 13,49 (régulier)",
+      "rabais": "41%",
+      "mots_cles": [
+        "miel"
+      ],
+      "categorie": "epicerie",
+      "sku": "38805302",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38805302.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "miel de fleurs sauvages Cedar ou café moulu Maatouk — 450 g-1 kg",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 12.99,
+      "prix_regulier_texte": "de 12,99 à 13,49 (régulier)",
+      "rabais": "41%",
+      "mots_cles": [
+        "miel"
+      ],
+      "categorie": "epicerie",
+      "sku": "26790801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26790801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tomates rouges en grappes — Canada, États-Unis, Mexique",
+      "prix": 2.49,
+      "prix_texte": "2.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "legumes",
+      "sku": "10029904",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10029904_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "laitues coeurs de romaine — États-Unis, Mexique, 3 un.",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "43% de rabais",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "legumes",
+      "sku": "10004262",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004262_dandy_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "poivrons doux de couleurs — Canada, Mexique, Honduras, 4 un.",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "29% de rabais",
+      "mots_cles": [
+        "poivrons"
+      ],
+      "categorie": "legumes",
+      "sku": "10006114",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10006114.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "concombres libanais — Québec",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "concombres"
+      ],
+      "categorie": "epicerie",
+      "sku": "10138221",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138221_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "chou vert plat — États-Unis",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "chou"
+      ],
+      "categorie": "legumes",
+      "sku": "10139476",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10139476.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "courgettes baladi — Mexique, États-Unis",
+      "prix": 1.69,
+      "prix_texte": "1.69$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "courgettes"
+      ],
+      "categorie": "legumes",
+      "sku": "10037756",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10037756.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "clémentines avec feuilles — Espagne",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "clémentines"
+      ],
+      "categorie": "fruits",
+      "sku": "10100706",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10100706_3.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "avocats — Mexique, sac 6 un.",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "avocat"
+      ],
+      "categorie": "fruits",
+      "sku": "10022576",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10022576.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "aubergines — États-Unis, Mexique",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "aubergines"
+      ],
+      "categorie": "legumes",
+      "sku": "10003766",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003766_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "citrons — États-Unis",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 0.99,
+      "prix_regulier_texte": "0,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "citrons"
+      ],
+      "categorie": "fruits",
+      "sku": "10006479",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10006479_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "oranges Navel sans pépins — Afrique du Sud, Égypte, sac 3 lb",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "oranges"
+      ],
+      "categorie": "fruits",
+      "sku": "10069896",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10069896.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "persil italien ou frisé — Mexique",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "50% de rabais",
+      "mots_cles": [
+        "persil"
+      ],
+      "categorie": "epicerie",
+      "sku": "11434637",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004084.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pommes de terre jaunes, Russet ou rouges — Québec, sac 10 lb",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "29% de rabais",
+      "mots_cles": [
+        "pommes de terre",
+        "pommes"
+      ],
+      "categorie": "fruits",
+      "sku": "10045557",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10045557.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pommes de terre jaunes, Russet ou rouges — Québec, sac 10 lb",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "29% de rabais",
+      "mots_cles": [
+        "pommes de terre",
+        "pommes"
+      ],
+      "categorie": "fruits",
+      "sku": "13719931",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/LE191013_3.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "oignons jaunes — Québec, 5 lb",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "10045304",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10045304.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "kiwis — Grèce, 2 lb",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "25% de rabais",
+      "mots_cles": [
+        "kiwis"
+      ],
+      "categorie": "fruits",
+      "sku": "10005491",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10005491.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tomates raisins de serre — Canada, États-Unis, Mexique, 283 g",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "40%",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "fruits",
+      "sku": "10062589",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10062589_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "amandes fraîches — Jordanie",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "amandes"
+      ],
+      "categorie": "epicerie",
+      "sku": "10051616",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10051616.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "courgettes vertes — États-Unis, Mexique",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "43%",
+      "mots_cles": [
+        "courgettes"
+      ],
+      "categorie": "legumes",
+      "sku": "10003991",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003991.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "gourganes — États-Unis",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "20%",
+      "mots_cles": [
+        "gourganes"
+      ],
+      "categorie": "epicerie",
+      "sku": "10004023",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004023.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mangues rouges ou Ataulfo — Mexique, Pérou",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "mangues"
+      ],
+      "categorie": "fruits",
+      "sku": "10003312",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003312.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mangues rouges ou Ataulfo — Mexique, Pérou",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "mangues"
+      ],
+      "categorie": "fruits",
+      "sku": "10003307",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003307_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pêches et nectarines — Chili",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "40%",
+      "mots_cles": [
+        "pêches"
+      ],
+      "categorie": "epicerie",
+      "sku": "10003377",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003377_1_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "radis en feuilles — Canada",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "radis"
+      ],
+      "categorie": "legumes",
+      "sku": "10004152",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004152.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "épinard en botte ou aneth — Mexique",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "épinard"
+      ],
+      "categorie": "legumes",
+      "sku": "10004013",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10004013.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "épinard en botte ou aneth — Mexique",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "épinard"
+      ],
+      "categorie": "legumes",
+      "sku": "10005654",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10005654.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pommes Granny Smith, rouges Délicieuse ou Cripps Pink — États-Unis",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "33%",
+      "mots_cles": [
+        "pommes"
+      ],
+      "categorie": "fruits",
+      "sku": "10024820",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10024820.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pommes Granny Smith, rouges Délicieuse ou Cripps Pink — États-Unis",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "33%",
+      "mots_cles": [
+        "pommes"
+      ],
+      "categorie": "fruits",
+      "sku": "10003546",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003546.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pommes Granny Smith, rouges Délicieuse ou Cripps Pink — États-Unis",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "33%",
+      "mots_cles": [
+        "pommes"
+      ],
+      "categorie": "fruits",
+      "sku": "10003583",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003583.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "cantaloup — Guatemala, Honduras",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "20%",
+      "mots_cles": [
+        "cantaloup"
+      ],
+      "categorie": "epicerie",
+      "sku": "10003313",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003313.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "asperges — Mexique, 325 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "asperges"
+      ],
+      "categorie": "legumes",
+      "sku": "10015908",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10015908.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "céleri ou oignons rouges 3 lb — Canada, États-Unis, Mexique",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "40%",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "10003850",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003850.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "céleri ou oignons rouges 3 lb — Canada, États-Unis, Mexique",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "40%",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes",
+      "sku": "10034023",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10034023.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "kit de salades Dole — États-Unis, 276-347 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "kit"
+      ],
+      "categorie": "epicerie",
+      "sku": "10112492",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10112492ONT.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "kit de salades Dole — États-Unis, 276-347 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "kit"
+      ],
+      "categorie": "epicerie",
+      "sku": "36336801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/36336801ONT.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fraises — États-Unis, Mexique, 454 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "29%",
+      "mots_cles": [
+        "fraises"
+      ],
+      "categorie": "fruits",
+      "sku": "10003278",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10003278_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "olives noires marocaines",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "12%",
+      "mots_cles": [
+        "olives"
+      ],
+      "categorie": "epicerie",
+      "sku": "38969801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38969801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "olives vertes farcies — choix varié",
+      "prix": 1.79,
+      "prix_texte": "1.79$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "10%",
+      "mots_cles": [
+        "olives"
+      ],
+      "categorie": "epicerie",
+      "sku": "38963201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38963201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "olives vertes farcies — choix varié",
+      "prix": 1.79,
+      "prix_texte": "1.79$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "10%",
+      "mots_cles": [
+        "olives"
+      ],
+      "categorie": "epicerie",
+      "sku": "38963101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38963101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "olives vertes farcies — choix varié",
+      "prix": 1.79,
+      "prix_texte": "1.79$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "10%",
+      "mots_cles": [
+        "olives"
+      ],
+      "categorie": "epicerie",
+      "sku": "38969501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38969501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légumes mixtes marinés",
+      "prix": 1.79,
+      "prix_texte": "1.79$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "14%",
+      "mots_cles": [
+        "légumes"
+      ],
+      "categorie": "legumes",
+      "sku": "38701301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38701301_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Halva — choix varié",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "12%",
+      "mots_cles": [
+        "halva"
+      ],
+      "categorie": "epicerie",
+      "sku": "39244302",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39244302.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Halva — choix varié",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "12%",
+      "mots_cles": [
+        "halva"
+      ],
+      "categorie": "epicerie",
+      "sku": "39244303",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39244303.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Halva — choix varié",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "12%",
+      "mots_cles": [
+        "halva"
+      ],
+      "categorie": "epicerie",
+      "sku": "39244301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39244301.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "bifteck de faux filet",
+      "prix": 16.99,
+      "prix_texte": "16.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "41%",
+      "mots_cles": [
+        "bifteck"
+      ],
+      "categorie": "viande",
+      "sku": "38590601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38590601_5.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "cubes de porc souvlaki",
+      "prix": 4.49,
+      "prix_texte": "4.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "25%",
+      "mots_cles": [
+        "cubes"
+      ],
+      "categorie": "viande",
+      "sku": "13329203",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13329203_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "côtes de flanc de porc frais",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "25%",
+      "mots_cles": [
+        "côtes"
+      ],
+      "categorie": "viande",
+      "sku": "23427701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23427701.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "côtelettes d’agneau marinées décongelées",
+      "prix": 11.99,
+      "prix_texte": "11.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "25%",
+      "mots_cles": [
+        "agneau"
+      ],
+      "categorie": "viande",
+      "sku": "38598801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38598801_A.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "galette de kafta ou burger boeuf",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3,
+      "prix_regulier_texte": "3,00 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "boeuf",
+        "oeufs"
+      ],
+      "categorie": "viande",
+      "sku": "38588101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38588101_assiette_bleue.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jarret d’agneau congelé",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "27%",
+      "mots_cles": [
+        "agneau"
+      ],
+      "categorie": "viande",
+      "sku": "18837001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/18837001_Assiette_bleu.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "cuisse de poulet avec dos",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "30%",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "14270501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/14270501_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "oeil de ronde de boeuf",
+      "prix": 10.99,
+      "prix_texte": "10.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "21%",
+      "mots_cles": [
+        "boeuf",
+        "oeufs"
+      ],
+      "categorie": "viande",
+      "sku": "13136501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13136501_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "côtelette de porc à os",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "33%",
+      "mots_cles": [
+        "côtelette"
+      ],
+      "categorie": "viande",
+      "sku": "13083103",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13083103_ass_bleue.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "saucisses merguez boeuf et agneau",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "2$/lb",
+      "mots_cles": [
+        "boeuf",
+        "agneau",
+        "oeufs"
+      ],
+      "categorie": "viande",
+      "sku": "38590701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38590701_A.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "ailes de poulet Selection — 650 g, choix varié",
+      "prix": 10.99,
+      "prix_texte": "10.99$",
+      "prix_regulier": 12.99,
+      "prix_regulier_texte": "12,99 (régulier)",
+      "rabais": "2$",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "23644403",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23644403.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "bacon Selection — 375 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "2$",
+      "mots_cles": [
+        "bacon"
+      ],
+      "categorie": "viande",
+      "sku": "29046601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29046601BC_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "côtes de dos de porc BBQ ou à l’érable Plaisirs Gastronomiques — 740 g",
+      "prix": 14.99,
+      "prix_texte": "14.99$",
+      "prix_regulier": 18.99,
+      "prix_regulier_texte": "18,99 (régulier)",
+      "rabais": "4$",
+      "mots_cles": [
+        "côtes"
+      ],
+      "categorie": "viande",
+      "sku": "34504501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/34504501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "saucisse fumée Selection — 450 g",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.79,
+      "prix_regulier_texte": "de 3,79 à 4,49 (régulier)",
+      "rabais": "1$",
+      "mots_cles": [
+        "saucisse"
+      ],
+      "categorie": "viande",
+      "sku": "23689201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23689201.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "saucisse fumée Selection — 450 g",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.79,
+      "prix_regulier_texte": "de 3,79 à 4,49 (régulier)",
+      "rabais": "1$",
+      "mots_cles": [
+        "saucisse"
+      ],
+      "categorie": "viande",
+      "sku": "23133501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23133501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "cuisses de canard confites Plaisirs Gastronomiques — 500 g",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
+      "prix_regulier": 25.99,
+      "prix_regulier_texte": "25,99 (régulier)",
+      "rabais": "7$",
+      "mots_cles": [
+        "cuisses"
+      ],
+      "categorie": "viande",
+      "sku": "25350701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/25350701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Solmaz saucisses frankforter — 450 g",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "de 10,99 à 13,49 (régulier)",
+      "rabais": "1,50",
+      "mots_cles": [
+        "solmaz"
+      ],
+      "categorie": "viande",
+      "sku": "41484101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/41484101ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Solmaz saucisses frankforter — 450 g",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "de 10,99 à 13,49 (régulier)",
+      "rabais": "1,50",
+      "mots_cles": [
+        "solmaz"
+      ],
+      "categorie": "viande",
+      "sku": "12502413",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/628451533016.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "poulet pané Watson Ridge — 800 g, choix varié",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 9.99,
+      "prix_regulier_texte": "9,99 (régulier)",
+      "rabais": "2$",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "28868403",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/28868403.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "daurade royale",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "33%",
+      "mots_cles": [
+        "daurade"
+      ],
+      "categorie": "epicerie",
+      "sku": "10138304",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138304_6_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mulet frais",
+      "prix": 4.49,
+      "prix_texte": "4.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "mulet"
+      ],
+      "categorie": "poisson",
+      "sku": "10138246",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138246_CC.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "filets de tilapia",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "31%",
+      "mots_cles": [
+        "filets"
+      ],
+      "categorie": "poisson",
+      "sku": "10078174",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10078174.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "imitation flocon de goberge Selection — 700 g",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 12.99,
+      "prix_regulier_texte": "12,99 (régulier)",
+      "rabais": "3$",
+      "mots_cles": [
+        "imitation"
+      ],
+      "categorie": "poisson",
+      "sku": "10095011",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10095011.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "crevettes blanches 21-25 marinées — choix varié",
+      "prix": 10.99,
+      "prix_texte": "10.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "2$/",
+      "mots_cles": [
+        "crevettes"
+      ],
+      "categorie": "poisson",
+      "sku": "10138561",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138561_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "crevettes blanches cuites 61-70 Blue Tide — 340 g",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "1$",
+      "mots_cles": [
+        "crevettes"
+      ],
+      "categorie": "poisson",
+      "sku": "10138522",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138522.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fruits de mer mélangés Blue Tide — 350 g",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "1$",
+      "mots_cles": [
+        "fruits"
+      ],
+      "categorie": "poisson",
+      "sku": "10138592",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138592.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "rondelle de calmar Blue Tide — 454 g",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "1$",
+      "mots_cles": [
+        "rondelle"
+      ],
+      "categorie": "poisson",
+      "sku": "10041109",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10041109.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "crevettes blanches 26-30 décortiquage rapide Blue Tide — 907 g",
+      "prix": 19.99,
+      "prix_texte": "19.99$",
+      "prix_regulier": 22.99,
+      "prix_regulier_texte": "22,99 (régulier)",
+      "rabais": "3$",
+      "mots_cles": [
+        "crevettes"
+      ],
+      "categorie": "poisson",
+      "sku": "10138536",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/10138536.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mozzarellissima fromage en bloc Saputo — 1 kg, choix varié",
+      "prix": 13.99,
+      "prix_texte": "13.99$",
+      "prix_regulier": 21.49,
+      "prix_regulier_texte": "21,49 (régulier)",
+      "rabais": "7,50",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "27276002",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/27276002.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "le lait toujours au prix minimum — *Lait régulier de format 4 L de marque Beatrice au plus bas prix ",
+      "prix": null,
+      "prix_texte": "PRIX MINIMUM PAR LA LOI",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "24107801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/24107801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "le lait toujours au prix minimum — *Lait régulier de format 4 L de marque Beatrice au plus bas prix ",
+      "prix": null,
+      "prix_texte": "PRIX MINIMUM PAR LA LOI",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "12087901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12087901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "beurre Selection — 454 g, choix varié",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 6.49,
+      "prix_regulier_texte": "6,49 (régulier)",
+      "rabais": "8% de rabais",
+      "mots_cles": [
+        "beurre"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "22954801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22954801.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "yogourt nature Phoenicia — 750 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3.79,
+      "prix_regulier_texte": "3,79 (régulier)",
+      "rabais": "34%",
+      "mots_cles": [
+        "yogourt"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "20607403",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/20607403.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "yogourt Yoplait Source — 630 g, choix varié",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 5.39,
+      "prix_regulier_texte": "5,39 (régulier)",
+      "rabais": "35%",
+      "mots_cles": [
+        "lait",
+        "yogourt"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "37367902",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/37367902ont.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "yogourt grec Oîkos — 4 x 95-100 g, choix varié",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 5.69,
+      "prix_regulier_texte": "5,69 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "yogourt"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "28754608",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/28754608.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage mascarpone Tre Stelle — 475 g",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 13.99,
+      "prix_regulier_texte": "13,99 (régulier)",
+      "rabais": "29%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "12927501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12927501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lait au chocolat ou lait babeurre Beatrice — 1 L",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "de 4,29 à 4,49 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "lait",
+        "beurre"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "24108701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/24108701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lait au chocolat ou lait babeurre Beatrice — 1 L",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "de 4,29 à 4,49 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "lait",
+        "beurre"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "12087601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12087601ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "yogourt Oîkos Pro — 300 ml, choix varié",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "4,49 + tx (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "yogourt"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "43041601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43041601ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "yogourt Oîkos Pro — 300 ml, choix varié",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "4,49 + tx (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "yogourt"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "43041602",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43041602ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lait au chocolat Natrel — 6 x 200 ml, consigne",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 8.29,
+      "prix_regulier_texte": "8,29 (régulier)",
+      "rabais": "28%",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "12680901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12680901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jus réfrigéré Selection — 2,5 L, choix varié",
+      "prix": 6.49,
+      "prix_texte": "6.49$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "19%",
+      "mots_cles": [
+        "jus"
+      ],
+      "categorie": "epicerie",
+      "sku": "42231401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42231401Sel.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage à la crème Philadelphia — 340 g, choix varié",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "13%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "29627303",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29627303ONT.jpg.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage râpé Black Diamond ou en bloc P'tit Québec — 300-320 g, 400 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "de 7,99 à 8,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "35381009",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/35381009.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage râpé Black Diamond ou en bloc P'tit Québec — 300-320 g, 400 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "de 7,99 à 8,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "35264902",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/35264902.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "crème 10-35% Lactantia — 473 ml-1 L, choix varié",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "de 5,99 à 6,69 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "crème"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "29049501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29049501ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "crème 10-35% Lactantia — 473 ml-1 L, choix varié",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "de 5,99 à 6,69 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "crème"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "14201801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/14201801ONT.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mortadelle San Daniele — choix varié",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "20%",
+      "mots_cles": [
+        "mortadelle"
+      ],
+      "categorie": "viande",
+      "sku": "39306201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39306201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jambon fumé ou forêt noire Clément Le Gourmand",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "35%",
+      "mots_cles": [
+        "jambon"
+      ],
+      "categorie": "viande",
+      "sku": "40187201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40187201_M2_F_30_ass.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage EntreMont, cheddar Agropur ou Kerrygold — 198-227 g, choix varié",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "de 8,99 à 10,99 (régulier)",
+      "rabais": "36%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "24296801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/24296801ONT.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage EntreMont, cheddar Agropur ou Kerrygold — 198-227 g, choix varié",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "de 8,99 à 10,99 (régulier)",
+      "rabais": "36%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "43957001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43957001.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage EntreMont, cheddar Agropur ou Kerrygold — 198-227 g, choix varié",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "de 8,99 à 10,99 (régulier)",
+      "rabais": "36%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "20994001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/20994001.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage brie ou camembert Président — 230 g",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 9.49,
+      "prix_regulier_texte": "9,49 (régulier)",
+      "rabais": "36%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "31672901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/31672901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage tressé Phoenicia",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "25%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "39285001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39285001.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jambon cuit extra maigre Lafleur",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "20%",
+      "mots_cles": [
+        "jambon"
+      ],
+      "categorie": "viande",
+      "sku": "15122701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/15122701_M_1.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "rôti de boeuf angus Irrésistible Artisan",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "34%",
+      "mots_cles": [
+        "boeuf",
+        "oeufs"
+      ],
+      "categorie": "viande",
+      "sku": "29535101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29535101.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage baladi en saumure",
+      "prix": 2.49,
+      "prix_texte": "2.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "3$/kg",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "38944501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38944501_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tzatziki Arahova",
+      "prix": 1.29,
+      "prix_texte": "1.29$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "2$/kg",
+      "mots_cles": [
+        "tzatziki"
+      ],
+      "categorie": "legumes",
+      "sku": "38946101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38946101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "viandes froides Marc Angelo — 85 g, choix varié",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "viandes"
+      ],
+      "categorie": "viande",
+      "sku": "44080402",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/44080402ONT_T.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "trio de viandes Selection — 250 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "29%",
+      "mots_cles": [
+        "trio"
+      ],
+      "categorie": "viande",
+      "sku": "40970101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40970101SEL.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage gouda fumé Alexis de Portneuf ou parmesan Bella Lodi",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "35%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "36379301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/36379301.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage gouda fumé Alexis de Portneuf ou parmesan Bella Lodi",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "35%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "39186901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39186901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage Entremont, Saint-Paulin ou Oka — choix varié",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "39%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "13183001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13183001_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage Entremont, Saint-Paulin ou Oka — choix varié",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "39%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "37529301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/37529301.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jambon Première Moisson — 175 g, choix varié",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "18%",
+      "mots_cles": [
+        "jambon"
+      ],
+      "categorie": "viande",
+      "sku": "31240001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/31240001.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "bologne de poulet en tranches Halal Maple Lodge — 375 g",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "15356901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/15356901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage Saint Morgon Président — 200 g",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 9.29,
+      "prix_regulier_texte": "9,29 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "13315201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/13315201.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fromage Jura Flore — 200 g, choix varié",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": 11.49,
+      "prix_regulier_texte": "de 11,49 à 11,99 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "14544701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/14544701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "hummus ail rôti, poivron rouge ou mouhammara Adonis — 250 g",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.79,
+      "prix_regulier_texte": "de 4,79 à 5,79 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "hummus"
+      ],
+      "categorie": "legumes",
+      "sku": "40719401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40719401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "hummus ail rôti, poivron rouge ou mouhammara Adonis — 250 g",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.79,
+      "prix_regulier_texte": "de 4,79 à 5,79 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "hummus"
+      ],
+      "categorie": "legumes",
+      "sku": "43409801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43409801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "hummus ail rôti, poivron rouge ou mouhammara Adonis — 250 g",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.79,
+      "prix_regulier_texte": "de 4,79 à 5,79 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "hummus"
+      ],
+      "categorie": "legumes",
+      "sku": "43409802",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43409802.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "sfouf",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "sfouf"
+      ],
+      "categorie": "epicerie",
+      "sku": "39225601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39225601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "nammoura",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "nammoura"
+      ],
+      "categorie": "epicerie",
+      "sku": "39231601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39231601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biryani au poulet ou pâte bolognaise",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "poulet",
+        "pâtes"
+      ],
+      "categorie": "viande",
+      "sku": "38643401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38643401_1.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biryani au poulet ou pâte bolognaise",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "poulet",
+        "pâtes"
+      ],
+      "categorie": "viande",
+      "sku": "38665401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38665401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "plateau de poisson — 4 merlans, 4 brochettes de crevettes, 20 calmars et 4 x 150 g filet bassa,",
+      "prix": 59,
+      "prix_texte": "59.00$",
+      "prix_regulier": 66.99,
+      "prix_regulier_texte": "66,99 (régulier)",
+      "rabais": "12% de rabais",
+      "mots_cles": [
+        "crevettes"
+      ],
+      "categorie": "poisson",
+      "sku": "40129401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40129401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "gâteaux en morceau — choix varié",
+      "prix": 24,
+      "prix_texte": "24.00$",
+      "prix_regulier": 4.79,
+      "prix_regulier_texte": "4,79 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "gâteaux"
+      ],
+      "categorie": "epicerie",
+      "sku": "39147201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39147201_39147201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "gâteau colomba classique Balocco — 750 g",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
+      "prix_regulier": 26.99,
+      "prix_regulier_texte": "26,99 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "gâteau"
+      ],
+      "categorie": "epicerie",
+      "sku": "43404401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43404401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "feuilles de vigne végétariennes",
+      "prix": 12,
+      "prix_texte": "12.00$",
+      "prix_regulier": 12.99,
+      "prix_regulier_texte": "12,99 (régulier)",
+      "rabais": "8% de rabais",
+      "mots_cles": [
+        "feuilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "39005401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39005401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "salades préemballées — 350-500 g, choix varié",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "11% de rabais",
+      "mots_cles": [
+        "salades"
+      ],
+      "categorie": "epicerie",
+      "sku": "38354201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38354201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "salades préemballées — 350-500 g, choix varié",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "11% de rabais",
+      "mots_cles": [
+        "salades"
+      ],
+      "categorie": "epicerie",
+      "sku": "38351901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38351901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "salades préemballées — 350-500 g, choix varié",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "11% de rabais",
+      "mots_cles": [
+        "salades"
+      ],
+      "categorie": "epicerie",
+      "sku": "38354501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38354501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mini pain markouk Bistan — 200 g",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "20% de rabais",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "43689001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43689001.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "gâteau italien au citron, chocolat ou pistaches-noisette Balocco — 400 g",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": 12.99,
+      "prix_regulier_texte": "12,99 (régulier)",
+      "rabais": "31%",
+      "mots_cles": [
+        "gâteau"
+      ],
+      "categorie": "fruits",
+      "sku": "43404502",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43404502.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pouding Adonis — 250 g, choix varié",
+      "prix": 7,
+      "prix_texte": "7.00$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "4,29 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pouding"
+      ],
+      "categorie": "epicerie",
+      "sku": "39150604",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39150604.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pouding Adonis — 250 g, choix varié",
+      "prix": 7,
+      "prix_texte": "7.00$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "4,29 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pouding"
+      ],
+      "categorie": "epicerie",
+      "sku": "39150601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39150601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "petites bouchées Adonis Halal — choix varié",
+      "prix": 7.5,
+      "prix_texte": "7.50$",
+      "prix_regulier": 8.34,
+      "prix_regulier_texte": "de 8,34 à 8,70 (régulier)",
+      "rabais": "10% de rabais",
+      "mots_cles": [
+        "petites"
+      ],
+      "categorie": "epicerie",
+      "sku": "39070701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39070701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "petites bouchées Adonis Halal — choix varié",
+      "prix": 7.5,
+      "prix_texte": "7.50$",
+      "prix_regulier": 8.34,
+      "prix_regulier_texte": "de 8,34 à 8,70 (régulier)",
+      "rabais": "10% de rabais",
+      "mots_cles": [
+        "petites"
+      ],
+      "categorie": "epicerie",
+      "sku": "39067101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39067101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "petites bouchées Adonis Halal — choix varié",
+      "prix": 7.5,
+      "prix_texte": "7.50$",
+      "prix_regulier": 8.34,
+      "prix_regulier_texte": "de 8,34 à 8,70 (régulier)",
+      "rabais": "10% de rabais",
+      "mots_cles": [
+        "petites"
+      ],
+      "categorie": "epicerie",
+      "sku": "39066401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39066401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pains tranchés Bon Matin ou St-Méthode — 570-650 g",
+      "prix": null,
+      "prix_texte": "",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "de 4,99 à 5,79 (régulier)",
+      "rabais": "3$",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "24405702",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/24405702.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pains tranchés Bon Matin ou St-Méthode — 570-650 g",
+      "prix": null,
+      "prix_texte": "",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "de 4,99 à 5,79 (régulier)",
+      "rabais": "3$",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "36676303",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/36676303.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pain aux raisins tranché Sun-Maid — 450 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.29,
+      "prix_regulier_texte": "6,29 (régulier)",
+      "rabais": "27%",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "fruits",
+      "sku": "12259601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12259601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tortillas ou bagels protéinés Pom — 330-450 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.49,
+      "prix_regulier_texte": "de 6,49 à 6,79 (régulier)",
+      "rabais": "27%",
+      "mots_cles": [
+        "tortillas"
+      ],
+      "categorie": "epicerie",
+      "sku": "44209301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/44209301.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "haricots Cedar — 907 g, choix varié",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "40%",
+      "mots_cles": [
+        "haricots"
+      ],
+      "categorie": "epicerie",
+      "sku": "30547901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/30547901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "haricots Cedar — 907 g, choix varié",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "40%",
+      "mots_cles": [
+        "haricots"
+      ],
+      "categorie": "epicerie",
+      "sku": "38785501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38785501.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "viande à lunch ou citron confit Cedar — 340 g, 660 ml",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "viande"
+      ],
+      "categorie": "fruits",
+      "sku": "22184201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22184201.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "viande à lunch ou citron confit Cedar — 340 g, 660 ml",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "viande"
+      ],
+      "categorie": "fruits",
+      "sku": "43120901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43120901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "feuilles molokhia séchées Cedar — 200 g",
+      "prix": 4.49,
+      "prix_texte": "4.49$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "10% de rabais",
+      "mots_cles": [
+        "feuilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "42255701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42255701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "Maamoul Alkaramah — 320 g, choix varié",
+      "prix": 2.79,
+      "prix_texte": "2.79$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "4,49 (régulier)",
+      "rabais": "38%",
+      "mots_cles": [
+        "maamoul"
+      ],
+      "categorie": "epicerie",
+      "sku": "38945601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38945601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "vin Bù ou Smoky Bay — 750 ml-1 L, choix varié",
+      "prix": 15.99,
+      "prix_texte": "15.99$",
+      "prix_regulier": 16.99,
+      "prix_regulier_texte": "de 16,99 à 17,99 (régulier)",
+      "rabais": "6% de rabais",
+      "mots_cles": [
+        "vin"
+      ],
+      "categorie": "epicerie",
+      "sku": "30824606",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/30824606BC.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "vin Bù ou Smoky Bay — 750 ml-1 L, choix varié",
+      "prix": 15.99,
+      "prix_texte": "15.99$",
+      "prix_regulier": 16.99,
+      "prix_regulier_texte": "de 16,99 à 17,99 (régulier)",
+      "rabais": "6% de rabais",
+      "mots_cles": [
+        "vin"
+      ],
+      "categorie": "epicerie",
+      "sku": "29880203",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29880203.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "vin Bù ou Smoky Bay — 750 ml-1 L, choix varié",
+      "prix": 15.99,
+      "prix_texte": "15.99$",
+      "prix_regulier": 16.99,
+      "prix_regulier_texte": "de 16,99 à 17,99 (régulier)",
+      "rabais": "6% de rabais",
+      "mots_cles": [
+        "vin"
+      ],
+      "categorie": "epicerie",
+      "sku": "29880202",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29880202.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "eau de source Naya — 20 x 500 ml, consigne",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 5.49,
+      "prix_regulier_texte": "5,49 (régulier)",
+      "rabais": "27% de rabais",
+      "mots_cles": [
+        "eau"
+      ],
+      "categorie": "epicerie",
+      "sku": "33644601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/33644601_2.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "boisson gazeuse Pepsi — 6 x 222 ml, choix varié, consigne",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "boisson"
+      ],
+      "categorie": "epicerie",
+      "sku": "29507204",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29507204.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "croustilles Miss Vickie's ou Tostitos — 190-295 g, choix varié",
+      "prix": 9,
+      "prix_texte": "9.00$",
+      "prix_regulier": 5.49,
+      "prix_regulier_texte": "5,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "croustilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "31862308",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/31862308ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "croustilles Miss Vickie's ou Tostitos — 190-295 g, choix varié",
+      "prix": 9,
+      "prix_texte": "9.00$",
+      "prix_regulier": 5.49,
+      "prix_regulier_texte": "5,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "croustilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "35020401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/35020401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jus Del Monte — 960 ml, choix varié",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "jus"
+      ],
+      "categorie": "epicerie",
+      "sku": "29534603",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29534603ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jus Del Monte — 960 ml, choix varié",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 (régulier)",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "jus"
+      ],
+      "categorie": "epicerie",
+      "sku": "29534602",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29534602.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biscuits Ulker — 175 g",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.49,
+      "prix_regulier_texte": "1,49 (régulier)",
+      "rabais": "50%",
+      "mots_cles": [
+        "biscuits"
+      ],
+      "categorie": "epicerie",
+      "sku": "43127501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43127501.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "bonbons Kopiko — 120-180 g, choix varié",
+      "prix": 0.99,
+      "prix_texte": "0.99$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "50%",
+      "mots_cles": [
+        "bonbons"
+      ],
+      "categorie": "epicerie",
+      "sku": "42828301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42828301.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biscuits Dare — 280-310 g, choix varié",
+      "prix": 6,
+      "prix_texte": "6.00$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "de 4,29 à 4,79 (régulier)",
+      "rabais": "37%",
+      "mots_cles": [
+        "biscuits"
+      ],
+      "categorie": "epicerie",
+      "sku": "12053609",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12053609ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biscuits Dare — 280-310 g, choix varié",
+      "prix": 6,
+      "prix_texte": "6.00$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "de 4,29 à 4,79 (régulier)",
+      "rabais": "37%",
+      "mots_cles": [
+        "biscuits"
+      ],
+      "categorie": "epicerie",
+      "sku": "37784003",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/37784003.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biscuits Christie — 224-303 g, choix varié",
+      "prix": 8,
+      "prix_texte": "8.00$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "de 4,49 à 5,29 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "biscuits"
+      ],
+      "categorie": "epicerie",
+      "sku": "36601101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/36601101.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "biscuits Christie — 224-303 g, choix varié",
+      "prix": 8,
+      "prix_texte": "8.00$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "de 4,49 à 5,29 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "biscuits"
+      ],
+      "categorie": "epicerie",
+      "sku": "36597501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/36597501.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "céréales granola Mieux-être ou gruau Selection — 300 g-1 kg",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "de 4,49 à 4,79 (régulier)",
+      "rabais": "20%",
+      "mots_cles": [
+        "céréales"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "36871701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/36871701ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "céréales granola Mieux-être ou gruau Selection — 300 g-1 kg",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "de 4,49 à 4,79 (régulier)",
+      "rabais": "20%",
+      "mots_cles": [
+        "céréales"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "39493101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39493101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "confiture Cortas ou boisson soya Natura — 250 ml-3 x 200 ml, choix varié",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 5,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "confiture"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "24364501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/24364501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "confiture Cortas ou boisson soya Natura — 250 ml-3 x 200 ml, choix varié",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 5,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "confiture"
+      ],
+      "categorie": "epicerie",
+      "sku": "44179101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/44179101.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "beurre d'arachide ou tartinade Kraft — 375-500 g",
+      "prix": 5.49,
+      "prix_texte": "5.49$",
+      "prix_regulier": 6.49,
+      "prix_regulier_texte": "6,49 (régulier)",
+      "rabais": "15%",
+      "mots_cles": [
+        "beurre"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "35320701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/35320701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "beurre d'arachide ou tartinade Kraft — 375-500 g",
+      "prix": 5.49,
+      "prix_texte": "5.49$",
+      "prix_regulier": 6.49,
+      "prix_regulier_texte": "6,49 (régulier)",
+      "rabais": "15%",
+      "mots_cles": [
+        "beurre"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "11577102",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/11577102.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "café moulu Irrésistible ou café en sachet 3 en 1 Kopiko — 340 g-3 x 30 g, choix varié",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "de 10,99 à 12,49 (régulier)",
+      "rabais": "20%",
+      "mots_cles": [
+        "café"
+      ],
+      "categorie": "epicerie",
+      "sku": "31777210",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/31777210Irrs.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "café moulu Irrésistible ou café en sachet 3 en 1 Kopiko — 340 g-3 x 30 g, choix varié",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "de 10,99 à 12,49 (régulier)",
+      "rabais": "20%",
+      "mots_cles": [
+        "café"
+      ],
+      "categorie": "epicerie",
+      "sku": "42705201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42705201.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légume surgelé artichaut ou okra surgelé Montana — 375-400 g",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "de 4,49 à 4,99 (régulier)",
+      "rabais": "29%",
+      "mots_cles": [
+        "légume"
+      ],
+      "categorie": "legumes",
+      "sku": "23844601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23844601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légume surgelé artichaut ou okra surgelé Montana — 375-400 g",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 4.49,
+      "prix_regulier_texte": "de 4,49 à 4,99 (régulier)",
+      "rabais": "29%",
+      "mots_cles": [
+        "légume"
+      ],
+      "categorie": "legumes",
+      "sku": "38780901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38780901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tarte, feuilleté ou pâte filo surgelés Elzymi — 600-850 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "pâtes"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "42748901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42748901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tarte, feuilleté ou pâte filo surgelés Elzymi — 600-850 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "25%",
+      "mots_cles": [
+        "pâtes"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "42749002",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42749002.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "aubergines grillées ou frites congelées Cedar — 850 g-2,27 kg",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "17%",
+      "mots_cles": [
+        "aubergines"
+      ],
+      "categorie": "epicerie",
+      "sku": "38880502",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38880502.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "aubergines grillées ou frites congelées Cedar — 850 g-2,27 kg",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 (régulier)",
+      "rabais": "17%",
+      "mots_cles": [
+        "aubergines"
+      ],
+      "categorie": "epicerie",
+      "sku": "27459701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/27459701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fruits congelés Selection — 2 kg, choix varié",
+      "prix": 13.49,
+      "prix_texte": "13.49$",
+      "prix_regulier": 14.99,
+      "prix_regulier_texte": "14,99 (régulier)",
+      "rabais": "10% de rabais",
+      "mots_cles": [
+        "fruits"
+      ],
+      "categorie": "epicerie",
+      "sku": "32126301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/32126301.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fruits congelés Selection — 2 kg, choix varié",
+      "prix": 13.49,
+      "prix_texte": "13.49$",
+      "prix_regulier": 14.99,
+      "prix_regulier_texte": "14,99 (régulier)",
+      "rabais": "10% de rabais",
+      "mots_cles": [
+        "fruits"
+      ],
+      "categorie": "epicerie",
+      "sku": "24140401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/24140401ONT_T.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pizza Casa di Mama ou Ristorante Dr. Oetker — 325-410 g, choix varié",
+      "prix": 5.49,
+      "prix_texte": "5.49$",
+      "prix_regulier": 7.49,
+      "prix_regulier_texte": "7,49 (régulier)",
+      "rabais": "27%",
+      "mots_cles": [
+        "pizza"
+      ],
+      "categorie": "epicerie",
+      "sku": "15224806",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/15224806.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "mochi crème glacée Natrel — choix varié",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 7.49,
+      "prix_regulier_texte": "7,49 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "mochi"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "33726401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/33726401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "burgol Ozsari — 1 kg, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "burgol"
+      ],
+      "categorie": "epicerie",
+      "sku": "39328202",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39328202.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jus de citron ou lime Quick Lemon — 500 ml",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "6,79 (régulier)",
+      "rabais": "12% de rabais",
+      "mots_cles": [
+        "jus"
+      ],
+      "categorie": "fruits",
+      "sku": "33898201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/33898201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "jus de citron ou lime Quick Lemon — 500 ml",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "6,79 (régulier)",
+      "rabais": "12% de rabais",
+      "mots_cles": [
+        "jus"
+      ],
+      "categorie": "fruits",
+      "sku": "33898202",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/33898202.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "coeurs de palmier tranchés Cedar ou trempette pois chiches Al Rabih — 398 ml, 400 g",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.19,
+      "prix_regulier_texte": "de 2,19 à 2,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "coeurs"
+      ],
+      "categorie": "epicerie",
+      "sku": "26711301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26711301.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "coeurs de palmier tranchés Cedar ou trempette pois chiches Al Rabih — 398 ml, 400 g",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.19,
+      "prix_regulier_texte": "de 2,19 à 2,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "coeurs"
+      ],
+      "categorie": "legumes",
+      "sku": "38856501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38856501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "thon pâle Clover Leaf — 3 x 80 g, choix varié",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99 (régulier)",
+      "rabais": "38%",
+      "mots_cles": [
+        "thon"
+      ],
+      "categorie": "poisson",
+      "sku": "41476101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/41476101.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "bouillon Canton — 1,1 L, choix varié",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.79,
+      "prix_regulier_texte": "5,79 (régulier)",
+      "rabais": "38%",
+      "mots_cles": [
+        "bouillon"
+      ],
+      "categorie": "epicerie",
+      "sku": "26472801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26472801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pâtes alimentaires Divella — 500 g, choix varié",
+      "prix": 4,
+      "prix_texte": "4.00$",
+      "prix_regulier": 2.49,
+      "prix_regulier_texte": "2,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pâtes"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "23890010",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23890010.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lasagne Selection — 375-500 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3.29,
+      "prix_regulier_texte": "3,29 (régulier)",
+      "rabais": "28%",
+      "mots_cles": [
+        "lasagne"
+      ],
+      "categorie": "epicerie",
+      "sku": "22779001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22779001Sel.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "coulis de tomates Cedar — 690 ml",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "3,49 (régulier)",
+      "rabais": "28%",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "legumes",
+      "sku": "38770101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38770101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "thym Al’ard — 500 g",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 15.99,
+      "prix_regulier_texte": "15,99 (régulier)",
+      "rabais": "37%",
+      "mots_cles": [
+        "thym"
+      ],
+      "categorie": "epicerie",
+      "sku": "38763801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38763801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "olives vertes Al’ard — 907 g",
+      "prix": 14.99,
+      "prix_texte": "14.99$",
+      "prix_regulier": 18.99,
+      "prix_regulier_texte": "18,99 (régulier)",
+      "rabais": "21%",
+      "mots_cles": [
+        "olives"
+      ],
+      "categorie": "epicerie",
+      "sku": "38754801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38754801.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "navets marinés Mechaalany ou rondelles de piments forts marinés Cedar — 500-750 ml",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "navets"
+      ],
+      "categorie": "epicerie",
+      "sku": "43443801",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43443801ont.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "navets marinés Mechaalany ou rondelles de piments forts marinés Cedar — 500-750 ml",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "de 3,99 à 4,99 (régulier)",
+      "rabais": "30%",
+      "mots_cles": [
+        "navets"
+      ],
+      "categorie": "epicerie",
+      "sku": "21452401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/21452401.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lait concentré sucré Cedar — 300 ml or kashta Nordex 170 g",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "de 3,49 à 3,99 (régulier)",
+      "rabais": "14% de rabais",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "40676201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40676201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lait concentré sucré Cedar — 300 ml or kashta Nordex 170 g",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "de 3,49 à 3,99 (régulier)",
+      "rabais": "14% de rabais",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers",
+      "sku": "19743601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/19743601.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "levure instantanée Pakmaya — 454 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "levure"
+      ],
+      "categorie": "epicerie",
+      "sku": "38855901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38855901.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "eau de fleur ou de rose Cedar — 500 ml",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "17% de rabais",
+      "mots_cles": [
+        "eau"
+      ],
+      "categorie": "epicerie",
+      "sku": "38870602",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/38870602_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "trempette aubergines ou câpres Cedar — 375 g, 375 ml",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 (régulier)",
+      "rabais": "13% de rabais",
+      "mots_cles": [
+        "trempette"
+      ],
+      "categorie": "epicerie",
+      "sku": "18436501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/18436501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "trempette aubergines ou câpres Cedar — 375 g, 375 ml",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 (régulier)",
+      "rabais": "13% de rabais",
+      "mots_cles": [
+        "trempette"
+      ],
+      "categorie": "epicerie",
+      "sku": "30230501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/30230501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tablettes de chocolat Fusion Lindt — 100 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "71%",
+      "mots_cles": [
+        "tablettes"
+      ],
+      "categorie": "epicerie",
+      "sku": "26759350",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26759350.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tablettes de chocolat Fusion Lindt — 100 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "71%",
+      "mots_cles": [
+        "tablettes"
+      ],
+      "categorie": "epicerie",
+      "sku": "26759349",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26759349ont.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tablettes de chocolat Lindt — 100 g, choix varié",
+      "prix": 7.5,
+      "prix_texte": "7.50$",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "de 6,79 à 6,99 (régulier)",
+      "rabais": "46%",
+      "mots_cles": [
+        "tablettes"
+      ],
+      "categorie": "epicerie",
+      "sku": "12025103",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12025103.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tablettes de chocolat Lindt — 100 g, choix varié",
+      "prix": 7.5,
+      "prix_texte": "7.50$",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "de 6,79 à 6,99 (régulier)",
+      "rabais": "46%",
+      "mots_cles": [
+        "tablettes"
+      ],
+      "categorie": "epicerie",
+      "sku": "12025101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/12025101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tablettes de chocolat Excellence Lindt — 50-100 g, choix varié",
+      "prix": 5.49,
+      "prix_texte": "5.49$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "35%",
+      "mots_cles": [
+        "tablettes"
+      ],
+      "categorie": "epicerie",
+      "sku": "26759309",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26759309.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "tablettes de chocolat Excellence Lindt — 50-100 g, choix varié",
+      "prix": 5.49,
+      "prix_texte": "5.49$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "35%",
+      "mots_cles": [
+        "tablettes"
+      ],
+      "categorie": "epicerie",
+      "sku": "26759302",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26759302ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "barre de chocolat Lindt façon Dubaï — 40 g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99 (régulier)",
+      "rabais": "29%",
+      "mots_cles": [
+        "barre"
+      ],
+      "categorie": "epicerie",
+      "sku": "44415901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/44415901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "chocolats Lindor & Swiss Classic Lindt — 150-300 g, choix varié",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 14.29,
+      "prix_regulier_texte": "de 14,29 à 14,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "chocolats"
+      ],
+      "categorie": "epicerie",
+      "sku": "14584804",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/14584804.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "chocolats Lindor & Swiss Classic Lindt — 150-300 g, choix varié",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": 14.29,
+      "prix_regulier_texte": "de 14,29 à 14,99 (régulier)",
+      "rabais": "33%",
+      "mots_cles": [
+        "chocolats"
+      ],
+      "categorie": "epicerie",
+      "sku": "33509301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/33509301.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "croustilles Selection — 200 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "croustilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "26492508",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26492508Sel.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "croustilles Selection — 200 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "croustilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "39834201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39834201.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "croustilles Selection — 200 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "croustilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "26492504",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/26492504Sel.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "eau pétillante Bubly — 12 x 355 ml, choix varié",
+      "prix": 15,
+      "prix_texte": "15.00$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "eau"
+      ],
+      "categorie": "epicerie",
+      "sku": "32684201",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/32684201.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "eau pétillante Bubly — 12 x 355 ml, choix varié",
+      "prix": 15,
+      "prix_texte": "15.00$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "eau"
+      ],
+      "categorie": "epicerie",
+      "sku": "32684203",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/32684203.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "eau pétillante Montellier — 10 x 355 ml, choix varié",
+      "prix": 15,
+      "prix_texte": "15.00$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "eau"
+      ],
+      "categorie": "epicerie",
+      "sku": "32730302",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/32730302.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "eau pétillante Montellier — 10 x 355 ml, choix varié",
+      "prix": 15,
+      "prix_texte": "15.00$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "eau"
+      ],
+      "categorie": "epicerie",
+      "sku": "32730301",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/32730301.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pizza Irrésistible — 340-390 g",
+      "prix": 10,
+      "prix_texte": "10.00$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pizza"
+      ],
+      "categorie": "epicerie",
+      "sku": "25092704",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/25092704Irrs.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pizza Irrésistible — 340-390 g",
+      "prix": 10,
+      "prix_texte": "10.00$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pizza"
+      ],
+      "categorie": "epicerie",
+      "sku": "25092707",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/25092707Irrs.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lentilles Cedar — 907 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "3,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "lentilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "23852401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23852401.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "lentilles Cedar — 907 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "3,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "lentilles"
+      ],
+      "categorie": "epicerie",
+      "sku": "23852601",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/23852601.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "riz Cedar — 907 g, choix varié",
+      "prix": 6,
+      "prix_texte": "6.00$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "3,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "20792701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/20792701.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "riz Cedar — 907 g, choix varié",
+      "prix": 6,
+      "prix_texte": "6.00$",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "3,49 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "22447901",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22447901.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "barres de chocolat suisse Irrésistible — 100 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "barres"
+      ],
+      "categorie": "epicerie",
+      "sku": "39526103",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39526103ONT.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "barres de chocolat suisse Irrésistible — 100 g, choix varié",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "barres"
+      ],
+      "categorie": "epicerie",
+      "sku": "39526104",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39526104.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pâtes alimentaires L’epi D’or — 250-500 g, choix varié",
+      "prix": 3,
+      "prix_texte": "3.00$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pâtes"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "42306706",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42306706.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pâtes alimentaires L’epi D’or — 250-500 g, choix varié",
+      "prix": 3,
+      "prix_texte": "3.00$",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pâtes"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "42827702",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/42827702.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fruits surgelés Irrésistible — 400-600 g, choix varié",
+      "prix": 10,
+      "prix_texte": "10.00$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "fruits"
+      ],
+      "categorie": "epicerie",
+      "sku": "22204505",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/22204505Irrs.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "fruits surgelés Irrésistible — 400-600 g, choix varié",
+      "prix": 10,
+      "prix_texte": "10.00$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "fruits"
+      ],
+      "categorie": "epicerie",
+      "sku": "29021401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/29021401Irrs.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légumes surgelés Cedar — 750 g, choix varié",
+      "prix": 6,
+      "prix_texte": "6.00$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "légumes"
+      ],
+      "categorie": "legumes",
+      "sku": "40116101",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40116101.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "légumes surgelés Cedar — 750 g, choix varié",
+      "prix": 6,
+      "prix_texte": "6.00$",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "légumes"
+      ],
+      "categorie": "legumes",
+      "sku": "40115701",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40115701.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "poulet BBQ — bbq chicken",
+      "prix": 25,
+      "prix_texte": "25.00$",
+      "prix_regulier": 13.99,
+      "prix_regulier_texte": "13.99 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande",
+      "sku": "15401214",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/000000221919_2.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "hummus classique ou sauce à l'ail Adonis — 400-425 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 6.49,
+      "prix_regulier_texte": "6,49 (régulier)",
+      "rabais": "8% de rabais",
+      "mots_cles": [
+        "hummus"
+      ],
+      "categorie": "legumes",
+      "sku": "40717001",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40717001.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "hummus classique ou sauce à l'ail Adonis — 400-425 g",
+      "prix": 5.99,
+      "prix_texte": "5.99$",
+      "prix_regulier": 6.49,
+      "prix_regulier_texte": "6,49 (régulier)",
+      "rabais": "8% de rabais",
+      "mots_cles": [
+        "hummus"
+      ],
+      "categorie": "legumes",
+      "sku": "40719501",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/40719501.eps.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pain pita blanc ou blé Adonis — 600 g",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.79,
+      "prix_regulier_texte": "2,79 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "43855002",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/43855002.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pita grillé Adonis — 225 g, choix varié",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.29,
+      "prix_regulier_texte": "3,29 (régulier)",
+      "rabais": "9% de rabais",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "39113405",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39113405.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "pita grillé Adonis — 225 g, choix varié",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 3.29,
+      "prix_regulier_texte": "3,29 (régulier)",
+      "rabais": "9% de rabais",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche",
+      "sku": "39113401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39113401_2.psd.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    },
+    {
+      "nom": "baguette blanche ou blé Adonis — 280 g",
+      "prix": 5,
+      "prix_texte": "5.00$",
+      "prix_regulier": 2.29,
+      "prix_regulier_texte": "2,29 (régulier)",
+      "rabais": "",
+      "mots_cles": [
+        "baguette"
+      ],
+      "categorie": "epicerie",
+      "sku": "39278401",
+      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82882/productImages/39278401_39278501_groupshot.png.png?version=85701c21",
+      "valide_de": "2026-03-26",
+      "valide_au": "2026-04-01",
+      "magasin": "Adonis"
+    }
+  ]
+}

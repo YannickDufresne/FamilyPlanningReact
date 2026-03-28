@@ -102,6 +102,34 @@ function AubaineBadge({ deal }) {
   );
 }
 
+// ── Section aubaines d'un magasin (sans routing d'ingrédients) ───────────────
+function SectionAubainesStore({ label, emoji, deals, couleur }) {
+  if (!deals || deals.length === 0) return null;
+  // Filtrer les deals avec un prix réel seulement
+  const avecPrix = deals.filter(d => d.prix || d.prix_texte);
+  if (avecPrix.length === 0) return null;
+
+  return (
+    <div className="epicerie-magasin epicerie-magasin--aubaines-only" style={{ '--magasin-couleur': couleur }}>
+      <div className="epicerie-magasin__header">
+        <span className="epicerie-magasin__emoji">{emoji}</span>
+        <span className="epicerie-magasin__nom">{label}</span>
+        <span className="epicerie-magasin__count">{avecPrix.length} soldes</span>
+      </div>
+      <div className="epicerie-soldes">
+        <div className="epicerie-soldes__titre">🏷️ Meilleures aubaines cette semaine</div>
+        {avecPrix.slice(0, 8).map((deal, i) => (
+          <div key={i} className="epicerie-solde-item">
+            <span className="epicerie-solde-nom">{deal.nom}</span>
+            {deal.prix_texte && <span className="epicerie-solde-prix">{deal.prix_texte}</span>}
+            {deal.rabais && <span className="epicerie-solde-rabais">{deal.rabais}</span>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── Section par magasin ───────────────────────────────────────────────────────
 function SectionMagasin({ label, emoji, ingredients, deals, couleur }) {
   const [cochees, setCochees] = useState(new Set());
@@ -237,7 +265,7 @@ export default function GroceryList({ planning }) {
     construireListe(parMagasin.lufa, planning),
   [parMagasin.lufa, planning]);
 
-  const allDeals = [...(aubaines.maxi || []), ...(aubaines.costco || [])];
+  const allDeals = [...(aubaines.maxi || []), ...(aubaines.metro || []), ...(aubaines.adonis || []), ...(aubaines.costco || [])];
   const nbSoldesActifs = ingredients.filter(ing => trouverAubaine(ing, allDeals)).length;
 
   return (
@@ -261,7 +289,7 @@ export default function GroceryList({ planning }) {
         ) : (
           <div className="epicerie-note-aubaines">
             <span>📅</span>
-            <span>Les soldes Maxi et Costco s'afficheront automatiquement chaque vendredi soir.</span>
+            <span>Les soldes Maxi, Metro, Adonis et Costco s'afficheront automatiquement chaque vendredi soir.</span>
           </div>
         )}
 
@@ -296,6 +324,18 @@ export default function GroceryList({ planning }) {
               couleur="#888"
             />
           )}
+          <SectionAubainesStore
+            label="Metro — Aubaines de la semaine"
+            emoji="🏪"
+            deals={aubaines.metro || []}
+            couleur="#e8000d"
+          />
+          <SectionAubainesStore
+            label="Adonis — Aubaines de la semaine"
+            emoji="🫒"
+            deals={aubaines.adonis || []}
+            couleur="#2d6a2d"
+          />
         </div>
       </div>
     </section>

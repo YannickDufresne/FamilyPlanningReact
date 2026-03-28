@@ -1,6 +1,8 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import recettesBase from '../data/recettes.json';
 import { syncWrite } from '../utils/sync';
+import { db } from '../utils/firebase';
+import { collection, addDoc, onSnapshot, query } from 'firebase/firestore';
 
 // ── Métadonnées ──────────────────────────────────────────────────────────────
 const THEMES = {
@@ -982,6 +984,28 @@ export default function RecettesPage({ onRetour }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [custom]);
 
+  // Subscribe to sub-collection for watercolor updates from Firebase Function
+  useEffect(() => {
+    const recettesRef = collection(db, 'familles', 'famille-principale', 'recettes');
+    const q = query(recettesRef);
+    const unsub = onSnapshot(q, (snapshot) => {
+      snapshot.docChanges().forEach(change => {
+        if (change.type === 'modified') {
+          const data = change.doc.data();
+          if (data.image_aquarelle && data.nom) {
+            // Find the matching custom recipe by name and update with watercolor URL from Firebase Function
+            const stored = loadStorage();
+            const recette = stored.ajoutees.find(r => r.nom === data.nom && !r.image_aquarelle);
+            if (recette && recette._id) {
+              modifier(recette._id, { image_aquarelle: data.image_aquarelle });
+            }
+          }
+        }
+      });
+    });
+    return () => unsub();
+  }, [modifier]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const origines = useMemo(() =>
     ['Tous', ...[...new Set(toutesRecettes.map(r => r.origine).filter(Boolean))].sort()],
   [toutesRecettes]);
@@ -1024,6 +1048,13 @@ export default function RecettesPage({ onRetour }) {
     if (isEdit) modifier(recetteId, form);
     else        ajouter(form, recetteId);
     setDrawerOpen(false);
+
+    // When adding a new recipe, write to sub-collection to trigger Firebase Function for watercolor generation
+    if (!isEdit && form.nom) {
+      const recettesRef = collection(db, 'familles', 'famille-principale', 'recettes');
+      addDoc(recettesRef, { ...form, creeLe: new Date().toISOString() })
+        .catch(e => console.warn('Sub-collection write error:', e));
+    }
 
     // Génère + committe l'aquarelle en arrière-plan si absente
     if (!form.image_aquarelle && togetherKey && form.nom) {
