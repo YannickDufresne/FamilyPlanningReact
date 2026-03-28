@@ -7116,5 +7116,32 @@
     "eval_joseph": "",
     "eval_mika": "",
     "eval_luce": ""
+  },
+  {
+    "nom": "Pâtes au poulet à la cajun crémeuses",
+    "nom_original": "Creamy Cajun-Style Chicken Pasta",
+    "url": "https://cooking.nytimes.com/recipes/1025533-creamy-cajun-style-chicken-pasta",
+    "image_url": "https://static01.nyt.com/images/2024/08/14/multimedia/MK-Cajun-Chicken-Pastarex-mzkj/MK-Cajun-Chicken-Pastarex-mzkj-threeByTwoMediumAt2X-v2.jpg",
+    "image_aquarelle": "",
+    "origine": "États-Unis",
+    "regime_alimentaire": "omnivore",
+    "temps_preparation": 50,
+    "cout": 3,
+    "ingredients": "Poulet, fettuccine, épices cajun, poivrons, crème fraîche, Parmesan, citron, sauce hot sauce",
+    "livre": "",
+    "notes": "",
+    "source": "nyt_cooking",
+    "theme_pasta_rapido": 1,
+    "theme_bol_nwich": 0,
+    "theme_criiions_poisson": 0,
+    "theme_plat_en_sauce": 1,
+    "theme_confort_grille": 0,
+    "theme_pizza": 0,
+    "theme_slow_chic": 0,
+    "eval_patricia": "",
+    "eval_yannick": "",
+    "eval_joseph": "",
+    "eval_mika": "",
+    "eval_luce": ""
   }
 ]
