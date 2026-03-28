@@ -117,6 +117,16 @@ export default function App() {
             localStorage.removeItem('fp_photo_famille');
           }
         }
+        if (data.togetherKey) {
+          localStorage.setItem('together_key', data.togetherKey);
+        }
+        if (data.githubToken) {
+          localStorage.setItem('github_token', data.githubToken);
+        }
+        if (data.recettesCustom !== undefined) {
+          // Merge: Firestore is the source of truth for custom recipes
+          localStorage.setItem('recettes_custom_v1', JSON.stringify(data.recettesCustom));
+        }
         // Load per-week data for all semaines in cloud
         if (data.semaines) {
           Object.entries(data.semaines).forEach(([semaine, val]) => {
@@ -151,6 +161,15 @@ export default function App() {
         } else if (!photoVal) {
           localStorage.removeItem('fp_photo_famille');
         }
+      }
+      if (data.togetherKey) {
+        localStorage.setItem('together_key', data.togetherKey);
+      }
+      if (data.githubToken) {
+        localStorage.setItem('github_token', data.githubToken);
+      }
+      if (data.recettesCustom !== undefined) {
+        localStorage.setItem('recettes_custom_v1', JSON.stringify(data.recettesCustom));
       }
       if (data.semaines) {
         Object.entries(data.semaines).forEach(([semaine, val]) => {

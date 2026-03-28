@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import recettesBase from '../data/recettes.json';
+import { syncWrite } from '../utils/sync';
 
 // ── Métadonnées ──────────────────────────────────────────────────────────────
 const THEMES = {
@@ -357,8 +358,12 @@ function useTogetherKey() {
   const [key, setKey] = useState(() => localStorage.getItem(TOGETHER_KEY_STORE) || '');
   const save = useCallback(k => {
     setKey(k);
-    if (k) localStorage.setItem(TOGETHER_KEY_STORE, k);
-    else localStorage.removeItem(TOGETHER_KEY_STORE);
+    if (k) {
+      localStorage.setItem(TOGETHER_KEY_STORE, k);
+      syncWrite({ togetherKey: k });
+    } else {
+      localStorage.removeItem(TOGETHER_KEY_STORE);
+    }
   }, []);
   return [key, save];
 }
@@ -382,8 +387,12 @@ function useGitHubSync() {
 
   const sauverToken = useCallback(t => {
     setTokenState(t);
-    if (t) localStorage.setItem(GITHUB_TOKEN_STORE, t);
-    else   localStorage.removeItem(GITHUB_TOKEN_STORE);
+    if (t) {
+      localStorage.setItem(GITHUB_TOKEN_STORE, t);
+      syncWrite({ githubToken: t });
+    } else {
+      localStorage.removeItem(GITHUB_TOKEN_STORE);
+    }
   }, []);
 
   const sync = useCallback(async (recettes) => {
@@ -411,6 +420,7 @@ function useRecettesCustom() {
     setCustom(prev => {
       const next = typeof fn === 'function' ? fn(prev) : fn;
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+      syncWrite({ recettesCustom: next });
       return next;
     });
   }, []);
