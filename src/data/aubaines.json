@@ -1,227 +1,42 @@
 {
   "semaine": "2026-03-30",
-  "genereeLe": "2026-03-28T04:52:56.070Z",
+  "genereeLe": "2026-03-28T05:26:45.661Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
-      "nom": "Pogo Saucisses sur bâtonnet original",
-      "prix": 15,
-      "prix_texte": "15.00$ (1.5 kg)",
-      "prix_regulier": 20,
-      "prix_regulier_texte": "20.00$",
-      "rabais": "5.00$ DE RABAIS",
-      "mots_cles": [
-        "pogo",
-        "saucisses",
-        "collation"
-      ],
-      "categorie": "surgeles"
-    },
-    {
-      "nom": "Van Houtte Café moulu Mélange de la maison-noir, torréfaction Foncée",
-      "prix": 20,
-      "prix_texte": "20.00$ (875 g)",
-      "prix_regulier": 33,
-      "prix_regulier_texte": "33.00$",
-      "rabais": "13.00$ DE RABAIS",
-      "mots_cles": [
-        "café",
-        "van houtte"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Mikes Pizza double pepperoni",
-      "prix": 5.99,
-      "prix_texte": "5.99$ (820 g)",
-      "prix_regulier": 11.49,
-      "prix_regulier_texte": "11.49$",
-      "rabais": "5.50$ DE RABAIS",
-      "mots_cles": [
-        "pizza",
-        "pepperoni"
-      ],
-      "categorie": "surgeles"
-    },
-    {
-      "nom": "Mikes Pizza au pepperoni",
-      "prix": 5.99,
-      "prix_texte": "5.99$ (805 g)",
-      "prix_regulier": 11.49,
-      "prix_regulier_texte": "11.49$",
-      "rabais": "5.50$ DE RABAIS",
-      "mots_cles": [
-        "pizza",
-        "pepperoni"
-      ],
-      "categorie": "surgeles"
-    },
-    {
-      "nom": "Royale Velour papier hygiénique 8=16 rouleaux",
-      "prix": 5,
-      "prix_texte": "5.00$ (8 rouleaux)",
-      "prix_regulier": 11.5,
-      "prix_regulier_texte": "11.50$",
-      "rabais": "6.50$ DE RABAIS",
-      "mots_cles": [
-        "papier",
-        "hygiénique"
-      ],
-      "categorie": "entretien"
-    },
-    {
-      "nom": "Van Houtte Capsules K-Cup Mélange de la maison (30)",
-      "prix": 20,
-      "prix_texte": "20.00$ (30 capsules)",
-      "prix_regulier": 30,
-      "prix_regulier_texte": "30.00$",
-      "rabais": "10.00$ DE RABAIS",
-      "mots_cles": [
-        "café",
-        "k-cup",
-        "capsules"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "QUÉBON Crème champêtre 35%",
-      "prix": 3.55,
-      "prix_texte": "3.55$ (473 ml)",
-      "prix_regulier": 5.5,
-      "prix_regulier_texte": "5.50$",
-      "rabais": "1.95$ DE RABAIS",
-      "mots_cles": [
-        "crème",
-        "35%"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Porc haché maigre",
-      "prix": 3.5,
-      "prix_texte": "3.50$ (450 g)",
-      "prix_regulier": 4.29,
-      "prix_regulier_texte": "4.29$",
-      "rabais": "0.79$ DE RABAIS",
-      "mots_cles": [
-        "porc",
-        "haché"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Lindt Lapin de Pâques chocolat noir",
-      "prix": 7,
-      "prix_texte": "7.00$ (100 g)",
-      "prix_regulier": 10.5,
-      "prix_regulier_texte": "10.50$",
-      "rabais": "3.50$ DE RABAIS",
-      "mots_cles": [
-        "chocolat",
-        "pâques",
-        "lindt"
-      ],
-      "categorie": "confiserie"
-    },
-    {
-      "nom": "La Belle Bretagne Pâté de campagne glacé",
-      "prix": 2,
-      "prix_texte": "2.00$ (150 g)",
-      "prix_regulier": 4,
-      "prix_regulier_texte": "4.00$",
-      "rabais": "2.00$ DE RABAIS",
-      "mots_cles": [
-        "pâté",
-        "charcuterie"
-      ],
-      "categorie": "charcuterie"
-    },
-    {
-      "nom": "Sans Nom Bacon 50% moins de sel",
-      "prix": 6.5,
-      "prix_texte": "6.50$ (500 g)",
+      "nom": "Bœuf haché maigre nourri à l'herbe",
+      "prix": 5.95,
+      "prix_texte": "5.95$ (450g)",
       "prix_regulier": 8,
       "prix_regulier_texte": "8.00$",
-      "rabais": "1.50$ DE RABAIS",
+      "rabais": "2.05$ DE RABAIS",
       "mots_cles": [
-        "bacon"
+        "boeuf",
+        "haché",
+        "viande"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Royal Quart de jambon style toupie",
-      "prix": 7.99,
-      "prix_texte": "7.99$ (700 g)",
-      "prix_regulier": 9,
-      "prix_regulier_texte": "9.00$",
-      "rabais": "1.01$ DE RABAIS",
-      "mots_cles": [
-        "jambon",
-        "pâques"
-      ],
-      "categorie": "viande"
-    }
-  ],
-  "metro": [
-    {
-      "nom": "Jambon fumé désossé",
-      "prix": 4.99,
-      "prix_texte": "4.99$/lb",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "7.99$/lb",
-      "rabais": "38% de rabais",
-      "mots_cles": [
-        "jambon",
-        "pâques"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Oeufs gros calibre (12)",
-      "prix": 4.49,
-      "prix_texte": "4.49$",
-      "prix_regulier": 5.99,
-      "prix_regulier_texte": "5.99$",
-      "rabais": "25% de rabais",
-      "mots_cles": [
-        "oeufs",
-        "pâques"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Asperges fraîches",
-      "prix": 2.99,
-      "prix_texte": "2.99$/lb",
+      "nom": "Délices du Marché Pommes de terre Russet, sac de 10 lb",
+      "prix": 1.99,
+      "prix_texte": "1.99$ (4.54kg)",
       "prix_regulier": 4.99,
-      "prix_regulier_texte": "4.99$/lb",
-      "rabais": "40% de rabais",
+      "prix_regulier_texte": "4.99$",
+      "rabais": "3.00$ DE RABAIS",
       "mots_cles": [
-        "asperges",
-        "légumes"
+        "patates",
+        "pommes de terre"
       ],
       "categorie": "legumes"
     },
     {
-      "nom": "Fraises du Québec (1 lb)",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 5.99,
-      "prix_regulier_texte": "5.99$",
-      "rabais": "33% de rabais",
-      "mots_cles": [
-        "fraises",
-        "fruits"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Filet de saumon atlantique",
-      "prix": 9.99,
-      "prix_texte": "9.99$/lb",
-      "prix_regulier": 13.99,
-      "prix_regulier_texte": "13.99$/lb",
-      "rabais": "29% de rabais",
+      "nom": "Filet de saumon",
+      "prix": 13.46,
+      "prix_texte": "~13.46$ (8.99$/lb)",
+      "prix_regulier": 22.45,
+      "prix_regulier_texte": "17.98$/lb",
+      "rabais": "8.99$ DE RABAIS",
       "mots_cles": [
         "saumon",
         "poisson"
@@ -229,114 +44,64 @@
       "categorie": "poisson"
     },
     {
-      "nom": "Beurre salé Lactantia (454 g)",
-      "prix": 5.49,
-      "prix_texte": "5.49$",
-      "prix_regulier": 7.29,
-      "prix_regulier_texte": "7.29$",
-      "rabais": "25% de rabais",
+      "nom": "Flamingo Ailes de poulet BBQ",
+      "prix": 8.99,
+      "prix_texte": "8.99$ (550g)",
+      "prix_regulier": 16.99,
+      "prix_regulier_texte": "16.99$",
+      "rabais": "8.00$ DE RABAIS",
       "mots_cles": [
-        "beurre"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Poulet entier frais",
-      "prix": 7.99,
-      "prix_texte": "7.99$/kg",
-      "prix_regulier": 10.99,
-      "prix_regulier_texte": "10.99$/kg",
-      "rabais": "27% de rabais",
-      "mots_cles": [
-        "poulet"
+        "poulet",
+        "ailes"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Chocolat Cadbury mini-oeufs (154 g)",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 5.99,
-      "prix_regulier_texte": "5.99$",
-      "rabais": "33% de rabais",
+      "nom": "Lafleur Saucisses porc et bœuf",
+      "prix": 6.99,
+      "prix_texte": "6.99$ (1kg)",
+      "prix_regulier": 12,
+      "prix_regulier_texte": "12.00$",
+      "rabais": "5.01$ DE RABAIS",
       "mots_cles": [
-        "chocolat",
-        "pâques"
-      ],
-      "categorie": "confiserie"
-    }
-  ],
-  "adonis": [],
-  "costco": [
-    {
-      "nom": "Jambon fumé tranché (1.5 kg)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "jambon",
-        "pâques"
+        "saucisses",
+        "porc"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Poulet entier Kirkland (2 kg)",
-      "prix": 18.99,
-      "prix_texte": "18.99$",
+      "nom": "Couronne de brocoli",
+      "prix": 1.5,
+      "prix_texte": "1.50$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "poulet"
+        "brocoli",
+        "légume"
       ],
-      "categorie": "viande"
+      "categorie": "legumes"
     },
     {
-      "nom": "Beurre salé Kirkland (4 x 454 g)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "nom": "Oasis Jus d'orange sans pulpe",
+      "prix": 3.5,
+      "prix_texte": "3.50$ (1.5L)",
+      "prix_regulier": 5.79,
+      "prix_regulier_texte": "5.79$",
+      "rabais": "2.29$ DE RABAIS",
       "mots_cles": [
-        "beurre"
+        "jus",
+        "orange"
       ],
-      "categorie": "produits_laitiers"
+      "categorie": "boissons"
     },
     {
-      "nom": "Yogourt grec Kirkland nature (3 x 650 g)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "yogourt",
-        "grec"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Lait 2% Kirkland (4 L)",
-      "prix": 7.49,
-      "prix_texte": "7.49$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "lait"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage cheddar mi-fort (1 kg)",
-      "prix": 17.99,
-      "prix_texte": "17.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "nom": "P'tit Québec Fromage cheddar fort",
+      "prix": 4.97,
+      "prix_texte": "4.97$ (400g)",
+      "prix_regulier": 7,
+      "prix_regulier_texte": "7.00$",
+      "rabais": "Limite de 6",
       "mots_cles": [
         "fromage",
         "cheddar"
@@ -344,19 +109,229 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Dinde entière Butterball (6-7 kg)",
-      "prix": 54.99,
-      "prix_texte": "54.99$",
+      "nom": "Gigot d'agneau congelé",
+      "prix": 29.41,
+      "prix_texte": "~29.41$ (5.99$/lb)",
+      "prix_regulier": 39.22,
+      "prix_regulier_texte": "~10$/lb",
+      "rabais": "9.81$ DE RABAIS",
+      "mots_cles": [
+        "agneau",
+        "pâques"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Lindt Lapin de Pâques chocolat au lait",
+      "prix": 7,
+      "prix_texte": "7.00$ (100g)",
+      "prix_regulier": 10.5,
+      "prix_regulier_texte": "10.50$",
+      "rabais": "3.50$ DE RABAIS",
+      "mots_cles": [
+        "chocolat",
+        "pâques"
+      ],
+      "categorie": "confiseries"
+    }
+  ],
+  "metro": [
+    {
+      "nom": "Poitrines de poulet désossées",
+      "prix": 8.99,
+      "prix_texte": "8.99$/kg",
+      "prix_regulier": 13.21,
+      "prix_regulier_texte": "13.21$/kg",
+      "rabais": "32% de rabais",
+      "mots_cles": [
+        "poulet",
+        "poitrine"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Fraises Québec/Californie (1 lb)",
+      "prix": 2.99,
+      "prix_texte": "2.99$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4.99$",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "fraises",
+        "fruits"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Œufs gros calibre (12)",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4.99$",
+      "rabais": "30% de rabais",
+      "mots_cles": [
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Beurre Lactantia (454g)",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6.99$",
+      "rabais": "2.00$ de rabais",
+      "mots_cles": [
+        "beurre"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Côtelettes de porc avec os",
+      "prix": 6.59,
+      "prix_texte": "6.59$/kg",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "10.99$/kg",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "porc",
+        "côtelettes"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Carottes sac 2 lb",
+      "prix": 1.49,
+      "prix_texte": "1.49$",
+      "prix_regulier": 2.49,
+      "prix_regulier_texte": "2.49$",
+      "rabais": "1.00$ de rabais",
+      "mots_cles": [
+        "carottes",
+        "légumes"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Pain St-Méthode 100% blé entier",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 4.79,
+      "prix_regulier_texte": "4.79$",
+      "rabais": "27% de rabais",
+      "mots_cles": [
+        "pain",
+        "blé"
+      ],
+      "categorie": "boulangerie"
+    },
+    {
+      "nom": "Yogourt grec Liberté (750g)",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6.99$",
+      "rabais": "2.00$ de rabais",
+      "mots_cles": [
+        "yogourt",
+        "grec"
+      ],
+      "categorie": "produits_laitiers"
+    }
+  ],
+  "adonis": [],
+  "costco": [
+    {
+      "nom": "Oeufs gros calibre Kirkland (30)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "dinde",
-        "pâques"
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Hauts de cuisse de poulet désossés (2.5 kg)",
+      "prix": 34.99,
+      "prix_texte": "34.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "poulet",
+        "cuisse"
       ],
       "categorie": "viande"
+    },
+    {
+      "nom": "Crevettes crues 21-25 (2 kg)",
+      "prix": 42.99,
+      "prix_texte": "42.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "crevettes",
+        "fruits de mer"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Fromage en grains frais du jour (600g)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "fromage",
+        "grains",
+        "poutine"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Riz basmati Kirkland (8 kg)",
+      "prix": 24.99,
+      "prix_texte": "24.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Côtes levées de porc St-Louis (3.5 kg)",
+      "prix": 44.99,
+      "prix_texte": "44.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "porc",
+        "côtes levées",
+        "bbq"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Farine tout usage Kirkland (10 kg)",
+      "prix": 14.99,
+      "prix_texte": "14.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "farine"
+      ],
+      "categorie": "epicerie"
     }
   ],
-  "analyse": "Semaine de Pâques exceptionnelle! Le café Van Houtte moulu à 20$ (rabais de 13$) et les capsules K-Cup (rabais de 10$) sont les meilleures aubaines du mois. Pour le brunch pascal, profitez du jambon toupie Royal à 7.99$ chez Maxi et des asperges à 2.99$/lb chez Metro. Le papier hygiénique Royale à 5$ (rabais de 6.50$) vaut le détour. Pour les gâteries, le lapin Lindt à 7$ représente un bon rabais de 33%.",
+  "analyse": "Semaine exceptionnelle pour Pâques! Le gigot d'agneau à 5.99$/lb chez Maxi (-9.81$) est parfait pour le repas pascal. Les patates Russet à 1.99$/10lb sont un vol (-3$). Les ailes Flamingo à 8.99$ (-8$) sont idéales pour les lunchs. À Costco, les œufs (30 pour 12.99$) et le fromage en grains frais sont des essentiels québécois imbattables.",
   "economies_estimees": "~45$"
 }
