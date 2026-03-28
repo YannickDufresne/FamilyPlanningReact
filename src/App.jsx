@@ -42,9 +42,10 @@ function seedForWeek(lundiStr) {
   for (const c of lundiStr) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
   return (h % 2147483646) + 1;
 }
-function locksKey(semaine)     { return `planning_locks_${semaine}`; }
-function semaineLockKey(semaine) { return `semaine_lockee_${semaine}`; }
-function forceesKey(semaine)   { return `fp_forcees_${semaine}`; }
+function locksKey(semaine)        { return `planning_locks_${semaine}`; }
+function semaineLockKey(semaine)  { return `semaine_lockee_${semaine}`; }
+function forceesKey(semaine)      { return `fp_forcees_${semaine}`; }
+function semaineTimestampKey(s)   { return `fp_ts_${s}`; }
 
 const DEFAULT_FILTRES = {
   nbVegetarien: 2,
@@ -128,13 +129,20 @@ export default function App() {
           localStorage.setItem('recettes_custom_v1', JSON.stringify(data.recettesCustom));
         }
         // Load per-week data for all semaines in cloud
+        // Guard: ne pas écraser localStorage si les données locales sont plus récentes
         if (data.semaines) {
           Object.entries(data.semaines).forEach(([semaine, val]) => {
-            if (val.locks) localStorage.setItem(`planning_locks_${semaine}`, JSON.stringify(val.locks));
-            if (val.semaineLockee !== undefined) localStorage.setItem(`semaine_lockee_${semaine}`, val.semaineLockee ? 'true' : 'false');
-            if (val.forcees) localStorage.setItem(`fp_forcees_${semaine}`, JSON.stringify(val.forcees));
+            const localTs = parseInt(localStorage.getItem(semaineTimestampKey(semaine)) || '0');
+            const cloudTs = val.updatedAt || 0;
+            if (cloudTs >= localTs) {
+              // Cloud aussi récent ou plus récent → on l'utilise
+              if (val.locks !== undefined) localStorage.setItem(`planning_locks_${semaine}`, JSON.stringify(val.locks));
+              if (val.semaineLockee !== undefined) localStorage.setItem(`semaine_lockee_${semaine}`, val.semaineLockee ? 'true' : 'false');
+              if (val.forcees !== undefined) localStorage.setItem(`fp_forcees_${semaine}`, JSON.stringify(val.forcees));
+            }
+            // else: local plus récent → on garde localStorage intact
           });
-          // Reload current week state from updated localStorage
+          // Recharger l'état de la semaine courante depuis localStorage (potentiellement mis à jour)
           const sv = semaineVue; // capture current value
           try { setJoursVerrouilles(new Set(JSON.parse(localStorage.getItem(`planning_locks_${sv}`) || '[]'))); } catch {}
           setSemaineLockee(localStorage.getItem(`semaine_lockee_${sv}`) === 'true');
@@ -204,6 +212,25 @@ export default function App() {
   const estSemaineAVenir   = semaineVue > meta.semaine.debut;
   const estSemaineEditable = estSemaineActuelle || estSemaineAVenir;
 
+  // ── Jours passés auto-verrouillés (avant aujourd'hui) ────────────────────
+  const joursAutoVerrouilles = useMemo(() => {
+    if (!estSemaineActuelle) return new Set();
+    const auj = new Date(); auj.setHours(0, 0, 0, 0);
+    const lundi = new Date(meta.semaine.debut + 'T12:00:00');
+    const auto = new Set();
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(lundi); d.setDate(lundi.getDate() + i);
+      if (d < auj) auto.add(i);
+    }
+    return auto;
+  }, [estSemaineActuelle]);
+
+  // Fusion verrous utilisateur + verrous automatiques des jours passés
+  const tousJoursVerrouilles = useMemo(
+    () => new Set([...joursVerrouilles, ...joursAutoVerrouilles]),
+    [joursVerrouilles, joursAutoVerrouilles]
+  );
+
   // ── Planning semaine actuelle (avec seed rebrassable) ─────────────────────
   const planningRef = useRef(null);
   const planning = useMemo(() => {
@@ -211,13 +238,13 @@ export default function App() {
       recettes, exercices, activites, musique, filtres, seed,
       semaineDebut: meta.semaine.debut,
       profils,
-      joursVerrouilles: estSemaineActuelle ? joursVerrouilles : new Set(),
+      joursVerrouilles: estSemaineActuelle ? tousJoursVerrouilles : new Set(),
       planningActuel: planningRef.current,
       recettesForcees: estSemaineActuelle ? recettesForcees : new Map(),
     });
     planningRef.current = result;
     return result;
-  }, [filtres, seed, profils, joursVerrouilles, estSemaineActuelle, recettesForcees]);
+  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees]);
 
   // ── Planning semaines à venir (déterministe par date) ─────────────────────
   const planningFutur = useMemo(() => {
@@ -251,6 +278,25 @@ export default function App() {
     catch { return {}; }
   }, []);
 
+  // ── Auto-sauvegarde des recettes des jours passés ─────────────────────────
+  // Assure que les jours passés ont une recette forcée sauvegardée (stable sur rechargement)
+  useEffect(() => {
+    if (!estSemaineActuelle || joursAutoVerrouilles.size === 0 || !planning?.length) return;
+    let updated = false;
+    const newForcees = new Map(recettesForcees);
+    joursAutoVerrouilles.forEach(i => {
+      if (!newForcees.has(i)) {
+        const nom = planning[i]?.recette?.nom;
+        if (nom && !nom.startsWith('⚠️')) { newForcees.set(i, nom); updated = true; }
+      }
+    });
+    if (updated) {
+      setRecettesForcees(newForcees);
+      localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...newForcees]));
+      syncSemaine(semaineVue, { forcees: [...newForcees] });
+    }
+  }, [joursAutoVerrouilles, planning]); // eslint-disable-line
+
   // ── Planning affiché selon la semaine sélectionnée ────────────────────────
   const planningVue = estSemaineActuelle
     ? planning
@@ -269,7 +315,10 @@ export default function App() {
 
   // ── Sync helper ───────────────────────────────────────────────────────────
   function syncSemaine(semaine, updates) {
-    const firestoreUpdates = {};
+    // Horodater la modification locale pour que syncRead sache quelle source est la plus récente
+    const ts = Date.now();
+    localStorage.setItem(semaineTimestampKey(semaine), ts.toString());
+    const firestoreUpdates = { [`semaines.${semaine}.updatedAt`]: ts };
     Object.entries(updates).forEach(([k, v]) => {
       firestoreUpdates[`semaines.${semaine}.${k}`] = v;
     });
@@ -278,7 +327,7 @@ export default function App() {
 
   // ── Handlers ──────────────────────────────────────────────────────────────
   function toggleLockJour(i) {
-    if (semaineLockee || !estSemaineEditable) return;
+    if (semaineLockee || !estSemaineEditable || joursAutoVerrouilles.has(i)) return;
     setJoursVerrouilles(prev => {
       const next = new Set(prev);
       if (next.has(i)) {
@@ -447,7 +496,8 @@ export default function App() {
             <WeeklyPlanning
               planning={planningVue}
               profils={profils}
-              joursVerrouilles={estSemaineEditable ? joursVerrouilles : new Set()}
+              joursVerrouilles={estSemaineEditable ? tousJoursVerrouilles : new Set()}
+              joursAutoVerrouilles={estSemaineActuelle ? joursAutoVerrouilles : new Set()}
               onToggleLockJour={estSemaineEditable ? toggleLockJour : null}
               lectureSeule={!estSemaineEditable || semaineLockee}
               recettes={recettes}

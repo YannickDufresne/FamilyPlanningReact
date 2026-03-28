@@ -159,7 +159,7 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
@@ -179,8 +179,8 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const regimeLabel = REGIME_LABEL[recette.regime_alimentaire];
 
   return (
-    <article className={`day-card ${isWarning ? 'day-card--warning' : ''} ${isTraining ? 'day-card--training' : ''} ${estVerrouille ? 'day-card--locked' : ''}`}>
-      {onToggleLock && (
+    <article className={`day-card ${isWarning ? 'day-card--warning' : ''} ${isTraining ? 'day-card--training' : ''} ${estVerrouille ? 'day-card--locked' : ''} ${estAutoVerrouille ? 'day-card--passe' : ''}`}>
+      {onToggleLock ? (
         <button
           className={`day-card__lock ${estVerrouille ? 'day-card__lock--locked' : ''}`}
           onClick={onToggleLock}
@@ -188,7 +188,11 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         >
           {estVerrouille ? '🔒' : '🔓'}
         </button>
-      )}
+      ) : estAutoVerrouille ? (
+        <span className="day-card__lock day-card__lock--locked day-card__lock--auto" title="Jour passé — verrouillé automatiquement">
+          🔒
+        </span>
+      ) : null}
       {onChoisirRecette && !isWarning && !estVerrouille && (
         <button
           className="recette-changer-btn"

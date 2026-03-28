@@ -605,6 +605,9 @@ input[type="range"] {
 .day-card:hover .day-card__lock,
 .day-card__lock--locked { opacity: 1; }
 .day-card--locked { box-shadow: 0 0 0 2px var(--forest) inset; }
+/* Jour passé : verrouillage automatique */
+.day-card--passe { opacity: 0.72; filter: grayscale(20%); }
+.day-card__lock--auto { cursor: default; opacity: 0.5; }
 
 /* ── Verrouiller la semaine ────────────────────────────────────────────────── */
 .btn-locker-semaine {
