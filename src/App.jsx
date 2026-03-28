@@ -208,22 +208,37 @@ export default function App() {
   }
 
   // ── Type de semaine ───────────────────────────────────────────────────────
-  const estSemaineActuelle = semaineVue === meta.semaine.debut;
-  const estSemaineAVenir   = semaineVue > meta.semaine.debut;
-  const estSemaineEditable = estSemaineActuelle || estSemaineAVenir;
+  // Semaine réelle contenant aujourd'hui (basée sur la date du navigateur, pas meta.json)
+  // Cas typique : le script hebdo tourne vendredi soir → meta passe à la semaine suivante
+  // mais samedi/dimanche appartiennent encore à la semaine courante du calendrier.
+  const semaineContenantAujourdhui = useMemo(() => {
+    const auj = new Date();
+    const jour = auj.getDay(); // 0=dim, 1=lun, ...
+    const diff = jour === 0 ? -6 : 1 - jour; // reculer jusqu'au lundi
+    const lundi = new Date(auj);
+    lundi.setDate(auj.getDate() + diff);
+    return lundi.toISOString().split('T')[0];
+  }, []);
+
+  const estSemaineActuelle        = semaineVue === meta.semaine.debut;
+  const estSemaineContenantAujourd = semaineVue === semaineContenantAujourdhui;
+  const estSemaineAVenir          = semaineVue > meta.semaine.debut;
+  // Éditable = semaine qui contient aujourd'hui, semaine meta courante, ou semaines futures
+  const estSemaineEditable        = semaineVue >= semaineContenantAujourdhui;
 
   // ── Jours passés auto-verrouillés (avant aujourd'hui) ────────────────────
   const joursAutoVerrouilles = useMemo(() => {
-    if (!estSemaineActuelle) return new Set();
+    // Appliquer uniquement pour la semaine qui contient aujourd'hui (pas les semaines futures)
+    if (!estSemaineContenantAujourd && !estSemaineActuelle) return new Set();
     const auj = new Date(); auj.setHours(0, 0, 0, 0);
-    const lundi = new Date(meta.semaine.debut + 'T12:00:00');
+    const lundi = new Date(semaineVue + 'T12:00:00');
     const auto = new Set();
     for (let i = 0; i < 7; i++) {
       const d = new Date(lundi); d.setDate(lundi.getDate() + i);
       if (d < auj) auto.add(i);
     }
     return auto;
-  }, [estSemaineActuelle]);
+  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineVue]);
 
   // Fusion verrous utilisateur + verrous automatiques des jours passés
   const tousJoursVerrouilles = useMemo(
@@ -255,10 +270,25 @@ export default function App() {
       seed: seedForWeek(semaineVue),
       semaineDebut: semaineVue,
       profils,
-      joursVerrouilles,
+      joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
     });
-  }, [estSemaineAVenir, semaineVue, profils, joursVerrouilles, recettesForcees]);
+  }, [estSemaineAVenir, semaineVue, profils, tousJoursVerrouilles, recettesForcees]);
+
+  // ── Planning semaine calendrier courante quand meta a avancé (sam/dim) ────
+  // Ex : vendredi soir meta passe à semaine+1, mais sam/dim sont encore modifiables
+  const planningContenantAujourdhui = useMemo(() => {
+    if (!estSemaineContenantAujourd || estSemaineActuelle) return null;
+    return genererPlanning({
+      recettes, exercices, activites, musique,
+      filtres: DEFAULT_FILTRES,
+      seed: seedForWeek(semaineContenantAujourdhui),
+      semaineDebut: semaineContenantAujourdhui,
+      profils,
+      joursVerrouilles: tousJoursVerrouilles,
+      recettesForcees,
+    });
+  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, profils, tousJoursVerrouilles, recettesForcees]);
 
   // ── Historique ───────────────────────────────────────────────────────────────
   // Sauvegarde automatique du planning courant
@@ -281,12 +311,14 @@ export default function App() {
   // ── Auto-sauvegarde des recettes des jours passés ─────────────────────────
   // Assure que les jours passés ont une recette forcée sauvegardée (stable sur rechargement)
   useEffect(() => {
-    if (!estSemaineActuelle || joursAutoVerrouilles.size === 0 || !planning?.length) return;
+    if (joursAutoVerrouilles.size === 0) return;
+    const p = estSemaineActuelle ? planning : planningContenantAujourdhui;
+    if (!p?.length) return;
     let updated = false;
     const newForcees = new Map(recettesForcees);
     joursAutoVerrouilles.forEach(i => {
       if (!newForcees.has(i)) {
-        const nom = planning[i]?.recette?.nom;
+        const nom = p[i]?.recette?.nom;
         if (nom && !nom.startsWith('⚠️')) { newForcees.set(i, nom); updated = true; }
       }
     });
@@ -300,15 +332,18 @@ export default function App() {
   // ── Planning affiché selon la semaine sélectionnée ────────────────────────
   const planningVue = estSemaineActuelle
     ? planning
-    : estSemaineAVenir
-      ? (planningFutur || [])
-      : (historique[semaineVue]?.planning || []);
+    : planningContenantAujourdhui   // sam/dim : meta avancé mais semaine courante éditable
+      ? planningContenantAujourdhui
+      : estSemaineAVenir
+        ? (planningFutur || [])
+        : (historique[semaineVue]?.planning || []);
 
   // ── Navigation ────────────────────────────────────────────────────────────
   const semainePrecedente = lundiISO(semaineVue, -7);
   const semaineSuivante   = lundiISO(semaineVue, +7);
   const limiteAvance      = lundiISO(meta.semaine.debut, SEMAINES_AVANCE * 7);
-  const peutReculer       = !!historique[semainePrecedente];
+  // Peut reculer si l'historique existe OU si c'est la semaine contenant aujourd'hui
+  const peutReculer       = !!historique[semainePrecedente] || semainePrecedente === semaineContenantAujourdhui;
   const peutAvancer       = semaineVue < limiteAvance;
 
   const stats = useMemo(() => calculerStats(planningVue), [planningVue]);
@@ -426,12 +461,12 @@ export default function App() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Badge statut semaine ──────────────────────────────────────────────────
-  const statusClass = estSemaineActuelle
+  const statusClass = (estSemaineActuelle || estSemaineContenantAujourd)
     ? 'semaine-nav__status--active'
     : estSemaineAVenir
       ? 'semaine-nav__status--future'
       : 'semaine-nav__status--readonly';
-  const statusLabel = estSemaineActuelle
+  const statusLabel = (estSemaineActuelle || estSemaineContenantAujourd)
     ? '📅 Semaine en cours'
     : estSemaineAVenir
       ? '🔮 Planification à venir'
