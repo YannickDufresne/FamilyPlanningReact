@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Anthropic from '@anthropic-ai/sdk';
 
 // ── Construit le prompt avec planning actuel + alternatives par thème ─────────
 function buildPrompt(planning, toutesRecettes) {
@@ -78,29 +79,19 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
     }
 
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'x-api-key': apiKey.trim(),
-          'anthropic-version': '2023-06-01',
-          'content-type': 'application/json',
-          'anthropic-dangerous-client-side-api-key-allowed': 'true',
-        },
-        body: JSON.stringify({
-          model: 'claude-haiku-4-5-20251001',
-          max_tokens: 1024,
-          messages: [{ role: 'user', content: prompt }],
-        }),
-        signal: AbortSignal.timeout(30000),
+      const client = new Anthropic({
+        apiKey: apiKey.trim(),
+        dangerouslyAllowBrowser: true,
+        timeout: 30000,
       });
 
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err?.error?.message || `Erreur API ${res.status}`);
-      }
+      const message = await client.messages.create({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 1024,
+        messages: [{ role: 'user', content: prompt }],
+      });
 
-      const data = await res.json();
-      const texte = data.content?.[0]?.text || '';
+      const texte = message.content?.[0]?.text || '';
 
       // Regex greedy pour matcher le tableau JSON complet (pas lazy)
       const jsonMatch = texte.match(/\[[\s\S]*\]/);
@@ -112,10 +103,12 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
       setSuggestions(parsed);
       setEtat('resultat');
     } catch (e) {
-      if (e?.name === 'TimeoutError') {
+      if (e instanceof Anthropic.APITimeoutError) {
         setErreur('La requête a pris trop de temps. Réessaie.');
-      } else if (e instanceof TypeError) {
-        setErreur('Impossible de joindre l\'API. Vérifie ta connexion, ou si tu utilises un bloqueur de publicités (AdGuard, uBlock…) désactive-le temporairement.');
+      } else if (e instanceof Anthropic.APIConnectionError) {
+        setErreur('Impossible de joindre l\'API. Vérifie ta connexion — ou demande à ton IT de débloquer api.anthropic.com (port 443).');
+      } else if (e instanceof Anthropic.AuthenticationError) {
+        setErreur('Clé API invalide ou expirée. Vérifie-la dans la section 🔑.');
       } else {
         setErreur(e.message || 'Erreur inattendue.');
       }
