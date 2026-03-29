@@ -125,9 +125,6 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
-  const coutMin = useMemo(() => Math.min(...recettes.map(r => r.cout)), []);
-  const coutMax = useMemo(() => Math.max(...recettes.map(r => r.cout)), []);
-
   const set = (key, val) => setFiltres(prev => ({ ...prev, [key]: val }));
 
   return (
@@ -201,45 +198,6 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
           </div>
         )}
 
-        {/* Options avancées (limites) */}
-        <details className="sidebar-avance">
-          <summary className="sidebar-avance__toggle">⚙ Options avancées</summary>
-          <div className="sidebar-avance__content">
-            <div className="control-group">
-              <label className="checkbox-label">
-                <input type="checkbox" checked={filtres.activerCout}
-                  onChange={e => set('activerCout', e.target.checked)} />
-                Limiter le coût par recette
-              </label>
-              {filtres.activerCout && (
-                <>
-                  <label className="control-label" style={{ marginTop: 10 }}>
-                    Maximum — <strong>{filtres.coutMax} $</strong>
-                  </label>
-                  <input type="range" min={coutMin} max={coutMax} step={1} value={filtres.coutMax}
-                    onChange={e => set('coutMax', +e.target.value)} />
-                </>
-              )}
-            </div>
-            <div className="control-group">
-              <label className="checkbox-label">
-                <input type="checkbox" checked={filtres.activerTemps}
-                  onChange={e => set('activerTemps', e.target.checked)} />
-                Limiter le temps de cuisine
-              </label>
-              {filtres.activerTemps && (
-                <>
-                  <label className="control-label" style={{ marginTop: 10 }}>
-                    Maximum — <strong>{filtres.tempsMax} min</strong>
-                  </label>
-                  <input type="range" min={50} max={500} step={10} value={filtres.tempsMax}
-                    onChange={e => set('tempsMax', +e.target.value)} />
-                </>
-              )}
-            </div>
-          </div>
-        </details>
-
         <hr className="sidebar-rule" />
 
         {/* Ingrédients à inclure */}
@@ -276,13 +234,13 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
 
         <hr className="sidebar-rule" />
 
-        {stats && <StatsBlock stats={stats} filtres={filtres} />}
+        {stats && <StatsBlock stats={stats} />}
       </div>
     </aside>
   );
 }
 
-function StatsBlock({ stats, filtres }) {
+function StatsBlock({ stats }) {
   const membres = [
     { key: 'eval_patricia', emoji: '💚', nom: 'Patricia' },
     { key: 'eval_yannick',  emoji: '🦉', nom: 'Yannick'  },
@@ -291,54 +249,11 @@ function StatsBlock({ stats, filtres }) {
     { key: 'eval_luce',     emoji: '🍒', nom: 'Luce'     },
   ];
 
+  const hasEvals = membres.some(m => stats.evals[m.key] != null && stats.evals[m.key] !== '');
+  if (!hasEvals) return null;
+
   return (
     <div className="stats-container">
-      <div className="stats-title">Bilan de la semaine</div>
-
-      <div className="stats-main">
-        <div className="stat-item">
-          <span className="stat-value">{stats.tempsTotal}</span>
-          <div className="stat-label">Min cuisine</div>
-        </div>
-        <div className="stat-item">
-          <span className="stat-value">{stats.coutRecettes}</span>
-          <div className="stat-label">$ recettes</div>
-        </div>
-        <div className="stat-item">
-          <span className="stat-value">{stats.coutActivites}</span>
-          <div className="stat-label">$ activités</div>
-        </div>
-      </div>
-
-      <div className="evaluations-title">Répartition des régimes</div>
-      <div className="eval-grid">
-        <div className="eval-member">
-          <span className="eval-emoji">🥩</span>
-          <div className="eval-name">Omni.</div>
-          <div className="eval-score">{stats.regimes.omnivore}/7</div>
-        </div>
-        <div className="eval-member">
-          <span className="eval-emoji">🥗</span>
-          <div className="eval-name">Végé.</div>
-          <div className="eval-score">{stats.regimes['végétarien']}/7</div>
-        </div>
-        <div className="eval-member">
-          <span className="eval-emoji">🌿</span>
-          <div className="eval-name">Végane</div>
-          <div className="eval-score">{stats.regimes['végane']}/7</div>
-        </div>
-        <div className="eval-member">
-          <span className="eval-emoji">🎯</span>
-          <div className="eval-name">Obj.V.</div>
-          <div className="eval-score">{filtres.nbVegetarien}/7</div>
-        </div>
-        <div className="eval-member">
-          <span className="eval-emoji">🎯</span>
-          <div className="eval-name">Obj.Vg</div>
-          <div className="eval-score">{filtres.nbVegane}/7</div>
-        </div>
-      </div>
-
       <div className="evaluations-title">Évaluations familiales</div>
       <div className="eval-grid">
         {membres.map(m => (
@@ -346,7 +261,7 @@ function StatsBlock({ stats, filtres }) {
             <span className="eval-emoji">{m.emoji}</span>
             <div className="eval-name">{m.nom}</div>
             <div className="eval-score">
-              {stats.evals[m.key] != null ? stats.evals[m.key] : '—'}
+              {stats.evals[m.key] != null && stats.evals[m.key] !== '' ? stats.evals[m.key] : '—'}
             </div>
           </div>
         ))}

@@ -193,6 +193,7 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const [searchQuery, setSearchQuery] = useState('');
   const [voirTout, setVoirTout] = useState(false);
   const [showSuggestionIA, setShowSuggestionIA] = useState(false);
+  const [expandedExtra, setExpandedExtra] = useState(false);
 
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
@@ -326,6 +327,30 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         {!isWarning && <EvalRow recette={recette} />}
       </div>
 
+      {/* ── Bouton accordéon Entraînement · Activité · Musique ─────────────── */}
+      {(() => {
+        const actNom = activiteAffichee?.nom || '—';
+        const actCourt = actNom.length > 30 ? actNom.substring(0, 28) + '…' : actNom;
+        const exCourt = isRepos ? 'Repos' : (exercices[0]?.nom || '—');
+        const sep = musique?.nom?.indexOf(' - ');
+        const musCourt = sep > 0 ? musique.nom.substring(0, sep) : (musique?.nom || '—');
+        const musTronq = musCourt.length > 22 ? musCourt.substring(0, 20) + '…' : musCourt;
+        return (
+          <button className="day-card__extra-toggle" onClick={() => setExpandedExtra(e => !e)}>
+            <span>🏋️</span>
+            <span className="day-card__extra-pill">{exCourt}</span>
+            <span className="day-card__extra-sep">·</span>
+            <span>🗺</span>
+            <span className="day-card__extra-pill">{actCourt}</span>
+            <span className="day-card__extra-sep">·</span>
+            <span>🎵</span>
+            <span className="day-card__extra-pill">{musTronq}</span>
+            <span className="day-card__extra-toggle__arrow">{expandedExtra ? '▴' : '▾'}</span>
+          </button>
+        );
+      })()}
+
+      {expandedExtra && (<>
       {/* Entraînement */}
       <div className="planning-item">
         <div className="planning-item__label">Entraînement</div>
@@ -451,6 +476,7 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         <div className="planning-item__label">Musique</div>
         <MusiqueCard musique={musique} />
       </div>
+      </>)}
 
       {/* Recherche de recette */}
       {searchOpen && (() => {

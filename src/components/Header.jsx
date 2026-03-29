@@ -25,7 +25,7 @@ function SourceDot({ statut, label }) {
   );
 }
 
-export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie, onViewUpdate, onViewProfils, photoUrl, activeView }) {
+export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie, onViewUpdate, onViewProfils, onViewMethode, photoUrl, activeView }) {
   const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
   const maj = new Date((meta.lastUpdated || '').split('T')[0] + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -60,16 +60,22 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
             className={`header-nav-link${activeView === 'recettes' ? ' header-nav-link--active' : ''}`}
             onClick={onViewRecettes}
           >Repas</button>
-          &nbsp;·&nbsp; Exercices &nbsp;·&nbsp;
+          &nbsp;·&nbsp;
           <button
             className={`header-nav-link${activeView === 'activites' ? ' header-nav-link--active' : ''}`}
             onClick={onViewActivites}
           >Activités</button>
-          &nbsp;·&nbsp; Musique &nbsp;·&nbsp;
+          &nbsp;·&nbsp;
           <button
             className={`header-nav-link${activeView === 'epicerie' ? ' header-nav-link--active' : ''}`}
             onClick={onViewEpicerie}
           >🛒 Épicerie</button>
+          &nbsp;·&nbsp;
+          <button
+            className="header-nav-link"
+            onClick={onViewMethode}
+            title="Comment fonctionne le planning"
+          >📖 Méthode</button>
         </p>
       </div>
 

@@ -9,6 +9,7 @@ import ActivitesPage from './components/ActivitesPage';
 import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
+import MethodologieModal from './components/MethodologieModal';
 import { genererPlanning, calculerStats } from './utils/planning';
 import { syncWrite, syncRead, syncSubscribe, uploadPhoto, deletePhoto } from './utils/sync';
 import recettes from './data/recettes.json';
@@ -70,6 +71,7 @@ export default function App() {
   const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showProfilsModal, setShowProfilsModal] = useState(false);
+  const [showMethodologieModal, setShowMethodologieModal] = useState(false);
   const [syncLoaded, setSyncLoaded] = useState(false);
   const [profils, setProfils] = useState(() => {
     try {
@@ -535,6 +537,7 @@ export default function App() {
         onViewEpicerie={() => setView('epicerie')}
         onViewUpdate={() => setShowUpdateModal(true)}
         onViewProfils={() => setShowProfilsModal(true)}
+        onViewMethode={() => setShowMethodologieModal(true)}
         photoUrl={photoFamille}
         activeView={view}
       />
@@ -610,6 +613,7 @@ export default function App() {
           </main>
         </div>
       )}
+      {showMethodologieModal && <MethodologieModal onClose={() => setShowMethodologieModal(false)} />}
       {showUpdateModal && <UpdateModal onClose={() => setShowUpdateModal(false)} />}
       {showProfilsModal && (
         <ProfilsModal
