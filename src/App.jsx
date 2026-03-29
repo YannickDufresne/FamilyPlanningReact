@@ -534,6 +534,7 @@ export default function App() {
             ingredientsForces={ingredientsForces}
             onAddIngredientForce={addIngredientForce}
             onRemoveIngredientForce={removeIngredientForce}
+            joursChoisis={joursVerrouilles}
           />
           <main className="main-content">
             {/* Navigation entre semaines */}

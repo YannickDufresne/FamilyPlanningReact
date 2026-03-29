@@ -121,7 +121,7 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce }) {
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis }) {
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
@@ -177,39 +177,68 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
           </select>
         </div>
 
-        <div className="control-group">
-          <label className="checkbox-label">
-            <input type="checkbox" checked={filtres.activerCout}
-              onChange={e => set('activerCout', e.target.checked)} />
-            Limiter le coût par recette
-          </label>
-          {filtres.activerCout && (
-            <>
-              <label className="control-label" style={{ marginTop: 10 }}>
-                Maximum — <strong>{filtres.coutMax} $</strong>
-              </label>
-              <input type="range" min={coutMin} max={coutMax} step={1} value={filtres.coutMax}
-                onChange={e => set('coutMax', +e.target.value)} />
-            </>
-          )}
-        </div>
+        {/* Stats coût et temps de la semaine */}
+        {stats && (
+          <div className="sidebar-semaine-stats">
+            <div className="semaine-stat-item">
+              <span className="semaine-stat-icon">💰</span>
+              <div className="semaine-stat-body">
+                <div className="semaine-stat-label">Budget semaine</div>
+                <div className="semaine-stat-valeur">{stats.coutRecettes}$</div>
+                <div className="semaine-stat-detail">≈ {(stats.coutRecettes / 7).toFixed(0)}$ / repas</div>
+              </div>
+            </div>
+            <div className="semaine-stat-item">
+              <span className="semaine-stat-icon">⏱</span>
+              <div className="semaine-stat-body">
+                <div className="semaine-stat-label">Temps cuisine</div>
+                <div className="semaine-stat-valeur">
+                  {Math.floor(stats.tempsTotal / 60) > 0 ? `${Math.floor(stats.tempsTotal / 60)}h` : ''}{stats.tempsTotal % 60 > 0 ? `${stats.tempsTotal % 60}min` : ''}
+                </div>
+                <div className="semaine-stat-detail">≈ {Math.round(stats.tempsTotal / 7)} min / repas</div>
+              </div>
+            </div>
+          </div>
+        )}
 
-        <div className="control-group">
-          <label className="checkbox-label">
-            <input type="checkbox" checked={filtres.activerTemps}
-              onChange={e => set('activerTemps', e.target.checked)} />
-            Limiter le temps de cuisine
-          </label>
-          {filtres.activerTemps && (
-            <>
-              <label className="control-label" style={{ marginTop: 10 }}>
-                Maximum — <strong>{filtres.tempsMax} min</strong>
+        {/* Options avancées (limites) */}
+        <details className="sidebar-avance">
+          <summary className="sidebar-avance__toggle">⚙ Options avancées</summary>
+          <div className="sidebar-avance__content">
+            <div className="control-group">
+              <label className="checkbox-label">
+                <input type="checkbox" checked={filtres.activerCout}
+                  onChange={e => set('activerCout', e.target.checked)} />
+                Limiter le coût par recette
               </label>
-              <input type="range" min={50} max={500} step={10} value={filtres.tempsMax}
-                onChange={e => set('tempsMax', +e.target.value)} />
-            </>
-          )}
-        </div>
+              {filtres.activerCout && (
+                <>
+                  <label className="control-label" style={{ marginTop: 10 }}>
+                    Maximum — <strong>{filtres.coutMax} $</strong>
+                  </label>
+                  <input type="range" min={coutMin} max={coutMax} step={1} value={filtres.coutMax}
+                    onChange={e => set('coutMax', +e.target.value)} />
+                </>
+              )}
+            </div>
+            <div className="control-group">
+              <label className="checkbox-label">
+                <input type="checkbox" checked={filtres.activerTemps}
+                  onChange={e => set('activerTemps', e.target.checked)} />
+                Limiter le temps de cuisine
+              </label>
+              {filtres.activerTemps && (
+                <>
+                  <label className="control-label" style={{ marginTop: 10 }}>
+                    Maximum — <strong>{filtres.tempsMax} min</strong>
+                  </label>
+                  <input type="range" min={50} max={500} step={10} value={filtres.tempsMax}
+                    onChange={e => set('tempsMax', +e.target.value)} />
+                </>
+              )}
+            </div>
+          </div>
+        </details>
 
         <hr className="sidebar-rule" />
 

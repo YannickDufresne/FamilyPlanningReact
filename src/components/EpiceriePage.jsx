@@ -1,13 +1,11 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import aubaines from '../data/aubaines.json';
 import GroceryList from './GroceryList';
 
-// ── Normalise une chaîne pour comparaison ────────────────────────────────────
 function norm(str) {
   return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-// ── Extraire le % de rabais d'un deal ─────────────────────────────────────────
 function extractRabaisPct(deal) {
   if (deal.rabais) {
     const m = deal.rabais.match(/(\d+)\s*%/);
@@ -19,47 +17,76 @@ function extractRabaisPct(deal) {
   return 0;
 }
 
-// Couleur par magasin
-const STORE_COULEUR = {
-  Maxi:   '#e3142c',
-  Costco: '#00529F',
-  Metro:  '#e8000d',
-  Adonis: '#2d6a2d',
-};
+const STORES = [
+  { key: 'maxi',   label: 'Maxi',   couleur: '#e3142c', emoji: '🏪' },
+  { key: 'metro',  label: 'Metro',  couleur: '#e8000d', emoji: '🏪' },
+  { key: 'adonis', label: 'Adonis', couleur: '#2d6a2d', emoji: '🫒' },
+  { key: 'costco', label: 'Costco', couleur: '#00529F', emoji: '🏬' },
+];
 
-// ── Carte d'aubaine incontournable ───────────────────────────────────────────
-function AubaineTopCard({ deal, pct, onAddIngredient }) {
-  const couleur = STORE_COULEUR[deal.magasin] || '#666';
+// ── Carte d'aubaine flashy ────────────────────────────────────────────────────
+function AubaineCard({ deal, pct, couleur, onAddIngredient, ingredientsForces = [] }) {
   const motCle = (deal.mots_cles || [])[0] || deal.nom;
+  const dejaForce = ingredientsForces.includes(motCle);
 
   return (
-    <div className="aubaine-top-card" style={{ '--store-color': couleur }}>
-      <div className="aubaine-top-card__store" style={{ background: couleur }}>
-        {deal.magasin}
-      </div>
-      <div className="aubaine-top-card__body">
-        <div className="aubaine-top-card__nom">{deal.nom}</div>
-        <div className="aubaine-top-card__prix-row">
-          <span className="aubaine-top-card__prix">{deal.prix_texte || '—'}</span>
-          {deal.prix_regulier_texte && (
-            <span className="aubaine-top-card__reg">{deal.prix_regulier_texte}</span>
-          )}
-        </div>
-        {pct > 0 && (
-          <div className="aubaine-top-card__badge">−{pct}%</div>
-        )}
-        {deal.rabais && !deal.rabais.includes('%') && (
-          <div className="aubaine-top-card__rabais">{deal.rabais}</div>
+    <div className="aub-card" style={{ '--aub-color': couleur }}>
+      {pct >= 20 && (
+        <div className="aub-card__badge">−{pct}%</div>
+      )}
+      <div className="aub-card__nom">{deal.nom}</div>
+      <div className="aub-card__prix-row">
+        <span className="aub-card__prix">{deal.prix_texte || '—'}</span>
+        {deal.prix_regulier_texte && (
+          <span className="aub-card__reg">{deal.prix_regulier_texte}</span>
         )}
       </div>
+      {deal.rabais && !String(deal.rabais).includes('%') && (
+        <div className="aub-card__rabais-txt">{deal.rabais}</div>
+      )}
       {onAddIngredient && (
         <button
-          className="aubaine-top-card__add"
-          onClick={() => onAddIngredient(motCle)}
-          title={`Ajouter "${motCle}" aux ingrédients à inclure`}
+          className={`aub-card__add ${dejaForce ? 'aub-card__add--done' : ''}`}
+          onClick={() => !dejaForce && onAddIngredient(motCle)}
+          disabled={dejaForce}
         >
-          + Inclure
+          {dejaForce ? '✓ Inclus' : '+ Inclure'}
         </button>
+      )}
+    </div>
+  );
+}
+
+// ── Section par enseigne ──────────────────────────────────────────────────────
+function StoreSection({ store, deals, onAddIngredient, ingredientsForces }) {
+  const [expanded, setExpanded] = useState(true);
+  if (!deals || deals.length === 0) return null;
+
+  const sorted = [...deals]
+    .map(d => ({ ...d, pct: extractRabaisPct(d) }))
+    .sort((a, b) => b.pct - a.pct);
+
+  return (
+    <div className="aub-store-section" style={{ '--store-color': store.couleur }}>
+      <button className="aub-store-header" onClick={() => setExpanded(e => !e)}>
+        <span className="aub-store-header__emoji">{store.emoji}</span>
+        <span className="aub-store-header__nom">{store.label}</span>
+        <span className="aub-store-header__count">{deals.length} soldes</span>
+        <span className="aub-store-header__toggle">{expanded ? '▲' : '▼'}</span>
+      </button>
+      {expanded && (
+        <div className="aub-store-grid">
+          {sorted.map((deal, i) => (
+            <AubaineCard
+              key={i}
+              deal={deal}
+              pct={deal.pct}
+              couleur={store.couleur}
+              onAddIngredient={onAddIngredient}
+              ingredientsForces={ingredientsForces}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
@@ -67,25 +94,8 @@ function AubaineTopCard({ deal, pct, onAddIngredient }) {
 
 // ── Composant principal ───────────────────────────────────────────────────────
 export default function EpiceriePage({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce, onRetour }) {
-
-  // Tous les deals de toutes les enseignes
-  const tousDeals = useMemo(() => [
-    ...(aubaines.maxi   || []).map(d => ({ ...d, magasin: 'Maxi'   })),
-    ...(aubaines.metro  || []).map(d => ({ ...d, magasin: 'Metro'  })),
-    ...(aubaines.adonis || []).map(d => ({ ...d, magasin: 'Adonis' })),
-    ...(aubaines.costco || []).map(d => ({ ...d, magasin: 'Costco' })),
-  ], []);
-
-  // Top aubaines : triées par % rabais décroissant, avec prix réel
-  const topAubaines = useMemo(() => {
-    return tousDeals
-      .filter(d => d.prix || d.prix_texte)
-      .map(d => ({ deal: d, pct: extractRabaisPct(d) }))
-      .sort((a, b) => b.pct - a.pct)
-      .slice(0, 20);
-  }, [tousDeals]);
-
-  const hasAubaines = topAubaines.length > 0;
+  const storesWithDeals = STORES.filter(s => (aubaines[s.key] || []).length > 0);
+  const hasAubaines = storesWithDeals.length > 0;
 
   return (
     <div className="epicerie-page">
@@ -95,7 +105,7 @@ export default function EpiceriePage({ planning, joursChoisis, ingredientsForces
 
       <h1 className="epicerie-page__titre">🛒 Épicerie de la semaine</h1>
 
-      {/* ── Section 1 : Ma liste d'épicerie ─────────────────────────────── */}
+      {/* ── Liste d'épicerie ───────────────────────────────────────────────── */}
       <GroceryList
         planning={planning}
         joursChoisis={joursChoisis}
@@ -103,22 +113,24 @@ export default function EpiceriePage({ planning, joursChoisis, ingredientsForces
         onAddIngredientForce={onAddIngredientForce}
       />
 
-      {/* ── Section 2 : Aubaines incontournables ─────────────────────────── */}
+      {/* ── Aubaines incontournables ──────────────────────────────────────── */}
       {hasAubaines && (
         <section className="aubaines-top-section">
           <div className="aubaines-top-section__header">
-            <h2 className="aubaines-top-section__titre">🏷️ Aubaines incontournables</h2>
+            <h2 className="aubaines-top-section__titre">🏷️ Aubaines de la semaine</h2>
             <p className="aubaines-top-section__sous">
-              Meilleures offres tous commerces · semaine du {aubaines.semaine || '—'}
+              Tous commerces · semaine du {aubaines.semaine || '—'}
             </p>
           </div>
-          <div className="aubaines-top-grid">
-            {topAubaines.map(({ deal, pct }, i) => (
-              <AubaineTopCard
-                key={i}
-                deal={deal}
-                pct={pct}
+
+          <div className="aub-stores-list">
+            {storesWithDeals.map(store => (
+              <StoreSection
+                key={store.key}
+                store={store}
+                deals={aubaines[store.key] || []}
                 onAddIngredient={onAddIngredientForce}
+                ingredientsForces={ingredientsForces}
               />
             ))}
           </div>

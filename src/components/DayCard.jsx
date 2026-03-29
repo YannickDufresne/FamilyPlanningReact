@@ -285,7 +285,29 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
           </div>
         )}
         {isWarning && (
-          <div className="planning-item__meta" style={{ color: '#C91D21' }}>{recette.ingredients}</div>
+          <div className="recette-manquante">
+            <p className="recette-manquante__msg">
+              Aucune recette disponible pour ce thème avec les filtres actuels.
+            </p>
+            <div className="recette-manquante__actions">
+              <a
+                className="recette-manquante__btn"
+                href={`https://www.ricardocuisine.com/recherche?q=${encodeURIComponent(jour.theme?.replace(/_/g,' ') || '')}`}
+                target="_blank" rel="noopener noreferrer"
+              >🍁 Ricardo</a>
+              <a
+                className="recette-manquante__btn"
+                href={`https://cooking.nytimes.com/search?q=${encodeURIComponent(jour.theme?.replace(/_/g,' ') || '')}`}
+                target="_blank" rel="noopener noreferrer"
+              >♥ NYT Cooking</a>
+              {onChoisirRecette && (
+                <button
+                  className="recette-manquante__btn recette-manquante__btn--primary"
+                  onClick={() => setSearchOpen(true)}
+                >✏️ Choisir manuellement</button>
+              )}
+            </div>
+          </div>
         )}
         {!isWarning && <EvalRow recette={recette} />}
       </div>
