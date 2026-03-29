@@ -47,6 +47,7 @@ function seedForWeek(lundiStr) {
 function locksKey(semaine)        { return `planning_locks_${semaine}`; }
 function semaineLockKey(semaine)  { return `semaine_lockee_${semaine}`; }
 function forceesKey(semaine)      { return `fp_forcees_${semaine}`; }
+function expliciteKey(semaine)    { return `fp_explicites_${semaine}`; }
 function semaineTimestampKey(s)   { return `fp_ts_${s}`; }
 
 const DEFAULT_FILTRES = {
@@ -99,6 +100,13 @@ export default function App() {
       const s = localStorage.getItem(forceesKey(meta.semaine.debut));
       return s ? new Map(JSON.parse(s)) : new Map();
     } catch { return new Map(); }
+  });
+  // Indices des jours où l'utilisateur a explicitement choisi une recette (≠ juste verrouillé)
+  const [recettesExplicites, setRecettesExplicites] = useState(() => {
+    try {
+      const s = localStorage.getItem(expliciteKey(meta.semaine.debut));
+      return s ? new Set(JSON.parse(s)) : new Set();
+    } catch { return new Set(); }
   });
 
   // Recettes personnalisées (sauvegardées via IA ou manuellement)
@@ -425,7 +433,7 @@ export default function App() {
     setJoursVerrouilles(prev => {
       const next = new Set(prev);
       if (next.has(i)) {
-        // Déverrouiller : retirer aussi la recette forcée auto-sauvegardée
+        // Déverrouiller : retirer aussi la recette forcée et l'explicite
         next.delete(i);
         setRecettesForcees(prevF => {
           const nextF = new Map(prevF);
@@ -433,6 +441,12 @@ export default function App() {
           localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...nextF]));
           syncSemaine(semaineVue, { forcees: [...nextF] });
           return nextF;
+        });
+        setRecettesExplicites(prevE => {
+          const nextE = new Set(prevE);
+          nextE.delete(i);
+          localStorage.setItem(expliciteKey(semaineVue), JSON.stringify([...nextE]));
+          return nextE;
         });
       } else {
         // Verrouiller : sauvegarder la recette courante pour qu'elle survive au rechargement
@@ -500,6 +514,14 @@ export default function App() {
       }
       localStorage.setItem(forceesKey(semaineVue), JSON.stringify([...next]));
       syncSemaine(semaineVue, { forcees: [...next] });
+      return next;
+    });
+    // Marquer comme choix explicite (badge "Choix manuel")
+    setRecettesExplicites(prev => {
+      const next = new Set(prev);
+      if (recetteNom) next.add(dayIndex);
+      else next.delete(dayIndex);
+      localStorage.setItem(expliciteKey(semaineVue), JSON.stringify([...next]));
       return next;
     });
   }
@@ -610,6 +632,7 @@ export default function App() {
               recettes={toutesRecettes}
               filtres={filtres}
               recettesForcees={estSemaineEditable ? recettesForcees : new Map()}
+              recettesExplicites={estSemaineEditable ? recettesExplicites : new Set()}
               onChoisirRecette={estSemaineEditable && !semaineLockee ? choisirRecette : null}
               ingredientsForces={ingredientsForces}
               onSauvegarderRecette={sauvegarderRecetteCustom}

@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import DayCard from './DayCard';
 
-export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette }) {
+export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, recettesExplicites, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette }) {
   const [modesActivite, setModesActivite] = useState(() =>
     Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
   );
@@ -44,7 +44,7 @@ export default function WeeklyPlanning({ planning, profils = [], joursVerrouille
             onToggleLock={onToggleLockJour && !lectureSeule && !joursAutoVerrouilles.has(i) ? () => onToggleLockJour(i) : null}
             recettes={recettes}
             filtres={filtres}
-            recetteForceNom={recettesForcees?.get(i) || null}
+            recetteForceNom={recettesExplicites?.has(i) ? (recettesForcees?.get(i) || null) : null}
             onChoisirRecette={onChoisirRecette ? (recetteNom) => onChoisirRecette(i, recetteNom) : null}
             ingredientsForces={ingredientsForces}
             onSauvegarderRecette={onSauvegarderRecette}
