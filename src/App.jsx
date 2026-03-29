@@ -551,6 +551,7 @@ export default function App() {
           joursChoisis={joursVerrouilles}
           ingredientsForces={ingredientsForces}
           onAddIngredientForce={addIngredientForce}
+          onRemoveIngredientForce={removeIngredientForce}
           onRetour={() => setView('planning')}
         />
       ) : (

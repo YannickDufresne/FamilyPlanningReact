@@ -3151,8 +3151,22 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 }
 
 /* ── Épicerie organisée par magasin ────────────────────────────────────────── */
-.epicerie-economies {
+.epicerie-rappels-btn {
   margin-left: auto;
+  background: none;
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.epicerie-rappels-btn:hover { background: var(--forest); color: white; }
+
+.epicerie-economies {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--forest);
@@ -3549,6 +3563,8 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .epicerie-total__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-4); }
 .epicerie-total__montant { font-size: 1.2rem; font-weight: 800; color: var(--ink); }
 .epicerie-total--propose .epicerie-total__montant { color: var(--ink-3); }
+.epicerie-total--deduction .epicerie-total__label { color: var(--sage); }
+.epicerie-total--deduction .epicerie-total__montant { color: var(--sage); font-size: 1rem; }
 .epicerie-legende {
   display: flex; gap: 16px; font-size: 0.72rem;
   margin-bottom: 10px; color: var(--ink-4);
@@ -3570,8 +3586,17 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .epicerie-item__force-active {
   margin-left: auto; flex-shrink: 0;
   font-size: 0.68rem; font-weight: 700; color: var(--forest);
-  white-space: nowrap;
 }
+.epicerie-item__force-active--btn {
+  background: none; border: 1px solid var(--sage); border-radius: 12px;
+  padding: 2px 8px; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.epicerie-item__force-active--btn:hover { background: var(--terra-light); color: var(--terra); border-color: var(--terra); }
+
+.epicerie-magasin__coche { color: var(--sage); font-size: 0.75em; }
+.lufa-deduction { color: var(--sage); font-size: 0.85em; margin-left: 4px; }
+
 
 /* ── Aubaines incontournables ─────────────────────────────────────────────── */
 .epicerie-page__titre {
@@ -3758,7 +3783,11 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   cursor: pointer; padding: 3px 10px; white-space: nowrap;
 }
 .aub-card__add:hover:not(:disabled) { background: var(--aub-color, var(--forest)); color: white; }
-.aub-card__add--done { opacity: 0.5; cursor: default; }
+.aub-card__add--exclure {
+  color: var(--sage); border-color: var(--sage);
+  font-size: 0.68rem;
+}
+.aub-card__add--exclure:hover { background: var(--sage) !important; color: white !important; }
 
 /* ── Modal IA suggestion ────────────────────────────────────────────────── */
 .modal-ia {

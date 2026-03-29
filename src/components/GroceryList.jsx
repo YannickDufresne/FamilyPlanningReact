@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
 import aubaines from '../data/aubaines.json';
-import { genererListeEpicerie } from '../utils/planning';
 
 // ── Normalisation ─────────────────────────────────────────────────────────────
 function norm(str) {
@@ -85,28 +84,30 @@ function construireLufa(ingredients, planning) {
 }
 
 // ── Section Magasin ───────────────────────────────────────────────────────────
-function SectionMagasin({ label, emoji, couleur, ingredientsChoisis, ingredientsProposés, deals }) {
-  const [cochees, setCochees] = useState(new Set());
+function SectionMagasin({ label, emoji, couleur, ingredientsChoisis, ingredientsProposés, deals, cochees, onToggle }) {
   const tous = [...ingredientsChoisis, ...ingredientsProposés];
   if (tous.length === 0) return null;
 
-  const toggle = (ing) => setCochees(prev => {
-    const n = new Set(prev); n.has(ing) ? n.delete(ing) : n.add(ing); return n;
-  });
+  const nbCochees = tous.filter(ing => cochees.has(ing)).length;
 
   return (
     <div className="epicerie-magasin" style={{ '--magasin-couleur': couleur }}>
       <div className="epicerie-magasin__header">
         <span className="epicerie-magasin__emoji">{emoji}</span>
         <span className="epicerie-magasin__nom">{label}</span>
-        <span className="epicerie-magasin__count">{tous.length} items</span>
+        <span className="epicerie-magasin__count">
+          {nbCochees > 0
+            ? <>{tous.length - nbCochees} à acheter · <span className="epicerie-magasin__coche">{nbCochees} déjà à la maison</span></>
+            : <>{tous.length} items</>
+          }
+        </span>
       </div>
       <ul className="epicerie-items">
         {ingredientsChoisis.map((ing, i) => {
           const deal = trouverAubaine(ing, deals);
           const coche = cochees.has(ing);
           return (
-            <li key={`c-${i}`} className={`epicerie-item ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`} onClick={() => toggle(ing)}>
+            <li key={`c-${i}`} className={`epicerie-item ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`} onClick={() => onToggle(ing)}>
               <span className="epicerie-item__check">{coche ? '☑' : '☐'}</span>
               <span className="epicerie-item__nom">{ing}</span>
               {deal && <span className="aubaine-badge">🏷️ {deal.prix_texte || 'Solde'}</span>}
@@ -117,7 +118,7 @@ function SectionMagasin({ label, emoji, couleur, ingredientsChoisis, ingredients
           const deal = trouverAubaine(ing, deals);
           const coche = cochees.has(ing);
           return (
-            <li key={`p-${i}`} className={`epicerie-item epicerie-item--propose ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`} onClick={() => toggle(ing)}>
+            <li key={`p-${i}`} className={`epicerie-item epicerie-item--propose ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`} onClick={() => onToggle(ing)}>
               <span className="epicerie-item__check">{coche ? '☑' : '☐'}</span>
               <span className="epicerie-item__nom">{ing}</span>
               {deal && <span className="aubaine-badge">🏷️ {deal.prix_texte || 'Solde'}</span>}
@@ -130,15 +131,11 @@ function SectionMagasin({ label, emoji, couleur, ingredientsChoisis, ingredients
 }
 
 // ── Section Lufa ──────────────────────────────────────────────────────────────
-function SectionLufa({ items, onAddIngredientForce, ingredientsForces = [] }) {
-  const [cochees, setCochees] = useState(new Set());
-
-  const toggle = (nom) => setCochees(prev => {
-    const n = new Set(prev); n.has(nom) ? n.delete(nom) : n.add(nom); return n;
-  });
-
+function SectionLufa({ items, onAddIngredientForce, onRemoveIngredientForce, ingredientsForces = [], cochees, onToggle }) {
   const totalEstime = items.reduce((s, i) => s + i.prix_estime, 0);
-  const minOk = totalEstime >= 50;
+  const deductionLufa = items.filter(i => cochees.has(i.nom)).reduce((s, i) => s + i.prix_estime, 0);
+  const totalNet = totalEstime - deductionLufa;
+  const minOk = totalNet >= 50;
 
   return (
     <div className="epicerie-magasin epicerie-magasin--lufa">
@@ -153,7 +150,8 @@ function SectionLufa({ items, onAddIngredientForce, ingredientsForces = [] }) {
         <div>
           <strong>Passe ta commande Lufa cette semaine !</strong>
           <div className="lufa-alerte__detail">
-            Total estimé : <strong>{totalEstime.toFixed(2)}$</strong>
+            Total estimé : <strong>{totalNet.toFixed(2)}$</strong>
+            {deductionLufa > 0 && <span className="lufa-deduction"> (−{deductionLufa.toFixed(2)}$ déjà à la maison)</span>}
             {!minOk && <span className="lufa-min-warning"> · Ajoute des items (min. 50$)</span>}
           </div>
         </div>
@@ -164,7 +162,7 @@ function SectionLufa({ items, onAddIngredientForce, ingredientsForces = [] }) {
           const coche = cochees.has(item.nom);
           const dejaForce = ingredientsForces.includes(item.nom);
           return (
-            <li key={i} className={`epicerie-item epicerie-item--lufa ${coche ? 'epicerie-item--coche' : ''}`} onClick={() => toggle(item.nom)}>
+            <li key={i} className={`epicerie-item epicerie-item--lufa ${coche ? 'epicerie-item--coche' : ''}`} onClick={() => onToggle(item.nom)}>
               <span className="epicerie-item__check">{coche ? '☑' : '☐'}</span>
               <div className="epicerie-item__lufa-content">
                 <span className="epicerie-item__nom">{item.nom}</span>
@@ -179,7 +177,13 @@ function SectionLufa({ items, onAddIngredientForce, ingredientsForces = [] }) {
                   title="Inclure dans les recettes"
                 >+ Inclure</button>
               )}
-              {dejaForce && <span className="epicerie-item__force-active">✓ Inclus</span>}
+              {dejaForce && (
+                <button
+                  className="epicerie-item__force-active epicerie-item__force-active--btn"
+                  onClick={e => { e.stopPropagation(); onRemoveIngredientForce && onRemoveIngredientForce(item.nom); }}
+                  title="Retirer l'inclusion forcée"
+                >✓ Inclus ✕</button>
+              )}
             </li>
           );
         })}
@@ -189,10 +193,16 @@ function SectionLufa({ items, onAddIngredientForce, ingredientsForces = [] }) {
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function GroceryList({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce }) {
-  const [cochees] = useState(new Set());
+export default function GroceryList({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce }) {
+  const [cochees, setCochees] = useState(new Set());
 
-  // Séparer les ingrédients par statut (choisi = confirmé par l'utilisateur)
+  const toggle = (ing) => setCochees(prev => {
+    const n = new Set(prev);
+    n.has(ing) ? n.delete(ing) : n.add(ing);
+    return n;
+  });
+
+  // Séparer les ingrédients par statut
   const { ingredientsChoisisSet, ingredientsProposésSet } = useMemo(() => {
     const choisis = new Set();
     const proposes = new Set();
@@ -206,7 +216,6 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
         else proposes.add(ing);
       }
     }
-    // Ingrédient dans les deux → le compter comme choisi (déjà confirmé)
     proposes.forEach(ing => { if (choisis.has(ing)) proposes.delete(ing); });
     return { ingredientsChoisisSet: choisis, ingredientsProposésSet: proposes };
   }, [planning, joursChoisis]);
@@ -242,8 +251,47 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
     return { totalChoisi: choisi, totalPropose: propose };
   }, [planning, joursChoisis]);
 
+  // Déduction proportionnelle pour items bifés (hors Lufa — Lufa gère la sienne)
+  const deductionRecettes = useMemo(() => {
+    if (cochees.size === 0) return 0;
+    let total = 0;
+    for (const jour of (planning || [])) {
+      if (!jour?.recette || jour.recette.nom.startsWith('⚠️')) continue;
+      const ings = (jour.recette.ingredients || '').split(',').map(s => s.trim()).filter(Boolean);
+      if (ings.length === 0) continue;
+      // Ne compter que les ingrédients non-Lufa bifés
+      const nbBiffes = ings.filter(ing => cochees.has(ing) && routerMagasin(ing) !== 'lufa').length;
+      const nbNonLufa = ings.filter(ing => routerMagasin(ing) !== 'lufa').length;
+      if (nbBiffes > 0 && nbNonLufa > 0) {
+        total += (nbBiffes / nbNonLufa) * (jour.recette.cout || 0);
+      }
+    }
+    return total;
+  }, [cochees, planning]);
+
+  const deductionLufaTotal = useMemo(() =>
+    lufaItems.filter(item => cochees.has(item.nom)).reduce((s, item) => s + item.prix_estime, 0),
+  [cochees, lufaItems]);
+
+  const deductionTotale = deductionRecettes + deductionLufaTotal;
+
   const allDeals = [...(aubaines.maxi || []), ...(aubaines.metro || []), ...(aubaines.adonis || []), ...(aubaines.costco || [])];
   const nbSoldesChoisis = [...ingredientsChoisisSet].filter(ing => trouverAubaine(ing, allDeals)).length;
+
+  // Partager vers Rappels Apple (Web Share API → clipboard fallback)
+  function partagerVersRappels() {
+    const aAcheter = tousIngredients.filter(ing => !cochees.has(ing));
+    const texte = aAcheter.join('\n');
+    if (navigator.share) {
+      navigator.share({ title: '🛒 Épicerie famille', text: texte }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(texte).then(() => {
+        alert('✅ Liste copiée ! Colle-la dans l\'app Rappels.');
+      }).catch(() => {
+        alert('Impossible de copier automatiquement. Voici la liste :\n\n' + texte);
+      });
+    }
+  }
 
   return (
     <section className="epicerie-liste-section">
@@ -254,6 +302,9 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
           {nbSoldesChoisis > 0 && (
             <span className="epicerie-economies">🏷️ {nbSoldesChoisis} item{nbSoldesChoisis > 1 ? 's' : ''} en solde</span>
           )}
+          <button className="epicerie-rappels-btn" onClick={partagerVersRappels} title="Envoyer vers l'app Rappels">
+            📲 Rappels
+          </button>
         </div>
 
         {/* Totaux */}
@@ -275,6 +326,12 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
             <div className="epicerie-total">
               <span className="epicerie-total__label">Estimation semaine</span>
               <span className="epicerie-total__montant">{(totalChoisi + totalPropose).toFixed(0)} $</span>
+            </div>
+          )}
+          {deductionTotale > 1 && (
+            <div className="epicerie-total epicerie-total--deduction">
+              <span className="epicerie-total__label">Déjà à la maison ({cochees.size} items)</span>
+              <span className="epicerie-total__montant">−{deductionTotale.toFixed(0)} $</span>
             </div>
           )}
         </div>
@@ -299,6 +356,8 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
             ingredientsChoisis={parMagasin.maxi.c}
             ingredientsProposés={parMagasin.maxi.p}
             deals={[...(aubaines.maxi || []), ...(aubaines.metro || [])]}
+            cochees={cochees}
+            onToggle={toggle}
           />
           <SectionMagasin
             label="Costco"
@@ -307,12 +366,17 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
             ingredientsChoisis={parMagasin.costco.c}
             ingredientsProposés={parMagasin.costco.p}
             deals={aubaines.costco || []}
+            cochees={cochees}
+            onToggle={toggle}
           />
           {lufaItems.length > 0 && (
             <SectionLufa
               items={lufaItems}
               onAddIngredientForce={onAddIngredientForce}
+              onRemoveIngredientForce={onRemoveIngredientForce}
               ingredientsForces={ingredientsForces}
+              cochees={cochees}
+              onToggle={toggle}
             />
           )}
           {(parMagasin.autres.c.length > 0 || parMagasin.autres.p.length > 0) && (
@@ -323,6 +387,8 @@ export default function GroceryList({ planning, joursChoisis, ingredientsForces 
               ingredientsChoisis={parMagasin.autres.c}
               ingredientsProposés={parMagasin.autres.p}
               deals={[]}
+              cochees={cochees}
+              onToggle={toggle}
             />
           )}
         </div>

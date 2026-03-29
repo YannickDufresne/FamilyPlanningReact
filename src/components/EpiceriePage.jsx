@@ -25,7 +25,7 @@ const STORES = [
 ];
 
 // ── Carte d'aubaine flashy ────────────────────────────────────────────────────
-function AubaineCard({ deal, pct, couleur, onAddIngredient, ingredientsForces = [] }) {
+function AubaineCard({ deal, pct, couleur, onAddIngredient, onRemoveIngredient, ingredientsForces = [] }) {
   const motCle = (deal.mots_cles || [])[0] || deal.nom;
   const dejaForce = ingredientsForces.includes(motCle);
 
@@ -45,20 +45,24 @@ function AubaineCard({ deal, pct, couleur, onAddIngredient, ingredientsForces = 
         <div className="aub-card__rabais-txt">{deal.rabais}</div>
       )}
       {onAddIngredient && (
-        <button
-          className={`aub-card__add ${dejaForce ? 'aub-card__add--done' : ''}`}
-          onClick={() => !dejaForce && onAddIngredient(motCle)}
-          disabled={dejaForce}
-        >
-          {dejaForce ? '✓ Inclus' : '+ Inclure'}
-        </button>
+        dejaForce ? (
+          <button
+            className="aub-card__add aub-card__add--exclure"
+            onClick={() => onRemoveIngredient && onRemoveIngredient(motCle)}
+          >✓ Inclus · Exclure</button>
+        ) : (
+          <button
+            className="aub-card__add"
+            onClick={() => onAddIngredient(motCle)}
+          >+ Inclure</button>
+        )
       )}
     </div>
   );
 }
 
 // ── Section par enseigne ──────────────────────────────────────────────────────
-function StoreSection({ store, deals, onAddIngredient, ingredientsForces }) {
+function StoreSection({ store, deals, onAddIngredient, onRemoveIngredient, ingredientsForces }) {
   const [expanded, setExpanded] = useState(true);
   if (!deals || deals.length === 0) return null;
 
@@ -83,6 +87,7 @@ function StoreSection({ store, deals, onAddIngredient, ingredientsForces }) {
               pct={deal.pct}
               couleur={store.couleur}
               onAddIngredient={onAddIngredient}
+              onRemoveIngredient={onRemoveIngredient}
               ingredientsForces={ingredientsForces}
             />
           ))}
@@ -93,7 +98,7 @@ function StoreSection({ store, deals, onAddIngredient, ingredientsForces }) {
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function EpiceriePage({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce, onRetour }) {
+export default function EpiceriePage({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, onRetour }) {
   const storesWithDeals = STORES.filter(s => (aubaines[s.key] || []).length > 0);
   const hasAubaines = storesWithDeals.length > 0;
 
@@ -111,6 +116,7 @@ export default function EpiceriePage({ planning, joursChoisis, ingredientsForces
         joursChoisis={joursChoisis}
         ingredientsForces={ingredientsForces}
         onAddIngredientForce={onAddIngredientForce}
+        onRemoveIngredientForce={onRemoveIngredientForce}
       />
 
       {/* ── Aubaines incontournables ──────────────────────────────────────── */}
@@ -130,6 +136,7 @@ export default function EpiceriePage({ planning, joursChoisis, ingredientsForces
                 store={store}
                 deals={aubaines[store.key] || []}
                 onAddIngredient={onAddIngredientForce}
+                onRemoveIngredient={onRemoveIngredientForce}
                 ingredientsForces={ingredientsForces}
               />
             ))}
