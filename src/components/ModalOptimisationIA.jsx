@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-const ANTHROPIC_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY;
-
 // ── Construit le prompt avec planning actuel + alternatives par thème ─────────
 function buildPrompt(planning, toutesRecettes) {
   const lignes = (planning || []).map((jour, i) => {
@@ -65,11 +63,18 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
     setErreur('');
     setAppliques(new Set());
 
+    const apiKey = localStorage.getItem('anthropic_key') || '';
+    if (!apiKey) {
+      setErreur('Clé API Anthropic manquante. Configure-la dans la section Recettes → icône 🔑.');
+      setEtat('erreur');
+      return;
+    }
+
     try {
       const res = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: {
-          'x-api-key': ANTHROPIC_KEY,
+          'x-api-key': apiKey,
           'anthropic-version': '2023-06-01',
           'anthropic-dangerous-client-side-api-key-allowed': 'true',
           'content-type': 'application/json',

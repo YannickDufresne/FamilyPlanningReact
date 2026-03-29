@@ -3864,6 +3864,18 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 }
 .aub-card__add--exclure:hover { background: var(--sage) !important; color: white !important; }
 
+/* ── Overlay commun aux modaux IA ──────────────────────────────────────────── */
+.modal-ia-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
 /* ── Modal IA suggestion ────────────────────────────────────────────────── */
 .modal-ia {
   background: white;
