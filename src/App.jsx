@@ -573,6 +573,7 @@ export default function App() {
               filtres={filtres}
               recettesForcees={estSemaineEditable ? recettesForcees : new Map()}
               onChoisirRecette={estSemaineEditable && !semaineLockee ? choisirRecette : null}
+              ingredientsForces={ingredientsForces}
             />
           </main>
         </div>

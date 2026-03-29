@@ -3630,3 +3630,14 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   cursor: pointer; padding: 4px 12px; align-self: flex-start;
 }
 .aubaine-top-card__add:hover { background: var(--forest); color: white; }
+
+/* ── Ingrédient forcé highlight dans les recettes ────────────────────────── */
+.ing-force-highlight {
+  background: #fff3cd;
+  color: var(--ink);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 700;
+  border-bottom: 2px solid #e6a817;
+  font-style: normal;
+}

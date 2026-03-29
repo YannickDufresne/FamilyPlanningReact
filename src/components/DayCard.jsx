@@ -159,7 +159,32 @@ function PrixFamille({ activite, date }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null }) {
+function IngredientsHighlighted({ texte, ingredientsForces = [] }) {
+  if (!texte) return null;
+  if (!ingredientsForces.length) return <>{texte}</>;
+
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const parts = texte.split(',').map(s => s.trim()).filter(Boolean);
+
+  return (
+    <>
+      {parts.map((ing, i) => {
+        const ingN = norm(ing);
+        const match = ingredientsForces.some(f => ingN.includes(norm(f)) || norm(f).includes(ingN.split(' ')[0]));
+        return (
+          <span key={i}>
+            {i > 0 && ', '}
+            {match
+              ? <mark className="ing-force-highlight">{ing}</mark>
+              : ing}
+          </span>
+        );
+      })}
+    </>
+  );
+}
+
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [] }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
@@ -255,7 +280,9 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
           <div className="planning-item__cost">{recette.cout}$ · {recette.temps_preparation} min</div>
         )}
         {!isWarning && recette.ingredients && (
-          <div className="planning-item__meta">{recette.ingredients}</div>
+          <div className="planning-item__meta">
+            <IngredientsHighlighted texte={recette.ingredients} ingredientsForces={ingredientsForces} />
+          </div>
         )}
         {isWarning && (
           <div className="planning-item__meta" style={{ color: '#C91D21' }}>{recette.ingredients}</div>
