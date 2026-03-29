@@ -650,6 +650,11 @@ input[type="range"] {
 }
 .optim-card__btn:hover { background: var(--sage); }
 .optim-card__applique-label { align-self: flex-end; font-size: 0.78rem; font-weight: 600; color: var(--sage); }
+.modal-optim__idle {
+  padding: 16px 20px 20px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.modal-optim__idle-txt { font-size: 0.85rem; color: var(--ink-4); line-height: 1.5; }
 
 /* ── Hold-to-reshuffle button ──────────────────────────────────────────────── */
 .btn-rebrasser {

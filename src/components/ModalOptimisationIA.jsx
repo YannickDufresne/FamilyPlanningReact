@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // ── Construit le prompt avec planning actuel + alternatives par thème ─────────
 function buildPrompt(planning, toutesRecettes) {
@@ -51,12 +51,10 @@ Réponds UNIQUEMENT avec ce JSON (aucun autre texte):
 
 // ── Composant principal ───────────────────────────────────────────────────────
 export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliquer, onClose }) {
-  const [etat, setEtat] = useState('chargement');
+  const [etat, setEtat] = useState('idle'); // idle | chargement | resultat | erreur
   const [suggestions, setSuggestions] = useState([]);
   const [erreur, setErreur] = useState('');
   const [appliques, setAppliques] = useState(new Set());
-
-  useEffect(() => { fetchSuggestions(); }, []);
 
   async function fetchSuggestions() {
     setEtat('chargement');
@@ -70,37 +68,52 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
       return;
     }
 
+    let prompt = '';
+    try {
+      prompt = buildPrompt(planning, toutesRecettes);
+    } catch (e) {
+      setErreur('Erreur lors de la préparation du planning : ' + e.message);
+      setEtat('erreur');
+      return;
+    }
+
     try {
       const res = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: {
           'x-api-key': apiKey,
           'anthropic-version': '2023-06-01',
-          'anthropic-dangerous-client-side-api-key-allowed': 'true',
           'content-type': 'application/json',
+          'anthropic-dangerous-client-side-api-key-allowed': 'true',
         },
         body: JSON.stringify({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 1024,
-          messages: [{ role: 'user', content: buildPrompt(planning, toutesRecettes) }],
+          messages: [{ role: 'user', content: prompt }],
         }),
       });
 
-      if (!res.ok) throw new Error(`Erreur API ${res.status}`);
+      if (!res.ok) {
+        const errBody = await res.text().catch(() => '');
+        throw new Error(`Erreur API ${res.status}${errBody ? ' — ' + errBody.slice(0, 120) : ''}`);
+      }
 
       const data = await res.json();
       const texte = data.content?.[0]?.text || '';
 
       const jsonMatch = texte.match(/\[[\s\S]*?\]/);
-      if (!jsonMatch) throw new Error('Format inattendu de la réponse');
+      if (!jsonMatch) throw new Error('Format inattendu de la réponse Claude');
 
       const parsed = JSON.parse(jsonMatch[0]);
-      if (!Array.isArray(parsed) || parsed.length === 0) throw new Error('Aucune suggestion trouvée');
+      if (!Array.isArray(parsed) || parsed.length === 0) throw new Error('Aucune suggestion retournée');
 
       setSuggestions(parsed);
       setEtat('resultat');
     } catch (e) {
-      setErreur(e.message);
+      const msg = e instanceof TypeError
+        ? 'Erreur réseau (connexion ou CORS) — réessaie dans quelques secondes.'
+        : e.message;
+      setErreur(msg);
       setEtat('erreur');
     }
   }
@@ -124,6 +137,18 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
           </div>
           <button className="modal-ia__close" onClick={onClose}>✕</button>
         </div>
+
+        {/* ── Idle : bouton de démarrage ── */}
+        {etat === 'idle' && (
+          <div className="modal-optim__idle">
+            <p className="modal-optim__idle-txt">
+              L'IA va analyser tes 7 recettes et proposer des échanges concrets pour réduire le budget ou le temps de cuisine.
+            </p>
+            <button className="optim-card__btn" style={{ alignSelf: 'stretch', padding: '12px' }} onClick={fetchSuggestions}>
+              ✨ Lancer l'analyse
+            </button>
+          </div>
+        )}
 
         {/* ── Chargement ── */}
         {etat === 'chargement' && (
