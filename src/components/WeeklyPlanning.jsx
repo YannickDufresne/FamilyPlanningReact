@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import DayCard from './DayCard';
 
-export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, onChoisirRecette, filtres = {}, ingredientsForces = [] }) {
+export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette }) {
   const [modesActivite, setModesActivite] = useState(() =>
     Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
+  );
+
+  const recettesSemaine = useMemo(
+    () => (planning || []).map(j => j?.recette?.nom).filter(n => n && !n.startsWith('⚠️')),
+    [planning]
   );
 
   if (!planning) {
@@ -42,6 +47,8 @@ export default function WeeklyPlanning({ planning, profils = [], joursVerrouille
             recetteForceNom={recettesForcees?.get(i) || null}
             onChoisirRecette={onChoisirRecette ? (recetteNom) => onChoisirRecette(i, recetteNom) : null}
             ingredientsForces={ingredientsForces}
+            onSauvegarderRecette={onSauvegarderRecette}
+            recettesSemaine={recettesSemaine}
           />
         ))}
       </div>

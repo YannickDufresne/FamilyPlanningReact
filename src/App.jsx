@@ -97,6 +97,30 @@ export default function App() {
     } catch { return new Map(); }
   });
 
+  // Recettes personnalisées (sauvegardées via IA ou manuellement)
+  const [recettesCustom, setRecettesCustom] = useState(() => {
+    try {
+      const s = localStorage.getItem('recettes_custom_v1');
+      return s ? JSON.parse(s) : { ajoutees: [], modifiees: {} };
+    } catch { return { ajoutees: [], modifiees: {} }; }
+  });
+
+  const toutesRecettes = useMemo(
+    () => [...recettes, ...(recettesCustom.ajoutees || [])],
+    [recettesCustom]
+  );
+
+  function sauvegarderRecetteCustom(recette) {
+    setRecettesCustom(prev => {
+      // Éviter les doublons par nom
+      if (prev.ajoutees.some(r => r.nom === recette.nom)) return prev;
+      const next = { ...prev, ajoutees: [...prev.ajoutees, recette] };
+      localStorage.setItem('recettes_custom_v1', JSON.stringify(next));
+      syncWrite({ recettesCustom: next });
+      return next;
+    });
+  }
+
   // Ingrédients à inclure (globaux, pas par semaine)
   const [ingredientsForces, setIngredientsForces] = useState(() => {
     try { return JSON.parse(localStorage.getItem('fp_ingredients_forces') || '[]'); }
@@ -150,6 +174,7 @@ export default function App() {
         if (data.recettesCustom !== undefined) {
           // Merge: Firestore is the source of truth for custom recipes
           localStorage.setItem('recettes_custom_v1', JSON.stringify(data.recettesCustom));
+          setRecettesCustom(data.recettesCustom);
         }
         // Load per-week data for all semaines in cloud
         // Guard: ne pas écraser localStorage si les données locales sont plus récentes
@@ -273,7 +298,7 @@ export default function App() {
   const planningRef = useRef(null);
   const planning = useMemo(() => {
     const result = genererPlanning({
-      recettes, exercices, activites, musique, filtres, seed,
+      recettes: toutesRecettes, exercices, activites, musique, filtres, seed,
       semaineDebut: meta.semaine.debut,
       profils,
       joursVerrouilles: estSemaineActuelle ? tousJoursVerrouilles : new Set(),
@@ -289,7 +314,7 @@ export default function App() {
   const planningFutur = useMemo(() => {
     if (!estSemaineAVenir) return null;
     return genererPlanning({
-      recettes, exercices, activites, musique,
+      recettes: toutesRecettes, exercices, activites, musique,
       filtres: DEFAULT_FILTRES,
       seed: seedForWeek(semaineVue),
       semaineDebut: semaineVue,
@@ -304,7 +329,7 @@ export default function App() {
   const planningContenantAujourdhui = useMemo(() => {
     if (!estSemaineContenantAujourd || estSemaineActuelle) return null;
     return genererPlanning({
-      recettes, exercices, activites, musique,
+      recettes: toutesRecettes, exercices, activites, musique,
       filtres: DEFAULT_FILTRES,
       seed: seedForWeek(semaineContenantAujourdhui),
       semaineDebut: semaineContenantAujourdhui,
@@ -570,11 +595,12 @@ export default function App() {
               joursAutoVerrouilles={estSemaineActuelle ? joursAutoVerrouilles : new Set()}
               onToggleLockJour={estSemaineEditable ? toggleLockJour : null}
               lectureSeule={!estSemaineEditable || semaineLockee}
-              recettes={recettes}
+              recettes={toutesRecettes}
               filtres={filtres}
               recettesForcees={estSemaineEditable ? recettesForcees : new Map()}
               onChoisirRecette={estSemaineEditable && !semaineLockee ? choisirRecette : null}
               ingredientsForces={ingredientsForces}
+              onSauvegarderRecette={sauvegarderRecetteCustom}
             />
           </main>
         </div>

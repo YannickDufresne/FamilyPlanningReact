@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { calculerPrixFamille } from '../utils/prixFamille';
+import ModalSuggestionIA from './ModalSuggestionIA';
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
 const RANG_MEDALS  = ['🥇', '🥈', '🥉'];
@@ -184,13 +185,14 @@ function IngredientsHighlighted({ texte, ingredientsForces = [] }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [] }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [], onSauvegarderRecette = null, recettesSemaine = [] }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [voirTout, setVoirTout] = useState(false);
+  const [showSuggestionIA, setShowSuggestionIA] = useState(false);
 
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
@@ -290,16 +292,12 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
               Aucune recette disponible pour ce thème avec les filtres actuels.
             </p>
             <div className="recette-manquante__actions">
-              <a
-                className="recette-manquante__btn"
-                href={`https://www.ricardocuisine.com/recherche?q=${encodeURIComponent(jour.theme?.replace(/_/g,' ') || '')}`}
-                target="_blank" rel="noopener noreferrer"
-              >🍁 Ricardo</a>
-              <a
-                className="recette-manquante__btn"
-                href={`https://cooking.nytimes.com/search?q=${encodeURIComponent(jour.theme?.replace(/_/g,' ') || '')}`}
-                target="_blank" rel="noopener noreferrer"
-              >♥ NYT Cooking</a>
+              {onSauvegarderRecette && (
+                <button
+                  className="recette-manquante__btn recette-manquante__btn--ia"
+                  onClick={() => setShowSuggestionIA(true)}
+                >✨ Suggérer avec l'IA</button>
+              )}
               {onChoisirRecette && (
                 <button
                   className="recette-manquante__btn recette-manquante__btn--primary"
@@ -308,6 +306,22 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
               )}
             </div>
           </div>
+        )}
+        {showSuggestionIA && (
+          <ModalSuggestionIA
+            theme={jour.theme}
+            filtres={filtres}
+            ingredientsForces={ingredientsForces}
+            recettesSemaine={recettesSemaine}
+            onSauvegarder={(recette) => {
+              onSauvegarderRecette(recette);
+            }}
+            onChoisirCeSoir={(nom) => {
+              if (onChoisirRecette) onChoisirRecette(nom);
+              setShowSuggestionIA(false);
+            }}
+            onClose={() => setShowSuggestionIA(false)}
+          />
         )}
         {!isWarning && <EvalRow recette={recette} />}
       </div>

@@ -3745,3 +3745,109 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 }
 .aub-card__add:hover:not(:disabled) { background: var(--aub-color, var(--forest)); color: white; }
 .aub-card__add--done { opacity: 0.5; cursor: default; }
+
+/* ── Modal IA suggestion ────────────────────────────────────────────────── */
+.modal-ia {
+  background: white;
+  border-radius: 18px;
+  width: 92%;
+  max-width: 500px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 26px 24px 22px;
+  position: relative;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+}
+.modal-ia__close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; cursor: pointer;
+  font-size: 1.1rem; color: var(--ink-3);
+  padding: 4px 8px; border-radius: 6px; line-height: 1;
+}
+.modal-ia__close:hover { background: var(--ink-1); color: var(--ink); }
+.modal-ia__header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-right: 30px; }
+.modal-ia__icon { font-size: 2.2rem; line-height: 1; }
+.modal-ia__titre { font-size: 1.05rem; font-weight: 800; color: var(--ink); line-height: 1.2; }
+.modal-ia__sous-titre { font-size: 0.82rem; color: var(--ink-3); margin-top: 3px; }
+.modal-ia__body { display: flex; flex-direction: column; gap: 14px; }
+.modal-ia__body--center { align-items: center; padding: 28px 0; gap: 16px; }
+.modal-ia__desc { font-size: 0.87rem; color: var(--ink-3); line-height: 1.6; margin: 0; }
+.modal-ia__context {
+  font-size: 0.84rem; color: var(--forest); margin: 0;
+  background: #f0f7f0; border-radius: 8px; padding: 10px 14px;
+}
+.modal-ia__spinner {
+  width: 38px; height: 38px;
+  border: 3px solid var(--ink-1);
+  border-top-color: var(--forest);
+  border-radius: 50%;
+  animation: modal-spin 0.8s linear infinite;
+}
+@keyframes modal-spin { to { transform: rotate(360deg); } }
+.modal-ia__loading-txt { font-size: 0.87rem; color: var(--ink-3); margin: 0; }
+.modal-ia__erreur {
+  background: #fff3f3; border: 1px solid #fca5a5;
+  border-radius: 8px; padding: 12px 16px;
+  font-size: 0.84rem; color: #c53030; line-height: 1.5;
+}
+.modal-ia__recette-card {
+  background: var(--ink-0, #fafafa);
+  border: 1.5px solid var(--ink-1);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.modal-ia__recette-nom { font-size: 1rem; font-weight: 800; color: var(--ink); line-height: 1.3; }
+.modal-ia__recette-orig { font-size: 0.75rem; color: var(--ink-3); font-style: italic; }
+.modal-ia__recette-meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.76rem; color: var(--ink-3); }
+.modal-ia__recette-meta span {
+  background: white; border: 1px solid var(--ink-1);
+  border-radius: 99px; padding: 2px 10px;
+}
+.modal-ia__regime { background: #f0f7f0 !important; color: var(--forest) !important; border-color: #c3e6c8 !important; }
+.modal-ia__recette-ings { font-size: 0.79rem; color: var(--ink-3); line-height: 1.55; }
+.modal-ia__recette-notes {
+  font-size: 0.8rem; color: #4a4a2a;
+  background: #fffbea; border-radius: 6px;
+  padding: 8px 12px; line-height: 1.5;
+}
+.modal-ia__recette-url {
+  display: inline-block; font-size: 0.78rem;
+  color: var(--forest); text-decoration: none;
+}
+.modal-ia__recette-url:hover { text-decoration: underline; }
+.modal-ia__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
+.modal-ia__btn {
+  padding: 9px 16px; border-radius: 99px;
+  font-size: 0.8rem; font-weight: 700;
+  cursor: pointer; border: none; white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.modal-ia__btn--ghost {
+  background: white; border: 1.5px solid var(--ink-2, #ccc);
+  color: var(--ink-3);
+}
+.modal-ia__btn--ghost:hover { border-color: var(--ink-3); color: var(--ink); }
+.modal-ia__btn--secondary {
+  background: white; border: 1.5px solid var(--forest);
+  color: var(--forest);
+}
+.modal-ia__btn--secondary:hover { background: var(--forest); color: white; }
+.modal-ia__btn--primary { background: var(--forest); color: white; }
+.modal-ia__btn--primary:hover { filter: brightness(1.1); }
+.modal-ia__saved { font-size: 0.84rem; color: var(--forest); font-weight: 700; align-self: center; }
+
+/* AI suggestion button in missing recipe block */
+.recette-manquante__btn--ia {
+  background: linear-gradient(135deg, #20783c, #2d9c50);
+  color: white; border: none;
+  animation: pulse-ia 2.5s ease-in-out infinite;
+}
+.recette-manquante__btn--ia:hover {
+  background: linear-gradient(135deg, #185a2c, #20783c);
+  animation: none;
+}
+@keyframes pulse-ia {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(32, 120, 60, 0.35); }
+  50% { box-shadow: 0 0 0 7px rgba(32, 120, 60, 0); }
+}
