@@ -3866,40 +3866,54 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   50% { box-shadow: 0 0 0 7px rgba(32, 120, 60, 0); }
 }
 
-/* ── DayCard sections secondaires (accordéon) ───────────────────────────── */
-.day-card__extra-toggle {
-  width: 100%;
+/* ── DayCard sections secondaires (accordéons empilés) ──────────────────── */
+.day-card__extras {
+  border-top: 1px solid var(--ink-1);
+  margin-top: 8px;
+}
+.day-card__extra-details {
+  border-bottom: 1px solid var(--ink-1);
+}
+.day-card__extra-details:last-child { border-bottom: none; }
+
+.day-card__extra-summary {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 18px 6px; /* aligne avec le padding horizontal des .planning-item */
-  border: none;
-  border-top: 1px solid var(--ink-1);
-  background: none;
+  padding: 7px 18px;
   cursor: pointer;
+  list-style: none;
   color: var(--ink-3);
-  font-size: 0.73rem;
-  font-family: inherit;
-  text-align: left;
-  margin-top: 8px;
-  transition: color 0.15s;
+  font-size: 0.76rem;
+  transition: color 0.15s, background 0.15s;
+  user-select: none;
 }
-.day-card__extra-toggle:hover { color: var(--ink); }
-.day-card__extra-toggle__arrow {
-  margin-left: auto;
-  font-size: 0.65rem;
-  opacity: 0.6;
-}
-.day-card__extra-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  max-width: 88px;
-  overflow: hidden;
+.day-card__extra-summary::-webkit-details-marker { display: none; }
+.day-card__extra-summary::marker { display: none; }
+.day-card__extra-summary:hover { color: var(--ink); background: var(--ink-0); }
+.day-card__extra-details[open] .day-card__extra-summary { color: var(--ink); }
+
+.day-card__extra-icon { font-size: 0.95rem; flex-shrink: 0; }
+.day-card__extra-label {
+  flex: 1;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
-.day-card__extra-sep { opacity: 0.35; flex-shrink: 0; }
+/* Petite flèche indiquant l'état ouvert/fermé */
+.day-card__extra-summary::after {
+  content: '▾';
+  font-size: 0.6rem;
+  opacity: 0.5;
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+.day-card__extra-details[open] .day-card__extra-summary::after {
+  transform: rotate(-180deg);
+}
+
+.planning-item--extra { border-top: none; padding-top: 6px; }
 
 /* Méthodologie modal */
 .methode-modal {

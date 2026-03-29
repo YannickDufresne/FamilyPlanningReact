@@ -193,7 +193,6 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const [searchQuery, setSearchQuery] = useState('');
   const [voirTout, setVoirTout] = useState(false);
   const [showSuggestionIA, setShowSuggestionIA] = useState(false);
-  const [expandedExtra, setExpandedExtra] = useState(false);
 
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
@@ -327,156 +326,156 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         {!isWarning && <EvalRow recette={recette} />}
       </div>
 
-      {/* ── Bouton accordéon Entraînement · Activité · Musique ─────────────── */}
-      {(() => {
-        const actNom = activiteAffichee?.nom || '—';
-        const actCourt = actNom.length > 30 ? actNom.substring(0, 28) + '…' : actNom;
-        const exCourt = isRepos ? 'Repos' : (exercices[0]?.nom || '—');
-        const sep = musique?.nom?.indexOf(' - ');
-        const musCourt = sep > 0 ? musique.nom.substring(0, sep) : (musique?.nom || '—');
-        const musTronq = musCourt.length > 22 ? musCourt.substring(0, 20) + '…' : musCourt;
-        return (
-          <button className="day-card__extra-toggle" onClick={() => setExpandedExtra(e => !e)}>
-            <span>🏋️</span>
-            <span className="day-card__extra-pill">{exCourt}</span>
-            <span className="day-card__extra-sep">·</span>
-            <span>🗺</span>
-            <span className="day-card__extra-pill">{actCourt}</span>
-            <span className="day-card__extra-sep">·</span>
-            <span>🎵</span>
-            <span className="day-card__extra-pill">{musTronq}</span>
-            <span className="day-card__extra-toggle__arrow">{expandedExtra ? '▴' : '▾'}</span>
-          </button>
-        );
-      })()}
+      {/* ── Accordéons indépendants : Entraînement · Activité · Musique ──────── */}
+      <div className="day-card__extras">
 
-      {expandedExtra && (<>
-      {/* Entraînement */}
-      <div className="planning-item">
-        <div className="planning-item__label">Entraînement</div>
-        {isRepos ? (
-          <div className="planning-item__name" style={{ fontStyle: 'italic', fontWeight: 400, fontSize: '0.95rem' }}>
-            Repos · récupération
-          </div>
-        ) : (
-          <div className="exercice-list">
-            {exercices.map((ex, i) => (
-              <div key={i} className="exercice-item">
-                {ex.nom}<span style={{ opacity: 0.5, fontSize: '0.75rem' }}> · {ex.duree} min</span>
+        {/* Entraînement */}
+        <details className="day-card__extra-details">
+          <summary className="day-card__extra-summary">
+            <span className="day-card__extra-icon">🏋️</span>
+            <span className="day-card__extra-label">
+              {isRepos ? 'Repos' : (exercices[0]?.nom || '—')}
+            </span>
+          </summary>
+          <div className="planning-item planning-item--extra">
+            {isRepos ? (
+              <div className="planning-item__name" style={{ fontStyle: 'italic', fontWeight: 400, fontSize: '0.95rem' }}>
+                Repos · récupération
               </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Activité */}
-      <div className="planning-item">
-        <div className="planning-item__label activite-label-row">
-          <span>
-            Activité · Québec
-            {activiteAffichee?.incontournable && (
-              <span className="incontournable-badge">⭐ À ne pas manquer</span>
-            )}
-          </span>
-          <div className="activite-mode-toggle">
-            <button
-              className={`mode-btn${modeActivite === 'famille' ? ' mode-btn--active' : ''}`}
-              onClick={() => { onToggleModeActivite('famille'); setIndexFamille(0); }}
-              title="Activité pour toute la famille"
-            >👨‍👩‍👧 Famille</button>
-            <button
-              className={`mode-btn${modeActivite === 'adultes' ? ' mode-btn--active' : ''}`}
-              onClick={() => { onToggleModeActivite('adultes'); setIndexAdultes(0); }}
-              title="Activité adultes seulement"
-            >🍷 Adultes</button>
-          </div>
-        </div>
-        {activiteAffichee ? (
-          <>
-            {activiteAffichee.url ? (
-              <a className="planning-item__name planning-item__link"
-                href={activiteAffichee.url} target="_blank" rel="noopener noreferrer">
-                {activiteAffichee.nom}
-              </a>
             ) : (
-              <div className="planning-item__name">{activiteAffichee.nom}</div>
-            )}
-            {activiteAffichee.lieu && (
-              <div className="planning-item__meta">
-                {activiteAffichee.lieu}
-                {(() => {
-                  const adulte = activiteAffichee.cout_adulte ?? activiteAffichee.cout ?? 0;
-                  const enfant = activiteAffichee.cout_enfant;
-                  if (adulte > 0) return <> · <span className="prix-adulte">{adulte} $ / adulte</span></>;
-                  if (enfant > 0) return <> · <span className="prix-adulte">gratuit adultes</span></>;
-                  return ' · gratuit';
-                })()}
+              <div className="exercice-list">
+                {exercices.map((ex, i) => (
+                  <div key={i} className="exercice-item">
+                    {ex.nom}<span style={{ opacity: 0.5, fontSize: '0.75rem' }}> · {ex.duree} min</span>
+                  </div>
+                ))}
               </div>
             )}
-            {(activiteAffichee.description_generee || activiteAffichee.description) && (
-              <div className="planning-item__meta" style={{ marginTop: 3 }}>
-                {activiteAffichee.description_generee || activiteAffichee.description}
-              </div>
-            )}
-            <PrixFamille activite={activiteAffichee} date={jour.date} />
-            {activiteAffichee.source === 'claude' && (
-              <div className="planning-item__badge">✦ Suggestion IA</div>
-            )}
-            {/* Score de pertinence + explication */}
-            {(() => {
-              const score = modeActivite === 'adultes'
-                ? activiteAffichee.score_adultes
-                : activiteAffichee.score_famille;
-              const preCalc = modeActivite === 'adultes'
-                ? activiteAffichee.explication_adultes
-                : activiteAffichee.explication_famille;
-              const explication = preCalc || genererExplication(activiteAffichee, profils, modeActivite);
-              if (!score && !explication) return null;
-              const couleur = score >= 70 ? 'var(--forest)' : score >= 40 ? 'var(--sage)' : score >= 20 ? 'var(--terra)' : 'var(--ink-3)';
-              return (
-                <div className="activite-pertinence">
-                  {score != null && (
-                    <span className="activite-pertinence__score" style={{ color: couleur }}>
-                      {score}%
-                    </span>
-                  )}
-                  {explication && (
-                    <span className="activite-pertinence__explication">{explication}</span>
-                  )}
-                </div>
-              );
-            })()}
-            {/* Navigation top-3 avec médailles */}
-            {pool.length > 1 && (
-              <div className="activite-rang-nav">
-                {pool.map((a, i) => {
-                  const isCurrent = i === Math.min(idx, pool.length - 1);
-                  return (
-                    <button
-                      key={i}
-                      className={`rang-btn${isCurrent ? ' rang-btn--active' : ''}`}
-                      onClick={() => setIdx(i)}
-                      title={a?.nom}
-                    >
-                      <span className="rang-medal">{RANG_MEDALS[i]}</span>
-                      <span className="rang-label">{RANG_LABELS[i]}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-          </>
-        ) : (
-          <div className="planning-item__empty">Aucun événement planifié</div>
-        )}
-      </div>
+          </div>
+        </details>
 
-      {/* Musique */}
-      <div className="planning-item">
-        <div className="planning-item__label">Musique</div>
-        <MusiqueCard musique={musique} />
+        {/* Activité */}
+        <details className="day-card__extra-details">
+          <summary className="day-card__extra-summary">
+            <span className="day-card__extra-icon">🗺</span>
+            <span className="day-card__extra-label">
+              {activiteAffichee?.nom || 'Aucune activité'}
+            </span>
+          </summary>
+          <div className="planning-item planning-item--extra">
+            <div className="planning-item__label activite-label-row">
+              <span>
+                Activité · Québec
+                {activiteAffichee?.incontournable && (
+                  <span className="incontournable-badge">⭐ À ne pas manquer</span>
+                )}
+              </span>
+              <div className="activite-mode-toggle">
+                <button
+                  className={`mode-btn${modeActivite === 'famille' ? ' mode-btn--active' : ''}`}
+                  onClick={() => { onToggleModeActivite('famille'); setIndexFamille(0); }}
+                  title="Activité pour toute la famille"
+                >👨‍👩‍👧 Famille</button>
+                <button
+                  className={`mode-btn${modeActivite === 'adultes' ? ' mode-btn--active' : ''}`}
+                  onClick={() => { onToggleModeActivite('adultes'); setIndexAdultes(0); }}
+                  title="Activité adultes seulement"
+                >🍷 Adultes</button>
+              </div>
+            </div>
+            {activiteAffichee ? (
+              <>
+                {activiteAffichee.url ? (
+                  <a className="planning-item__name planning-item__link"
+                    href={activiteAffichee.url} target="_blank" rel="noopener noreferrer">
+                    {activiteAffichee.nom}
+                  </a>
+                ) : (
+                  <div className="planning-item__name">{activiteAffichee.nom}</div>
+                )}
+                {activiteAffichee.lieu && (
+                  <div className="planning-item__meta">
+                    {activiteAffichee.lieu}
+                    {(() => {
+                      const adulte = activiteAffichee.cout_adulte ?? activiteAffichee.cout ?? 0;
+                      const enfant = activiteAffichee.cout_enfant;
+                      if (adulte > 0) return <> · <span className="prix-adulte">{adulte} $ / adulte</span></>;
+                      if (enfant > 0) return <> · <span className="prix-adulte">gratuit adultes</span></>;
+                      return ' · gratuit';
+                    })()}
+                  </div>
+                )}
+                {(activiteAffichee.description_generee || activiteAffichee.description) && (
+                  <div className="planning-item__meta" style={{ marginTop: 3 }}>
+                    {activiteAffichee.description_generee || activiteAffichee.description}
+                  </div>
+                )}
+                <PrixFamille activite={activiteAffichee} date={jour.date} />
+                {activiteAffichee.source === 'claude' && (
+                  <div className="planning-item__badge">✦ Suggestion IA</div>
+                )}
+                {(() => {
+                  const score = modeActivite === 'adultes'
+                    ? activiteAffichee.score_adultes
+                    : activiteAffichee.score_famille;
+                  const preCalc = modeActivite === 'adultes'
+                    ? activiteAffichee.explication_adultes
+                    : activiteAffichee.explication_famille;
+                  const explication = preCalc || genererExplication(activiteAffichee, profils, modeActivite);
+                  if (!score && !explication) return null;
+                  const couleur = score >= 70 ? 'var(--forest)' : score >= 40 ? 'var(--sage)' : score >= 20 ? 'var(--terra)' : 'var(--ink-3)';
+                  return (
+                    <div className="activite-pertinence">
+                      {score != null && (
+                        <span className="activite-pertinence__score" style={{ color: couleur }}>{score}%</span>
+                      )}
+                      {explication && (
+                        <span className="activite-pertinence__explication">{explication}</span>
+                      )}
+                    </div>
+                  );
+                })()}
+                {pool.length > 1 && (
+                  <div className="activite-rang-nav">
+                    {pool.map((a, i) => {
+                      const isCurrent = i === Math.min(idx, pool.length - 1);
+                      return (
+                        <button
+                          key={i}
+                          className={`rang-btn${isCurrent ? ' rang-btn--active' : ''}`}
+                          onClick={() => setIdx(i)}
+                          title={a?.nom}
+                        >
+                          <span className="rang-medal">{RANG_MEDALS[i]}</span>
+                          <span className="rang-label">{RANG_LABELS[i]}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="planning-item__empty">Aucun événement planifié</div>
+            )}
+          </div>
+        </details>
+
+        {/* Musique */}
+        <details className="day-card__extra-details">
+          <summary className="day-card__extra-summary">
+            <span className="day-card__extra-icon">🎵</span>
+            <span className="day-card__extra-label">
+              {musique?.nom
+                ? (musique.nom.indexOf(' - ') > 0 ? musique.nom.substring(0, musique.nom.indexOf(' - ')) : musique.nom)
+                : '—'}
+            </span>
+          </summary>
+          <div className="planning-item planning-item--extra">
+            <MusiqueCard musique={musique} />
+          </div>
+        </details>
+
       </div>
-      </>)}
 
       {/* Recherche de recette */}
       {searchOpen && (() => {
