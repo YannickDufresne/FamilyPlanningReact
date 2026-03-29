@@ -81,7 +81,7 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
       const res = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: {
-          'x-api-key': apiKey,
+          'x-api-key': apiKey.trim(),
           'anthropic-version': '2023-06-01',
           'content-type': 'application/json',
           'anthropic-dangerous-client-side-api-key-allowed': 'true',
@@ -91,29 +91,34 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
           max_tokens: 1024,
           messages: [{ role: 'user', content: prompt }],
         }),
+        signal: AbortSignal.timeout(30000),
       });
 
       if (!res.ok) {
-        const errBody = await res.text().catch(() => '');
-        throw new Error(`Erreur API ${res.status}${errBody ? ' — ' + errBody.slice(0, 120) : ''}`);
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error?.message || `Erreur API ${res.status}`);
       }
 
       const data = await res.json();
       const texte = data.content?.[0]?.text || '';
 
-      const jsonMatch = texte.match(/\[[\s\S]*?\]/);
-      if (!jsonMatch) throw new Error('Format inattendu de la réponse Claude');
+      // Regex greedy pour matcher le tableau JSON complet (pas lazy)
+      const jsonMatch = texte.match(/\[[\s\S]*\]/);
+      if (!jsonMatch) throw new Error('Format inattendu — réessaie.');
 
       const parsed = JSON.parse(jsonMatch[0]);
-      if (!Array.isArray(parsed) || parsed.length === 0) throw new Error('Aucune suggestion retournée');
+      if (!Array.isArray(parsed) || parsed.length === 0) throw new Error('Aucune suggestion retournée.');
 
       setSuggestions(parsed);
       setEtat('resultat');
     } catch (e) {
-      const msg = e instanceof TypeError
-        ? 'Erreur réseau (connexion ou CORS) — réessaie dans quelques secondes.'
-        : e.message;
-      setErreur(msg);
+      if (e?.name === 'TimeoutError') {
+        setErreur('La requête a pris trop de temps. Réessaie.');
+      } else if (e instanceof TypeError) {
+        setErreur('Impossible de joindre l\'API. Vérifie ta connexion, ou si tu utilises un bloqueur de publicités (AdGuard, uBlock…) désactive-le temporairement.');
+      } else {
+        setErreur(e.message || 'Erreur inattendue.');
+      }
       setEtat('erreur');
     }
   }
