@@ -164,6 +164,8 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   let compteurVegane = 0;
   const planning = [];
   const recettesUtilisees = new Set(); // anti-doublon sur la semaine
+  const activitesFamilleUtilisees = new Set(); // anti-doublon activités famille cross-jour
+  const activitesAdultesUtilisees = new Set(); // anti-doublon activités adultes cross-jour
   const ingredientsCouvertsForcees = new Set(); // ingrédients forcés déjà couverts par le planning
   const normIng = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
@@ -335,10 +337,17 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     const familleSeen = new Set();
     const topFamille = poolFamille
       .filter(a => { if (familleSeen.has(a.nom)) return false; familleSeen.add(a.nom); return true; })
-      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'famille') + rngJitter() * 0.5 }))
+      .map(a => ({
+        ...a,
+        // Grosse pénalité si déjà utilisée cette semaine → seulement en dernier recours
+        _score: scorerActivite(a, profils, 'famille')
+          - (activitesFamilleUtilisees.has(a.nom) ? 200 : 0)
+          + rngJitter() * 0.5,
+      }))
       .sort((a, b) => b._score - a._score)
       .slice(0, 3);
     const activite = topFamille[0] ?? null;
+    if (activite?.nom) activitesFamilleUtilisees.add(activite.nom);
 
     // ── Pool adultes ──────────────────────────────────────────────────────────
     // Toutes les activités sont éligibles pour adultes (y compris les family-friendly)
@@ -375,10 +384,16 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     const adultesSeen = new Set();
     const topAdultes = poolAdultes
       .filter(a => { if (adultesSeen.has(a.nom)) return false; adultesSeen.add(a.nom); return true; })
-      .map(a => ({ ...a, _score: scorerActivite(a, profils, 'adultes') + rngJitterA() * 0.5 }))
+      .map(a => ({
+        ...a,
+        _score: scorerActivite(a, profils, 'adultes')
+          - (activitesAdultesUtilisees.has(a.nom) ? 200 : 0)
+          + rngJitterA() * 0.5,
+      }))
       .sort((a, b) => b._score - a._score)
       .slice(0, 3);
     const activiteAdultes = topAdultes[0] ?? activite;
+    if (activiteAdultes?.nom) activitesAdultesUtilisees.add(activiteAdultes.nom);
 
     // ── Musique : origine par priorité décroissante ───────────────────────────
     // 1. Filtre d'origine actif (ex: "Japon") → toute la semaine dans cette origine
