@@ -136,56 +136,65 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
       </div>
 
       <div className="sidebar-inner">
-        {/* Régimes + Activités dans un accordéon compact */}
-        <details className="sidebar-avance" open={filtres.nbVegetarien > 0 || filtres.nbVegane > 0}>
-          <summary className="sidebar-avance__toggle">
-            ⚙ Préférences
-            {(filtres.nbVegetarien > 0 || filtres.nbVegane > 0) && (
-              <span className="sidebar-avance__badge">
-                {[filtres.nbVegetarien > 0 && `${filtres.nbVegetarien} végé`, filtres.nbVegane > 0 && `${filtres.nbVegane} vg`].filter(Boolean).join(' · ')}
-              </span>
-            )}
-          </summary>
-          <div className="sidebar-avance__content">
-            <div className="sidebar-section-title" style={{ marginTop: 4 }}>Régimes alimentaires</div>
+        {/* Préférences : régimes, activités, filtres recettes */}
+        {(() => {
+          const badgeParts = [
+            filtres.nbVegetarien > 0 && `${filtres.nbVegetarien} végé`,
+            filtres.nbVegane > 0 && `${filtres.nbVegane} vg`,
+            filtres.nbGratuit > 0 && `${filtres.nbGratuit} gratuit${filtres.nbGratuit > 1 ? 's' : ''}`,
+            filtres.origine !== 'Tous' && filtres.origine,
+          ].filter(Boolean);
+          const isOpen = badgeParts.length > 0;
+          return (
+            <details className="sidebar-avance" open={isOpen}>
+              <summary className="sidebar-avance__toggle">
+                ⚙ Préférences
+                {badgeParts.length > 0 && (
+                  <span className="sidebar-avance__badge">{badgeParts.join(' · ')}</span>
+                )}
+              </summary>
+              <div className="sidebar-avance__content">
+                <div className="sidebar-section-title" style={{ marginTop: 4 }}>Régimes alimentaires</div>
 
-            <div className="control-group">
-              <label className="control-label">
-                Repas végétariens — <strong>{filtres.nbVegetarien} / 7</strong>
-              </label>
-              <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
-                onChange={e => set('nbVegetarien', +e.target.value)} />
-            </div>
+                <div className="control-group">
+                  <label className="control-label">
+                    Repas végétariens — <strong>{filtres.nbVegetarien} / 7</strong>
+                  </label>
+                  <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
+                    onChange={e => set('nbVegetarien', +e.target.value)} />
+                </div>
 
-            <div className="control-group">
-              <label className="control-label">
-                Repas véganes — <strong>{filtres.nbVegane} / 7</strong>
-              </label>
-              <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
-                onChange={e => set('nbVegane', +e.target.value)} />
-            </div>
-          </div>
-        </details>
+                <div className="control-group">
+                  <label className="control-label">
+                    Repas véganes — <strong>{filtres.nbVegane} / 7</strong>
+                  </label>
+                  <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
+                    onChange={e => set('nbVegane', +e.target.value)} />
+                </div>
 
-        <div className="sidebar-section-title">Activités</div>
+                <div className="sidebar-section-title">Activités</div>
 
-        <div className="control-group">
-          <label className="control-label">
-            Sorties gratuites — <strong>{filtres.nbGratuit} / sem.</strong>
-          </label>
-          <input type="range" min={0} max={3} step={1} value={filtres.nbGratuit}
-            onChange={e => set('nbGratuit', +e.target.value)} />
-        </div>
+                <div className="control-group">
+                  <label className="control-label">
+                    Sorties gratuites — <strong>{filtres.nbGratuit} / sem.</strong>
+                  </label>
+                  <input type="range" min={0} max={3} step={1} value={filtres.nbGratuit}
+                    onChange={e => set('nbGratuit', +e.target.value)} />
+                </div>
 
-        <div className="sidebar-section-title">Filtres recettes</div>
+                <div className="sidebar-section-title">Filtres recettes</div>
 
-        <div className="control-group">
-          <label className="control-label">Origine culturelle</label>
-          <select className="sidebar-select" value={filtres.origine} onChange={e => set('origine', e.target.value)}>
-            <option value="Tous">Toutes les origines</option>
-            {origines.map(o => <option key={o} value={o}>{o}</option>)}
-          </select>
-        </div>
+                <div className="control-group">
+                  <label className="control-label">Origine culturelle</label>
+                  <select className="sidebar-select" value={filtres.origine} onChange={e => set('origine', e.target.value)}>
+                    <option value="Tous">Toutes les origines</option>
+                    {origines.map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+              </div>
+            </details>
+          );
+        })()}
 
         {/* Stats coût et temps de la semaine */}
         {stats && (
