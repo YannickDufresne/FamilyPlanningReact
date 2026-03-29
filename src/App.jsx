@@ -105,15 +105,20 @@ export default function App() {
     } catch { return { ajoutees: [], modifiees: {} }; }
   });
 
-  const toutesRecettes = useMemo(
-    () => [...recettes, ...(recettesCustom.ajoutees || [])],
-    [recettesCustom]
-  );
+  const staticNoms = useMemo(() => new Set(recettes.map(r => r.nom)), []);
+
+  const toutesRecettes = useMemo(() => {
+    // Exclure les recettes custom dont le nom existe déjà dans les recettes statiques
+    // (la version statique a toujours les champs image_url / image_aquarelle)
+    const ajouteesNouvelles = (recettesCustom.ajoutees || []).filter(r => !staticNoms.has(r.nom));
+    return [...recettes, ...ajouteesNouvelles];
+  }, [recettesCustom, staticNoms]);
 
   function sauvegarderRecetteCustom(recette) {
     setRecettesCustom(prev => {
-      // Éviter les doublons par nom
+      // Éviter les doublons : ni dans les recettes custom déjà sauvegardées, ni dans les recettes statiques
       if (prev.ajoutees.some(r => r.nom === recette.nom)) return prev;
+      if (staticNoms.has(recette.nom)) return prev; // La recette statique existe déjà avec ses images
       const next = { ...prev, ajoutees: [...prev.ajoutees, recette] };
       localStorage.setItem('recettes_custom_v1', JSON.stringify(next));
       syncWrite({ recettesCustom: next });
