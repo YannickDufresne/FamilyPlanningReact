@@ -3673,6 +3673,13 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .sidebar-avance__toggle::-webkit-details-marker { display: none; }
 .sidebar-avance__toggle:hover { color: var(--ink); }
 .sidebar-avance__content { padding-top: 6px; }
+.sidebar-avance__badge {
+  margin-left: auto;
+  font-size: 0.65rem; font-weight: 700;
+  color: var(--forest);
+  background: var(--sage-light);
+  border-radius: 99px; padding: 1px 8px;
+}
 
 /* ── Recette manquante ───────────────────────────────────────────────────── */
 .recette-manquante {
@@ -3865,7 +3872,7 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 0 6px;
+  padding: 8px 18px 6px; /* aligne avec le padding horizontal des .planning-item */
   border: none;
   border-top: 1px solid var(--ink-1);
   background: none;

@@ -136,23 +136,36 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
       </div>
 
       <div className="sidebar-inner">
-        <div className="sidebar-section-title">Régimes alimentaires</div>
+        {/* Régimes + Activités dans un accordéon compact */}
+        <details className="sidebar-avance" open={filtres.nbVegetarien > 0 || filtres.nbVegane > 0}>
+          <summary className="sidebar-avance__toggle">
+            ⚙ Préférences
+            {(filtres.nbVegetarien > 0 || filtres.nbVegane > 0) && (
+              <span className="sidebar-avance__badge">
+                {[filtres.nbVegetarien > 0 && `${filtres.nbVegetarien} végé`, filtres.nbVegane > 0 && `${filtres.nbVegane} vg`].filter(Boolean).join(' · ')}
+              </span>
+            )}
+          </summary>
+          <div className="sidebar-avance__content">
+            <div className="sidebar-section-title" style={{ marginTop: 4 }}>Régimes alimentaires</div>
 
-        <div className="control-group">
-          <label className="control-label">
-            Repas végétariens — <strong>{filtres.nbVegetarien} / 7</strong>
-          </label>
-          <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
-            onChange={e => set('nbVegetarien', +e.target.value)} />
-        </div>
+            <div className="control-group">
+              <label className="control-label">
+                Repas végétariens — <strong>{filtres.nbVegetarien} / 7</strong>
+              </label>
+              <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
+                onChange={e => set('nbVegetarien', +e.target.value)} />
+            </div>
 
-        <div className="control-group">
-          <label className="control-label">
-            Repas véganes — <strong>{filtres.nbVegane} / 7</strong>
-          </label>
-          <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
-            onChange={e => set('nbVegane', +e.target.value)} />
-        </div>
+            <div className="control-group">
+              <label className="control-label">
+                Repas véganes — <strong>{filtres.nbVegane} / 7</strong>
+              </label>
+              <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
+                onChange={e => set('nbVegane', +e.target.value)} />
+            </div>
+          </div>
+        </details>
 
         <div className="sidebar-section-title">Activités</div>
 

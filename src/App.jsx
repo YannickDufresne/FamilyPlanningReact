@@ -49,8 +49,8 @@ function forceesKey(semaine)      { return `fp_forcees_${semaine}`; }
 function semaineTimestampKey(s)   { return `fp_ts_${s}`; }
 
 const DEFAULT_FILTRES = {
-  nbVegetarien: 2,
-  nbVegane: 1,
+  nbVegetarien: 1,
+  nbVegane: 0,
   nbGratuit: 1,
   origine: 'Tous',
   activerCout: false,
