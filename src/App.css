@@ -578,7 +578,7 @@ input[type="range"] {
 
 /* ── Bouton Optimiser IA ───────────────────────────────────────────────────── */
 .btn-optimiser-ia {
-  grid-column: 1 / -1;
+  flex-basis: 100%;
   width: 100%;
   background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 100%);
   color: white;
@@ -3751,7 +3751,7 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 
 /* ── Stats coût/temps dans la sidebar ───────────────────────────────────── */
 .sidebar-semaine-stats {
-  display: flex; gap: 10px; margin-bottom: 8px;
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;
 }
 .semaine-stat-item {
   flex: 1; display: flex; gap: 8px; align-items: flex-start;
