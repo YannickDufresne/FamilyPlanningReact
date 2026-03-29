@@ -184,13 +184,13 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         <button
           className={`day-card__lock ${estVerrouille ? 'day-card__lock--locked' : ''}`}
           onClick={onToggleLock}
-          title={estVerrouille ? 'Déverrouiller ce jour' : 'Verrouiller ce jour'}
+          title={estVerrouille ? 'Modifier ce repas' : 'Confirmer ce repas'}
         >
-          {estVerrouille ? '🔒' : '🔓'}
+          {estVerrouille ? '✅' : '○'}
         </button>
       ) : estAutoVerrouille ? (
-        <span className="day-card__lock day-card__lock--locked day-card__lock--auto" title="Jour passé — verrouillé automatiquement">
-          🔒
+        <span className="day-card__lock day-card__lock--locked day-card__lock--auto" title="Jour passé">
+          ✔
         </span>
       ) : null}
       {onChoisirRecette && !isWarning && !estVerrouille && (

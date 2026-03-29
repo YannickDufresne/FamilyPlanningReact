@@ -36,17 +36,92 @@ function BoutonRebrasser({ onRebrasser }) {
       onMouseDown={startHold} onMouseUp={endHold} onMouseLeave={endHold}
       onTouchStart={startHold} onTouchEnd={endHold} onTouchCancel={endHold}
       disabled={!onRebrasser}
-      title="Maintenir pour rebrasser"
+      title="Maintenir pour proposer d'autres recettes"
     >
       <span className="btn-rebrasser__text">
-        {progress > 0.05 ? 'Maintenir…' : 'Rebrasser les cartes'}
+        {progress > 0.05 ? 'Maintenir…' : 'Proposer d\'autres recettes'}
       </span>
       <span className="btn-rebrasser__bar" style={{ transform: `scaleX(${progress})` }} />
     </button>
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule }) {
+// ── Barre de recherche d'ingrédients ─────────────────────────────────────────
+function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
+  const [query, setQuery] = useState('');
+  const [open, setOpen] = useState(false);
+
+  // Construire la liste de tous les ingrédients uniques depuis les recettes
+  const tousIngredients = useMemo(() => {
+    const set = new Set();
+    recettes.forEach(r => {
+      (r.ingredients || '').split(',').map(s => s.trim()).filter(Boolean).forEach(ing => set.add(ing));
+    });
+    return [...set].sort((a, b) => a.localeCompare(b, 'fr'));
+  }, []);
+
+  const suggestions = useMemo(() => {
+    if (!query || query.length < 2) return [];
+    const q = query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return tousIngredients
+      .filter(ing => {
+        const n = ing.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        return n.includes(q) && !ingredientsForces.includes(ing);
+      })
+      .slice(0, 8);
+  }, [query, tousIngredients, ingredientsForces]);
+
+  function handleSelect(ing) {
+    onAdd(ing);
+    setQuery('');
+    setOpen(false);
+  }
+
+  return (
+    <div className="ing-forces">
+      <div className="sidebar-section-title">Ingrédients à inclure</div>
+      <p className="ing-forces__desc">
+        Les recettes proposées chercheront à inclure ces ingrédients.
+      </p>
+
+      {/* Tags des ingrédients sélectionnés */}
+      {ingredientsForces.length > 0 && (
+        <div className="ing-forces__tags">
+          {ingredientsForces.map(ing => (
+            <span key={ing} className="ing-forces__tag">
+              {ing}
+              <button className="ing-forces__tag-remove" onClick={() => onRemove(ing)} title="Retirer">×</button>
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Barre de recherche */}
+      <div className="ing-forces__search-wrap">
+        <input
+          type="text"
+          className="ing-forces__input"
+          placeholder="Rechercher un ingrédient…"
+          value={query}
+          onChange={e => { setQuery(e.target.value); setOpen(true); }}
+          onFocus={() => setOpen(true)}
+          onBlur={() => setTimeout(() => setOpen(false), 150)}
+        />
+        {open && suggestions.length > 0 && (
+          <ul className="ing-forces__suggestions">
+            {suggestions.map(ing => (
+              <li key={ing} className="ing-forces__suggestion" onMouseDown={() => handleSelect(ing)}>
+                + {ing}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce }) {
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
@@ -138,13 +213,25 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
 
         <hr className="sidebar-rule" />
 
+        {/* Ingrédients à inclure */}
+        {onAddIngredientForce && (
+          <>
+            <RechercheIngredients
+              ingredientsForces={ingredientsForces}
+              onAdd={onAddIngredientForce}
+              onRemove={onRemoveIngredientForce}
+            />
+            <hr className="sidebar-rule" />
+          </>
+        )}
+
         {lectureSeule ? (
           <p className="sidebar-lecture-seule">📖 Semaine passée — lecture seule</p>
         ) : semaineLockee ? (
           <div className="semaine-lockee">
-            <span className="semaine-lockee__label">🔒 Semaine verrouillée</span>
+            <span className="semaine-lockee__label">✅ Semaine confirmée</span>
             <button className="semaine-lockee__btn-unlock" onClick={onDelockerSemaine}>
-              Déverrouiller
+              Modifier
             </button>
           </div>
         ) : (
@@ -152,7 +239,7 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
             <BoutonRebrasser onRebrasser={onRebrasser} />
             {onLockerSemaine && (
               <button className="btn-locker-semaine" onClick={onLockerSemaine}>
-                🔒 Verrouiller la semaine
+                ✅ Confirmer la semaine
               </button>
             )}
           </>

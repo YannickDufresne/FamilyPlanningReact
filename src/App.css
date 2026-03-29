@@ -3491,3 +3491,142 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   margin-bottom: 10px; padding-bottom: 6px;
   border-bottom: 2px solid var(--ink-1);
 }
+
+/* ── Ingrédients à inclure (Sidebar) ─────────────────────────────────────── */
+.ing-forces { margin-bottom: 4px; }
+.ing-forces__desc { font-size: 0.75rem; color: var(--ink-4); margin: 2px 0 8px; line-height: 1.4; }
+.ing-forces__tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+.ing-forces__tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--forest); color: white;
+  border-radius: 99px; padding: 3px 8px 3px 10px;
+  font-size: 0.72rem; font-weight: 600;
+}
+.ing-forces__tag-remove {
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  cursor: pointer; padding: 0; font-size: 1rem; line-height: 1;
+  display: flex; align-items: center;
+}
+.ing-forces__tag-remove:hover { color: white; }
+.ing-forces__search-wrap { position: relative; }
+.ing-forces__input {
+  width: 100%; box-sizing: border-box;
+  border: 1.5px solid var(--ink-1); border-radius: 6px;
+  padding: 6px 10px; font-size: 0.8rem; font-family: inherit;
+  background: var(--paper); color: var(--ink);
+}
+.ing-forces__input:focus { outline: none; border-color: var(--forest); }
+.ing-forces__suggestions {
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: white; border: 1.5px solid var(--ink-1);
+  border-top: none; border-radius: 0 0 6px 6px;
+  list-style: none; margin: 0; padding: 4px 0;
+  z-index: 100; max-height: 200px; overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.ing-forces__suggestion {
+  padding: 6px 12px; font-size: 0.78rem; cursor: pointer; color: var(--forest);
+}
+.ing-forces__suggestion:hover { background: var(--ink-0); }
+
+/* ── GroceryList redesign ─────────────────────────────────────────────────── */
+.epicerie-liste-section { margin-bottom: 40px; }
+.epicerie-totaux {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin: 12px 0; padding: 12px 16px;
+  background: var(--ink-0); border-radius: 8px;
+}
+.epicerie-total {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.epicerie-total__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-4); }
+.epicerie-total__montant { font-size: 1.2rem; font-weight: 800; color: var(--ink); }
+.epicerie-total--propose .epicerie-total__montant { color: var(--ink-3); }
+.epicerie-legende {
+  display: flex; gap: 16px; font-size: 0.72rem;
+  margin-bottom: 10px; color: var(--ink-4);
+}
+.epicerie-legende__choisi::before  { content: '●'; color: var(--forest); margin-right: 4px; }
+.epicerie-legende__propose::before { content: '●'; color: var(--ink-2); margin-right: 4px; }
+.epicerie-item--propose { opacity: 0.55; }
+.epicerie-item--propose .epicerie-item__nom { font-style: italic; }
+
+/* Bouton "Inclure" dans les items */
+.epicerie-item__force-btn {
+  margin-left: auto; flex-shrink: 0;
+  background: none; border: 1.5px solid var(--forest);
+  color: var(--forest); border-radius: 99px;
+  font-size: 0.68rem; font-weight: 700; cursor: pointer;
+  padding: 2px 8px; white-space: nowrap;
+}
+.epicerie-item__force-btn:hover { background: var(--forest); color: white; }
+.epicerie-item__force-active {
+  margin-left: auto; flex-shrink: 0;
+  font-size: 0.68rem; font-weight: 700; color: var(--forest);
+  white-space: nowrap;
+}
+
+/* ── Aubaines incontournables ─────────────────────────────────────────────── */
+.epicerie-page__titre {
+  font-size: 2rem; font-weight: 800; margin-bottom: 32px; color: var(--ink);
+}
+.aubaines-top-section { margin-top: 40px; }
+.aubaines-top-section__header { margin-bottom: 20px; }
+.aubaines-top-section__titre {
+  font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 4px;
+}
+.aubaines-top-section__sous {
+  font-size: 0.82rem; color: var(--ink-4); margin: 0;
+}
+.aubaines-top-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+}
+.aubaine-top-card {
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--ink-1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex; flex-direction: column;
+  transition: box-shadow .15s;
+}
+.aubaine-top-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.aubaine-top-card__store {
+  padding: 4px 12px;
+  font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.08em; color: white;
+}
+.aubaine-top-card__body {
+  padding: 10px 12px; flex: 1; position: relative;
+}
+.aubaine-top-card__nom {
+  font-size: 0.82rem; font-weight: 600; color: var(--ink);
+  line-height: 1.3; margin-bottom: 6px;
+}
+.aubaine-top-card__prix-row {
+  display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+}
+.aubaine-top-card__prix {
+  font-size: 1.1rem; font-weight: 800; color: var(--forest);
+}
+.aubaine-top-card__reg {
+  font-size: 0.72rem; color: var(--ink-3); text-decoration: line-through;
+}
+.aubaine-top-card__badge {
+  display: inline-block;
+  background: var(--terra); color: white;
+  font-size: 0.75rem; font-weight: 800;
+  padding: 2px 8px; border-radius: 99px;
+  margin-top: 6px;
+}
+.aubaine-top-card__rabais {
+  font-size: 0.72rem; color: var(--ink-4); margin-top: 4px;
+}
+.aubaine-top-card__add {
+  margin: 0 12px 12px;
+  background: none; border: 1.5px solid currentColor;
+  color: var(--forest); border-radius: 99px;
+  font-size: 0.72rem; font-weight: 700;
+  cursor: pointer; padding: 4px 12px; align-self: flex-start;
+}
+.aubaine-top-card__add:hover { background: var(--forest); color: white; }

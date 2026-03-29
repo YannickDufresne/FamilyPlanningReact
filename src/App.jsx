@@ -97,6 +97,29 @@ export default function App() {
     } catch { return new Map(); }
   });
 
+  // Ingrédients à inclure (globaux, pas par semaine)
+  const [ingredientsForces, setIngredientsForces] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('fp_ingredients_forces') || '[]'); }
+    catch { return []; }
+  });
+
+  function addIngredientForce(ing) {
+    setIngredientsForces(prev => {
+      if (prev.includes(ing)) return prev;
+      const next = [...prev, ing];
+      localStorage.setItem('fp_ingredients_forces', JSON.stringify(next));
+      return next;
+    });
+  }
+
+  function removeIngredientForce(ing) {
+    setIngredientsForces(prev => {
+      const next = prev.filter(f => f !== ing);
+      localStorage.setItem('fp_ingredients_forces', JSON.stringify(next));
+      return next;
+    });
+  }
+
   // ── Cloud sync ────────────────────────────────────────────────────────────
   useEffect(() => {
     if (!authentifie) return;
@@ -256,10 +279,11 @@ export default function App() {
       joursVerrouilles: estSemaineActuelle ? tousJoursVerrouilles : new Set(),
       planningActuel: planningRef.current,
       recettesForcees: estSemaineActuelle ? recettesForcees : new Map(),
+      ingredientsForces,
     });
     planningRef.current = result;
     return result;
-  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees]);
+  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees, ingredientsForces]);
 
   // ── Planning semaines à venir (déterministe par date) ─────────────────────
   const planningFutur = useMemo(() => {
@@ -272,11 +296,11 @@ export default function App() {
       profils,
       joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
+      ingredientsForces,
     });
-  }, [estSemaineAVenir, semaineVue, profils, tousJoursVerrouilles, recettesForcees]);
+  }, [estSemaineAVenir, semaineVue, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
 
   // ── Planning semaine calendrier courante quand meta a avancé (sam/dim) ────
-  // Ex : vendredi soir meta passe à semaine+1, mais sam/dim sont encore modifiables
   const planningContenantAujourdhui = useMemo(() => {
     if (!estSemaineContenantAujourd || estSemaineActuelle) return null;
     return genererPlanning({
@@ -287,8 +311,9 @@ export default function App() {
       profils,
       joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
+      ingredientsForces,
     });
-  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, profils, tousJoursVerrouilles, recettesForcees]);
+  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
 
   // ── Historique ───────────────────────────────────────────────────────────────
   // Sauvegarde automatique du planning courant
@@ -488,7 +513,13 @@ export default function App() {
       ) : view === 'activites' ? (
         <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} profils={profils} />
       ) : view === 'epicerie' ? (
-        <EpiceriePage planning={planningVue} onRetour={() => setView('planning')} />
+        <EpiceriePage
+          planning={planningVue}
+          joursChoisis={joursVerrouilles}
+          ingredientsForces={ingredientsForces}
+          onAddIngredientForce={addIngredientForce}
+          onRetour={() => setView('planning')}
+        />
       ) : (
         <div className="layout">
           <Sidebar
@@ -500,6 +531,9 @@ export default function App() {
             semaineLockee={semaineLockee}
             stats={stats}
             lectureSeule={!estSemaineEditable}
+            ingredientsForces={ingredientsForces}
+            onAddIngredientForce={addIngredientForce}
+            onRemoveIngredientForce={removeIngredientForce}
           />
           <main className="main-content">
             {/* Navigation entre semaines */}

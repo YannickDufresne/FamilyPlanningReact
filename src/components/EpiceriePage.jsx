@@ -1,155 +1,129 @@
 import { useMemo } from 'react';
 import aubaines from '../data/aubaines.json';
-import recettesData from '../data/recettes.json';
-import { genererListeEpicerie } from '../utils/planning';
 import GroceryList from './GroceryList';
 
 // ── Normalise une chaîne pour comparaison ────────────────────────────────────
-function normaliser(str) {
-  return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+function norm(str) {
+  return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-// ── Matching ingrédient ↔ aubaine ─────────────────────────────────────────────
-function matchDeal(ingredient, deal) {
-  const ingL = normaliser(ingredient);
-  return (deal.mots_cles || []).some(mc => {
-    const mcL = normaliser(mc);
-    return ingL.includes(mcL) || mcL.includes(ingL.split(' ')[0]);
-  });
+// ── Extraire le % de rabais d'un deal ─────────────────────────────────────────
+function extractRabaisPct(deal) {
+  if (deal.rabais) {
+    const m = deal.rabais.match(/(\d+)\s*%/);
+    if (m) return parseInt(m[1]);
+  }
+  if (deal.prix_regulier && deal.prix && deal.prix > 0) {
+    return Math.round((1 - deal.prix / deal.prix_regulier) * 100);
+  }
+  return 0;
 }
 
-// ── Trouve les recettes compatibles avec un deal (via ingrédients) ────────────
-function trouverRecettesCompatibles(deal, recettes) {
-  const compatible = recettes.filter(r => {
-    const ing = (r.ingredients || '').toLowerCase();
-    return (deal.mots_cles || []).some(mc => {
-      const mcL = normaliser(mc);
-      return ing.includes(mcL);
-    });
-  });
-  return compatible.slice(0, 3).map(r => r.nom);
-}
+// Couleur par magasin
+const STORE_COULEUR = {
+  Maxi:   '#e3142c',
+  Costco: '#00529F',
+  Metro:  '#e8000d',
+  Adonis: '#2d6a2d',
+};
 
-// ── Carte d'aubaine ───────────────────────────────────────────────────────────
-function AubaineCard({ deal, store, variant = '' }) {
-  const recettesCompat = useMemo(
-    () => trouverRecettesCompatibles(deal, recettesData),
-    [deal]
-  );
+// ── Carte d'aubaine incontournable ───────────────────────────────────────────
+function AubaineTopCard({ deal, pct, onAddIngredient }) {
+  const couleur = STORE_COULEUR[deal.magasin] || '#666';
+  const motCle = (deal.mots_cles || [])[0] || deal.nom;
 
   return (
-    <div className={`aubaine-card aubaine-card--${store}${variant ? ` aubaine-card--${variant}` : ''}`}>
-      <div className="aubaine-card__store">{store === 'maxi' ? 'Maxi' : store === 'costco' ? 'Costco' : store}</div>
-      <div className="aubaine-card__nom">{deal.nom}</div>
-      <div className="aubaine-card__prix">{deal.prix_texte || '—'}</div>
-      {deal.rabais && <div className="aubaine-card__rabais">{deal.rabais}</div>}
-      {recettesCompat.length > 0 && (
-        <div className="aubaine-card__recettes">
-          <div className="aubaine-card__recettes-label">Recettes compatibles</div>
-          {recettesCompat.map(nom => (
-            <span key={nom} className="aubaine-card__recette-pill">{nom}</span>
-          ))}
+    <div className="aubaine-top-card" style={{ '--store-color': couleur }}>
+      <div className="aubaine-top-card__store" style={{ background: couleur }}>
+        {deal.magasin}
+      </div>
+      <div className="aubaine-top-card__body">
+        <div className="aubaine-top-card__nom">{deal.nom}</div>
+        <div className="aubaine-top-card__prix-row">
+          <span className="aubaine-top-card__prix">{deal.prix_texte || '—'}</span>
+          {deal.prix_regulier_texte && (
+            <span className="aubaine-top-card__reg">{deal.prix_regulier_texte}</span>
+          )}
         </div>
+        {pct > 0 && (
+          <div className="aubaine-top-card__badge">−{pct}%</div>
+        )}
+        {deal.rabais && !deal.rabais.includes('%') && (
+          <div className="aubaine-top-card__rabais">{deal.rabais}</div>
+        )}
+      </div>
+      {onAddIngredient && (
+        <button
+          className="aubaine-top-card__add"
+          onClick={() => onAddIngredient(motCle)}
+          title={`Ajouter "${motCle}" aux ingrédients à inclure`}
+        >
+          + Inclure
+        </button>
       )}
     </div>
   );
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function EpiceriePage({ planning, onRetour }) {
-  const ingredients = useMemo(() => genererListeEpicerie(planning), [planning]);
+export default function EpiceriePage({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce, onRetour }) {
 
-  const allDeals = useMemo(() => [
-    ...(aubaines.maxi || []).map(d => ({ ...d, _store: 'maxi' })),
-    ...(aubaines.costco || []).map(d => ({ ...d, _store: 'costco' })),
+  // Tous les deals de toutes les enseignes
+  const tousDeals = useMemo(() => [
+    ...(aubaines.maxi   || []).map(d => ({ ...d, magasin: 'Maxi'   })),
+    ...(aubaines.metro  || []).map(d => ({ ...d, magasin: 'Metro'  })),
+    ...(aubaines.adonis || []).map(d => ({ ...d, magasin: 'Adonis' })),
+    ...(aubaines.costco || []).map(d => ({ ...d, magasin: 'Costco' })),
   ], []);
 
-  // Aubaines bonus : deals qui ne matchent AUCUN ingrédient du planning
-  const bonusDeals = useMemo(() =>
-    allDeals.filter(deal => !ingredients.some(ing => matchDeal(ing, deal))),
-    [allDeals, ingredients]
-  );
+  // Top aubaines : triées par % rabais décroissant, avec prix réel
+  const topAubaines = useMemo(() => {
+    return tousDeals
+      .filter(d => d.prix || d.prix_texte)
+      .map(d => ({ deal: d, pct: extractRabaisPct(d) }))
+      .sort((a, b) => b.pct - a.pct)
+      .slice(0, 20);
+  }, [tousDeals]);
 
-  const maxiDeals = (aubaines.maxi || []);
-  const costcoDeals = (aubaines.costco || []);
-  const hasAubaines = maxiDeals.length > 0 || costcoDeals.length > 0;
+  const hasAubaines = topAubaines.length > 0;
 
   return (
     <div className="epicerie-page">
-      {/* Bouton retour */}
       <button className="epicerie-page__back" onClick={onRetour}>
         ← Retour au planning
       </button>
 
-      <h1 className="aubaines-section__titre" style={{ marginBottom: '32px', fontSize: '2.2rem' }}>
-        🛒 Épicerie
-      </h1>
+      <h1 className="epicerie-page__titre">🛒 Épicerie de la semaine</h1>
 
-      {/* Section Aubaines de la semaine */}
+      {/* ── Section 1 : Ma liste d'épicerie ─────────────────────────────── */}
+      <GroceryList
+        planning={planning}
+        joursChoisis={joursChoisis}
+        ingredientsForces={ingredientsForces}
+        onAddIngredientForce={onAddIngredientForce}
+      />
+
+      {/* ── Section 2 : Aubaines incontournables ─────────────────────────── */}
       {hasAubaines && (
-        <div className="aubaines-section">
-          <h2 className="aubaines-section__titre">Aubaines de la semaine</h2>
-          <p className="aubaines-section__sous-titre">
-            Soldes Maxi et Costco · semaine du {aubaines.semaine || '—'}
-          </p>
-
-          <div className="aubaines-stores-grid">
-            {/* Colonne Maxi */}
-            {maxiDeals.length > 0 && (
-              <div className="aubaines-store-section">
-                <div className="aubaines-store-section__header">
-                  <span style={{ color: '#e3142c' }}>■</span>
-                  <span>Maxi — René-Lévesque</span>
-                  <span style={{ marginLeft: 'auto', fontWeight: 400, opacity: 0.6 }}>
-                    {maxiDeals.length} soldes
-                  </span>
-                </div>
-                <div className="aubaines-grid">
-                  {maxiDeals.map((deal, i) => (
-                    <AubaineCard key={i} deal={deal} store="maxi" />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Colonne Costco */}
-            {costcoDeals.length > 0 && (
-              <div className="aubaines-store-section">
-                <div className="aubaines-store-section__header">
-                  <span style={{ color: '#00529F' }}>■</span>
-                  <span>Costco</span>
-                  <span style={{ marginLeft: 'auto', fontWeight: 400, opacity: 0.6 }}>
-                    {costcoDeals.length} soldes
-                  </span>
-                </div>
-                <div className="aubaines-grid">
-                  {costcoDeals.map((deal, i) => (
-                    <AubaineCard key={i} deal={deal} store="costco" />
-                  ))}
-                </div>
-              </div>
-            )}
+        <section className="aubaines-top-section">
+          <div className="aubaines-top-section__header">
+            <h2 className="aubaines-top-section__titre">🏷️ Aubaines incontournables</h2>
+            <p className="aubaines-top-section__sous">
+              Meilleures offres tous commerces · semaine du {aubaines.semaine || '—'}
+            </p>
           </div>
-        </div>
-      )}
-
-      {/* Section Aubaines bonus */}
-      {bonusDeals.length > 0 && (
-        <div className="aubaines-section">
-          <h2 className="aubaines-section__titre">💡 Aubaines à saisir cette semaine</h2>
-          <p className="aubaines-section__sous-titre">
-            Ces produits sont en solde mais pas dans vos recettes — profitez-en !
-          </p>
-          <div className="aubaines-grid">
-            {bonusDeals.map((deal, i) => (
-              <AubaineCard key={i} deal={deal} store={deal._store} variant="bonus" />
+          <div className="aubaines-top-grid">
+            {topAubaines.map(({ deal, pct }, i) => (
+              <AubaineTopCard
+                key={i}
+                deal={deal}
+                pct={pct}
+                onAddIngredient={onAddIngredientForce}
+              />
             ))}
           </div>
-        </div>
+        </section>
       )}
-
-      {/* Liste d'épicerie complète */}
-      <GroceryList planning={planning} />
     </div>
   );
 }

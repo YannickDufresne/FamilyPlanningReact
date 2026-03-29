@@ -120,7 +120,7 @@ function shuffleSeeded(arr, seed) {
   return a;
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees }) {
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces }) {
   const { nbVegetarien, nbVegane, nbGratuit = 1, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
@@ -164,6 +164,8 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   let compteurVegane = 0;
   const planning = [];
   const recettesUtilisees = new Set(); // anti-doublon sur la semaine
+  const ingredientsCouvertsForcees = new Set(); // ingrédients forcés déjà couverts par le planning
+  const normIng = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   for (let i = 0; i < 7; i++) {
     // If day is locked, keep current recipe + update counters
@@ -172,6 +174,10 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       planning.push(jourExistant);
       const r = jourExistant.recette;
       if (r?.nom) recettesUtilisees.add(r.nom);
+      if (r?.ingredients && ingredientsForces?.length) {
+        const ings = normIng(r.ingredients);
+        ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees.add(f); });
+      }
       if (r?.regime_alimentaire === 'omnivore') compteurOmnivore++;
       else if (r?.regime_alimentaire === 'végétarien') compteurVegetarien++;
       else if (r?.regime_alimentaire === 'végane') compteurVegane++;
@@ -207,7 +213,19 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // Exclure les recettes déjà utilisées cette semaine (anti-doublon)
     const recettesDispoUniques = recettesDispo.filter(r => !recettesUtilisees.has(r.nom));
     // Si l'exclusion vide complètement le pool, on accepte les doublons plutôt que rien
-    const poolRecettes = recettesDispoUniques.length > 0 ? recettesDispoUniques : recettesDispo;
+    let poolRecettes = recettesDispoUniques.length > 0 ? recettesDispoUniques : recettesDispo;
+
+    // ── Priorité aux ingrédients forcés non encore couverts ───────────────────
+    if (ingredientsForces && ingredientsForces.length > 0) {
+      const nonCoverts = ingredientsForces.filter(f => !ingredientsCouvertsForcees.has(f));
+      if (nonCoverts.length > 0) {
+        const avecForce = poolRecettes.filter(r => {
+          const ings = normIng(r.ingredients || '');
+          return nonCoverts.some(f => ings.includes(normIng(f)));
+        });
+        if (avecForce.length > 0) poolRecettes = avecForce;
+      }
+    }
 
     // ── Recette forcée (choix manuel de l'utilisateur) ────────────────────────
     let recetteForcee = null;
@@ -233,6 +251,12 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
         else if (recetteJour.regime_alimentaire === 'végétarien') compteurVegetarien++;
         else if (recetteJour.regime_alimentaire === 'végane')     compteurVegane++;
       }
+    }
+
+    // Marquer les ingrédients forcés maintenant couverts
+    if (ingredientsForces?.length && recetteJour?.ingredients) {
+      const ings = normIng(recetteJour.ingredients);
+      ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees.add(f); });
     }
 
     // ── Exercices ─────────────────────────────────────────────────────────────

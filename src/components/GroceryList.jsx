@@ -2,13 +2,15 @@ import { useState, useMemo } from 'react';
 import aubaines from '../data/aubaines.json';
 import { genererListeEpicerie } from '../utils/planning';
 
-// ── Routage par magasin (client-side, toujours à jour) ───────────────────────
-// Règles par priorité décroissante. Tout le reste → Maxi.
-function routerMagasin(ingredient) {
-  const ing = ingredient.toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // sans accents pour matching
+// ── Normalisation ─────────────────────────────────────────────────────────────
+function norm(str) {
+  return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 
-  // LUFA : produits frais locaux, bio, laitiers, oeufs, herbes fraîches
+// ── Routage par magasin ───────────────────────────────────────────────────────
+function routerMagasin(ingredient) {
+  const ing = norm(ingredient);
+
   if (/\b(carotte|courgette|brocoli|chou|laitue|concombre|poivron|celeri|radis|betterave|navet|poireau|asperge|haricot vert|endive|roquette|mesclun|epinard|potiron|courge|butternut|fenouil|panais|aubergine|artichaut)\b/.test(ing)) return 'lufa';
   if (/\b(tomate fraiche|tomate cerise|tomates fraiches)\b/.test(ing)) return 'lufa';
   if (/\b(basilic|persil|coriandre|menthe|aneth|estragon|ciboulette|sarriette)\b/.test(ing) && !/seche|sec|poudre|moulu/.test(ing)) return 'lufa';
@@ -18,7 +20,6 @@ function routerMagasin(ingredient) {
   if (/\b(yogourt|kefir|creme sure|fromage frais|ricotta|quark|cottage)\b/.test(ing)) return 'lufa';
   if (/\b(pain artisan|pain de campagne|baguette|pain au levain)\b/.test(ing)) return 'lufa';
 
-  // COSTCO : achats en gros habituels, grands formats
   if (/\b(parmesan|pecorino|parmigiano|romano)\b/.test(ing)) return 'costco';
   if (/\b(huile (d.)?olive|huile olive)\b/.test(ing)) return 'costco';
   if (/\b(saumon(?! fume))\b/.test(ing)) return 'costco';
@@ -30,16 +31,15 @@ function routerMagasin(ingredient) {
   if (/\b(beurre d.arachide|beurre d'amande)\b/.test(ing)) return 'costco';
   if (/\b(vinaigre balsamique)\b/.test(ing)) return 'costco';
 
-  // AUTRES : ingrédients spécialisés, épiceries ethniques ou en ligne
   if (/\b(capre|anchois|miso|wakame|nori|wasabi|sriracha|tahini|harissa|sumac|za.atar|tamari|sauce poisson|fish sauce|citronnelle|galanga|kaffir|chermoula|dukkah|ras el hanout|gochujang|doubanjiang|shaoxing|mirin|dashi|kombu|bonito)\b/.test(ing)) return 'autres';
   if (/\b(fleur de sel|sel de guerande|truffe|huile de truffe)\b/.test(ing)) return 'autres';
 
   return 'maxi';
 }
 
-// ── Prix Lufa estimés par catégorie ───────────────────────────────────────────
+// ── Prix Lufa estimés par catégorie ──────────────────────────────────────────
 function estimerPrixLufa(ingredient) {
-  const ing = ingredient.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const ing = norm(ingredient);
   if (/oeuf/.test(ing))                               return { prix: 6.99, unite: '12 unités' };
   if (/lait/.test(ing))                               return { prix: 4.49, unite: '2L' };
   if (/basilic|persil|coriandre|herbe/.test(ing))     return { prix: 2.99, unite: 'bouquet' };
@@ -57,127 +57,70 @@ function estimerPrixLufa(ingredient) {
   return { prix: 3.79, unite: '1 unité' };
 }
 
-// ── Matching ingrédient ↔ aubaine (Maxi ou Costco) ───────────────────────────
+// ── Matching ingrédient ↔ aubaine ─────────────────────────────────────────────
 function trouverAubaine(ingredient, deals) {
-  const ingLower = ingredient.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const ingL = norm(ingredient);
   return deals.find(deal =>
     (deal.mots_cles || []).some(mc => {
-      const mcL = mc.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      return ingLower.includes(mcL) || mcL.includes(ingLower.split(' ')[0]);
+      const mcL = norm(mc);
+      return ingL.includes(mcL) || mcL.includes(ingL.split(' ')[0]);
     })
   );
 }
 
-// ── Construire la liste Lufa depuis les ingrédients réels du planning ─────────
-function construireListe(ingredients, planning) {
-  // Reverse index : ingrédient → liste de recettes qui l'utilisent
+// ── Construire items Lufa depuis planning ─────────────────────────────────────
+function construireLufa(ingredients, planning) {
   const ingToRecettes = {};
   for (const jour of (planning || [])) {
     if (!jour.recette || jour.recette.nom.startsWith('⚠️')) continue;
     for (const ing of (jour.recette.ingredients || '').split(',').map(s => s.trim()).filter(Boolean)) {
       if (!ingToRecettes[ing]) ingToRecettes[ing] = [];
-      if (!ingToRecettes[ing].includes(jour.recette.nom)) {
-        ingToRecettes[ing].push(jour.recette.nom);
-      }
+      if (!ingToRecettes[ing].includes(jour.recette.nom)) ingToRecettes[ing].push(jour.recette.nom);
     }
   }
-
   return ingredients.map(ing => {
     const { prix, unite } = estimerPrixLufa(ing);
-    const recettes = ingToRecettes[ing] || [];
-    const raison = recettes.length > 0
-      ? recettes.slice(0, 2).join(', ')
-      : '';
-    return { nom: ing, prix_estime: `${prix.toFixed(2)}$`, unite, raison };
+    return { nom: ing, prix_estime: prix, unite, raison: (ingToRecettes[ing] || []).slice(0, 2).join(', ') };
   });
 }
 
-// ── Badge d'aubaine ───────────────────────────────────────────────────────────
-function AubaineBadge({ deal }) {
-  if (!deal) return null;
-  return (
-    <span className="aubaine-badge" title={deal.rabais || ''}>
-      🏷️ {deal.prix_texte || 'Solde'}{deal.rabais ? ` · ${deal.rabais}` : ''}
-    </span>
-  );
-}
-
-// ── Section aubaines d'un magasin (sans routing d'ingrédients) ───────────────
-function SectionAubainesStore({ label, emoji, deals, couleur }) {
-  if (!deals || deals.length === 0) return null;
-  // Filtrer les deals avec un prix réel seulement
-  const avecPrix = deals.filter(d => d.prix || d.prix_texte);
-  if (avecPrix.length === 0) return null;
-
-  return (
-    <div className="epicerie-magasin epicerie-magasin--aubaines-only" style={{ '--magasin-couleur': couleur }}>
-      <div className="epicerie-magasin__header">
-        <span className="epicerie-magasin__emoji">{emoji}</span>
-        <span className="epicerie-magasin__nom">{label}</span>
-        <span className="epicerie-magasin__count">{avecPrix.length} soldes</span>
-      </div>
-      <div className="epicerie-soldes">
-        <div className="epicerie-soldes__titre">🏷️ Meilleures aubaines cette semaine</div>
-        {avecPrix.slice(0, 8).map((deal, i) => (
-          <div key={i} className="epicerie-solde-item">
-            <span className="epicerie-solde-nom">{deal.nom}</span>
-            {deal.prix_texte && <span className="epicerie-solde-prix">{deal.prix_texte}</span>}
-            {deal.rabais && <span className="epicerie-solde-rabais">{deal.rabais}</span>}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ── Section par magasin ───────────────────────────────────────────────────────
-function SectionMagasin({ label, emoji, ingredients, deals, couleur }) {
+// ── Section Magasin ───────────────────────────────────────────────────────────
+function SectionMagasin({ label, emoji, couleur, ingredientsChoisis, ingredientsProposés, deals }) {
   const [cochees, setCochees] = useState(new Set());
-  if (ingredients.length === 0) return null;
+  const tous = [...ingredientsChoisis, ...ingredientsProposés];
+  if (tous.length === 0) return null;
 
   const toggle = (ing) => setCochees(prev => {
-    const n = new Set(prev); if (n.has(ing)) n.delete(ing); else n.add(ing); return n;
+    const n = new Set(prev); n.has(ing) ? n.delete(ing) : n.add(ing); return n;
   });
-
-  // Soldes pertinents pour cette section : ceux dont un ingrédient de la liste matche
-  const soldesActifs = deals.filter(deal =>
-    ingredients.some(ing => trouverAubaine(ing, [deal]))
-  );
 
   return (
     <div className="epicerie-magasin" style={{ '--magasin-couleur': couleur }}>
       <div className="epicerie-magasin__header">
         <span className="epicerie-magasin__emoji">{emoji}</span>
         <span className="epicerie-magasin__nom">{label}</span>
-        <span className="epicerie-magasin__count">{ingredients.length} items</span>
+        <span className="epicerie-magasin__count">{tous.length} items</span>
       </div>
-
-      {soldesActifs.length > 0 && (
-        <div className="epicerie-soldes">
-          <div className="epicerie-soldes__titre">🏷️ Soldes cette semaine</div>
-          {soldesActifs.map((deal, i) => (
-            <div key={i} className="epicerie-solde-item">
-              <span className="epicerie-solde-nom">{deal.nom}</span>
-              {deal.prix_texte && <span className="epicerie-solde-prix">{deal.prix_texte}</span>}
-              {deal.rabais && <span className="epicerie-solde-rabais">{deal.rabais}</span>}
-            </div>
-          ))}
-        </div>
-      )}
-
       <ul className="epicerie-items">
-        {ingredients.map((ing, i) => {
+        {ingredientsChoisis.map((ing, i) => {
           const deal = trouverAubaine(ing, deals);
           const coche = cochees.has(ing);
           return (
-            <li
-              key={i}
-              className={`epicerie-item ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`}
-              onClick={() => toggle(ing)}
-            >
+            <li key={`c-${i}`} className={`epicerie-item ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`} onClick={() => toggle(ing)}>
               <span className="epicerie-item__check">{coche ? '☑' : '☐'}</span>
               <span className="epicerie-item__nom">{ing}</span>
-              {deal && <AubaineBadge deal={deal} />}
+              {deal && <span className="aubaine-badge">🏷️ {deal.prix_texte || 'Solde'}</span>}
+            </li>
+          );
+        })}
+        {ingredientsProposés.map((ing, i) => {
+          const deal = trouverAubaine(ing, deals);
+          const coche = cochees.has(ing);
+          return (
+            <li key={`p-${i}`} className={`epicerie-item epicerie-item--propose ${coche ? 'epicerie-item--coche' : ''} ${deal ? 'epicerie-item--solde' : ''}`} onClick={() => toggle(ing)}>
+              <span className="epicerie-item__check">{coche ? '☑' : '☐'}</span>
+              <span className="epicerie-item__nom">{ing}</span>
+              {deal && <span className="aubaine-badge">🏷️ {deal.prix_texte || 'Solde'}</span>}
             </li>
           );
         })}
@@ -187,15 +130,14 @@ function SectionMagasin({ label, emoji, ingredients, deals, couleur }) {
 }
 
 // ── Section Lufa ──────────────────────────────────────────────────────────────
-function SectionLufa({ items }) {
+function SectionLufa({ items, onAddIngredientForce, ingredientsForces = [] }) {
   const [cochees, setCochees] = useState(new Set());
 
   const toggle = (nom) => setCochees(prev => {
-    const n = new Set(prev); if (n.has(nom)) n.delete(nom); else n.add(nom); return n;
+    const n = new Set(prev); n.has(nom) ? n.delete(nom) : n.add(nom); return n;
   });
 
-  const totalEstime = items.reduce((s, i) => s + (parseFloat(i.prix_estime) || 0), 0);
-  const totalCoche  = items.filter(i => cochees.has(i.nom)).reduce((s, i) => s + (parseFloat(i.prix_estime) || 0), 0);
+  const totalEstime = items.reduce((s, i) => s + i.prix_estime, 0);
   const minOk = totalEstime >= 50;
 
   return (
@@ -212,8 +154,7 @@ function SectionLufa({ items }) {
           <strong>Passe ta commande Lufa cette semaine !</strong>
           <div className="lufa-alerte__detail">
             Total estimé : <strong>{totalEstime.toFixed(2)}$</strong>
-            {totalCoche > 0 && <span> · Coché : <strong>{totalCoche.toFixed(2)}$</strong></span>}
-            {!minOk && <span className="lufa-min-warning"> · Ajoute des items pour atteindre le minimum</span>}
+            {!minOk && <span className="lufa-min-warning"> · Ajoute des items (min. 50$)</span>}
           </div>
         </div>
       </div>
@@ -221,19 +162,24 @@ function SectionLufa({ items }) {
       <ul className="epicerie-items epicerie-items--lufa">
         {items.map((item, i) => {
           const coche = cochees.has(item.nom);
+          const dejaForce = ingredientsForces.includes(item.nom);
           return (
-            <li
-              key={i}
-              className={`epicerie-item epicerie-item--lufa ${coche ? 'epicerie-item--coche' : ''}`}
-              onClick={() => toggle(item.nom)}
-            >
+            <li key={i} className={`epicerie-item epicerie-item--lufa ${coche ? 'epicerie-item--coche' : ''}`} onClick={() => toggle(item.nom)}>
               <span className="epicerie-item__check">{coche ? '☑' : '☐'}</span>
               <div className="epicerie-item__lufa-content">
                 <span className="epicerie-item__nom">{item.nom}</span>
                 {item.unite && <span className="epicerie-item__unite">{item.unite}</span>}
-                {item.prix_estime && <span className="epicerie-item__prix">~{item.prix_estime}</span>}
+                <span className="epicerie-item__prix">~{item.prix_estime.toFixed(2)}$</span>
                 {item.raison && <span className="epicerie-item__raison">→ {item.raison}</span>}
               </div>
+              {onAddIngredientForce && !dejaForce && (
+                <button
+                  className="epicerie-item__force-btn"
+                  onClick={e => { e.stopPropagation(); onAddIngredientForce(item.nom); }}
+                  title="Inclure dans les recettes"
+                >+ Inclure</button>
+              )}
+              {dejaForce && <span className="epicerie-item__force-active">✓ Inclus</span>}
             </li>
           );
         })}
@@ -243,99 +189,142 @@ function SectionLufa({ items }) {
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function GroceryList({ planning }) {
-  const ingredients = genererListeEpicerie(planning);
-  const valides = (planning || []).filter(j => !j.recette.nom.startsWith('⚠️'));
-  if (!planning || ingredients.length === 0) return null;
+export default function GroceryList({ planning, joursChoisis, ingredientsForces = [], onAddIngredientForce }) {
+  const [cochees] = useState(new Set());
 
-  const hasAubaines = aubaines.semaine !== '';
-
-  // Routage dynamique : chaque ingrédient → son magasin, calculé en temps réel
-  const parMagasin = useMemo(() => {
-    const result = { maxi: [], costco: [], lufa: [], autres: [] };
-    for (const ing of ingredients) {
-      const mag = routerMagasin(ing);
-      result[mag].push(ing);
+  // Séparer les ingrédients par statut (choisi = confirmé par l'utilisateur)
+  const { ingredientsChoisisSet, ingredientsProposésSet } = useMemo(() => {
+    const choisis = new Set();
+    const proposes = new Set();
+    for (let i = 0; i < (planning || []).length; i++) {
+      const jour = planning[i];
+      if (!jour?.recette || jour.recette.nom.startsWith('⚠️')) continue;
+      const ings = (jour.recette.ingredients || '').split(',').map(s => s.trim()).filter(Boolean);
+      const estChoisi = joursChoisis?.has(i);
+      for (const ing of ings) {
+        if (estChoisi) choisis.add(ing);
+        else proposes.add(ing);
+      }
     }
-    return result;
-  }, [ingredients]);
+    // Ingrédient dans les deux → le compter comme choisi (déjà confirmé)
+    proposes.forEach(ing => { if (choisis.has(ing)) proposes.delete(ing); });
+    return { ingredientsChoisisSet: choisis, ingredientsProposésSet: proposes };
+  }, [planning, joursChoisis]);
 
-  // Liste Lufa construite depuis les ingrédients réels du planning
+  const tousIngredients = useMemo(() =>
+    [...ingredientsChoisisSet, ...ingredientsProposésSet],
+  [ingredientsChoisisSet, ingredientsProposésSet]);
+
+  const valides = (planning || []).filter(j => !j?.recette?.nom?.startsWith('⚠️'));
+  if (!planning || tousIngredients.length === 0) return null;
+
+  // Routage par magasin
+  const parMagasin = useMemo(() => {
+    const r = { maxi: { c: [], p: [] }, costco: { c: [], p: [] }, lufa: { c: [], p: [] }, autres: { c: [], p: [] } };
+    for (const ing of ingredientsChoisisSet)  r[routerMagasin(ing)].c.push(ing);
+    for (const ing of ingredientsProposésSet) r[routerMagasin(ing)].p.push(ing);
+    return r;
+  }, [ingredientsChoisisSet, ingredientsProposésSet]);
+
   const lufaItems = useMemo(() =>
-    construireListe(parMagasin.lufa, planning),
+    construireLufa([...parMagasin.lufa.c, ...parMagasin.lufa.p], planning),
   [parMagasin.lufa, planning]);
 
+  // Totaux par type de jour
+  const { totalChoisi, totalPropose } = useMemo(() => {
+    let choisi = 0, propose = 0;
+    (planning || []).forEach((j, i) => {
+      if (!j?.recette || j.recette.nom.startsWith('⚠️')) return;
+      const cout = j.recette.cout || 0;
+      if (joursChoisis?.has(i)) choisi += cout;
+      else propose += cout;
+    });
+    return { totalChoisi: choisi, totalPropose: propose };
+  }, [planning, joursChoisis]);
+
   const allDeals = [...(aubaines.maxi || []), ...(aubaines.metro || []), ...(aubaines.adonis || []), ...(aubaines.costco || [])];
-  const nbSoldesActifs = ingredients.filter(ing => trouverAubaine(ing, allDeals)).length;
+  const nbSoldesChoisis = [...ingredientsChoisisSet].filter(ing => trouverAubaine(ing, allDeals)).length;
 
   return (
-    <section>
-      <h2 className="section-heading">Liste d'épicerie</h2>
-
+    <section className="epicerie-liste-section">
       <div className="epicerie-container">
         <div className="epicerie-header">
-          <span style={{ fontSize: '1.1rem' }}>🛒</span>
-          <span className="epicerie-header-title">Provisions de la semaine</span>
-          {hasAubaines && nbSoldesActifs > 0 && aubaines.economies_estimees && (
-            <span className="epicerie-economies">💰 {nbSoldesActifs} items en solde · économies ~{aubaines.economies_estimees}</span>
+          <span style={{ fontSize: '1.1rem' }}>📋</span>
+          <span className="epicerie-header-title">Ma liste d'épicerie</span>
+          {nbSoldesChoisis > 0 && (
+            <span className="epicerie-economies">🏷️ {nbSoldesChoisis} item{nbSoldesChoisis > 1 ? 's' : ''} en solde</span>
           )}
         </div>
 
-        {hasAubaines && aubaines.analyse ? (
-          <div className="epicerie-analyse">
-            <div className="epicerie-analyse__icon">✦</div>
-            <p>{aubaines.analyse}</p>
-          </div>
-        ) : (
-          <div className="epicerie-note-aubaines">
-            <span>📅</span>
-            <span>Les soldes Maxi, Metro, Adonis et Costco s'afficheront automatiquement chaque vendredi soir.</span>
-          </div>
-        )}
+        {/* Totaux */}
+        <div className="epicerie-totaux">
+          {joursChoisis && joursChoisis.size > 0 ? (
+            <>
+              <div className="epicerie-total epicerie-total--choisi">
+                <span className="epicerie-total__label">Recettes confirmées</span>
+                <span className="epicerie-total__montant">{totalChoisi.toFixed(0)} $</span>
+              </div>
+              {totalPropose > 0 && (
+                <div className="epicerie-total epicerie-total--propose">
+                  <span className="epicerie-total__label">Recettes proposées</span>
+                  <span className="epicerie-total__montant">+ {totalPropose.toFixed(0)} $</span>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="epicerie-total">
+              <span className="epicerie-total__label">Estimation semaine</span>
+              <span className="epicerie-total__montant">{(totalChoisi + totalPropose).toFixed(0)} $</span>
+            </div>
+          )}
+        </div>
 
         {valides.length < 7 && (
           <p className="epicerie-note">Liste basée sur {valides.length} recettes valides.</p>
+        )}
+
+        {/* Légende si mix choisi/proposé */}
+        {joursChoisis && joursChoisis.size > 0 && ingredientsProposésSet.size > 0 && (
+          <div className="epicerie-legende">
+            <span className="epicerie-legende__choisi">● Recette confirmée</span>
+            <span className="epicerie-legende__propose">● En attente de confirmation</span>
+          </div>
         )}
 
         <div className="epicerie-magasins">
           <SectionMagasin
             label="Maxi — René-Lévesque"
             emoji="🏪"
-            ingredients={parMagasin.maxi}
-            deals={aubaines.maxi || []}
             couleur="#e3142c"
+            ingredientsChoisis={parMagasin.maxi.c}
+            ingredientsProposés={parMagasin.maxi.p}
+            deals={[...(aubaines.maxi || []), ...(aubaines.metro || [])]}
           />
           <SectionMagasin
             label="Costco"
             emoji="🏬"
-            ingredients={parMagasin.costco}
-            deals={aubaines.costco || []}
             couleur="#00529F"
+            ingredientsChoisis={parMagasin.costco.c}
+            ingredientsProposés={parMagasin.costco.p}
+            deals={aubaines.costco || []}
           />
           {lufaItems.length > 0 && (
-            <SectionLufa items={lufaItems} />
-          )}
-          {parMagasin.autres.length > 0 && (
-            <SectionMagasin
-              label="Autres / épiceries spécialisées"
-              emoji="📦"
-              ingredients={parMagasin.autres}
-              deals={[]}
-              couleur="#888"
+            <SectionLufa
+              items={lufaItems}
+              onAddIngredientForce={onAddIngredientForce}
+              ingredientsForces={ingredientsForces}
             />
           )}
-          <SectionAubainesStore
-            label="Metro — Aubaines de la semaine"
-            emoji="🏪"
-            deals={aubaines.metro || []}
-            couleur="#e8000d"
-          />
-          <SectionAubainesStore
-            label="Adonis — Aubaines de la semaine"
-            emoji="🫒"
-            deals={aubaines.adonis || []}
-            couleur="#2d6a2d"
-          />
+          {(parMagasin.autres.c.length > 0 || parMagasin.autres.p.length > 0) && (
+            <SectionMagasin
+              label="Épiceries spécialisées"
+              emoji="📦"
+              couleur="#888"
+              ingredientsChoisis={parMagasin.autres.c}
+              ingredientsProposés={parMagasin.autres.p}
+              deals={[]}
+            />
+          )}
         </div>
       </div>
     </section>
