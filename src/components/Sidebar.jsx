@@ -1,8 +1,70 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import recettes from '../data/recettes.json';
 import exercices from '../data/exercices.json';
 import activites from '../data/activites.json';
 import musique from '../data/musique.json';
+
+// ── Saisie clé API Anthropic ──────────────────────────────────────────────────
+function CleApiSection() {
+  const [cle, setCle] = useState(() => localStorage.getItem('anthropic_key') || '');
+  const [afficher, setAfficher] = useState(false);
+  const [sauvegarde, setSauvegarde] = useState(false);
+
+  useEffect(() => {
+    if (sauvegarde) {
+      const t = setTimeout(() => setSauvegarde(false), 2000);
+      return () => clearTimeout(t);
+    }
+  }, [sauvegarde]);
+
+  function sauvegarder() {
+    const val = cle.trim();
+    if (val) localStorage.setItem('anthropic_key', val);
+    else localStorage.removeItem('anthropic_key');
+    setCle(val);
+    setSauvegarde(true);
+  }
+
+  const configureee = !!localStorage.getItem('anthropic_key');
+
+  return (
+    <details className="sidebar-avance" open={!configureee}>
+      <summary className="sidebar-avance__toggle">
+        🔑 Clé API Anthropic
+        {configureee
+          ? <span className="sidebar-avance__badge" style={{ background: 'var(--sage-light)', color: 'var(--sage)' }}>Configurée ✓</span>
+          : <span className="sidebar-avance__badge" style={{ background: 'var(--terra-light)', color: 'var(--terra)' }}>Requise pour l'IA</span>
+        }
+      </summary>
+      <div className="sidebar-avance__content">
+        <p style={{ fontSize: '0.72rem', color: 'var(--ink-4)', marginBottom: 6, lineHeight: 1.4 }}>
+          Nécessaire pour les suggestions IA. <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--forest)' }}>Créer une clé →</a>
+        </p>
+        <div style={{ display: 'flex', gap: 6 }}>
+          <input
+            type={afficher ? 'text' : 'password'}
+            value={cle}
+            onChange={e => setCle(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && sauvegarder()}
+            placeholder="sk-ant-api03-…"
+            style={{ flex: 1, fontSize: '0.72rem', padding: '5px 8px', border: '1.5px solid var(--border)', borderRadius: 6, fontFamily: 'monospace' }}
+          />
+          <button
+            type="button"
+            onClick={() => setAfficher(v => !v)}
+            style={{ background: 'none', border: '1.5px solid var(--border)', borderRadius: 6, padding: '0 8px', cursor: 'pointer', fontSize: '0.8rem' }}
+            title={afficher ? 'Masquer' : 'Afficher'}
+          >{afficher ? '🙈' : '👁'}</button>
+        </div>
+        <button
+          type="button"
+          onClick={sauvegarder}
+          style={{ marginTop: 6, width: '100%', background: sauvegarde ? 'var(--sage)' : 'var(--forest)', color: 'white', border: 'none', borderRadius: 6, padding: '6px', fontSize: '0.75rem', fontWeight: 600, cursor: 'pointer', transition: 'background 0.2s' }}
+        >{sauvegarde ? '✓ Sauvegardée' : 'Sauvegarder'}</button>
+      </div>
+    </details>
+  );
+}
 
 function BoutonRebrasser({ onRebrasser }) {
   const [progress, setProgress] = useState(0);
@@ -258,6 +320,10 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
             )}
           </>
         )}
+
+        <hr className="sidebar-rule" />
+
+        <CleApiSection />
 
         <hr className="sidebar-rule" />
 
