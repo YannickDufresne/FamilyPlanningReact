@@ -10,6 +10,7 @@ import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
 import MethodologieModal from './components/MethodologieModal';
+import ModalOptimisationIA from './components/ModalOptimisationIA';
 import { genererPlanning, calculerStats } from './utils/planning';
 import { syncWrite, syncRead, syncSubscribe, uploadPhoto, deletePhoto } from './utils/sync';
 import recettes from './data/recettes.json';
@@ -72,6 +73,7 @@ export default function App() {
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showProfilsModal, setShowProfilsModal] = useState(false);
   const [showMethodologieModal, setShowMethodologieModal] = useState(false);
+  const [showOptimisationIA, setShowOptimisationIA] = useState(false);
   const [syncLoaded, setSyncLoaded] = useState(false);
   const [profils, setProfils] = useState(() => {
     try {
@@ -569,6 +571,7 @@ export default function App() {
             onAddIngredientForce={addIngredientForce}
             onRemoveIngredientForce={removeIngredientForce}
             joursChoisis={joursVerrouilles}
+            onOptimiserIA={estSemaineEditable && !semaineLockee ? () => setShowOptimisationIA(true) : null}
           />
           <main className="main-content">
             {/* Navigation entre semaines */}
@@ -615,6 +618,14 @@ export default function App() {
         </div>
       )}
       {showMethodologieModal && <MethodologieModal onClose={() => setShowMethodologieModal(false)} />}
+      {showOptimisationIA && (
+        <ModalOptimisationIA
+          planning={planningVue}
+          toutesRecettes={toutesRecettes}
+          onAppliquer={(dayIndex, recetteName) => { choisirRecette(dayIndex, recetteName); }}
+          onClose={() => setShowOptimisationIA(false)}
+        />
+      )}
       {showUpdateModal && <UpdateModal onClose={() => setShowUpdateModal(false)} />}
       {showProfilsModal && (
         <ProfilsModal

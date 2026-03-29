@@ -576,6 +576,81 @@ input[type="range"] {
 
 .btn-rebrasser:hover { background: var(--forest); }
 
+/* ── Bouton Optimiser IA ───────────────────────────────────────────────────── */
+.btn-optimiser-ia {
+  grid-column: 1 / -1;
+  width: 100%;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-optimiser-ia:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-optimiser-ia:active { transform: translateY(0); }
+
+/* ── Modal Optimisation IA ─────────────────────────────────────────────────── */
+.modal-optim {
+  background: white;
+  border-radius: 14px;
+  width: min(520px, 95vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+.modal-optim__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 20px 14px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.modal-optim__titre { font-size: 1rem; font-weight: 700; display: block; }
+.modal-optim__sous { font-size: 0.72rem; color: var(--ink-4); display: block; margin-top: 2px; }
+.modal-optim__body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 12px; }
+
+.optim-resume {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: var(--sage-light); border-radius: 8px; border-left: 3px solid var(--sage);
+}
+.optim-resume__label { font-size: 0.75rem; color: var(--ink-4); flex: 1; }
+.optim-resume__gain { font-size: 0.95rem; font-weight: 800; border-radius: 20px; padding: 2px 10px; }
+.optim-resume__gain--cout { background: var(--terra-light); color: var(--terra); }
+.optim-resume__gain--temps { background: #EEF0FF; color: #5060CC; }
+
+.optim-card {
+  border: 1.5px solid var(--border); border-radius: 10px; padding: 14px;
+  display: flex; flex-direction: column; gap: 6px; transition: border-color 0.2s;
+}
+.optim-card:hover { border-color: var(--sage); }
+.optim-card--applique { border-color: var(--sage); background: var(--sage-light); opacity: 0.75; }
+.optim-card__jour { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-4); }
+.optim-card__swap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.optim-card__avant { font-size: 0.85rem; color: var(--ink-3); text-decoration: line-through; }
+.optim-card__fleche { color: var(--ink-3); font-size: 0.8rem; }
+.optim-card__apres { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+.optim-card__gains { display: flex; gap: 6px; }
+.optim-card__gain { font-size: 0.78rem; font-weight: 700; border-radius: 20px; padding: 2px 8px; }
+.optim-card__gain--cout { background: var(--terra-light); color: var(--terra); }
+.optim-card__gain--temps { background: #EEF0FF; color: #5060CC; }
+.optim-card__raison { font-size: 0.75rem; color: var(--ink-4); font-style: italic; }
+.optim-card__btn {
+  align-self: flex-end;
+  background: var(--forest); color: white; border: none; border-radius: 6px;
+  padding: 6px 14px; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: background 0.15s;
+}
+.optim-card__btn:hover { background: var(--sage); }
+.optim-card__applique-label { align-self: flex-end; font-size: 0.78rem; font-weight: 600; color: var(--sage); }
+
 /* ── Hold-to-reshuffle button ──────────────────────────────────────────────── */
 .btn-rebrasser {
   position: relative;

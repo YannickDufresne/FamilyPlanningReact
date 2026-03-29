@@ -121,7 +121,7 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis }) {
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA }) {
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
 
@@ -217,6 +217,11 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
                 <div className="semaine-stat-detail">≈ {Math.round(stats.tempsTotal / 7)} min / repas</div>
               </div>
             </div>
+            {onOptimiserIA && !lectureSeule && (
+              <button className="btn-optimiser-ia" onClick={onOptimiserIA}>
+                ✨ Réduire le budget / temps
+              </button>
+            )}
           </div>
         )}
 
