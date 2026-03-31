@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Anthropic from '@anthropic-ai/sdk';
 
+const JOURS_NOMS = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+
 // ── Construit le prompt avec planning actuel + alternatives par thème ─────────
-function buildPrompt(planning, toutesRecettes) {
+function buildPrompt(planning, toutesRecettes, obligations = []) {
   const lignes = (planning || []).map((jour, i) => {
     if (!jour?.recette || jour.recette.nom.startsWith('⚠️')) return null;
     const r = jour.recette;
@@ -27,14 +29,21 @@ ${alternatives.length > 0 ? alternatives.join('\n') : '  (aucune alternative dis
   const totalCout = (planning || []).reduce((s, j) => s + (j?.recette?.cout || 0), 0);
   const totalTemps = (planning || []).reduce((s, j) => s + (j?.recette?.temps_preparation || 0), 0);
 
+  const contraintesStr = obligations.length > 0
+    ? `\nContraintes horaires à considérer cette semaine :\n${obligations.map(o => {
+        const jour = JOURS_NOMS[o.jourSemaine] || '';
+        return `- ${jour} : ${o.membre || 'Membre'} absent(e) ${o.heureDebut}–${o.heureFin} (${o.titre}) → préférer un repas rapide ou préparable à l'avance ce soir-là`;
+      }).join('\n')}`
+    : '';
+
   return `Tu aides une famille québécoise à optimiser son planning de repas hebdomadaire.
 
-Situation actuelle: ${totalCout}$ au total — ${Math.floor(totalTemps / 60)}h${totalTemps % 60}min de cuisine.
+Situation actuelle: ${totalCout}$ au total — ${Math.floor(totalTemps / 60)}h${totalTemps % 60}min de cuisine.${contraintesStr}
 
 Planning avec alternatives disponibles:
 ${lignes.join('\n\n')}
 
-Suggère EXACTEMENT 2 ou 3 échanges de recettes (utilise UNIQUEMENT les alternatives listées ci-dessus). Priorise les économies les plus significatives.
+Suggère EXACTEMENT 2 ou 3 échanges de recettes (utilise UNIQUEMENT les alternatives listées ci-dessus). Tiens compte des contraintes horaires si présentes. Priorise les économies les plus significatives.
 
 Réponds UNIQUEMENT avec ce JSON (aucun autre texte):
 [
@@ -51,7 +60,7 @@ Réponds UNIQUEMENT avec ce JSON (aucun autre texte):
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliquer, onClose }) {
+export default function ModalOptimisationIA({ planning, toutesRecettes, obligations = [], onAppliquer, onClose }) {
   const [etat, setEtat] = useState('idle'); // idle | chargement | resultat | erreur
   const [suggestions, setSuggestions] = useState([]);
   const [erreur, setErreur] = useState('');
@@ -71,7 +80,7 @@ export default function ModalOptimisationIA({ planning, toutesRecettes, onAppliq
 
     let prompt = '';
     try {
-      prompt = buildPrompt(planning, toutesRecettes);
+      prompt = buildPrompt(planning, toutesRecettes, obligations);
     } catch (e) {
       setErreur('Erreur lors de la préparation du planning : ' + e.message);
       setEtat('erreur');

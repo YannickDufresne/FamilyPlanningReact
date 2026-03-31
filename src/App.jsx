@@ -11,6 +11,7 @@ import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
 import MethodologieModal from './components/MethodologieModal';
 import ModalOptimisationIA from './components/ModalOptimisationIA';
+import FamilleActualites from './components/FamilleActualites';
 import { genererPlanning, calculerStats } from './utils/planning';
 import { syncWrite, syncRead, syncSubscribe, uploadPhoto, deletePhoto } from './utils/sync';
 import recettes from './data/recettes.json';
@@ -86,6 +87,27 @@ export default function App() {
   const [photoFamille, setPhotoFamille] = useState(
     () => localStorage.getItem('fp_photo_famille') || null
   );
+
+  // ── Agenda familial (obligations récurrentes + événements ponctuels) ──────────
+  const [agenda, setAgenda] = useState(() => {
+    try {
+      const saved = localStorage.getItem('fp_agenda');
+      if (saved) return JSON.parse(saved);
+    } catch {}
+    // Pré-remplir avec les obligations connues de la famille
+    return {
+      obligations: [
+        { id: 'oblig-patricia-1', membre: 'Patricia', emoji: '💚', titre: 'Euphonium — Harmonie', jourSemaine: 0, heureDebut: '19:00', heureFin: '21:00' },
+        { id: 'oblig-yannick-1', membre: 'Yannick', emoji: '🦉', titre: 'Enseignement — Université', jourSemaine: 1, heureDebut: '15:30', heureFin: '18:30' },
+      ],
+      evenements: [],
+    };
+  });
+
+  function saveAgenda(nouvelAgenda) {
+    setAgenda(nouvelAgenda);
+    localStorage.setItem('fp_agenda', JSON.stringify(nouvelAgenda));
+  }
 
   // ── État par semaine (rechargé à chaque navigation) ───────────────────────
   const [joursVerrouilles, setJoursVerrouilles] = useState(() => {
@@ -622,6 +644,11 @@ export default function App() {
                 title="Semaine suivante"
               >Suiv. →</button>
             </div>
+            <FamilleActualites
+              profils={profils}
+              semaineVue={semaineVue}
+              agenda={agenda}
+            />
             <WeeklyPlanning
               planning={planningVue}
               profils={profils}
@@ -645,6 +672,7 @@ export default function App() {
         <ModalOptimisationIA
           planning={planningVue}
           toutesRecettes={toutesRecettes}
+          obligations={agenda.obligations || []}
           onAppliquer={(dayIndex, recetteName) => { choisirRecette(dayIndex, recetteName); }}
           onClose={() => setShowOptimisationIA(false)}
         />
@@ -653,6 +681,8 @@ export default function App() {
       {showProfilsModal && (
         <ProfilsModal
           profils={profils}
+          agenda={agenda}
+          onSaveAgenda={saveAgenda}
           onSave={(nouveauxProfils) => {
             setProfils(nouveauxProfils);
             localStorage.setItem('fp_profils', JSON.stringify(nouveauxProfils));
