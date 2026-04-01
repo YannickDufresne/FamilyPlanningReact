@@ -12,7 +12,7 @@ import ProfilsModal from './components/ProfilsModal';
 import MethodologieModal from './components/MethodologieModal';
 import ModalOptimisationIA from './components/ModalOptimisationIA';
 import FamilleActualites from './components/FamilleActualites';
-import PareEtincelle from './components/PareEtincelle';
+import FooterMontcalm from './components/FooterMontcalm';
 import { genererPlanning, calculerStats } from './utils/planning';
 import { syncWrite, syncRead, syncSubscribe, uploadPhoto, deletePhoto } from './utils/sync';
 import recettes from './data/recettes.json';
@@ -670,12 +670,7 @@ export default function App() {
       )}
 
       {/* ── Signature du condo ── */}
-      {view === 'planning' && (
-        <footer className="condo-footer">
-          <PareEtincelle width={130} opacity={0.22} />
-          <span className="condo-footer__label">Condo Montcal</span>
-        </footer>
-      )}
+      {view === 'planning' && <FooterMontcalm semaineVue={semaineVue} />}
       {showMethodologieModal && <MethodologieModal onClose={() => setShowMethodologieModal(false)} />}
       {showOptimisationIA && (
         <ModalOptimisationIA

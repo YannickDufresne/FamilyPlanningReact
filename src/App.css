@@ -4565,24 +4565,47 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
-   PIED DE PAGE — Signature du condo Montcal (pare-étincelle)
+   PIED DE PAGE — Signature du condo Montcalm (pare-étincelle + citation IA)
    ══════════════════════════════════════════════════════════════════════════════ */
 .condo-footer {
+  margin-top: 48px;
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--border);
+}
+
+.condo-footer__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 48px 0 24px;
-  margin-top: 24px;
-  border-top: 1px solid var(--border);
+  gap: 14px;
+}
+
+.condo-footer__citation {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-4);
+  text-align: center;
+  max-width: 420px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.condo-footer__guillemet {
+  font-style: normal;
+  color: var(--ink-3);
+  margin: 0 4px;
+  font-size: 1.1em;
 }
 
 .condo-footer__label {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--ink-3);
-  opacity: 0.6;
+  opacity: 0.55;
+  margin-top: 2px;
 }
