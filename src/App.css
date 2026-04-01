@@ -4563,3 +4563,26 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   .fa-dev__point { grid-template-columns: 70px 1fr; }
   .fa-dev__src { display: none; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PIED DE PAGE — Signature du condo Montcal (pare-étincelle)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.condo-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 48px 0 24px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.condo-footer__label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  opacity: 0.6;
+}
