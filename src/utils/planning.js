@@ -121,7 +121,7 @@ function shuffleSeeded(arr, seed) {
 }
 
 export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces }) {
-  const { nbVegetarien, nbVegane, nbRapides = 0, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
+  const { nbVegetarien, nbVegane, nbRapides = 0, nbGratuit = 0, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
 
