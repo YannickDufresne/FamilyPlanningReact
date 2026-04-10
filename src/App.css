@@ -1114,6 +1114,32 @@ input[type="range"] {
   line-height: 1.5;
 }
 
+/* Anecdote / fun fact sous la recette */
+.planning-item__anecdote {
+  margin-top: 8px;
+  padding: 7px 10px;
+  background: color-mix(in srgb, var(--sage) 8%, white);
+  border-left: 2px solid var(--sage);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.74rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Anecdote dans le modal IA */
+.modal-ia__recette-anecdote {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: color-mix(in srgb, var(--sage) 8%, white);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+  font-style: italic;
+}
+
 .planning-item__link {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;

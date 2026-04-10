@@ -1,7 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import Anthropic from '@anthropic-ai/sdk';
 import { calculerPrixFamille } from '../utils/prixFamille';
 import ModalSuggestionIA from './ModalSuggestionIA';
+
+const ANECDOTE_PREFIX = 'fp_anecdote_';
+function recetteSlug(nom) {
+  return ANECDOTE_PREFIX + nom.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').slice(0, 60);
+}
 
 const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
 const RANG_MEDALS  = ['🥇', '🥈', '🥉'];
@@ -202,6 +208,47 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const [voirTout, setVoirTout] = useState(false);
   const [showSuggestionIA, setShowSuggestionIA] = useState(false);
   const [ajouterMode, setAjouterMode] = useState(false);
+
+  // ── Anecdote / fun fact — chargée depuis la recette, ou générée lazily ────────
+  const [anecdote, setAnecdote] = useState(() => {
+    if (recette.anecdote) return recette.anecdote;
+    if (recette.notes && recette.notes.length > 30) return recette.notes;
+    return localStorage.getItem(recetteSlug(recette.nom)) || null;
+  });
+
+  useEffect(() => {
+    if (anecdote || isWarning || !recette.nom) return;
+    const apiKey = localStorage.getItem('anthropic_key');
+    if (!apiKey) return;
+    let cancelled = false;
+    const client = new Anthropic({ apiKey, dangerouslyAllowBrowser: true, timeout: 20000 });
+    client.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 200,
+      messages: [{ role: 'user', content: `Pour la recette "${recette.nom}"${recette.origine ? ` (cuisine ${recette.origine})` : ''}, écris une anecdote historique ou un fun fact en 1-2 phrases françaises. Style pédagogique et chaleureux. Réponds UNIQUEMENT l'anecdote, sans introduction ni guillemets.` }],
+    }).then(resp => {
+      if (cancelled) return;
+      const text = resp.content?.[0]?.text?.trim();
+      if (text) { setAnecdote(text); localStorage.setItem(recetteSlug(recette.nom), text); }
+    }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [recette.nom]); // eslint-disable-line
+
+  // ── Régime nécessaire pour ce jour (basé sur le quota restant de la semaine) ──
+  const regimeNecessaire = (() => {
+    const nbVegan = filtres?.nbVegane || 0;
+    const nbVege  = filtres?.nbVegetarien || 0;
+    if (!nbVegan && !nbVege) return 'omnivore';
+    const assignes = { végane: 0, végétarien: 0 };
+    recettesSemaine.forEach(nom => {
+      const r = recettes.find(rec => rec.nom === nom);
+      if (r?.regime_alimentaire === 'végane') assignes.végane++;
+      else if (r?.regime_alimentaire === 'végétarien') assignes.végétarien++;
+    });
+    if (assignes.végane < nbVegan) return 'végane';
+    if (assignes.végétarien < nbVege) return 'végétarien';
+    return 'omnivore';
+  })();
   const [nouvelleRecette, setNouvelleRecette] = useState(null);
 
   function ouvrirFormAjouter() {
@@ -326,6 +373,11 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
             <IngredientsHighlighted texte={recette.ingredients} ingredientsForces={ingredientsForces} />
           </div>
         )}
+        {!isWarning && anecdote && (
+          <div className="planning-item__anecdote">
+            📖 {anecdote}
+          </div>
+        )}
         {isWarning && (
           <div className="recette-manquante">
             <p className="recette-manquante__msg">
@@ -353,13 +405,10 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
             filtres={filtres}
             ingredientsForces={ingredientsForces}
             recettesSemaine={recettesSemaine}
-            onSauvegarder={(recette) => {
-              onSauvegarderRecette(recette);
-            }}
-            onChoisirCeSoir={(nom) => {
-              if (onChoisirRecette) onChoisirRecette(nom);
-              setShowSuggestionIA(false);
-            }}
+            regimeNecessaire={regimeNecessaire}
+            origine={filtres?.origine || 'Tous'}
+            onSauvegarder={(r) => { onSauvegarderRecette(r); }}
+            onChoisirCeSoir={(nom) => { if (onChoisirRecette) onChoisirRecette(nom); setShowSuggestionIA(false); }}
             onClose={() => setShowSuggestionIA(false)}
           />
         )}

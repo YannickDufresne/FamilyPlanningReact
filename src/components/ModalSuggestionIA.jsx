@@ -13,60 +13,73 @@ const THEMES_INFO = {
   slow_chic:        { label: 'Slow Chic',                 desc: 'cuisine raffinée et lente — risotto, côte de bœuf, filet de poisson gastronomique, dîner élaboré du dimanche' },
 };
 
-function buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine }) {
+function buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine, regimeNecessaire, origine }) {
   const info = THEMES_INFO[theme] || { label: theme, desc: '' };
 
-  const regime =
-    filtres?.nbVegane >= 1    ? 'végane (aucun produit animal)'
-    : filtres?.nbVegetarien >= 1 ? 'végétarien (œufs et produits laitiers OK, pas de viande/poisson)'
-    : 'omnivore (viande, poisson, tout est permis)';
+  // Régime exact du jour (calculé à partir du quota restant), pas juste le filtre global
+  const regimeStr =
+    regimeNecessaire === 'végane'
+      ? 'végane — OBLIGATOIRE. Zéro produit animal : ni viande, ni poisson, ni œufs, ni produits laitiers.'
+    : regimeNecessaire === 'végétarien'
+      ? 'végétarien — OBLIGATOIRE. Pas de viande ni poisson ; œufs et produits laitiers permis.'
+    : 'omnivore — viande, poisson, tout est permis.';
+
+  const origineStr = origine && origine !== 'Tous'
+    ? `\n- Origine culturelle OBLIGATOIRE : ${origine}. La recette DOIT appartenir à cette tradition culinaire.`
+    : '';
 
   const cout = filtres?.activerCout
-    ? `budget max ${filtres.coutMax}$ par portion (échelle: 1=<4$, 2=4-7$, 3=7-12$, 4=12-18$)`
-    : 'budget raisonnable — échelle 1-6 (1=<4$, 6=>25$), vise 2-3';
+    ? `Budget max ${filtres.coutMax}/portion sur l'échelle 1-6 (1=<4$, 2=4-7$, 3=7-12$, 4=12-18$, 5=18-25$, 6=>25$)`
+    : 'Budget raisonnable — privilégier 2-3 sur l\'échelle 1-6';
 
   const temps = filtres?.activerTemps
-    ? `max ${filtres.tempsMax} minutes tout compris (préparation + cuisson)`
-    : 'pas de contrainte de temps';
+    ? `Temps max : ${filtres.tempsMax} minutes tout compris (préparation + cuisson).`
+    : '';
+
+  const rapideStr = filtres?.nbRapides > 0
+    ? '\n- Recette RAPIDE et ÉCONOMIQUE (≤ 25 min, cout ≤ 2 si possible).'
+    : '';
 
   const forcesLine = ingredientsForces?.length
-    ? `\n- Inclure au moins un de ces ingrédients si naturel pour ce plat: ${ingredientsForces.join(', ')}`
+    ? `\n- Inclure au moins un de ces ingrédients si naturel : ${ingredientsForces.join(', ')}`
     : '';
 
+  // Exclure TOUTES les recettes déjà au menu (pas juste 6)
   const eviterLine = recettesSemaine?.length
-    ? `\n- Éviter (déjà au menu cette semaine): ${recettesSemaine.slice(0, 6).join(', ')}`
+    ? `\n- ÉVITER ces recettes déjà au menu cette semaine (aucun doublon) : ${recettesSemaine.join(' | ')}`
     : '';
 
-  return `Tu es un chef cuisinier expert. Je cherche une excellente recette pour le thème "${info.label}".
-Description du thème: ${info.desc}.
+  return `Tu es un chef cuisinier expert et historien de la gastronomie. Je cherche une recette pour le thème "${info.label}".
+Description du thème : ${info.desc}.
 
-Critères de sélection:
-- Régime alimentaire: ${regime}
+Contraintes OBLIGATOIRES (respecte-les toutes — c'est critique) :
+- Régime : ${regimeStr}${origineStr}
 - ${cout}
-- Temps: ${temps}${forcesLine}${eviterLine}
+- ${temps || 'Pas de contrainte de temps.'}${rapideStr}${forcesLine}${eviterLine}
 
-Objectif: une recette familiale vraiment bonne, appétissante, avec de belles saveurs.
-Privilégie les recettes publiées sur NYT Cooking, Ricardo Cuisine, Bon Appétit, Serious Eats ou des classiques reconnus.
+Réponds avec une recette familiale vraiment bonne et avec un fun fact ou anecdote historique sur la recette (champ "anecdote" : 1-2 phrases, pédagogiques, en français, style chaleureux).
 
-Règles importantes:
-1. Le champ "url" : inclus l'URL réelle UNIQUEMENT si tu es certain qu'elle existe — sinon laisse vide ""
-2. Le champ "nom" : en français, appétissant
-3. Le champ "origine" : la tradition culinaire des saveurs (ex: "France", "Italie", "Liban", "Japon", "Mexique", "Méditerranéen") — jamais l'appareil de cuisson
-4. Les thèmes: mets 1 dans le bon thème, 0 partout ailleurs
+Règles :
+1. "url" : URL réelle UNIQUEMENT si certain qu'elle existe — sinon ""
+2. "nom" : en français, appétissant
+3. "origine" : tradition culinaire${origine && origine !== 'Tous' ? ` = "${origine}" OBLIGATOIRE` : ' (ex: "France", "Japon", "Liban")'}
+4. Thèmes : 1 dans le bon thème, 0 ailleurs
+5. "anecdote" : fun fact ou histoire courte sur la recette/origine
 
-Réponds UNIQUEMENT avec ce JSON valide, sans markdown ni explication:
+Réponds UNIQUEMENT avec ce JSON valide, sans markdown ni explication :
 {
-  "nom": "Truite meunière au beurre noisette et câpres",
-  "nom_original": "Trout Meunière with Brown Butter and Capers",
-  "url": "https://cooking.nytimes.com/recipes/...",
+  "nom": "Truite meunière au beurre noisette",
+  "nom_original": "Trout Meunière",
+  "url": "",
   "origine": "France",
   "regime_alimentaire": "omnivore",
-  "temps_preparation": 25,
+  "temps_preparation": 20,
   "cout": 2,
   "ingredients": "filet de truite, beurre, câpres, citron, persil, farine",
+  "anecdote": "La meunière tient son nom des meuniers du Moyen Âge qui passaient leurs poissons dans la farine du moulin avant de les frire au beurre — une technique qui transforme n'importe quel poisson de rivière en plat élégant.",
   "theme_pasta_rapido": 0, "theme_bol_nwich": 0, "theme_criiions_poisson": 1,
   "theme_plat_en_sauce": 0, "theme_confort_grille": 0, "theme_pizza": 0, "theme_slow_chic": 0,
-  "notes": "Un classique français en 25 min — beurre noisette qui sublime le poisson."
+  "notes": "Classique français en 20 min — le beurre noisette sublime tout."
 }`;
 }
 
@@ -90,6 +103,11 @@ function RecetteCard({ recette }) {
           <strong>Ingrédients :</strong> {recette.ingredients}
         </div>
       )}
+      {recette.anecdote && (
+        <div className="modal-ia__recette-anecdote">
+          📖 {recette.anecdote}
+        </div>
+      )}
       {recette.notes && (
         <div className="modal-ia__recette-notes">💡 {recette.notes}</div>
       )}
@@ -103,7 +121,7 @@ function RecetteCard({ recette }) {
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function ModalSuggestionIA({ theme, filtres, ingredientsForces, recettesSemaine, onSauvegarder, onChoisirCeSoir, onClose }) {
+export default function ModalSuggestionIA({ theme, filtres, ingredientsForces, recettesSemaine, regimeNecessaire = 'omnivore', origine = 'Tous', onSauvegarder, onChoisirCeSoir, onClose }) {
   const [statut, setStatut] = useState('idle'); // idle | chargement | resultat | erreur
   const [recette, setRecette] = useState(null);
   const [erreur, setErreur] = useState('');
@@ -133,7 +151,7 @@ export default function ModalSuggestionIA({ theme, filtres, ingredientsForces, r
       const response = await client.messages.create({
         model: 'claude-haiku-4-5-20251001',
         max_tokens: 1024,
-        messages: [{ role: 'user', content: buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine }) }],
+        messages: [{ role: 'user', content: buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine, regimeNecessaire, origine }) }],
       });
       const text = response.content?.[0]?.text || '';
       const match = text.match(/\{[\s\S]*\}/);

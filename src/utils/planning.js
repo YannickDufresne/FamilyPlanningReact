@@ -121,9 +121,14 @@ function shuffleSeeded(arr, seed) {
 }
 
 export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces }) {
-  const { nbVegetarien, nbVegane, nbGratuit = 1, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
+  const { nbVegetarien, nbVegane, nbRapides = 0, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
+
+  // Jours "rapides" : shuffle déterministe des jours non-végétariens/véganes
+  const joursRapidesSet = new Set(
+    shuffleSeeded([0,1,2,3,4,5,6], seed + 5151).slice(0, Math.min(nbRapides, 7))
+  );
   if (nbOmnivore < 0) return null;
 
   // Lundi de référence (depuis meta.json ou calculé)
@@ -202,6 +207,11 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     let recettesDispo = recettes.filter(r => r[themeCol] === 1);
     if (filtrerOrigine) recettesDispo = recettesDispo.filter(r => r.origine === origine);
     if (activerCout)    recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
+    // Repas rapides : pour les jours désignés, préférer ≤ 25 min et cout ≤ 2
+    if (joursRapidesSet.has(i)) {
+      const rapides = recettesDispo.filter(r => (r.temps_preparation || 999) <= 25 && (r.cout || 6) <= 2);
+      if (rapides.length > 0) recettesDispo = rapides;
+    }
 
     let regimeNecessaire = null;
     if      (compteurVegane     < nbVegane)     regimeNecessaire = 'végane';
@@ -444,6 +454,7 @@ export function calculerStats(planning) {
   const valides = planning.filter(j => !j.recette.nom.startsWith('⚠️'));
   const tempsTotal    = planning.reduce((s, j) => s + (j.recette.temps_preparation || 0), 0);
   const coutRecettes  = planning.reduce((s, j) => s + (j.recette.cout || 0), 0);
+  const coutMoyen     = valides.length > 0 ? valides.reduce((s, j) => s + (j.recette.cout || 0), 0) / valides.length : 0;
   const activitesAvec = valides.filter(j => j.activite);
   const coutActivites = activitesAvec.length > 0
     ? Math.round(activitesAvec.reduce((s, j) => s + (j.activite.cout || 0), 0) / activitesAvec.length * 10) / 10
@@ -459,7 +470,7 @@ export function calculerStats(planning) {
     evals[f] = vals.length > 0 ? Math.round(vals.reduce((a, b) => a + parseFloat(b), 0) / vals.length * 10) / 10 : null;
   });
 
-  return { tempsTotal, coutRecettes, coutActivites, regimes, evals };
+  return { tempsTotal, coutRecettes, coutMoyen, coutActivites, regimes, evals };
 }
 
 export function genererListeEpicerie(planning) {

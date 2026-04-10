@@ -56,6 +56,7 @@ const DEFAULT_FILTRES = {
   nbVegetarien: 1,
   nbVegane: 0,
   nbGratuit: 1,
+  nbRapides: 0,
   origine: 'Tous',
   activerCout: false,
   coutMax: 6,

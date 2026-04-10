@@ -210,12 +210,24 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
       </div>
 
       <div className="sidebar-inner">
-        {/* Préférences : régimes, activités, filtres recettes */}
+        {/* Ingrédients à inclure — en premier pour un accès rapide */}
+        {onAddIngredientForce && (
+          <>
+            <RechercheIngredients
+              ingredientsForces={ingredientsForces}
+              onAdd={onAddIngredientForce}
+              onRemove={onRemoveIngredientForce}
+            />
+            <hr className="sidebar-rule" />
+          </>
+        )}
+
+        {/* Préférences : régimes, repas rapides, filtres recettes */}
         {(() => {
           const badgeParts = [
             filtres.nbVegetarien > 0 && `${filtres.nbVegetarien} végé`,
             filtres.nbVegane > 0 && `${filtres.nbVegane} vg`,
-            filtres.nbGratuit > 0 && `${filtres.nbGratuit} gratuit${filtres.nbGratuit > 1 ? 's' : ''}`,
+            filtres.nbRapides > 0 && `${filtres.nbRapides} rapide${filtres.nbRapides > 1 ? 's' : ''}`,
             filtres.origine !== 'Tous' && filtres.origine,
           ].filter(Boolean);
           const isOpen = badgeParts.length > 0;
@@ -250,14 +262,14 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
                     onChange={e => set('nbVegane', +e.target.value)} />
                 </div>
 
-                <div className="sidebar-section-title">Activités</div>
-
                 <div className="control-group">
                   <label className="control-label">
-                    Sorties gratuites — <strong>{filtres.nbGratuit} / sem.</strong>
+                    Repas rapides et économiques — <strong>{filtres.nbRapides}</strong>
+                    <span className="control-label__cap"> (≤ 25 min, ≤7$/portion)</span>
                   </label>
-                  <input type="range" min={0} max={3} step={1} value={filtres.nbGratuit}
-                    onChange={e => set('nbGratuit', +e.target.value)} />
+                  <input type="range" min={0} max={joursDisponibles} step={1}
+                    value={filtres.nbRapides}
+                    onChange={e => set('nbRapides', +e.target.value)} />
                 </div>
 
                 <div className="sidebar-section-title">Filtres recettes</div>
@@ -274,17 +286,9 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
           );
         })()}
 
-        {/* Stats coût et temps de la semaine */}
+        {/* Stats temps de cuisine (coût retiré — scale non significative) */}
         {stats && (
           <div className="sidebar-semaine-stats">
-            <div className="semaine-stat-item">
-              <span className="semaine-stat-icon">💰</span>
-              <div className="semaine-stat-body">
-                <div className="semaine-stat-label">Budget semaine</div>
-                <div className="semaine-stat-valeur">{stats.coutRecettes}$</div>
-                <div className="semaine-stat-detail">≈ {(stats.coutRecettes / 7).toFixed(0)}$ / repas</div>
-              </div>
-            </div>
             <div className="semaine-stat-item">
               <span className="semaine-stat-icon">⏱</span>
               <div className="semaine-stat-body">
@@ -295,27 +299,25 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
                 <div className="semaine-stat-detail">≈ {Math.round(stats.tempsTotal / 7)} min / repas</div>
               </div>
             </div>
+            <div className="semaine-stat-item">
+              <span className="semaine-stat-icon">💰</span>
+              <div className="semaine-stat-body">
+                <div className="semaine-stat-label">Niveau de coût</div>
+                <div className="semaine-stat-valeur">
+                  {'●'.repeat(Math.round(stats.coutMoyen || 0))}{'○'.repeat(Math.max(0, 6 - Math.round(stats.coutMoyen || 0)))}
+                </div>
+                <div className="semaine-stat-detail">{(stats.coutMoyen || 0).toFixed(1)} / 6 en moyenne</div>
+              </div>
+            </div>
             {onOptimiserIA && !lectureSeule && (
               <button className="btn-optimiser-ia" onClick={onOptimiserIA}>
-                ✨ Réduire le budget / temps
+                ✨ Optimiser avec l'IA
               </button>
             )}
           </div>
         )}
 
         <hr className="sidebar-rule" />
-
-        {/* Ingrédients à inclure */}
-        {onAddIngredientForce && (
-          <>
-            <RechercheIngredients
-              ingredientsForces={ingredientsForces}
-              onAdd={onAddIngredientForce}
-              onRemove={onRemoveIngredientForce}
-            />
-            <hr className="sidebar-rule" />
-          </>
-        )}
 
         {lectureSeule ? (
           <p className="sidebar-lecture-seule">📖 Semaine passée — lecture seule</p>
@@ -326,16 +328,11 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
               Modifier
             </button>
           </div>
-        ) : (
-          <>
-            <BoutonRebrasser onRebrasser={onRebrasser} />
-            {onLockerSemaine && (
-              <button className="btn-locker-semaine" onClick={onLockerSemaine}>
-                ✅ Confirmer la semaine
-              </button>
-            )}
-          </>
-        )}
+        ) : onLockerSemaine ? (
+          <button className="btn-locker-semaine" onClick={onLockerSemaine}>
+            ✅ Confirmer la semaine
+          </button>
+        ) : null}
 
         <hr className="sidebar-rule" />
 
