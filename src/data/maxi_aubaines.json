@@ -1,6 +1,6 @@
 {
   "semaine": "2026-04-06",
-  "genereeLe": "2026-04-04T05:24:52.393Z",
+  "genereeLe": "2026-04-03T22:07:26.306Z",
   "storeId": "deals-centre",
   "source": "maxi.ca/__NEXT_DATA__",
   "items": [
@@ -56,9 +56,9 @@
       "nom": "Concombres anglais",
       "prix": 1,
       "prix_texte": "1,00 $ (1 ea, 1,00 $/1ch)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "prix_regulier": 1.88,
+      "prix_regulier_texte": "1,88 $ (régulier)",
+      "rabais": "0,88 $ DE RABAIS",
       "mots_cles": [
         "concombres"
       ],
@@ -68,9 +68,9 @@
       "nom": "Raisins rouges sans pépins",
       "prix": 3.86,
       "prix_texte": "environ 3,86 $ (3,90 $/1kg 1,77 $/1lb)",
-      "prix_regulier": 6.52,
-      "prix_regulier_texte": "6,52 $ (régulier)",
-      "rabais": "2,66 $ DE RABAIS",
+      "prix_regulier": 6.54,
+      "prix_regulier_texte": "6,54 $ (régulier)",
+      "rabais": "2,68 $ DE RABAIS",
       "mots_cles": [
         "raisins"
       ],
@@ -105,9 +105,9 @@
       "nom": "Asperges",
       "prix": 2.44,
       "prix_texte": "2,44 $ (325 g, 0,75 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3,99 $ (régulier)",
+      "rabais": "1,55 $ DE RABAIS",
       "mots_cles": [
         "asperges"
       ],
@@ -444,9 +444,9 @@
       "nom": "Eska Eau de source naturelle",
       "prix": 4.55,
       "prix_texte": "4,55 $ (24x500.0 ml, 0,04 $/100ml)",
-      "prix_regulier": 5.49,
-      "prix_regulier_texte": "5,49 $ (régulier)",
-      "rabais": "0,94 $ DE RABAIS",
+      "prix_regulier": 5.25,
+      "prix_regulier_texte": "5,25 $ (régulier)",
+      "rabais": "0,70 $ DE RABAIS",
       "mots_cles": [
         "eska"
       ],

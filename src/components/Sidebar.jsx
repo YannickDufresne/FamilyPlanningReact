@@ -183,9 +183,21 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA }) {
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA, joursDisponibles = 7 }) {
   const origines = useMemo(() =>
     [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
+
+  // Clamp vegetarian/vegan counts when available days decrease
+  useEffect(() => {
+    const total = filtres.nbVegetarien + filtres.nbVegane;
+    if (total > joursDisponibles) {
+      setFiltres(prev => {
+        const newVege  = Math.min(prev.nbVegetarien, joursDisponibles);
+        const newVegan = Math.min(prev.nbVegane, Math.max(0, joursDisponibles - newVege));
+        return { ...prev, nbVegetarien: newVege, nbVegane: newVegan };
+      });
+    }
+  }, [joursDisponibles]); // eslint-disable-line
 
   const set = (key, val) => setFiltres(prev => ({ ...prev, [key]: val }));
 
@@ -220,17 +232,21 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
 
                 <div className="control-group">
                   <label className="control-label">
-                    Repas végétariens — <strong>{filtres.nbVegetarien} / 7</strong>
+                    Repas végétariens — <strong>{filtres.nbVegetarien}</strong>
+                    {joursDisponibles < 7 && <span className="control-label__cap"> / {joursDisponibles} dispo</span>}
                   </label>
-                  <input type="range" min={0} max={7} step={1} value={filtres.nbVegetarien}
+                  <input type="range" min={0} max={Math.max(0, joursDisponibles - filtres.nbVegane)} step={1}
+                    value={filtres.nbVegetarien}
                     onChange={e => set('nbVegetarien', +e.target.value)} />
                 </div>
 
                 <div className="control-group">
                   <label className="control-label">
-                    Repas véganes — <strong>{filtres.nbVegane} / 7</strong>
+                    Repas véganes — <strong>{filtres.nbVegane}</strong>
+                    {joursDisponibles < 7 && <span className="control-label__cap"> / {joursDisponibles} dispo</span>}
                   </label>
-                  <input type="range" min={0} max={7} step={1} value={filtres.nbVegane}
+                  <input type="range" min={0} max={Math.max(0, joursDisponibles - filtres.nbVegetarien)} step={1}
+                    value={filtres.nbVegane}
                     onChange={e => set('nbVegane', +e.target.value)} />
                 </div>
 

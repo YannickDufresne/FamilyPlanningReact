@@ -3499,6 +3499,67 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .recette-search-voir-tout:hover { background: color-mix(in srgb, var(--forest) 10%, white); }
 .recette-search-vide { padding: 16px; text-align: center; color: var(--ink-3); font-size: 0.9rem; list-style: none; }
 
+/* Bouton "Créer une nouvelle recette" en bas du modal de recherche */
+.recette-search-ajouter-btn {
+  display: block; width: 100%; padding: 12px 16px;
+  background: color-mix(in srgb, var(--forest) 6%, white);
+  border: none; border-top: 1px solid var(--border);
+  color: var(--forest); font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; text-align: center; transition: background 0.15s;
+}
+.recette-search-ajouter-btn:hover { background: color-mix(in srgb, var(--forest) 12%, white); }
+
+/* ── Mini-formulaire d'ajout de recette ──────────────── */
+.recette-ajouter-form {
+  padding: 16px; display: flex; flex-direction: column; gap: 12px;
+  overflow-y: auto; max-height: 70vh;
+}
+.recette-ajouter-form__hint {
+  font-size: 0.77rem; color: var(--ink-3); line-height: 1.4; margin: 0;
+  padding: 8px 10px; background: color-mix(in srgb, var(--sage) 8%, white);
+  border-radius: 6px;
+}
+.recette-ajouter-form__label {
+  display: flex; flex-direction: column; gap: 4px;
+  font-size: 0.78rem; font-weight: 600; color: var(--ink-2);
+}
+.recette-ajouter-form__label--half { flex: 1; }
+.recette-ajouter-form__input {
+  padding: 7px 10px; border: 1.5px solid var(--border); border-radius: 6px;
+  font-size: 0.85rem; font-family: inherit; color: var(--ink);
+  transition: border-color 0.15s;
+}
+.recette-ajouter-form__input:focus { outline: none; border-color: var(--forest); }
+.recette-ajouter-form__row { display: flex; gap: 12px; }
+.recette-ajouter-form__regime-pills {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px;
+}
+.recette-ajouter-form__pill {
+  padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+  cursor: pointer; border: 1.5px solid var(--border); color: var(--ink-2);
+  background: white; transition: all 0.15s; user-select: none;
+}
+.recette-ajouter-form__pill input { display: none; }
+.recette-ajouter-form__pill--on {
+  background: var(--forest); color: white; border-color: var(--forest);
+}
+.recette-ajouter-form__actions {
+  display: flex; gap: 8px; justify-content: space-between; padding-top: 4px;
+}
+.recette-ajouter-form__btn-annuler {
+  background: none; border: 1.5px solid var(--border); border-radius: 7px;
+  padding: 8px 14px; font-size: 0.82rem; cursor: pointer; color: var(--ink-3);
+}
+.recette-ajouter-form__btn-submit {
+  flex: 1; background: var(--forest); color: white; border: none;
+  border-radius: 7px; padding: 9px 16px; font-size: 0.85rem; font-weight: 700;
+  cursor: pointer; transition: opacity 0.15s;
+}
+.recette-ajouter-form__btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Cap label sur les sliders végé */
+.control-label__cap { font-weight: 400; color: var(--ink-3); font-size: 0.78rem; margin-left: 2px; }
+
 /* ── Semaine nav améliorée ───────────────────────────── */
 .semaine-nav__status {
   display: flex; align-items: center; gap: 6px;

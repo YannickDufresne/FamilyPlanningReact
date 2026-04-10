@@ -6,6 +6,13 @@ const JOURS_ENTRAINEMENT = ['Lundi', 'Mercredi', 'Vendredi'];
 const RANG_MEDALS  = ['🥇', '🥈', '🥉'];
 const RANG_LABELS  = ['1er choix', '2e choix', '3e choix'];
 
+const TOUS_THEMES = ['pasta_rapido', 'bol_nwich', 'criiions_poisson', 'plat_en_sauce', 'confort_grille', 'pizza', 'slow_chic'];
+const THEMES_LABELS = {
+  pasta_rapido: 'Pasta Rapido', bol_nwich: 'Bol · Sandwich',
+  criiions_poisson: 'Poisson', plat_en_sauce: 'Plat en sauce',
+  confort_grille: 'Confort grillé', pizza: 'Pizza', slow_chic: 'Slow chic',
+};
+
 // ── Génère une phrase expliquant pourquoi cette activité a été suggérée ───────
 function genererExplication(activite, profils, pourQui = 'famille') {
   if (!activite || !profils || profils.length === 0) return null;
@@ -193,6 +200,38 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const [searchQuery, setSearchQuery] = useState('');
   const [voirTout, setVoirTout] = useState(false);
   const [showSuggestionIA, setShowSuggestionIA] = useState(false);
+  const [ajouterMode, setAjouterMode] = useState(false);
+  const [nouvelleRecette, setNouvelleRecette] = useState(null);
+
+  function ouvrirFormAjouter() {
+    setNouvelleRecette({
+      nom: '', url: '',
+      regime_alimentaire: 'omnivore',
+      cout: 3, temps_preparation: 30,
+      ingredients: '',
+      origine: filtres.origine && filtres.origine !== 'Tous' ? filtres.origine : '',
+      source: 'manuel',
+      ...Object.fromEntries(TOUS_THEMES.map(t => [`theme_${t}`, t === jour.theme ? 1 : 0])),
+    });
+    setAjouterMode(true);
+  }
+
+  function fermerModal() {
+    setSearchOpen(false);
+    setSearchQuery('');
+    setVoirTout(false);
+    setAjouterMode(false);
+    setNouvelleRecette(null);
+  }
+
+  function soumettreNouvelleRecette(e) {
+    e.preventDefault();
+    if (!nouvelleRecette.nom.trim()) return;
+    const recetteFinale = { ...nouvelleRecette, nom: nouvelleRecette.nom.trim() };
+    if (onSauvegarderRecette) onSauvegarderRecette(recetteFinale);
+    if (onChoisirRecette) onChoisirRecette(recetteFinale.nom);
+    fermerModal();
+  }
 
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
@@ -477,74 +516,144 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
 
       </div>
 
-      {/* Recherche de recette */}
+      {/* Recherche / ajout de recette */}
       {searchOpen && (() => {
         const themeCol = `theme_${jour.theme}`;
         const filtreOrigine = filtres.origine && filtres.origine !== 'Tous';
-
-        // Pool du thème du jour (+ origine si filtre actif)
         const poolTheme = recettes.filter(r =>
-          r[themeCol] === 1 &&
-          (!filtreOrigine || r.origine === filtres.origine)
+          r[themeCol] === 1 && (!filtreOrigine || r.origine === filtres.origine)
         );
-
-        // Pool affiché : thème seul, ou tout si "Voir tout" coché / recherche active
         const afficherTout = voirTout || searchQuery.trim().length > 0;
         const poolBase = afficherTout ? recettes : poolTheme;
         const resultats = poolBase
           .filter(r => r.nom.toLowerCase().includes(searchQuery.toLowerCase()))
           .slice(0, 40);
-
-        const labelFiltre = [
-          `thème ${jour.theme.replace(/_/g, ' ')}`,
-          filtreOrigine ? filtres.origine : null,
-        ].filter(Boolean).join(' · ');
+        const labelFiltre = [`thème ${THEMES_LABELS[jour.theme] || jour.theme}`, filtreOrigine ? filtres.origine : null].filter(Boolean).join(' · ');
 
         return (
-          <div className="recette-search-overlay" onClick={() => { setSearchOpen(false); setSearchQuery(''); setVoirTout(false); }}>
+          <div className="recette-search-overlay" onClick={fermerModal}>
             <div className="recette-search-modal" onClick={e => e.stopPropagation()}>
               <div className="recette-search-header">
-                <span>Choisir une recette · {jour.jour}</span>
-                <button onClick={() => { setSearchOpen(false); setSearchQuery(''); setVoirTout(false); }}>✕</button>
+                <span>{ajouterMode ? `Nouvelle recette · ${THEMES_LABELS[jour.theme] || jour.theme}` : `Choisir une recette · ${jour.jour}`}</span>
+                <button onClick={fermerModal}>✕</button>
               </div>
-              <input
-                autoFocus
-                className="recette-search-input"
-                placeholder="Rechercher..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-              />
-              {!afficherTout && (
-                <div className="recette-search-filtre-info">
-                  <span>🎯 Filtré : {labelFiltre} ({poolTheme.length} recettes)</span>
-                  <button className="recette-search-voir-tout" onClick={() => setVoirTout(true)}>
-                    Voir tout le catalogue →
-                  </button>
-                </div>
+
+              {ajouterMode && nouvelleRecette ? (
+                /* ── Mini-formulaire d'ajout ── */
+                <form className="recette-ajouter-form" onSubmit={soumettreNouvelleRecette}>
+                  <p className="recette-ajouter-form__hint">
+                    Cette recette sera enregistrée de façon permanente dans la bibliothèque et assignée à {jour.jour}.
+                  </p>
+                  <label className="recette-ajouter-form__label">
+                    Nom de la recette *
+                    <input
+                      autoFocus
+                      className="recette-ajouter-form__input"
+                      placeholder="Ex: Ramen maison au miso..."
+                      value={nouvelleRecette.nom}
+                      onChange={e => setNouvelleRecette(r => ({ ...r, nom: e.target.value }))}
+                      required
+                    />
+                  </label>
+                  <label className="recette-ajouter-form__label">
+                    URL de la recette (optionnel)
+                    <input
+                      className="recette-ajouter-form__input"
+                      placeholder="https://..."
+                      value={nouvelleRecette.url}
+                      onChange={e => setNouvelleRecette(r => ({ ...r, url: e.target.value }))}
+                    />
+                  </label>
+                  <div className="recette-ajouter-form__label">
+                    Régime alimentaire
+                    <div className="recette-ajouter-form__regime-pills">
+                      {[['omnivore','Omnivore'],['végétarien','Végétarien'],['végane','Végane']].map(([val, lab]) => (
+                        <label key={val} className={`recette-ajouter-form__pill${nouvelleRecette.regime_alimentaire === val ? ' recette-ajouter-form__pill--on' : ''}`}>
+                          <input type="radio" name="regime" value={val} checked={nouvelleRecette.regime_alimentaire === val}
+                            onChange={() => setNouvelleRecette(r => ({ ...r, regime_alimentaire: val }))} />
+                          {lab}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="recette-ajouter-form__row">
+                    <label className="recette-ajouter-form__label recette-ajouter-form__label--half">
+                      Coût ($)
+                      <input type="number" min={1} max={15} step={0.5} className="recette-ajouter-form__input"
+                        value={nouvelleRecette.cout}
+                        onChange={e => setNouvelleRecette(r => ({ ...r, cout: +e.target.value }))} />
+                    </label>
+                    <label className="recette-ajouter-form__label recette-ajouter-form__label--half">
+                      Temps (min)
+                      <input type="number" min={5} max={240} step={5} className="recette-ajouter-form__input"
+                        value={nouvelleRecette.temps_preparation}
+                        onChange={e => setNouvelleRecette(r => ({ ...r, temps_preparation: +e.target.value }))} />
+                    </label>
+                  </div>
+                  <label className="recette-ajouter-form__label">
+                    Ingrédients principaux (séparés par des virgules)
+                    <input className="recette-ajouter-form__input"
+                      placeholder="Ex: poulet, miso, nouilles soba..."
+                      value={nouvelleRecette.ingredients}
+                      onChange={e => setNouvelleRecette(r => ({ ...r, ingredients: e.target.value }))} />
+                  </label>
+                  {filtreOrigine && (
+                    <label className="recette-ajouter-form__label">
+                      Origine culturelle
+                      <input className="recette-ajouter-form__input"
+                        value={nouvelleRecette.origine}
+                        onChange={e => setNouvelleRecette(r => ({ ...r, origine: e.target.value }))} />
+                    </label>
+                  )}
+                  <div className="recette-ajouter-form__actions">
+                    <button type="button" className="recette-ajouter-form__btn-annuler" onClick={() => setAjouterMode(false)}>
+                      ← Retour
+                    </button>
+                    <button type="submit" className="recette-ajouter-form__btn-submit"
+                      disabled={!nouvelleRecette.nom.trim()}>
+                      ✓ Ajouter et utiliser
+                    </button>
+                  </div>
+                </form>
+              ) : (
+                /* ── Recherche normale ── */
+                <>
+                  <input autoFocus className="recette-search-input" placeholder="Rechercher..."
+                    value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+                  {!afficherTout && (
+                    <div className="recette-search-filtre-info">
+                      <span>🎯 {labelFiltre} ({poolTheme.length} recettes)</span>
+                      <button className="recette-search-voir-tout" onClick={() => setVoirTout(true)}>
+                        Tout le catalogue →
+                      </button>
+                    </div>
+                  )}
+                  {afficherTout && !searchQuery && (
+                    <div className="recette-search-filtre-info">
+                      <span>📚 Tout le catalogue ({recettes.length} recettes)</span>
+                      <button className="recette-search-voir-tout" onClick={() => setVoirTout(false)}>
+                        ← Revenir au thème
+                      </button>
+                    </div>
+                  )}
+                  <ul className="recette-search-list">
+                    {resultats.map(r => (
+                      <li key={r.nom}
+                        className={`recette-search-item ${r.nom === recette.nom ? 'recette-search-item--current' : ''}`}
+                        onClick={() => { onChoisirRecette(r.nom); fermerModal(); }}>
+                        <span className="recette-search-nom">{r.nom}</span>
+                        <span className="recette-search-meta">{r.regime_alimentaire} · {r.cout}$ · {r.temps_preparation}min</span>
+                      </li>
+                    ))}
+                    {resultats.length === 0 && <li className="recette-search-vide">Aucun résultat</li>}
+                  </ul>
+                  {onSauvegarderRecette && (
+                    <button className="recette-search-ajouter-btn" onClick={ouvrirFormAjouter}>
+                      ➕ Créer une nouvelle recette pour ce thème
+                    </button>
+                  )}
+                </>
               )}
-              {afficherTout && !searchQuery && (
-                <div className="recette-search-filtre-info">
-                  <span>📚 Tout le catalogue ({recettes.length} recettes)</span>
-                  <button className="recette-search-voir-tout" onClick={() => setVoirTout(false)}>
-                    ← Revenir au thème
-                  </button>
-                </div>
-              )}
-              <ul className="recette-search-list">
-                {resultats.map(r => (
-                  <li
-                    key={r.nom}
-                    className={`recette-search-item ${r.nom === recette.nom ? 'recette-search-item--current' : ''}`}
-                    onClick={() => { onChoisirRecette(r.nom); setSearchOpen(false); setSearchQuery(''); setVoirTout(false); }}
-                  >
-                    <span className="recette-search-nom">{r.nom}</span>
-                    <span className="recette-search-meta">{r.regime_alimentaire} · {r.cout}$ · {r.temps_preparation}min</span>
-                  </li>
-                ))}
-                {resultats.length === 0 && (
-                  <li className="recette-search-vide">Aucun résultat</li>
-                )}
-              </ul>
             </div>
           </div>
         );

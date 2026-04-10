@@ -617,6 +617,7 @@ export default function App() {
             onRemoveIngredientForce={removeIngredientForce}
             joursChoisis={joursVerrouilles}
             onOptimiserIA={estSemaineEditable && !semaineLockee ? () => setShowOptimisationIA(true) : null}
+            joursDisponibles={estSemaineEditable ? Math.max(0, 7 - tousJoursVerrouilles.size) : 7}
           />
           <main className="main-content">
             {/* Navigation entre semaines */}
