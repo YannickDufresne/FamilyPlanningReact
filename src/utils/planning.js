@@ -170,8 +170,9 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   const normIng = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   for (let i = 0; i < 7; i++) {
-    // If day is locked, keep current recipe + update counters
-    if (joursVerrouilles?.has(i) && planningActuel?.[i]) {
+    // If day is locked AND no origin filter active, keep current recipe + update counters
+    // (origin filter overrides locks so the user sees a real themed week)
+    if (!filtrerOrigine && joursVerrouilles?.has(i) && planningActuel?.[i]) {
       const jourExistant = planningActuel[i];
       planning.push(jourExistant);
       const r = jourExistant.recette;
@@ -230,8 +231,10 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
 
     // ── Recette forcée (choix manuel de l'utilisateur) ────────────────────────
+    // Si un filtre d'origine est actif, on ignore les recettes forcées pour montrer
+    // une vraie semaine thématique (même comportement que pour les verrous).
     let recetteForcee = null;
-    if (recettesForcees?.has(i)) {
+    if (!filtrerOrigine && recettesForcees?.has(i)) {
       const nomForce = recettesForcees.get(i);
       recetteForcee = recettes.find(r => r.nom === nomForce) || null;
     }
