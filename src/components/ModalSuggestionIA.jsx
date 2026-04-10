@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import Anthropic from '@anthropic-ai/sdk';
+import { labelOrigine, paysDeZone } from '../utils/zones';
 
 // ── Descriptions des thèmes pour le prompt ───────────────────────────────────
 const THEMES_INFO = {
@@ -24,8 +25,12 @@ function buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine, regim
       ? 'végétarien — OBLIGATOIRE. Pas de viande ni poisson ; œufs et produits laitiers permis.'
     : 'omnivore — viande, poisson, tout est permis.';
 
-  const origineStr = origine && origine !== 'Tous'
-    ? `\n- Origine culturelle OBLIGATOIRE : ${origine}. La recette DOIT appartenir à cette tradition culinaire.`
+  const origineAffichee = labelOrigine(origine);
+  const origineZonePays = paysDeZone(origine);
+  const origineStr = origineAffichee
+    ? origineZonePays
+      ? `\n- Zone culinaire OBLIGATOIRE : ${origineAffichee} (${origineZonePays.join(', ')}). La recette DOIT venir d'un de ces pays.`
+      : `\n- Origine culturelle OBLIGATOIRE : ${origine}. La recette DOIT appartenir à cette tradition culinaire.`
     : '';
 
   const cout = filtres?.activerCout
@@ -62,7 +67,7 @@ Réponds avec une recette familiale vraiment bonne et avec un fun fact ou anecdo
 Règles :
 1. "url" : URL réelle UNIQUEMENT si certain qu'elle existe — sinon ""
 2. "nom" : en français, appétissant
-3. "origine" : tradition culinaire${origine && origine !== 'Tous' ? ` = "${origine}" OBLIGATOIRE` : ' (ex: "France", "Japon", "Liban")'}
+3. "origine" : tradition culinaire${origineZonePays ? ` = un pays de ${origineAffichee} OBLIGATOIRE` : origineAffichee ? ` = "${origine}" OBLIGATOIRE` : ' (ex: "France", "Japon", "Liban")'}
 4. Thèmes : 1 dans le bon thème, 0 ailleurs
 5. "anecdote" : fun fact ou histoire courte sur la recette/origine
 

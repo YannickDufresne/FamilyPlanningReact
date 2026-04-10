@@ -1,4 +1,5 @@
 // ─── Logique de planification ─────────────────────────────────────────────────
+import { paysDeZone } from './zones';
 
 // ── Mots-clés indiquant un événement INADAPTÉ à une sortie en famille ─────────
 // Ces termes détectent automatiquement les événements pour adultes célibataires,
@@ -205,7 +206,14 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
 
     // ── Recettes ──────────────────────────────────────────────────────────────
     let recettesDispo = recettes.filter(r => r[themeCol] === 1);
-    if (filtrerOrigine) recettesDispo = recettesDispo.filter(r => r.origine === origine);
+    if (filtrerOrigine) {
+      const zonesPays = paysDeZone(origine);
+      if (zonesPays) {
+        recettesDispo = recettesDispo.filter(r => zonesPays.includes(r.origine));
+      } else {
+        recettesDispo = recettesDispo.filter(r => r.origine === origine);
+      }
+    }
     if (activerCout)    recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
     // Repas rapides : pour les jours désignés, préférer ≤ 25 min et cout ≤ 2
     if (joursRapidesSet.has(i)) {

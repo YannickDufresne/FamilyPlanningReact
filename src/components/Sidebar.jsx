@@ -3,6 +3,7 @@ import recettes from '../data/recettes.json';
 import exercices from '../data/exercices.json';
 import activites from '../data/activites.json';
 import musique from '../data/musique.json';
+import { ZONES, DRAPEAUX, labelOrigine } from '../utils/zones';
 
 // ── Saisie clé API Anthropic ──────────────────────────────────────────────────
 function CleApiSection() {
@@ -184,8 +185,14 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
 }
 
 export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA, joursDisponibles = 7 }) {
-  const origines = useMemo(() =>
-    [...new Set(recettes.map(r => r.origine).filter(Boolean))].sort(), []);
+  // Pays présents dans les données, groupés par zone
+  const originesParZone = useMemo(() => {
+    const tousLesPays = new Set(recettes.map(r => r.origine).filter(Boolean));
+    return ZONES.map(z => ({
+      ...z,
+      paysDispo: z.pays.filter(p => tousLesPays.has(p)),
+    })).filter(z => z.paysDispo.length > 0);
+  }, []);
 
   // Clamp vegetarian/vegan counts when available days decrease
   useEffect(() => {
@@ -228,7 +235,7 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
             filtres.nbVegetarien > 0 && `${filtres.nbVegetarien} végé`,
             filtres.nbVegane > 0 && `${filtres.nbVegane} vg`,
             filtres.nbRapides > 0 && `${filtres.nbRapides} rapide${filtres.nbRapides > 1 ? 's' : ''}`,
-            filtres.origine !== 'Tous' && filtres.origine,
+            filtres.origine !== 'Tous' && labelOrigine(filtres.origine),
           ].filter(Boolean);
           const isOpen = badgeParts.length > 0;
           return (
@@ -277,8 +284,15 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
                 <div className="control-group">
                   <label className="control-label">Origine culturelle</label>
                   <select className="sidebar-select" value={filtres.origine} onChange={e => set('origine', e.target.value)}>
-                    <option value="Tous">Toutes les origines</option>
-                    {origines.map(o => <option key={o} value={o}>{o}</option>)}
+                    <option value="Tous">🌍 Toutes les origines</option>
+                    {originesParZone.map(z => (
+                      <optgroup key={z.zone} label={`${z.emoji} ${z.zone}`}>
+                        <option value={`zone:${z.zone}`}>{z.emoji} Toute la zone {z.zone}</option>
+                        {z.paysDispo.map(p => (
+                          <option key={p} value={p}>{DRAPEAUX[p] || ''} {p}</option>
+                        ))}
+                      </optgroup>
+                    ))}
                   </select>
                 </div>
               </div>

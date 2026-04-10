@@ -5,10 +5,19 @@ const JOURS_NOMS = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi',
 
 // ── Construit le prompt avec planning actuel + alternatives par thème ─────────
 function buildPrompt(planning, toutesRecettes, obligations = []) {
+  const EVAL_KEYS = ['eval_patricia', 'eval_yannick', 'eval_joseph', 'eval_mika', 'eval_luce'];
+
   const lignes = (planning || []).map((jour, i) => {
     if (!jour?.recette || jour.recette.nom.startsWith('⚠️')) return null;
     const r = jour.recette;
     const themeCol = `theme_${jour.theme}`;
+
+    // Évaluations famille
+    const evals = EVAL_KEYS.map(k => r[k]).filter(v => v != null && v !== '');
+    const evalStr = evals.length > 0 ? ` · Éval famille: ${evals.join('/')} /5` : '';
+
+    // Ingrédients pour suggérer des substitutions d'ingrédients
+    const ingrStr = r.ingredients ? `\n  Ingrédients: ${r.ingredients}` : '';
 
     const alternatives = (toutesRecettes || [])
       .filter(alt =>
@@ -17,46 +26,57 @@ function buildPrompt(planning, toutesRecettes, obligations = []) {
         (alt.cout < r.cout || alt.temps_preparation < r.temps_preparation)
       )
       .sort((a, b) => (a.cout + a.temps_preparation / 10) - (b.cout + b.temps_preparation / 10))
-      .slice(0, 5)
-      .map(alt => `  • "${alt.nom}" — ${alt.cout}$ — ${alt.temps_preparation} min`);
+      .slice(0, 4)
+      .map(alt => {
+        const altIngr = alt.ingredients ? ` (${alt.ingredients.split(',').slice(0, 3).join(', ')})` : '';
+        return `  • "${alt.nom}" — cout ${alt.cout}/6 — ${alt.temps_preparation} min${altIngr}`;
+      });
 
-    return `Jour ${i} (${jour.jour}) — Thème: ${jour.theme}
-  Actuel: "${r.nom}" — ${r.cout}$ — ${r.temps_preparation} min
-  Alternatives disponibles:
-${alternatives.length > 0 ? alternatives.join('\n') : '  (aucune alternative disponible)'}`;
+    return `Jour ${i} (${jour.jour}) — "${r.nom}"
+  Coût: ${r.cout}/6 · Temps: ${r.temps_preparation} min${evalStr}${ingrStr}
+  Alternatives même thème:
+${alternatives.length > 0 ? alternatives.join('\n') : '  (aucune)'}`;
   }).filter(Boolean);
 
   const totalCout = (planning || []).reduce((s, j) => s + (j?.recette?.cout || 0), 0);
   const totalTemps = (planning || []).reduce((s, j) => s + (j?.recette?.temps_preparation || 0), 0);
 
   const contraintesStr = obligations.length > 0
-    ? `\nContraintes horaires à considérer cette semaine :\n${obligations.map(o => {
+    ? `\nContraintes horaires :\n${obligations.map(o => {
         const jour = JOURS_NOMS[o.jourSemaine] || '';
-        return `- ${jour} : ${o.membre || 'Membre'} absent(e) ${o.heureDebut}–${o.heureFin} (${o.titre}) → préférer un repas rapide ou préparable à l'avance ce soir-là`;
+        return `- ${jour} : ${o.membre || 'Membre'} absent(e) ${o.heureDebut}–${o.heureFin} (${o.titre}) → repas rapide ou préparable à l'avance`;
       }).join('\n')}`
     : '';
 
-  return `Tu aides une famille québécoise à optimiser son planning de repas hebdomadaire.
+  return `Tu aides une famille québécoise à optimiser son planning repas.
+Coût total: ${totalCout}/42 · Temps total: ${Math.floor(totalTemps / 60)}h${totalTemps % 60}min${contraintesStr}
 
-Situation actuelle: ${totalCout}$ au total — ${Math.floor(totalTemps / 60)}h${totalTemps % 60}min de cuisine.${contraintesStr}
+ÉCHELLE DE COÛT : 1=<4$/portion, 2=4-7$, 3=7-12$, 4=12-18$, 5=18-25$, 6=>25$
 
-Planning avec alternatives disponibles:
 ${lignes.join('\n\n')}
 
-Suggère EXACTEMENT 2 ou 3 échanges de recettes (utilise UNIQUEMENT les alternatives listées ci-dessus). Tiens compte des contraintes horaires si présentes. Priorise les économies les plus significatives.
+MISSION : Propose 2-3 optimisations concrètes pour réduire budget ou temps.
 
-Réponds UNIQUEMENT avec ce JSON (aucun autre texte):
+RÈGLES CRITIQUES (dans cet ordre de priorité) :
+1. SUBSTITUTION D'INGRÉDIENT en priorité : si les ingrédients d'une recette incluent quelque chose de coûteux (saumon frais, homard, veau, etc.), suggère de le remplacer par une alternative similaire (truite, crevettes, poulet). La "recetteProposee" reste le même nom et "type" = "ingredient".
+2. ÉCHANGE DE RECETTE uniquement si le gain est significatif ET si l'alternative est culinairement équivalente (même niveau de complexité, même esprit). Ne dégrade pas l'expérience : pas de saucisses à la place d'un plat gastronomique.
+3. Respecte les évaluations : ne remplace pas une recette bien notée (≥4) par une inconnue.
+4. Contraintes horaires : priorise les économies de temps ces jours-là.
+
+Réponds UNIQUEMENT avec ce JSON (sans markdown) :
 [
   {
     "jourIndex": 0,
     "jour": "Lundi",
-    "recetteActuelle": "Nom exact de la recette actuelle",
-    "recetteProposee": "Nom exact de l'alternative choisie",
-    "economie_cout": 5,
-    "economie_temps": 10,
-    "raison": "Explication courte (max 12 mots)"
+    "recetteActuelle": "Nom exact actuel",
+    "recetteProposee": "Nom exact proposé (ou même nom si substitution ingrédient)",
+    "economie_cout": 2,
+    "economie_temps": 0,
+    "raison": "Remplace le saumon par de la truite : même saveur, -3$/portion",
+    "type": "ingredient"
   }
-]`;
+]
+("type" : "ingredient" = substitution dans la recette, "recette" = échange complet)`;
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
