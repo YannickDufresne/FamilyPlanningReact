@@ -691,19 +691,20 @@ input[type="range"] {
 }
 .day-card:hover .day-card__lock,
 .day-card__lock--locked { opacity: 1; }
-/* Jour confirmé : solide et net */
-.day-card--locked {
+/* Jour confirmé par l'utilisateur : pleine opacité + contour vert */
+.day-card--locked:not(.day-card--passe) {
   box-shadow: 0 0 0 2px var(--forest) inset;
+  opacity: 1;
 }
-/* Jour non confirmé (éditable) : légèrement atténué pour inviter à confirmer */
+/* Jour non confirmé (éditable futur) : légèrement atténué pour inviter à confirmer */
 .day-card:not(.day-card--locked):not(.day-card--passe):not(.day-card--warning) {
-  opacity: 0.82;
+  opacity: 0.78;
 }
 .day-card:not(.day-card--locked):not(.day-card--passe):not(.day-card--warning):hover {
   opacity: 1;
 }
-/* Jour passé : verrouillage automatique */
-.day-card--passe { opacity: 0.65; filter: grayscale(25%); }
+/* Jour passé : toujours grisé, qu'il soit verrouillé ou non */
+.day-card--passe { opacity: 0.6; filter: grayscale(25%); }
 .day-card__lock--auto { cursor: default; opacity: 0.5; }
 
 /* ── Verrouiller la semaine ────────────────────────────────────────────────── */
