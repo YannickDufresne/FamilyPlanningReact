@@ -232,7 +232,7 @@ function SectionAgenda({ obligations, evenements, semaineVue }) {
 
 // ── Composant principal ───────────────────────────────────────────────────────
 export default function FamilleActualites({ profils, semaineVue, agenda = {} }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const obligations = agenda.obligations || [];
   const evenements = agenda.evenements || [];
 
