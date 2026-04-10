@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import Anthropic from '@anthropic-ai/sdk';
 
 // ── Descriptions des thèmes pour le prompt ───────────────────────────────────
@@ -165,7 +166,7 @@ export default function ModalSuggestionIA({ theme, filtres, ingredientsForces, r
     onClose();
   }
 
-  return (
+  return createPortal(
     <div className="modal-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
       <div className="modal-ia">
         <button className="modal-ia__close" onClick={onClose}>✕</button>
@@ -234,6 +235,7 @@ export default function ModalSuggestionIA({ theme, filtres, ingredientsForces, r
           </div>
         )}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

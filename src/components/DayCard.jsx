@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { calculerPrixFamille } from '../utils/prixFamille';
 import ModalSuggestionIA from './ModalSuggestionIA';
 
@@ -516,8 +517,8 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
 
       </div>
 
-      {/* Recherche / ajout de recette */}
-      {searchOpen && (() => {
+      {/* Recherche / ajout de recette — rendu dans body via portal pour éviter les problèmes de z-index */}
+      {searchOpen && createPortal((() => {
         const themeCol = `theme_${jour.theme}`;
         const filtreOrigine = filtres.origine && filtres.origine !== 'Tous';
         const poolTheme = recettes.filter(r =>
@@ -657,7 +658,7 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
             </div>
           </div>
         );
-      })()}
+      })(), document.body)}
     </article>
   );
 }
