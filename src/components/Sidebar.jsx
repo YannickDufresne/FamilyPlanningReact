@@ -234,7 +234,7 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
           const badgeParts = [
             filtres.nbVegetarien > 0 && `${filtres.nbVegetarien} végé`,
             filtres.nbVegane > 0 && `${filtres.nbVegane} vg`,
-            filtres.nbRapides > 0 && `${filtres.nbRapides} rapide${filtres.nbRapides > 1 ? 's' : ''}`,
+            filtres.nbClassiques > 0 && `${filtres.nbClassiques} classique${filtres.nbClassiques > 1 ? 's' : ''}`,
             filtres.origine !== 'Tous' && labelOrigine(filtres.origine),
           ].filter(Boolean);
           const isOpen = badgeParts.length > 0;
@@ -271,12 +271,17 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
 
                 <div className="control-group">
                   <label className="control-label">
-                    Repas rapides et économiques — <strong>{filtres.nbRapides}</strong>
-                    <span className="control-label__cap"> (≤ 25 min, ≤7$/portion)</span>
+                    Classiques familiaux ⭐ — <strong>{filtres.nbClassiques}</strong>
+                    <span className="control-label__cap"> jour{filtres.nbClassiques > 1 ? 's' : ''} sur 7</span>
                   </label>
                   <input type="range" min={0} max={joursDisponibles} step={1}
-                    value={filtres.nbRapides}
-                    onChange={e => set('nbRapides', +e.target.value)} />
+                    value={filtres.nbClassiques}
+                    onChange={e => set('nbClassiques', +e.target.value)} />
+                  {filtres.nbClassiques > 0 && (
+                    <p className="control-label__hint">
+                      Les repas sans ⭐ seront remplacés par des classiques marqués.
+                    </p>
+                  )}
                 </div>
 
                 <div className="sidebar-section-title">Filtres recettes</div>

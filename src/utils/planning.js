@@ -121,14 +121,14 @@ function shuffleSeeded(arr, seed) {
   return a;
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces }) {
-  const { nbVegetarien, nbVegane, nbRapides = 0, nbGratuit = 0, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces, classiques }) {
+  const { nbVegetarien, nbVegane, nbClassiques = 0, nbGratuit = 0, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
 
-  // Jours "rapides" : shuffle déterministe des jours non-végétariens/véganes
-  const joursRapidesSet = new Set(
-    shuffleSeeded([0,1,2,3,4,5,6], seed + 5151).slice(0, Math.min(nbRapides, 7))
+  // Jours "classiques" : shuffle déterministe → répartition variée chaque semaine
+  const joursClassiquesSet = new Set(
+    shuffleSeeded([0,1,2,3,4,5,6], seed + 7171).slice(0, Math.min(nbClassiques, 7))
   );
   if (nbOmnivore < 0) return null;
 
@@ -215,10 +215,11 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       }
     }
     if (activerCout)    recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
-    // Repas rapides : pour les jours désignés, préférer ≤ 25 min et cout ≤ 2
-    if (joursRapidesSet.has(i)) {
-      const rapides = recettesDispo.filter(r => (r.temps_preparation || 999) <= 25 && (r.cout || 6) <= 2);
-      if (rapides.length > 0) recettesDispo = rapides;
+    // Classiques familiaux : pour les jours désignés, restreindre au pool des classiques marqués
+    if (joursClassiquesSet.has(i) && classiques?.size > 0) {
+      const classiquesDispo = recettesDispo.filter(r => classiques.has(r.nom));
+      if (classiquesDispo.length > 0) recettesDispo = classiquesDispo;
+      // Sinon : aucun classique pour ce thème → on garde le pool normal (meilleur qu'une erreur)
     }
 
     let regimeNecessaire = null;

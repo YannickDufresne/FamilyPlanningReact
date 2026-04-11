@@ -3484,6 +3484,22 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   font-size: 0.75rem; padding: 0; line-height: 1;
 }
 
+/* ── Classiques familiaux ⭐ ───────────────────────────────────────────────── */
+.recette-classique-btn {
+  background: none; border: none; cursor: pointer;
+  font-size: 1rem; line-height: 1; padding: 0 2px;
+  margin-left: 4px; opacity: 0.35; transition: opacity 0.15s, transform 0.15s;
+  vertical-align: middle;
+}
+.recette-classique-btn:hover { opacity: 0.75; transform: scale(1.2); }
+.recette-classique-btn--active { opacity: 1; }
+.recette-classique-btn--active:hover { opacity: 0.8; transform: scale(1.1); }
+
+.control-label__hint {
+  font-size: 0.72rem; color: var(--ink-3); margin: 3px 0 0; line-height: 1.35;
+  font-style: italic;
+}
+
 .recette-search-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.5);
   z-index: 1000; display: flex; align-items: center; justify-content: center;

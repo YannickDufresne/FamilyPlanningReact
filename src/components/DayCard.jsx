@@ -199,7 +199,7 @@ function IngredientsHighlighted({ texte, ingredientsForces = [] }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [], onSauvegarderRecette = null, recettesSemaine = [] }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [], onSauvegarderRecette = null, recettesSemaine = [], classiques, onToggleClassique }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
@@ -381,6 +381,15 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
               )}
             </span>
           )}
+          {!isWarning && onToggleClassique && (
+            <button
+              className={`recette-classique-btn ${classiques?.has(recette.nom) ? 'recette-classique-btn--active' : ''}`}
+              onClick={() => onToggleClassique(recette.nom)}
+              title={classiques?.has(recette.nom) ? 'Retirer des classiques familiaux' : 'Ajouter aux classiques familiaux ⭐'}
+            >
+              {classiques?.has(recette.nom) ? '⭐' : '☆'}
+            </button>
+          )}
         </div>
         {!isWarning && (
           <div className="planning-item__cost">{recette.cout}$ · {recette.temps_preparation} min</div>
@@ -403,6 +412,7 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
                 const o = filtres?.origine;
                 if (o && o !== 'Tous') parts.push(o.startsWith('zone:') ? o.slice(5) : o);
                 if (regimeNecessaire !== 'omnivore') parts.push(regimeNecessaire);
+                if (filtres?.nbClassiques > 0 && classiques?.size > 0) parts.push('classique ⭐');
                 if (filtres?.activerCout) parts.push(`coût ≤ ${filtres.coutMax}/6`);
                 if (filtres?.activerTemps) parts.push(`≤ ${filtres.tempsMax} min`);
                 return parts.length > 0

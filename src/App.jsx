@@ -56,7 +56,7 @@ const DEFAULT_FILTRES = {
   nbVegetarien: 1,
   nbVegane: 0,
   nbGratuit: 1,
-  nbRapides: 0,
+  nbClassiques: 0,
   origine: 'Tous',
   activerCout: false,
   coutMax: 6,
@@ -181,6 +181,22 @@ export default function App() {
     setIngredientsForces(prev => {
       const next = prev.filter(f => f !== ing);
       localStorage.setItem('fp_ingredients_forces', JSON.stringify(next));
+      return next;
+    });
+  }
+
+  // ── Classiques familiaux (recettes marquées ⭐ par la famille) ────────────
+  const [classiques, setClassiques] = useState(() => {
+    try { return new Set(JSON.parse(localStorage.getItem('fp_classiques') || '[]')); }
+    catch { return new Set(); }
+  });
+
+  function toggleClassique(nomRecette) {
+    setClassiques(prev => {
+      const next = new Set(prev);
+      if (next.has(nomRecette)) next.delete(nomRecette);
+      else next.add(nomRecette);
+      localStorage.setItem('fp_classiques', JSON.stringify([...next]));
       return next;
     });
   }
@@ -346,10 +362,11 @@ export default function App() {
       planningActuel: planningRef.current,
       recettesForcees: estSemaineActuelle ? recettesForcees : new Map(),
       ingredientsForces,
+      classiques,
     });
     planningRef.current = result;
     return result;
-  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees, ingredientsForces]);
+  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees, ingredientsForces, classiques]);
 
   // ── Planning semaines à venir (déterministe par date) ─────────────────────
   const planningFutur = useMemo(() => {
@@ -363,8 +380,9 @@ export default function App() {
       joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
       ingredientsForces,
+      classiques,
     });
-  }, [estSemaineAVenir, semaineVue, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
+  }, [estSemaineAVenir, semaineVue, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, classiques]);
 
   // ── Planning semaine calendrier courante quand meta a avancé (sam/dim) ────
   const planningContenantAujourdhui = useMemo(() => {
@@ -378,8 +396,9 @@ export default function App() {
       joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
       ingredientsForces,
+      classiques,
     });
-  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
+  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, classiques]);
 
   // ── Historique ───────────────────────────────────────────────────────────────
   // Sauvegarde automatique du planning courant
@@ -666,6 +685,8 @@ export default function App() {
               onChoisirRecette={estSemaineEditable && !semaineLockee ? choisirRecette : null}
               ingredientsForces={ingredientsForces}
               onSauvegarderRecette={sauvegarderRecetteCustom}
+              classiques={classiques}
+              onToggleClassique={toggleClassique}
             />
           </main>
         </div>

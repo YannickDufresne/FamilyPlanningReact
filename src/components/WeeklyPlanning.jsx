@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import DayCard from './DayCard';
 
-export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, recettesExplicites, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette }) {
+export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, recettesExplicites, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette, classiques, onToggleClassique }) {
   const [modesActivite, setModesActivite] = useState(() =>
     Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
   );
@@ -49,6 +49,8 @@ export default function WeeklyPlanning({ planning, profils = [], joursVerrouille
             ingredientsForces={ingredientsForces}
             onSauvegarderRecette={onSauvegarderRecette}
             recettesSemaine={recettesSemaine}
+            classiques={classiques}
+            onToggleClassique={onToggleClassique}
           />
         ))}
       </div>
