@@ -1,5 +1,5 @@
 // ─── Logique de planification ─────────────────────────────────────────────────
-import { paysDeZone } from './zones';
+import { paysDeZone, labelOrigine } from './zones';
 
 // ── Mots-clés indiquant un événement INADAPTÉ à une sortie en famille ─────────
 // Ces termes détectent automatiquement les événements pour adultes célibataires,
@@ -249,12 +249,25 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
 
     // ── Recette forcée (choix manuel de l'utilisateur) ────────────────────────
-    // Si un filtre d'origine est actif, on ignore les recettes forcées pour montrer
-    // une vraie semaine thématique (même comportement que pour les verrous).
+    // Si un filtre d'origine est actif, la recette forcée est respectée
+    // SEULEMENT si elle correspond à l'origine choisie — sinon on régénère.
+    // Cela permet au choix manuel de coller après la sélection d'un pays.
     let recetteForcee = null;
-    if (!filtrerOrigine && recettesForcees?.has(i)) {
+    if (recettesForcees?.has(i)) {
       const nomForce = recettesForcees.get(i);
-      recetteForcee = recettes.find(r => r.nom === nomForce) || null;
+      const candidate = recettes.find(r => r.nom === nomForce) || null;
+      if (candidate) {
+        if (!filtrerOrigine) {
+          recetteForcee = candidate; // Pas de filtre → toujours respecter
+        } else {
+          const zonesPays = paysDeZone(origine);
+          const matcheOrigine = zonesPays
+            ? zonesPays.includes(candidate.origine)
+            : candidate.origine === origine;
+          if (matcheOrigine) recetteForcee = candidate; // Bonne origine → respecter
+          // Sinon: mauvaise origine → régénérer depuis le pool filtré
+        }
+      }
     }
 
     let recetteJour;
@@ -267,7 +280,8 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     } else {
       recetteJour = pickRandom(poolRecettes, rngRecette);
       if (!recetteJour) {
-        recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: 'Aucune recette disponible', regime_alimentaire: 'inconnu' };
+        const raisonManque = filtrerOrigine ? `${labelOrigine ? labelOrigine(origine) : origine} · ` : '';
+        recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: `${raisonManque}Aucune recette disponible`, regime_alimentaire: 'inconnu', origineManquante: filtrerOrigine ? origine : null, themeManquant: jourInfo.theme };
       } else {
         recettesUtilisees.add(recetteJour.nom);
         if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;

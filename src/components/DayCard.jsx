@@ -381,7 +381,9 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         {isWarning && (
           <div className="recette-manquante">
             <p className="recette-manquante__msg">
-              Aucune recette disponible pour ce thème avec les filtres actuels.
+              {recette.origineManquante
+                ? `Aucune recette ${recette.origineManquante} dans ce thème — crée-en une !`
+                : 'Aucune recette disponible pour ce thème avec les filtres actuels.'}
             </p>
             <div className="recette-manquante__actions">
               {onSauvegarderRecette && (
