@@ -312,6 +312,18 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
     fermerModal();
   }
 
+  // ── Navigation ← → dans le pool de recettes du jour ─────────────────────────
+  const poolRecettesJour = jour.poolAffichage || [];
+  const currentPoolIndex = poolRecettesJour.length > 0
+    ? Math.max(0, poolRecettesJour.findIndex(r => r.nom === recette.nom))
+    : 0;
+
+  function naviguerRecette(direction) {
+    if (!poolRecettesJour.length || !onChoisirRecette) return;
+    const newIndex = (currentPoolIndex + direction + poolRecettesJour.length) % poolRecettesJour.length;
+    onChoisirRecette(poolRecettesJour[newIndex].nom);
+  }
+
   const pool = modeActivite === 'adultes' ? topAdultes : topFamille;
   const idx  = modeActivite === 'adultes' ? indexAdultes : indexFamille;
   const setIdx = modeActivite === 'adultes' ? setIndexAdultes : setIndexFamille;
@@ -405,6 +417,15 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
             </button>
           )}
         </div>
+        {/* Navigation ← N/total → pour parcourir les recettes du pool */}
+        {!isWarning && !estVerrouille && onChoisirRecette && poolRecettesJour.length > 1 && (
+          <div className="recette-nav">
+            <button className="recette-nav__btn" onClick={() => naviguerRecette(-1)} title="Recette précédente">‹</button>
+            <span className="recette-nav__counter">{currentPoolIndex + 1} / {poolRecettesJour.length}</span>
+            <button className="recette-nav__btn" onClick={() => naviguerRecette(1)} title="Recette suivante">›</button>
+            <button className="recette-nav__ajouter" onClick={ouvrirFormAjouter} title="Créer une nouvelle recette avec ces paramètres">+</button>
+          </div>
+        )}
         {!isWarning && (
           <div className="planning-item__cost">{recette.cout}$ · {recette.temps_preparation} min</div>
         )}

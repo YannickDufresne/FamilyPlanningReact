@@ -216,6 +216,9 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     }
     if (activerCout) recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
 
+    // Snapshot du pool avant filtres régime/unicité — utilisé pour la navigation ← → dans DayCard
+    const poolAffichage = [...recettesDispo];
+
     // ── Régime nécessaire (calculé une seule fois, utilisé par classiques ET pool normal) ─
     let regimeNecessaire = null;
     if      (compteurVegane     < nbVegane)     regimeNecessaire = 'végane';
@@ -226,10 +229,12 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // Les classiques sont des valeurs sûres — ils ne sont pas contraints par les filtres du jour.
     let classiqueManquant = false;
     let recetteChoisieParClassique = null;
+    let poolClassiquesAffichage = null; // pour la navigation ← →
 
     if (joursClassiquesSet.has(i) && classiques?.size > 0) {
       // Pool complet du thème, indépendant de l'origine et du coût
       let poolC = recettes.filter(r => r[themeCol] === 1 && classiques.has(r.nom));
+      poolClassiquesAffichage = [...poolC]; // snapshot avant filtres
       // Respecter quand même le régime alimentaire quotidien
       if (regimeNecessaire) {
         const avecRegimeC = poolC.filter(r => r.regime_alimentaire === regimeNecessaire);
@@ -486,6 +491,10 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       topAdultes,
       musique: musiqueJour,
       classiqueManquant, // true si ce jour était désigné classique mais aucun classique n'existe pour ce thème
+      // Pool complet de recettes valides pour ce jour (sans filtre régime/unicité) — pour navigation ← →
+      poolAffichage: (poolClassiquesAffichage && poolClassiquesAffichage.length > 0)
+        ? poolClassiquesAffichage
+        : poolAffichage,
     });
   }
 

@@ -3527,6 +3527,68 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .recette-classique-btn--active { opacity: 1; }
 .recette-classique-btn--active:hover { opacity: 0.8; transform: scale(1.1); }
 
+/* ── Navigation ← N/total → dans DayCard ──────────────────────────────────── */
+.recette-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.recette-nav__btn {
+  background: var(--sage);
+  border: none;
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.recette-nav__btn:hover {
+  background: var(--forest);
+  color: white;
+}
+
+.recette-nav__counter {
+  font-size: 0.75rem;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  min-width: 2.8rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.recette-nav__ajouter {
+  margin-left: auto;
+  background: transparent;
+  border: 1.5px solid var(--terra);
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--terra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.recette-nav__ajouter:hover {
+  background: var(--terra);
+  color: white;
+}
+
 .control-label__hint {
   font-size: 0.72rem; color: var(--ink-3); margin: 3px 0 0; line-height: 1.35;
   font-style: italic;
