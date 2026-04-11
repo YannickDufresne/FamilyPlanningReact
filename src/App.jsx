@@ -26,7 +26,7 @@ import './App.css';
 const HASH = 'UEBtcGxlbW91c3NlMjAxMiE=';
 const HISTORIQUE_STORE = 'planning_historique';
 const MAX_HISTORIQUE   = 8; // semaines conservées
-const SEMAINES_AVANCE  = 2; // combien de semaines futures accessibles
+const SEMAINES_AVANCE  = 52; // semaines futures accessibles (1 an — 100% client-side, aucun coût serveur)
 
 function lundiISO(dateStr, deltaJours) {
   const d = new Date(dateStr + 'T12:00:00');
@@ -452,8 +452,9 @@ export default function App() {
   const semainePrecedente = lundiISO(semaineVue, -7);
   const semaineSuivante   = lundiISO(semaineVue, +7);
   const limiteAvance      = lundiISO(meta.semaine.debut, SEMAINES_AVANCE * 7);
-  // Peut reculer si l'historique existe OU si c'est la semaine contenant aujourd'hui
-  const peutReculer       = !!historique[semainePrecedente] || semainePrecedente === semaineContenantAujourdhui;
+  // Peut reculer si on est dans le futur (retour vers le présent toujours permis)
+  // OU si l'historique existe pour les semaines passées
+  const peutReculer = semaineVue > semaineContenantAujourdhui || !!historique[semainePrecedente];
   const peutAvancer       = semaineVue < limiteAvance;
 
   const stats = useMemo(() => calculerStats(planningVue), [planningVue]);
@@ -590,11 +591,17 @@ export default function App() {
     : estSemaineAVenir
       ? 'semaine-nav__status--future'
       : 'semaine-nav__status--readonly';
-  const statusLabel = (estSemaineActuelle || estSemaineContenantAujourd)
-    ? '📅 Semaine en cours'
-    : estSemaineAVenir
-      ? '🔮 Planification à venir'
-      : '📖 Lecture seule';
+  const statusLabel = (() => {
+    if (estSemaineActuelle || estSemaineContenantAujourd) return '📅 Semaine en cours';
+    if (!estSemaineAVenir) return '📖 Lecture seule';
+    // Calculer le décalage en semaines/mois
+    const lundiVue     = new Date(semaineVue + 'T12:00:00');
+    const lundiCourant = new Date(semaineContenantAujourdhui + 'T12:00:00');
+    const semaines     = Math.round((lundiVue - lundiCourant) / (7 * 86400000));
+    if (semaines <= 4)  return `🔮 Dans ${semaines} semaine${semaines > 1 ? 's' : ''}`;
+    const mois = Math.round(semaines / 4.33);
+    return `🔮 Dans ${mois} mois`;
+  })();
 
   return (
     <div className="app">
