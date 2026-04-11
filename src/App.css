@@ -4306,6 +4306,27 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .fa-sortie--gratuite { border-color: var(--sage-light); }
 .fa-sortie--payante  { border-color: var(--terra-light); }
 
+.fa-sortie__context-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-height: 16px;
+}
+
+.fa-sortie__label {
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-3);
+  background: var(--ink-1);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+.fa-sortie--gratuite .fa-sortie__label { color: var(--sage); background: var(--sage-light); }
+
 .fa-sortie__incon {
   font-size: 0.68rem;
   font-weight: 700;
