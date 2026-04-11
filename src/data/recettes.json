@@ -5012,7 +5012,14 @@
     "source": "nyt_cooking",
     "nom_original": "Japanese Burgers With Wasabi Ketchup",
     "image_url": "https://static01.nyt.com/images/2014/04/04/dining/japanese-burgers-wasabi-ketchup/japanese-burgers-wasabi-ketchup-superJumbo.jpg",
-    "image_aquarelle": "images/recettes/burgers-japonais-au-ketchup-wasabi.jpg"
+    "image_aquarelle": "images/recettes/burgers-japonais-au-ketchup-wasabi.jpg",
+    "livre": "",
+    "notes": "",
+    "eval_patricia": 8,
+    "eval_yannick": "",
+    "eval_joseph": 10,
+    "eval_mika": "",
+    "eval_luce": ""
   },
   {
     "nom": "Ragoût de boeuf à la japonaise",
