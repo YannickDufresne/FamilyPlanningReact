@@ -9,11 +9,11 @@ const JOURS_COURT = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
 const SOURCES_NOTE = 'CDC Developmental Milestones 2023 · WHO Child Growth Standards · Canadian Paediatric Society (CPS) · AAP HealthyChildren.org';
 
 // ── Utilitaires ────────────────────────────────────────────────────────────────
-function calculerAgeMois(dateNaissance) {
-  const naissance = new Date(dateNaissance + 'T12:00:00');
-  const today = new Date();
-  let mois = (today.getFullYear() - naissance.getFullYear()) * 12 + (today.getMonth() - naissance.getMonth());
-  let jours = today.getDate() - naissance.getDate();
+function calculerAgeMois(dateNaissance, referenceDate) {
+  const naissance  = new Date(dateNaissance + 'T12:00:00');
+  const reference  = referenceDate ? new Date(referenceDate + 'T12:00:00') : new Date();
+  let mois = (reference.getFullYear() - naissance.getFullYear()) * 12 + (reference.getMonth() - naissance.getMonth());
+  let jours = reference.getDate() - naissance.getDate();
   if (jours < 0) { mois--; jours += 30; }
   return { mois: Math.max(0, mois), jours: Math.max(0, jours) };
 }
@@ -29,7 +29,8 @@ function formatAge({ mois, jours }) {
 
 // ── Section développement bébés ───────────────────────────────────────────────
 function SectionBebes({ bebes, semaineVue }) {
-  const age = calculerAgeMois(bebes[0].naissance);
+  // Calculer l'âge à la date de la semaine visionnée (pas forcément aujourd'hui)
+  const age = calculerAgeMois(bebes[0].naissance, semaineVue);
   const ageStr = formatAge(age);
   const isTwins = bebes.length > 1;
 
@@ -357,12 +358,12 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
   const obligations = agenda.obligations || [];
   const evenements = agenda.evenements || [];
 
-  // Identifier les bébés (< 36 mois)
+  // Identifier les bébés (< 36 mois à la date de la semaine visionnée)
   const bebes = useMemo(() =>
     (profils || []).filter(p => {
       if (!p.naissance) return false;
-      return calculerAgeMois(p.naissance).mois < 36;
-    }), [profils]);
+      return calculerAgeMois(p.naissance, semaineVue).mois < 36;
+    }), [profils, semaineVue]);
 
   const hasAgenda = obligations.length > 0 ||
     (evenements || []).some(e => {
@@ -400,7 +401,7 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
         <div className="fa-body">
           <SectionCoupDeCoeur semaineVue={semaineVue} />
           {bebes.length > 0 && (
-            <SectionBebes bebes={bebes} semaineVue={semaineVue} />
+            <SectionBebes key={semaineVue} bebes={bebes} semaineVue={semaineVue} />
           )}
           <SectionAgenda
             obligations={obligations}
