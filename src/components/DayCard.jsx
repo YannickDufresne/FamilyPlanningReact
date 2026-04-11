@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import Anthropic from '@anthropic-ai/sdk';
 import { calculerPrixFamille } from '../utils/prixFamille';
 import ModalSuggestionIA from './ModalSuggestionIA';
+import albumsData from '../data/albums.json';
 
 const ANECDOTE_PREFIX = 'fp_anecdote_';
 function recetteSlug(nom) {
@@ -51,6 +52,19 @@ function genererExplication(activite, profils, pourQui = 'famille') {
   return `Pour ${noms} · ${motsCles}`;
 }
 const REGIME_LABEL = { omnivore: 'omnivore', végétarien: 'végétarien', végane: 'végane' };
+
+// ── Choisit un album du jour selon l'origine de la recette ───────────────────
+function choisirAlbumDuJour(recette, jourIndex, albums, ratings) {
+  if (!recette?.origine) return null;
+  const candidats = albums.filter(a =>
+    Array.isArray(a.origines_cuisine) && a.origines_cuisine.includes(recette.origine)
+  );
+  if (candidats.length === 0) return null;
+  // Préférer les albums notés 4-5★
+  const favoris = candidats.filter(a => (ratings?.[a.id] ?? 0) >= 4);
+  const pool = favoris.length > 0 ? favoris : candidats;
+  return pool[jourIndex % pool.length];
+}
 
 // ── Cherche UN album/compilation iTunes selon l'artiste de référence ──────────
 function useAlbum(musique) {
@@ -199,7 +213,7 @@ function IngredientsHighlighted({ texte, ingredientsForces = [] }) {
   );
 }
 
-export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [], onSauvegarderRecette = null, recettesSemaine = [], classiques, onToggleClassique }) {
+export default function DayCard({ jour, index, modeActivite = 'famille', onToggleModeActivite, profils = [], estVerrouille = false, estAutoVerrouille = false, onToggleLock = null, recettes = [], filtres = {}, recetteForceNom = null, onChoisirRecette = null, ingredientsForces = [], onSauvegarderRecette = null, recettesSemaine = [], classiques, onToggleClassique, albumRatings = {}, jourIndex = 0 }) {
   const { recette, exercices, activite, activiteAdultes, topFamille = [], topAdultes = [], musique, emoji, dateCourte } = jour;
   const [indexFamille, setIndexFamille] = useState(0);
   const [indexAdultes, setIndexAdultes] = useState(0);
@@ -607,6 +621,30 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         </details>
 
       </div>
+
+      {/* Album du jour lié à l'origine de la recette */}
+      {!isWarning && (() => {
+        const albumJour = choisirAlbumDuJour(recette, jourIndex, albumsData, albumRatings);
+        if (!albumJour) return null;
+        return (
+          <div className="day-album">
+            <span className="day-album__icon">🎵</span>
+            <div className="day-album__info">
+              <span className="day-album__nom">{albumJour.nom}</span>
+              <span className="day-album__artiste">{albumJour.artiste} · {albumJour.pays}</span>
+            </div>
+            {albumJour.url_apple_music && (
+              <a
+                className="day-album__link"
+                href={albumJour.url_apple_music}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Écouter sur Apple Music"
+              >▶</a>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Recherche / ajout de recette — rendu dans body via portal pour éviter les problèmes de z-index */}
       {searchOpen && createPortal((() => {

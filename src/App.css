@@ -4866,3 +4866,406 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   opacity: 0.55;
   margin-top: 2px;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BIBLIOTHÈQUE MUSICALE — AlbumsPage
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Page ── */
+.albums-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.albums-page__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.albums-page__titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+/* ── Barre de recherche ── */
+.albums-recherche {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.albums-recherche__input {
+  width: 100%;
+  padding: 10px 40px 10px 14px;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--ink);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.albums-recherche__input:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px var(--sage-light);
+}
+
+.albums-recherche__clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-3);
+  font-size: 1rem;
+  padding: 4px;
+  line-height: 1;
+}
+
+.albums-recherche__clear:hover { color: var(--ink); }
+
+/* ── Filtres ── */
+.albums-filtres {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.albums-filtres__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+  min-width: 52px;
+}
+
+.albums-filtres__groupe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.albums-filtre-btn {
+  padding: 5px 12px;
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.albums-filtre-btn:hover {
+  background: var(--sage-light);
+  border-color: var(--sage);
+  color: var(--forest);
+}
+
+.albums-filtre-btn--active {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Contrôles (tri + toggle) ── */
+.albums-controles {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.albums-tri {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.albums-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.albums-toggle input { cursor: pointer; }
+
+.albums-vide {
+  padding: 40px;
+  text-align: center;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+/* ── Grille ── */
+.albums-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* ── Carte album ── */
+.album-carte {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.album-carte:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+.album-carte--incon {
+  border-color: var(--terra);
+  background: linear-gradient(135deg, var(--surface) 85%, var(--terra-light));
+}
+
+.album-carte__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.album-carte__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.album-carte__nom {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.album-carte__artiste {
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.album-carte__annee {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.album-carte__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.album-carte__pays {
+  font-size: 0.78rem;
+  color: var(--ink-2);
+}
+
+.album-carte__genre {
+  font-size: 0.72rem;
+  background: var(--ink-1);
+  color: var(--ink-2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.album-carte__desc {
+  font-size: 0.80rem;
+  color: var(--ink-4);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.album-carte__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+
+.album-carte__etoiles {
+  display: flex;
+  gap: 2px;
+}
+
+.etoile {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--ink-3);
+  padding: 2px;
+  line-height: 1;
+  transition: color 0.1s, transform 0.1s;
+}
+
+.etoile:hover { color: #C8962A; transform: scale(1.2); }
+
+.etoile--active {
+  color: #C8962A;
+}
+
+.album-carte__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.album-apple-link {
+  font-size: 0.73rem;
+  color: var(--forest);
+  text-decoration: none;
+  border: 1px solid var(--sage);
+  padding: 2px 8px;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.album-apple-link:hover {
+  background: var(--sage-light);
+}
+
+.album-badge--incon {
+  font-size: 0.70rem;
+  color: var(--terra);
+  font-weight: 600;
+}
+
+.album-badge--score {
+  font-size: 0.70rem;
+  font-weight: 700;
+  color: var(--ink-3);
+  background: var(--ink-1);
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   ALBUM DU JOUR — intégré dans DayCard
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+.day-album {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  background: var(--terra-light);
+  border: 1px solid rgba(168, 95, 56, 0.2);
+  border-radius: 8px;
+  min-width: 0;
+}
+
+.day-album__icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+
+.day-album__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.day-album__nom {
+  font-size: 0.80rem;
+  font-weight: 600;
+  color: var(--bark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.day-album__artiste {
+  font-size: 0.72rem;
+  color: var(--terra);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.day-album__link {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--terra);
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 0.7rem;
+  transition: background 0.15s;
+}
+
+.day-album__link:hover { background: var(--forest); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .albums-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .albums-page__header {
+    flex-wrap: wrap;
+  }
+
+  .albums-controles {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

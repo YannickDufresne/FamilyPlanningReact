@@ -6,6 +6,7 @@ import GroceryList from './components/GroceryList';
 import EpiceriePage from './components/EpiceriePage';
 import RecettesPage from './components/RecettesPage';
 import ActivitesPage from './components/ActivitesPage';
+import AlbumsPage from './components/AlbumsPage';
 import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
@@ -74,6 +75,12 @@ export default function App() {
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 1e9));
   const [view, setView]           = useState('planning');
   const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
+  const [albumRatings, setAlbumRatings] = useState(() => {
+    try {
+      const saved = localStorage.getItem('fp_album_ratings');
+      return saved ? JSON.parse(saved) : {};
+    } catch { return {}; }
+  });
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showProfilsModal, setShowProfilsModal] = useState(false);
   const [showMethodologieModal, setShowMethodologieModal] = useState(false);
@@ -197,6 +204,20 @@ export default function App() {
       if (next.has(nomRecette)) next.delete(nomRecette);
       else next.add(nomRecette);
       localStorage.setItem('fp_classiques', JSON.stringify([...next]));
+      return next;
+    });
+  }
+
+  // ── Notation albums ───────────────────────────────────────────────────────
+  function raterAlbum(id, note) {
+    setAlbumRatings(prev => {
+      const next = { ...prev };
+      if (note === 0 || note == null) {
+        delete next[id];
+      } else {
+        next[id] = note;
+      }
+      localStorage.setItem('fp_album_ratings', JSON.stringify(next));
       return next;
     });
   }
@@ -609,6 +630,7 @@ export default function App() {
         onViewRecettes={() => setView('recettes')}
         onViewActivites={() => setView('activites')}
         onViewEpicerie={() => setView('epicerie')}
+        onViewAlbums={() => setView('albums')}
         onViewUpdate={() => setShowUpdateModal(true)}
         onViewProfils={() => setShowProfilsModal(true)}
         onViewMethode={() => setShowMethodologieModal(true)}
@@ -619,6 +641,12 @@ export default function App() {
         <RecettesPage onRetour={() => setView('planning')} />
       ) : view === 'activites' ? (
         <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} profils={profils} />
+      ) : view === 'albums' ? (
+        <AlbumsPage
+          onRetour={() => setView('planning')}
+          ratings={albumRatings}
+          onNoter={raterAlbum}
+        />
       ) : view === 'epicerie' ? (
         <EpiceriePage
           planning={planningVue}
@@ -694,6 +722,8 @@ export default function App() {
               onSauvegarderRecette={sauvegarderRecetteCustom}
               classiques={classiques}
               onToggleClassique={toggleClassique}
+              albumRatings={albumRatings}
+              semaineDebut={semaineVue}
             />
           </main>
         </div>

@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import DayCard from './DayCard';
 
-export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, recettesExplicites, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette, classiques, onToggleClassique }) {
+export default function WeeklyPlanning({ planning, profils = [], joursVerrouilles = new Set(), joursAutoVerrouilles = new Set(), onToggleLockJour, lectureSeule, recettes = [], recettesForcees, recettesExplicites, onChoisirRecette, filtres = {}, ingredientsForces = [], onSauvegarderRecette, classiques, onToggleClassique, albumRatings = {}, semaineDebut = '' }) {
   const [modesActivite, setModesActivite] = useState(() =>
     Object.fromEntries((planning || []).map(j => [j.jour, 'famille']))
   );
@@ -51,6 +51,15 @@ export default function WeeklyPlanning({ planning, profils = [], joursVerrouille
             recettesSemaine={recettesSemaine}
             classiques={classiques}
             onToggleClassique={onToggleClassique}
+            albumRatings={albumRatings}
+            jourIndex={(() => {
+              // Combine day index (0-6) with a week seed derived from semaineDebut
+              // to vary album recommendations across weeks
+              let h = 5381;
+              for (const c of semaineDebut) h = (Math.imul(h, 33) ^ c.charCodeAt(0)) >>> 0;
+              const weekSeed = h % 997;
+              return i + weekSeed * 7;
+            })()}
           />
         ))}
       </div>
