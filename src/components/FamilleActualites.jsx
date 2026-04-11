@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import Anthropic from '@anthropic-ai/sdk';
+import activites from '../data/activites.json';
 
 // ── Constantes ─────────────────────────────────────────────────────────────────
 const JOURS_COURT = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
@@ -230,6 +231,126 @@ function SectionAgenda({ obligations, evenements, semaineVue }) {
   );
 }
 
+// ── Section sorties de la semaine ─────────────────────────────────────────────
+function formatDateCourte(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr + 'T12:00:00');
+  return d.toLocaleDateString('fr-CA', { weekday: 'short', day: 'numeric', month: 'short' });
+}
+
+function formatPrixActivite(a) {
+  const adulte = a.cout_adulte ?? a.cout ?? 0;
+  if (a.gratuit || adulte === 0) return 'Gratuit';
+  const enfant = a.cout_enfant;
+  if (enfant != null && enfant === 0) return `${adulte} $ adulte · Gratuit enfant`;
+  if (enfant != null && enfant !== adulte) return `${adulte} $ adulte · ${enfant} $ enfant`;
+  return `${adulte} $ / pers.`;
+}
+
+function MiniCarteActivite({ activite }) {
+  const isGratuit = activite.gratuit || (activite.cout_adulte ?? activite.cout ?? 0) === 0;
+  const prix = formatPrixActivite(activite);
+  const desc = activite.description_generee || activite.description || '';
+
+  return (
+    <div className={`fa-sortie ${isGratuit ? 'fa-sortie--gratuite' : 'fa-sortie--payante'}`}>
+      {activite.incontournable && (
+        <span className="fa-sortie__incon">⭐ À ne pas manquer</span>
+      )}
+      <div className="fa-sortie__top">
+        {activite.url ? (
+          <a className="fa-sortie__nom" href={activite.url} target="_blank" rel="noopener noreferrer">
+            {activite.nom}
+          </a>
+        ) : (
+          <div className="fa-sortie__nom">{activite.nom}</div>
+        )}
+        <span className={`fa-sortie__prix${isGratuit ? ' fa-sortie__prix--gratuit' : ''}`}>{prix}</span>
+      </div>
+      {activite.date && (
+        <div className="fa-sortie__meta">📅 {formatDateCourte(activite.date)}{activite.lieu ? ` · 📍 ${activite.lieu}` : ''}</div>
+      )}
+      {!activite.date && activite.lieu && (
+        <div className="fa-sortie__meta">📍 {activite.lieu}</div>
+      )}
+      {desc && (
+        <div className="fa-sortie__desc">{desc.length > 140 ? desc.slice(0, 140) + '…' : desc}</div>
+      )}
+    </div>
+  );
+}
+
+function SectionCoupDeCoeur({ semaineVue }) {
+  // Fenêtre de pertinence : 3 jours avant le lundi jusqu'à la fin de la semaine suivante
+  const { dateMin, dateFin } = useMemo(() => {
+    const lundi = new Date(semaineVue + 'T12:00:00');
+    const min = new Date(lundi); min.setDate(lundi.getDate() - 3);
+    const fin = new Date(lundi); fin.setDate(lundi.getDate() + 13);
+    return {
+      dateMin: min.toISOString().split('T')[0],
+      dateFin: fin.toISOString().split('T')[0],
+    };
+  }, [semaineVue]);
+
+  const recommandations = useMemo(() => {
+    const today = new Date().toISOString().split('T')[0];
+
+    // Activités datées dans la fenêtre ET non encore passées (ou incontournables récentes)
+    const datees = activites.filter(a => {
+      if (!a.date) return false;
+      if (a.date > dateFin) return false;
+      // Garder si pas encore passée, ou si incontournable et commencée il y a ≤ 7 jours
+      if (a.date >= today) return true;
+      if (a.incontournable && a.date >= dateMin) return true;
+      return false;
+    });
+
+    // Activités permanentes (pas de date)
+    const permanentes = activites.filter(a => !a.date || a.date === '');
+
+    const candidats = [...datees, ...permanentes]
+      .filter(a => (a.score_famille ?? 0) > 0);
+
+    const score = a =>
+      (a.incontournable ? 500 : 0) +
+      (a.date && a.date >= today ? 200 : 0) + // datée non passée = priorité
+      (a.score_famille ?? 0);
+
+    const sorted = [...candidats].sort((a, b) => score(b) - score(a));
+
+    // Top global (souvent le payant incontournable)
+    const top = sorted[0] ?? null;
+    // Top gratuit différent
+    const topGratuit = sorted.find(a =>
+      (a.gratuit || (a.cout_adulte ?? a.cout ?? 0) === 0) && a !== top
+    ) ?? null;
+    // Si top est déjà gratuit, prendre le 2e meilleur
+    const topIsGratuit = top && (top.gratuit || (top.cout_adulte ?? top.cout ?? 0) === 0);
+    const deuxieme = topIsGratuit ? (sorted[1] ?? null) : topGratuit;
+
+    return [top, deuxieme].filter(Boolean);
+  }, [semaineVue, dateMin, dateFin]);
+
+  if (recommandations.length === 0) return null;
+
+  return (
+    <div className="fa-section fa-section--sorties">
+      <div className="fa-section__hdr">
+        <div className="fa-section__icons">🗺</div>
+        <div>
+          <div className="fa-section__titre">Sorties de la semaine</div>
+          <div className="fa-section__sub">Recommandations pour la famille</div>
+        </div>
+      </div>
+      <div className="fa-sorties-grid">
+        {recommandations.map((a, i) => (
+          <MiniCarteActivite key={i} activite={a} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── Composant principal ───────────────────────────────────────────────────────
 export default function FamilleActualites({ profils, semaineVue, agenda = {} }) {
   const [open, setOpen] = useState(false);
@@ -251,7 +372,22 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
       return diff >= -1 && diff <= 14;
     });
 
-  if (bebes.length === 0 && !hasAgenda) return null;
+  if (bebes.length === 0 && !hasAgenda) {
+    // Afficher quand même si des sorties sont disponibles
+    return (
+      <div className="famille-actualites">
+        <button className="fa-toggle" onClick={() => setOpen(v => !v)}>
+          <span className="fa-toggle__title">🏠 Vie de famille</span>
+          <span className="fa-toggle__chevron">{open ? '▲' : '▼'}</span>
+        </button>
+        {open && (
+          <div className="fa-body">
+            <SectionCoupDeCoeur semaineVue={semaineVue} />
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="famille-actualites">
@@ -262,6 +398,7 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
 
       {open && (
         <div className="fa-body">
+          <SectionCoupDeCoeur semaineVue={semaineVue} />
           {bebes.length > 0 && (
             <SectionBebes bebes={bebes} semaineVue={semaineVue} />
           )}

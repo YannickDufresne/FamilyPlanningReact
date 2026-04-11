@@ -110,7 +110,7 @@ function ScoresMembres({ scores, activite, profils }) {
 }
 
 // ── Carte activité ─────────────────────────────────────────────────────────────
-function CarteActivite({ activite, mode, profils }) {
+function CarteActivite({ activite, mode, profils, passee }) {
   const prix = formatPrix(activite);
   const icone = SOURCE_ICONE[activite.source] ?? '•';
   const sourceLabel = SOURCE_LABEL[activite.source] ?? activite.source ?? '';
@@ -119,8 +119,9 @@ function CarteActivite({ activite, mode, profils }) {
   const explication = mode === 'adultes' ? activite.explication_adultes : activite.explication_famille;
 
   return (
-    <div className={`acti-carte${activite.incontournable ? ' acti-carte--star' : ''}`}>
-      {activite.incontournable && (
+    <div className={`acti-carte${activite.incontournable ? ' acti-carte--star' : ''}${passee ? ' acti-carte--passee' : ''}`}>
+      {passee && <span className="acti-carte__passee-badge">Passé</span>}
+      {activite.incontournable && !passee && (
         <span className="incontournable-badge">⭐ À ne pas manquer</span>
       )}
       <div className="acti-carte__top">
@@ -183,13 +184,17 @@ const PALIERS = [
 ];
 
 export default function ActivitesPage({ onRetour, semaine, profils }) {
-  const [mode, setMode]       = useState('famille'); // 'famille' | 'adultes'
-  const [tri, setTri]         = useState('score');   // 'score' | 'date' | 'gratuit'
-  const [scoreMin, setScoreMin] = useState(0);       // palier de pertinence
+  const [mode, setMode]         = useState('famille'); // 'famille' | 'adultes'
+  const [tri, setTri]           = useState('score');   // 'score' | 'date' | 'gratuit'
+  const [scoreMin, setScoreMin] = useState(0);         // palier de pertinence
+  const [afficherPassees, setAfficherPassees] = useState(false);
+
+  const today = new Date().toISOString().split('T')[0];
 
   const debutSemaine = semaine?.debut;
   const finSemaine   = semaine?.fin;
   const dansSemaine  = d => debutSemaine && finSemaine && d >= debutSemaine && d <= finSemaine;
+  const estPassee    = d => d && d < today;
 
   // Filtrer par pertinence minimale
   const scoreKey = mode === 'adultes' ? 'score_adultes' : 'score_famille';
@@ -197,9 +202,13 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
     ? activites
     : activites.filter(a => (a[scoreKey] ?? 0) >= scoreMin);
 
-  // Séparer datées / non-datées
-  const datees    = activitesFiltrees.filter(a => a.date && a.date.trim() !== '');
-  const nonDatees = activitesFiltrees.filter(a => !a.date || a.date.trim() === '');
+  // Nombre d'activités passées (pour le bouton toggle)
+  const nbPassees = activitesFiltrees.filter(a => estPassee(a.date)).length;
+
+  // Séparer datées / non-datées (cacher passées selon état)
+  const dateesTout  = activitesFiltrees.filter(a => a.date && a.date.trim() !== '');
+  const datees      = afficherPassees ? dateesTout : dateesTout.filter(a => !estPassee(a.date));
+  const nonDatees   = activitesFiltrees.filter(a => !a.date || a.date.trim() === '');
 
   // Fonction de tri
   const trierActivites = (arr) => {
@@ -303,6 +312,17 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
             <option value="date">Tri : date</option>
             <option value="gratuit">Tri : gratuit d'abord</option>
           </select>
+
+          {/* Activités passées */}
+          {nbPassees > 0 && (
+            <button
+              className={`acti-passees-toggle${afficherPassees ? ' acti-passees-toggle--actif' : ''}`}
+              onClick={() => setAfficherPassees(v => !v)}
+              title={afficherPassees ? 'Masquer les activités passées' : 'Afficher les activités passées'}
+            >
+              {afficherPassees ? `🕐 Masquer les ${nbPassees} passées` : `🕐 ${nbPassees} passées`}
+            </button>
+          )}
         </div>
       </div>
 
@@ -322,7 +342,7 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
                 </div>
                 <div className="acti-groupe__cartes">
                   {parDate[date].map((a, i) => (
-                    <CarteActivite key={`${date}-${i}`} activite={a} mode={mode} profils={profils} />
+                    <CarteActivite key={`${date}-${i}`} activite={a} mode={mode} profils={profils} passee={estPassee(a.date)} />
                   ))}
                 </div>
               </div>
