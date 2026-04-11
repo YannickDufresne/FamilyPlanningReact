@@ -41,11 +41,43 @@ async function rechercherITunes(artiste, nom) {
     const res = await fetch(url);
     if (!res.ok) return null;
     const data = await res.json();
-    const match = (data.results || []).find(r => r.wrapperType === 'collection');
-    if (match?.collectionViewUrl) return match.collectionViewUrl;
-    return null;
+    const match = (data.results || []).find(r => r.wrapperType === 'collection' && r.artworkUrl100);
+    if (!match) return null;
+    return {
+      url_apple_music: match.collectionViewUrl || null,
+      artwork_url: match.artworkUrl100.replace('100x100bb', '600x600bb'),
+    };
   } catch (e) {
     console.warn(`  iTunes erreur pour "${artiste} — ${nom}": ${e.message}`);
+    return null;
+  }
+}
+
+// ── Claude API — rang mondial estimé ─────────────────────────────────────────
+async function estimerRangMondial(album, anthropic) {
+  try {
+    const { nom, artiste, pays, annee, palmares } = album;
+    const prompt = `En tant qu'expert en histoire de la musique, estime la position approximative de l'album "${nom}" de ${artiste} (${pays}, ${annee}) dans un classement mondial de consensus critique qui agrège Rolling Stone, Acclaimed Music, Rate Your Music, Pitchfork et NME.
+
+Réponds UNIQUEMENT avec un entier représentant le rang estimé (ex: 5, 42, 150, 800).
+- Top 10 : albums universellement reconnus comme les meilleurs de tous les temps
+- Top 50 : classiques absolus présents dans presque toutes les listes
+- Top 200 : essentiels largement cités
+- Top 500 : très importants dans leur genre ou région
+- Top 1500 : reconnus mais moins universels
+- Au-delà : importants régionalement ou dans un genre précis
+
+Réponds avec le rang seul, rien d'autre.`;
+
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 10,
+      messages: [{ role: 'user', content: prompt }],
+    });
+    const text = response.content?.[0]?.text?.trim();
+    const rang = parseInt(text);
+    return isNaN(rang) ? null : rang;
+  } catch (e) {
     return null;
   }
 }
@@ -98,21 +130,22 @@ async function main() {
   for (let i = 0; i < albums.length; i++) {
     const album = albums[i];
 
-    // iTunes
+    // iTunes — url Apple Music + artwork
     if (!ONLY_DESC && album.url_apple_music === null && itunesTraites < LIMIT) {
       process.stdout.write(`[${i+1}/${albums.length}] iTunes: ${album.artiste} — ${album.nom}... `);
-      const url = await rechercherITunes(album.artiste, album.nom);
-      if (url) {
-        albums[i].url_apple_music = url;
+      const result = await rechercherITunes(album.artiste, album.nom);
+      if (result) {
+        albums[i].url_apple_music = result.url_apple_music || '';
+        albums[i].artwork_url     = result.artwork_url || null;
         modifie++;
-        console.log('✓');
+        console.log('✓ (artwork + lien)');
       } else {
-        // Marquer comme cherché mais non trouvé (éviter re-requêtes)
         albums[i].url_apple_music = '';
+        albums[i].artwork_url     = null;
         console.log('—');
       }
       itunesTraites++;
-      await sleep(300); // respecter rate limit iTunes
+      await sleep(350);
     }
 
     // Description
@@ -127,7 +160,17 @@ async function main() {
         console.log('—');
       }
       descTraites++;
-      await sleep(500); // respecter rate limit Claude
+      await sleep(400);
+    }
+
+    // Rang mondial estimé
+    if (!ONLY_ITUNES && album.rang_mondial === null && anthropic && descTraites < LIMIT) {
+      const rang = await estimerRangMondial(album, anthropic);
+      if (rang) {
+        albums[i].rang_mondial = rang;
+        modifie++;
+      }
+      await sleep(200);
     }
 
     // Sauvegarder régulièrement (tous les 10 albums)

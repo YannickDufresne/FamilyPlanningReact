@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import albums from '../data/albums.json';
 
 // ── Drapeaux pays ─────────────────────────────────────────────────────────────
@@ -48,9 +48,61 @@ function decadeOf(annee) {
   return String(Math.floor(annee / 10) * 10);
 }
 
+// ── Fetch artwork iTunes (fallback si artwork_url absent) ─────────────────────
+function useArtworkFallback(artiste, nom, existingUrl) {
+  const [url, setUrl] = useState(existingUrl || null);
+  useEffect(() => {
+    if (existingUrl || !artiste || !nom) return;
+    let cancelled = false;
+    const terme = encodeURIComponent(`${artiste} ${nom}`);
+    fetch(`https://itunes.apple.com/search?term=${terme}&entity=album&limit=3&country=ca`)
+      .then(r => r.json())
+      .then(d => {
+        if (cancelled) return;
+        const match = (d.results || []).find(r => r.artworkUrl100);
+        if (match) setUrl(match.artworkUrl100.replace('100x100bb', '400x400bb'));
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [artiste, nom, existingUrl]);
+  return url;
+}
+
+// ── Tier de reconnaissance ────────────────────────────────────────────────────
+function tierScore(score) {
+  if (score >= 95) return { label: 'Légendaire',     classe: 'tier--legendaire'     };
+  if (score >= 85) return { label: 'Incontournable', classe: 'tier--incontournable' };
+  if (score >= 75) return { label: 'Essentiel',      classe: 'tier--essentiel'      };
+  if (score >= 65) return { label: 'Reconnu',        classe: 'tier--reconnu'        };
+  return                   { label: 'Remarquable',   classe: 'tier--remarquable'    };
+}
+
+// ── Labels pour les palmarès ──────────────────────────────────────────────────
+const PALMARES_LABELS = {
+  rolling_stone_1:          'RS #1',
+  rolling_stone_top10:      'RS Top 10',
+  rolling_stone_top50:      'RS Top 50',
+  rolling_stone_top500:     'Rolling Stone 500',
+  rs_500:                   'Rolling Stone 500',
+  acclaimed_music:          'Acclaimed Music',
+  acclaimed_top100:         'Acclaimed Top 100',
+  rate_your_music:          'Rate Your Music',
+  rym_top50:                'RYM Top 50',
+  pitchfork:                'Pitchfork',
+  pitchfork_top100:         'Pitchfork Top 100',
+  nme:                      'NME',
+  grammy_hall_of_fame:      'Grammy HOF',
+  ecm:                      'Label ECM',
+  ecm_essential:            'ECM Essential',
+  songlines:                'Songlines',
+  womex:                    'WOMEX',
+};
+
 // ── Carte album ───────────────────────────────────────────────────────────────
 function AlbumCarte({ album, ratings, onNoter }) {
   const note = ratings[album.id] ?? 0;
+  const artworkUrl = useArtworkFallback(album.artiste, album.nom, album.artwork_url);
+  const tier = tierScore(album.score_consensus ?? 60);
 
   function handleEtoile(n) {
     if (n === note) {
@@ -60,50 +112,77 @@ function AlbumCarte({ album, ratings, onNoter }) {
     }
   }
 
+  const scoreBar = Math.max(0, Math.min(100, album.score_consensus ?? 60));
+
   return (
     <div className={`album-carte${album.incontournable ? ' album-carte--incon' : ''}`}>
-      <div className="album-carte__top">
-        <div className="album-carte__info">
-          <div className="album-carte__nom">{album.nom}</div>
-          <div className="album-carte__artiste">{album.artiste}</div>
-        </div>
-        <div className="album-carte__annee">{album.annee}</div>
+      {/* Artwork */}
+      <div className="album-carte__artwork">
+        {artworkUrl
+          ? <img src={artworkUrl} alt={album.nom} loading="lazy" />
+          : <div className="album-carte__artwork-placeholder">{drapeauPays(album.pays)}</div>
+        }
+        {album.incontournable && <span className="album-carte__incon-badge">⭐</span>}
       </div>
 
-      <div className="album-carte__meta">
-        <span className="album-carte__pays">{drapeauPays(album.pays)} {album.pays}</span>
-        <span className="album-carte__genre">{album.genre}</span>
-      </div>
-
-      {album.description && (
-        <div className="album-carte__desc">{album.description}</div>
-      )}
-
-      <div className="album-carte__footer">
-        <div className="album-carte__etoiles">
-          {[1, 2, 3, 4, 5].map(n => (
-            <button
-              key={n}
-              onClick={() => handleEtoile(n)}
-              className={n <= note ? 'etoile etoile--active' : 'etoile'}
-              title={n <= note && n === note ? 'Retirer la note' : `Donner ${n} étoile${n > 1 ? 's' : ''}`}
-            >★</button>
-          ))}
+      {/* Infos principales */}
+      <div className="album-carte__body">
+        <div className="album-carte__top">
+          <div className="album-carte__info">
+            <div className="album-carte__nom">{album.nom}</div>
+            <div className="album-carte__artiste">{album.artiste}</div>
+          </div>
+          <div className="album-carte__annee">{album.annee}</div>
         </div>
-        <div className="album-carte__actions">
+
+        <div className="album-carte__meta">
+          <span className="album-carte__pays">{drapeauPays(album.pays)} {album.pays}</span>
+          <span className="album-carte__genre">{album.genre}</span>
+        </div>
+
+        {/* Indice de reconnaissance */}
+        <div className="album-carte__score-bloc">
+          <div className="album-carte__score-bar-wrap">
+            <div className="album-carte__score-bar" style={{ width: `${scoreBar}%` }} />
+          </div>
+          <span className={`album-carte__tier ${tier.classe}`}>{tier.label}</span>
+          {album.rang_mondial && (
+            <span className="album-carte__rang">Top {album.rang_mondial} mondial</span>
+          )}
+        </div>
+
+        {/* Palmarès */}
+        {album.palmares?.length > 0 && (
+          <div className="album-carte__palmares">
+            {album.palmares.map(p => (
+              <span key={p} className="album-palmares-chip">
+                {PALMARES_LABELS[p] || p}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Description / fun fact */}
+        {album.description && (
+          <div className="album-carte__desc">{album.description}</div>
+        )}
+
+        {/* Footer */}
+        <div className="album-carte__footer">
+          <div className="album-carte__etoiles">
+            {[1, 2, 3, 4, 5].map(n => (
+              <button
+                key={n}
+                onClick={() => handleEtoile(n)}
+                className={n <= note ? 'etoile etoile--active' : 'etoile'}
+                title={n <= note && n === note ? 'Retirer la note' : `Donner ${n} étoile${n > 1 ? 's' : ''}`}
+              >★</button>
+            ))}
+          </div>
           {album.url_apple_music && (
-            <a
-              href={album.url_apple_music}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="album-apple-link"
-            >🎵 Apple Music</a>
-          )}
-          {album.incontournable && (
-            <span className="album-badge--incon">⭐ Incontournable</span>
-          )}
-          {album.score_consensus != null && (
-            <span className="album-badge--score">{album.score_consensus}</span>
+            <a href={album.url_apple_music} target="_blank" rel="noopener noreferrer" className="album-apple-link">
+              🎵 Écouter
+            </a>
           )}
         </div>
       </div>

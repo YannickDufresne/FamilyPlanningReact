@@ -7,13 +7,28 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Jazz",
-    "tags": ["modal", "cool", "contemplatif", "classique"],
-    "palmares": ["rolling_stone_top500", "grammy_hall_of_fame"],
+    "tags": [
+      "modal",
+      "cool",
+      "contemplatif",
+      "classique"
+    ],
+    "palmares": [
+      "rolling_stone_top500",
+      "grammy_hall_of_fame"
+    ],
     "score_consensus": 99,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/kind-of-blue/268443092?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/7f/9f/d6/mzi.vtnaewef.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "whats-going-on-marvin-gaye",
@@ -23,13 +38,28 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Soul / R&B",
-    "tags": ["engaged", "soul", "groove", "classique"],
-    "palmares": ["rolling_stone_1", "rs_500"],
+    "tags": [
+      "engaged",
+      "soul",
+      "groove",
+      "classique"
+    ],
+    "palmares": [
+      "rolling_stone_1",
+      "rs_500"
+    ],
     "score_consensus": 99,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/whats-going-on/1538081586?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/76/36/2d/76362d74-cb7a-8ef9-104e-cde1d858e9a9/20UMGIM95279.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "blue-joni-mitchell",
@@ -39,13 +69,26 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Folk / Singer-Songwriter",
-    "tags": ["intime", "folk", "poetique", "classique"],
-    "palmares": ["rolling_stone_top10", "rs_500"],
+    "tags": [
+      "intime",
+      "folk",
+      "poetique",
+      "classique"
+    ],
+    "palmares": [
+      "rolling_stone_top10",
+      "rs_500"
+    ],
     "score_consensus": 98,
     "incontournable": true,
-    "origines_cuisine": ["Canada", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/blue/1492263092?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/00/a2/43/00a24363-cf69-bfd2-a26a-a042d57ab141/075992719926.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "grace-jeff-buckley",
@@ -55,13 +98,25 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Rock alternatif",
-    "tags": ["intense", "vocal", "romantique"],
-    "palmares": ["rs_500", "pitchfork"],
+    "tags": [
+      "intense",
+      "vocal",
+      "romantique"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
     "score_consensus": 96,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/grace/1046187510?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/26/d6/e3/26d6e339-a7a9-d61e-1b5f-0852a5515a55/886445517880.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "illmatic-nas",
@@ -71,13 +126,27 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Hip-Hop",
-    "tags": ["rue", "lyrics", "jazz-hop", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top_rap"],
+    "tags": [
+      "rue",
+      "lyrics",
+      "jazz-hop",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top_rap"
+    ],
     "score_consensus": 97,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/illmatic/856131729?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b9/eb/cc/b9ebccbc-5ba4-2cdb-5332-b065739abd9a/886444567619.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "to-pimp-a-butterfly-kendrick",
@@ -87,13 +156,27 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Hip-Hop / Jazz",
-    "tags": ["politique", "jazz", "spoken-word", "ambitieux"],
-    "palmares": ["grammy", "pitchfork_best_2015"],
+    "tags": [
+      "politique",
+      "jazz",
+      "spoken-word",
+      "ambitieux"
+    ],
+    "palmares": [
+      "grammy",
+      "pitchfork_best_2015"
+    ],
     "score_consensus": 97,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/to-pimp-a-butterfly/1440871877?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b5/a6/91/b5a69171-5232-3d5b-9c15-8963802f83dd/15UMGIM15814.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "innervisions-stevie-wonder",
@@ -103,13 +186,25 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Soul / Funk",
-    "tags": ["groove", "social", "lumineux"],
-    "palmares": ["grammy_aoty", "rs_500"],
+    "tags": [
+      "groove",
+      "social",
+      "lumineux"
+    ],
+    "palmares": [
+      "grammy_aoty",
+      "rs_500"
+    ],
     "score_consensus": 95,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/innervisions/1440806790?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ff/c2/5f/ffc25f04-cb3b-b56e-dd28-8b77ae63e613/00602537070824.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "a-love-supreme-coltrane",
@@ -119,13 +214,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Jazz",
-    "tags": ["spirituel", "free", "intense", "modal"],
-    "palmares": ["grammy_hall_of_fame", "rs_500"],
+    "tags": [
+      "spirituel",
+      "free",
+      "intense",
+      "modal"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "rs_500"
+    ],
     "score_consensus": 97,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/a-love-supreme/1440713018?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e5/24/aa/e524aacd-467b-66f3-8931-0fcd6750a4b9/08UMGIM07914.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "highway-61-revisited-dylan",
@@ -135,13 +243,25 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Folk Rock",
-    "tags": ["poétique", "rock", "classique"],
-    "palmares": ["rs_500", "grammy_hall_of_fame"],
+    "tags": [
+      "poétique",
+      "rock",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
     "score_consensus": 96,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/highway-61-revisited/201281514?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f8/ff/c0/f8ffc056-55b4-2033-657d-32492d1eea25/827969239926.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "purple-rain-prince",
@@ -151,13 +271,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Pop / Funk / R&B",
-    "tags": ["flamboyant", "rock", "funk", "dancefloor"],
-    "palmares": ["rs_500", "grammy_aoty"],
+    "tags": [
+      "flamboyant",
+      "rock",
+      "funk",
+      "dancefloor"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_aoty"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/purple-rain/1746833068?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/00/17/f2/0017f24f-e580-b77a-71a8-1bc7b75881bf/603497822065.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "paul-simon-graceland",
@@ -167,13 +300,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "World / Pop",
-    "tags": ["afrobeat", "mbaqanga", "world", "lumineux"],
-    "palmares": ["rs_500", "grammy_aoty"],
+    "tags": [
+      "afrobeat",
+      "mbaqanga",
+      "world",
+      "lumineux"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_aoty"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Afrique du Sud"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Afrique du Sud"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/graceland/529574560?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a7/73/c1/a773c1f0-281c-324c-204f-540444080ea8/886443445697.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "songs-of-leonard-cohen",
@@ -183,13 +329,25 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Folk / Singer-Songwriter",
-    "tags": ["poetique", "minimaliste", "sombre", "classique"],
-    "palmares": ["rs_500"],
+    "tags": [
+      "poetique",
+      "minimaliste",
+      "sombre",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500"
+    ],
     "score_consensus": 92,
     "incontournable": true,
-    "origines_cuisine": ["Canada", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/songs-of-leonard-cohen/1826864082?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d8/5a/08/d85a084b-2295-680e-871f-226daa83de5c/196873434049.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ys-joanna-newsom",
@@ -199,13 +357,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Folk / Art Song",
-    "tags": ["harp", "orchestral", "poetique", "unique"],
-    "palmares": ["pitchfork", "uncut"],
+    "tags": [
+      "harp",
+      "orchestral",
+      "poetique",
+      "unique"
+    ],
+    "palmares": [
+      "pitchfork",
+      "uncut"
+    ],
     "score_consensus": 90,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/ys/204051949?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/85/a1/a2/85a1a29f-7a03-0c8a-ce4c-3a57e0213413/781484030324.png/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "original-pirate-material-streets",
@@ -215,13 +386,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "UK Garage / Hip-Hop",
-    "tags": ["quotidien", "humour", "rue", "british"],
-    "palmares": ["nme", "mercury_prize"],
+    "tags": [
+      "quotidien",
+      "humour",
+      "rue",
+      "british"
+    ],
+    "palmares": [
+      "nme",
+      "mercury_prize"
+    ],
     "score_consensus": 90,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "revolver-beatles",
@@ -231,13 +414,24 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Rock",
-    "tags": ["psychédélique", "expérimental", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top10"],
+    "tags": [
+      "psychédélique",
+      "expérimental",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top10"
+    ],
     "score_consensus": 99,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/revolver-2022-mix/1642995371?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/97/f4/3a/97f43ab4-9fdf-7a41-e430-7c6c313f3883/13UMGIM63887.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "dark-side-pink-floyd",
@@ -247,13 +441,24 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Rock progressif",
-    "tags": ["cosmique", "prog", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top20"],
+    "tags": [
+      "cosmique",
+      "prog",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top20"
+    ],
     "score_consensus": 98,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/the-wall/1065975633?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/17/ec/3e17ec6d-f980-c64f-19e0-a6fd8bbf0c10/886445635850.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ok-computer-radiohead",
@@ -263,13 +468,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Rock alternatif",
-    "tags": ["alienation", "electronique", "art-rock", "classique"],
-    "palmares": ["rs_500", "mercury_prize"],
+    "tags": [
+      "alienation",
+      "electronique",
+      "art-rock",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "mercury_prize"
+    ],
     "score_consensus": 98,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/ok-computer/1097861387?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "kid-a-radiohead",
@@ -279,13 +496,24 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Art Rock / Electronique",
-    "tags": ["experimentel", "froid", "ambitieux"],
-    "palmares": ["pitchfork_decade", "rs_500"],
+    "tags": [
+      "experimentel",
+      "froid",
+      "ambitieux"
+    ],
+    "palmares": [
+      "pitchfork_decade",
+      "rs_500"
+    ],
     "score_consensus": 96,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/kid-a/1097862870?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/8e/13/bd8e1358-b367-a689-cb84-cebd0b067dc4/634904078263.png/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "maxinquaye-tricky",
@@ -295,13 +523,24 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Trip-Hop",
-    "tags": ["sombre", "trip-hop", "urbain"],
-    "palmares": ["nme", "mercury_prize"],
+    "tags": [
+      "sombre",
+      "trip-hop",
+      "urbain"
+    ],
+    "palmares": [
+      "nme",
+      "mercury_prize"
+    ],
     "score_consensus": 91,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/maxinquaye/1440918276?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/da/46/8a/da468ae4-2956-89d5-de70-0fce8dcfd572/00731452408921.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "dummy-portishead",
@@ -311,13 +550,24 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Trip-Hop",
-    "tags": ["melancolique", "trip-hop", "sensuel"],
-    "palmares": ["mercury_prize", "nme"],
+    "tags": [
+      "melancolique",
+      "trip-hop",
+      "sensuel"
+    ],
+    "palmares": [
+      "mercury_prize",
+      "nme"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/dummy/1440653096?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c1/71/93/c1719342-df7d-e9c5-c87c-53dae5afb289/00042282855329.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "people-funny-boy-lee-perry",
@@ -327,13 +577,25 @@
     "pays": "Jamaïque",
     "continent": "Amériques",
     "genre": "Dub / Reggae",
-    "tags": ["dub", "experimentel", "psychédélique"],
-    "palmares": ["pitchfork"],
+    "tags": [
+      "dub",
+      "experimentel",
+      "psychédélique"
+    ],
+    "palmares": [
+      "pitchfork"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Cuba", "Haïti", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Cuba",
+      "Haïti",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/lee-perry-the-upsetter-presents-roast-fish-collie/336649222?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0f/e9/e4/0fe9e486-c694-fcc7-8f09-859f1a9488a7/054645100069.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "nuits-africaines-ali-farka-toure",
@@ -343,13 +605,26 @@
     "pays": "Mali",
     "continent": "Afrique",
     "genre": "Blues africain / World",
-    "tags": ["blues", "contemplative", "desert", "acoustique"],
-    "palmares": ["grammy", "world_music"],
+    "tags": [
+      "blues",
+      "contemplative",
+      "desert",
+      "acoustique"
+    ],
+    "palmares": [
+      "grammy",
+      "world_music"
+    ],
     "score_consensus": 88,
     "incontournable": true,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/the-river/1766685408?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/0d/66/c50d6632-25cb-1dde-1c6e-63e18dd9937b/0859381180388.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "talking-timbuktu-ali-farka-toure",
@@ -359,13 +634,24 @@
     "pays": "Mali",
     "continent": "Afrique",
     "genre": "Blues africain / World",
-    "tags": ["blues", "collaboration", "desert"],
-    "palmares": ["grammy"],
+    "tags": [
+      "blues",
+      "collaboration",
+      "desert"
+    ],
+    "palmares": [
+      "grammy"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/talking-timbuktu-with-ry-cooder/1528519970?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/46/21/52/462152eb-c0f4-39a8-e1c0-758481a867ba/0859381180500.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "zombie-fela-kuti",
@@ -375,13 +661,26 @@
     "pays": "Nigeria",
     "continent": "Afrique",
     "genre": "Afrobeat",
-    "tags": ["politique", "afrobeat", "danse", "engage"],
-    "palmares": ["pitchfork", "rolling_stone_world"],
+    "tags": [
+      "politique",
+      "afrobeat",
+      "danse",
+      "engage"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rolling_stone_world"
+    ],
     "score_consensus": 92,
     "incontournable": true,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/zombie/559710299?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6b/aa/9b/6baa9b5e-d508-63ac-7327-e29043205984/720841206194_Cover.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "expensive-shit-fela-kuti",
@@ -391,13 +690,24 @@
     "pays": "Nigeria",
     "continent": "Afrique",
     "genre": "Afrobeat",
-    "tags": ["afrobeat", "groove", "politique"],
-    "palmares": ["pitchfork"],
+    "tags": [
+      "afrobeat",
+      "groove",
+      "politique"
+    ],
+    "palmares": [
+      "pitchfork"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "william-onyeabor-fantastic-man",
@@ -407,13 +717,26 @@
     "pays": "Nigeria",
     "continent": "Afrique",
     "genre": "Afro-Funk / Synth",
-    "tags": ["danse", "synth", "groove", "redécouvert"],
-    "palmares": ["luaka_bop", "reissue"],
+    "tags": [
+      "danse",
+      "synth",
+      "groove",
+      "redécouvert"
+    ],
+    "palmares": [
+      "luaka_bop",
+      "reissue"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/world-psychedelic-classics-5-who-is-william-onyeabor/708418132?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/40/3f/25/403f25f9-8944-14b3-96e3-1ce643733aea/dj.avftodws.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "mulatu-astatke-ethiopiques",
@@ -423,13 +746,25 @@
     "pays": "Éthiopie",
     "continent": "Afrique",
     "genre": "Jazz éthiopien / Ethio-Jazz",
-    "tags": ["ethio-jazz", "exotic", "contemplatif"],
-    "palmares": ["buda_musique", "pitchfork"],
+    "tags": [
+      "ethio-jazz",
+      "exotic",
+      "contemplatif"
+    ],
+    "palmares": [
+      "buda_musique",
+      "pitchfork"
+    ],
     "score_consensus": 88,
     "incontournable": true,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/%C3%A9thiopiques-vol-4-ethio-jazz-musique-instrumentale/78928362?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/f3/95/07/f39507fc-93bc-bcbe-ff63-5eee27936310/dj.tbywneqv.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "youssou-ndour-set",
@@ -439,13 +774,25 @@
     "pays": "Sénégal",
     "continent": "Afrique",
     "genre": "Mbalax / World",
-    "tags": ["mbalax", "danse", "celebratoire", "world"],
-    "palmares": ["world_music_awards"],
+    "tags": [
+      "mbalax",
+      "danse",
+      "celebratoire",
+      "world"
+    ],
+    "palmares": [
+      "world_music_awards"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/set/724912194?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/2c/82/9f/2c829fab-4fdb-42c4-4304-f162013ad2fe/00077778619550.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "miriam-makeba-pata-pata",
@@ -455,13 +802,25 @@
     "pays": "Afrique du Sud",
     "continent": "Afrique",
     "genre": "Afro-Pop / World",
-    "tags": ["joyeux", "danse", "afrique", "classique"],
-    "palmares": ["grammy_hall_of_fame"],
+    "tags": [
+      "joyeux",
+      "danse",
+      "afrique",
+      "classique"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame"
+    ],
     "score_consensus": 85,
     "incontournable": true,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/pata-pata-mono-stereo-versions/1472549617?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/8d/ea/658deacc-0f1e-e822-8550-08a1b55b3a8a/4062548001204_3000.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "oumou-sangare-moussoulou",
@@ -471,13 +830,26 @@
     "pays": "Mali",
     "continent": "Afrique",
     "genre": "Wassoulou / World",
-    "tags": ["feministe", "acoustique", "pouvoir", "west-africa"],
-    "palmares": ["world_music", "grammy_nom"],
+    "tags": [
+      "feministe",
+      "acoustique",
+      "pouvoir",
+      "west-africa"
+    ],
+    "palmares": [
+      "world_music",
+      "grammy_nom"
+    ],
     "score_consensus": 86,
     "incontournable": true,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "indestructible-beat-of-soweto",
@@ -487,13 +859,25 @@
     "pays": "Afrique du Sud",
     "continent": "Afrique",
     "genre": "Mbaqanga / Zulu",
-    "tags": ["mbaqanga", "danse", "collectif", "resistance"],
-    "palmares": ["earthworks", "pitchfork"],
+    "tags": [
+      "mbaqanga",
+      "danse",
+      "collectif",
+      "resistance"
+    ],
+    "palmares": [
+      "earthworks",
+      "pitchfork"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Afrique du Sud"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/the-indestructible-beat-of-soweto-volume-one/208459678?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/7b/2f/f5/7b2ff5f8-1be8-dab1-d14d-dbba6aa2a1b9/mzi.eyyosidi.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "anouar-brahem-le-pas-du-chat-noir",
@@ -503,13 +887,28 @@
     "pays": "Tunisie",
     "continent": "Afrique",
     "genre": "Jazz / World",
-    "tags": ["contemplatif", "minimaliste", "oud", "dimanche_matin"],
-    "palmares": ["ecm", "grammy_nom"],
+    "tags": [
+      "contemplatif",
+      "minimaliste",
+      "oud",
+      "dimanche_matin"
+    ],
+    "palmares": [
+      "ecm",
+      "grammy_nom"
+    ],
     "score_consensus": 88,
     "incontournable": true,
-    "origines_cuisine": ["Maroc", "Moyen-Orient", "Liban", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Maroc",
+      "Moyen-Orient",
+      "Liban",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/le-pas-du-chat-noir/1443296408?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/42/6d/78/426d78ad-35e5-a59f-d7b0-cb951d135b5e/00044001637322.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "rabih-abou-khalil-blue-camel",
@@ -519,13 +918,26 @@
     "pays": "Liban",
     "continent": "Moyen-Orient",
     "genre": "Jazz / Oriental",
-    "tags": ["oud", "jazz", "fusion", "oriental"],
-    "palmares": ["enja"],
+    "tags": [
+      "oud",
+      "jazz",
+      "fusion",
+      "oriental"
+    ],
+    "palmares": [
+      "enja"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Liban", "Moyen-Orient", "Maroc"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Liban",
+      "Moyen-Orient",
+      "Maroc"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/blue-camel/285195158?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3e/c3/7a/3ec37a35-8ead-1f85-8d2a-600e247cdeec/cover.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "selda-bagcan-selda",
@@ -535,13 +947,27 @@
     "pays": "Turquie",
     "continent": "Moyen-Orient",
     "genre": "Folk turque / Psychédélique",
-    "tags": ["folk", "psychédélique", "politique", "saz"],
-    "palmares": ["pitchfork", "reissue"],
+    "tags": [
+      "folk",
+      "psychédélique",
+      "politique",
+      "saz"
+    ],
+    "palmares": [
+      "pitchfork",
+      "reissue"
+    ],
     "score_consensus": 85,
     "incontournable": false,
-    "origines_cuisine": ["Moyen-Orient", "Liban", "Maroc"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Moyen-Orient",
+      "Liban",
+      "Maroc"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "rachid-taha-diwan",
@@ -551,13 +977,25 @@
     "pays": "Algérie",
     "continent": "Afrique",
     "genre": "Raï / Rock",
-    "tags": ["rai", "rock", "diaspora", "fusion"],
-    "palmares": ["world_music"],
+    "tags": [
+      "rai",
+      "rock",
+      "diaspora",
+      "fusion"
+    ],
+    "palmares": [
+      "world_music"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Maroc", "Moyen-Orient"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Maroc",
+      "Moyen-Orient"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "omar-souleyman-wenu-wenu",
@@ -567,13 +1005,26 @@
     "pays": "Syrie",
     "continent": "Moyen-Orient",
     "genre": "Dabke / Électronique",
-    "tags": ["danse", "synth", "arabique", "intense"],
-    "palmares": ["pitchfork", "rough_trade"],
+    "tags": [
+      "danse",
+      "synth",
+      "arabique",
+      "intense"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rough_trade"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Moyen-Orient", "Liban"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Moyen-Orient",
+      "Liban"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "umm-kulthum-at-the-opera-house",
@@ -583,13 +1034,27 @@
     "pays": "Égypte",
     "continent": "Afrique",
     "genre": "Tarab / Classical Arab",
-    "tags": ["tarab", "classique", "emotionnel", "legendaire"],
-    "palmares": ["grammy_hall_of_fame", "world_music"],
+    "tags": [
+      "tarab",
+      "classique",
+      "emotionnel",
+      "legendaire"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "world_music"
+    ],
     "score_consensus": 92,
     "incontournable": true,
-    "origines_cuisine": ["Moyen-Orient", "Maroc", "Liban"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Moyen-Orient",
+      "Maroc",
+      "Liban"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/enta-oumry-remastered/922753882?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/d3/64/36d364dc-1fff-a8d2-2320-ee417baf4dc9/9681001000674.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "deena-abdelwahed-khonnar",
@@ -599,13 +1064,27 @@
     "pays": "Tunisie",
     "continent": "Afrique",
     "genre": "Electronic / Techno arabe",
-    "tags": ["club", "experimentel", "arabe", "moderne"],
-    "palmares": ["pitchfork", "resident_advisor"],
+    "tags": [
+      "club",
+      "experimentel",
+      "arabe",
+      "moderne"
+    ],
+    "palmares": [
+      "pitchfork",
+      "resident_advisor"
+    ],
     "score_consensus": 80,
     "incontournable": false,
-    "origines_cuisine": ["Moyen-Orient", "Maroc", "Liban"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Moyen-Orient",
+      "Maroc",
+      "Liban"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "googoosh-the-best-of",
@@ -615,13 +1094,25 @@
     "pays": "Iran",
     "continent": "Moyen-Orient",
     "genre": "Pop persane / Pop",
-    "tags": ["melodique", "pop", "legendaire", "persane"],
-    "palmares": ["iranian_music"],
+    "tags": [
+      "melodique",
+      "pop",
+      "legendaire",
+      "persane"
+    ],
+    "palmares": [
+      "iranian_music"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Perse/Iran", "Moyen-Orient"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Perse/Iran",
+      "Moyen-Orient"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "el-gusto-orchestre",
@@ -631,13 +1122,26 @@
     "pays": "Algérie",
     "continent": "Afrique",
     "genre": "Chaabi / World",
-    "tags": ["chaabi", "nostalgie", "reunion", "festif"],
-    "palmares": ["world_music", "cinema"],
+    "tags": [
+      "chaabi",
+      "nostalgie",
+      "reunion",
+      "festif"
+    ],
+    "palmares": [
+      "world_music",
+      "cinema"
+    ],
     "score_consensus": 80,
     "incontournable": false,
-    "origines_cuisine": ["Maroc", "Moyen-Orient"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Maroc",
+      "Moyen-Orient"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "nusrat-fateh-ali-khan-shahen-shah",
@@ -647,13 +1151,26 @@
     "pays": "Pakistan",
     "continent": "Asie",
     "genre": "Qawwali",
-    "tags": ["spirituel", "qawwali", "extase", "legendaire"],
-    "palmares": ["real_world", "world_music"],
+    "tags": [
+      "spirituel",
+      "qawwali",
+      "extase",
+      "legendaire"
+    ],
+    "palmares": [
+      "real_world",
+      "world_music"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Inde", "Perse/Iran"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde",
+      "Perse/Iran"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/shahen-shah-real-world-gold/1653719596?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/20/0d/65/200d657f-a60f-1dd8-3429-9f03008a6458/5037005000907_cover.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ravi-shankar-raga-bhairavi",
@@ -663,13 +1180,25 @@
     "pays": "Inde",
     "continent": "Asie",
     "genre": "Musique classique indienne",
-    "tags": ["raga", "classique", "sitar", "méditation"],
-    "palmares": ["grammy", "world_music"],
+    "tags": [
+      "raga",
+      "classique",
+      "sitar",
+      "méditation"
+    ],
+    "palmares": [
+      "grammy",
+      "world_music"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Inde"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/three-ragas/724481558?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/19/47/da/1947da7f-5d92-33b9-c1f6-3281173905a1/00724356731059.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ravi-shankar-concerts-for-bangladesh",
@@ -679,13 +1208,24 @@
     "pays": "Inde",
     "continent": "Asie",
     "genre": "Musique classique indienne / Rock",
-    "tags": ["humanitaire", "concert", "sitar", "historique"],
-    "palmares": ["grammy_aoty"],
+    "tags": [
+      "humanitaire",
+      "concert",
+      "sitar",
+      "historique"
+    ],
+    "palmares": [
+      "grammy_aoty"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Inde"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "ar-rahman-roja",
@@ -695,13 +1235,25 @@
     "pays": "Inde",
     "continent": "Asie",
     "genre": "Bollywood / Film",
-    "tags": ["film", "romantique", "melodique", "fusion"],
-    "palmares": ["filmfare", "national_award"],
+    "tags": [
+      "film",
+      "romantique",
+      "melodique",
+      "fusion"
+    ],
+    "palmares": [
+      "filmfare",
+      "national_award"
+    ],
     "score_consensus": 86,
     "incontournable": false,
-    "origines_cuisine": ["Inde"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "ar-rahman-bombay",
@@ -711,13 +1263,25 @@
     "pays": "Inde",
     "continent": "Asie",
     "genre": "Bollywood / Film",
-    "tags": ["film", "orchestral", "emotionnel", "classique"],
-    "palmares": ["filmfare", "national_award"],
+    "tags": [
+      "film",
+      "orchestral",
+      "emotionnel",
+      "classique"
+    ],
+    "palmares": [
+      "filmfare",
+      "national_award"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Inde"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/bombay-original-motion-picture-soundtrack/1729675275?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6f/20/05/6f20058c-035e-579b-c811-b4551b94789b/197338031865.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "shivkumar-sharma-call-of-the-valley",
@@ -727,13 +1291,24 @@
     "pays": "Inde",
     "continent": "Asie",
     "genre": "Musique classique indienne",
-    "tags": ["santour", "flûte", "pastorale", "méditation"],
-    "palmares": ["india_music"],
+    "tags": [
+      "santour",
+      "flûte",
+      "pastorale",
+      "méditation"
+    ],
+    "palmares": [
+      "india_music"
+    ],
     "score_consensus": 85,
     "incontournable": false,
-    "origines_cuisine": ["Inde"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "sachal-ensemble-jazz-and-classical",
@@ -743,13 +1318,26 @@
     "pays": "Pakistan",
     "continent": "Asie",
     "genre": "Jazz / Musique classique indienne",
-    "tags": ["fusion", "jazz", "classique", "surprise"],
-    "palmares": ["grammy_nom", "world_music"],
+    "tags": [
+      "fusion",
+      "jazz",
+      "classique",
+      "surprise"
+    ],
+    "palmares": [
+      "grammy_nom",
+      "world_music"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Inde", "Perse/Iran"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde",
+      "Perse/Iran"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "fishmans-long-season",
@@ -759,13 +1347,28 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Dub / Dream Pop",
-    "tags": ["contemplatif", "dub", "unique", "japonais"],
-    "palmares": ["pitchfork", "japan_critics"],
+    "tags": [
+      "contemplatif",
+      "dub",
+      "unique",
+      "japonais"
+    ],
+    "palmares": [
+      "pitchfork",
+      "japan_critics"
+    ],
     "score_consensus": 91,
     "incontournable": true,
-    "origines_cuisine": ["Japon", "Asie", "Corée", "Chine"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie",
+      "Corée",
+      "Chine"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/long-season/1416925635?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/16/e3/2d/16e32ddd-32b0-f0a0-91aa-c847a1094df5/00602567908678.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "fishmans-98-tokyo-march",
@@ -775,13 +1378,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Dub / Dream Pop",
-    "tags": ["concert", "emotionnel", "adieu", "legendaire"],
-    "palmares": ["japan_critics", "otoraku"],
+    "tags": [
+      "concert",
+      "emotionnel",
+      "adieu",
+      "legendaire"
+    ],
+    "palmares": [
+      "japan_critics",
+      "otoraku"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "ymo-technodelic",
@@ -791,13 +1407,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Synth-Pop / Electronic",
-    "tags": ["synth", "electronique", "pionnier", "japonais"],
-    "palmares": ["pitchfork", "allmusic"],
+    "tags": [
+      "synth",
+      "electronique",
+      "pionnier",
+      "japonais"
+    ],
+    "palmares": [
+      "pitchfork",
+      "allmusic"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "haruomi-hosono-watering-a-flower",
@@ -807,13 +1436,25 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Ambient / Electronic",
-    "tags": ["ambient", "minimaliste", "zen", "japonais"],
-    "palmares": ["japan_critics"],
+    "tags": [
+      "ambient",
+      "minimaliste",
+      "zen",
+      "japonais"
+    ],
+    "palmares": [
+      "japan_critics"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "sheena-ringo-shouso-strip",
@@ -823,13 +1464,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "J-Rock / Art Pop",
-    "tags": ["intense", "theatral", "unique", "japonais"],
-    "palmares": ["oricon", "japan_critics"],
+    "tags": [
+      "intense",
+      "theatral",
+      "unique",
+      "japonais"
+    ],
+    "palmares": [
+      "oricon",
+      "japan_critics"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "hiroshi-yoshimura-music-for-nine-post-cards",
@@ -839,13 +1493,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Ambient / Environmental Music",
-    "tags": ["ambient", "zen", "minimaliste", "espace"],
-    "palmares": ["japan_critics", "reissue"],
+    "tags": [
+      "ambient",
+      "zen",
+      "minimaliste",
+      "espace"
+    ],
+    "palmares": [
+      "japan_critics",
+      "reissue"
+    ],
     "score_consensus": 86,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/music-for-nine-post-cards/1790530039?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/16/ae/4f/16ae4ff4-508e-d447-9ce8-d02fbbae5364/9830.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ryuichi-sakamoto-merry-christmas-mr-lawrence",
@@ -855,13 +1522,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Bande originale / Electronic",
-    "tags": ["film", "orchestral", "emouvant", "cinematique"],
-    "palmares": ["japan_critics", "allmusic"],
+    "tags": [
+      "film",
+      "orchestral",
+      "emouvant",
+      "cinematique"
+    ],
+    "palmares": [
+      "japan_critics",
+      "allmusic"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/merry-christmas-mr-lawrence/1500818100?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/62/d7/35/62d735b2-a993-a2ad-e08c-5edd9be06202/886448177739.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "happy-end-kazemachi-roman",
@@ -871,13 +1551,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Folk Rock japonais",
-    "tags": ["folk", "nostalgique", "pionniers", "japonais"],
-    "palmares": ["japan_critics", "otoraku"],
+    "tags": [
+      "folk",
+      "nostalgique",
+      "pionniers",
+      "japonais"
+    ],
+    "palmares": [
+      "japan_critics",
+      "otoraku"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "cornelius-fantasma",
@@ -887,13 +1580,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "J-Pop / Indie",
-    "tags": ["playful", "pop", "experimentel", "japonais"],
-    "palmares": ["pitchfork", "japan_critics"],
+    "tags": [
+      "playful",
+      "pop",
+      "experimentel",
+      "japonais"
+    ],
+    "palmares": [
+      "pitchfork",
+      "japan_critics"
+    ],
     "score_consensus": 86,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "cornelius-point",
@@ -903,13 +1609,25 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Art Pop / Electronic",
-    "tags": ["precis", "geometrique", "experimentel"],
-    "palmares": ["pitchfork", "japan_critics"],
+    "tags": [
+      "precis",
+      "geometrique",
+      "experimentel"
+    ],
+    "palmares": [
+      "pitchfork",
+      "japan_critics"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/point/1254149405?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d6/eb/62/d6eb6271-d4dd-9445-3db4-db3878d6c93b/859721672696_cover.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ymo-solid-state-survivor",
@@ -919,13 +1637,26 @@
     "pays": "Japon",
     "continent": "Asie",
     "genre": "Synth-Pop / Electronic",
-    "tags": ["synth", "electronique", "danse", "classique"],
-    "palmares": ["allmusic", "pitchfork"],
+    "tags": [
+      "synth",
+      "electronique",
+      "danse",
+      "classique"
+    ],
+    "palmares": [
+      "allmusic",
+      "pitchfork"
+    ],
     "score_consensus": 89,
     "incontournable": true,
-    "origines_cuisine": ["Japon", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/solid-state-survivor/1462847476?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/7b/a4/1a/7ba41a51-f5e0-042d-5d10-8fd10b629bab/886447666654.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "clube-da-esquina-milton-nascimento",
@@ -935,13 +1666,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB / Rock",
-    "tags": ["ambitieux", "lumineux", "bossa-fusion", "classique"],
-    "palmares": ["pitchfork", "rolling_stone_brasil"],
+    "tags": [
+      "ambitieux",
+      "lumineux",
+      "bossa-fusion",
+      "classique"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 95,
     "incontournable": true,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/clube-da-esquina/1473446573?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/16/fe/be/16febeb7-b081-c66c-a26b-1f7cd097bd45/19UMGIM66061.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "caetano-veloso-tropicalia",
@@ -951,13 +1697,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "Tropicália / Psychédélique",
-    "tags": ["politique", "experimentel", "fusion", "historique"],
-    "palmares": ["pitchfork", "rolling_stone_brasil"],
+    "tags": [
+      "politique",
+      "experimentel",
+      "fusion",
+      "historique"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/tropic%C3%A1lia-ou-panis-et-circensis/1549688567?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/32/e7/a5/32e7a57f-5f5e-8a55-02a2-b230b8d34c3d/21UMGIM03521.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "joao-gilberto-getz-gilberto",
@@ -967,13 +1728,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "Bossa Nova",
-    "tags": ["bossa-nova", "romantique", "elegant", "classique"],
-    "palmares": ["grammy_aoty", "rs_500"],
+    "tags": [
+      "bossa-nova",
+      "romantique",
+      "elegant",
+      "classique"
+    ],
+    "palmares": [
+      "grammy_aoty",
+      "rs_500"
+    ],
     "score_consensus": 96,
     "incontournable": true,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/getz-gilberto/1422655717?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/54/04/b8/5404b8fd-3dbf-9fe1-0513-4611c4dec84e/06UMGIM14182.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "chico-buarque-construcao",
@@ -983,13 +1759,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB",
-    "tags": ["poétique", "politique", "orchestral", "classique"],
-    "palmares": ["pitchfork", "rolling_stone_brasil"],
+    "tags": [
+      "poétique",
+      "politique",
+      "orchestral",
+      "classique"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/constru%C3%A7%C3%A3o/1442845496?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c5/de/62/c5de62c4-50a9-bc0a-1cb3-3836e7e0eb0e/06UMGIM31536.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "novos-baianos-acabou-chorare",
@@ -999,13 +1790,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB / Samba Rock",
-    "tags": ["festif", "communautaire", "joyeux", "brésil"],
-    "palmares": ["pitchfork", "rolling_stone_brasil"],
+    "tags": [
+      "festif",
+      "communautaire",
+      "joyeux",
+      "brésil"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 90,
     "incontournable": false,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/acabou-chorare/1831607320?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/81/f0/78/81f0780b-c2d5-52bd-d80e-0c429eeebc36/196873466569.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "caetano-veloso-livro",
@@ -1015,13 +1821,26 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB / Pop",
-    "tags": ["intimiste", "acoustique", "mature"],
-    "palmares": ["rolling_stone_brasil"],
+    "tags": [
+      "intimiste",
+      "acoustique",
+      "mature"
+    ],
+    "palmares": [
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/livro/209272894?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/ec/bc/cb/mzi.xblzabyi.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "joao-gilberto-joao-gilberto",
@@ -1031,13 +1850,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "Bossa Nova",
-    "tags": ["bossa-nova", "minimaliste", "pur", "fondateur"],
-    "palmares": ["grammy_hall_of_fame", "rolling_stone_brasil"],
+    "tags": [
+      "bossa-nova",
+      "minimaliste",
+      "pur",
+      "fondateur"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "os-mutantes-os-mutantes",
@@ -1047,13 +1881,28 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "Tropicália / Psychédélique",
-    "tags": ["psychédélique", "expérimental", "fun", "pionnier"],
-    "palmares": ["pitchfork", "rolling_stone"],
+    "tags": [
+      "psychédélique",
+      "expérimental",
+      "fun",
+      "pionnier"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rolling_stone"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "gilberto-gil-realce",
@@ -1063,13 +1912,26 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB / Reggae",
-    "tags": ["funk", "reggae-brésil", "festif", "danse"],
-    "palmares": ["rolling_stone_brasil"],
+    "tags": [
+      "funk",
+      "reggae-brésil",
+      "festif",
+      "danse"
+    ],
+    "palmares": [
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "serge-gainsbourg-histoire-de-melody-nelson",
@@ -1079,13 +1941,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "Pop / Art",
-    "tags": ["concept", "orchestre", "provocateur", "classique"],
-    "palmares": ["rs_france", "uncut"],
+    "tags": [
+      "concept",
+      "orchestre",
+      "provocateur",
+      "classique"
+    ],
+    "palmares": [
+      "rs_france",
+      "uncut"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "daft-punk-discovery",
@@ -1095,13 +1971,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "French House / Electronic",
-    "tags": ["danse", "house", "nostalgique", "populaire"],
-    "palmares": ["pitchfork", "grammy_nom"],
+    "tags": [
+      "danse",
+      "house",
+      "nostalgique",
+      "populaire"
+    ],
+    "palmares": [
+      "pitchfork",
+      "grammy_nom"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "air-moon-safari",
@@ -1111,13 +2001,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "French Pop / Electronic",
-    "tags": ["dreamy", "lounge", "romantique", "francais"],
-    "palmares": ["pitchfork", "nme"],
+    "tags": [
+      "dreamy",
+      "lounge",
+      "romantique",
+      "francais"
+    ],
+    "palmares": [
+      "pitchfork",
+      "nme"
+    ],
     "score_consensus": 90,
     "incontournable": false,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "brigitte-fontaine-comme-a-la-radio",
@@ -1127,13 +2031,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "Avant-garde / Poésie",
-    "tags": ["avant-garde", "libre", "poétique", "unique"],
-    "palmares": ["sacem", "france_musique"],
+    "tags": [
+      "avant-garde",
+      "libre",
+      "poétique",
+      "unique"
+    ],
+    "palmares": [
+      "sacem",
+      "france_musique"
+    ],
     "score_consensus": 86,
     "incontournable": false,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "bashung-fantaisie-militaire",
@@ -1143,13 +2061,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "Rock / Pop française",
-    "tags": ["poétique", "rock", "texte", "classique_fr"],
-    "palmares": ["victoires_de_la_musique", "france_musique"],
+    "tags": [
+      "poétique",
+      "rock",
+      "texte",
+      "classique_fr"
+    ],
+    "palmares": [
+      "victoires_de_la_musique",
+      "france_musique"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/fantaisie-militaire/1443816325?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/29/ab/89/29ab89d1-e544-fa53-1079-3377b70888a3/00731453948822.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "jean-michel-jarre-oxygene",
@@ -1159,13 +2091,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "Electronic / Synthétique",
-    "tags": ["synth", "espace", "pionnier", "classique"],
-    "palmares": ["allmusic", "rs_france"],
+    "tags": [
+      "synth",
+      "espace",
+      "pionnier",
+      "classique"
+    ],
+    "palmares": [
+      "allmusic",
+      "rs_france"
+    ],
     "score_consensus": 87,
     "incontournable": true,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "daft-punk-homework",
@@ -1175,13 +2121,27 @@
     "pays": "France",
     "continent": "Europe",
     "genre": "French House / Electronic",
-    "tags": ["house", "danse", "fun", "fondateur"],
-    "palmares": ["pitchfork", "victoires"],
+    "tags": [
+      "house",
+      "danse",
+      "fun",
+      "fondateur"
+    ],
+    "palmares": [
+      "pitchfork",
+      "victoires"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["France", "Belgique", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "fabrizio-de-andre-non-al-denaro",
@@ -1191,13 +2151,26 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Folk / Chanson italienne",
-    "tags": ["poétique", "folk", "social", "legendaire"],
-    "palmares": ["italy_critics", "deandre_foundation"],
+    "tags": [
+      "poétique",
+      "folk",
+      "social",
+      "legendaire"
+    ],
+    "palmares": [
+      "italy_critics",
+      "deandre_foundation"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Italie", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "fabrizio-de-andre-creuza-de-ma",
@@ -1207,13 +2180,27 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "World / Chanson italienne",
-    "tags": ["gênois", "méditerranéen", "fusion", "poetique"],
-    "palmares": ["italy_critics", "world_music"],
+    "tags": [
+      "gênois",
+      "méditerranéen",
+      "fusion",
+      "poetique"
+    ],
+    "palmares": [
+      "italy_critics",
+      "world_music"
+    ],
     "score_consensus": 89,
     "incontournable": true,
-    "origines_cuisine": ["Italie", "Méditerranéen", "Grèce"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen",
+      "Grèce"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/creuza-de-ma/811257200?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/07/9a/98/079a98f3-e604-75a3-d03e-45ade65688f6/886444411578.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ennio-morricone-once-upon-a-time-in-america",
@@ -1223,13 +2210,26 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Bande originale / Orchestral",
-    "tags": ["film", "orchestral", "nostalgique", "grandiose"],
-    "palmares": ["bafta", "grammy_nom"],
+    "tags": [
+      "film",
+      "orchestral",
+      "nostalgique",
+      "grandiose"
+    ],
+    "palmares": [
+      "bafta",
+      "grammy_nom"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Italie", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/once-upon-a-time-in-america-original-motion-picture/1412193551?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/62/07/f5/6207f5df-e68c-4b50-ef38-4644384103cb/00602567859833.rgb.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "ennio-morricone-good-bad-ugly",
@@ -1239,13 +2239,26 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Bande originale / Western",
-    "tags": ["film", "western", "iconique", "sifflé"],
-    "palmares": ["grammy_hall_of_fame"],
+    "tags": [
+      "film",
+      "western",
+      "iconique",
+      "sifflé"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame"
+    ],
     "score_consensus": 92,
     "incontournable": true,
-    "origines_cuisine": ["Italie", "Méditerranéen", "Espagne"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen",
+      "Espagne"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "pfm-storia-di-un-minuto",
@@ -1255,13 +2268,25 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Rock progressif",
-    "tags": ["prog", "complexe", "ambitieux", "italien"],
-    "palmares": ["italy_critics"],
+    "tags": [
+      "prog",
+      "complexe",
+      "ambitieux",
+      "italien"
+    ],
+    "palmares": [
+      "italy_critics"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["Italie", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "adriano-celentano-azzurro",
@@ -1271,13 +2296,25 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Pop italienne",
-    "tags": ["léger", "méditerranéen", "classique", "estival"],
-    "palmares": ["italy_charts"],
+    "tags": [
+      "léger",
+      "méditerranéen",
+      "classique",
+      "estival"
+    ],
+    "palmares": [
+      "italy_charts"
+    ],
     "score_consensus": 78,
     "incontournable": false,
-    "origines_cuisine": ["Italie", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "luigi-tenco-luigi-tenco",
@@ -1287,13 +2324,25 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Chanson italienne / Jazz",
-    "tags": ["melancolique", "jazz", "poétique", "maudit"],
-    "palmares": ["italy_critics"],
+    "tags": [
+      "melancolique",
+      "jazz",
+      "poétique",
+      "maudit"
+    ],
+    "palmares": [
+      "italy_critics"
+    ],
     "score_consensus": 80,
     "incontournable": false,
-    "origines_cuisine": ["Italie", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "rosalia-el-mal-querer",
@@ -1303,13 +2352,26 @@
     "pays": "Espagne",
     "continent": "Europe",
     "genre": "Flamenco / Art Pop",
-    "tags": ["flamenco", "moderne", "voix", "concept"],
-    "palmares": ["latin_grammy", "pitchfork_best"],
+    "tags": [
+      "flamenco",
+      "moderne",
+      "voix",
+      "concept"
+    ],
+    "palmares": [
+      "latin_grammy",
+      "pitchfork_best"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Espagne", "Mexique"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Espagne",
+      "Mexique"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "paco-de-lucia-friday-night-in-san-francisco",
@@ -1319,13 +2381,26 @@
     "pays": "Espagne",
     "continent": "Europe",
     "genre": "Flamenco / Jazz",
-    "tags": ["flamenco", "virtuosité", "concert", "fusion"],
-    "palmares": ["grammy_nom", "allmusic"],
+    "tags": [
+      "flamenco",
+      "virtuosité",
+      "concert",
+      "fusion"
+    ],
+    "palmares": [
+      "grammy_nom",
+      "allmusic"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Espagne", "Mexique"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Espagne",
+      "Mexique"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "buena-vista-social-club",
@@ -1335,13 +2410,27 @@
     "pays": "Cuba",
     "continent": "Amériques",
     "genre": "Son cubain / Bolero",
-    "tags": ["son-cubain", "festif", "nostalgique", "classique"],
-    "palmares": ["grammy_aoty", "rs_500"],
+    "tags": [
+      "son-cubain",
+      "festif",
+      "nostalgique",
+      "classique"
+    ],
+    "palmares": [
+      "grammy_aoty",
+      "rs_500"
+    ],
     "score_consensus": 92,
     "incontournable": true,
-    "origines_cuisine": ["Cuba", "Amérique centrale", "Pérou"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Cuba",
+      "Amérique centrale",
+      "Pérou"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "bad-bunny-un-verano-sin-ti",
@@ -1351,13 +2440,27 @@
     "pays": "Porto Rico",
     "continent": "Amériques",
     "genre": "Reggaeton / Latin Pop",
-    "tags": ["reggaeton", "plage", "été", "populaire"],
-    "palmares": ["latin_grammy", "rs_2022"],
+    "tags": [
+      "reggaeton",
+      "plage",
+      "été",
+      "populaire"
+    ],
+    "palmares": [
+      "latin_grammy",
+      "rs_2022"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Amérique centrale", "Cuba", "Mexique"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Amérique centrale",
+      "Cuba",
+      "Mexique"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "charly-garcia-clics-modernos",
@@ -1367,13 +2470,26 @@
     "pays": "Argentine",
     "continent": "Amériques",
     "genre": "Rock argentin / New Wave",
-    "tags": ["new-wave", "synth", "argentin", "classique"],
-    "palmares": ["rolling_stone_latinoamerica"],
+    "tags": [
+      "new-wave",
+      "synth",
+      "argentin",
+      "classique"
+    ],
+    "palmares": [
+      "rolling_stone_latinoamerica"
+    ],
     "score_consensus": 88,
     "incontournable": true,
-    "origines_cuisine": ["Amérique centrale", "Pérou", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Amérique centrale",
+      "Pérou",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "cafe-tacvba-re",
@@ -1383,13 +2499,26 @@
     "pays": "Mexique",
     "continent": "Amériques",
     "genre": "Rock alternatif / Folk mexicain",
-    "tags": ["folk", "rock", "experimental", "mexicain"],
-    "palmares": ["rolling_stone_latinoamerica", "pitchfork"],
+    "tags": [
+      "folk",
+      "rock",
+      "experimental",
+      "mexicain"
+    ],
+    "palmares": [
+      "rolling_stone_latinoamerica",
+      "pitchfork"
+    ],
     "score_consensus": 89,
     "incontournable": true,
-    "origines_cuisine": ["Mexique", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Mexique",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "silvio-rodriguez-dias-y-flores",
@@ -1399,13 +2528,26 @@
     "pays": "Cuba",
     "continent": "Amériques",
     "genre": "Nueva Trova / Folk",
-    "tags": ["folk", "politique", "poétique", "cubain"],
-    "palmares": ["rolling_stone_latinoamerica"],
+    "tags": [
+      "folk",
+      "politique",
+      "poétique",
+      "cubain"
+    ],
+    "palmares": [
+      "rolling_stone_latinoamerica"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Cuba", "Amérique centrale", "Pérou"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Cuba",
+      "Amérique centrale",
+      "Pérou"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "los-jaivas-alturas-de-machu-picchu",
@@ -1415,13 +2557,26 @@
     "pays": "Chili",
     "continent": "Amériques",
     "genre": "Rock andin / Folk",
-    "tags": ["andin", "folk", "rock", "historique"],
-    "palmares": ["rolling_stone_latinoamerica"],
+    "tags": [
+      "andin",
+      "folk",
+      "rock",
+      "historique"
+    ],
+    "palmares": [
+      "rolling_stone_latinoamerica"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Pérou", "Amérique centrale", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Pérou",
+      "Amérique centrale",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "mid-air-thief-crumbling",
@@ -1431,13 +2586,27 @@
     "pays": "Corée du Sud",
     "continent": "Asie",
     "genre": "Folk / Psychédélique",
-    "tags": ["folk", "dreamlike", "unique", "coreen"],
-    "palmares": ["pitchfork", "p4k_best_2019"],
+    "tags": [
+      "folk",
+      "dreamlike",
+      "unique",
+      "coreen"
+    ],
+    "palmares": [
+      "pitchfork",
+      "p4k_best_2019"
+    ],
     "score_consensus": 89,
     "incontournable": false,
-    "origines_cuisine": ["Corée", "Asie", "Japon"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Corée",
+      "Asie",
+      "Japon"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/crumbling/1468597994?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/be/77/6c/be776c86-9d26-3a98-7fde-c6dda30913f2/634457840911.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "cui-jian-rock-n-roll-in-the-new-long-march",
@@ -1447,13 +2616,27 @@
     "pays": "Chine",
     "continent": "Asie",
     "genre": "Rock chinois",
-    "tags": ["rock", "politique", "pionnier", "historique"],
-    "palmares": ["time_magazine", "china_critics"],
+    "tags": [
+      "rock",
+      "politique",
+      "pionnier",
+      "historique"
+    ],
+    "palmares": [
+      "time_magazine",
+      "china_critics"
+    ],
     "score_consensus": 85,
     "incontournable": false,
-    "origines_cuisine": ["Chine", "Asie", "Viêtnam"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Chine",
+      "Asie",
+      "Viêtnam"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/the-art-of-susan-graham/401560658?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cf/10/db/cf10db3c-2ca1-318b-90ac-6cbffb1b2646/825646862214.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "hyukoh-23",
@@ -1463,13 +2646,26 @@
     "pays": "Corée du Sud",
     "continent": "Asie",
     "genre": "Indie Rock coréen",
-    "tags": ["indie", "teen", "emotionnel", "coreen"],
-    "palmares": ["melon", "korean_critics"],
+    "tags": [
+      "indie",
+      "teen",
+      "emotionnel",
+      "coreen"
+    ],
+    "palmares": [
+      "melon",
+      "korean_critics"
+    ],
     "score_consensus": 80,
     "incontournable": false,
-    "origines_cuisine": ["Corée", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Corée",
+      "Asie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/23/1450778313?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/20/de/43/20de43fe-733e-3734-cab9-7bd787411260/Cover_HYUKOH_23.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "kiha-and-the-faces-debut",
@@ -1479,13 +2675,26 @@
     "pays": "Corée du Sud",
     "continent": "Asie",
     "genre": "Indie Rock / Funk coréen",
-    "tags": ["indie", "groove", "unique", "coreen"],
-    "palmares": ["korean_critics", "hiphopplaya"],
+    "tags": [
+      "indie",
+      "groove",
+      "unique",
+      "coreen"
+    ],
+    "palmares": [
+      "korean_critics",
+      "hiphopplaya"
+    ],
     "score_consensus": 78,
     "incontournable": false,
-    "origines_cuisine": ["Corée", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Corée",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "jay-chou-fantasy",
@@ -1495,13 +2704,25 @@
     "pays": "Taïwan",
     "continent": "Asie",
     "genre": "C-Pop / R&B",
-    "tags": ["mandopop", "créatif", "romantique", "classique"],
-    "palmares": ["golden_melody_award"],
+    "tags": [
+      "mandopop",
+      "créatif",
+      "romantique",
+      "classique"
+    ],
+    "palmares": [
+      "golden_melody_award"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Chine", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Chine",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "zhang-chu-go-go-go",
@@ -1511,13 +2732,26 @@
     "pays": "Chine",
     "continent": "Asie",
     "genre": "Rock chinois",
-    "tags": ["rock", "folk", "indie", "chine"],
-    "palmares": ["china_critics"],
+    "tags": [
+      "rock",
+      "folk",
+      "indie",
+      "chine"
+    ],
+    "palmares": [
+      "china_critics"
+    ],
     "score_consensus": 76,
     "incontournable": false,
-    "origines_cuisine": ["Chine", "Asie", "Viêtnam"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Chine",
+      "Asie",
+      "Viêtnam"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "sigur-ros-agaetis-byrjun",
@@ -1527,13 +2761,25 @@
     "pays": "Islande",
     "continent": "Europe",
     "genre": "Post-Rock / Ambient",
-    "tags": ["contemplatif", "post-rock", "nordique", "envoûtant"],
-    "palmares": ["pitchfork", "nme_decade"],
+    "tags": [
+      "contemplatif",
+      "post-rock",
+      "nordique",
+      "envoûtant"
+    ],
+    "palmares": [
+      "pitchfork",
+      "nme_decade"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/%C3%A1g%C3%A6tis-byrjun/1447442814?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f7/34/fd/f734fd6c-aeca-8052-825c-706d1c665a8b/190296941856.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "bjork-homogenic",
@@ -1543,13 +2789,25 @@
     "pays": "Islande",
     "continent": "Europe",
     "genre": "Art Pop / Electronic",
-    "tags": ["électronique", "emotionnel", "unique", "ambitieux"],
-    "palmares": ["pitchfork_top10_decade", "rs_500"],
+    "tags": [
+      "électronique",
+      "emotionnel",
+      "unique",
+      "ambitieux"
+    ],
+    "palmares": [
+      "pitchfork_top10_decade",
+      "rs_500"
+    ],
     "score_consensus": 96,
     "incontournable": true,
-    "origines_cuisine": ["Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "bjork-post",
@@ -1559,13 +2817,25 @@
     "pays": "Islande",
     "continent": "Europe",
     "genre": "Art Pop / Electronic",
-    "tags": ["danse", "electro", "joie", "alternatif"],
-    "palmares": ["pitchfork", "nme"],
+    "tags": [
+      "danse",
+      "electro",
+      "joie",
+      "alternatif"
+    ],
+    "palmares": [
+      "pitchfork",
+      "nme"
+    ],
     "score_consensus": 91,
     "incontournable": true,
-    "origines_cuisine": ["Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "kraftwerk-autobahn",
@@ -1575,13 +2845,27 @@
     "pays": "Allemagne",
     "continent": "Europe",
     "genre": "Électronique / Krautrock",
-    "tags": ["pionnier", "synth", "motorway", "fondateur"],
-    "palmares": ["rs_500", "pitchfork"],
+    "tags": [
+      "pionnier",
+      "synth",
+      "motorway",
+      "fondateur"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Allemagne", "Autriche", "Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Allemagne",
+      "Autriche",
+      "Scandinavie"
+    ],
+    "url_apple_music": "https://music.apple.com/ca/album/autobahn-remastered/726154713?uo=4",
+    "description": null,
+    "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/a6/b0/49a6b061-cbd8-ede5-446d-dae8b50e3b32/5099996601457.jpg/600x600bb.jpg",
+    "rang_mondial": null
   },
   {
     "id": "kraftwerk-trans-europe-express",
@@ -1591,13 +2875,27 @@
     "pays": "Allemagne",
     "continent": "Europe",
     "genre": "Électronique / Synthpop",
-    "tags": ["machine", "minimaliste", "voyage", "classique"],
-    "palmares": ["rs_500", "pitchfork"],
+    "tags": [
+      "machine",
+      "minimaliste",
+      "voyage",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Allemagne", "Autriche", "Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Allemagne",
+      "Autriche",
+      "Scandinavie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "royksopp-melody-am",
@@ -1607,13 +2905,25 @@
     "pays": "Norvège",
     "continent": "Europe",
     "genre": "Electronic / Downtempo",
-    "tags": ["downtempo", "hivernal", "nordique", "cosy"],
-    "palmares": ["spellemannprisen", "nme"],
+    "tags": [
+      "downtempo",
+      "hivernal",
+      "nordique",
+      "cosy"
+    ],
+    "palmares": [
+      "spellemannprisen",
+      "nme"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "jose-gonzalez-veneer",
@@ -1623,13 +2933,25 @@
     "pays": "Suède",
     "continent": "Europe",
     "genre": "Folk / Indie",
-    "tags": ["acoustique", "dépouilé", "intime", "nordique"],
-    "palmares": ["grammi", "nme"],
+    "tags": [
+      "acoustique",
+      "dépouilé",
+      "intime",
+      "nordique"
+    ],
+    "palmares": [
+      "grammi",
+      "nme"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "amalia-rodrigues-coimbra",
@@ -1639,13 +2961,26 @@
     "pays": "Portugal",
     "continent": "Europe",
     "genre": "Fado",
-    "tags": ["fado", "saudade", "voix", "legendaire"],
-    "palmares": ["portugal_critics", "world_music"],
+    "tags": [
+      "fado",
+      "saudade",
+      "voix",
+      "legendaire"
+    ],
+    "palmares": [
+      "portugal_critics",
+      "world_music"
+    ],
     "score_consensus": 90,
     "incontournable": true,
-    "origines_cuisine": ["Espagne", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Espagne",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "carabao-made-in-thailand",
@@ -1655,13 +2990,24 @@
     "pays": "Thaïlande",
     "continent": "Asie",
     "genre": "Country Thai / Rock",
-    "tags": ["folk-thai", "social", "engagé", "classique"],
-    "palmares": ["thailand_critics"],
+    "tags": [
+      "folk-thai",
+      "social",
+      "engagé",
+      "classique"
+    ],
+    "palmares": [
+      "thailand_critics"
+    ],
     "score_consensus": 78,
     "incontournable": false,
-    "origines_cuisine": ["Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "trinh-cong-son-phu-khuc-que-huong",
@@ -1671,13 +3017,26 @@
     "pays": "Viêtnam",
     "continent": "Asie",
     "genre": "Nhạc vàng / Folk vietnamien",
-    "tags": ["folk", "antiwar", "poetique", "vietnamien"],
-    "palmares": ["vietnam_critics", "world_music"],
+    "tags": [
+      "folk",
+      "antiwar",
+      "poetique",
+      "vietnamien"
+    ],
+    "palmares": [
+      "vietnam_critics",
+      "world_music"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Viêtnam", "Asie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Viêtnam",
+      "Asie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "mikis-theodorakis-zorba",
@@ -1687,13 +3046,26 @@
     "pays": "Grèce",
     "continent": "Europe",
     "genre": "Bande originale / Musique grecque",
-    "tags": ["film", "bouzouki", "celebratoire", "classique"],
-    "palmares": ["grammy_nom", "greece_critics"],
+    "tags": [
+      "film",
+      "bouzouki",
+      "celebratoire",
+      "classique"
+    ],
+    "palmares": [
+      "grammy_nom",
+      "greece_critics"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Grèce", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Grèce",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "avalanches-since-i-left-you",
@@ -1703,13 +3075,26 @@
     "pays": "Australie",
     "continent": "Océanie",
     "genre": "Sample-based / Dance",
-    "tags": ["samples", "danse", "collage", "fun"],
-    "palmares": ["pitchfork", "nme"],
+    "tags": [
+      "samples",
+      "danse",
+      "collage",
+      "fun"
+    ],
+    "palmares": [
+      "pitchfork",
+      "nme"
+    ],
     "score_consensus": 92,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "boukman-eksperyans-kalfou-danjere",
@@ -1719,13 +3104,27 @@
     "pays": "Haïti",
     "continent": "Amériques",
     "genre": "Racine / Vodou Jazz",
-    "tags": ["vaudou", "resistance", "spirituel", "haiti"],
-    "palmares": ["grammy_nom", "world_music"],
+    "tags": [
+      "vaudou",
+      "resistance",
+      "spirituel",
+      "haiti"
+    ],
+    "palmares": [
+      "grammy_nom",
+      "world_music"
+    ],
     "score_consensus": 83,
     "incontournable": false,
-    "origines_cuisine": ["Haïti", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Haïti",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "israel-kamakawiwoole-facing-future",
@@ -1735,13 +3134,25 @@
     "pays": "Hawaï (États-Unis)",
     "continent": "Amériques",
     "genre": "Hawaiian / Slack Key",
-    "tags": ["ukulele", "serein", "nature", "emotionnel"],
-    "palmares": ["grammy_nom", "hawaii_critics"],
+    "tags": [
+      "ukulele",
+      "serein",
+      "nature",
+      "emotionnel"
+    ],
+    "palmares": [
+      "grammy_nom",
+      "hawaii_critics"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "sufjan-stevens-illinois",
@@ -1751,13 +3162,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Indie Folk / Orchestral",
-    "tags": ["orchestral", "folk", "americana", "ambitieux"],
-    "palmares": ["pitchfork", "metacritic_best"],
+    "tags": [
+      "orchestral",
+      "folk",
+      "americana",
+      "ambitieux"
+    ],
+    "palmares": [
+      "pitchfork",
+      "metacritic_best"
+    ],
     "score_consensus": 90,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "modest-mouse-the-moon-and-antarctica",
@@ -1767,13 +3191,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Indie Rock",
-    "tags": ["existentiel", "indie", "sombre", "unique"],
-    "palmares": ["pitchfork_decade", "rs_500"],
+    "tags": [
+      "existentiel",
+      "indie",
+      "sombre",
+      "unique"
+    ],
+    "palmares": [
+      "pitchfork_decade",
+      "rs_500"
+    ],
     "score_consensus": 89,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "the-national-boxer",
@@ -1783,13 +3220,25 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Indie Rock",
-    "tags": ["adult", "mélancolique", "orchestral"],
-    "palmares": ["pitchfork", "uncut"],
+    "tags": [
+      "adult",
+      "mélancolique",
+      "orchestral"
+    ],
+    "palmares": [
+      "pitchfork",
+      "uncut"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "massive-attack-blue-lines",
@@ -1799,13 +3248,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Trip-Hop",
-    "tags": ["trip-hop", "urbain", "fondateur", "classique"],
-    "palmares": ["rs_500", "mercury_prize_nom"],
+    "tags": [
+      "trip-hop",
+      "urbain",
+      "fondateur",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "mercury_prize_nom"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "talk-talk-spirit-of-eden",
@@ -1815,13 +3276,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Art Rock / Post-Rock",
-    "tags": ["silence", "ambient", "unique", "post-rock_ancêtre"],
-    "palmares": ["pitchfork", "uncut"],
+    "tags": [
+      "silence",
+      "ambient",
+      "unique",
+      "post-rock_ancêtre"
+    ],
+    "palmares": [
+      "pitchfork",
+      "uncut"
+    ],
     "score_consensus": 91,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "neil-young-harvest",
@@ -1831,13 +3304,26 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Country Rock / Folk",
-    "tags": ["folk", "rural", "nostalgique", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top100"],
+    "tags": [
+      "folk",
+      "rural",
+      "nostalgique",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top100"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Canada", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "broken-social-scene-you-forgot-it-in-people",
@@ -1847,13 +3333,26 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Indie Rock / Post-Rock",
-    "tags": ["communautaire", "indie", "electro", "canadien"],
-    "palmares": ["polaris_prize", "pitchfork"],
+    "tags": [
+      "communautaire",
+      "indie",
+      "electro",
+      "canadien"
+    ],
+    "palmares": [
+      "polaris_prize",
+      "pitchfork"
+    ],
     "score_consensus": 89,
     "incontournable": false,
-    "origines_cuisine": ["Canada", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "kraftwerk-man-machine",
@@ -1863,13 +3362,27 @@
     "pays": "Allemagne",
     "continent": "Europe",
     "genre": "Électronique / Techno",
-    "tags": ["robot", "machine", "fondateur", "minimaliste"],
-    "palmares": ["rs_500", "pitchfork"],
+    "tags": [
+      "robot",
+      "machine",
+      "fondateur",
+      "minimaliste"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
     "score_consensus": 95,
     "incontournable": true,
-    "origines_cuisine": ["Allemagne", "Autriche", "Scandinavie"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Allemagne",
+      "Autriche",
+      "Scandinavie"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "can-tago-mago",
@@ -1879,13 +3392,26 @@
     "pays": "Allemagne",
     "continent": "Europe",
     "genre": "Krautrock",
-    "tags": ["krautrock", "hypnotique", "expérimental", "influent"],
-    "palmares": ["rs_500", "pitchfork"],
+    "tags": [
+      "krautrock",
+      "hypnotique",
+      "expérimental",
+      "influent"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Allemagne", "Autriche"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Allemagne",
+      "Autriche"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "nick-cave-murder-ballads",
@@ -1895,13 +3421,26 @@
     "pays": "Australie",
     "continent": "Océanie",
     "genre": "Alternative / Gothic",
-    "tags": ["gothique", "sombre", "narrative", "visceral"],
-    "palmares": ["nme", "rolling_stone"],
+    "tags": [
+      "gothique",
+      "sombre",
+      "narrative",
+      "visceral"
+    ],
+    "palmares": [
+      "nme",
+      "rolling_stone"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni",
+      "États-Unis"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "aphex-twin-selected-ambient-works",
@@ -1911,13 +3450,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Ambient / Electronic",
-    "tags": ["ambient", "contemplatif", "experimentel", "electronica"],
-    "palmares": ["pitchfork_top10", "rs_500"],
+    "tags": [
+      "ambient",
+      "contemplatif",
+      "experimentel",
+      "electronica"
+    ],
+    "palmares": [
+      "pitchfork_top10",
+      "rs_500"
+    ],
     "score_consensus": 93,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "boards-of-canada-music-has-the-right-to-children",
@@ -1927,13 +3478,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Electronic / IDM",
-    "tags": ["nostalgie", "ambient", "hipnagogique", "enfance"],
-    "palmares": ["pitchfork_top10_decade", "warp"],
+    "tags": [
+      "nostalgie",
+      "ambient",
+      "hipnagogique",
+      "enfance"
+    ],
+    "palmares": [
+      "pitchfork_top10_decade",
+      "warp"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "al-green-lets-stay-together",
@@ -1943,13 +3506,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Soul",
-    "tags": ["soul", "romantique", "sensuel", "classique"],
-    "palmares": ["rs_500", "grammy_hall_of_fame"],
+    "tags": [
+      "soul",
+      "romantique",
+      "sensuel",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "sun-ra-space-is-the-place",
@@ -1959,13 +3535,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Free Jazz / Avant-garde",
-    "tags": ["cosmique", "free-jazz", "avant-garde", "unique"],
-    "palmares": ["allmusic", "jazz_critics"],
+    "tags": [
+      "cosmique",
+      "free-jazz",
+      "avant-garde",
+      "unique"
+    ],
+    "palmares": [
+      "allmusic",
+      "jazz_critics"
+    ],
     "score_consensus": 85,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "nina-simone-pastel-blues",
@@ -1975,13 +3564,27 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Jazz / Blues",
-    "tags": ["blues", "engage", "voix", "classique"],
-    "palmares": ["rs_500", "allmusic"],
+    "tags": [
+      "blues",
+      "engage",
+      "voix",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "allmusic"
+    ],
     "score_consensus": 89,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "elis-regina-falso-brilhante",
@@ -1991,13 +3594,26 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB",
-    "tags": ["live", "emotionnel", "voix", "dramatique"],
-    "palmares": ["rolling_stone_brasil"],
+    "tags": [
+      "live",
+      "emotionnel",
+      "voix",
+      "dramatique"
+    ],
+    "palmares": [
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "nino-rota-the-godfather",
@@ -2007,13 +3623,26 @@
     "pays": "Italie",
     "continent": "Europe",
     "genre": "Bande originale / Orchestral",
-    "tags": ["film", "melodique", "tragique", "classique"],
-    "palmares": ["grammy_nom", "oscar_nom"],
+    "tags": [
+      "film",
+      "melodique",
+      "tragique",
+      "classique"
+    ],
+    "palmares": [
+      "grammy_nom",
+      "oscar_nom"
+    ],
     "score_consensus": 88,
     "incontournable": true,
-    "origines_cuisine": ["Italie", "Méditerranéen"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Italie",
+      "Méditerranéen"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "arca-arca",
@@ -2023,13 +3652,26 @@
     "pays": "Venezuela",
     "continent": "Amériques",
     "genre": "Electronic / Avant-garde",
-    "tags": ["experimentel", "corps", "futuriste", "latinx"],
-    "palmares": ["pitchfork", "resident_advisor"],
+    "tags": [
+      "experimentel",
+      "corps",
+      "futuriste",
+      "latinx"
+    ],
+    "palmares": [
+      "pitchfork",
+      "resident_advisor"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Amérique centrale", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Amérique centrale",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "james-blake-overgrown",
@@ -2039,13 +3681,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Electronic Soul",
-    "tags": ["soul", "electronic", "minimal", "voix"],
-    "palmares": ["mercury_prize", "pitchfork"],
+    "tags": [
+      "soul",
+      "electronic",
+      "minimal",
+      "voix"
+    ],
+    "palmares": [
+      "mercury_prize",
+      "pitchfork"
+    ],
     "score_consensus": 85,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "feist-the-reminder",
@@ -2055,13 +3709,26 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Indie Pop / Folk",
-    "tags": ["indie", "folk", "intime", "canadien"],
-    "palmares": ["polaris_prize", "grammy_nom"],
+    "tags": [
+      "indie",
+      "folk",
+      "intime",
+      "canadien"
+    ],
+    "palmares": [
+      "polaris_prize",
+      "grammy_nom"
+    ],
     "score_consensus": 86,
     "incontournable": false,
-    "origines_cuisine": ["Canada", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "arcade-fire-funeral",
@@ -2071,13 +3738,27 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Indie Rock / Orchestral",
-    "tags": ["communautaire", "emotionnel", "canadien", "grandiose"],
-    "palmares": ["pitchfork_top10_decade", "grammy"],
+    "tags": [
+      "communautaire",
+      "emotionnel",
+      "canadien",
+      "grandiose"
+    ],
+    "palmares": [
+      "pitchfork_top10_decade",
+      "grammy"
+    ],
     "score_consensus": 94,
     "incontournable": true,
-    "origines_cuisine": ["Canada", "États-Unis", "Québec"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis",
+      "Québec"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "astral-weeks-van-morrison",
@@ -2087,13 +3768,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Folk / Jazz",
-    "tags": ["spirituel", "jazz", "folk", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top10"],
+    "tags": [
+      "spirituel",
+      "jazz",
+      "folk",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top10"
+    ],
     "score_consensus": 97,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "low-ones",
@@ -2103,13 +3796,25 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Slowcore / Indie",
-    "tags": ["minimaliste", "lent", "hiver", "introspectif"],
-    "palmares": ["pitchfork"],
+    "tags": [
+      "minimaliste",
+      "lent",
+      "hiver",
+      "introspectif"
+    ],
+    "palmares": [
+      "pitchfork"
+    ],
     "score_consensus": 82,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "the-clash-london-calling",
@@ -2119,13 +3824,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Punk / Rock",
-    "tags": ["punk", "reggae", "politique", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top10"],
+    "tags": [
+      "punk",
+      "reggae",
+      "politique",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top10"
+    ],
     "score_consensus": 97,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "hailu-mergia-hailu-mergia-1977",
@@ -2135,13 +3852,25 @@
     "pays": "Éthiopie",
     "continent": "Afrique",
     "genre": "Ethio-Jazz / Keyboard",
-    "tags": ["ethio-jazz", "solo", "improvisation", "rare"],
-    "palmares": ["awesome_tapes"],
+    "tags": [
+      "ethio-jazz",
+      "solo",
+      "improvisation",
+      "rare"
+    ],
+    "palmares": [
+      "awesome_tapes"
+    ],
     "score_consensus": 81,
     "incontournable": false,
-    "origines_cuisine": ["Afrique du Sud", "Haïti"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Haïti"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "tricky-pre-millennium-tension",
@@ -2151,13 +3880,23 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Trip-Hop",
-    "tags": ["sombre", "paranoia", "trip-hop"],
-    "palmares": ["nme"],
+    "tags": [
+      "sombre",
+      "paranoia",
+      "trip-hop"
+    ],
+    "palmares": [
+      "nme"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "david-bowie-station-to-station",
@@ -2167,13 +3906,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Art Rock / Soul",
-    "tags": ["art-rock", "soul", "mystique", "classique"],
-    "palmares": ["rs_500", "pitchfork"],
+    "tags": [
+      "art-rock",
+      "soul",
+      "mystique",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
     "score_consensus": 95,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "the-band-music-from-big-pink",
@@ -2183,13 +3934,25 @@
     "pays": "Canada",
     "continent": "Amériques",
     "genre": "Americana / Rock",
-    "tags": ["americana", "roots", "rustique", "classique"],
-    "palmares": ["rs_500"],
+    "tags": [
+      "americana",
+      "roots",
+      "rustique",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500"
+    ],
     "score_consensus": 91,
     "incontournable": false,
-    "origines_cuisine": ["Canada", "États-Unis"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "caetano-veloso-caetano-veloso-1967",
@@ -2199,13 +3962,27 @@
     "pays": "Brésil",
     "continent": "Amériques",
     "genre": "MPB / Tropicália",
-    "tags": ["tropicalia", "lumineux", "tropical", "fondateur"],
-    "palmares": ["rolling_stone_brasil"],
+    "tags": [
+      "tropicalia",
+      "lumineux",
+      "tropical",
+      "fondateur"
+    ],
+    "palmares": [
+      "rolling_stone_brasil"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["Brésil", "Pérou", "Cuba", "Amérique centrale"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Brésil",
+      "Pérou",
+      "Cuba",
+      "Amérique centrale"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "nusrat-fateh-ali-khan-must-must",
@@ -2215,13 +3992,26 @@
     "pays": "Pakistan",
     "continent": "Asie",
     "genre": "Qawwali / World Fusion",
-    "tags": ["qawwali", "world", "fusion", "devotionnel"],
-    "palmares": ["real_world", "world_music"],
+    "tags": [
+      "qawwali",
+      "world",
+      "fusion",
+      "devotionnel"
+    ],
+    "palmares": [
+      "real_world",
+      "world_music"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Inde", "Perse/Iran"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Inde",
+      "Perse/Iran"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "massive-attack-mezzanine",
@@ -2231,13 +4021,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Trip-Hop / Electronic",
-    "tags": ["sombre", "dense", "urbain", "intense"],
-    "palmares": ["pitchfork", "nme"],
+    "tags": [
+      "sombre",
+      "dense",
+      "urbain",
+      "intense"
+    ],
+    "palmares": [
+      "pitchfork",
+      "nme"
+    ],
     "score_consensus": 89,
     "incontournable": true,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "stereolab-dots-and-loops",
@@ -2247,13 +4049,26 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Lounge / Electronic / Avant-Pop",
-    "tags": ["futuriste", "lounge", "danse", "intello"],
-    "palmares": ["pitchfork", "wire"],
+    "tags": [
+      "futuriste",
+      "lounge",
+      "danse",
+      "intello"
+    ],
+    "palmares": [
+      "pitchfork",
+      "wire"
+    ],
     "score_consensus": 84,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni", "France"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni",
+      "France"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "bon-iver-for-emma-forever-ago",
@@ -2263,13 +4078,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Indie Folk",
-    "tags": ["hiver", "solitude", "folk", "emotionnel"],
-    "palmares": ["pitchfork", "grammy_nom"],
+    "tags": [
+      "hiver",
+      "solitude",
+      "folk",
+      "emotionnel"
+    ],
+    "palmares": [
+      "pitchfork",
+      "grammy_nom"
+    ],
     "score_consensus": 88,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "wu-tang-clan-36-chambers",
@@ -2279,13 +4107,27 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Hip-Hop",
-    "tags": ["street", "martial-arts", "raw", "classique"],
-    "palmares": ["rs_500", "rolling_stone_top_rap"],
+    "tags": [
+      "street",
+      "martial-arts",
+      "raw",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "rolling_stone_top_rap"
+    ],
     "score_consensus": 96,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "nico-chelsea-girl",
@@ -2295,13 +4137,26 @@
     "pays": "Allemagne",
     "continent": "Europe",
     "genre": "Folk / Drone",
-    "tags": ["sombre", "velvet", "voix", "art"],
-    "palmares": ["pitchfork", "rs_500"],
+    "tags": [
+      "sombre",
+      "velvet",
+      "voix",
+      "art"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rs_500"
+    ],
     "score_consensus": 85,
     "incontournable": false,
-    "origines_cuisine": ["Allemagne", "Autriche"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Allemagne",
+      "Autriche"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "harold-budd-jane-with-the-luminous-nose",
@@ -2311,13 +4166,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Ambient",
-    "tags": ["ambient", "piano", "espace", "serein"],
-    "palmares": ["pitchfork_top10", "allmusic"],
+    "tags": [
+      "ambient",
+      "piano",
+      "espace",
+      "serein"
+    ],
+    "palmares": [
+      "pitchfork_top10",
+      "allmusic"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "sade-diamond-life",
@@ -2327,13 +4194,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Sophisti-Pop / Soul",
-    "tags": ["elegant", "romantique", "smooth", "classique"],
-    "palmares": ["brit_award", "grammy_nom"],
+    "tags": [
+      "elegant",
+      "romantique",
+      "smooth",
+      "classique"
+    ],
+    "palmares": [
+      "brit_award",
+      "grammy_nom"
+    ],
     "score_consensus": 87,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "terry-riley-in-c",
@@ -2343,13 +4222,26 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Musique répétitive / Minimalisme",
-    "tags": ["minimaliste", "répétitif", "pionnier", "classique"],
-    "palmares": ["allmusic", "pitchfork"],
+    "tags": [
+      "minimaliste",
+      "répétitif",
+      "pionnier",
+      "classique"
+    ],
+    "palmares": [
+      "allmusic",
+      "pitchfork"
+    ],
     "score_consensus": 89,
     "incontournable": false,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "talk-talk-laughing-stock",
@@ -2359,13 +4251,25 @@
     "pays": "Royaume-Uni",
     "continent": "Europe",
     "genre": "Post-Rock / Jazz",
-    "tags": ["post-rock", "jazz", "silence", "ascétique"],
-    "palmares": ["pitchfork", "wire"],
+    "tags": [
+      "post-rock",
+      "jazz",
+      "silence",
+      "ascétique"
+    ],
+    "palmares": [
+      "pitchfork",
+      "wire"
+    ],
     "score_consensus": 92,
     "incontournable": false,
-    "origines_cuisine": ["Royaume-Uni"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "outkast-stankonia",
@@ -2375,13 +4279,27 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Hip-Hop / Funk",
-    "tags": ["funk", "hip-hop", "danse", "ambitieux"],
-    "palmares": ["rs_500", "grammy"],
+    "tags": [
+      "funk",
+      "hip-hop",
+      "danse",
+      "ambitieux"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy"
+    ],
     "score_consensus": 95,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Haïti", "Cuba"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Haïti",
+      "Cuba"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   },
   {
     "id": "pixies-doolittle",
@@ -2391,12 +4309,25 @@
     "pays": "États-Unis",
     "continent": "Amériques",
     "genre": "Alternative Rock",
-    "tags": ["indie", "surrealiste", "dynamique", "classique"],
-    "palmares": ["rs_500", "nme"],
+    "tags": [
+      "indie",
+      "surrealiste",
+      "dynamique",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "nme"
+    ],
     "score_consensus": 95,
     "incontournable": true,
-    "origines_cuisine": ["États-Unis", "Canada"],
-    "url_apple_music": null,
-    "description": null
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": "",
+    "description": null,
+    "artwork_url": null,
+    "rang_mondial": null
   }
 ]
