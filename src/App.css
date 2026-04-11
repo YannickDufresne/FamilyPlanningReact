@@ -4401,27 +4401,31 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
 }
 
 .fa-dev__point {
-  display: grid;
-  grid-template-columns: 90px 1fr auto;
-  align-items: baseline;
-  gap: 6px;
-  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
 }
+.fa-dev__point:last-child { border-bottom: none; }
 .fa-dev__cat {
   font-weight: 700;
   color: var(--ink-5);
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 .fa-dev__obs {
   color: var(--ink-2);
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .fa-dev__src {
-  font-size: 0.6rem;
-  color: var(--ink-3);
-  white-space: nowrap;
+  font-size: 0.58rem;
+  color: var(--ink-4);
+  margin-top: 1px;
 }
 
 .fa-dev__encourager {
@@ -4793,8 +4797,7 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   .fa-section { border-right: none; border-bottom: 1px solid var(--border); }
   .fa-section:last-child { border-bottom: none; }
   .fa-section--agenda { flex: 1; }
-  .fa-dev__point { grid-template-columns: 70px 1fr; }
-  .fa-dev__src { display: none; }
+  /* fa-dev__point est maintenant flex column — pas besoin d'override grid */
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════

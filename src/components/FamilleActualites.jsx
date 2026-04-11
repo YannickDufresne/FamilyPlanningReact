@@ -282,55 +282,53 @@ function MiniCarteActivite({ activite }) {
 }
 
 function SectionCoupDeCoeur({ semaineVue }) {
-  // Fenêtre de pertinence : 3 jours avant le lundi jusqu'à la fin de la semaine suivante
-  const { dateMin, dateFin } = useMemo(() => {
+  // Bornes de la semaine visionnée (lundi → dimanche) + fenêtre élargie pour candidats
+  const { semaineFin, dateRecherchMin, dateRecherchMax } = useMemo(() => {
     const lundi = new Date(semaineVue + 'T12:00:00');
-    const min = new Date(lundi); min.setDate(lundi.getDate() - 3);
-    const fin = new Date(lundi); fin.setDate(lundi.getDate() + 13);
+    const dim   = new Date(lundi); dim.setDate(lundi.getDate() + 6);
+    const rMin  = new Date(lundi); rMin.setDate(lundi.getDate() - 4); // multi-jours commencés avant
+    const rMax  = new Date(lundi); rMax.setDate(lundi.getDate() + 13); // jusqu'à la semaine suivante
     return {
-      dateMin: min.toISOString().split('T')[0],
-      dateFin: fin.toISOString().split('T')[0],
+      semaineFin:       dim.toISOString().split('T')[0],
+      dateRecherchMin:  rMin.toISOString().split('T')[0],
+      dateRecherchMax:  rMax.toISOString().split('T')[0],
     };
   }, [semaineVue]);
 
   const recommandations = useMemo(() => {
-    const today = new Date().toISOString().split('T')[0];
+    // Scoring ancré sur la semaine visionnée (pas "aujourd'hui")
+    // → le Salon du livre (8 avr.) sera prioritaire pour la semaine du 6 avr.
+    const scorerActivite = a => {
+      const dansSemaine = a.date && a.date >= semaineVue && a.date <= semaineFin;
+      const apresDebut  = a.date && a.date >= semaineVue;
+      return (
+        (a.incontournable ? 500 : 0) +
+        (dansSemaine      ? 300 : 0) + // dans la semaine visionnée = bonus fort
+        (apresDebut       ? 100 : 0) + // après le lundi, pas encore passée par rapport à la semaine
+        (a.score_famille  ?? 0)
+      );
+    };
 
-    // Activités datées dans la fenêtre ET non encore passées (ou incontournables récentes)
-    const datees = activites.filter(a => {
-      if (!a.date) return false;
-      if (a.date > dateFin) return false;
-      // Garder si pas encore passée, ou si incontournable et commencée il y a ≤ 7 jours
-      if (a.date >= today) return true;
-      if (a.incontournable && a.date >= dateMin) return true;
+    // Candidats : activités datées dans la fenêtre élargie + permanentes
+    const candidats = activites.filter(a => {
+      if (!a.date || a.date === '') return true;                // permanente toujours incluse
+      if (a.date > dateRecherchMax) return false;              // trop loin dans le futur
+      if (a.date >= semaineVue) return true;                   // dans ou après la semaine
+      if (a.incontournable && a.date >= dateRecherchMin) return true; // incontournable récent (multi-jours)
       return false;
-    });
+    }).filter(a => (a.score_famille ?? 0) > 0);
 
-    // Activités permanentes (pas de date)
-    const permanentes = activites.filter(a => !a.date || a.date === '');
+    const sorted = [...candidats].sort((a, b) => scorerActivite(b) - scorerActivite(a));
 
-    const candidats = [...datees, ...permanentes]
-      .filter(a => (a.score_famille ?? 0) > 0);
-
-    const score = a =>
-      (a.incontournable ? 500 : 0) +
-      (a.date && a.date >= today ? 200 : 0) + // datée non passée = priorité
-      (a.score_famille ?? 0);
-
-    const sorted = [...candidats].sort((a, b) => score(b) - score(a));
-
-    // Top global (souvent le payant incontournable)
     const top = sorted[0] ?? null;
-    // Top gratuit différent
+    const topIsGratuit = top && (top.gratuit || (top.cout_adulte ?? top.cout ?? 0) === 0);
     const topGratuit = sorted.find(a =>
       (a.gratuit || (a.cout_adulte ?? a.cout ?? 0) === 0) && a !== top
     ) ?? null;
-    // Si top est déjà gratuit, prendre le 2e meilleur
-    const topIsGratuit = top && (top.gratuit || (top.cout_adulte ?? top.cout ?? 0) === 0);
     const deuxieme = topIsGratuit ? (sorted[1] ?? null) : topGratuit;
 
     return [top, deuxieme].filter(Boolean);
-  }, [semaineVue, dateMin, dateFin]);
+  }, [semaineVue, semaineFin, dateRecherchMin, dateRecherchMax]);
 
   if (recommandations.length === 0) return null;
 
