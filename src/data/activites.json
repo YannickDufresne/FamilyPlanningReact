@@ -1,5 +1,35 @@
 [
   {
+    "nom": "Salon international du livre de Québec (SILQ)",
+    "lieu": "Centre des congrès de Québec",
+    "duree": 180,
+    "cout": 0,
+    "cout_adulte": 9,
+    "cout_enfant": 4,
+    "cout_bebe": 0,
+    "saison": "printemps",
+    "type": "culture",
+    "origine": "Québec",
+    "date": "2026-04-08",
+    "date_fin": "2026-04-12",
+    "url": "https://www.silq.ca",
+    "source": "incontournable",
+    "pourQui": "famille",
+    "incontournable": true,
+    "score_famille": 78,
+    "score_adultes": 85,
+    "description": "65e édition du plus grand salon du livre francophone en Amérique. Auteurs, dédicaces, animations jeunesse, BD, littérature québécoise. Entrée 5 ans et moins gratuite.",
+    "explication_famille": "Événement incontournable pour toute la famille · animations jeunesse pour 🐤 Joseph · littérature et rencontres d'auteurs pour 💚 Patricia et 🦉 Yannick · 5 ans et moins gratuit pour 🍒 les bébés",
+    "explication_adultes": "Idéal pour 💚 Patricia · rencontres d'auteurs, littérature québécoise, BD · ambiance culturelle unique",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 72,
+      "Joseph": 65,
+      "Mika": 30,
+      "Luce": 30
+    }
+  },
+  {
     "nom": "Remparts de Québec v Saguenéens de Chicoutimi - Série Ronde 2",
     "lieu": "Centre Videotron",
     "duree": 120,

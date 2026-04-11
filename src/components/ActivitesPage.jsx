@@ -47,10 +47,17 @@ function couleurScore(s) {
   return 'var(--ink-3)';
 }
 
-function formatDate(dateStr) {
+function formatDate(dateStr, dateFinStr) {
   if (!dateStr) return null;
+  const opts = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+  const optsCourt = { weekday: 'short', day: 'numeric', month: 'short' };
+  if (dateFinStr && dateFinStr !== dateStr) {
+    const debut = new Date(dateStr + 'T12:00:00');
+    const fin   = new Date(dateFinStr + 'T12:00:00');
+    return `${debut.toLocaleDateString('fr-CA', optsCourt)} – ${fin.toLocaleDateString('fr-CA', { ...optsCourt, year: 'numeric' })}`;
+  }
   const d = new Date(dateStr + 'T12:00:00');
-  return d.toLocaleDateString('fr-CA', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  return d.toLocaleDateString('fr-CA', opts);
 }
 
 function formatPrix(a) {
@@ -193,8 +200,9 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
 
   const debutSemaine = semaine?.debut;
   const finSemaine   = semaine?.fin;
-  const dansSemaine  = d => debutSemaine && finSemaine && d >= debutSemaine && d <= finSemaine;
-  const estPassee    = d => d && d < today;
+  // Pour les événements multi-jours: "dans la semaine" si chevauchement avec la semaine
+  const dansSemaine  = (d, dateFin) => debutSemaine && finSemaine && d <= finSemaine && (dateFin || d) >= debutSemaine;
+  const estPassee    = a => a.date && (a.date_fin || a.date) < today;
 
   // Filtrer par pertinence minimale
   const scoreKey = mode === 'adultes' ? 'score_adultes' : 'score_famille';
@@ -203,11 +211,11 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
     : activites.filter(a => (a[scoreKey] ?? 0) >= scoreMin);
 
   // Nombre d'activités passées (pour le bouton toggle)
-  const nbPassees = activitesFiltrees.filter(a => estPassee(a.date)).length;
+  const nbPassees = activitesFiltrees.filter(a => estPassee(a)).length;
 
   // Séparer datées / non-datées (cacher passées selon état)
   const dateesTout  = activitesFiltrees.filter(a => a.date && a.date.trim() !== '');
-  const datees      = afficherPassees ? dateesTout : dateesTout.filter(a => !estPassee(a.date));
+  const datees      = afficherPassees ? dateesTout : dateesTout.filter(a => !estPassee(a));
   const nonDatees   = activitesFiltrees.filter(a => !a.date || a.date.trim() === '');
 
   // Fonction de tri
@@ -335,14 +343,14 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
           </h3>
           <div className="acti-timeline">
             {datesTriees.map(date => (
-              <div key={date} className={`acti-groupe${dansSemaine(date) ? ' acti-groupe--semaine' : ''}`}>
+              <div key={date} className={`acti-groupe${dansSemaine(date, parDate[date][0]?.date_fin) ? ' acti-groupe--semaine' : ''}`}>
                 <div className="acti-groupe__date">
-                  {dansSemaine(date) && <span className="acti-groupe__tag-semaine">Cette semaine</span>}
-                  {formatDate(date)}
+                  {dansSemaine(date, parDate[date][0]?.date_fin) && <span className="acti-groupe__tag-semaine">Cette semaine</span>}
+                  {formatDate(date, parDate[date][0]?.date_fin)}
                 </div>
                 <div className="acti-groupe__cartes">
                   {parDate[date].map((a, i) => (
-                    <CarteActivite key={`${date}-${i}`} activite={a} mode={mode} profils={profils} passee={estPassee(a.date)} />
+                    <CarteActivite key={`${date}-${i}`} activite={a} mode={mode} profils={profils} passee={estPassee(a)} />
                   ))}
                 </div>
               </div>

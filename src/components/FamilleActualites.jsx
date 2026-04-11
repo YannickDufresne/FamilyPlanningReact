@@ -233,10 +233,16 @@ function SectionAgenda({ obligations, evenements, semaineVue }) {
 }
 
 // ── Section sorties de la semaine ─────────────────────────────────────────────
-function formatDateCourte(dateStr) {
+function formatDateCourte(dateStr, dateFinStr) {
   if (!dateStr) return null;
+  const opts = { weekday: 'short', day: 'numeric', month: 'short' };
+  if (dateFinStr && dateFinStr !== dateStr) {
+    const debut = new Date(dateStr + 'T12:00:00');
+    const fin   = new Date(dateFinStr + 'T12:00:00');
+    return `${debut.toLocaleDateString('fr-CA', opts)} – ${fin.toLocaleDateString('fr-CA', opts)}`;
+  }
   const d = new Date(dateStr + 'T12:00:00');
-  return d.toLocaleDateString('fr-CA', { weekday: 'short', day: 'numeric', month: 'short' });
+  return d.toLocaleDateString('fr-CA', opts);
 }
 
 function formatPrixActivite(a) {
@@ -270,7 +276,7 @@ function MiniCarteActivite({ activite, label }) {
         <span className={`fa-sortie__prix${isGratuit ? ' fa-sortie__prix--gratuit' : ''}`}>{prix}</span>
       </div>
       {activite.date && (
-        <div className="fa-sortie__meta">📅 {formatDateCourte(activite.date)}{activite.lieu ? ` · 📍 ${activite.lieu}` : ''}</div>
+        <div className="fa-sortie__meta">📅 {formatDateCourte(activite.date, activite.date_fin)}{activite.lieu ? ` · 📍 ${activite.lieu}` : ''}</div>
       )}
       {!activite.date && activite.lieu && (
         <div className="fa-sortie__meta">📍 {activite.lieu}</div>
@@ -303,8 +309,12 @@ function SectionCoupDeCoeur({ semaineVue }) {
     const scorerSemaine = a =>
       (a.incontournable ? 200 : 0) + (a.score_famille ?? 0);
 
+    // Pour les événements multi-jours: actif si date_debut <= semaineFin ET date_fin >= semaineVue
+    const estDansSemaine = a =>
+      a.date && a.date <= semaineFin && (a.date_fin || a.date) >= semaineVue && (a.date_fin || a.date) >= semaineMinStr;
+
     const activitesSemaine = activites
-      .filter(a => a.date && a.date >= semaineMinStr && a.date <= semaineFin)
+      .filter(a => estDansSemaine(a))
       .filter(a => (a.score_famille ?? 0) > 0)
       .sort((a, b) => scorerSemaine(b) - scorerSemaine(a));
 
@@ -313,14 +323,16 @@ function SectionCoupDeCoeur({ semaineVue }) {
     // ── Slot 2 : meilleure activité complémentaire (semaine élargie ou permanente) ──
     // Différente du slot 1, couvre les semaines à venir pour anticiper
     const scorerElargi = a => {
-      const dansSemaine = a.date && a.date >= semaineVue && a.date <= semaineFin;
+      const dansSemaine = estDansSemaine(a);
       return (a.incontournable ? 300 : 0) + (dansSemaine ? 100 : 0) + (a.score_famille ?? 0);
     };
 
     const autresCandidats = activites.filter(a => {
       if (a === slot1) return false;
       if (!a.date || a.date === '') return true; // permanentes
-      return a.date > semaineFin && a.date <= periodeElargieFin; // après la semaine, dans la fenêtre
+      // Après la semaine courante, dans la fenêtre élargie
+      const finEvenement = a.date_fin || a.date;
+      return finEvenement > semaineFin && a.date <= periodeElargieFin;
     }).filter(a => (a.score_famille ?? 0) > 0);
 
     const slot2 = [...autresCandidats].sort((a, b) => scorerElargi(b) - scorerElargi(a))[0] ?? null;
@@ -329,7 +341,8 @@ function SectionCoupDeCoeur({ semaineVue }) {
     if (!slot1) {
       const fallback = activites.filter(a => {
         if (!a.date || a.date === '') return true;
-        return a.date >= semaineVue && a.date <= periodeElargieFin;
+        const finEvenement = a.date_fin || a.date;
+        return a.date <= periodeElargieFin && finEvenement >= semaineVue;
       }).filter(a => (a.score_famille ?? 0) > 0)
         .sort((a, b) => scorerElargi(b) - scorerElargi(a));
       return fallback.slice(0, 2);
@@ -351,7 +364,7 @@ function SectionCoupDeCoeur({ semaineVue }) {
       </div>
       <div className="fa-sorties-grid">
         {recommandations.map((a, i) => {
-          const dansSemaine = a.date && a.date >= semaineVue && a.date <= semaineFin;
+          const dansSemaine = a.date && a.date <= semaineFin && (a.date_fin || a.date) >= semaineVue;
           const label = !a.date ? 'Suggestion permanente' : dansSemaine ? 'Cette semaine' : 'À venir';
           return <MiniCarteActivite key={i} activite={a} label={label} />;
         })}

@@ -805,7 +805,20 @@ async function main() {
     sourcesLog.web_search.erreur = 'ANTHROPIC_API_KEY absente';
   }
 
-  let activitesFinales = resultats.length > 0 ? resultats : anciennes;
+  // Préserver les événements en cours ou à venir depuis anciennes (ex: événements multi-jours)
+  let activitesFinales;
+  if (resultats.length > 0) {
+    const today = new Date().toISOString().split('T')[0];
+    const nomsResultats = new Set(resultats.map(a => a.nom));
+    const anciennesActives = anciennes.filter(a => {
+      // Garder si encore actif (date_fin ou date >= aujourd'hui) et pas déjà dans resultats
+      const finEvenement = a.date_fin || a.date;
+      return finEvenement && finEvenement >= today && !nomsResultats.has(a.nom);
+    });
+    activitesFinales = [...resultats, ...anciennesActives];
+  } else {
+    activitesFinales = anciennes;
+  }
 
   // ── 5. Scoring IA de toutes les activités (si clé Anthropic disponible) ────
   if (anthKey && activitesFinales.length > 0) {
