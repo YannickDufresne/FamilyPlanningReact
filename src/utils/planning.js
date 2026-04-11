@@ -204,7 +204,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     dateJour.setDate(lundi.getDate() + i);
     const dateStr = dateJour.toISOString().split('T')[0]; // "2026-03-20"
 
-    // ── Recettes ──────────────────────────────────────────────────────────────
+    // ── Recettes — pool normal (origine + coût) ───────────────────────────────
     let recettesDispo = recettes.filter(r => r[themeCol] === 1);
     if (filtrerOrigine) {
       const zonesPays = paysDeZone(origine);
@@ -214,19 +214,37 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
         recettesDispo = recettesDispo.filter(r => r.origine === origine);
       }
     }
-    if (activerCout)    recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
-    // Classiques familiaux : pour les jours désignés, restreindre au pool des classiques marqués
-    if (joursClassiquesSet.has(i) && classiques?.size > 0) {
-      const classiquesDispo = recettesDispo.filter(r => classiques.has(r.nom));
-      if (classiquesDispo.length > 0) recettesDispo = classiquesDispo;
-      // Sinon : aucun classique pour ce thème → on garde le pool normal (meilleur qu'une erreur)
-    }
+    if (activerCout) recettesDispo = recettesDispo.filter(r => r.cout <= coutMax);
 
+    // ── Régime nécessaire (calculé une seule fois, utilisé par classiques ET pool normal) ─
     let regimeNecessaire = null;
     if      (compteurVegane     < nbVegane)     regimeNecessaire = 'végane';
     else if (compteurVegetarien < nbVegetarien) regimeNecessaire = 'végétarien';
     else if (compteurOmnivore   < nbOmnivore)   regimeNecessaire = 'omnivore';
 
+    // ── Classiques familiaux : bypass origine/coût, cherche dans toutes les recettes du thème ─
+    // Les classiques sont des valeurs sûres — ils ne sont pas contraints par les filtres du jour.
+    let classiqueManquant = false;
+    let recetteChoisieParClassique = null;
+
+    if (joursClassiquesSet.has(i) && classiques?.size > 0) {
+      // Pool complet du thème, indépendant de l'origine et du coût
+      let poolC = recettes.filter(r => r[themeCol] === 1 && classiques.has(r.nom));
+      // Respecter quand même le régime alimentaire quotidien
+      if (regimeNecessaire) {
+        const avecRegimeC = poolC.filter(r => r.regime_alimentaire === regimeNecessaire);
+        if (avecRegimeC.length > 0) poolC = avecRegimeC;
+      }
+      const uniquesC = poolC.filter(r => !recettesUtilisees.has(r.nom));
+      const finalC = uniquesC.length > 0 ? uniquesC : poolC;
+      if (finalC.length > 0) {
+        recetteChoisieParClassique = pickRandom(finalC, rngRecette);
+      } else {
+        classiqueManquant = true; // Aucun classique pour ce thème → signaler et utiliser pool normal
+      }
+    }
+
+    // ── Pool normal (utilisé si pas de classique, ou en secours) ─────────────
     if (regimeNecessaire) {
       const avecRegime = recettesDispo.filter(r => r.regime_alimentaire === regimeNecessaire);
       if (avecRegime.length > 0) recettesDispo = avecRegime;
@@ -271,22 +289,29 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       }
     }
 
+    // ── Sélection finale : forcée manuelle > classique > pool normal ──────────
+    function incrementCompteur(r) {
+      if (r.regime_alimentaire === 'omnivore')    compteurOmnivore++;
+      else if (r.regime_alimentaire === 'végétarien') compteurVegetarien++;
+      else if (r.regime_alimentaire === 'végane')     compteurVegane++;
+    }
+
     let recetteJour;
     if (recetteForcee) {
       recetteJour = recetteForcee;
       recettesUtilisees.add(recetteJour.nom);
-      if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;
-      else if (recetteJour.regime_alimentaire === 'végétarien') compteurVegetarien++;
-      else if (recetteJour.regime_alimentaire === 'végane')     compteurVegane++;
+      incrementCompteur(recetteJour);
+    } else if (recetteChoisieParClassique) {
+      recetteJour = recetteChoisieParClassique;
+      recettesUtilisees.add(recetteJour.nom);
+      incrementCompteur(recetteJour);
     } else {
       recetteJour = pickRandom(poolRecettes, rngRecette);
       if (!recetteJour) {
         recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: 'Aucune recette disponible', regime_alimentaire: 'inconnu' };
       } else {
         recettesUtilisees.add(recetteJour.nom);
-        if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;
-        else if (recetteJour.regime_alimentaire === 'végétarien') compteurVegetarien++;
-        else if (recetteJour.regime_alimentaire === 'végane')     compteurVegane++;
+        incrementCompteur(recetteJour);
       }
     }
 
@@ -460,6 +485,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       topFamille,
       topAdultes,
       musique: musiqueJour,
+      classiqueManquant, // true si ce jour était désigné classique mais aucun classique n'existe pour ce thème
     });
   }
 

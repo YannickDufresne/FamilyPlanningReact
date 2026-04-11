@@ -404,6 +404,11 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
             📖 {anecdote}
           </div>
         )}
+        {!isWarning && jour.classiqueManquant && (
+          <div className="classique-manquant">
+            ☆ Aucun classique pour ce thème — marquez des recettes avec ⭐
+          </div>
+        )}
         {isWarning && (
           <div className="recette-manquante">
             <p className="recette-manquante__msg">

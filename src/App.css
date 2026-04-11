@@ -3500,6 +3500,12 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   font-style: italic;
 }
 
+.classique-manquant {
+  font-size: 0.72rem; color: var(--terra); background: var(--terra-light);
+  border-radius: 6px; padding: 5px 9px; margin-top: 8px;
+  line-height: 1.35;
+}
+
 .recette-search-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.5);
   z-index: 1000; display: flex; align-items: center; justify-content: center;
