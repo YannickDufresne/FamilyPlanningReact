@@ -1,5 +1,5 @@
 // ─── Logique de planification ─────────────────────────────────────────────────
-import { paysDeZone, labelOrigine } from './zones';
+import { paysDeZone } from './zones';
 
 // ── Mots-clés indiquant un événement INADAPTÉ à une sortie en famille ─────────
 // Ces termes détectent automatiquement les événements pour adultes célibataires,
@@ -280,8 +280,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     } else {
       recetteJour = pickRandom(poolRecettes, rngRecette);
       if (!recetteJour) {
-        const raisonManque = filtrerOrigine ? `${labelOrigine ? labelOrigine(origine) : origine} · ` : '';
-        recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: `${raisonManque}Aucune recette disponible`, regime_alimentaire: 'inconnu', origineManquante: filtrerOrigine ? origine : null, themeManquant: jourInfo.theme };
+        recetteJour = { nom: `⚠️ Manquant: ${jourInfo.theme}`, cout: 0, temps_preparation: 0, ingredients: 'Aucune recette disponible', regime_alimentaire: 'inconnu' };
       } else {
         recettesUtilisees.add(recetteJour.nom);
         if (recetteJour.regime_alimentaire === 'omnivore')    compteurOmnivore++;

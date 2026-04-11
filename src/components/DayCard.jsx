@@ -252,12 +252,24 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const [nouvelleRecette, setNouvelleRecette] = useState(null);
 
   function ouvrirFormAjouter() {
+    // Pré-remplir le régime selon le quota restant
+    const regimePrefill = regimeNecessaire !== 'omnivore' ? regimeNecessaire : 'omnivore';
+    // Pré-remplir le coût/temps si un max est activé
+    const coutPrefill = filtres?.activerCout ? Math.min(filtres.coutMax, 3) : 3;
+    const tempsPrefill = filtres?.activerTemps ? Math.min(filtres.tempsMax, 30) : 30;
+    // Pré-remplir l'origine : pays précis seulement (pas les zones génériques)
+    const originePrefill = (() => {
+      const o = filtres?.origine;
+      if (!o || o === 'Tous' || o.startsWith('zone:')) return '';
+      return o;
+    })();
     setNouvelleRecette({
       nom: '', url: '',
-      regime_alimentaire: 'omnivore',
-      cout: 3, temps_preparation: 30,
+      regime_alimentaire: regimePrefill,
+      cout: coutPrefill,
+      temps_preparation: tempsPrefill,
       ingredients: '',
-      origine: filtres.origine && filtres.origine !== 'Tous' ? filtres.origine : '',
+      origine: originePrefill,
       source: 'manuel',
       ...Object.fromEntries(TOUS_THEMES.map(t => [`theme_${t}`, t === jour.theme ? 1 : 0])),
     });
@@ -381,9 +393,17 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
         {isWarning && (
           <div className="recette-manquante">
             <p className="recette-manquante__msg">
-              {recette.origineManquante
-                ? `Aucune recette ${recette.origineManquante} dans ce thème — crée-en une !`
-                : 'Aucune recette disponible pour ce thème avec les filtres actuels.'}
+              {(() => {
+                const parts = [];
+                const o = filtres?.origine;
+                if (o && o !== 'Tous') parts.push(o.startsWith('zone:') ? o.slice(5) : o);
+                if (regimeNecessaire !== 'omnivore') parts.push(regimeNecessaire);
+                if (filtres?.activerCout) parts.push(`coût ≤ ${filtres.coutMax}/6`);
+                if (filtres?.activerTemps) parts.push(`≤ ${filtres.tempsMax} min`);
+                return parts.length > 0
+                  ? `Aucune recette ${parts.join(' · ')} pour ce thème — crée-en une !`
+                  : 'Aucune recette disponible pour ce thème avec les filtres actuels.';
+              })()}
             </p>
             <div className="recette-manquante__actions">
               {onSauvegarderRecette && (
