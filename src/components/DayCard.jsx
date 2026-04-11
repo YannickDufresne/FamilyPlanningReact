@@ -209,15 +209,20 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
   const [showSuggestionIA, setShowSuggestionIA] = useState(false);
   const [ajouterMode, setAjouterMode] = useState(false);
 
-  // ── Anecdote / fun fact — chargée depuis la recette, ou générée lazily ────────
-  const [anecdote, setAnecdote] = useState(() => {
-    if (recette.anecdote) return recette.anecdote;
-    if (recette.notes && recette.notes.length > 30) return recette.notes;
-    return localStorage.getItem(recetteSlug(recette.nom)) || null;
-  });
+  // ── Anecdote / fun fact — se réinitialise à chaque changement de recette ──────
+  const [anecdote, setAnecdote] = useState(null);
 
   useEffect(() => {
-    if (anecdote || isWarning || !recette.nom) return;
+    // 1. Réinitialiser immédiatement avec ce qu'on connaît de la nouvelle recette
+    const cached =
+      recette.anecdote ||
+      (recette.notes?.length > 30 ? recette.notes : null) ||
+      localStorage.getItem(recetteSlug(recette.nom)) ||
+      null;
+    setAnecdote(cached);
+
+    // 2. Si rien en cache et ce n'est pas un avertissement, générer via API
+    if (cached || recette.nom?.startsWith('⚠️') || !recette.nom) return;
     const apiKey = localStorage.getItem('anthropic_key');
     if (!apiKey) return;
     let cancelled = false;
