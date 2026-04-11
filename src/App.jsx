@@ -356,7 +356,7 @@ export default function App() {
     if (!estSemaineAVenir) return null;
     return genererPlanning({
       recettes: toutesRecettes, exercices, activites, musique,
-      filtres: DEFAULT_FILTRES,
+      filtres,
       seed: seedForWeek(semaineVue),
       semaineDebut: semaineVue,
       profils,
@@ -364,14 +364,14 @@ export default function App() {
       recettesForcees,
       ingredientsForces,
     });
-  }, [estSemaineAVenir, semaineVue, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
+  }, [estSemaineAVenir, semaineVue, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
 
   // ── Planning semaine calendrier courante quand meta a avancé (sam/dim) ────
   const planningContenantAujourdhui = useMemo(() => {
     if (!estSemaineContenantAujourd || estSemaineActuelle) return null;
     return genererPlanning({
       recettes: toutesRecettes, exercices, activites, musique,
-      filtres: DEFAULT_FILTRES,
+      filtres,
       seed: seedForWeek(semaineContenantAujourdhui),
       semaineDebut: semaineContenantAujourdhui,
       profils,
@@ -379,7 +379,7 @@ export default function App() {
       recettesForcees,
       ingredientsForces,
     });
-  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
+  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces]);
 
   // ── Historique ───────────────────────────────────────────────────────────────
   // Sauvegarde automatique du planning courant
