@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import films from '../data/films.json';
 
 // ── Drapeaux pays ──────────────────────────────────────────────────────────────
@@ -19,6 +19,51 @@ const DRAPEAUX = {
 
 function drapeauPays(pays) {
   return DRAPEAUX[pays] || '🌍';
+}
+
+// ── Poster via Wikipedia ───────────────────────────────────────────────────────
+function useFilmPoster(film) {
+  const [url, setUrl] = useState(film.poster_url || null);
+
+  useEffect(() => {
+    if (film.poster_url) { setUrl(film.poster_url); return; }
+    let cancelled = false;
+
+    async function fetchPoster() {
+      // Titres à essayer (fr wiki puis en wiki)
+      const titresFr = [film.nom];
+      const titresEn = [film.nom];
+      if (film.titre_original && film.titre_original !== film.nom) {
+        titresFr.push(film.titre_original);
+        titresEn.push(film.titre_original);
+      }
+
+      const tries = [
+        ...titresFr.map(t => ['fr', t]),
+        ...titresEn.map(t => ['en', t]),
+      ];
+
+      for (const [lang, titre] of tries) {
+        if (cancelled) return;
+        try {
+          const res = await fetch(
+            `https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titre)}`
+          );
+          if (!res.ok) continue;
+          const data = await res.json();
+          if (data.thumbnail?.source) {
+            if (!cancelled) setUrl(data.thumbnail.source);
+            return;
+          }
+        } catch (_) {}
+      }
+    }
+
+    fetchPoster();
+    return () => { cancelled = true; };
+  }, [film.id, film.nom, film.titre_original, film.poster_url]);
+
+  return url;
 }
 
 // ── Continents ─────────────────────────────────────────────────────────────────
@@ -88,6 +133,7 @@ function FilmCarte({ film, ratings, onNoter }) {
   const note = ratings[film.id] ?? 0;
   const tier = tierScore(film.score_consensus ?? 70);
   const scoreBar = Math.max(0, Math.min(100, film.score_consensus ?? 70));
+  const posterUrl = useFilmPoster(film);
 
   function handleEtoile(n) {
     onNoter(film.id, n === note ? 0 : n);
@@ -95,6 +141,12 @@ function FilmCarte({ film, ratings, onNoter }) {
 
   return (
     <div className={`film-carte${film.incontournable ? ' film-carte--incon' : ''}`}>
+      {/* Affiche */}
+      {posterUrl
+        ? <img src={posterUrl} alt={film.nom} className="film-carte__poster" loading="lazy" />
+        : <div className="film-carte__poster-placeholder">{drapeauPays(film.pays)}</div>
+      }
+
       {/* En-tête */}
       <div className="film-carte__header">
         <div className="film-carte__flag">{drapeauPays(film.pays)}</div>
