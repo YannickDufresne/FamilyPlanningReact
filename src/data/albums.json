@@ -7553,5 +7553,1281 @@
     "artwork_url": null,
     "rang_mondial": null,
     "description": "Efterklang a enregistré Parades avec un orchestre de 30 musiciens dans une église danoise — le résultat est une musique indie qui respire aussi grand que la toundra. Leur attention obsessionnelle au son et à l'espace les place quelque part entre Sigur Rós, Sufjan Stevens et une cérémonie religieuse laïque qui se terminerait en danse."
+  },
+  {
+    "id": "coeur-de-pirate-blonde",
+    "nom": "Blonde",
+    "artiste": "Cœur de pirate",
+    "annee": 2011,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Pop Québécoise",
+    "tags": [
+      "pop",
+      "québec",
+      "piano",
+      "romantique"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 79,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada",
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Béatrice Martin, alias Cœur de pirate, a conquis la francophonie mondiale depuis Montréal avec une pop de piano délicate et des textes d'amour d'une honnêteté désarmante. Blonde a été enregistré à Paris et a traversé l'Atlantique dans les deux sens, prouvant que la pop québécoise pouvait trouver son public naturel aussi bien à Marseille qu'à Québec."
+  },
+  {
+    "id": "diane-dufresne-tiens-toe-ben",
+    "nom": "Tiens-toé ben, j'arrive",
+    "artiste": "Diane Dufresne",
+    "annee": 1973,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Chanson Québécoise",
+    "tags": [
+      "chanson",
+      "québec",
+      "théâtral",
+      "excentrique"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 82,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Diane Dufresne est la Lady Gaga québécoise avant l'heure — costumes extravagants, mises en scène théâtrales et une voix capable de passer du murmure au cri en deux secondes. Ses collaborations avec Luc Plamondon ont produit quelques-uns des textes les plus inventifs de la chanson québécoise, bien avant leur triomphe commun avec Starmania."
+  },
+  {
+    "id": "plume-latraverse-au-bout",
+    "nom": "Au bout du boutte",
+    "artiste": "Plume Latraverse",
+    "annee": 1978,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Chanson / Rock Québécois",
+    "tags": [
+      "chanson",
+      "québec",
+      "poésie",
+      "truculent"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 81,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Plume Latraverse est le troubadour truculent du Québec — poète maudit, humoriste absurde et musicien folk-rock qui écrit sur les bigorneaux, la bière et l'existence avec la même énergie désespérée. Son joual coloré et ses textes qui mélangent le sublime et le vulgaire en font un artiste totalement unique dont l'influence sur les auteurs-compositeurs québécois est immense."
+  },
+  {
+    "id": "claude-francois-alexandrie-alexandra",
+    "nom": "Alexandrie Alexandra",
+    "artiste": "Claude François",
+    "annee": 1978,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Pop / Disco Française",
+    "tags": [
+      "disco",
+      "france",
+      "danse",
+      "culte"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 78,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Claude François — Cloclo — était la machine à tubes française par excellence, une star de scène perfectionniste qui répétait ses Clodettes jusqu'à l'épuisement. Il est mort électrocuté dans sa baignoire le soir même de la sortie d'Alexandrie Alexandra, transformant cette chanson disco en testament involontaire et en symbole d'une époque de la pop française."
+  },
+  {
+    "id": "jean-michel-jarre-equinoxe",
+    "nom": "Équinoxe",
+    "artiste": "Jean-Michel Jarre",
+    "annee": 1978,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Electronic / Ambient",
+    "tags": [
+      "électronique",
+      "france",
+      "spatial",
+      "pionnier"
+    ],
+    "palmares": [
+      "guinness_record"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France",
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Jean-Michel Jarre a suivi Oxygène avec cet album plus complexe qui utilisait des synthétiseurs modulaires comme des instruments à vent — chaque son est façonné avec la patience d'un sculpteur. En 1979, il a donné un concert place de la Concorde à Paris devant un million de personnes, le plus grand concert de l'histoire à l'époque, armé uniquement de ses synthétiseurs."
+  },
+  {
+    "id": "la-femme-psycho-tropical-berlin",
+    "nom": "Psycho Tropical Berlin",
+    "artiste": "La Femme",
+    "annee": 2013,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Psychédélique / Surf Rock",
+    "tags": [
+      "psychédélique",
+      "france",
+      "surf",
+      "seventies"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "La Femme a ressuscité le surf rock psychédélique en le chantant en français avec des paroles nihilistes et une ironie post-moderne — un groupe de Biarritz qui sonnait comme s'il venait d'une plage californienne des années 60 mais avait lu Baudelaire. Leur style visuel rétro-futuriste et leurs concerts hypnotiques en ont fait le groupe indie français le plus excitant des années 2010."
+  },
+  {
+    "id": "faust-faust-1971",
+    "nom": "Faust",
+    "artiste": "Faust",
+    "annee": 1971,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Krautrock / Avant-garde",
+    "tags": [
+      "krautrock",
+      "allemagne",
+      "avant-garde",
+      "expérimental"
+    ],
+    "palmares": [
+      "wire",
+      "pitchfork"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Allemagne",
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Faust vivait en communauté dans un village de Hambourg où Polydor avait construit un studio — cette liberté totale a produit un premier album qui dissolvait rock, bruit industriel et musique concrète dans un chaos organisé. La pochette transparente avec un poing en plexiglas annonçait un groupe qui voulait tout casser pour voir ce qu'il y avait dedans."
+  },
+  {
+    "id": "neu-neu-1972",
+    "nom": "Neu!",
+    "artiste": "Neu!",
+    "annee": 1972,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Krautrock / Proto-Punk",
+    "tags": [
+      "krautrock",
+      "allemagne",
+      "motorik",
+      "pionnier"
+    ],
+    "palmares": [
+      "wire",
+      "pitchfork",
+      "rs_500"
+    ],
+    "palmares_rangs": {
+      "rs_500": 423
+    },
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Allemagne",
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Michael Rother et Klaus Dinger ont inventé le 'motorik beat' — une pulsation de batterie régulière comme une autoroute — qui allait influencer David Bowie, Joy Division, Radiohead et toute la scène post-punk. Neu! sonnait comme conduire sur l'autobahn la nuit à toute vitesse vers une destination inconnue, et c'est exactement ce que la musique du futur allait faire."
+  },
+  {
+    "id": "cluster-cluster-1971",
+    "nom": "Cluster",
+    "artiste": "Cluster",
+    "annee": 1971,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Electronic / Ambient",
+    "tags": [
+      "électronique",
+      "allemagne",
+      "noise",
+      "pionnier"
+    ],
+    "palmares": [
+      "wire"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Allemagne",
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Cluster — duo de Hans-Joachim Roedelius et Dieter Möbius — a créé une musique électronique si radicale en 1971 que les concerts se terminaient parfois en émeutes. Leur collaboration future avec Brian Eno a produit des albums comme 'After the Heat' qui ont défini l'ambient, mais ce premier album chaos-électronique reste leur acte de naissance le plus électrisant."
+  },
+  {
+    "id": "diblo-dibala-matchatcha",
+    "nom": "Super Soukous",
+    "artiste": "Diblo Dibala & Matchatcha",
+    "annee": 1989,
+    "pays": "Congo",
+    "continent": "Afrique",
+    "genre": "Soukous / Rumba Congolaise",
+    "tags": [
+      "soukous",
+      "congo",
+      "danse",
+      "guitare"
+    ],
+    "palmares": [
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Nigeria"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Diblo Dibala est surnommé 'Monsieur 100 000 Volts' pour ses solos de guitare électrique d'une vélocité et d'une grâce stupéfiantes — il joue des vitesses que les guitaristes de rock envient secrètement. Le soukous congolais qu'il a contribué à populariser dans les clubs parisiens des années 80 est la musique de danse africaine la plus internationale après l'afrobeat."
+  },
+  {
+    "id": "baaba-maal-djam-leelii",
+    "nom": "Djam Leelii",
+    "artiste": "Baaba Maal & Mansour Seck",
+    "annee": 1989,
+    "pays": "Sénégal",
+    "continent": "Afrique",
+    "genre": "Blues Africain / Peul",
+    "tags": [
+      "sénégal",
+      "peul",
+      "acoustique",
+      "blues"
+    ],
+    "palmares": [
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Sénégal",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Baaba Maal et son ami d'enfance aveugle Mansour Seck ont enregistré cet album en 1984 lors d'une tournée à pied à travers le Sénégal et la Mauritanie — deux guitares acoustiques, deux voix en langue peule, et des chansons qui capturent l'Afrique de l'intérieur. C'est une des grandes œuvres du blues africain acoustique, redécouverte à sa réédition en 1989 et adorée de Peter Gabriel."
+  },
+  {
+    "id": "rokia-traore-bowmboï",
+    "nom": "Bowmboi",
+    "artiste": "Rokia Traoré",
+    "annee": 2003,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "World / Folk Malien",
+    "tags": [
+      "mali",
+      "voix",
+      "kora",
+      "moderne"
+    ],
+    "palmares": [
+      "womex",
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Rokia Traoré est une aristocrate malienne qui a fait scandale en devenant musicienne professionnelle — dans sa culture, seuls les griots de caste inférieure chantaient. Sa musique fusionne les traditions mandingues avec la guitare acoustique moderne et des textes en bambara qui parlent d'amour et de liberté, créant quelque chose d'intemporel qui n'appartient à aucune case."
+  },
+  {
+    "id": "buck-tick-aku-no-hana",
+    "nom": "悪の華 (Aku no Hana)",
+    "artiste": "Buck-Tick",
+    "annee": 1990,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Visual Kei / Gothic Rock",
+    "tags": [
+      "rock",
+      "japon",
+      "gothique",
+      "culte"
+    ],
+    "palmares": [
+      "oricon"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Buck-Tick a adapté les Fleurs du Mal de Baudelaire en album concept de rock gothique japonais — une relecture de la décadence symboliste française à travers le prisme du visual kei. Leur mélange unique de poésie baudelairienne et de rock sombre électronique a influencé des dizaines de groupes japonais et créé un sous-genre entier."
+  },
+  {
+    "id": "suiyoubi-no-campanella-superman",
+    "nom": "Superman",
+    "artiste": "suiyoubi no Campanella",
+    "annee": 2015,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "J-Pop / Electronic",
+    "tags": [
+      "j-pop",
+      "japon",
+      "électronique",
+      "mythologie"
+    ],
+    "palmares": [
+      "oricon"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 81,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "suiyoubi no Campanella écrit des chansons basées sur des figures mythologiques — Shiva, Urashima Tarō, Cleopatra — dans un J-pop électronique minimaliste avec une inventivité mélodique rare. KOM_I, leur chanteuse, performait comme une figure chamanique qui habitait les personnages qu'elle incarnait, créant un spectacle live inoubliable."
+  },
+  {
+    "id": "m-i-a-arular",
+    "nom": "Arular",
+    "artiste": "M.I.A.",
+    "annee": 2005,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Electro / World",
+    "tags": [
+      "electro",
+      "monde",
+      "politique",
+      "uk-tamoul"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rs_500"
+    ],
+    "palmares_rangs": {
+      "rs_500": 382
+    },
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Inde",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Maya Arulpragasam a grandi en fuyant la guerre civile du Sri Lanka pour arriver dans les quartiers défavorisés de Londres — Arular synthétise cette trajectoire explosive en musique, mélangeant dancehall jamaïcain, hip-hop américain, Bollywood et son d'AK-47 samplé. 'Paper Planes' a atteint les charts mondiaux après avoir été utilisé dans le film Slumdog Millionnaire, mais ses albums restent bien plus radicaux que cette seule chanson."
+  },
+  {
+    "id": "ali-sethi-josh",
+    "nom": "Josh",
+    "artiste": "Ali Sethi",
+    "annee": 2018,
+    "pays": "Pakistan",
+    "continent": "Asie",
+    "genre": "Ghazal / Pop",
+    "tags": [
+      "pakistan",
+      "ghazal",
+      "moderne",
+      "qawwali"
+    ],
+    "palmares": [
+      "bbc_radio3"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 81,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Pakistan",
+      "Inde"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Ali Sethi a modernisé le ghazal urdu — forme poétique classique de la musique de cour moghole — en y incorporant des sonorités électroniques contemporaines et des textes sur l'identité queer au Pakistan. Son courage d'aborder l'homosexualité dans une société conservatrice via la métaphore poétique du ghazal lui a valu autant d'admiration que de controverses."
+  },
+  {
+    "id": "tinariwen-aman-iman",
+    "nom": "Aman Iman: Water Is Life",
+    "artiste": "Tinariwen",
+    "annee": 2007,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "Desert Blues / Rock Touareg",
+    "tags": [
+      "touareg",
+      "désert",
+      "blues",
+      "eau"
+    ],
+    "palmares": [
+      "grammy",
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Tinariwen a enregistré leur deuxième album international avec Carlos Santana et Robert Plant comme fans déclarés — le désert du Sahara comme studio mental, des textes sur l'eau comme ressource vitale au cœur d'une région qui en manque. 'Aman Iman' signifie 'l'eau c'est la vie' en tamashek, une vérité touareg que la musique transforme en expérience physique."
+  },
+  {
+    "id": "ivan-lins-souvenir",
+    "nom": "Souvenir",
+    "artiste": "Ivan Lins",
+    "annee": 1983,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "MPB / Jazz",
+    "tags": [
+      "mpb",
+      "brésil",
+      "jazz",
+      "piano"
+    ],
+    "palmares": [
+      "grammy_nom"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Brésil"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Ivan Lins est le compositeur brésilien le plus repris par les jazzmen américains — Quincy Jones, Sarah Vaughan et Ella Fitzgerald ont toutes enregistré ses compositions. Son piano orchestral et ses harmonies complexes créent une MPB élaborée qui sonne à la fois comme les standards de Broadway et comme quelque chose qui n'aurait pu venir que de Rio."
+  },
+  {
+    "id": "cafe-tacvba-avalancha-exitos",
+    "nom": "Avalancha de éxitos",
+    "artiste": "Café Tacvba",
+    "annee": 1996,
+    "pays": "Mexique",
+    "continent": "Amériques",
+    "genre": "Rock en Español",
+    "tags": [
+      "mexique",
+      "rock",
+      "expérimental",
+      "genre-bending"
+    ],
+    "palmares": [
+      "grammy_latino"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Mexique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Café Tacvba a pris des classiques populaires mexicains des années 50 et les a réarrangés dans tous les styles imaginables — bolero, norteño, grunge, ambient, flamenco — en un seul album vertigineux. C'est une expérience à la fois savante et joyeuse qui prouve que la culture mexicaine est assez riche pour tout absorber et tout transformer."
+  },
+  {
+    "id": "mercedes-sosa-se-dice-de-mi",
+    "nom": "Se Dice de Mí",
+    "artiste": "Mercedes Sosa",
+    "annee": 1979,
+    "pays": "Argentine",
+    "continent": "Amériques",
+    "genre": "Nueva Canción",
+    "tags": [
+      "folk",
+      "argentine",
+      "exil",
+      "résistance"
+    ],
+    "palmares": [
+      "grammy_latino"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Argentine",
+      "Chili"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Enregistré à Paris pendant son exil forcé sous la dictature argentine de Videla, cet album porte en lui toute la douleur et la dignité d'une artiste séparée de son pays. Mercedes Sosa chantait pour ceux qui ne pouvaient pas rentrer, faisant de chaque concert parisien une cérémonie de résistance collective pour la diaspora latino-américaine en Europe."
+  },
+  {
+    "id": "los-jaivas-todos-juntos",
+    "nom": "Todos Juntos",
+    "artiste": "Los Jaivas",
+    "annee": 1972,
+    "pays": "Chili",
+    "continent": "Amériques",
+    "genre": "Rock Andin / Folk",
+    "tags": [
+      "chili",
+      "folk",
+      "andin",
+      "prog-rock"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Chili",
+      "Argentine"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Los Jaivas mélangent les rythmes andins traditionnels — zampoña, charango, quena — avec le rock progressif dans un son qui semble jaillir directement des montagnes chiliennes. Leur album live enregistré dans la vallée de Machu Picchu reste leur moment le plus magique, comme si la musique des Incas et celle de Santana s'étaient toujours connues."
+  },
+  {
+    "id": "the-replacements-let-it-be",
+    "nom": "Let It Be",
+    "artiste": "The Replacements",
+    "annee": 1984,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Indie Rock / Punk",
+    "tags": [
+      "indie",
+      "punk",
+      "drunk",
+      "culte"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
+    "palmares_rangs": {
+      "rs_500": 370
+    },
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Les Replacements incarnaient le rock américain dans sa version la plus autodestrutrice et la plus romantique — Paul Westerberg écrivait des chansons parfaites et son groupe les sabotait délibérément en concert en jouant ivres. Let It Be (aucun lien avec les Beatles) mélange punk bruyant et ballades acoustiques avec une honnêteté émotionnelle qui a influencé Nirvana, Wilco et une génération entière."
+  },
+  {
+    "id": "big-star-number-1-record",
+    "nom": "#1 Record",
+    "artiste": "Big Star",
+    "annee": 1972,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Power Pop",
+    "tags": [
+      "power-pop",
+      "culte",
+      "memphis",
+      "harmonies"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 433
+    },
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Big Star était le groupe le plus populaire que personne n'avait jamais entendu — leur label de distribution a fait faillite et l'album n'a presque pas été distribué à sa sortie. Thirty ans plus tard, R.E.M., The Replacements et Teenage Fanclub le citaient comme leur album formateur, en faisant l'un des albums les plus influents de l'histoire du rock sans jamais avoir été populaire."
+  },
+  {
+    "id": "marvin-gaye-lets-get-it-on",
+    "nom": "Let's Get It On",
+    "artiste": "Marvin Gaye",
+    "annee": 1973,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Soul / R&B",
+    "tags": [
+      "soul",
+      "séduction",
+      "classique",
+      "sensuel"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 68
+    },
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Marvin Gaye a suivi What's Going On avec l'album le plus sensuel jamais enregistré — il voulait prouver que la chair et l'esprit pouvaient être célébrés avec la même révérence spirituelle. 'Let's Get It On' est tellement associée à la séduction qu'elle est devenue un cliché comique, mais l'album complet révèle une profondeur émotionnelle et une production de génie."
+  },
+  {
+    "id": "sly-stone-there-a-riot-goin-on",
+    "nom": "There's a Riot Goin' On",
+    "artiste": "Sly & The Family Stone",
+    "annee": 1971,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Funk / Soul / Psychédélique",
+    "tags": [
+      "funk",
+      "soul",
+      "sombre",
+      "révolutionnaire"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 99
+    },
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Sly Stone a enregistré cet album seul dans son manoir, drogué, paranoïaque et brilliant — transformant la funk joyeuse de ses débuts en quelque chose de sombre, fragmenté et révolutionnaire. Cet album préfigure l'ambient, le lo-fi et le hip-hop expérimental des décennies suivantes; Miles Davis l'écoutait en boucle pour comprendre où la musique allait."
+  },
+  {
+    "id": "fleetwood-mac-rumours",
+    "nom": "Rumours",
+    "artiste": "Fleetwood Mac",
+    "annee": 1977,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Soft Rock / Pop Rock",
+    "tags": [
+      "pop-rock",
+      "ruptures",
+      "classique",
+      "commercial"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 26
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Rumours a été enregistré alors que les deux couples au sein du groupe se déchiraient — Stevie Nicks et Lindsey Buckingham se séparaient pendant l'enregistrement, tout comme John et Christine McVie. Cette douleur collective a produit l'un des albums les plus vendus de tous les temps (40 millions d'exemplaires), où chaque chanson semble une thérapie de groupe mise en musique."
+  },
+  {
+    "id": "townes-van-zandt-live-at-the-old-quarter",
+    "nom": "Live at the Old Quarter",
+    "artiste": "Townes Van Zandt",
+    "annee": 1977,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Folk / Country",
+    "tags": [
+      "folk",
+      "country",
+      "houston",
+      "culte"
+    ],
+    "palmares": [
+      "rs_500"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Townes Van Zandt a enregistré ce live seul à sa guitare dans un bar de Houston — deux nuits de chansons parfaites dans un silence presque sacré. Bob Dylan et Emmylou Harris ont repris ses chansons; Steve Earle a dit que Townes était le meilleur songwriter américain de tous les temps, tout en sachant que cette déclaration l'obligeait à mettre Dylan en deuxième."
+  },
+  {
+    "id": "cocteau-twins-heaven-or-las-vegas",
+    "nom": "Heaven or Las Vegas",
+    "artiste": "Cocteau Twins",
+    "annee": 1990,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Dream Pop",
+    "tags": [
+      "dream-pop",
+      "uk",
+      "voix",
+      "textures"
+    ],
+    "palmares": [
+      "pitchfork",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Elizabeth Fraser chante dans une langue qu'elle a inventée — ni anglais ni aucune autre langue reconnaissable — et pourtant l'émotion est immédiate et universelle comme une musique sacrée incompréhensible. Les guitares de Robin Guthrie créent des textures sonores qui ressemblent à de la lumière filtrée à travers du verre coloré, et Heaven or Las Vegas est leur moment de grâce absolue."
+  },
+  {
+    "id": "tricky-maxinquaye-2",
+    "nom": "Maxinquaye",
+    "artiste": "Tricky",
+    "annee": 1995,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Trip-Hop",
+    "tags": [
+      "trip-hop",
+      "bristol",
+      "sombre",
+      "claustrophobe"
+    ],
+    "palmares": [
+      "mercury_prize",
+      "pitchfork",
+      "nme"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Tricky a nommé son album après sa mère morte jeune — Maxine Quaye — créant quelque chose de profondément personnel, claustrophobe et troublant. Là où Portishead faisait du trip-hop cinématique et élégant, Tricky faisait quelque chose de mutteré, de sale et de hanté qui sonnait comme des rêves d'insomnie."
+  },
+  {
+    "id": "radiohead-the-bends",
+    "nom": "The Bends",
+    "artiste": "Radiohead",
+    "annee": 1995,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Alternative Rock",
+    "tags": [
+      "rock-alternatif",
+      "uk",
+      "émotionnel",
+      "guitares"
+    ],
+    "palmares": [
+      "rs_500",
+      "nme",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 110
+    },
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Radiohead a enregistré The Bends en réaction à leur premier album jugé trop commercial — Thom Yorke hurlait sa détresse sur des guitares déchirées dans des chansons sur l'aliénation des années 90. 'Fake Plastic Trees' et 'High and Dry' sont parmi les ballades rock les plus parfaites des années 90, avant que OK Computer ne les emporte dans la stratosphère."
+  },
+  {
+    "id": "kate-bush-hounds-of-love",
+    "nom": "Hounds of Love",
+    "artiste": "Kate Bush",
+    "annee": 1985,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Art Pop / Synth-Pop",
+    "tags": [
+      "art-pop",
+      "uk",
+      "conceptuel",
+      "unique"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "nme"
+    ],
+    "palmares_rangs": {
+      "rs_500": 42
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Kate Bush a construit son propre studio pour enregistrer Hounds of Love sans aucune pression commerciale — la face A est un hit-parade de singles parfaits, la face B 'The Ninth Wave' est une suite conceptuelle sur une femme se noyant dans l'océan. 'Running Up That Hill' a été redécouverte en 2022 grâce à Stranger Things, 37 ans après sa sortie, prouvant son intemporalité absolue."
+  },
+  {
+    "id": "bjork-homogenic-2",
+    "nom": "Vespertine",
+    "artiste": "Björk",
+    "annee": 2001,
+    "pays": "Islande",
+    "continent": "Europe",
+    "genre": "Electronic / Art Pop",
+    "tags": [
+      "électronique",
+      "islande",
+      "intime",
+      "musique-de-chambre"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rs_500"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Björk a enregistré Vespertine pour décrire l'intimité totale — des sons récoltés dans son appartement (le craquement du plancher, le bruit du café), des harpes de chambre et des micro-beats comme des battements de cœur. C'est un album conçu pour être écouté avec des écouteurs sous les couvertures à 3h du matin, l'inverse polaire de son album précédent Homogenic."
+  },
+  {
+    "id": "number-girl-school-girl-bye-bye",
+    "nom": "School Girl Distortional Addict",
+    "artiste": "NUMBER GIRL",
+    "annee": 1999,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Post-Rock / Indie",
+    "tags": [
+      "post-rock",
+      "japon",
+      "indie",
+      "agressif"
+    ],
+    "palmares": [
+      "oricon"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "NUMBER GIRL sonnait comme Sonic Youth et Pixies digérés et réemis par des jeunes de Fukuoka, avec une urgence punk qui contrastait avec la j-pop policée de l'époque. Ils se sont séparés en 2002 au sommet de leur art et se sont réformés en 2019, prouvant que leur musique avait survécu à leur absence et gagné de nouveaux fans entre-temps."
+  },
+  {
+    "id": "chatmonchy-chatmonchy-ni-aitai",
+    "nom": "Chatmonchy ni Aitai♡",
+    "artiste": "chatmonchy",
+    "annee": 2006,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "J-Rock / Indie",
+    "tags": [
+      "j-rock",
+      "japon",
+      "féminin",
+      "énergique"
+    ],
+    "palmares": [
+      "oricon"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 81,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "chatmonchy était un groupe féminin de l'île de Shikoku qui jouait du rock garage avec une énergie adolescente irrésistible — leur single 'School Girl Bye Bye' est entré dans la culture japonaise comme la définition parfaite de l'été de lycée. Leur son naïf et sincère les distingue dans une scène j-rock souvent trop produite."
+  },
+  {
+    "id": "yoko-ono-plastic-ono-band",
+    "nom": "Yoko Ono / Plastic Ono Band",
+    "artiste": "Yoko Ono",
+    "annee": 1970,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Avant-Garde / Expérimental",
+    "tags": [
+      "avant-garde",
+      "japon",
+      "féministe",
+      "expérimental"
+    ],
+    "palmares": [
+      "pitchfork",
+      "rs_500"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Sorti le même jour que l'album éponyme de John Lennon, Yoko Ono's Plastic Ono Band est plus radical, plus avant-gardiste et probablement plus courageux — ses cris et gémissements expérimentaux qui semblaient choquants en 1970 préfiguraient le punk, le free jazz et la musique noise. Kim Gordon, Sonic Youth et PJ Harvey l'ont citée comme une influence directe que personne n'osait reconnaître à l'époque."
+  },
+  {
+    "id": "ali-farka-toure-the-source",
+    "nom": "The Source",
+    "artiste": "Ali Farka Touré",
+    "annee": 1992,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "Desert Blues",
+    "tags": [
+      "mali",
+      "blues",
+      "désert",
+      "acoustique"
+    ],
+    "palmares": [
+      "grammy",
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Ali Farka Touré a refusé catégoriquement qu'on l'appelle 'le BB King africain' — pour lui, c'est le blues américain qui venait de l'Afrique, et non l'inverse. The Source prouve sa thèse : sa guitare de Tombouctou résonne comme le Mississippi vu depuis Tombouctou, une musique qui remonte le fleuve à contre-courant pour retrouver sa source."
+  },
+  {
+    "id": "rokia-traore-sabou",
+    "nom": "Sabou",
+    "artiste": "Rokia Traoré",
+    "annee": 2009,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "World / Folk Malien",
+    "tags": [
+      "mali",
+      "voix",
+      "moderne",
+      "collaborations"
+    ],
+    "palmares": [
+      "victoires_musique_monde"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Rokia Traoré a enregistré Sabou avec Tunde Adebimpe de TV on the Radio et d'autres collaborateurs surprenants — un album qui prouve que les traditions musicales du Mali peuvent dialoguer avec le rock américain sans perdre leur âme. Sa voix profonde et hypnotique n'a besoin d'aucun artifice pour captiver n'importe quelle salle du monde."
+  },
+  {
+    "id": "mulatu-astatke-mulatu",
+    "nom": "Mulatu of Ethiopia",
+    "artiste": "Mulatu Astatke",
+    "annee": 1972,
+    "pays": "Éthiopie",
+    "continent": "Afrique",
+    "genre": "Éthio-Jazz",
+    "tags": [
+      "ethiopie",
+      "jazz",
+      "modal",
+      "unique"
+    ],
+    "palmares": [
+      "songlines",
+      "womex"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Éthiopie",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Mulatu Astatke a inventé l'éthio-jazz en étudiant au Berklee College et en fusionnant les gammes pentatoniques éthiopiennes avec le hard bop américain — quelque chose qui n'avait aucun précédent. Jim Jarmusch l'a utilisé dans Broken Flowers, et les crate-diggers du monde entier se battent pour les pressages originaux de ses albums Éthiopiques chez Amha Records."
+  },
+  {
+    "id": "nusrat-ali-khan-en-concert-paris",
+    "nom": "En Concert à Paris Vol. 1",
+    "artiste": "Nusrat Fateh Ali Khan",
+    "annee": 1989,
+    "pays": "Pakistan",
+    "continent": "Asie",
+    "genre": "Qawwali",
+    "tags": [
+      "qawwali",
+      "pakistan",
+      "spirituel",
+      "transe"
+    ],
+    "palmares": [
+      "womex",
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Pakistan",
+      "Inde"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Nusrat Fateh Ali Khan chantait le qawwali — musique soufi de dévotion à Allah — dans les concerts parisiens de la WOMAD, et des publics qui ne comprenaient pas un mot de l'ourdou tombaient dans des états de transe. Jeff Buckley disait qu'il l'écoutait tous les jours; Peter Gabriel l'a co-produit pour le monde occidental; Eddie Vedder de Pearl Jam s'est converti à la foi musicale de Nusrat."
+  },
+  {
+    "id": "caetano-veloso-estrangeiro",
+    "nom": "Estrangeiro",
+    "artiste": "Caetano Veloso",
+    "annee": 1989,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "MPB / World",
+    "tags": [
+      "mpb",
+      "brésil",
+      "world",
+      "poétique"
+    ],
+    "palmares": [
+      "grammy_latino",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Brésil"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Caetano Veloso a enregistré Estrangeiro à New York avec Arto Lindsay, créant un album qui fusionnait la MPB brésilienne avec le no-wave new-yorkais et des réflexions sur l'exil et l'identité nationale. Le titre — 'Étranger' — résumait sa condition perpétuelle d'artiste brésilien trop radical pour son pays et trop brésilien pour le monde."
+  },
+  {
+    "id": "bjork-debut",
+    "nom": "Debut",
+    "artiste": "Björk",
+    "annee": 1993,
+    "pays": "Islande",
+    "continent": "Europe",
+    "genre": "Electronic / Art Pop",
+    "tags": [
+      "électronique",
+      "islande",
+      "danse",
+      "excentrique"
+    ],
+    "palmares": [
+      "mercury_prize",
+      "pitchfork"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Scandinavie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Björk a quitté les Sugarcubes pour enregistrer un premier album solo à Londres en collaboration avec les producteurs du club Dancehall britannique — le résultat était une créature unique, entre techno, jazz et chanson pop, avec une voix d'opéra islandais sur des beats de club. 'Human Behaviour' et 'Venus as a Boy' ont annoncé une artiste qui allait passer 30 ans à réinventer sa propre musique."
+  },
+  {
+    "id": "massive-attack-protection",
+    "nom": "Protection",
+    "artiste": "Massive Attack",
+    "annee": 1994,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Trip-Hop",
+    "tags": [
+      "trip-hop",
+      "bristol",
+      "soul",
+      "doux"
+    ],
+    "palmares": [
+      "nme",
+      "pitchfork"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Entre le dynamitage de Blue Lines et la noirceur de Mezzanine, Protection est le Massive Attack le plus doux et le plus soul — Tracey Thorn de Everything But The Girl chante 'Protection' avec une vulnérabilité qui fond le cœur le plus froid. 'Sly' avec Nicolette reste l'une des chansons les plus belles et les plus sous-estimées de tout le catalogue trip-hop."
+  },
+  {
+    "id": "radiohead-amnesiac",
+    "nom": "Amnesiac",
+    "artiste": "Radiohead",
+    "annee": 2001,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Electronic / Art Rock",
+    "tags": [
+      "électronique",
+      "uk",
+      "anxiété",
+      "sombre"
+    ],
+    "palmares": [
+      "pitchfork",
+      "nme"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Enregistré lors des mêmes sessions que Kid A, Amnesiac est le jumeau plus étrange et plus accessible — Jazz 'Knives Out' et 'Pyramid Song' sont parmi les plus belles chansons de Radiohead. Thom Yorke chantait depuis l'intérieur d'un cauchemar industriel, et cet album est la musique que diffuse votre inconscient quand vous avez oublié comment dormir."
   }
 ]
