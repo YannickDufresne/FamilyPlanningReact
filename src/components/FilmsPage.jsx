@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import films from '../data/films.json';
+import FilmAjoutModal from './FilmAjoutModal';
 
 // ── Drapeaux pays ──────────────────────────────────────────────────────────────
 const DRAPEAUX = {
@@ -228,15 +229,18 @@ function FilmCarte({ film, ratings, onNoter }) {
 }
 
 // ── Page principale ────────────────────────────────────────────────────────────
-export default function FilmsPage({ onRetour, ratings = {}, onNoter }) {
+export default function FilmsPage({ onRetour, ratings = {}, onNoter, filmsCustom = [], onAjouterFilm }) {
   const [continent, setContinent] = useState('Tout');
   const [decade, setDecade] = useState('Tout');
   const [tri, setTri] = useState('consensus');
   const [seulementNotes, setSeulementNotes] = useState(false);
   const [recherche, setRecherche] = useState('');
+  const [showAjout, setShowAjout] = useState(false);
+
+  const tousFilms = useMemo(() => [...films, ...filmsCustom], [filmsCustom]);
 
   const filmsFiltres = useMemo(() => {
-    let liste = [...films];
+    let liste = [...tousFilms];
 
     if (continent !== 'Tout') {
       liste = liste.filter(f => f.continent === continent);
@@ -271,7 +275,7 @@ export default function FilmsPage({ onRetour, ratings = {}, onNoter }) {
     }
 
     return liste;
-  }, [continent, decade, tri, seulementNotes, recherche, ratings]);
+  }, [continent, decade, tri, seulementNotes, recherche, ratings, tousFilms]);
 
   const nbNotes = Object.values(ratings).filter(v => v > 0).length;
 
@@ -282,10 +286,16 @@ export default function FilmsPage({ onRetour, ratings = {}, onNoter }) {
         <div style={{ flex: 1 }}>
           <h2 className="albums-page__titre">Bibliothèque de films</h2>
           <p className="acti-page__intro">
-            <strong>{filmsFiltres.length}</strong> film{filmsFiltres.length > 1 ? 's' : ''} sur {films.length}
+            <strong>{filmsFiltres.length}</strong> film{filmsFiltres.length > 1 ? 's' : ''} sur {tousFilms.length}
+            {filmsCustom.length > 0 && ` · ${filmsCustom.length} ajouté${filmsCustom.length > 1 ? 's' : ''}`}
             {nbNotes > 0 && ` · ${nbNotes} noté${nbNotes > 1 ? 's' : ''}`}
           </p>
         </div>
+        {onAjouterFilm && (
+          <button className="film-ajout-trigger" onClick={() => setShowAjout(true)}>
+            ➕ Ajouter un film
+          </button>
+        )}
       </div>
 
       {/* Recherche */}
@@ -361,6 +371,17 @@ export default function FilmsPage({ onRetour, ratings = {}, onNoter }) {
             <FilmCarte key={film.id} film={film} ratings={ratings} onNoter={onNoter} />
           ))}
         </div>
+      )}
+
+      {showAjout && (
+        <FilmAjoutModal
+          filmsExistants={tousFilms}
+          onSauvegarder={(film) => {
+            if (onAjouterFilm) onAjouterFilm(film);
+            setShowAjout(false);
+          }}
+          onFermer={() => setShowAjout(false)}
+        />
       )}
     </div>
   );

@@ -50,6 +50,15 @@ const DRAPEAUX_FA = {
 
 function drapeauFilm(pays) { return DRAPEAUX_FA[pays] || '🌍'; }
 
+// ── Score tier ─────────────────────────────────────────────────────────────────
+function tierScoreFilm(score) {
+  if (score >= 97) return { label: 'Légendaire',     classe: 'tier--legendaire' };
+  if (score >= 92) return { label: 'Incontournable', classe: 'tier--incontournable' };
+  if (score >= 85) return { label: 'Essentiel',      classe: 'tier--essentiel' };
+  if (score >= 78) return { label: 'Reconnu',        classe: 'tier--reconnu' };
+  return                   { label: 'Remarquable',   classe: 'tier--remarquable' };
+}
+
 // ── Poster Wikipedia (mini card) ───────────────────────────────────────────────
 function useFilmPosterFA(film) {
   const [url, setUrl] = useState(film?.poster_url || null);
@@ -102,6 +111,8 @@ function FilmDeLaSemaine({ pool, filmIndex, onPrev, onNext, filmRatings, onNoter
 
   const note = filmRatings?.[film.id] ?? 0;
   const topPalmares = meilleurPalmaresFilm(film);
+  const score = film.score_consensus ?? 70;
+  const tier = tierScoreFilm(score);
 
   function handleEtoile(n) {
     if (onNoterFilm) onNoterFilm(film.id, n === note ? 0 : n);
@@ -142,6 +153,14 @@ function FilmDeLaSemaine({ pool, filmIndex, onPrev, onNext, filmRatings, onNoter
             {drapeauFilm(film.pays)} {film.realisateur} · {film.annee}
           </div>
           <div className="film-semaine-card__genre">{film.genre}</div>
+
+          {/* Score / tier */}
+          <div className="album-carte__score-bloc">
+            <div className="album-carte__score-bar-wrap">
+              <div className="album-carte__score-bar" style={{ width: `${Math.max(0, Math.min(100, score))}%` }} />
+            </div>
+            <span className={`album-carte__tier ${tier.classe}`}>{tier.label}</span>
+          </div>
 
           {topPalmares && (
             <div className="film-semaine-card__palmares">{topPalmares}</div>
@@ -553,22 +572,23 @@ function SectionCoupDeCoeur({ semaineVue }) {
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function FamilleActualites({ profils, semaineVue, agenda = {}, filtresOrigine, filmRatings = {}, onNoterFilm }) {
+export default function FamilleActualites({ profils, semaineVue, agenda = {}, filtresOrigine, filmRatings = {}, onNoterFilm, filmsCustom = [] }) {
   const [open, setOpen] = useState(false);
   const obligations = agenda.obligations || [];
   const evenements = agenda.evenements || [];
 
   // ── Film de la semaine ──────────────────────────────────────────────────────
+  const tousFilms = useMemo(() => [...films, ...filmsCustom], [filmsCustom]);
   const origineActive = filtresOrigine && filtresOrigine !== 'Tous' ? filtresOrigine : null;
   const filmPool = useMemo(
-    () => getFilmsCandidats(semaineVue, origineActive, films),
-    [semaineVue, origineActive]
+    () => getFilmsCandidats(semaineVue, origineActive, tousFilms),
+    [semaineVue, origineActive, tousFilms]
   );
   const [filmIndex, setFilmIndex] = useState(() => getFilmIndexInitial(semaineVue, filmPool));
   useEffect(() => {
-    const pool = getFilmsCandidats(semaineVue, origineActive, films);
+    const pool = getFilmsCandidats(semaineVue, origineActive, tousFilms);
     setFilmIndex(getFilmIndexInitial(semaineVue, pool));
-  }, [semaineVue, origineActive]);
+  }, [semaineVue, origineActive, tousFilms]);
   function filmPrev() { setFilmIndex(i => (i - 1 + filmPool.length) % filmPool.length); }
   function filmNext() { setFilmIndex(i => (i + 1) % filmPool.length); }
 

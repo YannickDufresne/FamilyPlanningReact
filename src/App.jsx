@@ -209,6 +209,24 @@ export default function App() {
     });
   }
 
+  // ── Films personnalisés ───────────────────────────────────────────────────
+  const [filmsCustom, setFilmsCustom] = useState(() => {
+    try {
+      const saved = localStorage.getItem('fp_films_custom');
+      return saved ? JSON.parse(saved) : [];
+    } catch { return []; }
+  });
+
+  function ajouterFilmCustom(film) {
+    setFilmsCustom(prev => {
+      if (prev.some(f => f.id === film.id)) return prev;
+      const next = [...prev, film];
+      localStorage.setItem('fp_films_custom', JSON.stringify(next));
+      syncWrite({ filmsCustom: next });
+      return next;
+    });
+  }
+
   // ── Notation films ────────────────────────────────────────────────────────
   const [filmRatings, setFilmRatings] = useState(() => {
     try {
@@ -275,6 +293,10 @@ export default function App() {
           // Merge: Firestore is the source of truth for custom recipes
           localStorage.setItem('recettes_custom_v1', JSON.stringify(data.recettesCustom));
           setRecettesCustom(data.recettesCustom);
+        }
+        if (data.filmsCustom !== undefined) {
+          localStorage.setItem('fp_films_custom', JSON.stringify(data.filmsCustom));
+          setFilmsCustom(data.filmsCustom);
         }
         // Load per-week data for all semaines in cloud
         // Guard: ne pas écraser localStorage si les données locales sont plus récentes
@@ -675,6 +697,8 @@ export default function App() {
           onRetour={() => setView('planning')}
           ratings={filmRatings}
           onNoter={raterFilm}
+          filmsCustom={filmsCustom}
+          onAjouterFilm={ajouterFilmCustom}
         />
       ) : view === 'epicerie' ? (
         <EpiceriePage
@@ -737,6 +761,7 @@ export default function App() {
               filtresOrigine={filtres.origine}
               filmRatings={filmRatings}
               onNoterFilm={raterFilm}
+              filmsCustom={filmsCustom}
             />
             <WeeklyPlanning
               planning={planningVue}
