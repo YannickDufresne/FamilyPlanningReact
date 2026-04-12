@@ -4558,5 +4558,3000 @@
     "description": "Kurt Cobain a ouvertement admis que Smells Like Teen Spirit était une tentative de copier les Pixies — leur dynamique silence/explosion entre couplets murmurants et refrains hurlés a littéralement inventé le template du rock alternatif des années 90. Doolittle mélange textes surréalistes en espagnol et en anglais oblique avec des mélodies pop irrésistibles, une combinaison qui semble impossible sur le papier mais qui reste l'un des albums les plus jouissifs et les plus influents jamais enregistrés.",
     "artwork_url": null,
     "rang_mondial": null
+  },
+  {
+    "id": "jean-leloup-le-dome",
+    "nom": "Le Dôme",
+    "artiste": "Jean Leloup",
+    "annee": 1996,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Indie Rock Québécois",
+    "tags": [
+      "rock",
+      "québec",
+      "poétique",
+      "culte"
+    ],
+    "palmares": [
+      "polaris_heritage"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Jean Leloup est le poète maudit du rock québécois — excentrique, imprévisible, génial — et Le Dôme est son chef-d'œuvre mystique enregistré en plein délire créatif à Montréal. L'album mêle rock garage, électronique et textes surréalistes qui oscillent entre le sublime et le chaotique, une œuvre qu'on ne comprend pas vraiment mais qu'on ressent profondément."
+  },
+  {
+    "id": "cowboys-fringants-break-syndical",
+    "nom": "Break Syndical",
+    "artiste": "Les Cowboys Fringants",
+    "annee": 2002,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Rock Québécois",
+    "tags": [
+      "rock",
+      "québec",
+      "social",
+      "fête"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Les Cowboys Fringants ont réussi l'impossible : faire du rock québécois populaire sans compromis, avec des textes sur la banlieue, le travail et la bière qui sonnent comme des vérités universelles. Break Syndical est l'album qui les a propulsés au rang d'institution culturelle au Québec, avec des salles combles partout dans la province."
+  },
+  {
+    "id": "cowboys-fringants-la-grand-messe",
+    "nom": "La Grand-Messe",
+    "artiste": "Les Cowboys Fringants",
+    "annee": 2004,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Rock Québécois",
+    "tags": [
+      "rock",
+      "québec",
+      "épique",
+      "double-album"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Double album ambitieux qui confronte la société québécoise à ses contradictions — la surconsommation, l'identité, la nostalgie — avec une franchise désarmante. La chanson '5 novembre' sur la fin du monde industrielle est l'une des plus belles compositions en français de la décennie."
+  },
+  {
+    "id": "daniel-belanger-calendrier-mauvais-jours",
+    "nom": "Calendrier des mauvais jours",
+    "artiste": "Daniel Bélanger",
+    "annee": 1996,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Pop Rock Québécois",
+    "tags": [
+      "pop",
+      "québec",
+      "mélancolie",
+      "poésie"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Daniel Bélanger est le songwriter québécois le plus littéraire de sa génération — ses métaphores sont précises comme des bijoux et ses mélodies sont irrésistibles. Calendrier des mauvais jours est l'album qui a convaincu le monde francophone que la pop québécoise pouvait rivaliser avec la grande chanson française."
+  },
+  {
+    "id": "harmonium-cinquieme-saison",
+    "nom": "Si on avait besoin d'une cinquième saison",
+    "artiste": "Harmonium",
+    "annee": 1975,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Rock Progressif Québécois",
+    "tags": [
+      "prog-rock",
+      "québec",
+      "nature",
+      "spirituel"
+    ],
+    "palmares": [
+      "polaris_heritage"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Harmonium a créé quelque chose qui n'existait nulle part ailleurs : un rock progressif québécois ancré dans la nature laurentienne, les saisons et une spiritualité douce. Cet album est le disque fondateur de la chanson québécoise moderne — une cinquième saison imaginaire, entre l'automne et l'hiver, toute en douceur et en profondeur."
+  },
+  {
+    "id": "robert-charlebois-lindberg",
+    "nom": "Lindberg",
+    "artiste": "Robert Charlebois",
+    "annee": 1968,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Rock Québécois / Chanson",
+    "tags": [
+      "rock",
+      "québec",
+      "révolution",
+      "joual"
+    ],
+    "palmares": [
+      "polaris_heritage"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada",
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Robert Charlebois a fait exploser la chanson québécoise en mélangeant le rock californien, le joual et l'humour absurde — Lindberg est l'année zéro de cette révolution culturelle. La chanson-titre sur Charles Lindbergh traversant l'Atlantique est devenue l'hymne d'une génération qui voulait décoller vers autre chose."
+  },
+  {
+    "id": "malajube-trompe-loeil",
+    "nom": "Trompe-l'œil",
+    "artiste": "Malajube",
+    "annee": 2006,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Indie Rock Québécois",
+    "tags": [
+      "indie",
+      "québec",
+      "dynamique",
+      "francophone"
+    ],
+    "palmares": [
+      "polaris_shortlist"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Malajube a prouvé qu'on pouvait faire de l'indie rock québécois en français et rivaliser avec les meilleurs groupes anglophones de la planète — Trompe-l'œil a été finaliste au Prix Polaris et a conquis des critiques de New York à Londres. Une énergie brute, des mélodies accrocheuses et des textes qui jonglent avec la langue française de façon inattendue."
+  },
+  {
+    "id": "patrick-watson-close-to-paradise",
+    "nom": "Close to Paradise",
+    "artiste": "Patrick Watson",
+    "annee": 2006,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Indie Folk / Chambre",
+    "tags": [
+      "indie",
+      "orchestral",
+      "intime",
+      "québec"
+    ],
+    "palmares": [
+      "polaris_prize"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Patrick Watson a gagné le Prix Polaris en 2007 avec cet album d'une délicatesse rare — sa voix de fausset sur des arrangements de chambre évoque Nick Drake rencontrant Erik Satie dans un appartement montréalais. Close to Paradise est une musique qui demande de ralentir et d'écouter vraiment."
+  },
+  {
+    "id": "beau-dommage-beau-dommage",
+    "nom": "Beau Dommage",
+    "artiste": "Beau Dommage",
+    "annee": 1974,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Folk Rock Québécois",
+    "tags": [
+      "folk",
+      "québec",
+      "nostalgie",
+      "classique"
+    ],
+    "palmares": [
+      "polaris_heritage"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Beau Dommage a photographié le Montréal des années 70 avec une précision géographique et émotionnelle unique — leurs chansons nomment des rues, des quartiers, des saisons québécoises. 'La complainte du phoque en Alaska' est devenue une chanson populaire que trois générations de Québécois connaissent par cœur sans avoir été forcés de l'apprendre."
+  },
+  {
+    "id": "richard-desjardins-tu-maimes-tu",
+    "nom": "Tu m'aimes-tu",
+    "artiste": "Richard Desjardins",
+    "annee": 1990,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Folk / Chanson Québécoise",
+    "tags": [
+      "folk",
+      "québec",
+      "engagé",
+      "poétique"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Richard Desjardins est la conscience du Québec — mineur d'Abitibi devenu poète, il écrit sur la forêt boréale, les travailleurs et l'amour avec la même intensité. 'Tu m'aimes-tu' est une des chansons d'amour les plus singulières de la langue française, une demande à la fois tendre et désespérée qui est entrée dans l'âme collective québécoise."
+  },
+  {
+    "id": "felix-leclerc-p-tit-bonheur",
+    "nom": "Le p'tit bonheur",
+    "artiste": "Félix Leclerc",
+    "annee": 1951,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Chanson Québécoise",
+    "tags": [
+      "chanson",
+      "québec",
+      "fondateur",
+      "nature"
+    ],
+    "palmares": [
+      "polaris_heritage"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Québec",
+      "Canada",
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Félix Leclerc est le père de la chanson québécoise — c'est lui qui a convaincu Paris en 1950 qu'un Québécois pouvait chanter en français avec une voix et une vision qui lui appartenaient entièrement. Ses chansons sur la nature, le fleuve et les hivers québécois ont posé les fondations d'une culture musicale distincte de la France."
+  },
+  {
+    "id": "les-colocs-atrocetomique",
+    "nom": "Atrocetomique",
+    "artiste": "Les Colocs",
+    "annee": 1995,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Rock / Ska Québécois",
+    "tags": [
+      "ska",
+      "rock",
+      "québec",
+      "fête",
+      "engagé"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Les Colocs mêlaient le ska, le rock, le klezmer et le joual dans un cocktail festif et politique unique — leur chef Dédé Fortin était un showman flamboyant qui parlait des sans-abri et de l'injustice sociale en faisant danser tout le monde. Atrocetomique reste l'album le plus énergique et le plus touchant de leur courte carrière."
+  },
+  {
+    "id": "paul-piche-a-qui-appartient-le-beau-temps",
+    "nom": "À qui appartient l'beau temps?",
+    "artiste": "Paul Piché",
+    "annee": 1977,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Folk Rock Québécois",
+    "tags": [
+      "folk",
+      "québec",
+      "engagé",
+      "identité"
+    ],
+    "palmares": [
+      "felix_album_annee"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Québec",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Paul Piché a sorti cet album l'année du référendum de 1980 — ses chansons sur l'identité québécoise, la liberté et l'appartenance ont capturé une époque de doutes et d'espoirs. La chanson-titre est devenue un hymne à la fois personnel et collectif, une question que les Québécois se posent encore."
+  },
+  {
+    "id": "jacques-brel-olympia-1964",
+    "nom": "Enregistrement public à l'Olympia 1964",
+    "artiste": "Jacques Brel",
+    "annee": 1964,
+    "pays": "Belgique",
+    "continent": "Europe",
+    "genre": "Chanson Française",
+    "tags": [
+      "chanson",
+      "belgique",
+      "théâtral",
+      "intensité"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "France",
+      "Belgique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Jacques Brel en concert à l'Olympia est l'expérience la plus intense de toute la chanson française — il suait, tremblait, crachait ses textes avec une conviction physique qui laissait le public épuisé. Ce disque capture 'Ne me quitte pas', 'Amsterdam' et 'Les Bourgeois' dans des versions définitives que même le studio n'avait pas réussi à égaler."
+  },
+  {
+    "id": "barbara-dis-quand-reviendras-tu",
+    "nom": "Dis, quand reviendras-tu?",
+    "artiste": "Barbara",
+    "annee": 1964,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Chanson Française",
+    "tags": [
+      "chanson",
+      "piano",
+      "autobiographique",
+      "sombre"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Barbara est la plus mystérieuse et la plus personnelle des grandes chanteuses françaises — ses textes autobiographiques sur l'enfance, la violence et la solitude étaient si intimes qu'ils semblaient imprononçables. La chanson 'Nantes', sur la mort de son père avec qui elle était brouillée, est considérée par beaucoup comme la plus belle chanson française jamais écrite."
+  },
+  {
+    "id": "edith-piaf-non-je-ne-regrette-rien",
+    "nom": "Non, je ne regrette rien",
+    "artiste": "Édith Piaf",
+    "annee": 1961,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Chanson Française",
+    "tags": [
+      "chanson",
+      "france",
+      "icône",
+      "passion"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Édith Piaf a enregistré 'Non, je ne regrette rien' alors qu'elle était ravagée par l'arthrite, la morphine et la douleur — et pourtant sa voix sonnait plus libre et plus puissante que jamais. La chanson est devenue tellement synonyme de la France que Christopher Nolan l'a utilisée comme motif sonore dans Inception pour signifier 'profondeur absolue'."
+  },
+  {
+    "id": "gainsbourg-lhomme-tete-de-chou",
+    "nom": "L'Homme à tête de chou",
+    "artiste": "Serge Gainsbourg",
+    "annee": 1976,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Rock / Art Pop",
+    "tags": [
+      "concept",
+      "france",
+      "provocateur",
+      "noir"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Gainsbourg raconte dans cet album-concept l'histoire d'un homme qui tue une shampouineuse par jalousie — avec des arrangements rock produits par Alan Parker qui sonnent comme nulle part ailleurs. C'est Gainsbourg à son plus sombre et son plus personnel, un roman noir en musique que même ses plus ardents défenseurs mettent du temps à apprivoiser."
+  },
+  {
+    "id": "francoise-hardy-tous-les-garcons",
+    "nom": "Tous les garçons et les filles",
+    "artiste": "Françoise Hardy",
+    "annee": 1962,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Yé-yé / Pop",
+    "tags": [
+      "pop",
+      "france",
+      "mélancolie",
+      "icône"
+    ],
+    "palmares": [
+      "rs_500"
+    ],
+    "palmares_rangs": {
+      "rs_500": 492
+    },
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "À 18 ans, Françoise Hardy a écrit 'Tous les garçons et les filles' depuis sa fenêtre en regardant les couples passer — une chanson sur la solitude adolescente d'une précision émotionnelle stupéfiante. Bob Dylan a dit qu'elle était la personne qu'il aurait le plus voulu rencontrer dans les années 60, et Mick Jagger était éperdument amoureux d'elle."
+  },
+  {
+    "id": "telephone-au-coeur-de-la-nuit",
+    "nom": "Au cœur de la nuit",
+    "artiste": "Téléphone",
+    "annee": 1980,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Rock Français",
+    "tags": [
+      "rock",
+      "france",
+      "énergie",
+      "classique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Téléphone a réussi ce que personne ne croyait possible dans les années 80 : faire du rock en français qui soit aussi crédible que les Anglais et les Américains. Au cœur de la nuit est leur album le plus accompli, avec des riffs d'acier et des textes en argot parisien qui capturent l'énergie brute d'une époque."
+  },
+  {
+    "id": "noir-desir-tostaky",
+    "nom": "Tostaky",
+    "artiste": "Noir Désir",
+    "annee": 1992,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Rock Alternatif Français",
+    "tags": [
+      "rock",
+      "france",
+      "intensité",
+      "politique"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Bertrand Cantat et Noir Désir incarnaient le rock français dans sa version la plus brute et la plus intellectuelle — Tostaky porte en lui la rage, la beauté et les contradictions d'une génération post-68. Leur cover de 'Little Wing' de Hendrix en ouverture annonce un groupe qui ne respectait aucune frontière musicale ou linguistique."
+  },
+  {
+    "id": "leo-ferre-avec-le-temps",
+    "nom": "Avec le temps",
+    "artiste": "Léo Ferré",
+    "annee": 1970,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Chanson / Poésie",
+    "tags": [
+      "chanson",
+      "poésie",
+      "anarchisme",
+      "désespoir"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Léo Ferré était anarchiste, poète et musicien — il mettait en musique Verlaine et Rimbaud tout en composant ses propres textes rageurs sur l'amour et la société. 'Avec le temps' est peut-être la plus belle chanson sur l'usure de l'amour jamais écrite en français, une vérité cruelle livrée avec une voix qui brisait les cœurs."
+  },
+  {
+    "id": "les-rita-mitsouko-rita-mitsouko",
+    "nom": "Rita Mitsouko",
+    "artiste": "Les Rita Mitsouko",
+    "annee": 1987,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "New Wave / Rock",
+    "tags": [
+      "new-wave",
+      "france",
+      "excentrique",
+      "danse"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Catherine Ringer et Fred Chichin formaient le duo le plus électrique de la France des années 80 — elle, chanteuse acrobatique aux tenues extravagantes, lui, guitariste instinctif aux riffs addictifs. 'C'est comme ça' était partout dans les radios européennes et reste l'un des singles français les plus jouissifs jamais enregistrés."
+  },
+  {
+    "id": "mc-solaar-qui-seme-le-vent",
+    "nom": "Qui sème le vent récolte le tempo",
+    "artiste": "MC Solaar",
+    "annee": 1991,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Hip-Hop Français",
+    "tags": [
+      "hip-hop",
+      "france",
+      "poétique",
+      "pionnier"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": true,
+    "origines_cuisine": [
+      "France",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "MC Solaar a inventé le rap intellectuel français — ses textes sont des jeux de mots en cascades, des références littéraires et des observations sociologiques emballées dans des flows impeccables. 'Bouge de là' a été le premier rap français à conquérir les charts et à convaincre que la langue française était taillée pour le hip-hop."
+  },
+  {
+    "id": "renaud-laisse-beton",
+    "nom": "Laisse béton",
+    "artiste": "Renaud",
+    "annee": 1977,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Folk Rock / Chanson",
+    "tags": [
+      "chanson",
+      "france",
+      "banlieue",
+      "verlan"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Renaud a introduit le verlan et l'argot des cités dans la chanson française avec une truculence qui choquait les puristes et ravissait les jeunes — 'Laisse béton' est 'laisse tomber' à l'envers, et le titre résumait toute une attitude. Il a ouvert la chanson française aux marges et aux banlieues bien avant que le rap n'arrive."
+  },
+  {
+    "id": "phoenix-wolfgang-amadeus-phoenix",
+    "nom": "Wolfgang Amadeus Phoenix",
+    "artiste": "Phoenix",
+    "annee": 2009,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Indie Pop",
+    "tags": [
+      "indie",
+      "pop",
+      "france",
+      "grammy"
+    ],
+    "palmares": [
+      "grammy"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "France",
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Phoenix a gagné le Grammy du meilleur album alternatif en 2010 avec cet album d'une efficacité pop redoutable — des mélodies immédiates, des productions léchées et une énergie solaire qui semblait couler de source. Le groupe de Versailles est devenu le cheval de Troie de la pop française dans les hits-parades anglophones."
+  },
+  {
+    "id": "stromae-racine-carree",
+    "nom": "Racine Carrée",
+    "artiste": "Stromae",
+    "annee": 2013,
+    "pays": "Belgique",
+    "continent": "Europe",
+    "genre": "Electronic / Chanson",
+    "tags": [
+      "électronique",
+      "belgique",
+      "danse",
+      "profond"
+    ],
+    "palmares": [
+      "victoires_musique",
+      "grammy_nom"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "France",
+      "Belgique",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Paul Van Haver, alias Stromae, a réussi l'exploit de parler de dépression, de réseaux sociaux et d'alcoolisme sur des beats de house belge que toute l'Europe dansait dans les clubs. 'Papaoutai' — sur l'absence du père — est devenue une des chansons francophones les plus écoutées de l'histoire du streaming, touchant des millions de personnes qui ne parlent pas français."
+  },
+  {
+    "id": "lucio-battisti-anima-latina",
+    "nom": "Anima Latina",
+    "artiste": "Lucio Battisti",
+    "annee": 1974,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Rock Progressif / Soul",
+    "tags": [
+      "prog-rock",
+      "italie",
+      "innovant",
+      "complexe"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Italie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Lucio Battisti était la plus grande star de la pop italienne et il a tout risqué avec Anima Latina — un album expérimental de 78 minutes qui fusionnait soul brésilienne, rock progressif et poésie d'avant-garde. L'album s'est vendu massivement malgré sa complexité, preuve que le public italien faisait confiance à Battisti aveuglément."
+  },
+  {
+    "id": "franco-battiato-la-voce-del-padrone",
+    "nom": "La voce del padrone",
+    "artiste": "Franco Battiato",
+    "annee": 1981,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Synth-Pop / Art Rock",
+    "tags": [
+      "synth",
+      "italie",
+      "philosophique",
+      "pop"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Italie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Franco Battiato mélange Sufi mysticism, références à Stockhausen, synthétiseurs et pop accrocheure dans un album inclassable qui s'est vendu à plus d'un million d'exemplaires en Italie — un record absolu pour un album si expérimental. Ses textes mélangent l'italien, l'arabe et des fragments philosophiques dans une cohérence onirique fascinante."
+  },
+  {
+    "id": "area-arbeit-macht-frei",
+    "nom": "Arbeit Macht Frei",
+    "artiste": "Area",
+    "annee": 1973,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Rock Progressif / Jazz-Rock",
+    "tags": [
+      "prog-rock",
+      "italie",
+      "politique",
+      "avant-garde"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Italie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Area était le groupe le plus politiquement radical du rock progressif italien — leur leader Demetrio Stratos, né en Égypte, chantait en explorant les limites physiologiques de la voix humaine avec une technique vocale unique au monde. Le titre de l'album — la phrase inscrite à l'entrée des camps nazis — annonçait leur engagement antifasciste sans équivoque."
+  },
+  {
+    "id": "mina-mina-1972",
+    "nom": "Del mio meglio",
+    "artiste": "Mina",
+    "annee": 1972,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Pop / Jazz Italiens",
+    "tags": [
+      "pop",
+      "italie",
+      "voix",
+      "glamour"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Italie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Mina est la chanteuse italienne avec la plus grande étendue vocale de sa génération — quatre octaves d'une précision chirurgicale, capables de passer de la douceur à la puissance en une mesure. Recluse depuis 1978, elle n'a jamais accordé une seule interview depuis lors, alimentant un mystère qui renforce son statut de légende absolue de la chanson italienne."
+  },
+  {
+    "id": "camaron-la-leyenda-del-tiempo",
+    "nom": "La leyenda del tiempo",
+    "artiste": "Camarón de la Isla",
+    "annee": 1979,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Flamenco Fusion",
+    "tags": [
+      "flamenco",
+      "espagne",
+      "révolutionnaire",
+      "voix"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 488
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Espagne"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Camarón de la Isla a scandalisé la communauté gitane et flamenco traditionnelle en fusionnant le cante jondo avec la basse électrique et des structures pop — un sacrilège qui s'est révélé être la plus grande révolution du flamenco depuis ses origines. Sa voix déchirée et hallucinée, résultat d'une vie brûlée trop vite, reste l'une des plus émouvantes jamais captées sur disque."
+  },
+  {
+    "id": "paco-de-lucia-fuente-y-caudal",
+    "nom": "Fuente y Caudal",
+    "artiste": "Paco de Lucía",
+    "annee": 1973,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Flamenco",
+    "tags": [
+      "flamenco",
+      "guitare",
+      "espagne",
+      "virtuose"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Espagne"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Paco de Lucía a redéfini les limites techniques de la guitare flamenca avec une vitesse et une musicalité qui semblaient physiquement impossibles — les guitaristes du monde entier ralentissent ses enregistrements pour comprendre comment il fait. 'Entre dos aguas' sur cet album est devenu le morceau flamenco le plus reconnaissable du 20e siècle."
+  },
+  {
+    "id": "radio-futura-la-cancion-de-juan-perro",
+    "nom": "La canción de Juan Perro",
+    "artiste": "Radio Futura",
+    "annee": 1987,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Rock en Español",
+    "tags": [
+      "rock",
+      "espagne",
+      "new-wave",
+      "classique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Espagne"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Radio Futura est le groupe emblématique de la Movida Madrileña, cette explosion culturelle qui a suivi la mort de Franco et la fin de la dictature espagnole. La canción de Juan Perro mêle rock post-punk, musique afro-cubaine et poésie espagnole dans un album qui capture l'ivresse d'une société qui redécouvrait sa liberté."
+  },
+  {
+    "id": "manu-chao-clandestino",
+    "nom": "Clandestino",
+    "artiste": "Manu Chao",
+    "annee": 1998,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "World / Latin Rock",
+    "tags": [
+      "world",
+      "espagnol",
+      "politique",
+      "nomade"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Espagne",
+      "France",
+      "Mexique",
+      "Brésil"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Manu Chao a enregistré Clandestino en voyageant pendant trois ans à travers l'Amérique latine avec un studio portable — le résultat est un album qui sonne comme une radio du monde, mélangeant l'espagnol, le français, l'arabe sur des rythmes reggae, ska et cumbia. C'est le disque d'un apatride heureux qui a vendu 7 millions d'exemplaires sans jamais vouloir être une star."
+  },
+  {
+    "id": "amalia-rodrigues-estranha-forma-de-vida",
+    "nom": "Estranha forma de vida",
+    "artiste": "Amália Rodrigues",
+    "annee": 1962,
+    "pays": "Portugal",
+    "continent": "Europe",
+    "genre": "Fado",
+    "tags": [
+      "fado",
+      "portugal",
+      "saudade",
+      "voix"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Portugal"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Amália Rodrigues a transformé le fado — musique de tavernes populaires — en art universel reconnu dans le monde entier, au point qu'elle a eu des funérailles nationales au Portugal en 1999. Sa voix exprimait le 'saudade' portugais — cette mélancolie douce-amère pour quelque chose de perdu qu'on n'arrive pas à nommer — avec une profondeur qui transcendait toute barrière linguistique."
+  },
+  {
+    "id": "madredeus-os-dias-da-madredeus",
+    "nom": "Os Dias da Madredeus",
+    "artiste": "Madredeus",
+    "annee": 1987,
+    "pays": "Portugal",
+    "continent": "Europe",
+    "genre": "Fado / Folk",
+    "tags": [
+      "fado",
+      "portugal",
+      "poétique",
+      "intemporel"
+    ],
+    "palmares": [
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Portugal"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Madredeus a modernisé le fado sans le trahir — les arrangements de guitare classique et d'accordéon créent un écrin contemporain pour la voix cristalline de Teresa Salgueiro. Wim Wenders les a fait jouer dans son film 'Lisbon Story', cimentant leur image de bande-son idéale pour se perdre dans les ruelles de Lisbonne."
+  },
+  {
+    "id": "mariza-fado-em-mim",
+    "nom": "Fado em mim",
+    "artiste": "Mariza",
+    "annee": 2001,
+    "pays": "Portugal",
+    "continent": "Europe",
+    "genre": "Fado Contemporain",
+    "tags": [
+      "fado",
+      "portugal",
+      "moderne",
+      "puissant"
+    ],
+    "palmares": [
+      "bbc_radio3"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Portugal"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Mariza, née au Mozambique et élevée à Lisbonne dans une famille de musiciens, a pris le flambeau d'Amália Rodrigues avec une présence scénique saisissante et une voix qui peut remplir une cathédrale. Fado em mim a introduit le fado à une nouvelle génération internationale qui ne savait pas encore que cette musique allait lui manquer."
+  },
+  {
+    "id": "victor-jara-pongo-en-tus-manos",
+    "nom": "Pongo en tus manos abiertas",
+    "artiste": "Víctor Jara",
+    "annee": 1969,
+    "pays": "Chili",
+    "continent": "Amériques",
+    "genre": "Nueva Canción Chilena",
+    "tags": [
+      "folk",
+      "chili",
+      "politique",
+      "martyrisé"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Chili",
+      "Argentine"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Víctor Jara était instituteur, metteur en scène et chanteur folk chilien — la junte militaire de Pinochet l'a arrêté en 1973 et lui a brisé les mains avant de l'assassiner, sachant qu'il représentait quelque chose d'indestrictible. Ses chansons sur la pauvreté et la dignité humaine continuent d'être chantées dans les mouvements sociaux du monde entier."
+  },
+  {
+    "id": "mercedes-sosa-gracias-a-la-vida",
+    "nom": "Gracias a la vida",
+    "artiste": "Mercedes Sosa",
+    "annee": 1971,
+    "pays": "Argentine",
+    "continent": "Amériques",
+    "genre": "Nueva Canción / Folk",
+    "tags": [
+      "folk",
+      "argentine",
+      "humanisme",
+      "voix"
+    ],
+    "palmares": [
+      "grammy_latino"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Argentine",
+      "Chili"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Mercedes Sosa, 'La Negra', était la voix des peuples autochtones et des opprimés d'Amérique latine — la dictature argentine l'a forcée à l'exil en 1979 après une arrestation en concert devant son public. Sa version de 'Gracias a la vida' de Violeta Parra est devenue une des chansons en espagnol les plus connues du monde entier."
+  },
+  {
+    "id": "astor-piazzolla-adios-nonino",
+    "nom": "Adiós Nonino",
+    "artiste": "Astor Piazzolla",
+    "annee": 1969,
+    "pays": "Argentine",
+    "continent": "Amériques",
+    "genre": "Tango Nuevo",
+    "tags": [
+      "tango",
+      "argentine",
+      "classique",
+      "révolutionnaire"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Argentine"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Piazzolla a composé 'Adiós Nonino' en apprenant la mort de son père par téléphone depuis Paris — en une nuit de deuil, il a créé ce qui est devenu la pièce de tango la plus jouée dans les conservatoires du monde. Sa fusion du tango traditionnel avec le jazz et la musique classique lui a valu les menaces des puristes argentins et l'adoration de Leonard Bernstein."
+  },
+  {
+    "id": "chavela-vargas-la-llorona",
+    "nom": "La llorona",
+    "artiste": "Chavela Vargas",
+    "annee": 1994,
+    "pays": "Mexique",
+    "continent": "Amériques",
+    "genre": "Ranchera / Folk",
+    "tags": [
+      "ranchera",
+      "mexique",
+      "tragique",
+      "icône"
+    ],
+    "palmares": [
+      "grammy_latino"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Mexique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Chavela Vargas a commencé à chanter les rancheras mexicaines quand ses homologues féminines portaient des robes ; elle, elle chantait en pancho avec un pistolet à la ceinture et un verre de téquila à la main. Pedro Almodóvar lui a redonné une carrière internationale à 70 ans en utilisant ses chansons dans ses films, et elle a avoué publiquement son homosexualité à 81 ans."
+  },
+  {
+    "id": "celia-johnny-1974",
+    "nom": "Celia & Johnny",
+    "artiste": "Celia Cruz & Johnny Pacheco",
+    "annee": 1974,
+    "pays": "Cuba",
+    "continent": "Amériques",
+    "genre": "Salsa",
+    "tags": [
+      "salsa",
+      "cuba",
+      "danse",
+      "joie"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Cuba",
+      "Porto Rico"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Celia Cruz, reine de la salsa, et Johnny Pacheco, fondateur du label Fania, ont créé avec cet album le modèle sonore qui allait définir la salsa new-yorkaise pour les décennies suivantes. Le cri 'Azúcar!' de Celia Cruz est devenu son marque de fabrique — elle disait que le sucre représentait la douceur de la vie cubaine qu'elle ne reverrait plus jamais après l'exil."
+  },
+  {
+    "id": "rubén-blades-siembra",
+    "nom": "Siembra",
+    "artiste": "Rubén Blades & Willie Colón",
+    "annee": 1978,
+    "pays": "Panama",
+    "continent": "Amériques",
+    "genre": "Salsa",
+    "tags": [
+      "salsa",
+      "panama",
+      "politique",
+      "classique"
+    ],
+    "palmares": [
+      "grammy_hall_of_fame",
+      "rs_500"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Cuba",
+      "Porto Rico",
+      "Mexique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Siembra est l'album de salsa le plus vendu de tous les temps — Rubén Blades y écrit des histoires de rue new-yorkaises avec des personnages complexes qui auraient leur place dans un roman de García Márquez. 'Pedro Navaja', adaptation latino du 'Mackie Messer' de Brecht, dure 7 minutes et raconte une histoire de crime et de destin avec une économie narrative parfaite."
+  },
+  {
+    "id": "gilberto-gil-refazenda",
+    "nom": "Refazenda",
+    "artiste": "Gilberto Gil",
+    "annee": 1975,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "MPB / Reggae",
+    "tags": [
+      "mpb",
+      "brésil",
+      "reggae",
+      "spirituel"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Brésil"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Gilberto Gil a découvert le reggae de Bob Marley pendant son exil à Londres sous la dictature brésilienne, et a été le premier à le fusionner avec la MPB brésilienne dans cet album enregistré à son retour. Plus tard ministre de la Culture du Brésil, il a toujours cru que la musique était un acte politique — et Refazenda en est la preuve sonore."
+  },
+  {
+    "id": "tim-maia-racional-vol1",
+    "nom": "Tim Maia Racional Vol. 1",
+    "artiste": "Tim Maia",
+    "annee": 1975,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "Soul / Funk Brésilien",
+    "tags": [
+      "soul",
+      "funk",
+      "brésil",
+      "mystique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Brésil"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Tim Maia a traversé une période mystique intense où il a rejoint la secte 'Universo em Desencanto' et a enregistré ces deux albums de soul/funk avec des paroles purement spirituelles et cosmiques. L'époque était bizarre mais la musique est sublime — une funk soul brésilienne aux cuivres chauds qui a été redécouverte par le mouvement crate-digging des années 2000."
+  },
+  {
+    "id": "jorge-ben-jor-africa-brasil",
+    "nom": "África Brasil",
+    "artiste": "Jorge Ben Jor",
+    "annee": 1976,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "Samba-Funk",
+    "tags": [
+      "samba",
+      "funk",
+      "brésil",
+      "afrique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Brésil",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Jorge Ben Jor a créé un son unique qu'il appelle lui-même 'samba esquema novo' — une fusion de samba, funk américain et influences africaines qui transcende tous les genres. 'Taj Mahal' sur cet album a été repris par Rod Stewart sous le titre 'Do Ya Think I'm Sexy' sans crédit, forçant un règlement à l'amiable et illustrant à quel point le groove de Ben Jor était universel."
+  },
+  {
+    "id": "tom-ze-grande-liquidacao",
+    "nom": "Grande Liquidação",
+    "artiste": "Tom Zé",
+    "annee": 1968,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "Tropicália",
+    "tags": [
+      "tropicalia",
+      "brésil",
+      "avant-garde",
+      "satirique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Brésil"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Tom Zé est le plus radical des compositeurs de la Tropicália — là où Caetano Veloso et Gilberto Gil cherchaient à plaire, Tom Zé cherchait à déranger avec des sons industriels, des paroles absurdes et des structures musicales qui défient toute logique commerciale. David Byrne l'a redécouvert dans les années 90 et a réédité ses disques, lui offrant une carrière internationale tardive et méritée."
+  },
+  {
+    "id": "atahualpa-yupanqui-camino-del-indio",
+    "nom": "Camino del indio",
+    "artiste": "Atahualpa Yupanqui",
+    "annee": 1943,
+    "pays": "Argentine",
+    "continent": "Amériques",
+    "genre": "Folk Andin",
+    "tags": [
+      "folk",
+      "andin",
+      "argentine",
+      "fondateur"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Argentine",
+      "Chili"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Atahualpa Yupanqui était gaucho, guitariste et poète — il a passé sa vie à parcourir les Andes à cheval pour collecter les chants et rythmes indigènes avant qu'ils ne disparaissent. Pablo Neruda et Albert Camus l'admiraient; la dictature argentine l'a exilé pour ses convictions politiques, mais il a continué à chanter depuis Paris jusqu'à la fin de sa vie."
+  },
+  {
+    "id": "susana-baca-susana-baca",
+    "nom": "Susana Baca",
+    "artiste": "Susana Baca",
+    "annee": 1997,
+    "pays": "Pérou",
+    "continent": "Amériques",
+    "genre": "Afro-Péruvien",
+    "tags": [
+      "afro-peruvien",
+      "pérou",
+      "racines",
+      "voix"
+    ],
+    "palmares": [
+      "grammy_latino",
+      "womex"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Pérou",
+      "Amériques"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Susana Baca a sauvé de l'oubli la musique afro-péruvienne — les descendants des esclaves africains au Pérou avaient une tradition musicale unique que personne ne documentait. David Byrne l'a découverte et a co-produit cet album, la révélant au monde entier et lui ouvrant une carrière internationale qui a culminé avec un Grammy Latin."
+  },
+  {
+    "id": "youssou-ndour-immigres",
+    "nom": "Immigrés",
+    "artiste": "Youssou N'Dour",
+    "annee": 1984,
+    "pays": "Sénégal",
+    "continent": "Afrique",
+    "genre": "Mbalax / World",
+    "tags": [
+      "mbalax",
+      "sénégal",
+      "diaspora",
+      "rythmes"
+    ],
+    "palmares": [
+      "songlines",
+      "womex"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Sénégal",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Youssou N'Dour a écrit Immigrés pour les Sénégalais partis chercher fortune en Europe et confrontés au racisme et à la nostalgie — une œuvre d'une dignité bouleversante sur l'expérience migratoire. Sa voix de tenor africain, capable de passer du griot traditionnel wolof au falsetto soul, reste l'une des plus reconnues du monde."
+  },
+  {
+    "id": "salif-keita-soro",
+    "nom": "Soro",
+    "artiste": "Salif Keïta",
+    "annee": 1987,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "Afropop / World",
+    "tags": [
+      "mali",
+      "voix",
+      "albinos",
+      "monde"
+    ],
+    "palmares": [
+      "songlines",
+      "womex"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Salif Keïta est albinos et descendant d'une famille royale mandingue — une contradiction explosive dans une société où l'albinisme est considéré comme un mauvais présage. Sa voix dorée et douloureuse sur des arrangements qui fusionnent kora, guitare électrique et cuivres a conquis le monde depuis Paris où il s'était exilé, rejeté par sa propre famille."
+  },
+  {
+    "id": "orchestra-baobab-mouhamadou-bamba",
+    "nom": "Mouhamadou Bamba",
+    "artiste": "Orchestra Baobab",
+    "annee": 1982,
+    "pays": "Sénégal",
+    "continent": "Afrique",
+    "genre": "Afro-Cubain / Mbalax",
+    "tags": [
+      "sénégal",
+      "cuba",
+      "danse",
+      "nostalgie"
+    ],
+    "palmares": [
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Sénégal",
+      "Cuba"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "L'Orchestra Baobab était le groupe résident du Club Baobab de Dakar dans les années 70 — une formation extraordinaire qui mélangeait la musique cubaine entendue à la radio de La Havane, le mbalax sénégalais et le bèlè de la Martinique. Après s'être dissous, ils se sont reformés en 2001 pour un comeback triomphal qui a conquis les festivals du monde entier."
+  },
+  {
+    "id": "tinariwen-amassakoul",
+    "nom": "Amassakoul",
+    "artiste": "Tinariwen",
+    "annee": 2004,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "Desert Blues / Rock Touareg",
+    "tags": [
+      "touareg",
+      "désert",
+      "blues",
+      "rebelle"
+    ],
+    "palmares": [
+      "grammy",
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Les membres de Tinariwen sont d'anciens combattants de la rébellion touareg du Mali qui ont appris la guitare électrique dans des camps militaires en Libye, en écoutant Jimi Hendrix et Ali Farka Touré sur des cassettes. Leur blues du désert — guitares hypnotiques, chants en tamashek, rythmiques sahariennes — a conquis Robert Plant et Carlos Santana avant d'atteindre le grand public."
+  },
+  {
+    "id": "king-sunny-ade-juju-music",
+    "nom": "Juju Music",
+    "artiste": "King Sunny Adé",
+    "annee": 1982,
+    "pays": "Nigeria",
+    "continent": "Afrique",
+    "genre": "Juju",
+    "tags": [
+      "juju",
+      "nigeria",
+      "guitares",
+      "transe"
+    ],
+    "palmares": [
+      "songlines",
+      "womex"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Nigeria",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "King Sunny Adé arrivait en concert avec 20 musiciens et des guitares lap steel amplifiées pour créer des transes collectives qui pouvaient durer des heures — le juju nigérian est une musique de cérémonie qui s'étire et se déploie dans le temps comme une rivière. Island Records voulait en faire le nouveau Bob Marley mais Adé refusait de simplifier sa musique pour le marché occidental."
+  },
+  {
+    "id": "ladysmith-black-mambazo-shaka-zulu",
+    "nom": "Shaka Zulu",
+    "artiste": "Ladysmith Black Mambazo",
+    "annee": 1987,
+    "pays": "Afrique du Sud",
+    "continent": "Afrique",
+    "genre": "Isicathamiya / A cappella",
+    "tags": [
+      "a-cappella",
+      "afrique-du-sud",
+      "zulu",
+      "spirituel"
+    ],
+    "palmares": [
+      "grammy"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Afrique du Sud"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Paul Simon a demandé à Ladysmith Black Mambazo de participer à Graceland après avoir entendu leur musique sur une cassette — le groupe d'hommes zoulous chantant a cappella avec des harmonies vocales d'une perfection mathématique. Shaka Zulu, produit par Paul Simon, a gagné le Grammy et a fait connaître l'isicathamiya, musique des travailleurs migrants zulus, au monde entier."
+  },
+  {
+    "id": "hugh-masekela-hope",
+    "nom": "Hope",
+    "artiste": "Hugh Masekela",
+    "annee": 1994,
+    "pays": "Afrique du Sud",
+    "continent": "Afrique",
+    "genre": "Jazz / Afropop",
+    "tags": [
+      "jazz",
+      "afrique-du-sud",
+      "apartheid",
+      "espoir"
+    ],
+    "palmares": [
+      "grammy_nom"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Afrique du Sud"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Hugh Masekela a enregistré Hope après 30 ans d'exil — la fin de l'apartheid lui permettait enfin de rentrer chez lui. 'Stimela', sa chanson sur le train transportant les travailleurs noirs vers les mines d'or, est devenue un symbole de la résistance anti-apartheid, récitée dans des assemblées militantes du monde entier."
+  },
+  {
+    "id": "thomas-mapfumo-chimurenga-explosion",
+    "nom": "Chimurenga Explosion",
+    "artiste": "Thomas Mapfumo",
+    "annee": 1981,
+    "pays": "Zimbabwe",
+    "continent": "Afrique",
+    "genre": "Chimurenga / Mbira Rock",
+    "tags": [
+      "zimbabwe",
+      "mbira",
+      "résistance",
+      "spirituel"
+    ],
+    "palmares": [
+      "songlines"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Afrique du Sud",
+      "Éthiopie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Thomas Mapfumo a adapté les rythmes de la mbira — instrument à lamelles métalliques des cérémonies spirituelles shona — à la guitare électrique pour créer la chimurenga, musique de la révolution zimbabwéenne. Le régime de Ian Smith l'a emprisonné sans accusation pendant 90 jours en 1979, ce qui n'a fait qu'amplifier son statut de héros national."
+  },
+  {
+    "id": "oumou-sangare-moussoulou-1991",
+    "nom": "Moussoulou",
+    "artiste": "Oumou Sangaré",
+    "annee": 1991,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "Wassoulou",
+    "tags": [
+      "mali",
+      "wassoulou",
+      "feminisme",
+      "voix"
+    ],
+    "palmares": [
+      "womex",
+      "grammy_nom"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Mali",
+      "Afrique"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Oumou Sangaré chante en wassoulou, musique des femmes du sud du Mali, et ses textes dénoncent la polygamie, les mariages forcés et l'oppression féminine avec une franchise qui a choqué les hommes et libéré les femmes. À 21 ans, son premier album a été le plus vendu en Afrique de l'Ouest cette année-là — une révolution féministe qui sonnait comme un chant de victoire."
+  },
+  {
+    "id": "fairuz-kifak-inta",
+    "nom": "Kifak Inta",
+    "artiste": "Fairuz",
+    "annee": 1997,
+    "pays": "Liban",
+    "continent": "Moyen-Orient",
+    "genre": "Chanson Arabe",
+    "tags": [
+      "liban",
+      "arabe",
+      "voix",
+      "intemporel"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Liban",
+      "Moyen-Orient"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Fairuz est la chanteuse la plus aimée du monde arabe — des soldats des deux camps dans la guerre civile libanaise ont accepté des cessez-le-feu quand ses chansons passaient à la radio. À 70 ans, elle a enregistré cet album avec son fils Ziad Rahbani qui l'a modernisée sans la trahir, prouvant que sa voix cristalline était intemporelle."
+  },
+  {
+    "id": "khaled-khaled-1992",
+    "nom": "Khaled",
+    "artiste": "Khaled",
+    "annee": 1992,
+    "pays": "Algérie",
+    "continent": "Afrique",
+    "genre": "Raï",
+    "tags": [
+      "raï",
+      "algérie",
+      "danse",
+      "liberté"
+    ],
+    "palmares": [
+      "victoires_musique"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Algérie",
+      "Maroc",
+      "Tunisie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Khaled est le roi du raï — cette musique algérienne des ports et des bas-fonds qui chante le vin, les femmes et la liberté dans un pays où tout cela était tabou. 'Didi' sur cet album est devenu le premier hit en langue arabe à conquérir les charts mondiaux, traduit et repris dans des dizaines de langues de l'Inde au Brésil."
+  },
+  {
+    "id": "ziad-rahbani-bennesbeh-labokra-shou",
+    "nom": "Bennesbeh Labokra Shou?",
+    "artiste": "Ziad Rahbani",
+    "annee": 1978,
+    "pays": "Liban",
+    "continent": "Moyen-Orient",
+    "genre": "Jazz / Chanson Arabe",
+    "tags": [
+      "liban",
+      "jazz",
+      "politique",
+      "satirique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Liban",
+      "Moyen-Orient"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Ziad Rahbani — fils de Fairuz et compositeur marxiste — a créé une pièce de théâtre musical satirique sur la guerre civile libanaise qui faisait rire et pleurer à la fois. Son titre signifie 'Demain, c'est quoi?' — une question existentielle posée pendant la guerre — et la musique mélange jazz, musique arabe et humour politique avec un génie désespéré."
+  },
+  {
+    "id": "mashrou-leila-raasuk",
+    "nom": "Raasuk",
+    "artiste": "Mashrou' Leila",
+    "annee": 2013,
+    "pays": "Liban",
+    "continent": "Moyen-Orient",
+    "genre": "Indie Rock Arabe",
+    "tags": [
+      "liban",
+      "indie",
+      "queer",
+      "arabe"
+    ],
+    "palmares": [
+      "bbc_radio3"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Liban",
+      "Moyen-Orient"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Mashrou' Leila est le groupe libanais qui chante ouvertement sur l'homosexualité, la religion et la politique dans un contexte régional où tout cela est dangereux — leur chanteur Hamed Sinno est devenu un symbole des droits LGBTQ+ dans le monde arabe. Leurs concerts au Liban, en Jordanie et en Égypte ont été interdits, ce qui n'a fait qu'amplifier leur message."
+  },
+  {
+    "id": "erkin-koray-elektronik-turkueler",
+    "nom": "Elektronik Türküler",
+    "artiste": "Erkin Koray",
+    "annee": 1974,
+    "pays": "Turquie",
+    "continent": "Europe",
+    "genre": "Anadolu Rock",
+    "tags": [
+      "rock",
+      "turquie",
+      "psychédélique",
+      "folk"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Turquie",
+      "Grèce"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Erkin Koray a électrifié les türküler — chansons folk anatoliennes — avec des guitares fuzz psychédéliques qui sonnaient comme si Hendrix avait grandi à Istanbul. Cet album est considéré comme le chef-d'œuvre du rock anatolien, un genre unique qui fusionne les maqams orientaux avec le rock occidental de façon irrésistible."
+  },
+  {
+    "id": "baris-manco-ben-bilirim",
+    "nom": "Ben Bilirim",
+    "artiste": "Barış Manço",
+    "annee": 1975,
+    "pays": "Turquie",
+    "continent": "Europe",
+    "genre": "Anadolu Rock",
+    "tags": [
+      "rock",
+      "turquie",
+      "folk",
+      "mystique"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Turquie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Barış Manço était reconnaissable à ses moustaches immenses, ses bijoux et ses costumes extravagants — une figure flamboyante qui chantait le rock psychédélique turc avec une sincérité totale. Ses chansons pour enfants et ses émissions télévisées en ont fait une figure nationale aimée de plusieurs générations de Turcs."
+  },
+  {
+    "id": "sezen-aksu-firuze",
+    "nom": "Firuze",
+    "artiste": "Sezen Aksu",
+    "annee": 1982,
+    "pays": "Turquie",
+    "continent": "Europe",
+    "genre": "Pop / Folk Turque",
+    "tags": [
+      "pop",
+      "turquie",
+      "féministe",
+      "voix"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Turquie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Sezen Aksu est appelée la 'petite fille' ('küçük hanımefendi') par les Turcs — sa voix de petite fille dissimule une artiste qui a révolutionné la pop turque et défendu les droits des femmes dans une société conservatrice. Elle a lancé les carrières de Tarkan et de nombreuses autres stars, confirmant son rôle de mentor incontournable de la musique turque."
+  },
+  {
+    "id": "kino-gruppa-krovi",
+    "nom": "Gruppa Krovi",
+    "artiste": "Кино (Kino)",
+    "annee": 1988,
+    "pays": "Russie",
+    "continent": "Europe",
+    "genre": "Rock Soviétique",
+    "tags": [
+      "rock",
+      "russie",
+      "soviétique",
+      "résistance"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Viktor Tsoi et Kino ont enregistré 'Gruppa Krovi' (Groupe Sanguin) pendant la perestroïka, et la chanson est devenue l'hymne d'une génération soviétique qui voulait se libérer sans savoir encore comment. Quand Tsoi est mort dans un accident de voiture en 1990, des milliers de Soviétiques ont pleuré comme pour la mort d'un frère — son mur à Moscou est encore couvert d'inscriptions 'Tsoi vit'."
+  },
+  {
+    "id": "zemfira-zemfira",
+    "nom": "Zemfira",
+    "artiste": "Zemfira",
+    "annee": 1999,
+    "pays": "Russie",
+    "continent": "Europe",
+    "genre": "Rock Alternatif Russe",
+    "tags": [
+      "rock",
+      "russie",
+      "indie",
+      "féministe"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Zemfira a débarqué sur la scène russe comme une bombe en 1999 — voix rauque, guitare directe, textes sans compromis sur l'amour et la solitude contemporaine. Elle est devenue la figure la plus importante du rock russe post-soviétique, refusant les cases commerciales et maintenant une intégrité artistique absolue malgré un succès massif."
+  },
+  {
+    "id": "goran-bregovic-underground",
+    "nom": "Underground (OST)",
+    "artiste": "Goran Bregović",
+    "annee": 1995,
+    "pays": "Bosnie",
+    "continent": "Europe",
+    "genre": "Brass Band / Balkan",
+    "tags": [
+      "balkans",
+      "cuivres",
+      "fête",
+      "cinéma"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Goran Bregović a composé la bande originale du film d'Emir Kusturica qui a gagné la Palme d'Or à Cannes — un chaos joyeux de cuivres tziganes, de valses serbes et de gypsy jazz qui vous donne envie de danser et de pleurer en même temps. Cette musique d'Europe de l'Est chaotique et vitale est devenue la définition même du son balkanique pour le reste du monde."
+  },
+  {
+    "id": "teresa-teng-the-moon-represents-my-heart",
+    "nom": "The Moon Represents My Heart",
+    "artiste": "Teresa Teng",
+    "annee": 1977,
+    "pays": "Taïwan",
+    "continent": "Asie",
+    "genre": "Mandopop / Chanson",
+    "tags": [
+      "mandopop",
+      "taiwan",
+      "romantique",
+      "intemporel"
+    ],
+    "palmares": [
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Chine",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Teresa Teng était tellement populaire en Chine communiste que Deng Xiaoping a dit dans les années 80 qu'il y avait deux Deng en Chine — lui qui gouvernait le jour, elle qui gouvernait la nuit avec ses chansons d'amour. Sa chanson 'La lune représente mon cœur' est peut-être la chanson la plus connue d'Asie — chantée dans les karaokés de Tokyo à Singapour depuis 50 ans."
+  },
+  {
+    "id": "sheena-ringo-muzai-moratorium",
+    "nom": "Muzai Moratorium",
+    "artiste": "Sheena Ringo",
+    "annee": 1999,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Rock Japonais / Art Rock",
+    "tags": [
+      "rock",
+      "japon",
+      "excentrique",
+      "virtuose"
+    ],
+    "palmares": [
+      "oricon"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Sheena Ringo a fait irruption dans la pop japonaise à 19 ans avec un premier album qui mélangeait chanson française, jazz, rock et cabaret dans une vision artistique totalement originale. Son titre — 'Moratorium de l'innocence' — annonçait une artiste qui refusait de grandir selon les règles et qui allait passer sa carrière à subvertir les attentes."
+  },
+  {
+    "id": "ryuichi-sakamoto-b2-unit",
+    "nom": "B-2 Unit",
+    "artiste": "Ryuichi Sakamoto",
+    "annee": 1980,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Electronic / Avant-garde",
+    "tags": [
+      "électronique",
+      "japon",
+      "avant-garde",
+      "danse"
+    ],
+    "palmares": [
+      "pitchfork"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Japon",
+      "Asie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Entre ses albums avec le Yellow Magic Orchestra, Ryuichi Sakamoto a enregistré ce solo radical qui fusionnait musique électronique européenne et rythmes new wave — plus sombre et plus expérimental que tout ce que faisait YMO. Sa carrière complète, des synthétiseurs pop aux compositions de films oscarisées, en fait l'artiste japonais le plus international du 20e siècle."
+  },
+  {
+    "id": "ustad-bismillah-khan-ragas-shehnai",
+    "nom": "Ragas on Shehnai",
+    "artiste": "Ustad Bismillah Khan",
+    "annee": 1968,
+    "pays": "Inde",
+    "continent": "Asie",
+    "genre": "Musique Classique Indienne",
+    "tags": [
+      "classique-indien",
+      "shehnai",
+      "spirituel",
+      "virtuose"
+    ],
+    "palmares": [
+      "bharat_ratna"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Inde"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Bismillah Khan a joué de la shehnai — hautbois cérémoniel hindou — pour Jawaharlal Nehru le soir de l'indépendance de l'Inde en 1947 depuis le Fort Rouge de Delhi, un moment gravé dans l'histoire. Sa maîtrise de cet instrument difficile transformait chaque raga en voyage spirituel de plusieurs heures, une méditation sonore qui connectait l'Inde à quelque chose d'éternel."
+  },
+  {
+    "id": "leonard-cohen-songs-of",
+    "nom": "Songs of Leonard Cohen",
+    "artiste": "Leonard Cohen",
+    "annee": 1967,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Folk / Chanson",
+    "tags": [
+      "folk",
+      "canada",
+      "poésie",
+      "fondateur"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 338
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Canada",
+      "France"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Leonard Cohen était d'abord un poète et romancier respecté quand il a commencé à chanter à 33 ans — trop vieux selon tous les standards de l'industrie musicale. Sa voix de basse grave et ses chansons poétiques sur l'amour, la religion et la mort ont influencé Nick Cave, Jeff Buckley et des centaines d'autres; 'Hallelujah' a été reprise plus de 300 fois par des artistes du monde entier."
+  },
+  {
+    "id": "kd-lang-ingenue",
+    "nom": "Ingénue",
+    "artiste": "k.d. lang",
+    "annee": 1992,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Country / Pop",
+    "tags": [
+      "country",
+      "canada",
+      "voix",
+      "icône"
+    ],
+    "palmares": [
+      "grammy"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "k.d. lang a gagné le Grammy avec Ingénue l'année où elle a annoncé publiquement son homosexualité — un acte courageux dans un milieu country très conservateur qui l'avait jusqu'alors boudée. Roy Orbison a dit qu'elle avait la plus belle voix qu'il ait jamais entendue; 'Constant Craving' reste une des ballades pop les plus parfaites des années 90."
+  },
+  {
+    "id": "tragically-hip-fully-completely",
+    "nom": "Fully Completely",
+    "artiste": "The Tragically Hip",
+    "annee": 1992,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Rock Alternatif Canadien",
+    "tags": [
+      "rock",
+      "canada",
+      "littéraire",
+      "culte"
+    ],
+    "palmares": [
+      "juno_award"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "The Tragically Hip sont le groupe le plus canadien qui soit — leurs textes nommaient des lieux, personnages et événements historiques canadiens que la plupart des Canadiens reconnaissaient mais que personne d'autre ne comprenait. Quand le chanteur Gord Downie a annoncé son cancer du cerveau en 2016, leur concert d'adieu a été retransmis en direct sur CBC devant 11 millions de téléspectateurs."
+  },
+  {
+    "id": "gordon-lightfoot-sundown",
+    "nom": "Sundown",
+    "artiste": "Gordon Lightfoot",
+    "annee": 1974,
+    "pays": "Canada",
+    "continent": "Amériques",
+    "genre": "Folk / Country Rock",
+    "tags": [
+      "folk",
+      "canada",
+      "classique",
+      "narrative"
+    ],
+    "palmares": [
+      "juno_award"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Canada",
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Gordon Lightfoot est le songwriter canadien que Bob Dylan et Elvis Presley admiraient assez pour reprendre ses chansons — 'Early Morning Rain' et 'If You Could Read My Mind' sont entrées dans le Great American Songbook malgré leur origine canadienne. Sundown fut son seul #1 américain, une ballade jalouse avec un riff de guitare aussi accrocheur que mystérieux."
+  },
+  {
+    "id": "the-smiths-the-queen-is-dead",
+    "nom": "The Queen Is Dead",
+    "artiste": "The Smiths",
+    "annee": 1986,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Indie Rock",
+    "tags": [
+      "indie",
+      "uk",
+      "morrissey",
+      "icône"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "nme"
+    ],
+    "palmares_rangs": {
+      "rs_500": 289,
+      "nme": 1
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "The Smiths ont créé un son mélancolique et ironique qui a capturé l'aliénation de toute une génération britannique étouffant sous Thatcher — Morrissey chantait sur la solitude et l'ennui provincial avec une éloquence littéraire sans équivalent. La combinaison de sa voix plaintive et des guitares scintillantes de Johnny Marr reste l'alchimie la plus distinctive de l'indie rock britannique."
+  },
+  {
+    "id": "joy-division-unknown-pleasures",
+    "nom": "Unknown Pleasures",
+    "artiste": "Joy Division",
+    "annee": 1979,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Post-Punk",
+    "tags": [
+      "post-punk",
+      "uk",
+      "sombre",
+      "fondateur"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "nme"
+    ],
+    "palmares_rangs": {
+      "rs_500": 478
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "La pochette d'Unknown Pleasures — les fréquences radio d'un pulsar dessinées en blanc sur fond noir — est devenue l'une des images les plus reproduites sur les t-shirts du monde entier. Ian Curtis, atteint d'épilepsie et de dépression, a chanté des textes sur la perte de contrôle et l'aliénation avec une intensité qui semblait prophétique — il s'est suicidé la veille de la première tournée américaine."
+  },
+  {
+    "id": "the-cure-disintegration",
+    "nom": "Disintegration",
+    "artiste": "The Cure",
+    "annee": 1989,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Gothic / Dream Pop",
+    "tags": [
+      "goth",
+      "uk",
+      "mélancolie",
+      "épique"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 326
+    },
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Robert Smith a créé Disintegration au moment où il croyait que The Cure était terminé — le label voulait du commercial, lui voulait de la noirceur absolue. Le résultat est leur chef-d'œuvre : 72 minutes d'une beauté sombre et suicidaire qui reste l'album goth le plus écouté de tous les temps, découvert par chaque génération adolescente en quête de musique qui comprend leur douleur."
+  },
+  {
+    "id": "gang-of-four-entertainment",
+    "nom": "Entertainment!",
+    "artiste": "Gang of Four",
+    "annee": 1979,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Post-Punk / Funk",
+    "tags": [
+      "post-punk",
+      "uk",
+      "politique",
+      "funk"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "pitchfork"
+    ],
+    "palmares_rangs": {
+      "rs_500": 490
+    },
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Gang of Four a fusionné le post-punk avec le funk et une théorie marxiste de la culture consumériste — leurs guitares discontinues et syncopées sur des rythmes de basse dansants ont influencé directement les Red Hot Chili Peppers, Franz Ferdinand et LCD Soundsystem. 'Damaged Goods' est peut-être le riff de guitare le plus copié des 40 dernières années de rock."
+  },
+  {
+    "id": "portishead-dummy",
+    "nom": "Dummy",
+    "artiste": "Portishead",
+    "annee": 1994,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Trip-Hop",
+    "tags": [
+      "trip-hop",
+      "uk",
+      "cinématique",
+      "sombre"
+    ],
+    "palmares": [
+      "rs_500",
+      "mercury_prize",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 397
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Portishead a inventé le trip-hop avec Dummy — des samples de films policiers des années 60, une basse lourde comme du béton et la voix de Beth Gibbons qui sonne comme une diva soul rescapée d'un cauchemar. L'album a gagné le Mercury Prize et a défini l'esthétique de toute une décennie de musique de chambre nocturne à Bristol."
+  },
+  {
+    "id": "wire-pink-flag",
+    "nom": "Pink Flag",
+    "artiste": "Wire",
+    "annee": 1977,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Punk / Post-Punk Minimaliste",
+    "tags": [
+      "punk",
+      "uk",
+      "minimaliste",
+      "pionnier"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "pitchfork"
+    ],
+    "palmares_rangs": {
+      "rs_500": 415
+    },
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Wire a pris le punk et l'a réduit à son essence pure — 21 morceaux en 35 minutes, certains de 28 secondes, dépouillés de tout artifice. Pink Flag a influencé Minor Threat, Sonic Youth et Blur ; R.E.M. a repris 'Strange' et l'a popularisée auprès d'une génération américaine qui ne connaissait pas encore Wire."
+  },
+  {
+    "id": "pulp-different-class",
+    "nom": "Different Class",
+    "artiste": "Pulp",
+    "annee": 1995,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Britpop",
+    "tags": [
+      "britpop",
+      "uk",
+      "classe-sociale",
+      "ironique"
+    ],
+    "palmares": [
+      "mercury_prize",
+      "nme",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Jarvis Cocker a attendu 15 ans de semi-obscurité avant que Pulp explose avec Different Class — un album sur les différences de classes en Grande-Bretagne raconté depuis le regard ironique et sentimental d'un garçon pauvre de Sheffield. 'Common People' est la chanson la plus drôle et la plus cinglante jamais écrite sur le tourisme de la pauvreté par les riches."
+  },
+  {
+    "id": "primal-scream-screamadelica",
+    "nom": "Screamadelica",
+    "artiste": "Primal Scream",
+    "annee": 1991,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Rave / Rock",
+    "tags": [
+      "rave",
+      "uk",
+      "house",
+      "rock"
+    ],
+    "palmares": [
+      "mercury_prize",
+      "nme",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Screamadelica est né quand Primal Scream a découvert l'ecstasy et la house music à la fin des années 80 et décidé de fusionner le rock avec la culture rave — le premier Mercury Prize en 1992 a validé cette vision folle. 'Loaded' et 'Come Together' ont créé le pont entre Woodstock et les clubs du Haçienda, entre les hippies et les ravers."
+  },
+  {
+    "id": "pj-harvey-rid-of-me",
+    "nom": "Rid of Me",
+    "artiste": "PJ Harvey",
+    "annee": 1993,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Alternative Rock",
+    "tags": [
+      "rock-alternatif",
+      "uk",
+      "féministe",
+      "brut"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "pitchfork"
+    ],
+    "palmares_rangs": {
+      "rs_500": 449
+    },
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Steve Albini a enregistré cet album en deux semaines dans le style le plus brut possible — PJ Harvey voulait que l'on entende les cordes frissonner et les dents grincer. Sa voix passe de la douceur au hurlement en une respiration, portant des textes sur le désir et la jalousie féminins avec une intensité que peu d'artistes osent."
+  },
+  {
+    "id": "nick-drake-pink-moon",
+    "nom": "Pink Moon",
+    "artiste": "Nick Drake",
+    "annee": 1972,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Folk / Ambient",
+    "tags": [
+      "folk",
+      "uk",
+      "solitaire",
+      "posthume"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music",
+      "pitchfork"
+    ],
+    "palmares_rangs": {
+      "rs_500": 326
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Nick Drake a enregistré Pink Moon seul en deux nuits — guitare et voix, rien d'autre — puis a déposé la bande à Island Records sans prévenir et est reparti sans un mot. Il est mort deux ans plus tard d'une overdose de médicaments à 26 ans ; sa musique n'a trouvé son public que dans les années 80, des années après sa mort, quand les gens ont réalisé que sa solitude était une forme de perfection."
+  },
+  {
+    "id": "patti-smith-horses",
+    "nom": "Horses",
+    "artiste": "Patti Smith",
+    "annee": 1975,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Punk / Art Rock",
+    "tags": [
+      "punk",
+      "poésie",
+      "féministe",
+      "fondateur"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 44
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Patti Smith a ouvert Horses avec 'Jesus died for somebody's sins but not mine' — une déclaration d'indépendance spirituelle et artistique qui annonçait un album fondateur du punk comme poésie incarnée. Robert Mapplethorpe a fait la pochette en 10 minutes dans son appartement, créant l'une des images les plus iconiques du rock; ils étaient amants, amis pour la vie et complices artistiques absolus."
+  },
+  {
+    "id": "tom-waits-rain-dogs",
+    "nom": "Rain Dogs",
+    "artiste": "Tom Waits",
+    "annee": 1985,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Blues / Avant-Rock",
+    "tags": [
+      "blues",
+      "bohème",
+      "cinématique",
+      "narratif"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 436
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Tom Waits a construit Rain Dogs comme une carte de clochards et de marginaux urbains — avec des instruments improbables comme des marteaux, des percussions industrielles et du ukulele — créant quelque chose qui sonne à la fois comme les années 30 et le futur. Keith Richards a joué sur l'album, ce qui était exactement la bonne chose à faire."
+  },
+  {
+    "id": "prince-sign-o-the-times",
+    "nom": "Sign 'O' the Times",
+    "artiste": "Prince",
+    "annee": 1987,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Funk / R&B / Rock",
+    "tags": [
+      "funk",
+      "génie",
+      "polyvalent",
+      "fondateur"
+    ],
+    "palmares": [
+      "rs_500",
+      "acclaimed_music"
+    ],
+    "palmares_rangs": {
+      "rs_500": 14
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Prince a joué presque tous les instruments sur cet album double de 16 titres en solo — funk, rock, soul, gospel, pop, jazz — avec une maîtrise technique qui laissait les autres musiciens sans voix. Le titre 'Sign O' the Times' résume le monde des années 80 — le SIDA, les gangs, les catastrophes naturelles — en 4 minutes de funk minimaliste d'une efficacité dévastatrice."
+  },
+  {
+    "id": "curtis-mayfield-super-fly",
+    "nom": "Super Fly",
+    "artiste": "Curtis Mayfield",
+    "annee": 1972,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Soul / Funk",
+    "tags": [
+      "soul",
+      "funk",
+      "cinéma",
+      "politique"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 83
+    },
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Curtis Mayfield a écrit Super Fly en critiquant le film blaxploitation qu'il était censé promouvoir — sa bande originale décrit la vie dans le ghetto avec une honnêteté que le film évite, transformant l'accompagnement musical en œuvre supérieure à l'image. Sa voix de falsetto doux sur des arrangements de strings funky est l'une des combinaisons les plus sensuelles de l'histoire de la soul."
+  },
+  {
+    "id": "isaac-hayes-hot-buttered-soul",
+    "nom": "Hot Buttered Soul",
+    "artiste": "Isaac Hayes",
+    "annee": 1969,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Soul / Orchestral",
+    "tags": [
+      "soul",
+      "orchestral",
+      "luxurieux",
+      "pionnier"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 234
+    },
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Isaac Hayes a pris une chanson de Jimmy Webb ('By the Time I Get to Phoenix') et en a fait un monologue de 18 minutes sur l'abandon amoureux avec orchestre et arrangement de cordes — repoussant les limites de ce qu'une chanson de soul pouvait être. Son album a fondé le concept de soul-cinématique et préfiguré toute la musique d'ambiance luxueuse des décennies suivantes."
+  },
+  {
+    "id": "parliament-mothership-connection",
+    "nom": "Mothership Connection",
+    "artiste": "Parliament",
+    "annee": 1975,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Funk / P-Funk",
+    "tags": [
+      "funk",
+      "space",
+      "groove",
+      "fondateur"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 138
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "George Clinton a créé un univers afrofuturiste complet avec Parliament — des extraterrestres noirs apportant le funk depuis une soucoupe volante — transformant chaque concert en rituel cosmique avec des feux d'artifice et un vaisseau spatial sur scène. 'Give Up the Funk' est l'un des morceaux les plus samplés de toute l'histoire du hip-hop, réapparu dans des centaines de tracks."
+  },
+  {
+    "id": "john-prine-john-prine",
+    "nom": "John Prine",
+    "artiste": "John Prine",
+    "annee": 1971,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Folk / Country",
+    "tags": [
+      "folk",
+      "country",
+      "narratif",
+      "humaniste"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_mbd"
+    ],
+    "palmares_rangs": {
+      "rs_500": 454
+    },
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "John Prine était facteur quand Kris Kristofferson l'a découvert dans un club de Chicago et a convaincu tout le monde qu'il était peut-être le meilleur songwriter américain de sa génération. Bob Dylan a dit de lui qu'il écrivait des chansons qui donnaient l'impression d'avoir été écrites depuis toujours — 'Angel from Montgomery' et 'Sam Stone' sont des romans complets en 3 minutes."
+  },
+  {
+    "id": "sam-cooke-night-beat",
+    "nom": "Night Beat",
+    "artiste": "Sam Cooke",
+    "annee": 1963,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Soul / Blues",
+    "tags": [
+      "soul",
+      "blues",
+      "voix",
+      "intemporel"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Sam Cooke a enregistré Night Beat en une nuit dans un studio blues sombre et intime — très différent de ses hits pop habituels — prouvant qu'il était capable d'une profondeur émotionnelle que ses singles ne laissaient pas deviner. Quand il a été assassiné en 1964 à 33 ans, Cassius Clay (Muhammad Ali) a pleuré publiquement; Ray Charles et James Brown l'appelaient 'The King of Soul'."
+  },
+  {
+    "id": "steve-reich-music-for-18-musicians",
+    "nom": "Music for 18 Musicians",
+    "artiste": "Steve Reich",
+    "annee": 1978,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Minimalisme / Classique Contemporain",
+    "tags": [
+      "minimaliste",
+      "classique-contemporain",
+      "transe",
+      "fondateur"
+    ],
+    "palmares": [
+      "grammy",
+      "pitchfork"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis",
+      "Canada"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Steve Reich a composé 55 minutes de musique répétitive pour 18 musiciens jouant en cycles qui se décalent progressivement — créant une expérience sonore qui ressemble à une méditation ou à une transe collective. La musique de Reich a directement influencé Aphex Twin, Radiohead et toute la scène techno de Detroit qui la cite comme une référence fondamentale."
+  },
+  {
+    "id": "gillian-welch-time-the-revelator",
+    "nom": "Time (The Revelator)",
+    "artiste": "Gillian Welch",
+    "annee": 2001,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Folk / Alt Country",
+    "tags": [
+      "folk",
+      "appalachian",
+      "duet",
+      "intemporel"
+    ],
+    "palmares": [
+      "rs_500",
+      "pitchfork"
+    ],
+    "palmares_rangs": {
+      "rs_500": 452
+    },
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Gillian Welch et David Rawlings jouent ensemble à deux — une guitare acoustique, une voix et des harmonies — mais créent une sonorité si complète qu'on cherche les instruments cachés. Time (The Revelator) semble avoir toujours existé, comme si ces chansons venaient des Appalaches des années 1930 bien qu'elles parlent d'Emmett Till et de la musique en MP3."
+  },
+  {
+    "id": "loretta-lynn-coal-miners-daughter",
+    "nom": "Coal Miner's Daughter",
+    "artiste": "Loretta Lynn",
+    "annee": 1970,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Country",
+    "tags": [
+      "country",
+      "féministe",
+      "autobiographique",
+      "classique"
+    ],
+    "palmares": [
+      "rs_500",
+      "grammy_hall_of_fame"
+    ],
+    "palmares_rangs": {
+      "rs_500": 398
+    },
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cuisine": [
+      "États-Unis"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Loretta Lynn a grandi dans une cabane sans électricité dans les Appalaches et a épousé Oliver 'Doolittle' Lynn à 15 ans — elle écrivait des chansons sur la pauvreté, la fidélité et les droits des femmes que le Nashville conservateur trouvait trop provocantes. 'The Pill' sur la contraception et 'Fist City' sur la fidélité ont été censurés par certaines radios country, ce qui n'a fait qu'amplifier leur portée."
+  },
+  {
+    "id": "midnight-oil-diesel-and-dust",
+    "nom": "Diesel and Dust",
+    "artiste": "Midnight Oil",
+    "annee": 1987,
+    "pays": "Australie",
+    "continent": "Océanie",
+    "genre": "Rock / Protest",
+    "tags": [
+      "rock",
+      "australie",
+      "politique",
+      "aborigène"
+    ],
+    "palmares": [
+      "aria_award"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Australie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Midnight Oil a enregistré 'Beds Are Burning' après une tournée dans les communautés aborigènes d'Australie — leur chanson sur la restitution des terres aux peuples premiers est devenue un hymne environnemental mondial joué à la cérémonie de clôture des JO de Sydney 2000. Peter Garrett, leur chanteur chauve et géant, est ensuite devenu ministre de l'Environnement australien."
+  },
+  {
+    "id": "nick-cave-the-boatmans-call",
+    "nom": "The Boatman's Call",
+    "artiste": "Nick Cave & The Bad Seeds",
+    "annee": 1997,
+    "pays": "Australie",
+    "continent": "Océanie",
+    "genre": "Dark Folk / Post-Punk",
+    "tags": [
+      "dark-folk",
+      "australie",
+      "amour",
+      "piano"
+    ],
+    "palmares": [
+      "aria_award",
+      "rs_500"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Australie",
+      "Royaume-Uni"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Nick Cave a écrit The Boatman's Call après ses ruptures avec PJ Harvey et Viviane Carneiro — un album de piano-voix d'une nudité émotionnelle totale, sans les arrangements gothiques habituels des Bad Seeds. 'Into My Arms' est devenu l'un des textes d'amour les plus cités pour les cérémonies de mariage, ce que Cave, qui ne croit pas en Dieu, trouve probablement ironique."
+  },
+  {
+    "id": "yothu-yindi-tribal-voice",
+    "nom": "Tribal Voice",
+    "artiste": "Yothu Yindi",
+    "annee": 1991,
+    "pays": "Australie",
+    "continent": "Océanie",
+    "genre": "Rock Aborigène",
+    "tags": [
+      "australie",
+      "aborigène",
+      "yolngu",
+      "politique"
+    ],
+    "palmares": [
+      "aria_award"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Australie"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Yothu Yindi mêle instruments traditionnels yolngu — didgeridoo et bilma (claquettes) — avec la guitare électrique pour réclamer les droits territoriaux du peuple Yolngu d'Arnhem Land. 'Treaty' est devenu l'hymne de la réconciliation aborigène en Australie, une chanson politique qui dansait assez bien pour passer dans les clubs et toucher des millions de non-Aborigènes."
+  },
+  {
+    "id": "the-knife-silent-shout",
+    "nom": "Silent Shout",
+    "artiste": "The Knife",
+    "annee": 2006,
+    "pays": "Suède",
+    "continent": "Europe",
+    "genre": "Electronic / Synth",
+    "tags": [
+      "électronique",
+      "suède",
+      "féministe",
+      "sombre"
+    ],
+    "palmares": [
+      "pitchfork",
+      "grammy_suede"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cuisine": [
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Le frère et la sœur Karin et Olof Dreijer ont créé un album d'electropop sombre et féministe que personne n'attendait de la Suède — des synthés froids comme le gel, des voix traitées jusqu'à l'inhuman et des paroles sur le genre et le corps. The Knife refusait les interviews en personne, portait des masques sur scène et démantait systématiquement la célébrité comme concept."
+  },
+  {
+    "id": "efterklang-parades",
+    "nom": "Parades",
+    "artiste": "Efterklang",
+    "annee": 2007,
+    "pays": "Danemark",
+    "continent": "Europe",
+    "genre": "Indie / Orchestral",
+    "tags": [
+      "indie",
+      "danemark",
+      "orchestral",
+      "ambitieux"
+    ],
+    "palmares": [
+      "pitchfork"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cuisine": [
+      "Europe"
+    ],
+    "url_apple_music": null,
+    "artwork_url": null,
+    "rang_mondial": null,
+    "description": "Efterklang a enregistré Parades avec un orchestre de 30 musiciens dans une église danoise — le résultat est une musique indie qui respire aussi grand que la toundra. Leur attention obsessionnelle au son et à l'espace les place quelque part entre Sigur Rós, Sufjan Stevens et une cérémonie religieuse laïque qui se terminerait en danse."
   }
 ]
