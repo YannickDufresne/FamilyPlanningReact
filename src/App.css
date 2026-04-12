@@ -5625,6 +5625,161 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   margin-top: 0.25rem;
 }
 
+/* ── Film de la semaine (section autonome) ─────────────────────────────────── */
+.fds-section {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 0 12px;
+}
+
+.fds-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--forest, #3d6b4f);
+  color: white;
+}
+
+.fds-header__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fds-header__icon { font-size: 1rem; }
+
+.fds-header__titre {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.fds-header__origine {
+  background: rgba(255,255,255,0.22);
+  border-radius: 20px;
+  padding: 2px 9px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.fds-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fds-body {
+  display: flex;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+.fds-poster {
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.fds-poster__img {
+  width: 100px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.fds-poster__placeholder {
+  width: 100px;
+  aspect-ratio: 2/3;
+  background: var(--bg-alt, #f0ece6);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.fds-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.fds-info__nom {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.fds-info__original {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.fds-info__meta {
+  font-size: 0.8rem;
+  color: var(--ink-2);
+}
+
+.fds-score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.fds-score__bar-wrap {
+  flex: 1;
+}
+
+.fds-palmares {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--forest);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.fds-desc {
+  margin-top: 2px;
+}
+
+.fds-desc__text {
+  font-size: 0.78rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fds-desc__text--open {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.fds-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+@media (max-width: 500px) {
+  .fds-body { flex-direction: column; }
+  .fds-poster, .fds-poster__img, .fds-poster__placeholder { width: 100%; aspect-ratio: 16/9; }
+  .fds-poster__placeholder { aspect-ratio: 3/1; }
+}
+
 /* ── Film de la semaine (carte dans WeeklyPlanning) ────────────────────────── */
 .film-semaine-card {
   margin-top: 2rem;
@@ -5741,7 +5896,7 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
 .film-semaine-card__nom {
   font-weight: 700;
   font-size: 1rem;
-  color: var(--ink-1, #1a1a1a);
+  color: var(--ink);
   line-height: 1.2;
 }
 

@@ -14,6 +14,7 @@ import ProfilsModal from './components/ProfilsModal';
 import MethodologieModal from './components/MethodologieModal';
 import ModalOptimisationIA from './components/ModalOptimisationIA';
 import FamilleActualites from './components/FamilleActualites';
+import FilmDeLaSemaineSection from './components/FilmDeLaSemaineSection';
 import FooterMontcalm from './components/FooterMontcalm';
 import { genererPlanning, calculerStats } from './utils/planning';
 import { syncWrite, syncRead, syncSubscribe, uploadPhoto, deletePhoto } from './utils/sync';
@@ -758,6 +759,9 @@ export default function App() {
               profils={profils}
               semaineVue={semaineVue}
               agenda={agenda}
+            />
+            <FilmDeLaSemaineSection
+              semaineVue={semaineVue}
               filtresOrigine={filtres.origine}
               filmRatings={filmRatings}
               onNoterFilm={raterFilm}
