@@ -86,6 +86,30 @@ const TIER_ALBUM = s => {
   return              { label:'Remarquable',    cls:'tier--remarquable'    };
 };
 
+const PALMARES_LABELS_DAY = {
+  rolling_stone_1: 'RS', rolling_stone_top10: 'RS', rolling_stone_top50: 'RS',
+  rolling_stone_top500: 'Rolling Stone', rs_500: 'Rolling Stone',
+  acclaimed_music: 'Acclaimed', acclaimed_top100: 'Acclaimed',
+  rate_your_music: 'RYM', rym_top50: 'RYM',
+  pitchfork: 'Pitchfork', pitchfork_top100: 'Pitchfork',
+  grammy_hall_of_fame: 'Grammy HOF', nme: 'NME',
+};
+
+// Trouve le palmarès le plus notable avec son rang
+function meilleurPalmares(album) {
+  if (!album.palmares?.length) return null;
+  // Priorité : ceux avec un rang spécifique d'abord
+  const avecRang = album.palmares.filter(p => album.palmares_rangs?.[p]);
+  const cible = avecRang.length > 0
+    ? avecRang.reduce((best, p) =>
+        (album.palmares_rangs[p] < (album.palmares_rangs[best] ?? Infinity)) ? p : best
+      , avecRang[0])
+    : album.palmares[0];
+  const label = PALMARES_LABELS_DAY[cible] || cible;
+  const rang = album.palmares_rangs?.[cible];
+  return rang ? `${label} #${rang}` : label;
+}
+
 // ── Mini-carte album dans DayCard ────────────────────────────────────────────
 function AlbumDuJourCard({ album }) {
   const [artwork, setArtwork] = useState(album.artwork_url || null);
@@ -109,6 +133,7 @@ function AlbumDuJourCard({ album }) {
   const extrait = album.description
     ? album.description.replace(/([.!?])\s.+/, '$1').slice(0, 110)
     : null;
+  const topPalmares = meilleurPalmares(album);
 
   return (
     <div className="day-album">
@@ -125,6 +150,7 @@ function AlbumDuJourCard({ album }) {
           {drapeau} {album.pays} · {album.annee}
           <span className={`day-album__tier ${tier.cls}`}>{tier.label}</span>
         </div>
+        {topPalmares && <div className="day-album__palmares">{topPalmares}</div>}
         {extrait && <div className="day-album__desc">{extrait}</div>}
       </div>
       {album.url_apple_music && (

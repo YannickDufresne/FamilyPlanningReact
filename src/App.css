@@ -5275,6 +5275,11 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   border-radius: 8px;
   white-space: nowrap;
 }
+.palmares-chip__rang {
+  font-weight: 700;
+  color: var(--ink-1);
+  opacity: 0.9;
+}
 
 .album-carte__desc {
   font-size: 0.76rem;
@@ -5429,6 +5434,13 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   border-radius: 6px;
 }
 
+.day-album__palmares {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--forest);
+  opacity: 0.85;
+  margin-top: 1px;
+}
 .day-album__desc {
   font-size: 0.70rem;
   color: var(--ink-2);

@@ -154,11 +154,15 @@ function AlbumCarte({ album, ratings, onNoter }) {
         {/* Palmarès */}
         {album.palmares?.length > 0 && (
           <div className="album-carte__palmares">
-            {album.palmares.map(p => (
-              <span key={p} className="album-palmares-chip">
-                {PALMARES_LABELS[p] || p}
-              </span>
-            ))}
+            {album.palmares.map(p => {
+              const rang = album.palmares_rangs?.[p];
+              return (
+                <span key={p} className="album-palmares-chip">
+                  {PALMARES_LABELS[p] || p}
+                  {rang ? <span className="palmares-chip__rang"> #{rang}</span> : ''}
+                </span>
+              );
+            })}
           </div>
         )}
 
