@@ -66,6 +66,75 @@ function choisirAlbumDuJour(recette, jourIndex, albums, ratings) {
   return pool[jourIndex % pool.length];
 }
 
+const DRAPEAUX_ALBUM = {
+  'États-Unis':'🇺🇸','Royaume-Uni':'🇬🇧','France':'🇫🇷','Canada':'🇨🇦',
+  'Japon':'🇯🇵','Brésil':'🇧🇷','Allemagne':'🇩🇪','Italie':'🇮🇹',
+  'Espagne':'🇪🇸','Nigeria':'🇳🇬','Mali':'🇲🇱','Sénégal':'🇸🇳',
+  'Afrique du Sud':'🇿🇦','Éthiopie':'🇪🇹','Égypte':'🇪🇬','Tunisie':'🇹🇳',
+  'Algérie':'🇩🇿','Maroc':'🇲🇦','Liban':'🇱🇧','Turquie':'🇹🇷',
+  'Syrie':'🇸🇾','Iran':'🇮🇷','Pakistan':'🇵🇰','Inde':'🇮🇳',
+  'Corée du Sud':'🇰🇷','Chine':'🇨🇳','Islande':'🇮🇸','Norvège':'🇳🇴',
+  'Suède':'🇸🇪','Portugal':'🇵🇹','Australie':'🇦🇺','Haïti':'🇭🇹',
+  'Porto Rico':'🇵🇷','Mexique':'🇲🇽','Argentine':'🇦🇷','Chili':'🇨🇱',
+  'Cuba':'🇨🇺','Jamaïque':'🇯🇲','Viêtnam':'🇻🇳','Thaïlande':'🇹🇭',
+};
+const TIER_ALBUM = s => {
+  if (s >= 95) return { label:'Légendaire',     cls:'tier--legendaire'     };
+  if (s >= 85) return { label:'Incontournable', cls:'tier--incontournable' };
+  if (s >= 75) return { label:'Essentiel',      cls:'tier--essentiel'      };
+  if (s >= 65) return { label:'Reconnu',        cls:'tier--reconnu'        };
+  return              { label:'Remarquable',    cls:'tier--remarquable'    };
+};
+
+// ── Mini-carte album dans DayCard ────────────────────────────────────────────
+function AlbumDuJourCard({ album }) {
+  const [artwork, setArtwork] = useState(album.artwork_url || null);
+
+  useEffect(() => {
+    if (album.artwork_url || !album.artiste) return;
+    let dead = false;
+    fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(album.artiste+' '+album.nom)}&entity=album&limit=3&country=ca`)
+      .then(r => r.json())
+      .then(d => {
+        if (dead) return;
+        const m = (d.results||[]).find(r => r.artworkUrl100);
+        if (m) setArtwork(m.artworkUrl100.replace('100x100bb','300x300bb'));
+      }).catch(()=>{});
+    return () => { dead = true; };
+  }, [album.artiste, album.nom, album.artwork_url]);
+
+  const tier = TIER_ALBUM(album.score_consensus ?? 60);
+  const drapeau = DRAPEAUX_ALBUM[album.pays] || '🌍';
+  // Premier extrait de description (première phrase)
+  const extrait = album.description
+    ? album.description.replace(/([.!?])\s.+/, '$1').slice(0, 110)
+    : null;
+
+  return (
+    <div className="day-album">
+      <div className="day-album__artwork">
+        {artwork
+          ? <img src={artwork} alt={album.nom} loading="lazy" />
+          : <div className="day-album__artwork-ph">🎵</div>
+        }
+      </div>
+      <div className="day-album__body">
+        <div className="day-album__nom">{album.nom}</div>
+        <div className="day-album__artiste">{album.artiste}</div>
+        <div className="day-album__meta">
+          {drapeau} {album.pays} · {album.annee}
+          <span className={`day-album__tier ${tier.cls}`}>{tier.label}</span>
+        </div>
+        {extrait && <div className="day-album__desc">{extrait}</div>}
+      </div>
+      {album.url_apple_music && (
+        <a className="day-album__link" href={album.url_apple_music}
+           target="_blank" rel="noopener noreferrer" title="Écouter sur Apple Music">▶</a>
+      )}
+    </div>
+  );
+}
+
 // ── Cherche UN album/compilation iTunes selon l'artiste de référence ──────────
 function useAlbum(musique) {
   const [album, setAlbum] = useState(null);
@@ -647,24 +716,7 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
       {!isWarning && (() => {
         const albumJour = choisirAlbumDuJour(recette, jourIndex, albumsData, albumRatings);
         if (!albumJour) return null;
-        return (
-          <div className="day-album">
-            <span className="day-album__icon">🎵</span>
-            <div className="day-album__info">
-              <span className="day-album__nom">{albumJour.nom}</span>
-              <span className="day-album__artiste">{albumJour.artiste} · {albumJour.pays}</span>
-            </div>
-            {albumJour.url_apple_music && (
-              <a
-                className="day-album__link"
-                href={albumJour.url_apple_music}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Écouter sur Apple Music"
-              >▶</a>
-            )}
-          </div>
-        );
+        return <AlbumDuJourCard album={albumJour} />;
       })()}
 
       {/* Recherche / ajout de recette — rendu dans body via portal pour éviter les problèmes de z-index */}
