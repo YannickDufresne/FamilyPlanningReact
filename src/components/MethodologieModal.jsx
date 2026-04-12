@@ -93,6 +93,29 @@ export default function MethodologieModal({ onClose }) {
         </div>
 
         <div className="methode-section">
+          <div className="methode-section__titre">🎬 Bibliothèque de films — 137 films</div>
+          <p className="methode-section__texte">
+            Une sélection de <strong>137 films essentiels</strong> couvrant le cinéma mondial :
+            États-Unis, Québec, France, Italie, Japon, Corée, Chine/Taïwan/Hong Kong, Inde,
+            Allemagne, Russie, Scandinavie, Royaume-Uni, Iran, Espagne, Amérique latine,
+            Afrique et Moyen-Orient. Chaque film inclut une description en français avec
+            anecdotes historiques et contexte culturel.
+          </p>
+          <p className="methode-section__texte">
+            <strong>Film de la semaine</strong> — une suggestion unique apparaît dans le planning
+            hebdomadaire, choisie selon deux critères : la <em>saison en cours</em>
+            (ex : films d'hiver nordiques en janvier, films d'été en juillet) et l'
+            <em>origine culturelle du filtre de recettes</em> (ex : si vous cuisinez japonais
+            cette semaine, un film japonais sera suggéré). La sélection est déterministe — stable
+            entre appareils — et change automatiquement chaque semaine.
+          </p>
+          <p className="methode-section__texte">
+            Filtrable par continent, époque et note personnelle, triable par consensus critique
+            ou coups de cœur. Chaque film est noté 1–5 ⭐ et lié à IMDB.
+          </p>
+        </div>
+
+        <div className="methode-section">
           <div className="methode-section__titre">🔄 Mise à jour hebdomadaire</div>
           <p className="methode-section__texte">
             Chaque vendredi soir, un script GitHub Actions régénère automatiquement :

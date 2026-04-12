@@ -1,0 +1,4751 @@
+[
+  {
+    "id": "citizen-kane-1941",
+    "nom": "Citizen Kane",
+    "titre_original": "Citizen Kane",
+    "realisateur": "Orson Welles",
+    "annee": 1941,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame / Biopic",
+    "langue": "Anglais",
+    "duree": 119,
+    "tags": [
+      "pouvoir",
+      "médias",
+      "mémoire",
+      "portrait"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 2,
+      "afi_top100": 1
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0033467/",
+    "poster_url": null,
+    "description": "Orson Welles avait seulement 25 ans lorsqu'il réalisa ce chef-d'œuvre absolu du cinéma, inventant presque à lui seul le langage visuel moderne. Le film fut boycotté à sa sortie par le magnat de la presse William Randolph Hearst, qui se reconnut dans le personnage de Kane — menaçant les cinémas de retirer toute publicité s'ils le projetaient. Pendant des décennies, il fut élu meilleur film de tous les temps par pratiquement chaque liste critique sérieuse.",
+    "rang_mondial": 1
+  },
+  {
+    "id": "vertigo-1958",
+    "nom": "Sueurs froides",
+    "titre_original": "Vertigo",
+    "realisateur": "Alfred Hitchcock",
+    "annee": 1958,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Thriller / Romance",
+    "langue": "Anglais",
+    "duree": 128,
+    "tags": [
+      "obsession",
+      "identité",
+      "amour",
+      "suspense"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 1
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0052357/",
+    "poster_url": null,
+    "description": "Longtemps considéré comme un échec commercial à sa sortie, Vertigo fut retiré de la distribution par Hitchcock lui-même et ne fut redécouvert que dans les années 1980. En 2012, il détrôna Citizen Kane au sommet du classement Sight & Sound après 50 ans de règne. Cette exploration vertigineuse de l'obsession et de l'identité féminine est aujourd'hui considérée comme l'œuvre la plus personnelle et la plus troublante du Maître du suspense.",
+    "rang_mondial": 2
+  },
+  {
+    "id": "2001-space-odyssey-1968",
+    "nom": "2001 : L'Odyssée de l'espace",
+    "titre_original": "2001: A Space Odyssey",
+    "realisateur": "Stanley Kubrick",
+    "annee": 1968,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Science-fiction",
+    "langue": "Anglais",
+    "duree": 149,
+    "tags": [
+      "humanité",
+      "IA",
+      "cosmos",
+      "évolution"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 6,
+      "afi_top100": 15
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0062622/",
+    "poster_url": null,
+    "description": "Kubrick passa quatre ans à réaliser ce film visionnaire, collaborant avec Arthur C. Clarke pour créer une œuvre philosophique sur l'évolution humaine que les studios MGM comprirent à peine. À sa sortie en 1968, les critiques furent mitigés mais le public young et psychédélique en fit un succès — certains le regardaient sous l'influence de drogues. Les effets spéciaux, réalisés sans ordinateurs, restent époustouflants plus de 50 ans plus tard.",
+    "rang_mondial": 3
+  },
+  {
+    "id": "casablanca-1942",
+    "nom": "Casablanca",
+    "titre_original": "Casablanca",
+    "realisateur": "Michael Curtiz",
+    "annee": 1942,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame romantique / Guerre",
+    "langue": "Anglais",
+    "duree": 102,
+    "tags": [
+      "amour",
+      "guerre",
+      "sacrifice",
+      "résistance"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_meilleur_film",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 2
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis",
+      "Maroc"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0034583/",
+    "poster_url": null,
+    "description": "Tourné pendant la Seconde Guerre mondiale alors que l'issue du conflit était incertaine, Casablanca fut improvisé au jour le jour — les acteurs ne connaissaient pas la fin du scénario pendant le tournage. La célèbre réplique «Play it again, Sam» n'apparaît nulle part dans le film, pourtant tout le monde croit se souvenir de l'avoir entendue. Ce malentendu collectif est devenu l'un des phénomènes culturels les plus fascinants de l'histoire du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "godfather-1972",
+    "nom": "Le Parrain",
+    "titre_original": "The Godfather",
+    "realisateur": "Francis Ford Coppola",
+    "annee": 1972,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame / Crime",
+    "langue": "Anglais",
+    "duree": 175,
+    "tags": [
+      "famille",
+      "crime",
+      "pouvoir",
+      "loyauté"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_meilleur_film",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 2,
+      "imdb_top250": 2
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0068646/",
+    "poster_url": null,
+    "description": "Paramount ne voulait pas de Coppola et préférait Sergio Leone pour réaliser ce film; Marlon Brando dut passer une audition humiliante pour obtenir le rôle de Vito Corleone, bourrant ses joues de coton. Le chat qu'il caresse dans la scène d'ouverture fut trouvé errant sur le plateau le matin du tournage. Ce film-monde, avec ses trois heures de saga familiale, redéfinit complètement le film de gangsters américain.",
+    "rang_mondial": null
+  },
+  {
+    "id": "apocalypse-now-1979",
+    "nom": "Apocalypse Now",
+    "titre_original": "Apocalypse Now",
+    "realisateur": "Francis Ford Coppola",
+    "annee": 1979,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Guerre / Drame",
+    "langue": "Anglais",
+    "duree": 147,
+    "tags": [
+      "guerre",
+      "folie",
+      "vietnam",
+      "horreur"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_palme_dor",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 30
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0078788/",
+    "poster_url": null,
+    "description": "Le tournage aux Philippines fut lui-même apocalyptique: l'ouragan Olga détruisit les décors, Martin Sheen fit une crise cardiaque, Marlon Brando arriva 40 kg plus lourd que prévu et Dennis Hopper était constamment ivre. Coppola finança lui-même le film et frôla la faillite personnelle. Le documentaire «Hearts of Darkness» sur ce tournage infernal est presque aussi fascinant que le film lui-même.",
+    "rang_mondial": null
+  },
+  {
+    "id": "taxi-driver-1976",
+    "nom": "Taxi Driver",
+    "titre_original": "Taxi Driver",
+    "realisateur": "Martin Scorsese",
+    "annee": 1976,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Thriller / Drame",
+    "langue": "Anglais",
+    "duree": 114,
+    "tags": [
+      "solitude",
+      "violence",
+      "new-york",
+      "alienation"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_grand_prix",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 52
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0075314/",
+    "poster_url": null,
+    "description": "Robert De Niro prépara le rôle en conduisant réellement des taxis à New York pendant des semaines, collectant des anecdotes de chauffeurs. La scène «You talkin' to me?» fut entièrement improvisée — Scorsese avait laissé la caméra tourner sans indication précise. Le film inspira John Hinckley Jr. dans sa tentative d'assassinat de Ronald Reagan en 1981, voulant impressionner Jodie Foster, alors âgée de 12 ans dans le film.",
+    "rang_mondial": null
+  },
+  {
+    "id": "chinatown-1974",
+    "nom": "Chinatown",
+    "titre_original": "Chinatown",
+    "realisateur": "Roman Polanski",
+    "annee": 1974,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Film noir / Thriller",
+    "langue": "Anglais",
+    "duree": 130,
+    "tags": [
+      "corruption",
+      "enquête",
+      "losangeles",
+      "eau"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 21
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0071315/",
+    "poster_url": null,
+    "description": "Robert Towne écrivit un scénario avec une fin heureuse; Polanski imposa la fin tragique que l'on connaît — l'une des fins les plus dévastatrices de l'histoire du cinéma américain. Le film s'inspire des guerres de l'eau réelles qui ont façonné Los Angeles au début du XXe siècle. Jack Nicholson reçut sa fameuse entaille au nez de la main de Polanski lui-même, qui jouait le truand avec le couteau.",
+    "rang_mondial": null
+  },
+  {
+    "id": "dr-strangelove-1964",
+    "nom": "Docteur Folamour",
+    "titre_original": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "realisateur": "Stanley Kubrick",
+    "annee": 1964,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Comédie / Satire politique",
+    "langue": "Anglais",
+    "duree": 95,
+    "tags": [
+      "guerre-froide",
+      "satire",
+      "nucléaire",
+      "folie"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "bafta",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 39
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis",
+      "Royaume-Uni"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0057012/",
+    "poster_url": null,
+    "description": "Peter Sellers devait jouer quatre rôles différents mais se cassa la cheville et dut en abandonner un; il improvisa tellement que Kubrick gardait les caméras en marche entre les prises pour ne rien rater. La scène finale de guerre de tarte à la crème fut tournée mais coupée au montage car Kubrick jugea qu'elle trivializait trop le message. Sorte de prophétie comique, le film reste la meilleure satire de la folie nucléaire jamais réalisée.",
+    "rang_mondial": null
+  },
+  {
+    "id": "mulholland-drive-2001",
+    "nom": "Mulholland Drive",
+    "titre_original": "Mulholland Drive",
+    "realisateur": "David Lynch",
+    "annee": 2001,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Thriller / Mystère / Surréalisme",
+    "langue": "Anglais",
+    "duree": 147,
+    "tags": [
+      "rêve",
+      "hollywood",
+      "identité",
+      "surréalisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 5
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0166924/",
+    "poster_url": null,
+    "description": "Lynch avait initialement conçu Mulholland Drive comme un pilote de série télévisée pour ABC, qui refusa de diffuser le projet jugé trop bizarre. Le réalisateur obtint des financements européens pour en faire un long métrage, ajoutant une heure de footage et transformant la structure narrative. Élu meilleur film du XXIe siècle par BBC Culture en 2016, il est devenu l'une des œuvres les plus analysées et débattues du cinéma moderne.",
+    "rang_mondial": null
+  },
+  {
+    "id": "there-will-be-blood-2007",
+    "nom": "There Will Be Blood",
+    "titre_original": "There Will Be Blood",
+    "realisateur": "Paul Thomas Anderson",
+    "annee": 2007,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame historique",
+    "langue": "Anglais",
+    "duree": 158,
+    "tags": [
+      "pétrole",
+      "capitalisme",
+      "religion",
+      "ambition"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0469494/",
+    "poster_url": null,
+    "description": "Daniel Day-Lewis passa des mois à étudier des archives sonores de l'époque pour développer l'accent unique de Daniel Plainview, s'inspirant notamment de John Huston. La partition de Jonny Greenwood de Radiohead fut initialement refusée aux Oscars car jugée trop «contemporaine» pour un film en période, une décision largement moquée par la critique. Ce portrait d'un homme dévoré par sa propre ambition est peut-être le film américain le plus nietzschéen jamais réalisé.",
+    "rang_mondial": null
+  },
+  {
+    "id": "no-country-for-old-men-2007",
+    "nom": "Non, ce pays n'est pas pour le vieil homme",
+    "titre_original": "No Country for Old Men",
+    "realisateur": "Joel et Ethan Coen",
+    "annee": 2007,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Thriller / Western néo-noir",
+    "langue": "Anglais",
+    "duree": 122,
+    "tags": [
+      "violence",
+      "destin",
+      "texas",
+      "fuite"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "oscar_meilleur_film"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0477348/",
+    "poster_url": null,
+    "description": "Les frères Coen adaptèrent fidèlement le roman de Cormac McCarthy, conservant ses longues plages de silence et sa fin délibérément insatisfaisante qui déconcerta de nombreux spectateurs lors de la première. Javier Bardem, dans le rôle d'Anton Chigurh, confia qu'il ne pouvait pas conduire pendant le tournage car sa coupe de cheveux lui valait trop de regards horrifiés. Tommy Lee Jones joue ici son propre oncle dans la réalité: le vrai shérif Ed Tom Bell, dont le livre de mémoires inspira McCarthy.",
+    "rang_mondial": null
+  },
+  {
+    "id": "moonlight-2016",
+    "nom": "Moonlight",
+    "titre_original": "Moonlight",
+    "realisateur": "Barry Jenkins",
+    "annee": 2016,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame",
+    "langue": "Anglais",
+    "duree": 111,
+    "tags": [
+      "identité",
+      "adolescence",
+      "noirceur",
+      "tendresse"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_meilleur_film"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt4975722/",
+    "poster_url": null,
+    "description": "Tourné avec un budget dérisoire de 1,5 million de dollars à Miami, Moonlight remporta l'Oscar du meilleur film dans la cérémonie la plus chaotique de l'histoire des Académys — la mauvaise enveloppe fut annoncée, donnant d'abord La La Land gagnant. Jenkins s'inspira directement de son enfance dans la même cité de Liberty City à Miami. Ce film d'une beauté visuelle sidérante transforme trois tableaux de vie en une méditation sur l'amour et l'identité.",
+    "rang_mondial": null
+  },
+  {
+    "id": "pulp-fiction-1994",
+    "nom": "Pulp Fiction",
+    "titre_original": "Pulp Fiction",
+    "realisateur": "Quentin Tarantino",
+    "annee": 1994,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Crime / Drame",
+    "langue": "Anglais",
+    "duree": 154,
+    "tags": [
+      "crime",
+      "losangeles",
+      "dialogues",
+      "non-linéaire"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {
+      "imdb_top250": 8
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0110912/",
+    "poster_url": null,
+    "description": "Tarantino écrivit le scénario avec Roger Avary dans un appartement d'Amsterdam, partageant un seul stylo. La valise mystérieuse dont on ne voit jamais le contenu a généré des milliers de théories — certains suggèrent l'âme de Marsellus Wallace, d'autres des diamants du film Reservoir Dogs. Avec un budget de 8 millions de dollars, Pulp Fiction engrangea 213 millions mondiaux et relança la carrière de John Travolta, que tout Hollywood avait oublié.",
+    "rang_mondial": null
+  },
+  {
+    "id": "raging-bull-1980",
+    "nom": "Raging Bull",
+    "titre_original": "Raging Bull",
+    "realisateur": "Martin Scorsese",
+    "annee": 1980,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame biographique / Sport",
+    "langue": "Anglais",
+    "duree": 129,
+    "tags": [
+      "boxe",
+      "autodestructon",
+      "jalousie",
+      "brutalité"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 4
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0081398/",
+    "poster_url": null,
+    "description": "Robert De Niro prit 27 kg pour incarner Jake LaMotta vieillissant, devenant le premier acteur à transformer physiquement son corps à ce point pour un rôle — inaugurant une tradition que Christian Bale et d'autres pousseraient encore plus loin. Scorsese, en pleine dépression et addiction à la cocaïne, réalisa ce film comme une sorte d'exorcisme personnel. Tourné en noir et blanc pour évoquer les photos de boxe de l'époque, il reste le film de sport le plus brutal et le plus beau jamais réalisé.",
+    "rang_mondial": null
+  },
+  {
+    "id": "annie-hall-1977",
+    "nom": "Annie Hall",
+    "titre_original": "Annie Hall",
+    "realisateur": "Woody Allen",
+    "annee": 1977,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Comédie romantique",
+    "langue": "Anglais",
+    "duree": 93,
+    "tags": [
+      "amour",
+      "new-york",
+      "psychanalyse",
+      "nostalgie"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [
+      "oscar_meilleur_film",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 31
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0075686/",
+    "poster_url": null,
+    "description": "Le montage original durait plus de quatre heures et incluait des segments entiers coupés au montage final, dont une sous-intrigue policière complète. Diane Keaton s'appelait réellement Diane Hall, et son surnom d'enfance était «Annie» — Allen n'eut qu'à emprunter son identité pour créer le personnage. Cette comédie romantique révolutionnaire brisa le quatrième mur, mélangea animation, flashbacks et témoignages directs, inventant un nouveau langage cinématographique.",
+    "rang_mondial": null
+  },
+  {
+    "id": "schindlers-list-1993",
+    "nom": "La Liste de Schindler",
+    "titre_original": "Schindler's List",
+    "realisateur": "Steven Spielberg",
+    "annee": 1993,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame historique / Guerre",
+    "langue": "Anglais, Hébreu, Allemand, Polonais",
+    "duree": 195,
+    "tags": [
+      "holocauste",
+      "humanité",
+      "guerre",
+      "survie"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "oscar_meilleur_film"
+    ],
+    "palmares_rangs": {
+      "imdb_top250": 6
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0108052/",
+    "poster_url": null,
+    "description": "Spielberg refusa son salaire de réalisateur et tout profit du film, considérant que prendre de l'argent sur l'Holocauste serait de l'argent de sang. Il fit venir un rabbin sur le plateau tous les jours pour guider l'équipe. Tourné en noir et blanc avec une caméra à l'épaule style documentaire, le film fit pleurer l'équipe technique sur le plateau — le chef opérateur Janusz Kaminski dut plusieurs fois s'arrêter de filmer.",
+    "rang_mondial": null
+  },
+  {
+    "id": "blade-runner-1982",
+    "nom": "Blade Runner",
+    "titre_original": "Blade Runner",
+    "realisateur": "Ridley Scott",
+    "annee": 1982,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Science-fiction / Noir",
+    "langue": "Anglais",
+    "duree": 117,
+    "tags": [
+      "androïdes",
+      "humanité",
+      "dystopie",
+      "pluie"
+    ],
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0083658/",
+    "poster_url": null,
+    "description": "Le film fut un échec commercial à sa sortie et Scott se disputa avec les producteurs qui imposèrent une voix-off et une fin heureuse trahissant sa vision. La version Director's Cut (1992) puis le Final Cut (2007) révélèrent enfin l'œuvre originale, transformant le film en culte absolu. La question centrale — Deckard est-il lui-même un réplicant? — fut intentionnellement laissée sans réponse, et Harrison Ford et Ridley Scott ont des positions opposées sur la question.",
+    "rang_mondial": null
+  },
+  {
+    "id": "fargo-1996",
+    "nom": "Fargo",
+    "titre_original": "Fargo",
+    "realisateur": "Joel et Ethan Coen",
+    "annee": 1996,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Thriller / Comédie noire",
+    "langue": "Anglais",
+    "duree": 98,
+    "tags": [
+      "crime",
+      "minnesota",
+      "absurde",
+      "enquête"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0116282/",
+    "poster_url": null,
+    "description": "Les frères Coen affirmèrent que le film était «basé sur une histoire vraie» — c'était entièrement faux, une provocation délibérée. Frances McDormand prépara son rôle de la shérif enceinte en étudiant la démarche et les attitudes des femmes du Minnesota, une région que les Coen connaissaient intimement depuis l'enfance. Le broyeur de bois dans la scène finale fut soigneusement choisi après des semaines de recherche pour trouver le modèle le plus terrifiant visuellement.",
+    "rang_mondial": null
+  },
+  {
+    "id": "everything-everywhere-2022",
+    "nom": "Everything Everywhere All at Once",
+    "titre_original": "Everything Everywhere All at Once",
+    "realisateur": "Daniel Kwan et Daniel Scheinert",
+    "annee": 2022,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Science-fiction / Comédie / Drame",
+    "langue": "Anglais, Mandarin",
+    "duree": 139,
+    "tags": [
+      "multivers",
+      "famille",
+      "immigration",
+      "absurde"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_meilleur_film"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cinema": [
+      "États-Unis",
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt6710474/",
+    "poster_url": null,
+    "description": "Les «Daniels» écrivirent initialement le film avec Jackie Chan dans le rôle principal, mais la star refusa. Michelle Yeoh, longtemps cantonnée aux films d'action asiatiques à Hollywood, reçut pour ce rôle son premier Oscar à 60 ans — une victoire célébrée dans toute l'Asie. Film le plus récompensé de l'histoire des Oscars avec sept statuettes, cette ode au chaos familial et au multivers est aussi une lettre d'amour aux familles d'immigrants.",
+    "rang_mondial": null
+  },
+  {
+    "id": "get-out-2017",
+    "nom": "Get Out",
+    "titre_original": "Get Out",
+    "realisateur": "Jordan Peele",
+    "annee": 2017,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Horreur / Thriller social",
+    "langue": "Anglais",
+    "duree": 104,
+    "tags": [
+      "race",
+      "horreur",
+      "satire",
+      "racisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt5052448/",
+    "poster_url": null,
+    "description": "Jordan Peele mit quatre ans à écrire le scénario, craignant que l'Amérique ne soit pas prête pour un film d'horreur sur le racisme «libéral». Sorti une semaine après l'investiture de Donald Trump, le film sembla soudainement prophétique. Avec un budget de 4,5 millions, il récolta 255 millions mondiaux, devenant l'un des premiers films d'horreur à valeur de commentaire social en plus d'un demi-siècle.",
+    "rang_mondial": null
+  },
+  {
+    "id": "tree-of-life-2011",
+    "nom": "The Tree of Life",
+    "titre_original": "The Tree of Life",
+    "realisateur": "Terrence Malick",
+    "annee": 2011,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Drame / Film expérimental",
+    "langue": "Anglais",
+    "duree": 139,
+    "tags": [
+      "enfance",
+      "cosmos",
+      "grâce",
+      "famille"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0478304/",
+    "poster_url": null,
+    "description": "Malick tourna des milliers d'heures de rushes sur plusieurs années, dont une séquence cosmique de 20 minutes que la cinéaste documentariste Douglas Trumbull (déjà responsable des effets de 2001) mit deux ans à créer. Brad Pitt confia que les scènes avec ses fils fictifs lui rappelaient si fortement sa propre enfance qu'il dut plusieurs fois s'arrêter pour pleurer. La Palme d'Or à Cannes fut accueillie par des applaudissements et des huées en parts égales.",
+    "rang_mondial": null
+  },
+  {
+    "id": "blue-velvet-1986",
+    "nom": "Blue Velvet",
+    "titre_original": "Blue Velvet",
+    "realisateur": "David Lynch",
+    "annee": 1986,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Mystère / Néo-noir",
+    "langue": "Anglais",
+    "duree": 120,
+    "tags": [
+      "banlieue",
+      "violence",
+      "secrets",
+      "surréalisme"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0090756/",
+    "poster_url": null,
+    "description": "Lynch s'inspira de ses propres obsessions d'enfance dans la ville de Missoula, Montana, où sous la surface idyllique de la vie américaine il percevait une violence et une bizarrerie refoulées. Dennis Hopper, dans le rôle du psychopathe Frank Booth, dit à Lynch: «Je dois jouer ce rôle car JE SUIS Frank Booth.» Isabella Rossellini, fille d'Ingrid Bergman et Roberto Rossellini, accepta les scènes les plus extrêmes car elle voulait prouver qu'elle n'était pas juste une belle figure décorative.",
+    "rang_mondial": null
+  },
+  {
+    "id": "network-1976",
+    "nom": "Network",
+    "titre_original": "Network",
+    "realisateur": "Sidney Lumet",
+    "annee": 1976,
+    "pays": "États-Unis",
+    "continent": "Amériques",
+    "genre": "Satire / Drame",
+    "langue": "Anglais",
+    "duree": 121,
+    "tags": [
+      "médias",
+      "télévision",
+      "satire",
+      "folie"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 64
+    },
+    "score_consensus": 93,
+    "incontournable": false,
+    "origines_cinema": [
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0074958/",
+    "poster_url": null,
+    "description": "Le scénariste Paddy Chayefsky avait travaillé à la télévision et connaissait de l'intérieur les mécanismes de l'industrie; ses prédictions sur la téléréalité et le sensationnalisme semblent aujourd'hui presque documentaires. Peter Finch mourut d'une crise cardiaque avant la cérémonie des Oscars et reçut le prix à titre posthume — le premier acteur dans l'histoire à être ainsi récompensé. La tirade «I'm as mad as hell and I'm not going to take it anymore!» est devenue l'un des cris de ralliement culturels les plus cités en Amérique.",
+    "rang_mondial": null
+  },
+  {
+    "id": "mon-oncle-antoine-1971",
+    "nom": "Mon Oncle Antoine",
+    "titre_original": "Mon Oncle Antoine",
+    "realisateur": "Claude Jutra",
+    "annee": 1971,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame",
+    "langue": "Français",
+    "duree": 104,
+    "tags": [
+      "québec",
+      "enfance",
+      "hiver",
+      "initiation"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "iris",
+      "genie"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0067440/",
+    "poster_url": null,
+    "description": "Élu meilleur film canadien de tous les temps à plusieurs reprises par les critiques et cinéastes du pays, Mon Oncle Antoine captura l'âme du Québec rural des années 1940 avec une authenticité bouleversante. Jutra tourna dans les Cantons-de-l'Est pendant l'hiver avec des acteurs non professionnels du village, créant une texture documentaire unique. Le regard de Benoît, l'enfant du film, assistant à la découverte du cadavre dans la neige reste l'une des images les plus puissantes du cinéma québécois.",
+    "rang_mondial": null
+  },
+  {
+    "id": "jesus-de-montreal-1989",
+    "nom": "Jésus de Montréal",
+    "titre_original": "Jésus de Montréal",
+    "realisateur": "Denys Arcand",
+    "annee": 1989,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame",
+    "langue": "Français",
+    "duree": 119,
+    "tags": [
+      "religion",
+      "théâtre",
+      "montréal",
+      "satire"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [
+      "cannes_jury"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0097606/",
+    "poster_url": null,
+    "description": "Arcand tourna en grande partie sur le vrai Oratoire Saint-Joseph de Montréal, négociant pendant des mois avec les autorités religieuses pour obtenir l'autorisation. L'acteur Lothaire Bluteau, dans le rôle du comédien qui joue Jésus, connut un phénomène de confusion identitaire au point que les techniciens du plateau l'appelaient spontanément «Jésus» hors caméra. Ce film fut le deuxième grand succès international d'Arcand, démontrant que le cinéma québécois pouvait toucher des audiences mondiales.",
+    "rang_mondial": null
+  },
+  {
+    "id": "declin-empire-americain-1986",
+    "nom": "Le Déclin de l'empire américain",
+    "titre_original": "Le Déclin de l'empire américain",
+    "realisateur": "Denys Arcand",
+    "annee": 1986,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Comédie dramatique",
+    "langue": "Français",
+    "duree": 101,
+    "tags": [
+      "sexualité",
+      "intellectuels",
+      "québec",
+      "conversations"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "iris"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0090971/",
+    "poster_url": null,
+    "description": "Arcand écrivit ce film sur la bourgeoisie intellectuelle québécoise après avoir observé les conversations de ses collègues universitaires — il était lui-même professeur d'histoire. Tourné avec un budget minuscule de 1,6 million, le film devint un phénomène culturel au Québec et à l'international, sélectionné pour l'Oscar du meilleur film étranger. Les conversations franches sur la sexualité dans le Québec catholique de l'époque furent un véritable choc culturel.",
+    "rang_mondial": null
+  },
+  {
+    "id": "invasions-barbares-2003",
+    "nom": "Les Invasions barbares",
+    "titre_original": "Les Invasions barbares",
+    "realisateur": "Denys Arcand",
+    "annee": 2003,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame / Comédie",
+    "langue": "Français",
+    "duree": 99,
+    "tags": [
+      "mort",
+      "amitié",
+      "québec",
+      "bilan-de-vie"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "cannes_meilleur_scenario",
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0338135/",
+    "poster_url": null,
+    "description": "Suite du Déclin de l'empire américain, ce film remporta l'Oscar du meilleur film en langue étrangère, faisant d'Arcand le cinéaste québécois le plus récompensé à l'étranger. Rémy Girard et les autres acteurs retrouvèrent leurs personnages 17 ans plus tard, apportant une continuité émotionnelle authentique. Le film confronte la génération du baby-boom québécois à ses illusions perdues avec une tendresse féroce.",
+    "rang_mondial": null
+  },
+  {
+    "id": "crazy-2005",
+    "nom": "C.R.A.Z.Y.",
+    "titre_original": "C.R.A.Z.Y.",
+    "realisateur": "Jean-Marc Vallée",
+    "annee": 2005,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame / Coming-of-age",
+    "langue": "Français",
+    "duree": 129,
+    "tags": [
+      "famille",
+      "adolescence",
+      "homosexualité",
+      "années70"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "iris",
+      "toronto"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0401233/",
+    "poster_url": null,
+    "description": "Vallée puisa profondément dans sa propre enfance dans les Laurentides pour créer ce film semi-autobiographique, construisant une bande-son de rock classique des années 70 qui devint aussi importante que le scénario. Le film fut vu par plus de 800 000 Québécois en salles, un record pour un film québécois, et propulsa Vallée vers une carrière internationale (Dallas Buyers Club, Wild). Marc-André Grondin livra une performance si naturelle que Vallée confessa n'avoir presque rien eu à diriger.",
+    "rang_mondial": null
+  },
+  {
+    "id": "incendies-2010",
+    "nom": "Incendies",
+    "titre_original": "Incendies",
+    "realisateur": "Denis Villeneuve",
+    "annee": 2010,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame / Thriller",
+    "langue": "Français, Arabe",
+    "duree": 130,
+    "tags": [
+      "guerre",
+      "famille",
+      "liban",
+      "secrets"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "toronto"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada",
+      "Liban"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1255953/",
+    "poster_url": null,
+    "description": "Adapté de la pièce de théâtre de Wajdi Mouawad, Incendies projeta Denis Villeneuve sur la scène internationale et lui ouvrit les portes d'Hollywood. Tourné en partie au Jordanie pour simuler le Liban en guerre, le film révéla un secret central si bouleversant que Villeneuve demanda aux acteurs de ne pas le lire avant leur jour de tournage pour capturer leur réaction authentique. Ce film dense et dévastateur sur la violence intergénérationnelle reste le chef-d'œuvre québécois de Villeneuve.",
+    "rang_mondial": null
+  },
+  {
+    "id": "leolo-1992",
+    "nom": "Léolo",
+    "titre_original": "Léolo",
+    "realisateur": "Jean-Claude Lauzon",
+    "annee": 1992,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame / Fantastique",
+    "langue": "Français",
+    "duree": 107,
+    "tags": [
+      "enfance",
+      "famille",
+      "rêve",
+      "folie"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "iris"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0104906/",
+    "poster_url": null,
+    "description": "Lauzon, mort accidentellement à 44 ans dans le crash de son avion, ne réalisa que deux films — Léolo reste l'un des sommets absolus du cinéma québécois. L'enfant du film, Maxime Collin, ne fut plus jamais acteur après ce tournage épuisant et intense. Martin Scorsese fut si bouleversé par le film qu'il le programma personnellement dans sa rétrospective mondiale du cinéma mondial, aidant à lui donner une visibilité internationale.",
+    "rang_mondial": null
+  },
+  {
+    "id": "mommy-2014",
+    "nom": "Mommy",
+    "titre_original": "Mommy",
+    "realisateur": "Xavier Dolan",
+    "annee": 2014,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame",
+    "langue": "Français",
+    "duree": 134,
+    "tags": [
+      "mère",
+      "fils",
+      "violence",
+      "amour"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_jury"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt3612616/",
+    "poster_url": null,
+    "description": "Dolan tourna Mommy en format carré 1:1, une décision audacieuse qui divisa la critique mais qui prit tout son sens dans la scène où le cadre s'élargit magiquement — l'une des images les plus émouvantes du cinéma contemporain. Il partagea le Prix du Jury à Cannes avec Jean-Luc Godard, suscitant la controverse quand il remercia Godard «de ne pas avoir filmé son film lui-même». Anne Dorval et Antoine Olivier Pilon donnèrent des performances d'une intensité physique dévastatrice.",
+    "rang_mondial": null
+  },
+  {
+    "id": "monsieur-lazhar-2011",
+    "nom": "Monsieur Lazhar",
+    "titre_original": "Monsieur Lazhar",
+    "realisateur": "Philippe Falardeau",
+    "annee": 2011,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame",
+    "langue": "Français",
+    "duree": 94,
+    "tags": [
+      "école",
+      "immigration",
+      "deuil",
+      "enfants"
+    ],
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1750487/",
+    "poster_url": null,
+    "description": "Mohamed Fellag, comédien algérien de renom, traversa l'Atlantique pour jouer ce réfugié kabyle devenu instituteur à Montréal — un parcours qui n'était pas si éloigné du sien. Nommé à l'Oscar du meilleur film étranger, le film toucha une corde universelle sur le deuil, l'intégration et la bienveillance. Falardeau s'inspira de la pièce d'Évelyne de la Chenelière, qui traitait d'un fait divers tragique survenu dans une école montréalaise.",
+    "rang_mondial": null
+  },
+  {
+    "id": "polytechnique-2009",
+    "nom": "Polytechnique",
+    "titre_original": "Polytechnique",
+    "realisateur": "Denis Villeneuve",
+    "annee": 2009,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame / Tragédie",
+    "langue": "Français",
+    "duree": 77,
+    "tags": [
+      "violence",
+      "féminisme",
+      "tragédie",
+      "mémoire"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "iris"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1268836/",
+    "poster_url": null,
+    "description": "Villeneuve attendit 20 ans après la tuerie de l'École Polytechnique avant de se sentir prêt à réaliser ce film — et obtint la bénédiction de plusieurs familles de victimes. Tourné en noir et blanc avec une sobriété absolue, sans jamais montrer le visage du tueur, le film évite tout sensationnalisme pour se concentrer sur les victimes. Cette œuvre de mémoire courageuse fut saluée unanimement comme une façon respectueuse et nécessaire de ne pas oublier.",
+    "rang_mondial": null
+  },
+  {
+    "id": "jai-tue-ma-mere-2009",
+    "nom": "J'ai tué ma mère",
+    "titre_original": "J'ai tué ma mère",
+    "realisateur": "Xavier Dolan",
+    "annee": 2009,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame autobiographique",
+    "langue": "Français",
+    "duree": 96,
+    "tags": [
+      "mère",
+      "adolescence",
+      "conflit",
+      "amour"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 82,
+    "incontournable": false,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1401181/",
+    "poster_url": null,
+    "description": "Dolan écrivit le scénario à 16 ans et réalisa le film à 19 ans avec 700 000 dollars réunis en partie auprès de sa famille. Sélectionné à la Quinzaine des réalisateurs à Cannes, il remporta trois prix et révéla l'un des talents les plus fulgurants de sa génération. Anne Dorval, dans le rôle de la mère, établit dès ce premier film la complicité explosive avec Dolan qui culminerait dans Mommy cinq ans plus tard.",
+    "rang_mondial": null
+  },
+  {
+    "id": "les-bons-debarras-1980",
+    "nom": "Les Bons Débarras",
+    "titre_original": "Les Bons Débarras",
+    "realisateur": "Francis Mankiewicz",
+    "annee": 1980,
+    "pays": "Canada (Québec)",
+    "continent": "Amériques",
+    "genre": "Drame",
+    "langue": "Français",
+    "duree": 114,
+    "tags": [
+      "enfance",
+      "jalousie",
+      "québec",
+      "rural"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "iris"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cinema": [
+      "Québec",
+      "Canada"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0079743/",
+    "poster_url": null,
+    "description": "Charlotte Laurier, âgée de 13 ans lors du tournage, livre une performance terrifiante de maturité dans le rôle de Manon, une petite fille possessive et manipulatrice. Souvent cité comme le deuxième meilleur film canadien de tous les temps après Mon Oncle Antoine, ce film oppressant explore la noirceur cachée sous les apparences de la vie rurale québécoise. Le scénariste Réjean Ducharme, écrivain le plus secret du Québec, n'accepta jamais d'être photographié de toute sa vie.",
+    "rang_mondial": null
+  },
+  {
+    "id": "regle-du-jeu-1939",
+    "nom": "La Règle du jeu",
+    "titre_original": "La Règle du jeu",
+    "realisateur": "Jean Renoir",
+    "annee": 1939,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Comédie dramatique",
+    "langue": "Français",
+    "duree": 110,
+    "tags": [
+      "bourgeoisie",
+      "hypocrisie",
+      "satire",
+      "société"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 4
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0031885/",
+    "poster_url": null,
+    "description": "À sa sortie en 1939, le film fut si violemment hué par le public parisien qu'une femme tenta d'y mettre le feu avec son briquet — les spectateurs se reconnaissaient trop dans cette satire cruelle de la société française. Interdit pendant la guerre et tronqué pendant des décennies, il ne fut restauré dans sa version intégrale qu'en 1959 grâce à des bobines retrouvées dans des archives. Renoir considérait ce film comme le meilleur qu'il ait jamais fait.",
+    "rang_mondial": null
+  },
+  {
+    "id": "400-coups-1959",
+    "nom": "Les 400 coups",
+    "titre_original": "Les 400 coups",
+    "realisateur": "François Truffaut",
+    "annee": 1959,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame / Coming-of-age",
+    "langue": "Français",
+    "duree": 99,
+    "tags": [
+      "enfance",
+      "révolte",
+      "paris",
+      "liberté"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 39
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0053198/",
+    "poster_url": null,
+    "description": "Truffaut, lui-même ancien enfant difficile envoyé en maison de correction, s'inspira directement de son enfance parisienne pour créer Antoine Doinel. Jean-Pierre Léaud, 14 ans, fut choisi après une audition où Truffaut lui demanda simplement de parler de sa vie — la réponse fut si authentique qu'elle est intégrée dans le film. La célèbre dernière image, Antoine regardant la caméra face à la mer, fut tournée en une seule prise, Truffaut gardant le secret de ce qu'il voulait jusqu'au dernier moment.",
+    "rang_mondial": null
+  },
+  {
+    "id": "a-bout-de-souffle-1960",
+    "nom": "À bout de souffle",
+    "titre_original": "À bout de souffle",
+    "realisateur": "Jean-Luc Godard",
+    "annee": 1960,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Nouvelle Vague / Polar",
+    "langue": "Français",
+    "duree": 90,
+    "tags": [
+      "liberté",
+      "paris",
+      "crime",
+      "improvisation"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0053472/",
+    "poster_url": null,
+    "description": "Godard inventa le jump cut non par esthétique mais par nécessité: le film était trop long et il coupa des sections entières dans la continuité, créant accidentellement l'une des innovations visuelles les plus imitées de l'histoire du cinéma. Jean-Paul Belmondo improvisa la majorité de ses répliques, et Jean Seberg fut filmée avec une caméra cachée dans une pissotière — elle ne réalisait pas qu'elle était filmée. Tourné avec des chariots de supermarché en guise de dollies et une caméra légère à l'épaule dans les rues de Paris, le film coûta 400 000 francs.",
+    "rang_mondial": null
+  },
+  {
+    "id": "au-hasard-balthazar-1966",
+    "nom": "Au hasard Balthazar",
+    "titre_original": "Au hasard Balthazar",
+    "realisateur": "Robert Bresson",
+    "annee": 1966,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame spirituel",
+    "langue": "Français",
+    "duree": 95,
+    "tags": [
+      "innocence",
+      "âne",
+      "souffrance",
+      "grâce"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 16
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0060327/",
+    "poster_url": null,
+    "description": "Bresson entraîna son âne pendant des mois pour qu'il réagisse précisément à certains sons, créant la performance animale la plus naturelle de l'histoire du cinéma. Jean-Luc Godard dit de ce film qu'il était «le monde entier en une heure et demie». Bresson n'utilisait que des acteurs non professionnels qu'il appelait «modèles», leur demandant de réprimer toute émotion — il tournait des dizaines de prises jusqu'à obtenir la neutralité absolue qu'il recherchait.",
+    "rang_mondial": null
+  },
+  {
+    "id": "cleo-5-a-7-1962",
+    "nom": "Cléo de 5 à 7",
+    "titre_original": "Cléo de 5 à 7",
+    "realisateur": "Agnès Varda",
+    "annee": 1962,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Nouvelle Vague / Drame",
+    "langue": "Français",
+    "duree": 90,
+    "tags": [
+      "femme",
+      "paris",
+      "mort",
+      "temps-réel"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0055852/",
+    "poster_url": null,
+    "description": "Varda structure son film en temps réel: 90 minutes de film pour 90 minutes de vie, de 17h à 18h30, pendant qu'une chanteuse attend les résultats d'un test médical. Film fondateur du cinéma féministe, il renverse le regard: la femme n'est plus l'objet du désir masculin mais le sujet de sa propre angoisse. Corinne Marchand dut traverser Paris en vraie star sans être reconnue — le film fut tourné en partie avec une caméra cachée dans les rues.",
+    "rang_mondial": null
+  },
+  {
+    "id": "playtime-1967",
+    "nom": "Playtime",
+    "titre_original": "Playtime",
+    "realisateur": "Jacques Tati",
+    "annee": 1967,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Comédie / Satire",
+    "langue": "Français",
+    "duree": 124,
+    "tags": [
+      "modernité",
+      "architecture",
+      "satire",
+      "ballet-visuel"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0062136/",
+    "poster_url": null,
+    "description": "Tati construisit une ville entière en béton et acier en banlieue parisienne — «Tativille» — à une échelle si démesurée que le projet l'entraîna dans la faillite personnelle. Le film n'a quasiment pas de dialogue et fonctionne comme un ballet visuel en 70mm avec des centaines de figurants coordonnés simultanément. Stanley Kubrick le considérait comme «le seul film comique véritablement génial» et s'en inspira directement pour l'utilisation de l'espace dans Barry Lyndon.",
+    "rang_mondial": null
+  },
+  {
+    "id": "portrait-jeune-fille-feu-2019",
+    "nom": "Portrait de la jeune fille en feu",
+    "titre_original": "Portrait de la jeune fille en feu",
+    "realisateur": "Céline Sciamma",
+    "annee": 2019,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame romantique / Historique",
+    "langue": "Français",
+    "duree": 120,
+    "tags": [
+      "amour",
+      "regard",
+      "xviiie-siècle",
+      "femmes"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": false,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt8613070/",
+    "poster_url": null,
+    "description": "Sciamma écrivit le film spécifiquement pour Adèle Haenel, avec qui elle était alors en couple — leur rupture survenue pendant la postproduction rendit le film encore plus poignant. Aucun personnage masculin n'a de parole significative dans le film: tous les dialogues, tous les regards, toutes les décisions appartiennent aux femmes. La séquence du feu de camp avec les femmes chantant a cappella fut inspirée par les rituels féminins celtes et reste l'une des plus belles scènes du cinéma contemporain.",
+    "rang_mondial": null
+  },
+  {
+    "id": "amour-2012",
+    "nom": "Amour",
+    "titre_original": "Amour",
+    "realisateur": "Michael Haneke",
+    "annee": 2012,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame",
+    "langue": "Français",
+    "duree": 127,
+    "tags": [
+      "vieillesse",
+      "amour",
+      "maladie",
+      "deuil"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "cannes_palme_dor",
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1602620/",
+    "poster_url": null,
+    "description": "Haneke, connu pour ses films cruels et distants, livra ici son œuvre la plus personnelle et la plus humaine — inspirée par la maladie de sa propre tante. Jean-Louis Trintignant et Emmanuelle Riva, tous deux octogénaires, donnèrent des performances d'une vérité absolue qui ramenèrent le public à ses propres expériences de vieillissement et de perte. Riva, à 85 ans, devint la plus vieille personne nommée à l'Oscar de la meilleure actrice.",
+    "rang_mondial": null
+  },
+  {
+    "id": "la-haine-1995",
+    "nom": "La Haine",
+    "titre_original": "La Haine",
+    "realisateur": "Mathieu Kassovitz",
+    "annee": 1995,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame social / Thriller",
+    "langue": "Français",
+    "duree": 98,
+    "tags": [
+      "banlieue",
+      "police",
+      "identité",
+      "violence"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0113247/",
+    "poster_url": null,
+    "description": "Tourné en noir et blanc dans la vraie cité des Muguets à Chanteloup-les-Vignes, Kassovitz choisit des acteurs de banlieue authentiques, dont Vincent Cassel qui n'était pas encore célèbre. Le Premier ministre Alain Juppé convoqua ses ministres à une projection privée après la Palme — le film était devenu un débat national sur la violence policière. La phrase «jusqu'ici tout va bien» est entrée dans le langage courant français comme métaphore de l'optimisme aveugle face au désastre imminent.",
+    "rang_mondial": null
+  },
+  {
+    "id": "grande-illusion-1937",
+    "nom": "La Grande Illusion",
+    "titre_original": "La Grande Illusion",
+    "realisateur": "Jean Renoir",
+    "annee": 1937,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame de guerre",
+    "langue": "Français",
+    "duree": 114,
+    "tags": [
+      "guerre",
+      "classe",
+      "fraternité",
+      "camp-de-prisonniers"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0028950/",
+    "poster_url": null,
+    "description": "Goebbels qualifia ce film d'«ennemi cinématographique numéro un» de l'Allemagne nazie, et il fut interdit dans tous les pays sous influence fasciste. Renoir s'inspira des souvenirs de guerre d'un ami aviateur pour construire cette réflexion sur les solidarités de classe qui transcendent les frontières nationales. Premier film non anglophone à être nommé pour l'Oscar du meilleur film, il reste une œuvre essentielle sur le sens de la guerre et de la civilisation.",
+    "rang_mondial": null
+  },
+  {
+    "id": "latalante-1934",
+    "nom": "L'Atalante",
+    "titre_original": "L'Atalante",
+    "realisateur": "Jean Vigo",
+    "annee": 1934,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame romantique / Poétique",
+    "langue": "Français",
+    "duree": 89,
+    "tags": [
+      "amour",
+      "péniche",
+      "poésie",
+      "liberté"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 17
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0024844/",
+    "poster_url": null,
+    "description": "Jean Vigo mourut de tuberculose à 29 ans quelques semaines après la sortie du film, laissant une œuvre de seulement quatre films dont L'Atalante est le chef-d'œuvre. Les producteurs trouvèrent le film «trop étrange» et le charcutèrent en ajoutant des chansons populaires avant la sortie; la version originale ne fut restaurée qu'en 1990. Cette histoire d'amour surréaliste sur une péniche du canal reste l'un des films les plus sensuels et poétiques jamais réalisés.",
+    "rang_mondial": null
+  },
+  {
+    "id": "hiroshima-mon-amour-1959",
+    "nom": "Hiroshima mon amour",
+    "titre_original": "Hiroshima mon amour",
+    "realisateur": "Alain Resnais",
+    "annee": 1959,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame / Expérimental",
+    "langue": "Français, Japonais",
+    "duree": 90,
+    "tags": [
+      "mémoire",
+      "hiroshima",
+      "traumatisme",
+      "amour"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "France",
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0052912/",
+    "poster_url": null,
+    "description": "Resnais fut initialement engagé pour réaliser un documentaire sur Hiroshima, mais refusa de filmer les archives horrifiques de la bombe atomique — préférant réfléchir sur l'impossibilité même de représenter cette tragédie. Marguerite Duras écrivit le texte en trois semaines dans un état presque de transe, et Resnais respecta chaque mot sans coupure. Film fondateur du modernisme cinématographique, il inventa une nouvelle façon de lier mémoire collective et intime.",
+    "rang_mondial": null
+  },
+  {
+    "id": "entre-les-murs-2008",
+    "nom": "Entre les murs",
+    "titre_original": "Entre les murs",
+    "realisateur": "Laurent Cantet",
+    "annee": 2008,
+    "pays": "France",
+    "continent": "Europe",
+    "genre": "Drame / Semi-documentaire",
+    "langue": "Français",
+    "duree": 128,
+    "tags": [
+      "école",
+      "immigration",
+      "classe",
+      "pédagogie"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cinema": [
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1068646/",
+    "poster_url": null,
+    "description": "Cantet travailla pendant un an avec le vrai professeur François Bégaudeau et ses vrais élèves d'un collège parisien, improvisant les scènes à partir de situations réelles vécues en classe. Tous les élèves jouent leur propre rôle sous leurs vrais prénoms, et certaines confrontations entre l'enseignant et les adolescents sont si intenses qu'elles semblent impossibles à avoir été jouées. Palme d'Or surprise, le film rouvrit le débat sur l'école républicaine française et son rapport à la diversité.",
+    "rang_mondial": null
+  },
+  {
+    "id": "bicycle-thieves-1948",
+    "nom": "Voleur de bicyclette",
+    "titre_original": "Ladri di biciclette",
+    "realisateur": "Vittorio De Sica",
+    "annee": 1948,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Néoréalisme / Drame",
+    "langue": "Italien",
+    "duree": 89,
+    "tags": [
+      "pauvreté",
+      "père",
+      "fils",
+      "rome"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "sight_sound",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 33,
+      "afi_top100": 86
+    },
+    "score_consensus": 98,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0040522/",
+    "poster_url": null,
+    "description": "De Sica utilisa exclusivement des acteurs non professionnels — le père Lamberto Maggiorani était ouvrier d'usine et le fils Enzo Staiola fut repéré dans la rue. David O. Selznick proposa à De Sica Cary Grant pour le rôle principal avec un financement américain; le réalisateur refusa catégoriquement. Ce film du néoréalisme italien captura la misère de l'Italie d'après-guerre avec une tendresse qui fit pleurer des générations de spectateurs dans le monde entier.",
+    "rang_mondial": null
+  },
+  {
+    "id": "8-et-demi-1963",
+    "nom": "Huit et demi",
+    "titre_original": "8½",
+    "realisateur": "Federico Fellini",
+    "annee": 1963,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Drame / Autobiographique",
+    "langue": "Italien",
+    "duree": 138,
+    "tags": [
+      "cinéma",
+      "rêve",
+      "mémoire",
+      "créativité"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 10
+    },
+    "score_consensus": 98,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0056801/",
+    "poster_url": null,
+    "description": "Fellini ne savait pas quoi filmer et commença à tourner sans scénario terminé — le film est littéralement sur l'impossibilité de faire un film. Le titre «8½» correspond au nombre de films réalisés par Fellini jusqu'alors: six longs, deux courts, donc un demi. Marcello Mastroianni portait des lunettes teintées pour cacher son regard et fut choisi car il ressemblait à Fellini lui-même, rendant le film encore plus autobiographique.",
+    "rang_mondial": null
+  },
+  {
+    "id": "good-bad-ugly-1966",
+    "nom": "Le Bon, la Brute et le Truand",
+    "titre_original": "Il buono, il brutto, il cattivo",
+    "realisateur": "Sergio Leone",
+    "annee": 1966,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Western spaghetti",
+    "langue": "Italien",
+    "duree": 178,
+    "tags": [
+      "western",
+      "guerre-civile",
+      "or",
+      "triangle"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [],
+    "palmares_rangs": {
+      "imdb_top250": 3
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie",
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0060196/",
+    "poster_url": null,
+    "description": "Clint Eastwood détestait tellement le tournage en Espagne sous 40°C et les méthodes de Leone qu'il jura de ne jamais retravailler avec lui — pourtant il accepta, et c'est leur meilleure collaboration. La musique d'Ennio Morricone fut composée avant le tournage, et Leone la faisait jouer sur le plateau pendant les prises pour donner le rythme. Le duel final de trois minutes sans dialogue est considéré comme la séquence d'action la mieux montée de l'histoire du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "once-upon-west-1968",
+    "nom": "Il était une fois dans l'Ouest",
+    "titre_original": "C'era una volta il West",
+    "realisateur": "Sergio Leone",
+    "annee": 1968,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Western épique",
+    "langue": "Italien",
+    "duree": 165,
+    "tags": [
+      "western",
+      "vengeance",
+      "chemin-de-fer",
+      "epopée"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [],
+    "palmares_rangs": {
+      "imdb_top250": 21
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie",
+      "États-Unis"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0064116/",
+    "poster_url": null,
+    "description": "Leone fit le voyage à Hollywood pour approcher Henry Fonda, connu uniquement pour ses rôles de héros intègres, et lui proposa d'incarner le tueur le plus froid du western — Fonda accepta immédiatement, ravi de briser son image. La célèbre introduction de 12 minutes sans dialogue fut inspirée d'une peinture de Hopper. Morricone composa la musique avant le tournage, chaque personnage ayant son propre thème: une harmonica pour Charles Bronson.",
+    "rang_mondial": null
+  },
+  {
+    "id": "la-strada-1954",
+    "nom": "La Strada",
+    "titre_original": "La Strada",
+    "realisateur": "Federico Fellini",
+    "annee": 1954,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Drame poétique",
+    "langue": "Italien",
+    "duree": 108,
+    "tags": [
+      "errance",
+      "amour-impossible",
+      "cirque",
+      "humanité"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0047528/",
+    "poster_url": null,
+    "description": "Giulietta Masina, épouse de Fellini, voulut se suicider après avoir lu le scénario — elle croyait que Fellini décrivait leur propre relation dans ce couple dysfonctionnel. La fin du film, Zampanò pleurant seul sur la plage, fut improvisée par Anthony Quinn qui était épuisé et avait bu pour se donner du courage. Premier Oscar du meilleur film étranger remporté par l'Italie, il reste l'un des films les plus poignants de l'histoire du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "leopard-1963",
+    "nom": "Le Guépard",
+    "titre_original": "Il Gattopardo",
+    "realisateur": "Luchino Visconti",
+    "annee": 1963,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Drame historique / Épopée",
+    "langue": "Italien",
+    "duree": 187,
+    "tags": [
+      "sicile",
+      "aristocratie",
+      "déclin",
+      "histoire"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0057091/",
+    "poster_url": null,
+    "description": "Burt Lancaster, star hollywoodienne, fut choisi malgré les réticences initiales de Visconti — et livra la performance la plus nuancée de sa carrière dans la peau du prince sicilien. Le bal final, qui dure 45 minutes, fut tourné avec des figurants dans un vrai palais sicilien pendant deux mois, Visconti exigeant des centaines de costumes authentiques de l'époque. Ce film-fleuve sur la fin de l'aristocratie sicilienne reste le monument le plus imposant du cinéma italien.",
+    "rang_mondial": null
+  },
+  {
+    "id": "lavventura-1960",
+    "nom": "L'Avventura",
+    "titre_original": "L'Avventura",
+    "realisateur": "Michelangelo Antonioni",
+    "annee": 1960,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Drame / Thriller psychologique",
+    "langue": "Italien",
+    "duree": 145,
+    "tags": [
+      "disparition",
+      "sicile",
+      "alienation",
+      "ennui"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 21
+    },
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0053619/",
+    "poster_url": null,
+    "description": "À sa présentation à Cannes, le film fut copieusement hué par le public qui demandait à voir la résolution de la disparition — Antonioni refusa délibérément de la montrer, faisant de l'absent le vrai sujet du film. Monica Vitti devint la muse d'Antonioni et son grand amour, leur relation amoureuse donnant à leurs films une tension authentique impossible à simuler. Ce film-labyrinthe sans résolution inventa le cinéma de l'ennui existentiel qui influença Godard, Bergman et toute la modernité.",
+    "rang_mondial": null
+  },
+  {
+    "id": "cinema-paradiso-1988",
+    "nom": "Cinema Paradiso",
+    "titre_original": "Nuovo Cinema Paradiso",
+    "realisateur": "Giuseppe Tornatore",
+    "annee": 1988,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Drame / Nostalgie",
+    "langue": "Italien",
+    "duree": 155,
+    "tags": [
+      "cinéma",
+      "enfance",
+      "sicile",
+      "nostalgie"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "cannes_jury"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0095765/",
+    "poster_url": null,
+    "description": "La version originale durait 155 minutes et sortit en Italie sans succès; la version de 124 minutes exportée à l'international devint un triomphe mondial. La scène finale du montage des baisers censurés par le curé, gardés par Alfredo, fait pleurer des milliers de spectateurs à chaque projection. Ennio Morricone composa la bande originale en neuf jours, produisant l'une des musiques de film les plus aimées de tous les temps.",
+    "rang_mondial": null
+  },
+  {
+    "id": "rome-open-city-1945",
+    "nom": "Rome, ville ouverte",
+    "titre_original": "Roma città aperta",
+    "realisateur": "Roberto Rossellini",
+    "annee": 1945,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Néoréalisme / Résistance",
+    "langue": "Italien",
+    "duree": 103,
+    "tags": [
+      "résistance",
+      "nazisme",
+      "rome",
+      "neorealisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0038890/",
+    "poster_url": null,
+    "description": "Rossellini tourna ce film immédiatement après la libération de Rome en 1944, utilisant les rues désolées de la ville comme décors naturels et récupérant de la pellicule de fortune. Anna Magnani, dont la scène de mort dans la rue était censée être coupée, livra une performance si authentique que Rossellini garda tout. Ce film fondateur du néoréalisme mondial fut rejeté par l'Italie de l'immédiat après-guerre mais triompha partout dans le monde.",
+    "rang_mondial": null
+  },
+  {
+    "id": "amarcord-1973",
+    "nom": "Amarcord",
+    "titre_original": "Amarcord",
+    "realisateur": "Federico Fellini",
+    "annee": 1973,
+    "pays": "Italie",
+    "continent": "Europe",
+    "genre": "Comédie / Autobiographique",
+    "langue": "Italien",
+    "duree": 123,
+    "tags": [
+      "mémoire",
+      "fascisme",
+      "adolescence",
+      "rimini"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cinema": [
+      "Italie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0071129/",
+    "poster_url": null,
+    "description": "Le titre signifie «je me souviens» en dialecte romagnol — Fellini reconstitua intégralement sa ville natale de Rimini sur les studios de Cinecittà plutôt que d'y retourner, préférant la mémoire à la réalité. Le film dépeint avec tendresse et ironie la montée du fascisme dans l'Italie provinciale des années 30, montrant comment une idéologie monstrueuse peut prospérer dans la banalité quotidienne. La scène du paquebot Rex passant dans la brume reste l'une des plus oniriques du cinéma de Fellini.",
+    "rang_mondial": null
+  },
+  {
+    "id": "rashomon-1950",
+    "nom": "Rashômon",
+    "titre_original": "羅生門",
+    "realisateur": "Akira Kurosawa",
+    "annee": 1950,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame / Mystère",
+    "langue": "Japonais",
+    "duree": 88,
+    "tags": [
+      "vérité",
+      "subjectivité",
+      "moyen-age",
+      "forêt"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound",
+      "venice"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 28
+    },
+    "score_consensus": 98,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0042876/",
+    "poster_url": null,
+    "description": "Kurosawa fut le premier Japonais à remporter le Lion d'Or à Venise, et ce film révéla le cinéma japonais au monde occidental stupéfait. L'idée du «syndrome Rashômon» — plusieurs témoins d'un même événement qui en donnent des versions contradictoires — est désormais un concept juridique et philosophique universel. Tourné principalement dans la forêt de bambous de Nara, Kurosawa dut attendre la lumière exacte qu'il voulait pendant des heures, parfois des jours.",
+    "rang_mondial": null
+  },
+  {
+    "id": "tokyo-story-1953",
+    "nom": "Voyage à Tokyo",
+    "titre_original": "東京物語",
+    "realisateur": "Yasujirō Ozu",
+    "annee": 1953,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame familial",
+    "langue": "Japonais",
+    "duree": 136,
+    "tags": [
+      "famille",
+      "vieillesse",
+      "ingratitude",
+      "tokyo"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 3
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0046438/",
+    "poster_url": null,
+    "description": "Ozu filma toujours à la même hauteur — 80 cm du sol, celle d'une personne assise sur les tatamis traditionnels — créant une perspective unique qu'aucun autre cinéaste n'a utilisée avec autant de cohérence. Élu meilleur film de tous les temps par Sight & Sound en 2012, il plonge le spectateur dans une mélancolie douce-amère sur la solitude des vieux parents dans un Japon qui s'occidentalise. Le film s'inspire directement de Make Way for Tomorrow (1937) de McCarey, que Ozu admirait profondément.",
+    "rang_mondial": null
+  },
+  {
+    "id": "seven-samurai-1954",
+    "nom": "Les Sept Samouraïs",
+    "titre_original": "七人の侍",
+    "realisateur": "Akira Kurosawa",
+    "annee": 1954,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Action / Épopée",
+    "langue": "Japonais",
+    "duree": 207,
+    "tags": [
+      "samourai",
+      "village",
+      "honneur",
+      "combat"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "sight_sound",
+      "venice"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 17
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0047478/",
+    "poster_url": null,
+    "description": "Kurosawa inventa pour ce film le téléobjectif pour filmer les scènes d'action sans que les acteurs ne le voient — une technique qui révolutionna le cinéma d'action mondial. Les Magnificent Seven (1960) de Sturges en est un remake avoué, et des dizaines d'autres films reprennent sa structure narrative. La bataille dans la boue sous la pluie finale, filmée avec cinq caméras simultanées, reste l'une des séquences d'action les plus épiques et les plus belles jamais tournées.",
+    "rang_mondial": null
+  },
+  {
+    "id": "ikiru-1952",
+    "nom": "Ikiru (Vivre)",
+    "titre_original": "生きる",
+    "realisateur": "Akira Kurosawa",
+    "annee": 1952,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame",
+    "langue": "Japonais",
+    "duree": 143,
+    "tags": [
+      "mort",
+      "sens-de-la-vie",
+      "bureaucratie",
+      "humanité"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 54
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0044741/",
+    "poster_url": null,
+    "description": "Takashi Shimura joua un fonctionnaire mourant qui décide de donner un sens à sa vie en construisant un parc pour enfants — une performance considérée comme l'une des plus grandes de l'histoire du cinéma. Kurosawa s'inspira directement de La Mort d'Ivan Ilitch de Tolstoï mais transposa l'histoire dans le Japon bureaucratique d'après-guerre. La scène finale où le personnage se balance seul sur la balançoire sous la neige, chantant doucement, est d'une beauté déchirante.",
+    "rang_mondial": null
+  },
+  {
+    "id": "sansho-1954",
+    "nom": "Sansho le bailli",
+    "titre_original": "山椒大夫",
+    "realisateur": "Kenji Mizoguchi",
+    "annee": 1954,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame historique / Épopée",
+    "langue": "Japonais",
+    "duree": 124,
+    "tags": [
+      "esclavage",
+      "famille",
+      "séparation",
+      "humanisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound",
+      "venice"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 19
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0047445/",
+    "poster_url": null,
+    "description": "Mizoguchi était connu pour ses exigences absolues et son respect de la femme — il filma ce Japon médiéval où les femmes et les pauvres étaient réduits en esclavage avec une indignation morale qui transperce l'écran. La scène de la mère sur la plage, aveugle et brisée, cherchant son fils qu'elle ne reconnaît plus, est considérée par de nombreux cinéastes comme la séquence la plus émouvante de tout le cinéma mondial. Roger Ebert la plaça dans son top 10 absolu.",
+    "rang_mondial": null
+  },
+  {
+    "id": "spirited-away-2001",
+    "nom": "Le Voyage de Chihiro",
+    "titre_original": "千と千尋の神隠し",
+    "realisateur": "Hayao Miyazaki",
+    "annee": 2001,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Animation / Fantasy",
+    "langue": "Japonais",
+    "duree": 125,
+    "tags": [
+      "enfance",
+      "travail",
+      "esprits",
+      "transformation"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "oscar_meilleur_film_animation",
+      "berlinale"
+    ],
+    "palmares_rangs": {
+      "imdb_top250": 12
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0245429/",
+    "poster_url": null,
+    "description": "Miyazaki créa ce film pour les filles de 10 ans, notamment pour la fille de son ami producteur Toshio Suzuki, voulant leur offrir une héroïne ordinaire qui découvre sa force intérieure. Sans scénario écrit, l'histoire fut inventée au jour le jour pendant la production, Miyazaki dessinant chaque matin les storyboards pour l'équipe. Film le plus rentable de l'histoire au Japon jusqu'en 2023, il surpassa même Titanic et Star Wars dans sa patrie.",
+    "rang_mondial": null
+  },
+  {
+    "id": "princess-mononoke-1997",
+    "nom": "Princesse Mononoké",
+    "titre_original": "もののけ姫",
+    "realisateur": "Hayao Miyazaki",
+    "annee": 1997,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Animation / Fantasy / Épopée",
+    "langue": "Japonais",
+    "duree": 134,
+    "tags": [
+      "nature",
+      "industrie",
+      "guerre",
+      "esprits"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0119698/",
+    "poster_url": null,
+    "description": "Miyazaki travailla 16 heures par jour pendant trois ans pour ce film le plus ambitieux du Studio Ghibli, utilisant le tout premier rendu numérique dans un film d'animation japonais. Le film refuse tout manichéisme: aucun personnage n'est purement bon ou mauvais, chaque camp ayant ses raisons légitimes. À sa sortie en 1997, il battit le record de films japonais au box-office nippon, poste qu'il conserva jusqu'au Voyage de Chihiro en 2001.",
+    "rang_mondial": null
+  },
+  {
+    "id": "shoplifters-2018",
+    "nom": "Une affaire de famille",
+    "titre_original": "万引き家族",
+    "realisateur": "Hirokazu Kore-eda",
+    "annee": 2018,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame social",
+    "langue": "Japonais",
+    "duree": 121,
+    "tags": [
+      "famille",
+      "pauvreté",
+      "identité",
+      "tokyo"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt8075192/",
+    "poster_url": null,
+    "description": "Kore-eda s'inspira d'un fait divers japonais réel pour construire ce film sur une famille marginale qui survit en volant — et qui est peut-être plus soudée que toutes les familles «normales». Le gouvernement japonais fut mal à l'aise avec la Palme d'Or accordée à un film qui dépeignait la pauvreté dans leur pays riche. Les acteurs découvrirent le dénouement complet du film seulement pendant la dernière semaine de tournage, et leur surprise authentique est visible à l'écran.",
+    "rang_mondial": null
+  },
+  {
+    "id": "drive-my-car-2021",
+    "nom": "Drive My Car",
+    "titre_original": "ドライブ・マイ・カー",
+    "realisateur": "Ryûsuke Hamaguchi",
+    "annee": 2021,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame",
+    "langue": "Japonais, Mandarin, Coréen, Langue des signes",
+    "duree": 179,
+    "tags": [
+      "deuil",
+      "théâtre",
+      "conduite",
+      "tchekhov"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "cannes_meilleur_scenario"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt14449914/",
+    "poster_url": null,
+    "description": "Hamaguchi adapta une nouvelle de Murakami Haruki en ajoutant deux nouvelles supplémentaires de l'auteur comme sous-intrigues, créant une œuvre de trois heures qui semble pourtant trop courte. La troupe de théâtre multilingue qui répète Oncle Vanya de Tchekhov — chacun dans sa langue — crée une des métaphores les plus belles du cinéma récent sur la communication humaine. Nommé aux Oscars dans quatre catégories, il remporta le meilleur film international.",
+    "rang_mondial": null
+  },
+  {
+    "id": "my-neighbor-totoro-1988",
+    "nom": "Mon voisin Totoro",
+    "titre_original": "となりのトトロ",
+    "realisateur": "Hayao Miyazaki",
+    "annee": 1988,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Animation / Fantasy",
+    "langue": "Japonais",
+    "duree": 86,
+    "tags": [
+      "enfance",
+      "nature",
+      "esprits",
+      "famille"
+    ],
+    "saisons": [
+      "printemps",
+      "été"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0096283/",
+    "poster_url": null,
+    "description": "Miyazaki s'inspira de l'enfance japonaise des années 50 dans la banlieue de Tokyo, une époque où la nature était encore présente dans les villages. Totoro, devenu l'emblème du Studio Ghibli, fut créé en une nuit d'insomnie par Miyazaki qui voulait un être aussi confortable qu'un édredon. Le film, sorti en même temps que Grave of the Fireflies de son collègue Isao Takahata, fut initialement considéré comme le moins important des deux — l'histoire a inversé ce jugement.",
+    "rang_mondial": null
+  },
+  {
+    "id": "woman-in-dunes-1964",
+    "nom": "La Femme des sables",
+    "titre_original": "砂の女",
+    "realisateur": "Hiroshi Teshigahara",
+    "annee": 1964,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame / Existentialisme",
+    "langue": "Japonais",
+    "duree": 147,
+    "tags": [
+      "sable",
+      "piège",
+      "désir",
+      "existentialisme"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "cannes_jury"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": false,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0058625/",
+    "poster_url": null,
+    "description": "Adapté du roman kafkaïen de Kobo Abe, ce film utilise les dunes de sable comme une métaphore de l'emprisonnement existentiel avec une beauté visuelle hypnotique. La texture du sable — filmée en gros plan — devient presque charnelle, les corps des acteurs se confondant avec elle. Teshigahara fut nommé à l'Oscar du meilleur réalisateur, un fait rarissime pour un film non anglophone à l'époque.",
+    "rang_mondial": null
+  },
+  {
+    "id": "after-life-1998",
+    "nom": "After Life",
+    "titre_original": "ワンダフルライフ",
+    "realisateur": "Hirokazu Kore-eda",
+    "annee": 1998,
+    "pays": "Japon",
+    "continent": "Asie",
+    "genre": "Drame fantastique",
+    "langue": "Japonais",
+    "duree": 118,
+    "tags": [
+      "mémoire",
+      "mort",
+      "bonheur",
+      "temps"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cinema": [
+      "Japon"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0165078/",
+    "poster_url": null,
+    "description": "Kore-eda demanda à de vraies personnes — pas des acteurs — de choisir le souvenir unique qu'ils aimeraient garder pour l'éternité, intégrant leurs réponses authentiques dans le film. Le dispositif narratif — une station de transit entre la vie et la mort où les morts doivent choisir un seul souvenir — est d'une beauté philosophique inégalée. Ce film minimaliste réalisé avec un budget dérisoire révéla Kore-eda au monde avant son triomphe avec Shoplifters.",
+    "rang_mondial": null
+  },
+  {
+    "id": "parasite-2019",
+    "nom": "Parasite",
+    "titre_original": "기생충",
+    "realisateur": "Bong Joon-ho",
+    "annee": 2019,
+    "pays": "Corée du Sud",
+    "continent": "Asie",
+    "genre": "Thriller / Drame social",
+    "langue": "Coréen",
+    "duree": 132,
+    "tags": [
+      "classes-sociales",
+      "famille",
+      "suspense",
+      "capitalisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_palme_dor",
+      "oscar_meilleur_film"
+    ],
+    "palmares_rangs": {
+      "imdb_top250": 5
+    },
+    "score_consensus": 99,
+    "incontournable": true,
+    "origines_cinema": [
+      "Corée"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt6751668/",
+    "poster_url": null,
+    "description": "Premier film non anglophone à remporter l'Oscar du meilleur film, Parasite s'imposa comme une critique acérée des inégalités sociales coréennes qui résonne dans le monde entier. Bong Joon-ho travailla quatre ans sur le scénario et construisit la maison souterraine entièrement en studio en six mois. La nuit de sa victoire aux Oscars, Bong leva son verre en disant: «Ce soir, l'alcool descend tout seul» — une phrase qui devint virale en Corée.",
+    "rang_mondial": null
+  },
+  {
+    "id": "oldboy-2003",
+    "nom": "Old Boy",
+    "titre_original": "올드보이",
+    "realisateur": "Park Chan-wook",
+    "annee": 2003,
+    "pays": "Corée du Sud",
+    "continent": "Asie",
+    "genre": "Thriller / Neo-noir",
+    "langue": "Coréen",
+    "duree": 120,
+    "tags": [
+      "vengeance",
+      "mystère",
+      "identité",
+      "choc"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_grand_prix"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Corée"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0364569/",
+    "poster_url": null,
+    "description": "Quentin Tarantino, président du jury à Cannes, voulait lui donner la Palme d'Or mais ses collègues refusèrent — il obtint néanmoins le Grand Prix. La scène du couloir où le protagoniste affronte une dizaine d'hommes armé d'un marteau, filmée en un seul plan de trois minutes, fut tournée en 17 prises sur 3 jours — les acteurs étaient tous réellement épuisés. Ce film aux révélations progressivement dévastateurs fit l'effet d'une bombe dans le cinéma mondial.",
+    "rang_mondial": null
+  },
+  {
+    "id": "memories-of-murder-2003",
+    "nom": "Memories of Murder",
+    "titre_original": "살인의 추억",
+    "realisateur": "Bong Joon-ho",
+    "annee": 2003,
+    "pays": "Corée du Sud",
+    "continent": "Asie",
+    "genre": "Thriller / Drame policier",
+    "langue": "Coréen",
+    "duree": 132,
+    "tags": [
+      "enquête",
+      "serial-killer",
+      "corée",
+      "impuissance"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Corée"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0353969/",
+    "poster_url": null,
+    "description": "Basé sur les premiers meurtres en série non résolus de l'histoire coréenne — le vrai tueur ne fut identifié qu'en 2019, 17 ans après la sortie du film. Bong intégra dans le montage final l'information que le tueur avait été trouvé, sous forme d'un carton: un des épilogue les plus bouleversants du cinéma. Le dernier regard de Song Kang-ho vers la caméra, scrutant le visage du spectateur comme s'il cherchait le vrai coupable, est peut-être la fin la plus glaçante du cinéma contemporain.",
+    "rang_mondial": null
+  },
+  {
+    "id": "the-handmaiden-2016",
+    "nom": "Mademoiselle",
+    "titre_original": "아가씨",
+    "realisateur": "Park Chan-wook",
+    "annee": 2016,
+    "pays": "Corée du Sud",
+    "continent": "Asie",
+    "genre": "Thriller érotique / Drame",
+    "langue": "Coréen, Japonais",
+    "duree": 145,
+    "tags": [
+      "manipulation",
+      "trahison",
+      "amour",
+      "colonialisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": false,
+    "origines_cinema": [
+      "Corée"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt4016934/",
+    "poster_url": null,
+    "description": "Park transposa le roman victorien «Du côté des criminels» de Sarah Waters dans le Japon colonial de la Corée des années 30, créant une mise en abyme vertigineuse sur la domination et la rébellion. Le film se déroule trois fois depuis trois perspectives différentes, chaque nouvelle version révélant ce que la précédente cachait. Cette œuvre à la fois féministe, anti-coloniale et érotique est considérée comme la réalisation la plus techniquement accomplie de Park.",
+    "rang_mondial": null
+  },
+  {
+    "id": "burning-2018",
+    "nom": "Burning",
+    "titre_original": "버닝",
+    "realisateur": "Lee Chang-dong",
+    "annee": 2018,
+    "pays": "Corée du Sud",
+    "continent": "Asie",
+    "genre": "Thriller / Mystère",
+    "langue": "Coréen",
+    "duree": 148,
+    "tags": [
+      "jalousie",
+      "classe",
+      "mystère",
+      "feu"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": false,
+    "origines_cinema": [
+      "Corée"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt7282468/",
+    "poster_url": null,
+    "description": "Adapté d'une nouvelle de Murakami, Lee Chang-dong y ajouta une dimension politique sur la jeunesse coréenne sans avenir et la rage contre les riches. Le film ne résout jamais son mystère central — une disparition — laissant le spectateur dans la même incertitude étouffante que le protagoniste. Steven Yeun, connu du public américain comme Glenn dans The Walking Dead, révèle ici une profondeur dramatique insoupçonnée dans le rôle du riche et énigmatique Ben.",
+    "rang_mondial": null
+  },
+  {
+    "id": "spring-summer-fall-2003",
+    "nom": "Printemps, été, automne, hiver... et printemps",
+    "titre_original": "봄 여름 가을 겨울 그리고 봄",
+    "realisateur": "Kim Ki-duk",
+    "annee": 2003,
+    "pays": "Corée du Sud",
+    "continent": "Asie",
+    "genre": "Drame / Contemplation bouddhiste",
+    "langue": "Coréen",
+    "duree": 103,
+    "tags": [
+      "bouddhisme",
+      "cycle",
+      "nature",
+      "karma"
+    ],
+    "saisons": [
+      "printemps",
+      "été",
+      "automne",
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cinema": [
+      "Corée"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0374546/",
+    "poster_url": null,
+    "description": "Kim Ki-duk construisit un vrai monastère flottant sur un lac coréen pour tourner ce film contemplatif, l'un des plus beaux du cinéma asiatique. Chaque saison correspond à une étape de la vie humaine — enfance, désir, adulte, maturité, renaissance — avec une économie de dialogue absolue. Le film fut tourné chronologiquement sur une année entière pour capturer les vraies saisons.",
+    "rang_mondial": null
+  },
+  {
+    "id": "in-the-mood-for-love-2000",
+    "nom": "In the Mood for Love",
+    "titre_original": "花樣年華",
+    "realisateur": "Wong Kar-wai",
+    "annee": 2000,
+    "pays": "Hong Kong",
+    "continent": "Asie",
+    "genre": "Drame romantique",
+    "langue": "Cantonais, Mandarin",
+    "duree": 98,
+    "tags": [
+      "amour",
+      "retenue",
+      "hong-kong",
+      "années60"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 5
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0118694/",
+    "poster_url": null,
+    "description": "Wong Kar-wai tourne sans scénario complet, improvisant au jour le jour avec ses acteurs — le tournage dura 15 mois. Maggie Cheung porta 20 qipaos différents pour symboliser le passage du temps sans que l'action n'avance vraiment. Élu meilleur film asiatique de tous les temps et cinquième meilleur film de l'histoire par Sight & Sound, il est une méditation sur le désir retenu et les amours impossibles d'une beauté déchirante.",
+    "rang_mondial": null
+  },
+  {
+    "id": "chungking-express-1994",
+    "nom": "Les Anges déchus / Chungking Express",
+    "titre_original": "重慶森林",
+    "realisateur": "Wong Kar-wai",
+    "annee": 1994,
+    "pays": "Hong Kong",
+    "continent": "Asie",
+    "genre": "Drame romantique / Indépendant",
+    "langue": "Cantonais",
+    "duree": 102,
+    "tags": [
+      "solitude",
+      "hong-kong",
+      "modernité",
+      "amour"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0109424/",
+    "poster_url": null,
+    "description": "Wong Kar-wai réalisa ce film en deux mois pendant une pause dans le tournage de ses Cendres du temps — il devenait fou d'impatience. Quentin Tarantino, tellement ébloui par le film, en acheta les droits américains pour sa propre distribution via Rolling Thunder. Faye Wong, star de la pop asiatique, y joue une caissière obsédée par California Dreamin' qui transforme un appartement en espace de liberté — une performance aussi fraîche et spontanée que jamais.",
+    "rang_mondial": null
+  },
+  {
+    "id": "yi-yi-2000",
+    "nom": "Yi Yi (Et... un)",
+    "titre_original": "一一",
+    "realisateur": "Edward Yang",
+    "annee": 2000,
+    "pays": "Taïwan",
+    "continent": "Asie",
+    "genre": "Drame familial",
+    "langue": "Mandarin",
+    "duree": 173,
+    "tags": [
+      "famille",
+      "taipei",
+      "temps",
+      "vie"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 26
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0244316/",
+    "poster_url": null,
+    "description": "Yang mourut d'un cancer à 59 ans en 2007 sans jamais réaliser d'autre film après celui-ci — Yi Yi fut son testament cinématographique. Ce film de trois heures suit trois générations d'une famille taïwanaise sans jamais tomber dans le drame facile, observant la vie avec la même patience qu'un photographe qui attend la lumière parfaite. Le petit Yang-Yang qui photographie la nuque des gens pour leur montrer ce qu'ils ne voient jamais eux-mêmes est l'un des personnages enfants les plus mémorables du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "farewell-my-concubine-1993",
+    "nom": "Adieu ma concubine",
+    "titre_original": "霸王别姬",
+    "realisateur": "Chen Kaige",
+    "annee": 1993,
+    "pays": "Chine",
+    "continent": "Asie",
+    "genre": "Drame historique / Épopée",
+    "langue": "Mandarin",
+    "duree": 171,
+    "tags": [
+      "opéra",
+      "chine",
+      "amour",
+      "révolution-culturelle"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": true,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0102595/",
+    "poster_url": null,
+    "description": "Premier film chinois à remporter la Palme d'Or à Cannes, il fut immédiatement censuré en Chine pour ses personnages homosexuels avant d'y être autorisé puis interdit à nouveau plusieurs fois. Leslie Cheung et Zhang Fengyi apprirent l'opéra de Pékin pendant six mois avant le tournage, leurs corps transformés devenant des instruments de l'art millénaire. L'histoire de 50 ans d'amour impossible traversant toutes les révolutions chinoises est l'épopée la plus ambitieuse du cinéma asiatique.",
+    "rang_mondial": null
+  },
+  {
+    "id": "raise-red-lantern-1991",
+    "nom": "Épouses et Concubines",
+    "titre_original": "大红灯笼高高挂",
+    "realisateur": "Zhang Yimou",
+    "annee": 1991,
+    "pays": "Chine",
+    "continent": "Asie",
+    "genre": "Drame / Historique",
+    "langue": "Mandarin",
+    "duree": 125,
+    "tags": [
+      "patriarcat",
+      "femmes",
+      "rituels",
+      "oppression"
+    ],
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0101640/",
+    "poster_url": null,
+    "description": "Zhang Yimou utilisa l'espace architectural clos d'une maison seigneuriale comme métaphore de l'enfermement des femmes dans la Chine traditionnelle, filmant les cérémonies des lanternes rouges avec une rigueur formelle hypnotique. Gong Li, muse de Zhang et alors sa compagne, livra une performance de femme qui se perd dans les rituels patriarcaux avec une subtilité troublante. Le film fut interdit en Chine pour avoir «terni l'image» de la culture chinoise — précisément ce qu'il cherchait à dénoncer.",
+    "rang_mondial": null
+  },
+  {
+    "id": "crouching-tiger-2000",
+    "nom": "Tigre et Dragon",
+    "titre_original": "臥虎藏龍",
+    "realisateur": "Ang Lee",
+    "annee": 2000,
+    "pays": "Taïwan",
+    "continent": "Asie",
+    "genre": "Arts martiaux / Épopée",
+    "langue": "Mandarin",
+    "duree": 120,
+    "tags": [
+      "arts-martiaux",
+      "amour",
+      "honneur",
+      "desert"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0190332/",
+    "poster_url": null,
+    "description": "Ang Lee, né à Taïwan et formé à Hollywood, voulait faire le film de kung-fu de son enfance mais avec la profondeur émotionnelle du cinéma américain — et il réussit. La séquence du combat dans la cime des bambous, filmée avec des câbles, devint l'image iconique d'un genre renouvelé. Ce film redonna au wuxia sa dignité artistique et influença directement Matrix et des dizaines d'autres films d'action.",
+    "rang_mondial": null
+  },
+  {
+    "id": "still-life-2006",
+    "nom": "Still Life",
+    "titre_original": "三峡好人",
+    "realisateur": "Jia Zhangke",
+    "annee": 2006,
+    "pays": "Chine",
+    "continent": "Asie",
+    "genre": "Drame / Poésie documentaire",
+    "langue": "Mandarin",
+    "duree": 111,
+    "tags": [
+      "barrage",
+      "modernisation",
+      "chine",
+      "perte"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "venice"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0799954/",
+    "poster_url": null,
+    "description": "Tourné dans la ville de Fengjie condamnée à disparaître sous les eaux du barrage des Trois-Gorges, Jia Zhangke filma les derniers habitants d'une civilisation millénaire en voie de noyade. Lion d'Or à Venise, le film surpassa un blockbuster chinois qui sortait le même jour — symbole de la lutte entre cinéma d'auteur et cinéma commercial. Jia interpola dans son documentaire humaniste d'étranges moments surréalistes: des monuments qui décollent comme des fusées, des fantômes flottants.",
+    "rang_mondial": null
+  },
+  {
+    "id": "happy-together-1997",
+    "nom": "Happy Together",
+    "titre_original": "春光乍泄",
+    "realisateur": "Wong Kar-wai",
+    "annee": 1997,
+    "pays": "Hong Kong",
+    "continent": "Asie",
+    "genre": "Drame romantique",
+    "langue": "Cantonais",
+    "duree": 97,
+    "tags": [
+      "amour",
+      "argentine",
+      "couple",
+      "errance"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Chine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0119008/",
+    "poster_url": null,
+    "description": "Wong Kar-wai fuit Hong Kong juste avant la rétrocession à la Chine en 1997 pour tourner cette histoire d'amour gay entre deux Hongkongais à Buenos Aires — une métaphore de l'exil et de l'impossibilité du retour. Les chutes d'Iguazú en Argentine, filmées en couleur dans un film essentiellement en noir et blanc, représentent le seul moment de beauté pure accessible à ce couple toxique. Tony Leung prépara son rôle en vivant seul à Buenos Aires pendant des semaines.",
+    "rang_mondial": null
+  },
+  {
+    "id": "pather-panchali-1955",
+    "nom": "La Complainte du sentier",
+    "titre_original": "পথের পাঁচালী",
+    "realisateur": "Satyajit Ray",
+    "annee": 1955,
+    "pays": "Inde",
+    "continent": "Asie",
+    "genre": "Drame / Néoréalisme",
+    "langue": "Bengali",
+    "duree": 125,
+    "tags": [
+      "pauvreté",
+      "enfance",
+      "bengale",
+      "nature"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound",
+      "cannes"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Inde"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0048473/",
+    "poster_url": null,
+    "description": "Ray, qui n'avait jamais réalisé de film, tourna ce chef-d'œuvre pendant quatre ans avec des fonds de poche, hypothéquant ses assurances-vie pour acheter de la pellicule. Le gouvernement du Bengale occidental finança la fin du tournage seulement parce que le commissaire aux finances voulut voir les rushes et fut bouleversé. Jean Renoir, qui avait rencontré Ray en Inde, encouragea le jeune cinéaste et ce fut lui qui convainquit les autorités cannoises de montrer le film.",
+    "rang_mondial": null
+  },
+  {
+    "id": "aparajito-1956",
+    "nom": "L'Invaincu",
+    "titre_original": "অপরাজিত",
+    "realisateur": "Satyajit Ray",
+    "annee": 1956,
+    "pays": "Inde",
+    "continent": "Asie",
+    "genre": "Drame",
+    "langue": "Bengali",
+    "duree": 110,
+    "tags": [
+      "éducation",
+      "ambition",
+      "mère",
+      "séparation"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "venice"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": false,
+    "origines_cinema": [
+      "Inde"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0049838/",
+    "poster_url": null,
+    "description": "Deuxième volet de la Trilogie d'Apu, Aparajito suit l'enfant de Pather Panchali jusqu'à son éducation à Calcutta, où l'ambition se paie du sacrifice de la relation maternelle. Ray retrouva le comédien enfant de son premier film, Subir Banerjee, deux ans après — tellement grandi que Ray dut changer d'acteur pour le personnage. Lion d'Or à Venise, ce film marqua le début de la reconnaissance internationale du cinéma indien.",
+    "rang_mondial": null
+  },
+  {
+    "id": "world-of-apu-1959",
+    "nom": "Le Monde d'Apu",
+    "titre_original": "অপুর সংসার",
+    "realisateur": "Satyajit Ray",
+    "annee": 1959,
+    "pays": "Inde",
+    "continent": "Asie",
+    "genre": "Drame",
+    "langue": "Bengali",
+    "duree": 105,
+    "tags": [
+      "amour",
+      "deuil",
+      "paternité",
+      "calcutta"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": false,
+    "origines_cinema": [
+      "Inde"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0053090/",
+    "poster_url": null,
+    "description": "Conclusion de la Trilogie d'Apu, ce troisième volet trouve le personnage devenu adulte, amoureux, père, et veufs — un cycle complet de la condition humaine en trois films. Sharmila Tagore, actrice principale, avait 13 ans au début du tournage; la scène de mariage qu'elle tournait était terrifiante pour une adolescente de cet âge. Akira Kurosawa déclara que cette trilogie était «la chose la plus belle qu'il ait jamais vue» dans toute sa vie de cinéphile.",
+    "rang_mondial": null
+  },
+  {
+    "id": "mughal-e-azam-1960",
+    "nom": "Mughal-E-Azam",
+    "titre_original": "मुग़ल-ए-आज़म",
+    "realisateur": "K. Asif",
+    "annee": 1960,
+    "pays": "Inde",
+    "continent": "Asie",
+    "genre": "Épopée historique / Bollywood",
+    "langue": "Hindi, Urdu",
+    "duree": 197,
+    "tags": [
+      "empire-moghol",
+      "amour",
+      "épopée",
+      "bollywood"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cinema": [
+      "Inde"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0054098/",
+    "poster_url": null,
+    "description": "En production pendant 16 ans, ce monument du cinéma hindi mobilisa 8 000 figurants pour une scène de bataille et reste l'une des productions les plus extravagantes de l'histoire du cinéma mondial. La scène de danse de la salle des miroirs (Sheesh Mahal) fut la première scène en couleur d'un film indien en noir et blanc. Colorisé numériquement en 2004, ce film a retrouvé son public et reste l'archétype du grand spectacle bollywoodien.",
+    "rang_mondial": null
+  },
+  {
+    "id": "devi-1960",
+    "nom": "La Déesse",
+    "titre_original": "দেবী",
+    "realisateur": "Satyajit Ray",
+    "annee": 1960,
+    "pays": "Inde",
+    "continent": "Asie",
+    "genre": "Drame / Critique religieuse",
+    "langue": "Bengali",
+    "duree": 93,
+    "tags": [
+      "religion",
+      "femme",
+      "superstition",
+      "hindouisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cinema": [
+      "Inde"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0053875/",
+    "poster_url": null,
+    "description": "Ray aborda la superstition hindoue et la condition féminine avec une audace qui lui valut des menaces de mort et l'intervention du gouvernement bengali. Une jeune femme est convaincue par son beau-père qu'elle est l'incarnation de la déesse Kali — Ray explore avec une rigueur implacable comment la piété peut devenir une forme de violence. Sharmila Tagore, déjà vue dans la Trilogie d'Apu, livre ici une performance d'une fragilité déchirante.",
+    "rang_mondial": null
+  },
+  {
+    "id": "metropolis-1927",
+    "nom": "Metropolis",
+    "titre_original": "Metropolis",
+    "realisateur": "Fritz Lang",
+    "annee": 1927,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Science-fiction / Expressionnisme",
+    "langue": "Muet",
+    "duree": 153,
+    "tags": [
+      "dystopie",
+      "classe",
+      "robot",
+      "expressionnisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 14
+    },
+    "score_consensus": 98,
+    "incontournable": true,
+    "origines_cinema": [
+      "Allemagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0017136/",
+    "poster_url": null,
+    "description": "Lang mobilisa 37 000 figurants sur des mois pour recréer une mégalopole futuriste dans les studios UFA de Berlin — une dépense qui ruina presque la compagnie de production. Hitler et Goebbels adorèrent le film et proposèrent à Lang de devenir le cinéaste officiel du Reich; il quitta l'Allemagne le lendemain en laissant tous ses biens. Une copie complète, croyait-on perdue à jamais, fut retrouvée en 2008 dans un musée de Buenos Aires.",
+    "rang_mondial": null
+  },
+  {
+    "id": "m-1931",
+    "nom": "M le maudit",
+    "titre_original": "M – Eine Stadt sucht einen Mörder",
+    "realisateur": "Fritz Lang",
+    "annee": 1931,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Thriller / Noir",
+    "langue": "Allemand",
+    "duree": 99,
+    "tags": [
+      "tueur",
+      "enfants",
+      "société",
+      "justice"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 33
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Allemagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0022100/",
+    "poster_url": null,
+    "description": "Peter Lorre siffla la mélodie de Grieg (Peer Gynt) pendant tout le tournage pour se mettre dans l'état mental du tueur — Lang garda l'idée et la mélodie devint le leitmotiv le plus inquiétant de l'histoire du cinéma. Premier film policier parlant de l'histoire, il fut aussi le premier à utiliser les empreintes digitales comme preuve dans une fiction. Le tribunal clandestin final où les criminels jugent le tueur d'enfants pose une question morale sur la justice populaire toujours actuelle.",
+    "rang_mondial": null
+  },
+  {
+    "id": "nosferatu-1922",
+    "nom": "Nosferatu le vampire",
+    "titre_original": "Nosferatu, eine Symphonie des Grauens",
+    "realisateur": "F.W. Murnau",
+    "annee": 1922,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Horreur / Expressionnisme",
+    "langue": "Muet",
+    "duree": 94,
+    "tags": [
+      "vampire",
+      "horreur",
+      "expressionnisme",
+      "gothique"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Allemagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0013442/",
+    "poster_url": null,
+    "description": "La succession de Bram Stoker ordonna la destruction de toutes les copies du film car Murnau n'avait pas obtenu les droits de Dracula — quelques copies survécurent miraculeusement. Max Schreck, dans le rôle du comte Orlok, était si effrayant que ses collègues se demandaient s'il était humain — une question que le film Shadow of the Vampire (2000) explora comme fiction. L'ombre du comte sur le mur, les mains en griffes, est l'image de cinéma muet la plus reproduite de l'histoire.",
+    "rang_mondial": null
+  },
+  {
+    "id": "wings-of-desire-1987",
+    "nom": "Les Ailes du désir",
+    "titre_original": "Der Himmel über Berlin",
+    "realisateur": "Wim Wenders",
+    "annee": 1987,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Drame fantastique / Poésie",
+    "langue": "Allemand, Anglais",
+    "duree": 128,
+    "tags": [
+      "anges",
+      "berlin",
+      "humanité",
+      "amour"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 91,
+    "incontournable": true,
+    "origines_cinema": [
+      "Allemagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0093191/",
+    "poster_url": null,
+    "description": "Wenders filma à Berlin-Ouest juste avant la chute du Mur, capturant une ville divisée dont il pressentait obscurément la réunification imminente. Les anges voient en noir et blanc; la couleur n'arrive que lorsqu'ils décident de devenir humains — une métaphore de la vie qui gagne sur l'éternité. Peter Falk (Columbo) joue son propre rôle: un ex-ange qui s'est fait homme et reconnaît ses anciens collègues invisibles dans les rues berlinoises.",
+    "rang_mondial": null
+  },
+  {
+    "id": "lives-of-others-2006",
+    "nom": "La Vie des autres",
+    "titre_original": "Das Leben der Anderen",
+    "realisateur": "Florian Henckel von Donnersmarck",
+    "annee": 2006,
+    "pays": "Allemagne",
+    "continent": "Europe",
+    "genre": "Thriller / Drame historique",
+    "langue": "Allemand",
+    "duree": 137,
+    "tags": [
+      "stasi",
+      "surveillance",
+      "est-allemand",
+      "humanisme"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {
+      "imdb_top250": 49
+    },
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Allemagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0405094/",
+    "poster_url": null,
+    "description": "Des officiers de la vraie Stasi, après avoir vu le film, protestèrent: «Nos agents n'étaient jamais comme ça, ils ne se laissaient pas attendrir.» Ce qui était une critique du film devint paradoxalement sa meilleure recommandation. L'acteur principal Ulrich Mühe avait lui-même vécu sous surveillance de la Stasi, et sa femme l'avait dénoncé — il mourut d'un cancer l'année suivant sa nomination aux Oscars, à 54 ans. Film qui réconcilia l'Allemagne avec sa propre histoire traumatique.",
+    "rang_mondial": null
+  },
+  {
+    "id": "battleship-potemkin-1925",
+    "nom": "Le Cuirassé Potemkine",
+    "titre_original": "Броненосец Потёмкин",
+    "realisateur": "Sergei Eisenstein",
+    "annee": 1925,
+    "pays": "Russie (URSS)",
+    "continent": "Europe",
+    "genre": "Drame politique / Muet",
+    "langue": "Muet",
+    "duree": 75,
+    "tags": [
+      "révolution",
+      "propagande",
+      "montage",
+      "odessa"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 11
+    },
+    "score_consensus": 98,
+    "incontournable": true,
+    "origines_cinema": [
+      "Russie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0015648/",
+    "poster_url": null,
+    "description": "La séquence de l'escalier d'Odessa, où le landau dévale les marches pendant le massacre, est probablement la scène de montage la plus imitée de l'histoire du cinéma — de Brian De Palma aux Intouchables. Eisenstein inventa avec ce film la théorie du «montage d'attractions», où le choc entre deux images crée une troisième idée dans l'esprit du spectateur. Ce film de propagande soviétique fut interdit dans de nombreux pays démocratiques, paradoxalement prouvant son efficacité persuasive.",
+    "rang_mondial": null
+  },
+  {
+    "id": "andrei-rublev-1966",
+    "nom": "Andreï Roublev",
+    "titre_original": "Андрей Рублёв",
+    "realisateur": "Andreï Tarkovski",
+    "annee": 1966,
+    "pays": "Russie (URSS)",
+    "continent": "Europe",
+    "genre": "Drame historique / Épopée",
+    "langue": "Russe",
+    "duree": 183,
+    "tags": [
+      "art",
+      "russie-médiévale",
+      "foi",
+      "souffrance"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 24
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Russie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0060644/",
+    "poster_url": null,
+    "description": "Les autorités soviétiques interdirent le film pendant cinq ans car il montrait une Russie médiévale trop sombre et trop cruelle — Tarkovski dut le cacher dans sa datcha. La séquence finale, une explosion de couleurs après trois heures de noir et blanc, montrant les icônes de Roublev, est considérée comme l'une des plus belles transitions chromatiques de l'histoire du cinéma. Tarkovski lui-même ne savait pas si la fondue au noir convulsive de Roublev représentait la foi ou le désespoir.",
+    "rang_mondial": null
+  },
+  {
+    "id": "stalker-1979",
+    "nom": "Stalker",
+    "titre_original": "Сталкер",
+    "realisateur": "Andreï Tarkovski",
+    "annee": 1979,
+    "pays": "Russie (URSS)",
+    "continent": "Europe",
+    "genre": "Science-fiction / Philosophique",
+    "langue": "Russe",
+    "duree": 163,
+    "tags": [
+      "zone",
+      "désir",
+      "foi",
+      "existentialisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 29
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Russie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0079944/",
+    "poster_url": null,
+    "description": "Tarkovski dut refaire la quasi-totalité du film après que toute la pellicule du premier tournage fut détruite en laboratoire — catastrophe qui le conduisit au bord de la dépression. Le tournage dans une centrale chimique soviétique abandonnée exposa l'équipe à des toxines: Tarkovski, son épouse et trois acteurs moururent tous d'un même cancer rare quelques années après. Cette œuvre contemplatif sur la foi et le désir est peut-être le film le plus lent et le plus fascinant jamais réalisé.",
+    "rang_mondial": null
+  },
+  {
+    "id": "come-and-see-1985",
+    "nom": "Viens et vois",
+    "titre_original": "Иди и смотри",
+    "realisateur": "Elem Klimov",
+    "annee": 1985,
+    "pays": "Russie (URSS)",
+    "continent": "Europe",
+    "genre": "Drame de guerre / Anti-guerre",
+    "langue": "Russe, Allemand, Biélorusse",
+    "duree": 142,
+    "tags": [
+      "guerre",
+      "nazisme",
+      "biélorussie",
+      "horreur"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {
+      "imdb_top250": 6
+    },
+    "score_consensus": 98,
+    "incontournable": true,
+    "origines_cinema": [
+      "Russie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0091251/",
+    "poster_url": null,
+    "description": "Aleksei Kravchenko, 13 ans lors du tournage, subit un véritable état de choc: on lui tira de vraies balles près de la tête et il fut hypnotisé par les hypnotiseurs de l'armée soviétique pour simuler un traumatisme authentique. Le film documenta le massacre de 628 villages biélorusses par les nazis — un génocide presque inconnu en Occident. Après avoir vu ce film, de nombreux spectateurs ont déclaré être incapables de le revoir, tant il représente l'expérience de guerre la plus dévastartrice jamais mise à l'écran.",
+    "rang_mondial": null
+  },
+  {
+    "id": "mirror-1975",
+    "nom": "Le Miroir",
+    "titre_original": "Зеркало",
+    "realisateur": "Andreï Tarkovski",
+    "annee": 1975,
+    "pays": "Russie (URSS)",
+    "continent": "Europe",
+    "genre": "Film autobiographique / Poésie",
+    "langue": "Russe",
+    "duree": 108,
+    "tags": [
+      "mémoire",
+      "rêve",
+      "enfance",
+      "poésie"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 19
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Russie"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0072443/",
+    "poster_url": null,
+    "description": "Film le plus personnel de Tarkovski, Le Miroir entremêle ses propres souvenirs d'enfance, des images d'archives de la Seconde Guerre mondiale et des poèmes lus par la voix de son propre père, le grand poète Arseni Tarkovski. Les bureaucrates soviétiques le trouvèrent incompréhensible et l'interdirent — des spectateurs envoyèrent des centaines de lettres pour expliquer à quel point ce film avait changé leur vie. Rohmer le considérait comme le plus grand film jamais réalisé.",
+    "rang_mondial": null
+  },
+  {
+    "id": "seventh-seal-1957",
+    "nom": "Le Septième Sceau",
+    "titre_original": "Det sjunde inseglet",
+    "realisateur": "Ingmar Bergman",
+    "annee": 1957,
+    "pays": "Suède",
+    "continent": "Europe",
+    "genre": "Drame philosophique",
+    "langue": "Suédois",
+    "duree": 96,
+    "tags": [
+      "mort",
+      "foi",
+      "moyen-age",
+      "chevalier"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "cannes_jury",
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 35
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Suède"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0050976/",
+    "poster_url": null,
+    "description": "Bergman tourna ce film en 35 jours avec un budget minuscule, utilisant de vraies ruines médiévales suédoises comme décors. La scène finale où la Mort mène les personnages dans une danse macabre sur la colline, silhouettes noires sur ciel blanc, fut improvisée quand Bergman aperçut les nuages dramatiques s'accumulant — il demanda à son équipe de filmer rapidement avec des figurants qui attendaient leur bus. Max von Sydow, 28 ans, portait deux heures de maquillage par jour.",
+    "rang_mondial": null
+  },
+  {
+    "id": "wild-strawberries-1957",
+    "nom": "Les Fraises sauvages",
+    "titre_original": "Smultronstället",
+    "realisateur": "Ingmar Bergman",
+    "annee": 1957,
+    "pays": "Suède",
+    "continent": "Europe",
+    "genre": "Drame",
+    "langue": "Suédois",
+    "duree": 91,
+    "tags": [
+      "vieillesse",
+      "mémoire",
+      "voyage",
+      "réconciliation"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "berlinale",
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 27
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Suède"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0050986/",
+    "poster_url": null,
+    "description": "Victor Sjöström, le vieux professeur du film, était lui-même le père fondateur du cinéma muet suédois — Bergman lui rendit hommage en le choisissant pour ce rôle de fin de vie. Bergman écrivit le scénario en quelques semaines après une crise existentielle personnelle, y voyant une façon de régler ses comptes avec sa propre incapacité à aimer. La scène finale de réconciliation, le vieil homme souriant dans les fraises sauvages de son enfance, est peut-être l'image la plus apaisante de toute l'œuvre de Bergman.",
+    "rang_mondial": null
+  },
+  {
+    "id": "persona-1966",
+    "nom": "Persona",
+    "titre_original": "Persona",
+    "realisateur": "Ingmar Bergman",
+    "annee": 1966,
+    "pays": "Suède",
+    "continent": "Europe",
+    "genre": "Drame / Expérimental",
+    "langue": "Suédois",
+    "duree": 83,
+    "tags": [
+      "identité",
+      "fusion",
+      "silence",
+      "actrice"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 18
+    },
+    "score_consensus": 97,
+    "incontournable": true,
+    "origines_cinema": [
+      "Suède"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0060827/",
+    "poster_url": null,
+    "description": "Bergman conçut ce film après une grave maladie, dans un état de fièvre créative où les frontières entre réalité et fiction lui semblaient abolies. Bibi Andersson et Liv Ullmann devinrent les meilleures amies au monde pendant le tournage, et leurs visages se confondent littéralement dans la scène du portrait composite. Susan Sontag consacra un essai entier au film, le jugeant comme «le film le plus sophistiqué jamais réalisé» — une position que beaucoup partagent encore.",
+    "rang_mondial": null
+  },
+  {
+    "id": "fanny-alexander-1982",
+    "nom": "Fanny et Alexandre",
+    "titre_original": "Fanny och Alexander",
+    "realisateur": "Ingmar Bergman",
+    "annee": 1982,
+    "pays": "Suède",
+    "continent": "Europe",
+    "genre": "Drame familial / Épopée",
+    "langue": "Suédois",
+    "duree": 188,
+    "tags": [
+      "famille",
+      "noël",
+      "enfance",
+      "théâtre"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "Suède"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0083922/",
+    "poster_url": null,
+    "description": "Bergman déclara après ce film qu'il ne réaliserait plus jamais de film de cinéma — et il tint parole pendant 24 ans. Ce testament cinématographique, conçu comme un cadeau à ses fidèles collaborateurs, fut d'abord diffusé en version de 5 heures à la télévision suédoise puis raccourci pour le cinéma. La somptueuse scène de Noël d'ouverture, avec ses chandelles et ses vitraux, est la vision la plus opulente et la plus chaleureuse du Noël que le cinéma ait jamais offerte.",
+    "rang_mondial": null
+  },
+  {
+    "id": "the-hunt-2012",
+    "nom": "La Chasse",
+    "titre_original": "Jagten",
+    "realisateur": "Thomas Vinterberg",
+    "annee": 2012,
+    "pays": "Danemark",
+    "continent": "Europe",
+    "genre": "Drame",
+    "langue": "Danois",
+    "duree": 115,
+    "tags": [
+      "accusation",
+      "innocence",
+      "communauté",
+      "hystérie"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Europe"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt2106476/",
+    "poster_url": null,
+    "description": "Mads Mikkelsen livra la performance de sa vie dans ce film bouleversant sur un homme innocent accusé de pédophilie — la façon dont une communauté entière bascule dans la haine collective est filmée avec une précision glaçante. Vinterberg s'inspira de vrais cas de fausse accusation qui ont détruit des vies, dans un Danemark pourtant réputé pour sa bienveillance sociale. La scène finale de chasse — ambiguë, suspendue — laisse le spectateur dans une inquiétude permanente.",
+    "rang_mondial": null
+  },
+  {
+    "id": "let-the-right-one-in-2008",
+    "nom": "Morse",
+    "titre_original": "Låt den rätte komma in",
+    "realisateur": "Tomas Alfredson",
+    "annee": 2008,
+    "pays": "Suède",
+    "continent": "Europe",
+    "genre": "Horreur / Drame romantique",
+    "langue": "Suédois",
+    "duree": 114,
+    "tags": [
+      "vampire",
+      "enfance",
+      "amour",
+      "neige"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 87,
+    "incontournable": false,
+    "origines_cinema": [
+      "Suède"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1139797/",
+    "poster_url": null,
+    "description": "Alfredson chercha pendant des mois deux enfants qui «n'auraient pas l'air d'enfants» — il voulait des visages ambigus, hors du temps, que le froid suédois rendrait encore plus étranges. La séquence de la piscine, filmée en un seul plan sous-marin, fut tournée en 48 heures dans un froid glacial; les acteurs adultes qui jouaient les corps mutilés étaient de vrais nageurs synchronisés. Cette romance vampirique entre enfants solitaires redéfinit les codes du film de vampire avec une douceur inattendue.",
+    "rang_mondial": null
+  },
+  {
+    "id": "lawrence-of-arabia-1962",
+    "nom": "Lawrence d'Arabie",
+    "titre_original": "Lawrence of Arabia",
+    "realisateur": "David Lean",
+    "annee": 1962,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Épopée historique",
+    "langue": "Anglais",
+    "duree": 228,
+    "tags": [
+      "désert",
+      "guerre",
+      "identité",
+      "épopée"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "oscar_meilleur_film",
+      "bafta",
+      "afi_top100"
+    ],
+    "palmares_rangs": {
+      "afi_top100": 5
+    },
+    "score_consensus": 96,
+    "incontournable": true,
+    "origines_cinema": [
+      "Royaume-Uni"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0056172/",
+    "poster_url": null,
+    "description": "Tourné dans le vrai désert de Jordanie et du Maroc en format 65mm, le film dura 26 mois de tournage dans des conditions extrêmes — la pellicule fondait régulièrement à 50°C. Peter O'Toole faillit mourir d'insolation plusieurs fois; les figurants arabes refusaient de travailler avec des acteurs habillés en soldats turcs qui ressemblaient trop aux vrais occupants. La scène d'ouverture — T.E. Lawrence allumant une allumette — reste le plus beau plan de toute l'histoire du cinéma épique.",
+    "rang_mondial": null
+  },
+  {
+    "id": "the-third-man-1949",
+    "nom": "Le Troisième Homme",
+    "titre_original": "The Third Man",
+    "realisateur": "Carol Reed",
+    "annee": 1949,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Film noir / Thriller",
+    "langue": "Anglais",
+    "duree": 104,
+    "tags": [
+      "vienne",
+      "guerre-froide",
+      "trahison",
+      "cithare"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "sight_sound",
+      "bafta"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Royaume-Uni"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0041959/",
+    "poster_url": null,
+    "description": "Orson Welles, qui joue Harry Lime, n'était disponible que dix jours — Reed construisit tout le film autour de son absence pour rendre son apparition encore plus spectaculaire. La musique de cithare d'Anton Karas fut découverte par hasard à une fête viennoise, Reed convainquant l'inconnu de composer la bande originale. Le monologue de Welles sur les coucous suisses fut écrit par Welles lui-même — Graham Greene, qui écrivit le scénario, reconnut que c'était «la meilleure chose du film».",
+    "rang_mondial": null
+  },
+  {
+    "id": "kes-1969",
+    "nom": "Kes",
+    "titre_original": "Kes",
+    "realisateur": "Ken Loach",
+    "annee": 1969,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Drame social",
+    "langue": "Anglais (dialecte du Yorkshire)",
+    "duree": 110,
+    "tags": [
+      "enfance",
+      "classe-ouvrière",
+      "faucon",
+      "angleterre"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Royaume-Uni"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0064541/",
+    "poster_url": null,
+    "description": "Loach engagea un vrai enfant du Yorkshire, David Bradley, qui apprit réellement à dresser un faucon crécerelle pendant six mois avant le tournage. L'accent des personnages était si prononcé que les distributeurs américains demandèrent des sous-titres — Loach refusa catégoriquement. Élu meilleur film britannique de tous les temps par les BFI en 1999, ce film sur un garçon qui trouve sa dignité dans le dressage d'un oiseau est l'un des portraits d'enfant les plus nobles du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "i-daniel-blake-2016",
+    "nom": "Moi, Daniel Blake",
+    "titre_original": "I, Daniel Blake",
+    "realisateur": "Ken Loach",
+    "annee": 2016,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Drame social",
+    "langue": "Anglais",
+    "duree": 100,
+    "tags": [
+      "système",
+      "aide-sociale",
+      "dignité",
+      "angleterre"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cinema": [
+      "Royaume-Uni"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt5168192/",
+    "poster_url": null,
+    "description": "Loach, 79 ans lors du tournage, recevant sa deuxième Palme d'Or, déclara: «Le cynisme est l'arme des puissants» — un discours qui fit le tour du monde. Le film fut si précis dans sa description de la bureaucratie kafkaïenne britannique que des travailleurs sociaux et des fonctionnaires de Jobcentre écrivirent des lettres émues pour dire qu'ils se reconnaissaient dans le système. Dave Johns, le protagoniste, était un vrai comédien de stand-up qui n'avait jamais joué dans un long métrage.",
+    "rang_mondial": null
+  },
+  {
+    "id": "brief-encounter-1945",
+    "nom": "Brève rencontre",
+    "titre_original": "Brief Encounter",
+    "realisateur": "David Lean",
+    "annee": 1945,
+    "pays": "Royaume-Uni",
+    "continent": "Europe",
+    "genre": "Drame romantique",
+    "langue": "Anglais",
+    "duree": 86,
+    "tags": [
+      "amour-impossible",
+      "devoir",
+      "retenue",
+      "angleterre"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": false,
+    "origines_cinema": [
+      "Royaume-Uni"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0037558/",
+    "poster_url": null,
+    "description": "Celia Johnson et Trevor Howard jouèrent l'amour passionné le plus discret de l'histoire du cinéma — leurs personnages n'échangent jamais un vrai baiser, leur passion existant entièrement dans les regards et les silences. Adapté d'une pièce en un acte de Noël Coward, le film fut tourné dans une vraie gare de Carnforth dont les trains passaient réellement. La bande-son, le Concerto pour piano n°2 de Rachmaninov, devint tellement liée au film que les auditeurs anglais l'associent encore aujourd'hui à des amours impossibles.",
+    "rang_mondial": null
+  },
+  {
+    "id": "close-up-1990",
+    "nom": "Close-Up",
+    "titre_original": "کلوزآپ",
+    "realisateur": "Abbas Kiarostami",
+    "annee": 1990,
+    "pays": "Iran",
+    "continent": "Asie",
+    "genre": "Docufiction / Expérimental",
+    "langue": "Persan",
+    "duree": 98,
+    "tags": [
+      "imposture",
+      "cinéma",
+      "identité",
+      "procès"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound"
+    ],
+    "palmares_rangs": {
+      "sight_sound": 23
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Iran"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0059113/",
+    "poster_url": null,
+    "description": "Kiarostami se précipita au tribunal pour filmer le procès d'un homme ayant usurpé l'identité du cinéaste Mohsen Makhmalbaf, et convainquit les vrais protagonistes de rejouer leur propre histoire devant sa caméra. La frontière entre documentaire et fiction s'effondre totalement — même la scène finale, apparemment spontanée, est mise en scène avec la complicité des participants. Jean-Luc Godard dit de ce film: «C'est la preuve que le cinéma a trouvé son Matisse.»",
+    "rang_mondial": null
+  },
+  {
+    "id": "a-separation-2011",
+    "nom": "Une séparation",
+    "titre_original": "جدایی نادر از سیمین",
+    "realisateur": "Asghar Farhadi",
+    "annee": 2011,
+    "pays": "Iran",
+    "continent": "Asie",
+    "genre": "Drame / Thriller moral",
+    "langue": "Persan",
+    "duree": 123,
+    "tags": [
+      "divorce",
+      "classe",
+      "mensonge",
+      "iran"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "berlinale"
+    ],
+    "palmares_rangs": {
+      "imdb_top250": 29
+    },
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Iran"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1832382/",
+    "poster_url": null,
+    "description": "Farhadi ne donna à ses acteurs les scènes complètes du scénario qu'au moment du tournage, faisant en sorte que chaque personnage ne connaisse que sa propre version de la vérité — exactement comme dans la vie réelle. Le film remporta l'Ours d'Or et tous les prix d'interprétation de la Berlinale, ainsi que l'Oscar — un exploit unique. Le gouvernement iranien fut embarrassé par ce succès qui révélait les tensions sociales de la République islamique, mais ne put l'interdire tant la reconnaissance mondiale était écrasante.",
+    "rang_mondial": null
+  },
+  {
+    "id": "taste-of-cherry-1997",
+    "nom": "Le Goût de la cerise",
+    "titre_original": "طعم گیلاس",
+    "realisateur": "Abbas Kiarostami",
+    "annee": 1997,
+    "pays": "Iran",
+    "continent": "Asie",
+    "genre": "Drame philosophique",
+    "langue": "Persan",
+    "duree": 95,
+    "tags": [
+      "suicide",
+      "vie",
+      "paysage",
+      "humanisme"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Iran"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0118186/",
+    "poster_url": null,
+    "description": "Kiarostami filma essentiellement un homme qui conduit et parle — le paysage aride autour de Téhéran devenant une extension de son état intérieur. La Palme d'Or fit scandale dans l'Iran de l'époque, les autorités religieuses refusant de reconnaître qu'un film sur le suicide méritait les plus hautes récompenses. L'épilogue surprenant, en vidéo couleur, où Kiarostami montre son équipe sur le plateau, reste l'un des plus grands gestes de rupture du quatrième mur de l'histoire du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "children-of-heaven-1997",
+    "nom": "Les Enfants du ciel",
+    "titre_original": "بچه های آسمان",
+    "realisateur": "Majid Majidi",
+    "annee": 1997,
+    "pays": "Iran",
+    "continent": "Asie",
+    "genre": "Drame familial",
+    "langue": "Persan",
+    "duree": 89,
+    "tags": [
+      "enfance",
+      "pauvreté",
+      "chaussures",
+      "fraternité"
+    ],
+    "saisons": [
+      "printemps"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cinema": [
+      "Iran"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0118849/",
+    "poster_url": null,
+    "description": "Un garçon perd les chaussures de sa sœur et partage les siennes avec elle — cette prémisse minuscule devient un film d'une beauté et d'une émotion universelle qui toucha des millions de spectateurs dans le monde. Premier film iranien nommé à l'Oscar du meilleur film étranger, il démontra que le cinéma iranien n'était pas seulement l'affaire d'intellectuels mais pouvait toucher des publics familiaux mondiaux. Les deux enfants acteurs, non professionnels, furent découverts dans leur école de quartier à Téhéran.",
+    "rang_mondial": null
+  },
+  {
+    "id": "viridiana-1961",
+    "nom": "Viridiana",
+    "titre_original": "Viridiana",
+    "realisateur": "Luis Buñuel",
+    "annee": 1961,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Drame / Satire religieuse",
+    "langue": "Espagnol",
+    "duree": 90,
+    "tags": [
+      "religion",
+      "hypocrisie",
+      "satire",
+      "surréalisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_palme_dor",
+      "sight_sound"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 93,
+    "incontournable": true,
+    "origines_cinema": [
+      "Espagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0055601/",
+    "poster_url": null,
+    "description": "Franco avait demandé à Buñuel de revenir en Espagne pour montrer que la censure s'était assouplie — Buñuel accepta et livra ce film qui fut immédiatement interdit dans son propre pays après la Palme d'Or. Le Vatican le qualifia de «blasphème» et l'Espagne censura sa propre Palme pour ne pas humilier le régime. La scène finale du repas de clochards parodiant La Cène de Léonard de Vinci, avec la Haendel du Messie, est la provocation la plus élaborée de l'histoire du cinéma.",
+    "rang_mondial": null
+  },
+  {
+    "id": "all-about-my-mother-1999",
+    "nom": "Tout sur ma mère",
+    "titre_original": "Todo sobre mi madre",
+    "realisateur": "Pedro Almodóvar",
+    "annee": 1999,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Drame / Mélodrame",
+    "langue": "Espagnol",
+    "duree": 101,
+    "tags": [
+      "maternité",
+      "identité",
+      "théâtre",
+      "barcelona"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "Espagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0185125/",
+    "poster_url": null,
+    "description": "Almodóvar rendit hommage à trois films qu'il aimait — All About Eve, Streetcar Named Desire et Opening Night de Cassavetes — en construisant une œuvre originale qui les surpasse dans la tendresse. Cecil B. DeMille avait dit qu'on pouvait raconter une histoire à travers des trains; Almodóvar choisit les ambulances qui font la même chose avec un symbolisme de mort et de secours. Ce film sur les femmes et leur résilience face au deuil est peut-être l'œuvre la plus aimante de toute la filmographie d'Almodóvar.",
+    "rang_mondial": null
+  },
+  {
+    "id": "talk-to-her-2002",
+    "nom": "Parle avec elle",
+    "titre_original": "Hable con ella",
+    "realisateur": "Pedro Almodóvar",
+    "annee": 2002,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Drame / Romance",
+    "langue": "Espagnol",
+    "duree": 112,
+    "tags": [
+      "coma",
+      "amour",
+      "danse",
+      "tauromachie"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 92,
+    "incontournable": false,
+    "origines_cinema": [
+      "Espagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0287467/",
+    "poster_url": null,
+    "description": "Almodóvar mêla tauromachie, danse butō et amour pour des personnes dans le coma dans un film qui explore la frontière entre dévotion et transgression morale avec une beauté absolument déconcertante. La séquence du film muet intégré dans le film, «L'Amant qui rétrécit», est un court-métrage surréaliste en soi que Almodóvar créa spécifiquement pour éviter de montrer quelque chose d'explicite. Oscar du meilleur scénario original, une récompense rarissime pour un film non anglophone.",
+    "rang_mondial": null
+  },
+  {
+    "id": "pans-labyrinth-2006",
+    "nom": "Le Labyrinthe de Pan",
+    "titre_original": "El laberinto del fauno",
+    "realisateur": "Guillermo del Toro",
+    "annee": 2006,
+    "pays": "Espagne",
+    "continent": "Europe",
+    "genre": "Fantasy / Drame de guerre",
+    "langue": "Espagnol",
+    "duree": 118,
+    "tags": [
+      "guerre-civile",
+      "fantaisie",
+      "enfance",
+      "franquisme"
+    ],
+    "saisons": [
+      "automne",
+      "hiver"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": false,
+    "origines_cinema": [
+      "Espagne"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0457430/",
+    "poster_url": null,
+    "description": "Del Toro refusa que le Faune et la créature aux yeux dans les paumes soient réalisés en images de synthèse, insistant pour de vrais costumes et de vrais acteurs — Doug Jones passa des heures dans des prothèses douloureuses. Le film délibérément ambigu sur la frontière entre réalité et imagination dérange autant qu'il émerveille: del Toro a dit vouloir que le spectateur ne sache jamais si Ofelia est folle ou si la magie est réelle. Trois Oscars techniques, mais pas de nomination pour le meilleur film étranger — del Toro choisit de le soumettre comme film américain.",
+    "rang_mondial": null
+  },
+  {
+    "id": "city-of-god-2002",
+    "nom": "La Cité de Dieu",
+    "titre_original": "Cidade de Deus",
+    "realisateur": "Fernando Meirelles",
+    "annee": 2002,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "Crime / Drame",
+    "langue": "Portugais",
+    "duree": 130,
+    "tags": [
+      "favela",
+      "violence",
+      "rio",
+      "gang"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "Brésil"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0317248/",
+    "poster_url": null,
+    "description": "Meirelles engagea de vrais habitants de la Cité de Dieu après des mois d'ateliers de théâtre dans la favela — la plupart n'avaient jamais joué. Deux des acteurs furent arrêtés pendant le tournage pour trafic de drogue. Le film, initialement refusé par les distributeurs brésiliens, devint le film brésilien le plus vu de l'histoire et révéla la violence des favelas à un public mondial qui l'ignorait.",
+    "rang_mondial": null
+  },
+  {
+    "id": "y-tu-mama-tambien-2001",
+    "nom": "Y tu mamá también",
+    "titre_original": "Y tu mamá también",
+    "realisateur": "Alfonso Cuarón",
+    "annee": 2001,
+    "pays": "Mexique",
+    "continent": "Amériques",
+    "genre": "Comédie dramatique / Road movie",
+    "langue": "Espagnol",
+    "duree": 106,
+    "tags": [
+      "adolescence",
+      "mexique",
+      "voyage",
+      "sexualité"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 89,
+    "incontournable": false,
+    "origines_cinema": [
+      "Mexique"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0245574/",
+    "poster_url": null,
+    "description": "Cuarón, boudé par Hollywood après le flop de Great Expectations, retourna au Mexique pour tourner ce road-movie à petit budget avec ses amis — le film lui permit de revenir triomphalement dans l'industrie avec Harry Potter 3. La voix-off omnisciente qui contextualise chaque scène dans la réalité politique mexicaine des années 2000 crée un contrepoint politique inattendu à une comédie de mœurs. Gael García Bernal et Diego Luna improvisèrent une grande partie de leurs dialogues en s'inspirant de leur propre amitié.",
+    "rang_mondial": null
+  },
+  {
+    "id": "amores-perros-2000",
+    "nom": "Amores Perros",
+    "titre_original": "Amores Perros",
+    "realisateur": "Alejandro González Iñárritu",
+    "annee": 2000,
+    "pays": "Mexique",
+    "continent": "Amériques",
+    "genre": "Drame / Crime",
+    "langue": "Espagnol",
+    "duree": 153,
+    "tags": [
+      "mexico",
+      "chiens",
+      "collision",
+      "destin"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Mexique"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0245712/",
+    "poster_url": null,
+    "description": "Iñárritu demanda à Alejandro González pour scénariste Guillermo Arriaga d'écrire trois histoires reliées par un seul accident de voiture — une structure narrative qui inspire encore des dizaines de films. Les chiens utilisés comme personnages symboliques furent tous adoptés après le tournage par les membres de l'équipe. Ce premier film du réalisateur de Babel et Birdman révéla simultanément trois nouveaux talents majeurs: Iñárritu, Arriaga et Gael García Bernal.",
+    "rang_mondial": null
+  },
+  {
+    "id": "secret-in-their-eyes-2009",
+    "nom": "Dans ses yeux",
+    "titre_original": "El secreto de sus ojos",
+    "realisateur": "Juan José Campanella",
+    "annee": 2009,
+    "pays": "Argentine",
+    "continent": "Amériques",
+    "genre": "Thriller / Drame romantique",
+    "langue": "Espagnol",
+    "duree": 129,
+    "tags": [
+      "justice",
+      "amour",
+      "mémoire",
+      "argentina"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Argentine"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1305806/",
+    "poster_url": null,
+    "description": "La scène de course-poursuite dans le stade de football de Buenos Aires, filmée en un seul plan séquence apparent grâce au numérique, est l'une des prouesses techniques les plus admirées du cinéma récent. Campanella, connu pour ses séries télévisées américaines (Law & Order), apporta au film une efficacité narrative américaine au service d'une histoire profondément argentine sur la justice et l'impunité. L'Oscar du meilleur film étranger créa un émoi national en Argentine comparable à une victoire en Coupe du monde.",
+    "rang_mondial": null
+  },
+  {
+    "id": "central-station-1998",
+    "nom": "Central do Brasil",
+    "titre_original": "Central do Brasil",
+    "realisateur": "Walter Salles",
+    "annee": 1998,
+    "pays": "Brésil",
+    "continent": "Amériques",
+    "genre": "Drame / Road movie",
+    "langue": "Portugais",
+    "duree": 113,
+    "tags": [
+      "enfance",
+      "brésil",
+      "voyage",
+      "humanisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "berlinale"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 86,
+    "incontournable": false,
+    "origines_cinema": [
+      "Brésil"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0140888/",
+    "poster_url": null,
+    "description": "Fernanda Montenegro livra une performance si bouleversante d'une femme austère qui s'humanise qu'elle fut nommée à l'Oscar de la meilleure actrice, seule actrice non anglophone à l'avoir été depuis des décennies. Salles engagea de vraies personnes dans la vraie gare centrale de Rio pour les scènes d'écriture de lettres, créant une texture documentaire authentique. Ce film réconcilia le cinéma brésilien avec son propre public après des années de déclin.",
+    "rang_mondial": null
+  },
+  {
+    "id": "embrace-of-serpent-2015",
+    "nom": "L'Étreinte du Serpent",
+    "titre_original": "El abrazo de la serpiente",
+    "realisateur": "Ciro Guerra",
+    "annee": 2015,
+    "pays": "Colombie",
+    "continent": "Amériques",
+    "genre": "Aventure / Expérimental",
+    "langue": "Espagnol, Portugais, Langues indigènes",
+    "duree": 125,
+    "tags": [
+      "amazonie",
+      "colonialisme",
+      "chamane",
+      "nature"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cinema": [
+      "Amériques"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt4285496/",
+    "poster_url": null,
+    "description": "Tourné en noir et blanc dans l'Amazonie colombienne avec des acteurs indigènes, ce film récupère les journaux de deux explorateurs réels (un Allemand et un Américain) pour créer une méditation sur la destruction des cultures amazoniques par le colonialisme. Premier film colombien nommé à l'Oscar du meilleur film étranger, il fut tourné dans des lieux accessibles uniquement en pirogue. Werner Herzog, qui avait filmé Aguirre dans la même jungle, exprima publiquement son admiration.",
+    "rang_mondial": null
+  },
+  {
+    "id": "capernaum-2018",
+    "nom": "Capharnaüm",
+    "titre_original": "كفرناحوم",
+    "realisateur": "Nadine Labaki",
+    "annee": 2018,
+    "pays": "Liban",
+    "continent": "Asie",
+    "genre": "Drame social",
+    "langue": "Arabe, Amharique, Anglais",
+    "duree": 126,
+    "tags": [
+      "enfance",
+      "pauvreté",
+      "beyrouth",
+      "réfugiés"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_jury"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Liban"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt8267604/",
+    "poster_url": null,
+    "description": "Zain Al Rafeea, 12 ans, un vrai réfugié syrien sans papiers au Liban, joue un enfant qui poursuit ses parents en justice pour l'avoir mis au monde dans la misère — et le film fut effectivement produit en partie pour témoigner de la situation des réfugiés. Labaki tourna 520 heures de rushes en quatre ans avec une petite équipe, suivant ses personnages dans la vraie Beyrouth. La scène finale, le premier sourire de Zain devant l'objectif d'une photo d'identité, est l'un des moments les plus cathartiques du cinéma récent.",
+    "rang_mondial": null
+  },
+  {
+    "id": "timbuktu-2014",
+    "nom": "Timbuktu",
+    "titre_original": "Timbuktu",
+    "realisateur": "Abderrahmane Sissako",
+    "annee": 2014,
+    "pays": "Mauritanie",
+    "continent": "Afrique",
+    "genre": "Drame / Politique",
+    "langue": "Bambara, Arabe, Tamasheq, Français",
+    "duree": 97,
+    "tags": [
+      "islamisme",
+      "mali",
+      "résistance",
+      "humanisme"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cesar"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Afrique du Sud"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt3541524/",
+    "poster_url": null,
+    "description": "Sissako tourna ce film à la frontière mauritano-malienne juste après la prise de Tombouctou par les jihadistes, reconstruisant les événements avec une douceur déchirante plutôt qu'avec une violence explicite. La scène de football sans ballon, les jeunes jouant silencieusement une partie imaginaire pour déjouer l'interdiction, est une des images les plus poétiques et les plus politiques du cinéma africain. César du meilleur film, il fut sélectionné pour représenter la Mauritanie aux Oscars — pays qui n'avait jamais produit de film auparavant.",
+    "rang_mondial": null
+  },
+  {
+    "id": "atlantics-2019",
+    "nom": "Atlantique",
+    "titre_original": "Atlantique",
+    "realisateur": "Mati Diop",
+    "annee": 2019,
+    "pays": "Sénégal",
+    "continent": "Afrique",
+    "genre": "Drame fantastique",
+    "langue": "Wolof, Français",
+    "duree": 105,
+    "tags": [
+      "migration",
+      "fantôme",
+      "dakar",
+      "amour"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [
+      "cannes_grand_prix"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cinema": [
+      "Afrique du Sud"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt8009310/",
+    "poster_url": null,
+    "description": "Mati Diop, nièce du cinéaste Djibril Diop Mambéty, devint la première femme noire à sélectionner en compétition à Cannes — et remporta le Grand Prix. Le film sur des jeunes hommes qui disparaissent en mer en tentant de rejoindre l'Europe, et reviennent comme fantômes pour se venger, mêle réalisme social africain et fantastique avec une inventivité formelle éblouissante. Netflix acquit les droits internationaux, donnant à ce film une audience mondiale inédite pour un film sénégalais.",
+    "rang_mondial": null
+  },
+  {
+    "id": "xala-1975",
+    "nom": "Xala",
+    "titre_original": "Xala",
+    "realisateur": "Ousmane Sembène",
+    "annee": 1975,
+    "pays": "Sénégal",
+    "continent": "Afrique",
+    "genre": "Comédie satirique",
+    "langue": "Wolof, Français",
+    "duree": 123,
+    "tags": [
+      "impuissance",
+      "bourgeoisie",
+      "satire",
+      "sénégal"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 83,
+    "incontournable": false,
+    "origines_cinema": [
+      "Afrique du Sud"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0074395/",
+    "poster_url": null,
+    "description": "Sembène, souvent appelé «le père du cinéma africain», utilisa l'impuissance sexuelle d'un homme d'affaires sénégalais bourgeois comme métaphore de la corruption post-coloniale de sa classe. Le mot «xala» désigne une malédiction d'impuissance en wolof — Sembène choisit délibérément de mélanger le français et le wolof pour critiquer l'aliénation linguistique des élites africaines. Ce film fut interdit au Sénégal pendant un temps, prouvant que la satire avait touché juste.",
+    "rang_mondial": null
+  },
+  {
+    "id": "yeelen-1987",
+    "nom": "Yeelen (La Lumière)",
+    "titre_original": "Yeelen",
+    "realisateur": "Souleymane Cissé",
+    "annee": 1987,
+    "pays": "Mali",
+    "continent": "Afrique",
+    "genre": "Épopée / Fantasy africaine",
+    "langue": "Bambara",
+    "duree": 105,
+    "tags": [
+      "magie",
+      "mali",
+      "épopée",
+      "père-fils"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "cannes_jury"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 85,
+    "incontournable": false,
+    "origines_cinema": [
+      "Afrique du Sud"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0091856/",
+    "poster_url": null,
+    "description": "Cissé puisa dans les traditions orales mandingues pour créer une épopée fantastique authentiquement africaine, refusant tout modèle occidental. Les pouvoirs magiques utilisés dans le film s'inspirent des pratiques réelles des initiés bambara — certains griots refusèrent de participer au tournage par respect des secrets. Prix du Jury à Cannes, ce film révéla qu'un cinéma fantastique africain, enraciné dans ses propres mythologies, pouvait toucher des publics universels.",
+    "rang_mondial": null
+  },
+  {
+    "id": "battle-of-algiers-1966",
+    "nom": "La Bataille d'Alger",
+    "titre_original": "La battaglia di Algeri",
+    "realisateur": "Gillo Pontecorvo",
+    "annee": 1966,
+    "pays": "Algérie",
+    "continent": "Afrique",
+    "genre": "Docufiction / Politique",
+    "langue": "Arabe, Français, Italien",
+    "duree": 121,
+    "tags": [
+      "algérie",
+      "indépendance",
+      "colonialisme",
+      "guérilla"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "sight_sound",
+      "venice"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 95,
+    "incontournable": true,
+    "origines_cinema": [
+      "Maroc"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0058946/",
+    "poster_url": null,
+    "description": "L'armée américaine projeta ce film au Pentagone en 2003 avant l'invasion de l'Irak, accompagné du sous-titre: «Comment gagner une bataille contre le terrorisme et perdre la guerre des idées.» Les soldats qui jouent les Français étaient de vrais Algériens — y compris des anciens combattants du FLN — et leur présence créa une tension authentique sur le plateau. Interdit en France pendant cinq ans pour ses scènes de torture, il reste le film le plus important sur la décolonisation.",
+    "rang_mondial": null
+  },
+  {
+    "id": "paradise-now-2005",
+    "nom": "Paradise Now",
+    "titre_original": "الجنة الآن",
+    "realisateur": "Hany Abu-Assad",
+    "annee": 2005,
+    "pays": "Palestine",
+    "continent": "Asie",
+    "genre": "Thriller / Drame politique",
+    "langue": "Arabe",
+    "duree": 90,
+    "tags": [
+      "attentat-suicide",
+      "palestine",
+      "désespoir",
+      "amitié"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "berlinale"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 82,
+    "incontournable": false,
+    "origines_cinema": [
+      "Liban"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0445620/",
+    "poster_url": null,
+    "description": "Abu-Assad tourna à Naplouse sous couvre-feu militaire, l'équipe étant régulièrement évacuée pendant les opérations de l'armée israélienne — un des tournages les plus dangereux de l'histoire récente du cinéma. Premier film palestinien nommé à l'Oscar du meilleur film étranger, il présente avec une neutralité troublante deux amis se préparant à un attentat-suicide, forçant le spectateur à comprendre sans approuver. Les producteurs reçurent des menaces de mort de deux côtés du conflit.",
+    "rang_mondial": null
+  },
+  {
+    "id": "cairo-station-1958",
+    "nom": "Gare centrale",
+    "titre_original": "باب الحديد",
+    "realisateur": "Youssef Chahine",
+    "annee": 1958,
+    "pays": "Égypte",
+    "continent": "Afrique",
+    "genre": "Film noir / Drame",
+    "langue": "Arabe",
+    "duree": 77,
+    "tags": [
+      "gare",
+      "obsession",
+      "cairéen",
+      "modernité"
+    ],
+    "saisons": [
+      "été"
+    ],
+    "palmares": [],
+    "palmares_rangs": {},
+    "score_consensus": 84,
+    "incontournable": false,
+    "origines_cinema": [
+      "Maroc"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0051390/",
+    "poster_url": null,
+    "description": "Chahine joue lui-même le vendeur de journaux boiteux obsédé par une vendeuse de limonade — une performance physique troublante de sincérité. Ce film noir égyptien, avec son ambiance de gare vivante et son portrait d'une urbanité cairéenne grouillante, est un document social unique sur l'Égypte nassérienne. Souvent appelé le plus grand film arabe de l'histoire, il propulsa Chahine vers une carrière internationale de 50 ans.",
+    "rang_mondial": null
+  },
+  {
+    "id": "4-months-2007",
+    "nom": "4 mois, 3 semaines, 2 jours",
+    "titre_original": "4 luni, 3 săptămâni și 2 zile",
+    "realisateur": "Cristian Mungiu",
+    "annee": 2007,
+    "pays": "Roumanie",
+    "continent": "Europe",
+    "genre": "Drame / Thriller",
+    "langue": "Roumain",
+    "duree": 113,
+    "tags": [
+      "avortement",
+      "roumanie",
+      "communisme",
+      "femmes"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 94,
+    "incontournable": true,
+    "origines_cinema": [
+      "Europe"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt1032846/",
+    "poster_url": null,
+    "description": "Mungiu filma l'avortement clandestin dans la Roumanie de Ceaușescu avec la précision froide d'un documentariste et l'intensité d'un thriller, refusant tout sentimentalisme. La scène de dîner mondain pendant laquelle Otilia réalise la gravité de ce qui se passe, filmée en un seul plan fixe interminable, est l'une des mises en scène les plus audacieuses du cinéma mondial récent. La Roumanie, longtemps invisible cinématographiquement, révéla avec ce film et d'autres une «Nouvelle Vague roumaine» admirée mondialement.",
+    "rang_mondial": null
+  },
+  {
+    "id": "ida-2013",
+    "nom": "Ida",
+    "titre_original": "Ida",
+    "realisateur": "Pawel Pawlikowski",
+    "annee": 2013,
+    "pays": "Pologne",
+    "continent": "Europe",
+    "genre": "Drame historique",
+    "langue": "Polonais",
+    "duree": 80,
+    "tags": [
+      "identité",
+      "juif",
+      "pologne",
+      "religion"
+    ],
+    "saisons": [
+      "hiver"
+    ],
+    "palmares": [
+      "oscar_etranger"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Europe"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt2718918/",
+    "poster_url": null,
+    "description": "Pawlikowski tourna en format carré 1.37:1 et plaça ses personnages systématiquement en bas de l'image, laissant le ciel et les espaces vides les écraser — une façon de représenter visuellement le poids de l'Histoire sur les individus. La comédienne principale, Agata Trzebuchowska, fut découverte dans un café de Varsovie; c'était sa première apparition à l'écran. Ce film de 80 minutes, dense et silencieux comme une prière, explore l'Holocauste polonais avec une économie formelle absolue.",
+    "rang_mondial": null
+  },
+  {
+    "id": "son-of-saul-2015",
+    "nom": "Le Fils de Saul",
+    "titre_original": "Saul fia",
+    "realisateur": "László Nemes",
+    "annee": 2015,
+    "pays": "Hongrie",
+    "continent": "Europe",
+    "genre": "Drame historique",
+    "langue": "Hongrois, Yiddish, Polonais, Allemand",
+    "duree": 107,
+    "tags": [
+      "holocauste",
+      "auschwitz",
+      "sonderkommando",
+      "humanité"
+    ],
+    "saisons": [
+      "tout"
+    ],
+    "palmares": [
+      "oscar_etranger",
+      "cannes_grand_prix"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 90,
+    "incontournable": true,
+    "origines_cinema": [
+      "Europe"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt3808342/",
+    "poster_url": null,
+    "description": "Nemes filma Auschwitz comme jamais: en format presque carré, la caméra vissée sur le visage de Saul, l'horreur de l'extermination maintenue délibérément floue en arrière-plan — présente sans jamais être montrée. Ce parti pris formel radical fut unanimement salué comme la façon la plus respectueuse et la plus efficace de filmer ce qui ne peut pas être filmé. Premier film de Nemes, il remporta l'Oscar, le Grand Prix de Cannes et le BAFTA — un triomphe absolu pour un premier œuvre.",
+    "rang_mondial": null
+  },
+  {
+    "id": "rosetta-1999",
+    "nom": "Rosetta",
+    "titre_original": "Rosetta",
+    "realisateur": "Jean-Pierre et Luc Dardenne",
+    "annee": 1999,
+    "pays": "Belgique",
+    "continent": "Europe",
+    "genre": "Drame social / Réalisme",
+    "langue": "Français",
+    "duree": 95,
+    "tags": [
+      "pauvreté",
+      "dignité",
+      "travail",
+      "belgique"
+    ],
+    "saisons": [
+      "automne"
+    ],
+    "palmares": [
+      "cannes_palme_dor"
+    ],
+    "palmares_rangs": {},
+    "score_consensus": 88,
+    "incontournable": false,
+    "origines_cinema": [
+      "Europe",
+      "France"
+    ],
+    "imdb_url": "https://www.imdb.com/title/tt0200082/",
+    "poster_url": null,
+    "description": "La caméra des frères Dardenne colle littéralement à l'épaule de leur héroïne pendant 95 minutes, créant une intimité physique avec la pauvreté et la lutte pour la survie qui n'avait jamais été tentée à ce degré au cinéma. Le film inspira directement la loi dite «Plan Rosetta» en Belgique, obligeant les employeurs à offrir des stages rémunérés aux jeunes — une réforme législative provoquée par un film, fait rarissime dans l'histoire du cinéma. Émilie Dequenne, 18 ans, sans expérience, reçut le Prix d'interprétation féminine à Cannes.",
+    "rang_mondial": null
+  }
+]

@@ -7,6 +7,7 @@ import EpiceriePage from './components/EpiceriePage';
 import RecettesPage from './components/RecettesPage';
 import ActivitesPage from './components/ActivitesPage';
 import AlbumsPage from './components/AlbumsPage';
+import FilmsPage from './components/FilmsPage';
 import UpdateModal from './components/UpdateModal';
 import LoginScreen from './components/LoginScreen';
 import ProfilsModal from './components/ProfilsModal';
@@ -204,6 +205,27 @@ export default function App() {
       if (next.has(nomRecette)) next.delete(nomRecette);
       else next.add(nomRecette);
       localStorage.setItem('fp_classiques', JSON.stringify([...next]));
+      return next;
+    });
+  }
+
+  // ── Notation films ────────────────────────────────────────────────────────
+  const [filmRatings, setFilmRatings] = useState(() => {
+    try {
+      const saved = localStorage.getItem('fp_film_ratings');
+      return saved ? JSON.parse(saved) : {};
+    } catch { return {}; }
+  });
+
+  function raterFilm(id, note) {
+    setFilmRatings(prev => {
+      const next = { ...prev };
+      if (note === 0 || note == null) {
+        delete next[id];
+      } else {
+        next[id] = note;
+      }
+      localStorage.setItem('fp_film_ratings', JSON.stringify(next));
       return next;
     });
   }
@@ -631,6 +653,7 @@ export default function App() {
         onViewActivites={() => setView('activites')}
         onViewEpicerie={() => setView('epicerie')}
         onViewAlbums={() => setView('albums')}
+        onViewFilms={() => setView('films')}
         onViewUpdate={() => setShowUpdateModal(true)}
         onViewProfils={() => setShowProfilsModal(true)}
         onViewMethode={() => setShowMethodologieModal(true)}
@@ -646,6 +669,12 @@ export default function App() {
           onRetour={() => setView('planning')}
           ratings={albumRatings}
           onNoter={raterAlbum}
+        />
+      ) : view === 'films' ? (
+        <FilmsPage
+          onRetour={() => setView('planning')}
+          ratings={filmRatings}
+          onNoter={raterFilm}
         />
       ) : view === 'epicerie' ? (
         <EpiceriePage
@@ -723,6 +752,8 @@ export default function App() {
               classiques={classiques}
               onToggleClassique={toggleClassique}
               albumRatings={albumRatings}
+              filmRatings={filmRatings}
+              onNoterFilm={raterFilm}
               semaineDebut={semaineVue}
             />
           </main>

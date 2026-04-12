@@ -5507,3 +5507,175 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
     align-items: flex-start;
   }
 }
+
+/* ════════════════════════════════════════════════════════════
+   BIBLIOTHÈQUE DE FILMS
+   ════════════════════════════════════════════════════════════ */
+
+.films-grille {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.film-carte {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border, #e8e0d8);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.film-carte:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.film-carte--incon {
+  border-color: var(--gold, #c9a84c);
+  background: linear-gradient(135deg, #fffdf5 0%, #fff 100%);
+}
+
+.film-carte__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.film-carte__flag {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.film-carte__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.film-carte__nom {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink-1, #1a1a1a);
+  line-height: 1.3;
+}
+
+.film-carte__titre-original {
+  font-size: 0.75rem;
+  color: var(--ink-3, #888);
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+.film-carte__realisateur {
+  font-size: 0.8rem;
+  color: var(--ink-2, #555);
+  margin-top: 0.2rem;
+}
+
+.film-carte__incon-badge {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.film-carte__meta {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.film-carte__pays,
+.film-carte__genre,
+.film-carte__duree {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 20px;
+  background: var(--sage-light, #e8f0ea);
+  color: var(--ink-2, #555);
+}
+
+.film-carte__desc-wrap {
+  margin-top: 0.25rem;
+}
+
+/* ── Film de la semaine (carte dans WeeklyPlanning) ────────────────────────── */
+.film-semaine-card {
+  margin-top: 2rem;
+  border: 1px solid var(--border, #e8e0d8);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg, #fff);
+}
+
+.film-semaine-card__label {
+  background: var(--forest, #3d6b4f);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+}
+
+.film-semaine-card__body {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.9rem;
+  align-items: flex-start;
+}
+
+.film-semaine-card__flag {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.film-semaine-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.film-semaine-card__nom {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink-1, #1a1a1a);
+  line-height: 1.2;
+}
+
+.film-semaine-card__titre-original {
+  font-size: 0.75rem;
+  color: var(--ink-3, #888);
+  font-style: italic;
+}
+
+.film-semaine-card__meta {
+  font-size: 0.8rem;
+  color: var(--ink-2, #555);
+}
+
+.film-semaine-card__palmares {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--forest, #3d6b4f);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.film-semaine-card__desc-wrap {
+  margin-top: 0.2rem;
+}
+
+.film-semaine-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .films-grille {
+    grid-template-columns: 1fr;
+  }
+}
