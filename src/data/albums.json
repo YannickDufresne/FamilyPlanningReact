@@ -17,6 +17,9 @@
       "rolling_stone_top500",
       "grammy_hall_of_fame"
     ],
+    "palmares_rangs": {
+      "rolling_stone_top500": 12
+    },
     "score_consensus": 99,
     "incontournable": true,
     "origines_cuisine": [
@@ -48,6 +51,10 @@
       "rolling_stone_1",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rolling_stone_1": 1,
+      "rs_500": 1
+    },
     "score_consensus": 99,
     "incontournable": true,
     "origines_cuisine": [
@@ -79,6 +86,10 @@
       "rolling_stone_top10",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rolling_stone_top10": 3,
+      "rs_500": 3
+    },
     "score_consensus": 98,
     "incontournable": true,
     "origines_cuisine": [
@@ -107,6 +118,9 @@
       "rs_500",
       "pitchfork"
     ],
+    "palmares_rangs": {
+      "rs_500": 305
+    },
     "score_consensus": 96,
     "incontournable": true,
     "origines_cuisine": [
@@ -136,6 +150,9 @@
       "rs_500",
       "rolling_stone_top_rap"
     ],
+    "palmares_rangs": {
+      "rs_500": 87
+    },
     "score_consensus": 97,
     "incontournable": true,
     "origines_cuisine": [
@@ -166,6 +183,7 @@
       "grammy",
       "pitchfork_best_2015"
     ],
+    "palmares_rangs": {},
     "score_consensus": 97,
     "incontournable": true,
     "origines_cuisine": [
@@ -195,6 +213,9 @@
       "grammy_aoty",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 23
+    },
     "score_consensus": 95,
     "incontournable": true,
     "origines_cuisine": [
@@ -224,6 +245,9 @@
       "grammy_hall_of_fame",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 46
+    },
     "score_consensus": 97,
     "incontournable": true,
     "origines_cuisine": [
@@ -252,6 +276,9 @@
       "rs_500",
       "grammy_hall_of_fame"
     ],
+    "palmares_rangs": {
+      "rs_500": 4
+    },
     "score_consensus": 96,
     "incontournable": true,
     "origines_cuisine": [
@@ -281,6 +308,9 @@
       "rs_500",
       "grammy_aoty"
     ],
+    "palmares_rangs": {
+      "rs_500": 76
+    },
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -310,6 +340,9 @@
       "rs_500",
       "grammy_aoty"
     ],
+    "palmares_rangs": {
+      "rs_500": 499
+    },
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -338,6 +371,9 @@
     "palmares": [
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 271
+    },
     "score_consensus": 92,
     "incontournable": true,
     "origines_cuisine": [
@@ -367,6 +403,7 @@
       "pitchfork",
       "uncut"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": false,
     "origines_cuisine": [
@@ -396,6 +433,7 @@
       "nme",
       "mercury_prize"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": false,
     "origines_cuisine": [
@@ -423,6 +461,10 @@
       "rs_500",
       "rolling_stone_top10"
     ],
+    "palmares_rangs": {
+      "rs_500": 11,
+      "rolling_stone_top10": 11
+    },
     "score_consensus": 99,
     "incontournable": true,
     "origines_cuisine": [
@@ -450,6 +492,10 @@
       "rs_500",
       "rolling_stone_top20"
     ],
+    "palmares_rangs": {
+      "rs_500": 55,
+      "rolling_stone_top20": 55
+    },
     "score_consensus": 98,
     "incontournable": true,
     "origines_cuisine": [
@@ -478,6 +524,9 @@
       "rs_500",
       "mercury_prize"
     ],
+    "palmares_rangs": {
+      "rs_500": 23
+    },
     "score_consensus": 98,
     "incontournable": true,
     "origines_cuisine": [
@@ -505,6 +554,9 @@
       "pitchfork_decade",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 67
+    },
     "score_consensus": 96,
     "incontournable": true,
     "origines_cuisine": [
@@ -532,6 +584,7 @@
       "nme",
       "mercury_prize"
     ],
+    "palmares_rangs": {},
     "score_consensus": 91,
     "incontournable": false,
     "origines_cuisine": [
@@ -559,6 +612,7 @@
       "mercury_prize",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -585,6 +639,7 @@
     "palmares": [
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -615,6 +670,7 @@
       "grammy",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": true,
     "origines_cuisine": [
@@ -642,6 +698,7 @@
     "palmares": [
       "grammy"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -671,6 +728,7 @@
       "pitchfork",
       "rolling_stone_world"
     ],
+    "palmares_rangs": {},
     "score_consensus": 92,
     "incontournable": true,
     "origines_cuisine": [
@@ -698,6 +756,7 @@
     "palmares": [
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -727,6 +786,7 @@
       "luaka_bop",
       "reissue"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -755,6 +815,7 @@
       "buda_musique",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": true,
     "origines_cuisine": [
@@ -783,6 +844,7 @@
     "palmares": [
       "world_music_awards"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -811,6 +873,7 @@
     "palmares": [
       "grammy_hall_of_fame"
     ],
+    "palmares_rangs": {},
     "score_consensus": 85,
     "incontournable": true,
     "origines_cuisine": [
@@ -840,6 +903,7 @@
       "world_music",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 86,
     "incontournable": true,
     "origines_cuisine": [
@@ -869,6 +933,7 @@
       "earthworks",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -897,6 +962,7 @@
       "ecm",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": true,
     "origines_cuisine": [
@@ -927,6 +993,7 @@
     "palmares": [
       "enja"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -957,6 +1024,7 @@
       "pitchfork",
       "reissue"
     ],
+    "palmares_rangs": {},
     "score_consensus": 85,
     "incontournable": false,
     "origines_cuisine": [
@@ -986,6 +1054,7 @@
     "palmares": [
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -1015,6 +1084,7 @@
       "pitchfork",
       "rough_trade"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -1044,6 +1114,7 @@
       "grammy_hall_of_fame",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 92,
     "incontournable": true,
     "origines_cuisine": [
@@ -1074,6 +1145,7 @@
       "pitchfork",
       "resident_advisor"
     ],
+    "palmares_rangs": {},
     "score_consensus": 80,
     "incontournable": false,
     "origines_cuisine": [
@@ -1103,6 +1175,7 @@
     "palmares": [
       "iranian_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -1132,6 +1205,7 @@
       "world_music",
       "cinema"
     ],
+    "palmares_rangs": {},
     "score_consensus": 80,
     "incontournable": false,
     "origines_cuisine": [
@@ -1161,6 +1235,7 @@
       "real_world",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -1190,6 +1265,7 @@
       "grammy",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -1217,6 +1293,7 @@
     "palmares": [
       "grammy_aoty"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -1245,6 +1322,7 @@
       "filmfare",
       "national_award"
     ],
+    "palmares_rangs": {},
     "score_consensus": 86,
     "incontournable": false,
     "origines_cuisine": [
@@ -1273,6 +1351,7 @@
       "filmfare",
       "national_award"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -1300,6 +1379,7 @@
     "palmares": [
       "india_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 85,
     "incontournable": false,
     "origines_cuisine": [
@@ -1328,6 +1408,7 @@
       "grammy_nom",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -1357,6 +1438,7 @@
       "pitchfork",
       "japan_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 91,
     "incontournable": true,
     "origines_cuisine": [
@@ -1388,6 +1470,7 @@
       "japan_critics",
       "otoraku"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -1417,6 +1500,7 @@
       "pitchfork",
       "allmusic"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -1445,6 +1529,7 @@
     "palmares": [
       "japan_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -1474,6 +1559,7 @@
       "oricon",
       "japan_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -1503,6 +1589,7 @@
       "japan_critics",
       "reissue"
     ],
+    "palmares_rangs": {},
     "score_consensus": 86,
     "incontournable": false,
     "origines_cuisine": [
@@ -1532,6 +1619,7 @@
       "japan_critics",
       "allmusic"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -1561,6 +1649,7 @@
       "japan_critics",
       "otoraku"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -1590,6 +1679,7 @@
       "pitchfork",
       "japan_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 86,
     "incontournable": false,
     "origines_cuisine": [
@@ -1618,6 +1708,7 @@
       "pitchfork",
       "japan_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -1647,6 +1738,7 @@
       "allmusic",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": true,
     "origines_cuisine": [
@@ -1676,6 +1768,7 @@
       "pitchfork",
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 95,
     "incontournable": true,
     "origines_cuisine": [
@@ -1707,6 +1800,7 @@
       "pitchfork",
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -1738,6 +1832,9 @@
       "grammy_aoty",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 375
+    },
     "score_consensus": 96,
     "incontournable": true,
     "origines_cuisine": [
@@ -1769,6 +1866,7 @@
       "pitchfork",
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -1800,6 +1898,7 @@
       "pitchfork",
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": false,
     "origines_cuisine": [
@@ -1829,6 +1928,7 @@
     "palmares": [
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -1860,6 +1960,7 @@
       "grammy_hall_of_fame",
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -1891,6 +1992,7 @@
       "pitchfork",
       "rolling_stone"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -1921,6 +2023,7 @@
     "palmares": [
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -1951,6 +2054,7 @@
       "rs_france",
       "uncut"
     ],
+    "palmares_rangs": {},
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -1981,6 +2085,7 @@
       "pitchfork",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -2011,6 +2116,7 @@
       "pitchfork",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": false,
     "origines_cuisine": [
@@ -2041,6 +2147,7 @@
       "sacem",
       "france_musique"
     ],
+    "palmares_rangs": {},
     "score_consensus": 86,
     "incontournable": false,
     "origines_cuisine": [
@@ -2071,6 +2178,7 @@
       "victoires_de_la_musique",
       "france_musique"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -2101,6 +2209,7 @@
       "allmusic",
       "rs_france"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": true,
     "origines_cuisine": [
@@ -2131,6 +2240,7 @@
       "pitchfork",
       "victoires"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -2161,6 +2271,7 @@
       "italy_critics",
       "deandre_foundation"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -2190,6 +2301,7 @@
       "italy_critics",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": true,
     "origines_cuisine": [
@@ -2220,6 +2332,7 @@
       "bafta",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -2248,6 +2361,7 @@
     "palmares": [
       "grammy_hall_of_fame"
     ],
+    "palmares_rangs": {},
     "score_consensus": 92,
     "incontournable": true,
     "origines_cuisine": [
@@ -2277,6 +2391,7 @@
     "palmares": [
       "italy_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -2305,6 +2420,7 @@
     "palmares": [
       "italy_charts"
     ],
+    "palmares_rangs": {},
     "score_consensus": 78,
     "incontournable": false,
     "origines_cuisine": [
@@ -2333,6 +2449,7 @@
     "palmares": [
       "italy_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 80,
     "incontournable": false,
     "origines_cuisine": [
@@ -2362,6 +2479,7 @@
       "latin_grammy",
       "pitchfork_best"
     ],
+    "palmares_rangs": {},
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -2391,6 +2509,7 @@
       "grammy_nom",
       "allmusic"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -2420,6 +2539,9 @@
       "grammy_aoty",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 260
+    },
     "score_consensus": 92,
     "incontournable": true,
     "origines_cuisine": [
@@ -2450,6 +2572,7 @@
       "latin_grammy",
       "rs_2022"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -2479,6 +2602,7 @@
     "palmares": [
       "rolling_stone_latinoamerica"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": true,
     "origines_cuisine": [
@@ -2509,6 +2633,7 @@
       "rolling_stone_latinoamerica",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": true,
     "origines_cuisine": [
@@ -2537,6 +2662,7 @@
     "palmares": [
       "rolling_stone_latinoamerica"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -2566,6 +2692,7 @@
     "palmares": [
       "rolling_stone_latinoamerica"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -2596,6 +2723,7 @@
       "pitchfork",
       "p4k_best_2019"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": false,
     "origines_cuisine": [
@@ -2626,6 +2754,7 @@
       "time_magazine",
       "china_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 85,
     "incontournable": false,
     "origines_cuisine": [
@@ -2656,6 +2785,7 @@
       "melon",
       "korean_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 80,
     "incontournable": false,
     "origines_cuisine": [
@@ -2685,6 +2815,7 @@
       "korean_critics",
       "hiphopplaya"
     ],
+    "palmares_rangs": {},
     "score_consensus": 78,
     "incontournable": false,
     "origines_cuisine": [
@@ -2713,6 +2844,7 @@
     "palmares": [
       "golden_melody_award"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -2741,6 +2873,7 @@
     "palmares": [
       "china_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 76,
     "incontournable": false,
     "origines_cuisine": [
@@ -2771,6 +2904,7 @@
       "pitchfork",
       "nme_decade"
     ],
+    "palmares_rangs": {},
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -2799,6 +2933,9 @@
       "pitchfork_top10_decade",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 424
+    },
     "score_consensus": 96,
     "incontournable": true,
     "origines_cuisine": [
@@ -2827,6 +2964,7 @@
       "pitchfork",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 91,
     "incontournable": true,
     "origines_cuisine": [
@@ -2855,6 +2993,9 @@
       "rs_500",
       "pitchfork"
     ],
+    "palmares_rangs": {
+      "rs_500": 444
+    },
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -2885,6 +3026,9 @@
       "rs_500",
       "pitchfork"
     ],
+    "palmares_rangs": {
+      "rs_500": 234
+    },
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -2915,6 +3059,7 @@
       "spellemannprisen",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -2943,6 +3088,7 @@
       "grammi",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -2971,6 +3117,7 @@
       "portugal_critics",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": true,
     "origines_cuisine": [
@@ -2999,6 +3146,7 @@
     "palmares": [
       "thailand_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 78,
     "incontournable": false,
     "origines_cuisine": [
@@ -3027,6 +3175,7 @@
       "vietnam_critics",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -3056,6 +3205,7 @@
       "grammy_nom",
       "greece_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -3085,6 +3235,7 @@
       "pitchfork",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 92,
     "incontournable": true,
     "origines_cuisine": [
@@ -3114,6 +3265,7 @@
       "grammy_nom",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 83,
     "incontournable": false,
     "origines_cuisine": [
@@ -3144,6 +3296,7 @@
       "grammy_nom",
       "hawaii_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -3172,6 +3325,7 @@
       "pitchfork",
       "metacritic_best"
     ],
+    "palmares_rangs": {},
     "score_consensus": 90,
     "incontournable": false,
     "origines_cuisine": [
@@ -3201,6 +3355,9 @@
       "pitchfork_decade",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 383
+    },
     "score_consensus": 89,
     "incontournable": false,
     "origines_cuisine": [
@@ -3229,6 +3386,7 @@
       "pitchfork",
       "uncut"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -3258,6 +3416,9 @@
       "rs_500",
       "mercury_prize_nom"
     ],
+    "palmares_rangs": {
+      "rs_500": 394
+    },
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -3286,6 +3447,7 @@
       "pitchfork",
       "uncut"
     ],
+    "palmares_rangs": {},
     "score_consensus": 91,
     "incontournable": false,
     "origines_cuisine": [
@@ -3314,6 +3476,10 @@
       "rs_500",
       "rolling_stone_top100"
     ],
+    "palmares_rangs": {
+      "rs_500": 65,
+      "rolling_stone_top100": 65
+    },
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -3343,6 +3509,7 @@
       "polaris_prize",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": false,
     "origines_cuisine": [
@@ -3372,6 +3539,9 @@
       "rs_500",
       "pitchfork"
     ],
+    "palmares_rangs": {
+      "rs_500": 314
+    },
     "score_consensus": 95,
     "incontournable": true,
     "origines_cuisine": [
@@ -3402,6 +3572,9 @@
       "rs_500",
       "pitchfork"
     ],
+    "palmares_rangs": {
+      "rs_500": 282
+    },
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -3431,6 +3604,7 @@
       "nme",
       "rolling_stone"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -3460,6 +3634,9 @@
       "pitchfork_top10",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 337
+    },
     "score_consensus": 93,
     "incontournable": true,
     "origines_cuisine": [
@@ -3488,6 +3665,7 @@
       "pitchfork_top10_decade",
       "warp"
     ],
+    "palmares_rangs": {},
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -3516,6 +3694,9 @@
       "rs_500",
       "grammy_hall_of_fame"
     ],
+    "palmares_rangs": {
+      "rs_500": 78
+    },
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -3545,6 +3726,7 @@
       "allmusic",
       "jazz_critics"
     ],
+    "palmares_rangs": {},
     "score_consensus": 85,
     "incontournable": false,
     "origines_cuisine": [
@@ -3574,6 +3756,9 @@
       "rs_500",
       "allmusic"
     ],
+    "palmares_rangs": {
+      "rs_500": 384
+    },
     "score_consensus": 89,
     "incontournable": true,
     "origines_cuisine": [
@@ -3603,6 +3788,7 @@
     "palmares": [
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -3633,6 +3819,7 @@
       "grammy_nom",
       "oscar_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": true,
     "origines_cuisine": [
@@ -3662,6 +3849,7 @@
       "pitchfork",
       "resident_advisor"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -3691,6 +3879,7 @@
       "mercury_prize",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 85,
     "incontournable": false,
     "origines_cuisine": [
@@ -3719,6 +3908,7 @@
       "polaris_prize",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 86,
     "incontournable": false,
     "origines_cuisine": [
@@ -3748,6 +3938,7 @@
       "pitchfork_top10_decade",
       "grammy"
     ],
+    "palmares_rangs": {},
     "score_consensus": 94,
     "incontournable": true,
     "origines_cuisine": [
@@ -3778,6 +3969,10 @@
       "rs_500",
       "rolling_stone_top10"
     ],
+    "palmares_rangs": {
+      "rs_500": 17,
+      "rolling_stone_top10": 17
+    },
     "score_consensus": 97,
     "incontournable": true,
     "origines_cuisine": [
@@ -3805,6 +4000,7 @@
     "palmares": [
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 82,
     "incontournable": false,
     "origines_cuisine": [
@@ -3834,6 +4030,10 @@
       "rs_500",
       "rolling_stone_top10"
     ],
+    "palmares_rangs": {
+      "rs_500": 8,
+      "rolling_stone_top10": 8
+    },
     "score_consensus": 97,
     "incontournable": true,
     "origines_cuisine": [
@@ -3861,6 +4061,7 @@
     "palmares": [
       "awesome_tapes"
     ],
+    "palmares_rangs": {},
     "score_consensus": 81,
     "incontournable": false,
     "origines_cuisine": [
@@ -3888,6 +4089,7 @@
     "palmares": [
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -3916,6 +4118,9 @@
       "rs_500",
       "pitchfork"
     ],
+    "palmares_rangs": {
+      "rs_500": 44
+    },
     "score_consensus": 95,
     "incontournable": true,
     "origines_cuisine": [
@@ -3943,6 +4148,9 @@
     "palmares": [
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 57
+    },
     "score_consensus": 91,
     "incontournable": false,
     "origines_cuisine": [
@@ -3971,6 +4179,7 @@
     "palmares": [
       "rolling_stone_brasil"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -4002,6 +4211,7 @@
       "real_world",
       "world_music"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -4031,6 +4241,7 @@
       "pitchfork",
       "nme"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": true,
     "origines_cuisine": [
@@ -4059,6 +4270,7 @@
       "pitchfork",
       "wire"
     ],
+    "palmares_rangs": {},
     "score_consensus": 84,
     "incontournable": false,
     "origines_cuisine": [
@@ -4088,6 +4300,7 @@
       "pitchfork",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 88,
     "incontournable": false,
     "origines_cuisine": [
@@ -4117,6 +4330,9 @@
       "rs_500",
       "rolling_stone_top_rap"
     ],
+    "palmares_rangs": {
+      "rs_500": 407
+    },
     "score_consensus": 96,
     "incontournable": true,
     "origines_cuisine": [
@@ -4147,6 +4363,9 @@
       "pitchfork",
       "rs_500"
     ],
+    "palmares_rangs": {
+      "rs_500": 443
+    },
     "score_consensus": 85,
     "incontournable": false,
     "origines_cuisine": [
@@ -4176,6 +4395,7 @@
       "pitchfork_top10",
       "allmusic"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -4204,6 +4424,7 @@
       "brit_award",
       "grammy_nom"
     ],
+    "palmares_rangs": {},
     "score_consensus": 87,
     "incontournable": false,
     "origines_cuisine": [
@@ -4232,6 +4453,7 @@
       "allmusic",
       "pitchfork"
     ],
+    "palmares_rangs": {},
     "score_consensus": 89,
     "incontournable": false,
     "origines_cuisine": [
@@ -4261,6 +4483,7 @@
       "pitchfork",
       "wire"
     ],
+    "palmares_rangs": {},
     "score_consensus": 92,
     "incontournable": false,
     "origines_cuisine": [
@@ -4289,6 +4512,9 @@
       "rs_500",
       "grammy"
     ],
+    "palmares_rangs": {
+      "rs_500": 133
+    },
     "score_consensus": 95,
     "incontournable": true,
     "origines_cuisine": [
@@ -4319,6 +4545,9 @@
       "rs_500",
       "nme"
     ],
+    "palmares_rangs": {
+      "rs_500": 226
+    },
     "score_consensus": 95,
     "incontournable": true,
     "origines_cuisine": [
