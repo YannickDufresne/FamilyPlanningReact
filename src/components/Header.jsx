@@ -59,12 +59,12 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
           <button
             className={`header-nav-link${activeView === 'recettes' ? ' header-nav-link--active' : ''}`}
             onClick={onViewRecettes}
-          >Bibliothèque de recettes</button>
+          >🍽️ Recettes</button>
           &nbsp;·&nbsp;
           <button
             className={`header-nav-link${activeView === 'activites' ? ' header-nav-link--active' : ''}`}
             onClick={onViewActivites}
-          >Activités</button>
+          >🗓️ Activités</button>
           &nbsp;·&nbsp;
           <button
             className={`header-nav-link${activeView === 'epicerie' ? ' header-nav-link--active' : ''}`}
