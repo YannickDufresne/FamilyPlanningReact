@@ -5441,17 +5441,36 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   opacity: 0.85;
   margin-top: 1px;
 }
+.day-album__desc-wrap {
+  margin-top: 2px;
+}
 .day-album__desc {
   font-size: 0.70rem;
   color: var(--ink-2);
-  line-height: 1.35;
+  line-height: 1.4;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  margin-top: 1px;
 }
+.day-album__desc--open {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.day-album__desc-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 2px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--terra);
+  cursor: pointer;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
+.day-album__desc-toggle:hover { opacity: 1; }
 
 /* Bouton ▶ Apple Music */
 .day-album__link {

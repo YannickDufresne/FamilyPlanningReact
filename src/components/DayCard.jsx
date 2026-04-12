@@ -113,6 +113,7 @@ function meilleurPalmares(album) {
 // ── Mini-carte album dans DayCard ────────────────────────────────────────────
 function AlbumDuJourCard({ album }) {
   const [artwork, setArtwork] = useState(album.artwork_url || null);
+  const [descExpand, setDescExpand] = useState(false);
 
   useEffect(() => {
     if (album.artwork_url || !album.artiste) return;
@@ -129,11 +130,8 @@ function AlbumDuJourCard({ album }) {
 
   const tier = TIER_ALBUM(album.score_consensus ?? 60);
   const drapeau = DRAPEAUX_ALBUM[album.pays] || '🌍';
-  // Premier extrait de description (première phrase)
-  const extrait = album.description
-    ? album.description.replace(/([.!?])\s.+/, '$1').slice(0, 110)
-    : null;
   const topPalmares = meilleurPalmares(album);
+  const desc = album.description || null;
 
   return (
     <div className="day-album">
@@ -151,7 +149,19 @@ function AlbumDuJourCard({ album }) {
           <span className={`day-album__tier ${tier.cls}`}>{tier.label}</span>
         </div>
         {topPalmares && <div className="day-album__palmares">{topPalmares}</div>}
-        {extrait && <div className="day-album__desc">{extrait}</div>}
+        {desc && (
+          <div className="day-album__desc-wrap">
+            <div className={`day-album__desc${descExpand ? ' day-album__desc--open' : ''}`}>
+              {desc}
+            </div>
+            <button
+              className="day-album__desc-toggle"
+              onClick={() => setDescExpand(e => !e)}
+            >
+              {descExpand ? 'Moins ▲' : 'Lire ▼'}
+            </button>
+          </div>
+        )}
       </div>
       {album.url_apple_music && (
         <a className="day-album__link" href={album.url_apple_music}
