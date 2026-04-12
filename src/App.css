@@ -4346,6 +4346,10 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   flex: 1 1 320px;
 }
 
+.fa-section--film {
+  flex: 2 1 380px;
+}
+
 /* ── Mini-cartes sorties de la semaine ─────────────────────────────────────── */
 .fa-sorties-grid {
   display: flex;

@@ -734,6 +734,9 @@ export default function App() {
               profils={profils}
               semaineVue={semaineVue}
               agenda={agenda}
+              filtresOrigine={filtres.origine}
+              filmRatings={filmRatings}
+              onNoterFilm={raterFilm}
             />
             <WeeklyPlanning
               planning={planningVue}
@@ -752,8 +755,6 @@ export default function App() {
               classiques={classiques}
               onToggleClassique={toggleClassique}
               albumRatings={albumRatings}
-              filmRatings={filmRatings}
-              onNoterFilm={raterFilm}
               semaineDebut={semaineVue}
             />
           </main>

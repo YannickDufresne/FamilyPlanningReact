@@ -1,6 +1,185 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Anthropic from '@anthropic-ai/sdk';
 import activites from '../data/activites.json';
+import films from '../data/films.json';
+import { getFilmsCandidats, getFilmIndexInitial } from '../utils/filmSemaine';
+
+// ── Palmarès labels ────────────────────────────────────────────────────────────
+const PALMARES_LABELS_FA = {
+  cannes_palme_dor:    'Palme d\'Or',
+  cannes_grand_prix:   'Grand Prix Cannes',
+  cannes_jury:         'Prix du Jury',
+  oscar_meilleur_film: 'Oscar Meilleur Film',
+  oscar_etranger:      'Oscar Film Étranger',
+  sight_sound:         'Sight & Sound',
+  berlinale:           'Ours d\'Or Berlin',
+  venice:              'Lion d\'Or Venise',
+  imdb_top250:         'IMDB Top 250',
+  afi_top100:          'AFI Top 100',
+};
+
+function meilleurPalmaresFilm(film) {
+  if (!film.palmares?.length) return null;
+  const priority = ['cannes_palme_dor', 'oscar_meilleur_film', 'sight_sound', 'oscar_etranger',
+    'berlinale', 'venice', 'cannes_grand_prix', 'cannes_jury', 'imdb_top250', 'afi_top100'];
+  for (const p of priority) {
+    if (film.palmares.includes(p)) {
+      const rang = film.palmares_rangs?.[p];
+      return PALMARES_LABELS_FA[p] + (rang ? ` #${rang}` : '');
+    }
+  }
+  const p = film.palmares[0];
+  const rang = film.palmares_rangs?.[p];
+  return (PALMARES_LABELS_FA[p] || p) + (rang ? ` #${rang}` : '');
+}
+
+const DRAPEAUX_FA = {
+  'États-Unis': '🇺🇸', 'Royaume-Uni': '🇬🇧', 'France': '🇫🇷',
+  'Canada': '🇨🇦', 'Canada (Québec)': '🇨🇦', 'Japon': '🇯🇵',
+  'Brésil': '🇧🇷', 'Allemagne': '🇩🇪', 'Italie': '🇮🇹',
+  'Espagne': '🇪🇸', 'Mexique': '🇲🇽', 'Argentine': '🇦🇷',
+  'Corée du Sud': '🇰🇷', 'Chine': '🇨🇳', 'Taïwan': '🇹🇼',
+  'Hong Kong': '🇭🇰', 'Inde': '🇮🇳', 'Iran': '🇮🇷',
+  'Sénégal': '🇸🇳', 'Mali': '🇲🇱', 'Mauritanie': '🇲🇷',
+  'Algérie': '🇩🇿', 'Égypte': '🇪🇬', 'Palestine': '🇵🇸',
+  'Liban': '🇱🇧', 'Suède': '🇸🇪', 'Danemark': '🇩🇰',
+  'Norvège': '🇳🇴', 'Roumanie': '🇷🇴', 'Pologne': '🇵🇱',
+  'Hongrie': '🇭🇺', 'Belgique': '🇧🇪', 'Russie (URSS)': '🇷🇺',
+  'Colombie': '🇨🇴',
+};
+
+function drapeauFilm(pays) { return DRAPEAUX_FA[pays] || '🌍'; }
+
+// ── Poster Wikipedia (mini card) ───────────────────────────────────────────────
+function useFilmPosterFA(film) {
+  const [url, setUrl] = useState(film?.poster_url || null);
+
+  useEffect(() => {
+    if (!film) return;
+    if (film.poster_url) { setUrl(film.poster_url); return; }
+    let cancelled = false;
+
+    async function fetchPoster() {
+      const tries = [
+        ['fr', film.nom],
+        ...(film.titre_original && film.titre_original !== film.nom
+          ? [['fr', film.titre_original], ['en', film.titre_original]]
+          : []),
+        ['en', film.nom],
+      ];
+      for (const [lang, titre] of tries) {
+        if (cancelled) return;
+        try {
+          const res = await fetch(
+            `https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titre)}`
+          );
+          if (!res.ok) continue;
+          const data = await res.json();
+          if (data.thumbnail?.source) {
+            if (!cancelled) setUrl(data.thumbnail.source);
+            return;
+          }
+        } catch (_) {}
+      }
+    }
+
+    fetchPoster();
+    return () => { cancelled = true; };
+  }, [film?.id]);
+
+  return url;
+}
+
+// ── Film de la semaine card ────────────────────────────────────────────────────
+function FilmDeLaSemaine({ pool, filmIndex, onPrev, onNext, filmRatings, onNoterFilm }) {
+  const [descExpand, setDescExpand] = useState(false);
+  const film = pool[filmIndex] || null;
+  const posterUrl = useFilmPosterFA(film);
+
+  useEffect(() => { setDescExpand(false); }, [filmIndex]);
+
+  if (!film || pool.length === 0) return null;
+
+  const note = filmRatings?.[film.id] ?? 0;
+  const topPalmares = meilleurPalmaresFilm(film);
+
+  function handleEtoile(n) {
+    if (onNoterFilm) onNoterFilm(film.id, n === note ? 0 : n);
+  }
+
+  return (
+    <div className="fa-section fa-section--film">
+      <div className="fa-section__hdr">
+        <div className="fa-section__icons">🎬</div>
+        <div>
+          <div className="fa-section__titre">Film de la semaine</div>
+          <div className="fa-section__sub">{pool.length} suggestion{pool.length > 1 ? 's' : ''} disponible{pool.length > 1 ? 's' : ''}</div>
+        </div>
+      </div>
+
+      <div className="film-semaine-card__body">
+        {/* Affiche */}
+        <div className="film-semaine-card__poster-wrap">
+          {posterUrl
+            ? <img src={posterUrl} alt={film.nom} className="film-semaine-card__poster" />
+            : <div className="film-semaine-card__poster-placeholder">{drapeauFilm(film.pays)}</div>
+          }
+        </div>
+
+        <div className="film-semaine-card__info">
+          {/* Navigation ‹ N/total › */}
+          <div className="film-semaine-card__nav">
+            <button className="film-nav-btn" onClick={onPrev} disabled={pool.length <= 1} aria-label="Film précédent">‹</button>
+            <span className="film-nav-count">{filmIndex + 1}/{pool.length}</span>
+            <button className="film-nav-btn" onClick={onNext} disabled={pool.length <= 1} aria-label="Film suivant">›</button>
+          </div>
+
+          <div className="film-semaine-card__nom">{film.nom}</div>
+          {film.titre_original && film.titre_original !== film.nom && (
+            <div className="film-semaine-card__titre-original">{film.titre_original}</div>
+          )}
+          <div className="film-semaine-card__meta">
+            {drapeauFilm(film.pays)} {film.realisateur} · {film.annee}
+          </div>
+          <div className="film-semaine-card__genre">{film.genre}</div>
+
+          {topPalmares && (
+            <div className="film-semaine-card__palmares">{topPalmares}</div>
+          )}
+
+          {film.description && (
+            <div className="film-semaine-card__desc-wrap">
+              <div className={`day-album__desc${descExpand ? ' day-album__desc--open' : ''}`}>
+                {film.description}
+              </div>
+              <button className="day-album__desc-toggle" onClick={() => setDescExpand(v => !v)}>
+                {descExpand ? 'Moins ▲' : 'Lire ▼'}
+              </button>
+            </div>
+          )}
+
+          <div className="film-semaine-card__footer">
+            <div className="album-carte__etoiles">
+              {[1, 2, 3, 4, 5].map(n => (
+                <button
+                  key={n}
+                  onClick={() => handleEtoile(n)}
+                  className={n <= note ? 'etoile etoile--active' : 'etoile'}
+                  title={`${n} étoile${n > 1 ? 's' : ''}`}
+                >★</button>
+              ))}
+            </div>
+            {film.imdb_url && (
+              <a href={film.imdb_url} target="_blank" rel="noopener noreferrer" className="album-apple-link">
+                🎬 IMDB
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // ── Constantes ─────────────────────────────────────────────────────────────────
 const JOURS_COURT = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
@@ -374,10 +553,24 @@ function SectionCoupDeCoeur({ semaineVue }) {
 }
 
 // ── Composant principal ───────────────────────────────────────────────────────
-export default function FamilleActualites({ profils, semaineVue, agenda = {} }) {
+export default function FamilleActualites({ profils, semaineVue, agenda = {}, filtresOrigine, filmRatings = {}, onNoterFilm }) {
   const [open, setOpen] = useState(false);
   const obligations = agenda.obligations || [];
   const evenements = agenda.evenements || [];
+
+  // ── Film de la semaine ──────────────────────────────────────────────────────
+  const origineActive = filtresOrigine && filtresOrigine !== 'Tous' ? filtresOrigine : null;
+  const filmPool = useMemo(
+    () => getFilmsCandidats(semaineVue, origineActive, films),
+    [semaineVue, origineActive]
+  );
+  const [filmIndex, setFilmIndex] = useState(() => getFilmIndexInitial(semaineVue, filmPool));
+  useEffect(() => {
+    const pool = getFilmsCandidats(semaineVue, origineActive, films);
+    setFilmIndex(getFilmIndexInitial(semaineVue, pool));
+  }, [semaineVue, origineActive]);
+  function filmPrev() { setFilmIndex(i => (i - 1 + filmPool.length) % filmPool.length); }
+  function filmNext() { setFilmIndex(i => (i + 1) % filmPool.length); }
 
   // Identifier les bébés (< 36 mois à la date de la semaine visionnée)
   const bebes = useMemo(() =>
@@ -395,7 +588,7 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
     });
 
   if (bebes.length === 0 && !hasAgenda) {
-    // Afficher quand même si des sorties sont disponibles
+    // Afficher quand même si des sorties ou un film sont disponibles
     return (
       <div className="famille-actualites">
         <button className="fa-toggle" onClick={() => setOpen(v => !v)}>
@@ -405,6 +598,16 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
         {open && (
           <div className="fa-body">
             <SectionCoupDeCoeur semaineVue={semaineVue} />
+            {filmPool.length > 0 && (
+              <FilmDeLaSemaine
+                pool={filmPool}
+                filmIndex={filmIndex}
+                onPrev={filmPrev}
+                onNext={filmNext}
+                filmRatings={filmRatings}
+                onNoterFilm={onNoterFilm}
+              />
+            )}
           </div>
         )}
       </div>
@@ -429,6 +632,16 @@ export default function FamilleActualites({ profils, semaineVue, agenda = {} }) 
             evenements={evenements}
             semaineVue={semaineVue}
           />
+          {filmPool.length > 0 && (
+            <FilmDeLaSemaine
+              pool={filmPool}
+              filmIndex={filmIndex}
+              onPrev={filmPrev}
+              onNext={filmNext}
+              filmRatings={filmRatings}
+              onNoterFilm={onNoterFilm}
+            />
+          )}
         </div>
       )}
     </div>
