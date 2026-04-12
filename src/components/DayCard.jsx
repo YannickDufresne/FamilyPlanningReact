@@ -695,21 +695,6 @@ export default function DayCard({ jour, index, modeActivite = 'famille', onToggl
           </div>
         </details>
 
-        {/* Musique */}
-        <details className="day-card__extra-details">
-          <summary className="day-card__extra-summary">
-            <span className="day-card__extra-icon">🎵</span>
-            <span className="day-card__extra-label">
-              {musique?.nom
-                ? (musique.nom.indexOf(' - ') > 0 ? musique.nom.substring(0, musique.nom.indexOf(' - ')) : musique.nom)
-                : '—'}
-            </span>
-          </summary>
-          <div className="planning-item planning-item--extra">
-            <MusiqueCard musique={musique} />
-          </div>
-        </details>
-
       </div>
 
       {/* Album du jour lié à l'origine de la recette */}
