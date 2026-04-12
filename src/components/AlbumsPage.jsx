@@ -55,14 +55,22 @@ function useArtworkFallback(artiste, nom, existingUrl) {
     if (existingUrl || !artiste || !nom) return;
     let cancelled = false;
     const terme = encodeURIComponent(`${artiste} ${nom}`);
-    fetch(`https://itunes.apple.com/search?term=${terme}&entity=album&limit=3&country=ca`)
-      .then(r => r.json())
-      .then(d => {
+    const artistMots = artiste.toLowerCase().split(/\s+/).slice(0, 2);
+    const validMatch = r => r.artworkUrl100 &&
+      artistMots.some(mot => mot.length >= 3 && r.artistName?.toLowerCase().includes(mot));
+
+    async function fetchArtwork() {
+      for (const country of ['ca', 'us', 'jp', 'gb', 'fr', 'br']) {
         if (cancelled) return;
-        const match = (d.results || []).find(r => r.artworkUrl100);
-        if (match) setUrl(match.artworkUrl100.replace('100x100bb', '400x400bb'));
-      })
-      .catch(() => {});
+        try {
+          const res = await fetch(`https://itunes.apple.com/search?term=${terme}&entity=album&limit=5&country=${country}`);
+          const d = await res.json();
+          const match = (d.results || []).find(validMatch);
+          if (match) { if (!cancelled) setUrl(match.artworkUrl100.replace('100x100bb', '400x400bb')); return; }
+        } catch (_) {}
+      }
+    }
+    fetchArtwork();
     return () => { cancelled = true; };
   }, [artiste, nom, existingUrl]);
   return url;

@@ -118,13 +118,24 @@ function AlbumDuJourCard({ album }) {
   useEffect(() => {
     if (album.artwork_url || !album.artiste) return;
     let dead = false;
-    fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(album.artiste+' '+album.nom)}&entity=album&limit=3&country=ca`)
-      .then(r => r.json())
-      .then(d => {
+    const terme = encodeURIComponent(album.artiste + ' ' + album.nom);
+    // Mots-clés de l'artiste pour valider le match (premier mot + éventuellement le second)
+    const artistMots = album.artiste.toLowerCase().split(/\s+/).slice(0, 2);
+    const validMatch = r => r.artworkUrl100 &&
+      artistMots.some(mot => mot.length >= 3 && r.artistName?.toLowerCase().includes(mot));
+
+    async function fetchArtwork() {
+      for (const country of ['ca', 'us', 'jp', 'gb', 'fr', 'br']) {
         if (dead) return;
-        const m = (d.results||[]).find(r => r.artworkUrl100);
-        if (m) setArtwork(m.artworkUrl100.replace('100x100bb','300x300bb'));
-      }).catch(()=>{});
+        try {
+          const res = await fetch(`https://itunes.apple.com/search?term=${terme}&entity=album&limit=5&country=${country}`);
+          const d = await res.json();
+          const m = (d.results || []).find(validMatch);
+          if (m) { if (!dead) setArtwork(m.artworkUrl100.replace('100x100bb','300x300bb')); return; }
+        } catch (_) {}
+      }
+    }
+    fetchArtwork();
     return () => { dead = true; };
   }, [album.artiste, album.nom, album.artwork_url]);
 
