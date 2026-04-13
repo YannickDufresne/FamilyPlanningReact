@@ -374,10 +374,6 @@ export default function App() {
     } catch { setRecettesForcees(new Map()); }
   }, [semaineVue]);
 
-  if (!authentifie) {
-    return <LoginScreen onSuccess={() => setAuthentifie(true)} />;
-  }
-
   // ── Type de semaine ───────────────────────────────────────────────────────
   // Semaine réelle contenant aujourd'hui (basée sur la date du navigateur, pas meta.json)
   // Cas typique : le script hebdo tourne vendredi soir → meta passe à la semaine suivante
@@ -668,6 +664,10 @@ export default function App() {
     const mois = Math.round(semaines / 4.33);
     return `🔮 Dans ${mois} mois`;
   })();
+
+  if (!authentifie) {
+    return <LoginScreen onSuccess={() => setAuthentifie(true)} />;
+  }
 
   return (
     <div className="app">
