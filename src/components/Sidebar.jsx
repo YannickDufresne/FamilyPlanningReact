@@ -256,11 +256,18 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
   }, []);
 
   // Détecter les ingrédients forcés sans aucune recette correspondante
+  const matchIngUI = (recetteIngs, force) => {
+    const rNorm = normIngUI(recetteIngs);
+    const fNorm = normIngUI(force);
+    if (rNorm.includes(fNorm)) return true;
+    const mots = fNorm.split(/\s+/).filter(m => m.length >= 4);
+    return mots.length >= 2 && mots.every(m => rNorm.includes(m));
+  };
+
   const ingsSansRecettes = useMemo(() => {
     const sans = new Set();
     ingredientsForces.forEach(f => {
-      const fNorm = normIngUI(f);
-      const aMatch = recettes.some(r => normIngUI(r.ingredients || '').includes(fNorm));
+      const aMatch = recettes.some(r => matchIngUI(r.ingredients || '', f));
       if (!aMatch) sans.add(f);
     });
     return sans;

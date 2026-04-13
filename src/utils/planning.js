@@ -174,6 +174,15 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   const activitesAdultesUtilisees = new Set(); // anti-doublon activités adultes cross-jour
   const ingredientsCouvertsForcees = {}; // { [ing]: timesUsed } — supporte count > 1
   const normIng = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  // Vérifie si un ingrédient forcé correspond à la liste d'ingrédients d'une recette.
+  // Stratégie : substring direct OU tous les mots significatifs (≥4 lettres) présents.
+  const matchIngredient = (recetteIngs, force) => {
+    const rNorm = normIng(recetteIngs);
+    const fNorm = normIng(force);
+    if (rNorm.includes(fNorm)) return true;
+    const mots = fNorm.split(/\s+/).filter(m => m.length >= 4);
+    return mots.length >= 2 && mots.every(m => rNorm.includes(m));
+  };
 
   for (let i = 0; i < 7; i++) {
     // If day is locked AND no origin filter active, keep current recipe + update counters
@@ -184,8 +193,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       const r = jourExistant.recette;
       if (r?.nom) recettesUtilisees.add(r.nom);
       if (r?.ingredients && ingredientsForces?.length) {
-        const ings = normIng(r.ingredients);
-        ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees[f] = (ingredientsCouvertsForcees[f] || 0) + 1; });
+        ingredientsForces.forEach(f => { if (matchIngredient(r.ingredients, f)) ingredientsCouvertsForcees[f] = (ingredientsCouvertsForcees[f] || 0) + 1; });
       }
       if (r?.regime_alimentaire === 'omnivore') compteurOmnivore++;
       else if (r?.regime_alimentaire === 'végétarien') compteurVegetarien++;
@@ -267,11 +275,17 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
         return (ingredientsCouvertsForcees[f] || 0) < needed;
       });
       if (nonCoverts.length > 0) {
-        const avecForce = poolRecettes.filter(r => {
-          const ings = normIng(r.ingredients || '');
-          return nonCoverts.some(f => ings.includes(normIng(f)));
-        });
-        if (avecForce.length > 0) poolRecettes = avecForce;
+        const matchIngForce = r => nonCoverts.some(f => matchIngredient(r.ingredients || '', f));
+        // Chercher d'abord dans le pool sans doublon
+        const avecForce = poolRecettes.filter(matchIngForce);
+        if (avecForce.length > 0) {
+          poolRecettes = avecForce;
+        } else {
+          // Pas de recette unique disponible avec cet ingrédient — autoriser la répétition
+          // (ex : "épaule de porc ×3" → la même recette peut revenir plusieurs fois)
+          const avecForceRepeat = recettesDispo.filter(matchIngForce);
+          if (avecForceRepeat.length > 0) poolRecettes = avecForceRepeat;
+        }
       }
     }
 
@@ -325,8 +339,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
 
     // Marquer les ingrédients forcés maintenant couverts
     if (ingredientsForces?.length && recetteJour?.ingredients) {
-      const ings = normIng(recetteJour.ingredients);
-      ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees[f] = (ingredientsCouvertsForcees[f] || 0) + 1; });
+      ingredientsForces.forEach(f => { if (matchIngredient(recetteJour.ingredients, f)) ingredientsCouvertsForcees[f] = (ingredientsCouvertsForcees[f] || 0) + 1; });
     }
 
     // ── Exercices ─────────────────────────────────────────────────────────────
