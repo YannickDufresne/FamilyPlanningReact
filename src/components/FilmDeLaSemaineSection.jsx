@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import films from '../data/films.json';
 import { getFilmsCandidats, getFilmIndexInitial } from '../utils/filmSemaine';
 import FilmAjoutModal from './FilmAjoutModal';
+import FilmDecouverteModal from './FilmDecouverteModal';
 
 // ── Palmarès ───────────────────────────────────────────────────────────────────
 const PALMARES_LABELS = {
@@ -120,7 +121,8 @@ export default function FilmDeLaSemaineSection({
     getFilmIndexInitial(semaineVue, filmPool)
   );
   const [descExpand, setDescExpand] = useState(false);
-  const [showAjout, setShowAjout] = useState(false);
+  const [showAjout, setShowAjout] = useState(false);   // modal manuel
+  const [showDecouverte, setShowDecouverte] = useState(false); // modal IA
 
   // Recalculer quand l'origine ou la semaine change
   useEffect(() => {
@@ -153,11 +155,24 @@ export default function FilmDeLaSemaineSection({
               Aucun film <strong>{origineActive}</strong> dans la bibliothèque.
             </p>
             {onAjouterFilm && (
-              <button className="fds-empty__add" onClick={() => setShowAjout(true)}>
-                ➕ Ajouter un film {origineActive}
-              </button>
+              <div className="fds-empty__btns">
+                <button className="fds-empty__add fds-empty__add--ia" onClick={() => setShowDecouverte(true)}>
+                  ✨ Découvrir des films {origineActive}
+                </button>
+                <button className="fds-empty__add fds-empty__add--manuel" onClick={() => setShowAjout(true)}>
+                  ➕ Ajouter un titre précis
+                </button>
+              </div>
             )}
           </div>
+          {showDecouverte && (
+            <FilmDecouverteModal
+              origineHint={origineActive}
+              filmsExistants={tousFilms}
+              onSauvegarderTous={liste => liste.forEach(f => onAjouterFilm(f))}
+              onFermer={() => setShowDecouverte(false)}
+            />
+          )}
           {showAjout && (
             <FilmAjoutModal
               origineHint={origineActive}

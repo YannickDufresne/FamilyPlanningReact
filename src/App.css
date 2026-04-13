@@ -6091,9 +6091,14 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   color: var(--ink-2, #666);
 }
 
+.fds-empty__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
 .fds-empty__add {
-  background: var(--forest);
-  color: white;
   border: none;
   border-radius: 20px;
   padding: 8px 18px;
@@ -6102,8 +6107,161 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   transition: background 0.15s;
 }
 
-.fds-empty__add:hover {
-  background: var(--sage);
+.fds-empty__add--ia {
+  background: var(--forest);
+  color: white;
+  font-weight: 600;
+}
+
+.fds-empty__add--ia:hover { background: var(--sage); }
+
+.fds-empty__add--manuel {
+  background: transparent;
+  color: var(--ink-2, #666);
+  border: 1px solid var(--ink-3, #ccc);
+  font-size: 0.76rem;
+}
+
+.fds-empty__add--manuel:hover {
+  background: var(--cream-2, #f5f3ee);
+}
+
+/* ── FilmDecouverteModal ───────────────────────────────────────────────────── */
+.film-decouverte-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 620px;
+  width: 94vw;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+}
+
+.film-decouverte__loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  color: var(--ink-2, #666);
+  font-size: 0.88rem;
+  justify-content: center;
+}
+
+.film-decouverte__spinner {
+  font-size: 1.6rem;
+  animation: pulse-film 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse-film {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0.7; }
+}
+
+.film-decouverte__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.film-decouverte__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 2px solid var(--ink-3, #e0ded8);
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.film-decouverte__card--on {
+  border-color: var(--forest);
+  background: #f2f6f1;
+}
+
+.film-decouverte__check {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--forest);
+  flex-shrink: 0;
+}
+
+.film-decouverte__card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.film-decouverte__card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.film-decouverte__nom {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.film-decouverte__original {
+  font-size: 0.8rem;
+  color: var(--ink-2, #666);
+  font-style: italic;
+}
+
+.film-decouverte__meta {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--ink-2, #666);
+  width: 100%;
+}
+
+.film-decouverte__scores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.film-decouverte__score-fallback {
+  font-size: 0.78rem;
+  color: var(--ink-2, #666);
+}
+
+.film-decouverte__palmares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.film-decouverte__desc {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--ink-2, #666);
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.film-decouverte__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.film-decouverte__retry-inline {
+  background: none;
+  border: none;
+  color: var(--forest);
+  cursor: pointer;
+  font-size: 0.82rem;
+  text-decoration: underline;
+  padding: 0 4px;
 }
 
 /* ── Preview / formulaire ─────────────────────────────────────────────────── */
