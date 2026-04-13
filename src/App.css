@@ -5517,17 +5517,18 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
    ════════════════════════════════════════════════════════════ */
 
 .films-grille {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 200px));
+  justify-content: start;
 }
 
 .film-carte {
   background: var(--card-bg, #fff);
   border: 1px solid var(--border, #e8e0d8);
-  border-radius: 12px;
-  padding: 1rem;
+  border-radius: 10px;
+  padding: 0.6rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
   transition: box-shadow 0.2s;
 }
 
@@ -5544,33 +5545,33 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
   background: var(--sage-light);
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.3rem;
 }
 
 .film-carte__poster-placeholder {
   width: 100%;
   aspect-ratio: 2/3;
-  border-radius: 8px;
+  border-radius: 6px;
   background: var(--sage-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  margin-bottom: 0.6rem;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
   color: var(--sage);
 }
 
 .film-carte__header {
   display: flex;
   align-items: flex-start;
-  gap: 0.6rem;
+  gap: 0.4rem;
 }
 
 .film-carte__flag {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   flex-shrink: 0;
   line-height: 1;
 }
@@ -5582,9 +5583,9 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
 
 .film-carte__nom {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: var(--ink);
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .film-carte__titre-original {

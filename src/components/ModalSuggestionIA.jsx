@@ -54,22 +54,25 @@ function buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine, regim
     ? `\n- ÉVITER ces recettes déjà au menu cette semaine (aucun doublon) : ${recettesSemaine.join(' | ')}`
     : '';
 
-  return `Tu es un chef cuisinier expert et historien de la gastronomie. Je cherche une recette pour le thème "${info.label}".
+  return `Tu es un chef cuisinier expert, historien de la gastronomie et critique culinaire de renommée mondiale. Je cherche une recette pour le thème "${info.label}".
 Description du thème : ${info.desc}.
+
+CRITÈRE DE QUALITÉ ABSOLUE — c'est le plus important :
+Propose LA recette de référence pour ce plat et cette origine — celle qui obtiendrait un score parfait sur NYT Cooking (5 étoiles, des milliers de commentaires), ou que Anthony Bourdain, Julia Child, Samin Nosrat, Ricardo Larrivée, Jacques Pépin ou Yotam Ottolenghi considéreraient comme la version authentique et définitive. Préfère une recette connue, éprouvée, issue d'une vraie tradition culinaire — pas une fusion inventée. La recette doit être mémorable, avec une technique ou un ingrédient clé qui fait toute la différence.
 
 Contraintes OBLIGATOIRES (respecte-les toutes — c'est critique) :
 - Régime : ${regimeStr}${origineStr}
 - ${cout}
 - ${temps || 'Pas de contrainte de temps.'}${rapideStr}${forcesLine}${eviterLine}
 
-Réponds avec une recette familiale vraiment bonne et avec un fun fact ou anecdote historique sur la recette (champ "anecdote" : 1-2 phrases, pédagogiques, en français, style chaleureux).
+Anecdote : 1-2 phrases en français sur l'histoire ou le secret de cette recette — ce qui la rend authentique, d'où elle vient, pourquoi elle est considérée comme une référence.
 
 Règles :
-1. "url" : URL réelle UNIQUEMENT si certain qu'elle existe — sinon ""
+1. "url" : URL réelle UNIQUEMENT si certain qu'elle existe (nytcooking.com, seriouseats.com, ricardocuisine.com, bonappetit.com…) — sinon ""
 2. "nom" : en français, appétissant
 3. "origine" : tradition culinaire${origineZonePays ? ` = un pays de ${origineAffichee} OBLIGATOIRE` : origineAffichee ? ` = "${origine}" OBLIGATOIRE` : ' (ex: "France", "Japon", "Liban")'}
 4. Thèmes : 1 dans le bon thème, 0 ailleurs
-5. "anecdote" : fun fact ou histoire courte sur la recette/origine
+5. "anecdote" : ce qui rend cette recette authentique et mémorable
 
 Réponds UNIQUEMENT avec ce JSON valide, sans markdown ni explication :
 {
@@ -81,10 +84,10 @@ Réponds UNIQUEMENT avec ce JSON valide, sans markdown ni explication :
   "temps_preparation": 20,
   "cout": 2,
   "ingredients": "filet de truite, beurre, câpres, citron, persil, farine",
-  "anecdote": "La meunière tient son nom des meuniers du Moyen Âge qui passaient leurs poissons dans la farine du moulin avant de les frire au beurre — une technique qui transforme n'importe quel poisson de rivière en plat élégant.",
+  "anecdote": "La meunière tient son nom des meuniers du Moyen Âge : ils passaient leurs poissons dans la farine du moulin avant de les dorer au beurre. Julia Child la décrivait comme la recette qui lui avait révélé la cuisine française lors de son premier repas à Rouen en 1948.",
   "theme_pasta_rapido": 0, "theme_bol_nwich": 0, "theme_criiions_poisson": 1,
   "theme_plat_en_sauce": 0, "theme_confort_grille": 0, "theme_pizza": 0, "theme_slow_chic": 0,
-  "notes": "Classique français en 20 min — le beurre noisette sublime tout."
+  "notes": "La version de Julia Child — beurre noisette, câpres, jus de citron frais."
 }`;
 }
 
