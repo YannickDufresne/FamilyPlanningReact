@@ -4000,6 +4000,71 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   border-radius: 99px; padding: 1px 8px;
 }
 
+/* ── Tableau de bord système ─────────────────────────────────────────────── */
+.tdb-content { display: flex; flex-direction: column; gap: 10px; }
+
+.tdb-methode-btn {
+  width: 100%;
+  background: var(--forest);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+.tdb-methode-btn:hover { background: var(--sage); }
+
+.tdb-section { display: flex; flex-direction: column; gap: 4px; }
+.tdb-section__titre {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3, #999);
+  margin-bottom: 2px;
+}
+
+.tdb-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tdb-dot--ok  { background: var(--sage, #4a7c59); }
+.tdb-dot--err { background: #c0392b; }
+.tdb-dot--off { background: var(--ink-3, #ccc); }
+
+.tdb-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  color: var(--ink-2, #555);
+}
+.tdb-row__val { margin-left: auto; font-size: 0.7rem; color: var(--ink-3, #888); }
+.tdb-row--maj { color: var(--ink-3, #999); font-size: 0.7rem; margin-top: 2px; }
+
+.tdb-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 2px;
+}
+.tdb-stat {
+  background: var(--cream-2, #f5f3ee);
+  border-radius: 8px;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tdb-stat__n { font-size: 1rem; font-weight: 700; color: var(--forest); }
+.tdb-stat__l { font-size: 0.65rem; color: var(--ink-3, #888); }
+
 /* ── Recette manquante ───────────────────────────────────────────────────── */
 .recette-manquante {
   margin: 8px 0; padding: 12px;

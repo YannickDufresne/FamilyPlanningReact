@@ -3,7 +3,102 @@ import recettes from '../data/recettes.json';
 import exercices from '../data/exercices.json';
 import activites from '../data/activites.json';
 import musique from '../data/musique.json';
-import { ZONES, DRAPEAUX, labelOrigine } from '../utils/zones';
+import films from '../data/films.json';
+import meta from '../data/meta.json';
+import { ZONES, DRAPEAUX, FUSION_ENTRY, labelOrigine } from '../utils/zones';
+
+// ── Tableau de bord système ───────────────────────────────────────────────────
+function StatusDot({ ok, label }) {
+  return (
+    <span
+      className={`tdb-dot tdb-dot--${ok === true ? 'ok' : ok === false ? 'err' : 'off'}`}
+      title={label}
+    />
+  );
+}
+
+function TableauDeBord({ onViewMethode }) {
+  const anthropicOk = !!localStorage.getItem('anthropic_key');
+  const togetherOk  = !!localStorage.getItem('together_key');
+  const sources = meta.sources || {};
+  const tmOk    = sources.ticketmaster?.statut === 'ok';
+  const claudeOk = sources.claude?.statut === 'ok' || sources.claude_gratuites?.statut === 'ok';
+  const wsOk    = sources.web_search?.statut === 'ok';
+
+  const maj = new Date(((meta.lastUpdated || '').split('T')[0]) + 'T12:00:00')
+    .toLocaleDateString('fr-CA', { day: 'numeric', month: 'short', year: 'numeric' });
+
+  const hasIssue = !anthropicOk || !claudeOk;
+
+  return (
+    <details className="sidebar-avance" open={hasIssue}>
+      <summary className="sidebar-avance__toggle">
+        ⚙️ Système &amp; Méthode
+        {hasIssue
+          ? <span className="sidebar-avance__badge" style={{ background: 'var(--terra-light)', color: 'var(--terra)' }}>⚠ À configurer</span>
+          : <span className="sidebar-avance__badge" style={{ background: 'var(--sage-light)', color: 'var(--sage)' }}>Tout fonctionne ✓</span>
+        }
+      </summary>
+      <div className="sidebar-avance__content tdb-content">
+
+        {onViewMethode && (
+          <button className="tdb-methode-btn" onClick={onViewMethode}>
+            📖 Comment fonctionne le planning →
+          </button>
+        )}
+
+        <div className="tdb-section">
+          <div className="tdb-section__titre">Clés API</div>
+          <div className="tdb-row">
+            <StatusDot ok={anthropicOk} label={anthropicOk ? 'Anthropic configurée' : 'Anthropic manquante'} />
+            <span>Anthropic IA</span>
+            <span className="tdb-row__val">{anthropicOk ? '✓ Configurée' : '✗ Requise'}</span>
+          </div>
+          <div className="tdb-row">
+            <StatusDot ok={togetherOk} label={togetherOk ? 'Together configurée' : 'Together (images) non configurée'} />
+            <span>Together (images)</span>
+            <span className="tdb-row__val">{togetherOk ? '✓' : '—'}</span>
+          </div>
+        </div>
+
+        <div className="tdb-section">
+          <div className="tdb-section__titre">Sources de données</div>
+          <div className="tdb-row">
+            <StatusDot ok={claudeOk} label="Claude IA" />
+            <span>Claude IA</span>
+            <span className="tdb-row__val">{claudeOk ? 'OK' : '—'}</span>
+          </div>
+          <div className="tdb-row">
+            <StatusDot ok={tmOk} label="Ticketmaster" />
+            <span>Ticketmaster</span>
+            <span className="tdb-row__val">{tmOk ? 'OK' : '—'}</span>
+          </div>
+          {wsOk !== undefined && (
+            <div className="tdb-row">
+              <StatusDot ok={wsOk} label="Web Search" />
+              <span>Web Search</span>
+              <span className="tdb-row__val">{wsOk ? 'OK' : '—'}</span>
+            </div>
+          )}
+          <div className="tdb-row tdb-row--maj">
+            Mise à jour : {maj}
+          </div>
+        </div>
+
+        <div className="tdb-section">
+          <div className="tdb-section__titre">Bibliothèque</div>
+          <div className="tdb-stats-grid">
+            <div className="tdb-stat"><span className="tdb-stat__n">{recettes.length}</span><span className="tdb-stat__l">recettes</span></div>
+            <div className="tdb-stat"><span className="tdb-stat__n">{films.length}</span><span className="tdb-stat__l">films</span></div>
+            <div className="tdb-stat"><span className="tdb-stat__n">{musique.length}</span><span className="tdb-stat__l">albums</span></div>
+            <div className="tdb-stat"><span className="tdb-stat__n">{activites.length}</span><span className="tdb-stat__l">activités</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+  );
+}
 
 // ── Saisie clé API Anthropic ──────────────────────────────────────────────────
 function CleApiSection() {
@@ -184,14 +279,15 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA, joursDisponibles = 7 }) {
-  // Pays présents dans les données, groupés par zone
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA, joursDisponibles = 7, onViewMethode }) {
+  // Tous les pays par zone (avec indication si des recettes existent)
   const originesParZone = useMemo(() => {
-    const tousLesPays = new Set(recettes.map(r => r.origine).filter(Boolean));
+    const avecRecettes = new Set(recettes.map(r => r.origine).filter(Boolean));
     return ZONES.map(z => ({
       ...z,
-      paysDispo: z.pays.filter(p => tousLesPays.has(p)),
-    })).filter(z => z.paysDispo.length > 0);
+      paysDispo: z.pays, // tous les pays, même sans recettes
+      avecRecettes,
+    }));
   }, []);
 
   // Clamp vegetarian/vegan counts when available days decrease
@@ -294,11 +390,17 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
                       <optgroup key={z.zone} label={`${z.emoji} ${z.zone}`}>
                         <option value={`zone:${z.zone}`}>{z.emoji} Toute la zone {z.zone}</option>
                         {z.paysDispo.map(p => (
-                          <option key={p} value={p}>{DRAPEAUX[p] || ''} {p}</option>
+                          <option key={p} value={p}>
+                            {DRAPEAUX[p] || ''} {p}{!z.avecRecettes.has(p) ? ' ✦' : ''}
+                          </option>
                         ))}
                       </optgroup>
                     ))}
+                    <option value={FUSION_ENTRY.value}>{FUSION_ENTRY.label}</option>
                   </select>
+                  <p className="control-label__hint" style={{ marginTop: 4 }}>
+                    ✦ Pas encore de recettes — utilisez l'IA pour en créer.
+                  </p>
                 </div>
               </div>
             </details>
@@ -356,6 +458,10 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
         <hr className="sidebar-rule" />
 
         <CleApiSection />
+
+        <hr className="sidebar-rule" />
+
+        <TableauDeBord onViewMethode={onViewMethode} />
 
         <hr className="sidebar-rule" />
 

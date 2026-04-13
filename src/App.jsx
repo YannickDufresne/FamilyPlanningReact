@@ -727,6 +727,7 @@ export default function App() {
             joursChoisis={joursVerrouilles}
             onOptimiserIA={estSemaineEditable && !semaineLockee ? () => setShowOptimisationIA(true) : null}
             joursDisponibles={estSemaineEditable ? Math.max(0, 7 - tousJoursVerrouilles.size) : 7}
+            onViewMethode={() => setShowMethodologieModal(true)}
           />
           <main className="main-content">
             {/* Navigation entre semaines */}

@@ -54,7 +54,7 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
       </button>
 
       <div className="header-content">
-        <h1>Planning Hebdomadaire</h1>
+        <h1>Planification familiale</h1>
         <p className="header-subtitle">
           <button
             className={`header-nav-link${activeView === 'recettes' ? ' header-nav-link--active' : ''}`}
@@ -80,12 +80,6 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
             className={`header-nav-link${activeView === 'films' ? ' header-nav-link--active' : ''}`}
             onClick={onViewFilms}
           >🎬 Films</button>
-          &nbsp;·&nbsp;
-          <button
-            className="header-nav-link"
-            onClick={onViewMethode}
-            title="Comment fonctionne le planning"
-          >📖 Méthode</button>
         </p>
       </div>
 
