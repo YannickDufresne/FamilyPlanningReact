@@ -326,7 +326,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
     // Marquer les ingrédients forcés maintenant couverts
     if (ingredientsForces?.length && recetteJour?.ingredients) {
       const ings = normIng(recetteJour.ingredients);
-      ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees.add(f); });
+      ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees[f] = (ingredientsCouvertsForcees[f] || 0) + 1; });
     }
 
     // ── Exercices ─────────────────────────────────────────────────────────────
