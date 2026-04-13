@@ -80,7 +80,8 @@ export function getFilmsCandidats(semaineDebut, origineRecette, films) {
     const parOrigine = candidats.filter(f =>
       (f.origines_cinema || []).some(oc => matchOrigine(origineRecette, oc))
     );
-    if (parOrigine.length > 0) candidats = parOrigine;
+    if (parOrigine.length === 0) return []; // Aucun film pour cette origine
+    candidats = parOrigine;
   }
 
   // 3. Prioriser incontournables / score ≥ 90

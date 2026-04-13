@@ -6060,6 +6060,52 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   color: #c0392b;
 }
 
+.film-ajout-modal__hint {
+  background: var(--cream-2, #f5f3ee);
+  border-left: 3px solid var(--forest);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: 0.8rem;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+/* ── FDS empty state ───────────────────────────────────────────────────────── */
+.fds-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.fds-empty__icon {
+  font-size: 2rem;
+  opacity: 0.45;
+}
+
+.fds-empty__msg {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-2, #666);
+}
+
+.fds-empty__add {
+  background: var(--forest);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.fds-empty__add:hover {
+  background: var(--sage);
+}
+
 /* ── Preview / formulaire ─────────────────────────────────────────────────── */
 .film-ajout-preview {
   display: flex;

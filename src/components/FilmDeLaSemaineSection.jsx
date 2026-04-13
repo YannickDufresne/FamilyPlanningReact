@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import films from '../data/films.json';
 import { getFilmsCandidats, getFilmIndexInitial } from '../utils/filmSemaine';
+import FilmAjoutModal from './FilmAjoutModal';
 
 // ── Palmarès ───────────────────────────────────────────────────────────────────
 const PALMARES_LABELS = {
@@ -105,6 +106,7 @@ export default function FilmDeLaSemaineSection({
   filmRatings = {},
   onNoterFilm,
   filmsCustom = [],
+  onAjouterFilm,
 }) {
   const tousFilms = useMemo(() => [...films, ...filmsCustom], [filmsCustom]);
   const origineActive = filtresOrigine && filtresOrigine !== 'Tous' ? filtresOrigine : null;
@@ -118,6 +120,7 @@ export default function FilmDeLaSemaineSection({
     getFilmIndexInitial(semaineVue, filmPool)
   );
   const [descExpand, setDescExpand] = useState(false);
+  const [showAjout, setShowAjout] = useState(false);
 
   // Recalculer quand l'origine ou la semaine change
   useEffect(() => {
@@ -132,7 +135,42 @@ export default function FilmDeLaSemaineSection({
   const film = filmPool[filmIndex] || null;
   const posterUrl = usePoster(film);
 
-  if (!film) return null;
+  if (!film) {
+    // Pool vide avec filtre d'origine actif → état vide avec offre d'ajout
+    if (origineActive) {
+      return (
+        <div className="fds-section">
+          <div className="fds-header">
+            <div className="fds-header__left">
+              <span className="fds-header__icon">🎬</span>
+              <span className="fds-header__titre">Film de la semaine</span>
+              <span className="fds-header__origine">{origineActive}</span>
+            </div>
+          </div>
+          <div className="fds-empty">
+            <span className="fds-empty__icon">🎞️</span>
+            <p className="fds-empty__msg">
+              Aucun film <strong>{origineActive}</strong> dans la bibliothèque.
+            </p>
+            {onAjouterFilm && (
+              <button className="fds-empty__add" onClick={() => setShowAjout(true)}>
+                ➕ Ajouter un film {origineActive}
+              </button>
+            )}
+          </div>
+          {showAjout && (
+            <FilmAjoutModal
+              origineHint={origineActive}
+              filmsExistants={tousFilms}
+              onSauvegarder={f => { onAjouterFilm(f); setShowAjout(false); }}
+              onFermer={() => setShowAjout(false)}
+            />
+          )}
+        </div>
+      );
+    }
+    return null;
+  }
 
   const note = filmRatings?.[film.id] ?? 0;
   const topPalmares = meilleurPalmares(film);

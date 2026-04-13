@@ -40,7 +40,7 @@ function genererID(nom) {
     .replace(/^_+|_+$/g, '');
 }
 
-export default function FilmAjoutModal({ onSauvegarder, onFermer, filmsExistants = [] }) {
+export default function FilmAjoutModal({ onSauvegarder, onFermer, filmsExistants = [], origineHint = null }) {
   const [titre, setTitre] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -57,7 +57,8 @@ export default function FilmAjoutModal({ onSauvegarder, onFermer, filmsExistants
     setError(null);
     setFilm(null);
 
-    const prompt = `Tu es un expert en cinéma mondial. Pour le film "${titre.trim()}", génère un objet JSON complet. Réponds UNIQUEMENT avec un objet JSON valide, sans markdown ni texte autour :
+    const origineCtx = origineHint ? ` Ce film est lié à l'origine culturelle "${origineHint}" — assure-toi que origines_cinema le reflète.` : '';
+    const prompt = `Tu es un expert en cinéma mondial. Pour le film "${titre.trim()}", génère un objet JSON complet.${origineCtx} Réponds UNIQUEMENT avec un objet JSON valide, sans markdown ni texte autour :
 
 {
   "nom": "Titre en français (ou titre original si aucune traduction officielle)",
@@ -151,6 +152,11 @@ Règles importantes :
         <p className="film-ajout-modal__intro">
           Entre le titre d'un film — Claude remplira automatiquement toutes les métadonnées (réalisateur, palmarès, score, description avec liens cuisine &amp; musique).
         </p>
+        {origineHint && (
+          <div className="film-ajout-modal__hint">
+            🌍 Origine culturelle ciblée : <strong>{origineHint}</strong>
+          </div>
+        )}
 
         <div className="film-ajout-modal__search">
           <input

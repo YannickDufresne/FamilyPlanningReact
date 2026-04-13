@@ -766,6 +766,7 @@ export default function App() {
               filmRatings={filmRatings}
               onNoterFilm={raterFilm}
               filmsCustom={filmsCustom}
+              onAjouterFilm={ajouterFilmCustom}
             />
             <WeeklyPlanning
               planning={planningVue}
