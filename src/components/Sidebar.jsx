@@ -205,7 +205,7 @@ function BoutonRebrasser({ onRebrasser }) {
 }
 
 // ── Barre de recherche d'ingrédients ─────────────────────────────────────────
-function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
+function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd, onRemove, onSetCount }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
 
@@ -226,8 +226,14 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
         const n = ing.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         return n.includes(q) && !ingredientsForces.includes(ing);
       })
-      .slice(0, 8);
+      .slice(0, 6);
   }, [query, tousIngredients, ingredientsForces]);
+
+  // Montrer l'option d'ajout libre si le texte n'est pas déjà sélectionné
+  const queryTrimmed = query.trim();
+  const showAddFree = queryTrimmed.length >= 2
+    && !ingredientsForces.some(f => f.toLowerCase() === queryTrimmed.toLowerCase())
+    && !suggestions.some(s => s.toLowerCase() === queryTrimmed.toLowerCase());
 
   function handleSelect(ing) {
     onAdd(ing);
@@ -239,39 +245,70 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
     <div className="ing-forces">
       <div className="sidebar-section-title">Ingrédients à inclure</div>
       <p className="ing-forces__desc">
-        Les recettes proposées chercheront à inclure ces ingrédients.
+        Précisez combien de repas doivent utiliser chaque ingrédient.
       </p>
 
-      {/* Tags des ingrédients sélectionnés */}
+      {/* Tags avec stepper de count */}
       {ingredientsForces.length > 0 && (
         <div className="ing-forces__tags">
-          {ingredientsForces.map(ing => (
-            <span key={ing} className="ing-forces__tag">
-              {ing}
-              <button className="ing-forces__tag-remove" onClick={() => onRemove(ing)} title="Retirer">×</button>
-            </span>
-          ))}
+          {ingredientsForces.map(ing => {
+            const count = ingredientsCounts[ing] || 1;
+            return (
+              <span key={ing} className="ing-forces__tag ing-forces__tag--count">
+                <span className="ing-forces__tag-nom">{ing}</span>
+                <span className="ing-forces__tag-stepper">
+                  <button
+                    className="ing-forces__step-btn"
+                    onClick={() => onSetCount(ing, Math.max(1, count - 1))}
+                    disabled={count <= 1}
+                    title="Moins de repas"
+                  >−</button>
+                  <span className="ing-forces__step-val" title={`${count} repas`}>×{count}</span>
+                  <button
+                    className="ing-forces__step-btn"
+                    onClick={() => onSetCount(ing, Math.min(7, count + 1))}
+                    disabled={count >= 7}
+                    title="Plus de repas"
+                  >+</button>
+                </span>
+                <button className="ing-forces__tag-remove" onClick={() => onRemove(ing)} title="Retirer">✕</button>
+              </span>
+            );
+          })}
         </div>
       )}
 
-      {/* Barre de recherche */}
+      {/* Barre de recherche + saisie libre */}
       <div className="ing-forces__search-wrap">
         <input
           type="text"
           className="ing-forces__input"
-          placeholder="Rechercher un ingrédient…"
+          placeholder="Rechercher ou saisir un ingrédient…"
           value={query}
           onChange={e => { setQuery(e.target.value); setOpen(true); }}
           onFocus={() => setOpen(true)}
-          onBlur={() => setTimeout(() => setOpen(false), 150)}
+          onBlur={() => setTimeout(() => setOpen(false), 200)}
+          onKeyDown={e => {
+            if (e.key === 'Enter' && queryTrimmed.length >= 2) {
+              handleSelect(suggestions[0] || queryTrimmed);
+            }
+          }}
         />
-        {open && suggestions.length > 0 && (
+        {open && (suggestions.length > 0 || showAddFree) && (
           <ul className="ing-forces__suggestions">
             {suggestions.map(ing => (
               <li key={ing} className="ing-forces__suggestion" onMouseDown={() => handleSelect(ing)}>
-                + {ing}
+                {ing}
               </li>
             ))}
+            {showAddFree && (
+              <li
+                className="ing-forces__suggestion ing-forces__suggestion--free"
+                onMouseDown={() => handleSelect(queryTrimmed)}
+              >
+                ＋ Ajouter « {queryTrimmed} »
+              </li>
+            )}
           </ul>
         )}
       </div>
@@ -279,7 +316,7 @@ function RechercheIngredients({ ingredientsForces, onAdd, onRemove }) {
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], onAddIngredientForce, onRemoveIngredientForce, joursChoisis, onOptimiserIA, joursDisponibles = 7, onViewMethode }) {
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], ingredientsCounts = {}, onAddIngredientForce, onRemoveIngredientForce, onSetIngredientCount, joursChoisis, onOptimiserIA, joursDisponibles = 7, onViewMethode }) {
   // Tous les pays par zone (avec indication si des recettes existent)
   const originesParZone = useMemo(() => {
     const avecRecettes = new Set(recettes.map(r => r.origine).filter(Boolean));
@@ -318,8 +355,10 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
           <>
             <RechercheIngredients
               ingredientsForces={ingredientsForces}
+              ingredientsCounts={ingredientsCounts}
               onAdd={onAddIngredientForce}
               onRemove={onRemoveIngredientForce}
+              onSetCount={onSetIngredientCount}
             />
             <hr className="sidebar-rule" />
           </>

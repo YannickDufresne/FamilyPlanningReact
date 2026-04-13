@@ -121,7 +121,7 @@ function shuffleSeeded(arr, seed) {
   return a;
 }
 
-export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces, classiques }) {
+export function genererPlanning({ recettes, exercices, activites, musique, filtres, seed, semaineDebut, profils = [], joursVerrouilles, planningActuel, recettesForcees, ingredientsForces, ingredientsCounts = {}, classiques }) {
   const { nbVegetarien, nbVegane, nbClassiques = 0, nbGratuit = 0, origine, activerCout, coutMax, activerTemps, tempsMax } = filtres;
   const filtrerOrigine = origine && origine !== 'Tous';
   const nbOmnivore = 7 - nbVegetarien - nbVegane;
@@ -172,7 +172,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
   const recettesUtilisees = new Set(); // anti-doublon sur la semaine
   const activitesFamilleUtilisees = new Set(); // anti-doublon activités famille cross-jour
   const activitesAdultesUtilisees = new Set(); // anti-doublon activités adultes cross-jour
-  const ingredientsCouvertsForcees = new Set(); // ingrédients forcés déjà couverts par le planning
+  const ingredientsCouvertsForcees = {}; // { [ing]: timesUsed } — supporte count > 1
   const normIng = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   for (let i = 0; i < 7; i++) {
@@ -185,7 +185,7 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
       if (r?.nom) recettesUtilisees.add(r.nom);
       if (r?.ingredients && ingredientsForces?.length) {
         const ings = normIng(r.ingredients);
-        ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees.add(f); });
+        ingredientsForces.forEach(f => { if (ings.includes(normIng(f))) ingredientsCouvertsForcees[f] = (ingredientsCouvertsForcees[f] || 0) + 1; });
       }
       if (r?.regime_alimentaire === 'omnivore') compteurOmnivore++;
       else if (r?.regime_alimentaire === 'végétarien') compteurVegetarien++;
@@ -262,7 +262,10 @@ export function genererPlanning({ recettes, exercices, activites, musique, filtr
 
     // ── Priorité aux ingrédients forcés non encore couverts ───────────────────
     if (ingredientsForces && ingredientsForces.length > 0) {
-      const nonCoverts = ingredientsForces.filter(f => !ingredientsCouvertsForcees.has(f));
+      const nonCoverts = ingredientsForces.filter(f => {
+        const needed = ingredientsCounts[f] || 1;
+        return (ingredientsCouvertsForcees[f] || 0) < needed;
+      });
       if (nonCoverts.length > 0) {
         const avecForce = poolRecettes.filter(r => {
           const ings = normIng(r.ingredients || '');

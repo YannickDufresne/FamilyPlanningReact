@@ -176,6 +176,10 @@ export default function App() {
     try { return JSON.parse(localStorage.getItem('fp_ingredients_forces') || '[]'); }
     catch { return []; }
   });
+  const [ingredientsCounts, setIngredientsCounts] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('fp_ingredients_counts') || '{}'); }
+    catch { return {}; }
+  });
 
   function addIngredientForce(ing) {
     setIngredientsForces(prev => {
@@ -190,6 +194,22 @@ export default function App() {
     setIngredientsForces(prev => {
       const next = prev.filter(f => f !== ing);
       localStorage.setItem('fp_ingredients_forces', JSON.stringify(next));
+      return next;
+    });
+    setIngredientsCounts(prev => {
+      const next = { ...prev };
+      delete next[ing];
+      localStorage.setItem('fp_ingredients_counts', JSON.stringify(next));
+      return next;
+    });
+  }
+
+  function setIngredientCount(nom, count) {
+    setIngredientsCounts(prev => {
+      const next = { ...prev };
+      if (count <= 1) delete next[nom];
+      else next[nom] = count;
+      localStorage.setItem('fp_ingredients_counts', JSON.stringify(next));
       return next;
     });
   }
@@ -424,11 +444,12 @@ export default function App() {
       planningActuel: planningRef.current,
       recettesForcees: estSemaineActuelle ? recettesForcees : new Map(),
       ingredientsForces,
+      ingredientsCounts,
       classiques,
     });
     planningRef.current = result;
     return result;
-  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees, ingredientsForces, classiques]);
+  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
 
   // ── Planning semaines à venir (déterministe par date) ─────────────────────
   const planningFutur = useMemo(() => {
@@ -442,9 +463,10 @@ export default function App() {
       joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
       ingredientsForces,
+      ingredientsCounts,
       classiques,
     });
-  }, [estSemaineAVenir, semaineVue, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, classiques]);
+  }, [estSemaineAVenir, semaineVue, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
 
   // ── Planning semaine calendrier courante quand meta a avancé (sam/dim) ────
   const planningContenantAujourdhui = useMemo(() => {
@@ -458,9 +480,10 @@ export default function App() {
       joursVerrouilles: tousJoursVerrouilles,
       recettesForcees,
       ingredientsForces,
+      ingredientsCounts,
       classiques,
     });
-  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, classiques]);
+  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
 
   // ── Historique ───────────────────────────────────────────────────────────────
   // Sauvegarde automatique du planning courant
@@ -724,6 +747,8 @@ export default function App() {
             ingredientsForces={ingredientsForces}
             onAddIngredientForce={addIngredientForce}
             onRemoveIngredientForce={removeIngredientForce}
+            ingredientsCounts={ingredientsCounts}
+            onSetIngredientCount={setIngredientCount}
             joursChoisis={joursVerrouilles}
             onOptimiserIA={estSemaineEditable && !semaineLockee ? () => setShowOptimisationIA(true) : null}
             joursDisponibles={estSemaineEditable ? Math.max(0, 7 - tousJoursVerrouilles.size) : 7}

@@ -3814,15 +3814,39 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .ing-forces__tag {
   display: inline-flex; align-items: center; gap: 4px;
   background: var(--forest); color: white;
-  border-radius: 99px; padding: 3px 8px 3px 10px;
+  border-radius: 99px; padding: 3px 6px 3px 10px;
   font-size: 0.72rem; font-weight: 600;
 }
+.ing-forces__tag--count { gap: 3px; }
+.ing-forces__tag-nom { margin-right: 2px; }
+.ing-forces__tag-stepper {
+  display: inline-flex; align-items: center; gap: 1px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 99px;
+  padding: 1px 3px;
+}
+.ing-forces__step-btn {
+  background: none; border: none; color: rgba(255,255,255,0.85);
+  cursor: pointer; padding: 0 3px; font-size: 0.75rem; line-height: 1;
+  font-weight: 700;
+}
+.ing-forces__step-btn:hover:not(:disabled) { color: white; }
+.ing-forces__step-btn:disabled { opacity: 0.35; cursor: default; }
+.ing-forces__step-val {
+  font-size: 0.65rem; font-weight: 700; min-width: 16px;
+  text-align: center; color: rgba(255,255,255,0.9);
+}
 .ing-forces__tag-remove {
-  background: none; border: none; color: rgba(255,255,255,0.7);
-  cursor: pointer; padding: 0; font-size: 1rem; line-height: 1;
+  background: none; border: none; color: rgba(255,255,255,0.6);
+  cursor: pointer; padding: 0 2px; font-size: 0.75rem; line-height: 1;
   display: flex; align-items: center;
 }
 .ing-forces__tag-remove:hover { color: white; }
+.ing-forces__suggestion--free {
+  color: var(--forest);
+  font-style: italic;
+  border-top: 1px solid var(--border, #eee);
+}
 .ing-forces__search-wrap { position: relative; }
 .ing-forces__input {
   width: 100%; box-sizing: border-box;
