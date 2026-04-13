@@ -205,7 +205,9 @@ function BoutonRebrasser({ onRebrasser }) {
 }
 
 // ── Barre de recherche d'ingrédients ─────────────────────────────────────────
-function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd, onRemove, onSetCount }) {
+const normIngUI = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd, onRemove, onSetCount, joursDisponibles = 7 }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
 
@@ -217,6 +219,17 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
     });
     return [...set].sort((a, b) => a.localeCompare(b, 'fr'));
   }, []);
+
+  // Détecter les ingrédients forcés sans aucune recette correspondante
+  const ingsSansRecettes = useMemo(() => {
+    const sans = new Set();
+    ingredientsForces.forEach(f => {
+      const fNorm = normIngUI(f);
+      const aMatch = recettes.some(r => normIngUI(r.ingredients || '').includes(fNorm));
+      if (!aMatch) sans.add(f);
+    });
+    return sans;
+  }, [ingredientsForces]);
 
   const suggestions = useMemo(() => {
     if (!query || query.length < 2) return [];
@@ -253,9 +266,12 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
         <div className="ing-forces__tags">
           {ingredientsForces.map(ing => {
             const count = ingredientsCounts[ing] || 1;
+            const sansRecette = ingsSansRecettes.has(ing);
             return (
-              <span key={ing} className="ing-forces__tag ing-forces__tag--count">
-                <span className="ing-forces__tag-nom">{ing}</span>
+              <span key={ing} className={`ing-forces__tag ing-forces__tag--count${sansRecette ? ' ing-forces__tag--warn' : ''}`}>
+                <span className="ing-forces__tag-nom" title={sansRecette ? 'Aucune recette avec cet ingrédient — ajoutez-en une avec l\'IA' : ''}>
+                  {sansRecette && <span className="ing-forces__tag-warn-icon">⚠</span>}{ing}
+                </span>
                 <span className="ing-forces__tag-stepper">
                   <button
                     className="ing-forces__step-btn"
@@ -266,8 +282,8 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
                   <span className="ing-forces__step-val" title={`${count} repas`}>×{count}</span>
                   <button
                     className="ing-forces__step-btn"
-                    onClick={() => onSetCount(ing, Math.min(7, count + 1))}
-                    disabled={count >= 7}
+                    onClick={() => onSetCount(ing, Math.min(joursDisponibles, count + 1))}
+                    disabled={count >= joursDisponibles}
                     title="Plus de repas"
                   >+</button>
                 </span>
@@ -276,6 +292,11 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
             );
           })}
         </div>
+      )}
+      {ingredientsForces.some(f => ingsSansRecettes.has(f)) && (
+        <p className="ing-forces__warn-msg">
+          ⚠ Aucune recette existante avec cet ingrédient. Utilisez l'IA pour en suggérer une.
+        </p>
       )}
 
       {/* Barre de recherche + saisie libre */}
@@ -359,6 +380,7 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
               onAdd={onAddIngredientForce}
               onRemove={onRemoveIngredientForce}
               onSetCount={onSetIngredientCount}
+              joursDisponibles={joursDisponibles}
             />
             <hr className="sidebar-rule" />
           </>

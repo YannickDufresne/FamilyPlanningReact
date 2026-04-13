@@ -3818,7 +3818,12 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
   font-size: 0.72rem; font-weight: 600;
 }
 .ing-forces__tag--count { gap: 3px; }
+.ing-forces__tag--warn { background: var(--terra) !important; }
+.ing-forces__tag-warn-icon { margin-right: 3px; font-style: normal; }
 .ing-forces__tag-nom { margin-right: 2px; }
+.ing-forces__warn-msg {
+  font-size: 0.7rem; color: var(--terra); margin: 4px 0 0; line-height: 1.35;
+}
 .ing-forces__tag-stepper {
   display: inline-flex; align-items: center; gap: 1px;
   background: rgba(255,255,255,0.15);
