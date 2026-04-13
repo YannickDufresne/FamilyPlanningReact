@@ -6265,6 +6265,39 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   padding: 0 4px;
 }
 
+.film-decouverte__genre-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 4px 0 12px;
+}
+
+.film-decouverte__genre-label {
+  font-size: 0.82rem;
+  color: var(--ink-2, #666);
+  white-space: nowrap;
+}
+
+.film-decouverte__genre-select {
+  flex: 1;
+  min-width: 120px;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  background: white;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+/* ── FDS discover button in header ───────────────────────────────────────── */
+.fds-header .fds-discover-btn {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-right: 4px;
+}
+
 /* ── Preview / formulaire ─────────────────────────────────────────────────── */
 .film-ajout-preview {
   display: flex;

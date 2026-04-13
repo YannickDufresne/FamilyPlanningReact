@@ -51,11 +51,11 @@ function buildPrompt({ theme, filtres, ingredientsForces, recettesSemaine, regim
 
   // Exclure TOUTES les recettes déjà au menu (pas juste 6)
   const eviterLine = recettesSemaine?.length
-    ? `\n- ÉVITER ces recettes déjà au menu cette semaine (aucun doublon) : ${recettesSemaine.join(' | ')}`
+    ? `\n\n⛔ INTERDIT ABSOLU — ces recettes sont DÉJÀ au menu cette semaine, tu ne peux PAS les proposer ni rien de similaire :\n${recettesSemaine.map(n => `  • ${n}`).join('\n')}`
     : '';
 
   return `Tu es un chef cuisinier expert, historien de la gastronomie et critique culinaire de renommée mondiale. Je cherche une recette pour le thème "${info.label}".
-Description du thème : ${info.desc}.
+Description du thème : ${info.desc}.${eviterLine}
 
 CRITÈRE DE QUALITÉ ABSOLUE — c'est le plus important :
 Propose LA recette de référence pour ce plat et cette origine — celle qui obtiendrait un score parfait sur NYT Cooking (5 étoiles, des milliers de commentaires), ou que Anthony Bourdain, Julia Child, Samin Nosrat, Ricardo Larrivée, Jacques Pépin ou Yotam Ottolenghi considéreraient comme la version authentique et définitive. Préfère une recette connue, éprouvée, issue d'une vraie tradition culinaire — pas une fusion inventée. La recette doit être mémorable, avec une technique ou un ingrédient clé qui fait toute la différence.
@@ -63,7 +63,7 @@ Propose LA recette de référence pour ce plat et cette origine — celle qui ob
 Contraintes OBLIGATOIRES (respecte-les toutes — c'est critique) :
 - Régime : ${regimeStr}${origineStr}
 - ${cout}
-- ${temps || 'Pas de contrainte de temps.'}${rapideStr}${forcesLine}${eviterLine}
+- ${temps || 'Pas de contrainte de temps.'}${rapideStr}${forcesLine}
 
 Anecdote : 1-2 phrases en français sur l'histoire ou le secret de cette recette — ce qui la rend authentique, d'où elle vient, pourquoi elle est considérée comme une référence.
 

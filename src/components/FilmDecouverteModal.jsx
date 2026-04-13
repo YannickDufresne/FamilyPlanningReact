@@ -40,13 +40,14 @@ function sanitizeFilm(data) {
   return data;
 }
 
+const GENRES = ['', 'Drame', 'Comédie', 'Thriller', 'Science-fiction', 'Animation', 'Documentaire', 'Horreur', 'Romance', 'Action', 'Historique', 'Musical', 'Policier'];
+
 export default function FilmDecouverteModal({ origineHint, filmsExistants = [], onSauvegarderTous, onFermer }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [selection, setSelection] = useState(new Set());
-
-  useEffect(() => { decouvrir(); }, []);
+  const [genre, setGenre] = useState('');
 
   async function decouvrir() {
     const apiKey = localStorage.getItem('anthropic_key');
@@ -61,15 +62,17 @@ export default function FilmDecouverteModal({ origineHint, filmsExistants = [], 
     setSelection(new Set());
 
     const exIds = new Set(filmsExistants.map(f => f.id));
+    const exNoms = filmsExistants.map(f => f.nom);
+    const genreStr = genre ? `\n- Genre OBLIGATOIRE : ${genre} — tous les films DOIVENT être de ce genre.` : '\n- Genre : varié (1 classique + 1 récent + 1 surprise)';
+    const exclureStr = exNoms.length ? `\n\nNe propose AUCUN de ces films déjà dans la bibliothèque :\n${exNoms.slice(0, 80).join(' | ')}` : '';
 
-    const prompt = `Tu es un expert en cinéma mondial. Recommande 3 films exceptionnels liés à l'origine culturelle "${origineHint}".
+    const prompt = `Tu es un expert en cinéma mondial. Recommande 3 films exceptionnels${origineHint ? ` liés à l'origine culturelle "${origineHint}"` : ' de renommée internationale'}.
 
 Critères de sélection :
 - Très haute qualité critique (score consensus ≥ 85)
-- Mix obligatoire : au moins 1 classique intemporel (avant 2000) ET au moins 1 film récent (après 2005)
-- Films ayant une résonance culturelle forte avec "${origineHint}"
+- Mix obligatoire : au moins 1 classique intemporel (avant 2000) ET au moins 1 film récent (après 2005)${origineHint ? `\n- Films ayant une résonance culturelle forte avec "${origineHint}"` : ''}
 - Priorité aux films primés (Cannes, Oscars, Berlinale, Venise, etc.)
-- Inclure des films peu connus mais remarquables, pas seulement les plus célèbres
+- Inclure des films peu connus mais remarquables, pas seulement les plus célèbres${genreStr}${exclureStr}
 
 Réponds UNIQUEMENT avec un tableau JSON de 3 objets, sans markdown :
 [
@@ -90,7 +93,7 @@ Réponds UNIQUEMENT avec un tableau JSON de 3 objets, sans markdown :
     "score_imdb": 8.2,
     "score_metacritic": 89,
     "incontournable": true,
-    "origines_cinema": ["${origineHint}"],
+    "origines_cinema": ["pays ou région du film"],
     "imdb_url": "https://www.imdb.com/title/tt0000000/",
     "description": "2-3 phrases en français liant ce film à une tradition culinaire ET à un style musical de son origine culturelle.",
     "rang_mondial": 200,
@@ -157,18 +160,41 @@ Règles strictes :
       <div className="film-decouverte-modal">
 
         <div className="film-ajout-modal__header">
-          <h3 className="film-ajout-modal__titre">✨ Films {origineHint} recommandés</h3>
+          <h3 className="film-ajout-modal__titre">✨ Découvrir des films{origineHint ? ` ${origineHint}` : ''}</h3>
           <button className="modal-close" style={{ position: 'static' }} onClick={onFermer}>✕</button>
         </div>
 
         <p className="film-ajout-modal__intro">
-          Claude sélectionne 3 films de très haute qualité — un mélange de classiques et de découvertes récentes — à ajouter définitivement à ta bibliothèque.
+          Claude recommande 3 films de très haute qualité — classiques et récents — à ajouter définitivement à ta bibliothèque.
         </p>
+
+        {/* Sélecteur de genre */}
+        <div className="film-decouverte__genre-row">
+          <label className="film-decouverte__genre-label">Genre :</label>
+          <select
+            className="film-decouverte__genre-select"
+            value={genre}
+            onChange={e => setGenre(e.target.value)}
+            disabled={loading}
+          >
+            {GENRES.map(g => (
+              <option key={g} value={g}>{g || 'Tous genres'}</option>
+            ))}
+          </select>
+          <button
+            className="fds-empty__add fds-empty__add--ia"
+            style={{ padding: '6px 14px', fontSize: '0.8rem' }}
+            onClick={decouvrir}
+            disabled={loading}
+          >
+            {loading ? '⏳…' : suggestions.length ? '↺ Nouvelles suggestions' : '✨ Rechercher'}
+          </button>
+        </div>
 
         {loading && (
           <div className="film-decouverte__loading">
             <span className="film-decouverte__spinner">🎬</span>
-            Claude analyse le cinéma {origineHint}…
+            Claude analyse{origineHint ? ` le cinéma ${origineHint}` : ' les meilleurs films'}…
           </div>
         )}
 
@@ -239,13 +265,6 @@ Règles strictes :
                 disabled={selection.size === 0}
               >
                 ✅ Ajouter {selection.size} film{selection.size > 1 ? 's' : ''} à la bibliothèque
-              </button>
-              <button
-                className="film-ajout-preview__retry"
-                onClick={decouvrir}
-                disabled={loading}
-              >
-                {loading ? '⏳…' : '↺ Nouvelles suggestions'}
               </button>
             </div>
           </>

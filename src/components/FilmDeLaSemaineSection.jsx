@@ -209,6 +209,13 @@ export default function FilmDeLaSemaineSection({
           )}
         </div>
         <div className="fds-header__nav">
+          {onAjouterFilm && (
+            <button
+              className="film-nav-btn fds-discover-btn"
+              onClick={() => setShowDecouverte(true)}
+              title="Découvrir des films avec l'IA"
+            >✨</button>
+          )}
           <button
             className="film-nav-btn"
             onClick={() => setFilmIndex(i => (i - 1 + filmPool.length) % filmPool.length)}
@@ -308,6 +315,23 @@ export default function FilmDeLaSemaineSection({
           </div>
         </div>
       </div>
+
+      {showDecouverte && (
+        <FilmDecouverteModal
+          origineHint={origineActive}
+          filmsExistants={tousFilms}
+          onSauvegarderTous={liste => liste.forEach(f => onAjouterFilm(f))}
+          onFermer={() => setShowDecouverte(false)}
+        />
+      )}
+      {showAjout && (
+        <FilmAjoutModal
+          origineHint={origineActive}
+          filmsExistants={tousFilms}
+          onSauvegarder={f => { onAjouterFilm(f); setShowAjout(false); }}
+          onFermer={() => setShowAjout(false)}
+        />
+      )}
     </div>
   );
 }
