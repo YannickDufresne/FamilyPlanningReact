@@ -123,9 +123,12 @@ const PALMARES_LABELS = {
   toronto:             'Prix public TIFF',
   sundance:            'Sundance',
   cesar:               'César',
-  iris:                'Prix Iris',
+  iris:                'Prix Iris (Québec)',
+  jutra:               'Prix Jutra (Québec)',
   genie:               'Prix Genie',
   cannes:              'Cannes',
+  japan_critics:       'Japan Critics',
+  cesar_meilleur_film: 'César Meilleur Film',
 };
 
 // ── Carte film ─────────────────────────────────────────────────────────────────
@@ -168,13 +171,28 @@ function FilmCarte({ film, ratings, onNoter }) {
         {film.duree && <span className="film-carte__duree">{film.duree} min</span>}
       </div>
 
-      {/* Score */}
+      {/* Score consensus + tier */}
       <div className="album-carte__score-bloc">
         <div className="album-carte__score-bar-wrap">
           <div className="album-carte__score-bar" style={{ width: `${scoreBar}%` }} />
         </div>
         <span className={`album-carte__tier ${tier.classe}`}>{tier.label}</span>
       </div>
+
+      {/* Scores externes */}
+      {(film.score_rt != null || film.score_imdb != null || film.score_metacritic != null) && (
+        <div className="fds-scores-ext">
+          {film.score_rt != null && (
+            <span className="fds-score-chip fds-score-chip--rt">🍅 {film.score_rt}%</span>
+          )}
+          {film.score_imdb != null && (
+            <span className="fds-score-chip fds-score-chip--imdb">⭐ {film.score_imdb}/10</span>
+          )}
+          {film.score_metacritic != null && (
+            <span className="fds-score-chip fds-score-chip--meta">M {film.score_metacritic}</span>
+          )}
+        </div>
+      )}
 
       {/* Palmares */}
       {film.palmares?.length > 0 && (

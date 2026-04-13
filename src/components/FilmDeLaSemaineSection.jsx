@@ -160,13 +160,13 @@ export default function FilmDeLaSemaineSection({
             className="film-nav-btn"
             onClick={() => setFilmIndex(i => (i - 1 + filmPool.length) % filmPool.length)}
             disabled={filmPool.length <= 1}
-          >‹</button>
+          >←</button>
           <span className="film-nav-count">{filmIndex + 1} / {filmPool.length}</span>
           <button
             className="film-nav-btn"
             onClick={() => setFilmIndex(i => (i + 1) % filmPool.length)}
             disabled={filmPool.length <= 1}
-          >›</button>
+          >→</button>
         </div>
       </div>
 
@@ -191,16 +191,34 @@ export default function FilmDeLaSemaineSection({
             {drapeau(film.pays)} {film.realisateur} · {film.annee} · {film.genre}
           </div>
 
-          {/* Barre de score */}
+          {/* Barre de score consensus + tier */}
           <div className="fds-score">
             <div className="album-carte__score-bar-wrap fds-score__bar-wrap">
-              <div
-                className="album-carte__score-bar"
-                style={{ width: `${score}%` }}
-              />
+              <div className="album-carte__score-bar" style={{ width: `${score}%` }} />
             </div>
             <span className={`album-carte__tier ${tier.classe}`}>{tier.label}</span>
           </div>
+
+          {/* Scores externes */}
+          {(film.score_rt != null || film.score_imdb != null || film.score_metacritic != null) && (
+            <div className="fds-scores-ext">
+              {film.score_rt != null && (
+                <span className="fds-score-chip fds-score-chip--rt">
+                  🍅 {film.score_rt}%
+                </span>
+              )}
+              {film.score_imdb != null && (
+                <span className="fds-score-chip fds-score-chip--imdb">
+                  ⭐ {film.score_imdb}/10
+                </span>
+              )}
+              {film.score_metacritic != null && (
+                <span className="fds-score-chip fds-score-chip--meta">
+                  M {film.score_metacritic}
+                </span>
+              )}
+            </div>
+          )}
 
           {topPalmares && (
             <div className="fds-palmares">{topPalmares}</div>

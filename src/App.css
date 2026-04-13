@@ -5747,6 +5747,24 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   letter-spacing: 0.03em;
 }
 
+.fds-scores-ext {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 2px 0;
+}
+
+.fds-score-chip {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.fds-score-chip--rt   { background: #fff0e8; color: #c84b11; }
+.fds-score-chip--imdb { background: #fffbe0; color: #c7930a; }
+.fds-score-chip--meta { background: #e8f3e8; color: #2d6a2d; }
+
 .fds-desc {
   margin-top: 2px;
 }
@@ -5838,12 +5856,13 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   margin-bottom: 0.4rem;
 }
 
+/* Boutons de navigation film — contexte clair (cartes) */
 .film-nav-btn {
   background: none;
   border: 1px solid var(--border, #e0d8d0);
   border-radius: 4px;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5864,6 +5883,21 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   background: var(--forest);
   color: white;
   border-color: var(--forest);
+}
+
+/* Boutons dans l'en-tête vert foncé (fds-section) */
+.fds-header .film-nav-btn {
+  border-color: rgba(255,255,255,0.45);
+  color: white;
+}
+.fds-header .film-nav-btn:not(:disabled):hover {
+  background: rgba(255,255,255,0.18);
+  color: white;
+  border-color: rgba(255,255,255,0.7);
+}
+.fds-header .film-nav-count {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.75rem;
 }
 
 .film-nav-count {
