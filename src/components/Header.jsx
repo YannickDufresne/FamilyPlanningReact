@@ -87,26 +87,6 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
         <div className="header-semaine">{semaine}</div>
         <button className="header-maj header-maj--btn" onClick={onViewUpdate} title="Voir les détails de la mise à jour">
           Mis à jour le {maj}
-          &nbsp;·&nbsp;
-          <SourceDot statut={tmStatut} label="Ticketmaster" />
-          <span className="source-label">Ticketmaster</span>
-          &nbsp;·&nbsp;
-          <SourceDot statut={claudeStatut} label="Claude IA" />
-          <span className="source-label">Claude IA</span>
-          {wsStatut !== 'absent' && (
-            <>
-              &nbsp;·&nbsp;
-              <SourceDot statut={wsStatut} label="Web Search" />
-              <span className="source-label">Web</span>
-            </>
-          )}
-          {ebStatut !== 'absent' && (
-            <>
-              &nbsp;·&nbsp;
-              <SourceDot statut={ebStatut} label="Eventbrite" />
-              <span className="source-label">Eventbrite</span>
-            </>
-          )}
         </button>
       </div>
     </header>
