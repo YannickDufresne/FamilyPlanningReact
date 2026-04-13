@@ -1,41 +1,22 @@
 import meta from '../data/meta.json';
 
-function formatSemaine(debut, fin) {
-  const opts = { day: 'numeric', month: 'long' };
-  const locale = 'fr-CA';
-  const d = new Date(debut + 'T12:00:00');
-  const f = new Date(fin + 'T12:00:00');
-  if (d.getMonth() === f.getMonth()) {
-    return `${d.getDate()} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
-  }
-  return `${d.toLocaleDateString(locale, opts)} – ${f.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}`;
-}
-
-// Petit rond coloré selon le statut de la source
-function SourceDot({ statut, label }) {
-  const color = statut === 'ok' ? 'var(--sage)' : statut === 'erreur' ? '#c0392b' : 'var(--ink-3)';
-  const title = statut === 'ok' ? `${label} — OK` : statut === 'erreur' ? `${label} — Erreur` : `${label} — Non utilisé`;
-  return (
-    <span
-      className="source-dot"
-      style={{ background: color }}
-      title={title}
-      aria-label={title}
-    />
-  );
-}
-
 export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie, onViewUpdate, onViewProfils, onViewMethode, onViewAlbums, onViewFilms, photoUrl, activeView }) {
-  const semaine = formatSemaine(meta.semaine.debut, meta.semaine.fin);
+
+  // Date d'aujourd'hui (pas la semaine — la date précise du jour)
+  const aujourdhui = new Date().toLocaleDateString('fr-CA', {
+    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+  });
+
+  // Date de mise à jour des données
   const maj = new Date((meta.lastUpdated || '').split('T')[0] + 'T12:00:00')
     .toLocaleDateString('fr-CA', { day: 'numeric', month: 'long', year: 'numeric' });
 
+  // Santé globale des sources (dot vert/rouge)
   const sources = meta.sources || {};
-  const tmStatut     = sources.ticketmaster?.statut    ?? 'absent';
-  const claudeStatut = (sources.claude?.statut === 'ok' || sources.claude_gratuites?.statut === 'ok') ? 'ok'
-                     : (sources.claude?.statut === 'erreur') ? 'erreur' : 'absent';
-  const wsStatut     = sources.web_search?.statut      ?? 'absent';
-  const ebStatut     = sources.eventbrite?.statut      ?? 'absent';
+  const anyError = Object.values(sources).some(s => s?.statut === 'erreur');
+  const anyOk    = Object.values(sources).some(s => s?.statut === 'ok');
+  const dotColor = anyError ? '#c0392b' : anyOk ? 'var(--sage)' : 'var(--ink-3)';
+  const dotTitle = anyError ? 'Une ou plusieurs sources ont des erreurs' : anyOk ? 'Toutes les sources fonctionnent' : 'Données non disponibles';
 
   return (
     <header className="main-header">
@@ -84,10 +65,21 @@ export default function Header({ onViewRecettes, onViewActivites, onViewEpicerie
       </div>
 
       <div className="header-meta">
-        <div className="header-semaine">{semaine}</div>
-        <button className="header-maj header-maj--btn" onClick={onViewUpdate} title="Voir les détails de la mise à jour">
+        {/* Date du jour */}
+        <div className="header-aujourd-hui">{aujourdhui}</div>
+
+        {/* Mise à jour + dot de santé */}
+        <button className="header-maj header-maj--btn" onClick={onViewUpdate} title={dotTitle}>
+          <span className="header-maj-dot" style={{ background: dotColor }} title={dotTitle} />
           Mis à jour le {maj}
         </button>
+
+        {/* Méthode & Système — discret, en dessous */}
+        {onViewMethode && (
+          <button className="header-methode-link" onClick={onViewMethode}>
+            📖 Méthode &amp; Système
+          </button>
+        )}
       </div>
     </header>
   );

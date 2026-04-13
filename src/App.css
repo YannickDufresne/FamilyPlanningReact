@@ -123,6 +123,18 @@ body {
   flex-shrink: 0;
 }
 
+/* Date du jour (remplace la plage de semaine dans le header) */
+.header-aujourd-hui {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+/* Ancien sélecteur conservé pour compatibilité */
 .header-semaine {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
@@ -156,6 +168,34 @@ body {
   text-decoration: none;
 }
 .header-maj--btn:hover { color: var(--forest); }
+
+/* Dot de santé dans le header */
+.header-maj-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+/* Lien Méthode & Système dans le header */
+.header-methode-link {
+  display: block;
+  background: none; border: none; padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  cursor: pointer;
+  text-align: right;
+  margin-top: 4px;
+  transition: color 0.15s;
+  opacity: 0.7;
+}
+.header-methode-link:hover { color: var(--forest); opacity: 1; }
 
 /* Rond de statut source */
 .source-dot {
@@ -212,6 +252,32 @@ body {
   transition: color 0.15s;
 }
 .update-close:hover { color: var(--ink); }
+
+/* Bandeau de santé en haut du modal de mise à jour */
+.update-health {
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.update-health--ok {
+  background: var(--sage-light, #eaf2ec);
+  color: var(--sage, #4a7c59);
+  border: 1px solid var(--sage, #4a7c59);
+}
+.update-health--warn {
+  background: #fef3f0;
+  color: #c0392b;
+  border: 1px solid #f5b7b1;
+}
+.update-health__titre { font-weight: 700; margin-bottom: 6px; }
+.update-health__list {
+  margin: 0; padding-left: 18px;
+  font-size: 0.78rem;
+}
+.update-health__list li { margin-bottom: 2px; }
 
 .update-modal-header { margin-bottom: 28px; }
 

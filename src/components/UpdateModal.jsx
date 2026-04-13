@@ -160,10 +160,36 @@ export default function UpdateModal({ onClose }) {
   const sources = meta.sources || {};
   const heureMAJ = formatDateHeure(meta.lastUpdated);
 
+  // ── Résumé de santé ──────────────────────────────────────────────────────
+  const anthropicOk = !!localStorage.getItem('anthropic_key');
+  const issues = [];
+  if (!anthropicOk) issues.push('Clé API Anthropic manquante — les suggestions IA sont désactivées');
+  Object.entries(sources).forEach(([key, data]) => {
+    if (data?.statut === 'erreur') {
+      const label = SOURCE_CONFIG[key]?.label || key;
+      issues.push(`${label} — erreur lors de la mise à jour${data.erreur ? ` : ${data.erreur}` : ''}`);
+    }
+  });
+  const toutOk = issues.length === 0;
+
   return (
     <div className="update-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
       <div className="update-modal">
         <button className="update-close" onClick={onClose} aria-label="Fermer">✕</button>
+
+        {/* Bandeau de santé */}
+        <div className={`update-health update-health--${toutOk ? 'ok' : 'warn'}`}>
+          {toutOk ? (
+            <span>✓ Tout fonctionne normalement</span>
+          ) : (
+            <>
+              <div className="update-health__titre">⚠ {issues.length} problème{issues.length > 1 ? 's' : ''} détecté{issues.length > 1 ? 's' : ''}</div>
+              <ul className="update-health__list">
+                {issues.map((issue, i) => <li key={i}>{issue}</li>)}
+              </ul>
+            </>
+          )}
+        </div>
 
         <div className="update-modal-header">
           <h2 className="update-title">Journal de mise à jour</h2>
