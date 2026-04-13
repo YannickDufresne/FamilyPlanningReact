@@ -7,7 +7,7 @@ import films from '../data/films.json';
 import meta from '../data/meta.json';
 import { ZONES, DRAPEAUX, FUSION_ENTRY, labelOrigine } from '../utils/zones';
 
-// ── Tableau de bord système ───────────────────────────────────────────────────
+// ── Méthode & Système — section unifiée ──────────────────────────────────────
 function StatusDot({ ok, label }) {
   return (
     <span
@@ -17,91 +17,40 @@ function StatusDot({ ok, label }) {
   );
 }
 
-function TableauDeBord({ onViewMethode }) {
-  const anthropicOk = !!localStorage.getItem('anthropic_key');
-  const togetherOk  = !!localStorage.getItem('together_key');
-  const sources = meta.sources || {};
-  const tmOk    = sources.ticketmaster?.statut === 'ok';
-  const claudeOk = sources.claude?.statut === 'ok' || sources.claude_gratuites?.statut === 'ok';
-  const wsOk    = sources.web_search?.statut === 'ok';
+const METHODE_SECTIONS = [
+  {
+    icon: '🍽️',
+    titre: 'Repas · 7 thèmes fixes',
+    texte: 'Lundi = Pasta Rapido, Mardi = Bol/Sandwich, Mercredi = Poisson, Jeudi = Plat en sauce, Vendredi = Confort grillé, Samedi = Pizza, Dimanche = Slow Chic. Recette choisie parmi ~342 en respectant régimes et sans doublon.',
+  },
+  {
+    icon: '🏋️',
+    titre: 'Entraînement fonctionnel',
+    texte: '5 phases (échauffement → musculaire → cardio → finition → récupération) les lundi, mercredi, vendredi.',
+  },
+  {
+    icon: '🗓️',
+    titre: 'Activités Québec',
+    texte: 'Événements via Ticketmaster + suggestions Claude IA. Score de pertinence famille 0–100 calculé selon les préférences des membres.',
+  },
+  {
+    icon: '🎵',
+    titre: 'Bibliothèque musicale',
+    texte: 'L\'album suggéré chaque jour correspond à l\'origine culturelle de la recette. Albums 295+, couvrant 50+ pays.',
+  },
+  {
+    icon: '🎬',
+    titre: 'Films',
+    texte: 'Film de la semaine choisi selon la saison et l\'origine culturelle active. 137 films essentiels du cinéma mondial.',
+  },
+  {
+    icon: '🔄',
+    titre: 'Mise à jour hebdomadaire',
+    texte: 'Chaque vendredi soir : GitHub Actions régénère activités, aubaines épiceries et suggestions IA.',
+  },
+];
 
-  const maj = new Date(((meta.lastUpdated || '').split('T')[0]) + 'T12:00:00')
-    .toLocaleDateString('fr-CA', { day: 'numeric', month: 'short', year: 'numeric' });
-
-  const hasIssue = !anthropicOk || !claudeOk;
-
-  return (
-    <details className="sidebar-avance" open={hasIssue}>
-      <summary className="sidebar-avance__toggle">
-        ⚙️ Système &amp; Méthode
-        {hasIssue
-          ? <span className="sidebar-avance__badge" style={{ background: 'var(--terra-light)', color: 'var(--terra)' }}>⚠ À configurer</span>
-          : <span className="sidebar-avance__badge" style={{ background: 'var(--sage-light)', color: 'var(--sage)' }}>Tout fonctionne ✓</span>
-        }
-      </summary>
-      <div className="sidebar-avance__content tdb-content">
-
-        {onViewMethode && (
-          <button className="tdb-methode-btn" onClick={onViewMethode}>
-            📖 Comment fonctionne le planning →
-          </button>
-        )}
-
-        <div className="tdb-section">
-          <div className="tdb-section__titre">Clés API</div>
-          <div className="tdb-row">
-            <StatusDot ok={anthropicOk} label={anthropicOk ? 'Anthropic configurée' : 'Anthropic manquante'} />
-            <span>Anthropic IA</span>
-            <span className="tdb-row__val">{anthropicOk ? '✓ Configurée' : '✗ Requise'}</span>
-          </div>
-          <div className="tdb-row">
-            <StatusDot ok={togetherOk} label={togetherOk ? 'Together configurée' : 'Together (images) non configurée'} />
-            <span>Together (images)</span>
-            <span className="tdb-row__val">{togetherOk ? '✓' : '—'}</span>
-          </div>
-        </div>
-
-        <div className="tdb-section">
-          <div className="tdb-section__titre">Sources de données</div>
-          <div className="tdb-row">
-            <StatusDot ok={claudeOk} label="Claude IA" />
-            <span>Claude IA</span>
-            <span className="tdb-row__val">{claudeOk ? 'OK' : '—'}</span>
-          </div>
-          <div className="tdb-row">
-            <StatusDot ok={tmOk} label="Ticketmaster" />
-            <span>Ticketmaster</span>
-            <span className="tdb-row__val">{tmOk ? 'OK' : '—'}</span>
-          </div>
-          {wsOk !== undefined && (
-            <div className="tdb-row">
-              <StatusDot ok={wsOk} label="Web Search" />
-              <span>Web Search</span>
-              <span className="tdb-row__val">{wsOk ? 'OK' : '—'}</span>
-            </div>
-          )}
-          <div className="tdb-row tdb-row--maj">
-            Mise à jour : {maj}
-          </div>
-        </div>
-
-        <div className="tdb-section">
-          <div className="tdb-section__titre">Bibliothèque</div>
-          <div className="tdb-stats-grid">
-            <div className="tdb-stat"><span className="tdb-stat__n">{recettes.length}</span><span className="tdb-stat__l">recettes</span></div>
-            <div className="tdb-stat"><span className="tdb-stat__n">{films.length}</span><span className="tdb-stat__l">films</span></div>
-            <div className="tdb-stat"><span className="tdb-stat__n">{musique.length}</span><span className="tdb-stat__l">albums</span></div>
-            <div className="tdb-stat"><span className="tdb-stat__n">{activites.length}</span><span className="tdb-stat__l">activités</span></div>
-          </div>
-        </div>
-
-      </div>
-    </details>
-  );
-}
-
-// ── Saisie clé API Anthropic ──────────────────────────────────────────────────
-function CleApiSection() {
+function GuideEtSysteme({ onViewMethode }) {
   const [cle, setCle] = useState(() => localStorage.getItem('anthropic_key') || '');
   const [afficher, setAfficher] = useState(false);
   const [sauvegarde, setSauvegarde] = useState(false);
@@ -121,42 +70,128 @@ function CleApiSection() {
     setSauvegarde(true);
   }
 
-  const configureee = !!localStorage.getItem('anthropic_key');
+  const anthropicOk = !!localStorage.getItem('anthropic_key');
+  const togetherOk  = !!localStorage.getItem('together_key');
+  const sources     = meta.sources || {};
+  const claudeOk    = sources.claude?.statut === 'ok' || sources.claude_gratuites?.statut === 'ok';
+  const tmOk        = sources.ticketmaster?.statut === 'ok';
+  const wsOk        = sources.web_search?.statut === 'ok';
+  const maj         = new Date(((meta.lastUpdated || '').split('T')[0]) + 'T12:00:00')
+    .toLocaleDateString('fr-CA', { day: 'numeric', month: 'short', year: 'numeric' });
+
+  const toutFonctionne = anthropicOk && claudeOk;
 
   return (
-    <details className="sidebar-avance" open={!configureee}>
+    <details className="sidebar-avance guide-systeme" open={!toutFonctionne}>
       <summary className="sidebar-avance__toggle">
-        🔑 Clé API Anthropic
-        {configureee
-          ? <span className="sidebar-avance__badge" style={{ background: 'var(--sage-light)', color: 'var(--sage)' }}>Configurée ✓</span>
-          : <span className="sidebar-avance__badge" style={{ background: 'var(--terra-light)', color: 'var(--terra)' }}>Requise pour l'IA</span>
+        📖 Méthode &amp; Système
+        {toutFonctionne
+          ? <span className="sidebar-avance__badge gs-badge gs-badge--ok">Tout fonctionne ✓</span>
+          : <span className="sidebar-avance__badge gs-badge gs-badge--warn">⚠ À configurer</span>
         }
       </summary>
-      <div className="sidebar-avance__content">
-        <p style={{ fontSize: '0.72rem', color: 'var(--ink-4)', marginBottom: 6, lineHeight: 1.4 }}>
-          Nécessaire pour les suggestions IA. <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--forest)' }}>Créer une clé →</a>
-        </p>
-        <div style={{ display: 'flex', gap: 6 }}>
-          <input
-            type={afficher ? 'text' : 'password'}
-            value={cle}
-            onChange={e => setCle(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && sauvegarder()}
-            placeholder="sk-ant-api03-…"
-            style={{ flex: 1, fontSize: '0.72rem', padding: '5px 8px', border: '1.5px solid var(--border)', borderRadius: 6, fontFamily: 'monospace' }}
-          />
+
+      <div className="sidebar-avance__content gs-content">
+
+        {/* ── Comment ça marche ── */}
+        <div className="gs-block">
+          <div className="gs-block__titre">Comment ça marche</div>
+          <div className="gs-methode-list">
+            {METHODE_SECTIONS.map(s => (
+              <div key={s.titre} className="gs-methode-item">
+                <span className="gs-methode-icon">{s.icon}</span>
+                <div>
+                  <div className="gs-methode-titre">{s.titre}</div>
+                  <div className="gs-methode-texte">{s.texte}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {onViewMethode && (
+            <button className="gs-detail-btn" onClick={onViewMethode}>
+              Lire la documentation complète →
+            </button>
+          )}
+        </div>
+
+        {/* ── État du système ── */}
+        <div className="gs-block">
+          <div className="gs-block__titre">État du système</div>
+
+          <div className="gs-status-grid">
+            <div className={`gs-status-card ${anthropicOk ? 'gs-status-card--ok' : 'gs-status-card--warn'}`}>
+              <StatusDot ok={anthropicOk} label="" />
+              <span className="gs-status-label">Anthropic IA</span>
+              <span className="gs-status-val">{anthropicOk ? 'Configurée' : 'Requise'}</span>
+            </div>
+            <div className={`gs-status-card ${claudeOk ? 'gs-status-card--ok' : 'gs-status-card--off'}`}>
+              <StatusDot ok={claudeOk} label="" />
+              <span className="gs-status-label">Claude IA</span>
+              <span className="gs-status-val">{claudeOk ? 'OK' : '—'}</span>
+            </div>
+            <div className={`gs-status-card ${tmOk ? 'gs-status-card--ok' : 'gs-status-card--off'}`}>
+              <StatusDot ok={tmOk} label="" />
+              <span className="gs-status-label">Ticketmaster</span>
+              <span className="gs-status-val">{tmOk ? 'OK' : '—'}</span>
+            </div>
+            <div className={`gs-status-card ${wsOk ? 'gs-status-card--ok' : 'gs-status-card--off'}`}>
+              <StatusDot ok={wsOk} label="" />
+              <span className="gs-status-label">Web Search</span>
+              <span className="gs-status-val">{wsOk ? 'OK' : '—'}</span>
+            </div>
+            <div className={`gs-status-card ${togetherOk ? 'gs-status-card--ok' : 'gs-status-card--off'}`}>
+              <StatusDot ok={togetherOk} label="" />
+              <span className="gs-status-label">Together</span>
+              <span className="gs-status-val">{togetherOk ? 'OK' : '—'}</span>
+            </div>
+          </div>
+
+          <div className="gs-maj">Données mises à jour : {maj}</div>
+
+          {/* Bibliothèque */}
+          <div className="gs-stats-grid">
+            <div className="gs-stat"><span className="gs-stat__n">{recettes.length}</span><span className="gs-stat__l">recettes</span></div>
+            <div className="gs-stat"><span className="gs-stat__n">{films.length}</span><span className="gs-stat__l">films</span></div>
+            <div className="gs-stat"><span className="gs-stat__n">{musique.length}</span><span className="gs-stat__l">albums</span></div>
+            <div className="gs-stat"><span className="gs-stat__n">{activites.length}</span><span className="gs-stat__l">activités</span></div>
+          </div>
+        </div>
+
+        {/* ── Configuration API ── */}
+        <div className="gs-block">
+          <div className="gs-block__titre">Configuration</div>
+
+          <div className="gs-api-label">
+            <StatusDot ok={anthropicOk} label="" />
+            Clé API Anthropic
+            {!anthropicOk && <span className="gs-api-required">— requise pour l'IA</span>}
+          </div>
+          <p style={{ fontSize: '0.7rem', color: 'var(--ink-4)', margin: '2px 0 6px', lineHeight: 1.4 }}>
+            <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--forest)' }}>Créer une clé →</a>
+          </p>
+          <div style={{ display: 'flex', gap: 6 }}>
+            <input
+              type={afficher ? 'text' : 'password'}
+              value={cle}
+              onChange={e => setCle(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && sauvegarder()}
+              placeholder="sk-ant-api03-…"
+              style={{ flex: 1, fontSize: '0.72rem', padding: '5px 8px', border: '1.5px solid var(--border)', borderRadius: 6, fontFamily: 'monospace' }}
+            />
+            <button
+              type="button"
+              onClick={() => setAfficher(v => !v)}
+              style={{ background: 'none', border: '1.5px solid var(--border)', borderRadius: 6, padding: '0 8px', cursor: 'pointer', fontSize: '0.8rem' }}
+              title={afficher ? 'Masquer' : 'Afficher'}
+            >{afficher ? '🙈' : '👁'}</button>
+          </div>
           <button
             type="button"
-            onClick={() => setAfficher(v => !v)}
-            style={{ background: 'none', border: '1.5px solid var(--border)', borderRadius: 6, padding: '0 8px', cursor: 'pointer', fontSize: '0.8rem' }}
-            title={afficher ? 'Masquer' : 'Afficher'}
-          >{afficher ? '🙈' : '👁'}</button>
+            onClick={sauvegarder}
+            style={{ marginTop: 6, width: '100%', background: sauvegarde ? 'var(--sage)' : 'var(--forest)', color: 'white', border: 'none', borderRadius: 6, padding: '6px', fontSize: '0.75rem', fontWeight: 600, cursor: 'pointer', transition: 'background 0.2s' }}
+          >{sauvegarde ? '✓ Sauvegardée' : 'Sauvegarder la clé'}</button>
         </div>
-        <button
-          type="button"
-          onClick={sauvegarder}
-          style={{ marginTop: 6, width: '100%', background: sauvegarde ? 'var(--sage)' : 'var(--forest)', color: 'white', border: 'none', borderRadius: 6, padding: '6px', fontSize: '0.75rem', fontWeight: 600, cursor: 'pointer', transition: 'background 0.2s' }}
-        >{sauvegarde ? '✓ Sauvegardée' : 'Sauvegarder'}</button>
+
       </div>
     </details>
   );
@@ -518,11 +553,7 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
 
         <hr className="sidebar-rule" />
 
-        <CleApiSection />
-
-        <hr className="sidebar-rule" />
-
-        <TableauDeBord onViewMethode={onViewMethode} />
+        <GuideEtSysteme onViewMethode={onViewMethode} />
 
         <hr className="sidebar-rule" />
 
