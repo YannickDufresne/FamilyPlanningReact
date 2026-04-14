@@ -76,7 +76,17 @@ export default function App() {
   // Les jours verrouillés persistent via recettesForcees (localStorage), pas via le seed.
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 1e9));
   const [view, setView]           = useState('planning');
-  const [semaineVue, setSemaineVue] = useState(meta.semaine.debut);
+  const [semaineVue, setSemaineVue] = useState(() => {
+    // Démarrer sur la semaine calendaire courante si elle est plus récente que la semaine meta
+    // (évite d'afficher une semaine entièrement passée en lecture seule au démarrage)
+    const auj = new Date();
+    const day = auj.getDay();
+    const diff = day === 0 ? -6 : 1 - day;
+    const lundi = new Date(auj);
+    lundi.setDate(auj.getDate() + diff);
+    const calWeek = lundi.toISOString().split('T')[0];
+    return calWeek > meta.semaine.debut ? calWeek : meta.semaine.debut;
+  });
   const [albumRatings, setAlbumRatings] = useState(() => {
     try {
       const saved = localStorage.getItem('fp_album_ratings');
@@ -121,23 +131,34 @@ export default function App() {
   }
 
   // ── État par semaine (rechargé à chaque navigation) ───────────────────────
+  // Helper pour calculer la semaine de départ (même logique que semaineVue initial)
+  const _semaineInit = (() => {
+    const auj = new Date();
+    const day = auj.getDay();
+    const diff = day === 0 ? -6 : 1 - day;
+    const lundi = new Date(auj);
+    lundi.setDate(auj.getDate() + diff);
+    const calWeek = lundi.toISOString().split('T')[0];
+    return calWeek > meta.semaine.debut ? calWeek : meta.semaine.debut;
+  })();
+
   const [joursVerrouilles, setJoursVerrouilles] = useState(() => {
-    try { return new Set(JSON.parse(localStorage.getItem(locksKey(meta.semaine.debut)) || '[]')); }
+    try { return new Set(JSON.parse(localStorage.getItem(locksKey(_semaineInit)) || '[]')); }
     catch { return new Set(); }
   });
   const [semaineLockee, setSemaineLockee] = useState(
-    () => localStorage.getItem(semaineLockKey(meta.semaine.debut)) === 'true'
+    () => localStorage.getItem(semaineLockKey(_semaineInit)) === 'true'
   );
   const [recettesForcees, setRecettesForcees] = useState(() => {
     try {
-      const s = localStorage.getItem(forceesKey(meta.semaine.debut));
+      const s = localStorage.getItem(forceesKey(_semaineInit));
       return s ? new Map(JSON.parse(s)) : new Map();
     } catch { return new Map(); }
   });
   // Indices des jours où l'utilisateur a explicitement choisi une recette (≠ juste verrouillé)
   const [recettesExplicites, setRecettesExplicites] = useState(() => {
     try {
-      const s = localStorage.getItem(expliciteKey(meta.semaine.debut));
+      const s = localStorage.getItem(expliciteKey(_semaineInit));
       return s ? new Set(JSON.parse(s)) : new Set();
     } catch { return new Set(); }
   });
@@ -491,23 +512,25 @@ export default function App() {
     [joursVerrouilles, joursAutoVerrouilles]
   );
 
-  // ── Planning semaine actuelle (avec seed rebrassable) ─────────────────────
+  // ── Planning semaine courante (avec seed rebrassable) ─────────────────────
+  // Utilise la semaine calendaire courante comme base (pas meta.semaine.debut)
+  // pour que le planning soit toujours éditable, même si le déploiement hebdo est en retard.
   const planningRef = useRef(null);
   const planning = useMemo(() => {
     const result = genererPlanning({
       recettes: toutesRecettes, exercices, activites, musique, filtres, seed,
-      semaineDebut: meta.semaine.debut,
+      semaineDebut: semaineContenantAujourdhui,
       profils,
-      joursVerrouilles: estSemaineActuelle ? tousJoursVerrouilles : new Set(),
+      joursVerrouilles: estSemaineContenantAujourd ? tousJoursVerrouilles : new Set(),
       planningActuel: planningRef.current,
-      recettesForcees: estSemaineActuelle ? recettesForcees : new Map(),
+      recettesForcees: estSemaineContenantAujourd ? recettesForcees : new Map(),
       ingredientsForces,
       ingredientsCounts,
       classiques,
     });
     planningRef.current = result;
     return result;
-  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineActuelle, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
+  }, [filtres, seed, profils, tousJoursVerrouilles, estSemaineContenantAujourd, semaineContenantAujourdhui, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
 
   // ── Planning semaines à venir (déterministe par date) ─────────────────────
   const planningFutur = useMemo(() => {
@@ -526,35 +549,20 @@ export default function App() {
     });
   }, [estSemaineAVenir, semaineVue, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
 
-  // ── Planning semaine calendrier courante quand meta a avancé (sam/dim) ────
-  const planningContenantAujourdhui = useMemo(() => {
-    if (!estSemaineContenantAujourd || estSemaineActuelle) return null;
-    return genererPlanning({
-      recettes: toutesRecettes, exercices, activites, musique,
-      filtres,
-      seed: seedForWeek(semaineContenantAujourdhui),
-      semaineDebut: semaineContenantAujourdhui,
-      profils,
-      joursVerrouilles: tousJoursVerrouilles,
-      recettesForcees,
-      ingredientsForces,
-      ingredientsCounts,
-      classiques,
-    });
-  }, [estSemaineContenantAujourd, estSemaineActuelle, semaineContenantAujourdhui, filtres, profils, tousJoursVerrouilles, recettesForcees, ingredientsForces, ingredientsCounts, classiques]);
+  // planningContenantAujourdhui remplacé par le planning principal (qui utilise déjà semaineContenantAujourdhui)
 
   // ── Historique ───────────────────────────────────────────────────────────────
-  // Sauvegarde automatique du planning courant
+  // Sauvegarde automatique du planning courant (indexé par semaine calendaire)
   useEffect(() => {
     if (!planning || planning.length === 0) return;
     try {
       const stored = JSON.parse(localStorage.getItem(HISTORIQUE_STORE) || '{}');
-      stored[meta.semaine.debut] = { planning, savedAt: new Date().toISOString() };
+      stored[semaineContenantAujourdhui] = { planning, savedAt: new Date().toISOString() };
       const keys    = Object.keys(stored).sort().reverse().slice(0, MAX_HISTORIQUE);
       const trimmed = Object.fromEntries(keys.map(k => [k, stored[k]]));
       localStorage.setItem(HISTORIQUE_STORE, JSON.stringify(trimmed));
     } catch (e) { console.warn('Historique planning:', e); }
-  }, [planning]);
+  }, [planning, semaineContenantAujourdhui]);
 
   const historique = useMemo(() => {
     try { return JSON.parse(localStorage.getItem(HISTORIQUE_STORE) || '{}'); }
@@ -565,7 +573,7 @@ export default function App() {
   // Assure que les jours passés ont une recette forcée sauvegardée (stable sur rechargement)
   useEffect(() => {
     if (joursAutoVerrouilles.size === 0) return;
-    const p = estSemaineActuelle ? planning : planningContenantAujourdhui;
+    const p = planning;
     if (!p?.length) return;
     let updated = false;
     const newForcees = new Map(recettesForcees);
@@ -583,13 +591,11 @@ export default function App() {
   }, [joursAutoVerrouilles, planning]); // eslint-disable-line
 
   // ── Planning affiché selon la semaine sélectionnée ────────────────────────
-  const planningVue = estSemaineActuelle
-    ? planning
-    : planningContenantAujourdhui   // sam/dim : meta avancé mais semaine courante éditable
-      ? planningContenantAujourdhui
-      : estSemaineAVenir
-        ? (planningFutur || [])
-        : (historique[semaineVue]?.planning || []);
+  const planningVue = estSemaineContenantAujourd
+    ? planning                   // Semaine courante : planning rebrassable avec seed aléatoire
+    : estSemaineAVenir
+      ? (planningFutur || [])    // Semaines futures : déterministe par date
+      : (historique[semaineVue]?.planning || []);  // Semaines passées : historique
 
   // ── Navigation ────────────────────────────────────────────────────────────
   const semainePrecedente = lundiISO(semaineVue, -7);
@@ -807,7 +813,7 @@ export default function App() {
           <Sidebar
             filtres={filtres}
             setFiltres={setFiltres}
-            onRebrasser={estSemaineActuelle && !semaineLockee ? () => setSeed(Math.floor(Math.random() * 1e9)) : null}
+            onRebrasser={estSemaineContenantAujourd && !semaineLockee ? () => setSeed(Math.floor(Math.random() * 1e9)) : null}
             onLockerSemaine={estSemaineEditable && !semaineLockee ? lockerSemaine : null}
             onDelockerSemaine={semaineLockee ? delockerSemaine : null}
             semaineLockee={semaineLockee}
@@ -835,8 +841,8 @@ export default function App() {
               >← Préc.</button>
               <span className="semaine-nav__label">
                 {formatSemaineNav(semaineVue)}
-                {!estSemaineActuelle && (
-                  <button className="semaine-nav__retour" onClick={() => setSemaineVue(meta.semaine.debut)}>
+                {!estSemaineContenantAujourd && (
+                  <button className="semaine-nav__retour" onClick={() => setSemaineVue(semaineContenantAujourdhui)}>
                     Semaine actuelle
                   </button>
                 )}
@@ -868,7 +874,7 @@ export default function App() {
               planning={planningVue}
               profils={profils}
               joursVerrouilles={estSemaineEditable ? tousJoursVerrouilles : new Set()}
-              joursAutoVerrouilles={estSemaineActuelle ? joursAutoVerrouilles : new Set()}
+              joursAutoVerrouilles={estSemaineContenantAujourd ? joursAutoVerrouilles : new Set()}
               onToggleLockJour={estSemaineEditable ? toggleLockJour : null}
               lectureSeule={!estSemaineEditable || semaineLockee}
               recettes={toutesRecettes}
