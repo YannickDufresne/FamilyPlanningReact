@@ -478,6 +478,7 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
   const [afficherCle, setAfficherCle] = useState(isNew && !apiKey);
   const [cleTemp, setCleTemp]   = useState(apiKey);
   const [promptTemp, setPromptTemp]   = useState(prompt);
+  const [confirmSuppr, setConfirmSuppr] = useState(false);
   const [afficherPrompt, setAfficherPrompt] = useState(false);
   const [doublonUrl, setDoublonUrl]     = useState(null);
   const [doublonNom, setDoublonNom]     = useState(null);
@@ -825,17 +826,31 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
       {/* Actions */}
       <div className="recette-form__actions">
         {!isNew && isLocal && (
-          <button type="button" className="recette-form__btn recette-form__btn--suppr"
-            onClick={() => { onSupprimer(recette._id); onClose(); }}>
-            Supprimer
-          </button>
+          confirmSuppr
+            ? <>
+                <span className="recette-form__suppr-msg">Supprimer définitivement ?</span>
+                <button type="button" className="recette-form__btn recette-form__btn--suppr-confirm"
+                  onClick={() => { onSupprimer(recette._id); onClose(); }}>
+                  Oui, supprimer
+                </button>
+                <button type="button" className="recette-form__btn recette-form__btn--annuler"
+                  onClick={() => setConfirmSuppr(false)}>
+                  Annuler
+                </button>
+              </>
+            : <button type="button" className="recette-form__btn recette-form__btn--suppr"
+                onClick={() => setConfirmSuppr(true)}>
+                🗑 Supprimer
+              </button>
         )}
-        <button type="button" className="recette-form__btn recette-form__btn--annuler" onClick={onClose}>
-          Annuler
-        </button>
-        <button type="submit" className="recette-form__btn recette-form__btn--sauver">
-          {isNew ? 'Ajouter' : 'Enregistrer'}
-        </button>
+        {!confirmSuppr && <>
+          <button type="button" className="recette-form__btn recette-form__btn--annuler" onClick={onClose}>
+            Annuler
+          </button>
+          <button type="submit" className="recette-form__btn recette-form__btn--sauver">
+            {isNew ? 'Ajouter' : 'Enregistrer'}
+          </button>
+        </>}
       </div>
     </form>
   );

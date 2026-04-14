@@ -2431,6 +2431,14 @@ input[type="range"] {
 .recette-form__btn--sauver:hover { background: var(--sage); border-color: var(--sage); }
 .recette-form__btn--suppr { color: #c0392b; border-color: #c0392b; }
 .recette-form__btn--suppr:hover { background: #fdecea; }
+.recette-form__btn--suppr-confirm {
+  background: #c0392b; color: white; border-color: #c0392b; font-weight: 700;
+}
+.recette-form__btn--suppr-confirm:hover { background: #a93226; }
+.recette-form__suppr-msg {
+  font-size: 0.78rem; color: #c0392b; font-weight: 600;
+  display: flex; align-items: center; margin-right: auto;
+}
 
 /* ══════════════════════════════════════════════════════════════════════════════
    ÉCRAN DE CONNEXION
