@@ -270,18 +270,27 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
     return [...set].sort((a, b) => a.localeCompare(b, 'fr'));
   }, []);
 
-  // Pour chaque ingrédient forcé : combien de jours (par thème) ont ≥1 recette correspondante ?
-  // C'est le vrai maximum atteignable — chaque jour n'a qu'un thème fixe.
+  // Pour chaque ingrédient forcé : maximum sans répétition =
+  //   min(recettes DISTINCTES avec cet ingrédient, jours disponibles ayant un thème compatible)
+  // On compte les recettes uniques (par nom) pour éviter que le cap autorise des doublons.
   const maxParIngredient = useMemo(() => {
     const result = {};
     ingredientsForces.forEach(ing => {
-      let joursAvecMatch = 0;
+      // Recettes distinctes avec cet ingrédient (dans n'importe quel thème)
+      const recettesMatch = recettes.filter(r => matchIngUI(r.ingredients || '', ing));
+      const nomsDistincts = new Set(recettesMatch.map(r => r.nom));
+      const nbDistinctes = nomsDistincts.size;
+
+      // Jours (par thème) qui ont au moins une recette avec cet ingrédient
+      let joursCompatibles = 0;
       THEMES_JOURS.forEach(theme => {
         const col = `theme_${theme}`;
         const aMatch = recettes.some(r => r[col] === 1 && matchIngUI(r.ingredients || '', ing));
-        if (aMatch) joursAvecMatch++;
+        if (aMatch) joursCompatibles++;
       });
-      result[ing] = Math.min(joursAvecMatch, joursDisponibles);
+
+      // Le vrai max sans répétition = min des deux contraintes
+      result[ing] = Math.min(nbDistinctes, joursCompatibles, joursDisponibles);
     });
     return result;
   }, [ingredientsForces, joursDisponibles]);
