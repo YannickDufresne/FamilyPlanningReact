@@ -257,7 +257,7 @@ const matchIngUI = (recetteIngs, force) => {
   return mots.length >= 2 && mots.every(m => rNorm.includes(m));
 };
 
-function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd, onRemove, onSetCount, joursDisponibles = 7 }) {
+function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd, onRemove, onSetCount, joursDisponibles = 7, planning = null }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
 
@@ -295,6 +295,16 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
     return sans;
   }, [ingredientsForces, maxParIngredient]);
 
+  // Nombre de jours dans le planning actuel qui correspondent à chaque ingrédient forcé
+  const ingsCovertsEnPlanning = useMemo(() => {
+    const result = {};
+    if (!planning) return result;
+    ingredientsForces.forEach(ing => {
+      result[ing] = planning.filter(j => j.recette && matchIngUI(j.recette.ingredients || '', ing)).length;
+    });
+    return result;
+  }, [planning, ingredientsForces]);
+
   const suggestions = useMemo(() => {
     if (!query || query.length < 2) return [];
     const q = query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -331,12 +341,12 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
           {ingredientsForces.map(ing => {
             const count = ingredientsCounts[ing] || 1;
             const sansRecette = ingsSansRecettes.has(ing);
-            const maxPossible = maxParIngredient[ing] ?? joursDisponibles;
+            const maxPossible = Math.min(maxParIngredient[ing] ?? joursDisponibles, joursDisponibles);
             const countEffectif = Math.min(count, maxPossible || 1);
-            // Si le count stocké dépasse le max réel, on le corrige silencieusement
-            if (count !== countEffectif && maxPossible > 0) {
-              onSetCount(ing, countEffectif);
-            }
+            const enPlanning = ingsCovertsEnPlanning[ing] ?? null;
+            const planningOk = enPlanning !== null && enPlanning >= countEffectif;
+            const planningPartiel = enPlanning !== null && enPlanning > 0 && enPlanning < countEffectif;
+            const planningNul = enPlanning !== null && enPlanning === 0 && !sansRecette;
             return (
               <span key={ing} className={`ing-forces__tag ing-forces__tag--count${sansRecette ? ' ing-forces__tag--warn' : ''}`}>
                 <span className="ing-forces__tag-nom" title={sansRecette ? 'Aucune recette avec cet ingrédient — ajoutez-en une avec l\'IA' : ''}>
@@ -351,10 +361,10 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
                   >−</button>
                   <span
                     className="ing-forces__step-val"
-                    title={maxPossible > 0 ? `${countEffectif} repas sur ${maxPossible} possible${maxPossible > 1 ? 's' : ''} cette semaine` : 'Aucun repas possible avec cet ingrédient'}
+                    title={maxPossible > 0 ? `${countEffectif} repas sur ${maxPossible} possible${maxPossible > 1 ? 's' : ''} cette semaine${enPlanning !== null ? ` · ${enPlanning} dans le planning actuel` : ''}` : 'Aucun repas possible avec cet ingrédient'}
                   >
                     ×{countEffectif}
-                    {maxPossible > 0 && maxPossible < joursDisponibles && (
+                    {maxPossible > 0 && maxPossible < (joursDisponibles + (7 - joursDisponibles === 0 ? 0 : 1)) && (
                       <span className="ing-forces__step-max"> / {maxPossible}</span>
                     )}
                   </span>
@@ -365,6 +375,15 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
                     title={countEffectif >= maxPossible ? `Maximum atteint : seulement ${maxPossible} jour${maxPossible > 1 ? 's' : ''} de la semaine ont une recette avec cet ingrédient` : 'Plus de repas'}
                   >+</button>
                 </span>
+                {/* Indicateur visuel du résultat dans le planning actuel */}
+                {enPlanning !== null && !sansRecette && (
+                  <span
+                    className={`ing-forces__planning-dot${planningOk ? ' ing-forces__planning-dot--ok' : planningPartiel ? ' ing-forces__planning-dot--partial' : planningNul ? ' ing-forces__planning-dot--none' : ''}`}
+                    title={planningOk ? `✓ ${enPlanning} repas avec cet ingrédient cette semaine` : planningPartiel ? `⚠ Seulement ${enPlanning}/${countEffectif} repas possible (jours confirmés ou régime incompatible)` : `✕ Aucun repas avec cet ingrédient cette semaine`}
+                  >
+                    {planningOk ? '✓' : planningPartiel ? enPlanning + '/' + countEffectif : '✕'}
+                  </span>
+                )}
                 <button className="ing-forces__tag-remove" onClick={() => onRemove(ing)} title="Retirer">✕</button>
               </span>
             );
@@ -415,7 +434,7 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
   );
 }
 
-export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], ingredientsCounts = {}, onAddIngredientForce, onRemoveIngredientForce, onSetIngredientCount, joursChoisis, onOptimiserIA, joursDisponibles = 7, onViewMethode }) {
+export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSemaine, onDelockerSemaine, semaineLockee, stats, lectureSeule, ingredientsForces = [], ingredientsCounts = {}, onAddIngredientForce, onRemoveIngredientForce, onSetIngredientCount, planning, joursChoisis, onOptimiserIA, joursDisponibles = 7, onViewMethode }) {
   // Tous les pays par zone (avec indication si des recettes existent)
   const originesParZone = useMemo(() => {
     const avecRecettes = new Set(recettes.map(r => r.origine).filter(Boolean));
@@ -459,6 +478,7 @@ export default function Sidebar({ filtres, setFiltres, onRebrasser, onLockerSema
               onRemove={onRemoveIngredientForce}
               onSetCount={onSetIngredientCount}
               joursDisponibles={joursDisponibles}
+              planning={planning}
             />
             <hr className="sidebar-rule" />
           </>

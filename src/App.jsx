@@ -818,6 +818,7 @@ export default function App() {
             onRemoveIngredientForce={removeIngredientForce}
             ingredientsCounts={ingredientsCounts}
             onSetIngredientCount={setIngredientCount}
+            planning={planningVue}
             joursChoisis={joursVerrouilles}
             onOptimiserIA={estSemaineEditable && !semaineLockee ? () => setShowOptimisationIA(true) : null}
             joursDisponibles={estSemaineEditable ? Math.max(0, 7 - tousJoursVerrouilles.size) : 7}

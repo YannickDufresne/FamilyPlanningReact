@@ -3960,6 +3960,14 @@ a.acti-carte__nom:hover { color: var(--forest); text-decoration: underline; }
 .ing-forces__step-max {
   font-size: 0.58rem; font-weight: 500; opacity: 0.65;
 }
+.ing-forces__planning-dot {
+  font-size: 0.6rem; font-weight: 700; padding: 1px 4px;
+  border-radius: 8px; background: rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.9); margin-left: 2px; white-space: nowrap;
+}
+.ing-forces__planning-dot--ok { background: rgba(100,200,120,0.35); color: #a8f0b8; }
+.ing-forces__planning-dot--partial { background: rgba(255,200,50,0.3); color: #ffe57a; }
+.ing-forces__planning-dot--none { background: rgba(220,80,80,0.3); color: #ffaaaa; }
 .ing-forces__tag-remove {
   background: none; border: none; color: rgba(255,255,255,0.6);
   cursor: pointer; padding: 0 2px; font-size: 0.75rem; line-height: 1;
