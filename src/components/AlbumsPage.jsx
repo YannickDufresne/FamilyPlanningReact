@@ -108,8 +108,11 @@ const PALMARES_LABELS = {
 };
 
 // ── Carte album ───────────────────────────────────────────────────────────────
+const DESC_MAX = 140; // caractères avant "lire plus"
+
 function AlbumCarte({ album, ratings, onNoter, isCustom, onSupprimer }) {
   const [confirming, setConfirming] = useState(false);
+  const [descOuverte, setDescOuverte] = useState(false);
   const note = ratings[album.id] ?? 0;
 
   function handleDeleteClick() {
@@ -183,7 +186,19 @@ function AlbumCarte({ album, ratings, onNoter, isCustom, onSupprimer }) {
 
         {/* Description / fun fact */}
         {album.description && (
-          <div className="album-carte__desc">{album.description}</div>
+          <div className="album-carte__desc">
+            {descOuverte || album.description.length <= DESC_MAX
+              ? album.description
+              : album.description.slice(0, DESC_MAX) + '…'}
+            {album.description.length > DESC_MAX && (
+              <button
+                className="album-carte__lire-plus"
+                onClick={() => setDescOuverte(v => !v)}
+              >
+                {descOuverte ? ' Lire moins' : ' Lire plus'}
+              </button>
+            )}
+          </div>
         )}
 
         {/* Footer */}

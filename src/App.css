@@ -5574,12 +5574,15 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
   font-size: 0.76rem;
   color: var(--ink-2);
   line-height: 1.42;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
   flex-shrink: 0;
 }
+.album-carte__lire-plus {
+  background: none; border: none; padding: 0;
+  color: var(--forest); font-size: 0.72rem; font-weight: 600;
+  cursor: pointer; text-decoration: underline;
+  white-space: nowrap;
+}
+.album-carte__lire-plus:hover { color: var(--sage); }
 
 .album-carte__footer {
   display: flex;
