@@ -242,6 +242,21 @@ function BoutonRebrasser({ onRebrasser }) {
 // ── Barre de recherche d'ingrédients ─────────────────────────────────────────
 const normIngUI = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
+// Thèmes dans l'ordre des 7 jours de la semaine (lundi → dimanche)
+const THEMES_JOURS = [
+  'pasta_rapido', 'bol_nwich', 'criiions_poisson',
+  'plat_en_sauce', 'confort_grille', 'pizza', 'slow_chic',
+];
+
+// Correspondance ingrédient ↔ chaîne d'ingrédients d'une recette
+const matchIngUI = (recetteIngs, force) => {
+  const rNorm = normIngUI(recetteIngs);
+  const fNorm = normIngUI(force);
+  if (rNorm.includes(fNorm)) return true;
+  const mots = fNorm.split(/\s+/).filter(m => m.length >= 4);
+  return mots.length >= 2 && mots.every(m => rNorm.includes(m));
+};
+
 function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd, onRemove, onSetCount, joursDisponibles = 7 }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
@@ -255,23 +270,30 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
     return [...set].sort((a, b) => a.localeCompare(b, 'fr'));
   }, []);
 
-  // Détecter les ingrédients forcés sans aucune recette correspondante
-  const matchIngUI = (recetteIngs, force) => {
-    const rNorm = normIngUI(recetteIngs);
-    const fNorm = normIngUI(force);
-    if (rNorm.includes(fNorm)) return true;
-    const mots = fNorm.split(/\s+/).filter(m => m.length >= 4);
-    return mots.length >= 2 && mots.every(m => rNorm.includes(m));
-  };
+  // Pour chaque ingrédient forcé : combien de jours (par thème) ont ≥1 recette correspondante ?
+  // C'est le vrai maximum atteignable — chaque jour n'a qu'un thème fixe.
+  const maxParIngredient = useMemo(() => {
+    const result = {};
+    ingredientsForces.forEach(ing => {
+      let joursAvecMatch = 0;
+      THEMES_JOURS.forEach(theme => {
+        const col = `theme_${theme}`;
+        const aMatch = recettes.some(r => r[col] === 1 && matchIngUI(r.ingredients || '', ing));
+        if (aMatch) joursAvecMatch++;
+      });
+      result[ing] = Math.min(joursAvecMatch, joursDisponibles);
+    });
+    return result;
+  }, [ingredientsForces, joursDisponibles]);
 
+  // Ingrédients pour lesquels aucune recette n'existe (dans aucun thème)
   const ingsSansRecettes = useMemo(() => {
     const sans = new Set();
     ingredientsForces.forEach(f => {
-      const aMatch = recettes.some(r => matchIngUI(r.ingredients || '', f));
-      if (!aMatch) sans.add(f);
+      if ((maxParIngredient[f] ?? 0) === 0) sans.add(f);
     });
     return sans;
-  }, [ingredientsForces]);
+  }, [ingredientsForces, maxParIngredient]);
 
   const suggestions = useMemo(() => {
     if (!query || query.length < 2) return [];
@@ -309,6 +331,12 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
           {ingredientsForces.map(ing => {
             const count = ingredientsCounts[ing] || 1;
             const sansRecette = ingsSansRecettes.has(ing);
+            const maxPossible = maxParIngredient[ing] ?? joursDisponibles;
+            const countEffectif = Math.min(count, maxPossible || 1);
+            // Si le count stocké dépasse le max réel, on le corrige silencieusement
+            if (count !== countEffectif && maxPossible > 0) {
+              onSetCount(ing, countEffectif);
+            }
             return (
               <span key={ing} className={`ing-forces__tag ing-forces__tag--count${sansRecette ? ' ing-forces__tag--warn' : ''}`}>
                 <span className="ing-forces__tag-nom" title={sansRecette ? 'Aucune recette avec cet ingrédient — ajoutez-en une avec l\'IA' : ''}>
@@ -317,16 +345,24 @@ function RechercheIngredients({ ingredientsForces, ingredientsCounts = {}, onAdd
                 <span className="ing-forces__tag-stepper">
                   <button
                     className="ing-forces__step-btn"
-                    onClick={() => onSetCount(ing, Math.max(1, count - 1))}
-                    disabled={count <= 1}
+                    onClick={() => onSetCount(ing, Math.max(1, countEffectif - 1))}
+                    disabled={countEffectif <= 1}
                     title="Moins de repas"
                   >−</button>
-                  <span className="ing-forces__step-val" title={`${count} repas`}>×{count}</span>
+                  <span
+                    className="ing-forces__step-val"
+                    title={maxPossible > 0 ? `${countEffectif} repas sur ${maxPossible} possible${maxPossible > 1 ? 's' : ''} cette semaine` : 'Aucun repas possible avec cet ingrédient'}
+                  >
+                    ×{countEffectif}
+                    {maxPossible > 0 && maxPossible < joursDisponibles && (
+                      <span className="ing-forces__step-max"> / {maxPossible}</span>
+                    )}
+                  </span>
                   <button
                     className="ing-forces__step-btn"
-                    onClick={() => onSetCount(ing, Math.min(joursDisponibles, count + 1))}
-                    disabled={count >= joursDisponibles}
-                    title="Plus de repas"
+                    onClick={() => onSetCount(ing, Math.min(maxPossible, countEffectif + 1))}
+                    disabled={countEffectif >= maxPossible || maxPossible === 0}
+                    title={countEffectif >= maxPossible ? `Maximum atteint : seulement ${maxPossible} jour${maxPossible > 1 ? 's' : ''} de la semaine ont une recette avec cet ingrédient` : 'Plus de repas'}
                   >+</button>
                 </span>
                 <button className="ing-forces__tag-remove" onClick={() => onRemove(ing)} title="Retirer">✕</button>
