@@ -472,7 +472,7 @@ function StatutBadge({ statut }) {
 }
 
 // ── Formulaire recette ────────────────────────────────────────────────────────
-function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onSaveApiKey, prompt, onSavePrompt, toutesRecettes }) {
+function RecetteForm({ recette, isNew, onSave, onSupprimer, onMasquer, onClose, apiKey, onSaveApiKey, prompt, onSavePrompt, toutesRecettes }) {
   const [form, setForm]         = useState(() => { const { _id, _source, ...r } = recette; return { ...RECETTE_VIDE, ...r }; });
   const [statut, setStatut]     = useState(null);
   const [afficherCle, setAfficherCle] = useState(isNew && !apiKey);
@@ -825,13 +825,19 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
 
       {/* Actions */}
       <div className="recette-form__actions">
-        {!isNew && isLocal && (
+        {!isNew && (
           confirmSuppr
             ? <>
-                <span className="recette-form__suppr-msg">Supprimer définitivement ?</span>
+                <span className="recette-form__suppr-msg">
+                  {isLocal ? 'Supprimer définitivement ?' : 'Masquer cette recette ?'}
+                </span>
                 <button type="button" className="recette-form__btn recette-form__btn--suppr-confirm"
-                  onClick={() => { onSupprimer(recette._id); onClose(); }}>
-                  Oui, supprimer
+                  onClick={() => {
+                    if (isLocal) onSupprimer(recette._id);
+                    else onMasquer && onMasquer(recette.nom);
+                    onClose();
+                  }}>
+                  {isLocal ? 'Oui, supprimer' : 'Oui, masquer'}
                 </button>
                 <button type="button" className="recette-form__btn recette-form__btn--annuler"
                   onClick={() => setConfirmSuppr(false)}>
@@ -840,7 +846,7 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onClose, apiKey, onS
               </>
             : <button type="button" className="recette-form__btn recette-form__btn--suppr"
                 onClick={() => setConfirmSuppr(true)}>
-                🗑 Supprimer
+                🗑 {isLocal ? 'Supprimer' : 'Masquer'}
               </button>
         )}
         {!confirmSuppr && <>
@@ -992,7 +998,27 @@ export default function RecettesPage({ onRetour }) {
   const [togetherKey, setTogetherKey] = useTogetherKey();
   const [prompt, setPrompt]   = usePrompt();
   const { token: ghToken, sauverToken: sauverGhToken, sync, statut: syncStatut } = useGitHubSync();
-  const toutesRecettes        = useToutesRecettes(custom);
+
+  // Recettes de base masquées (stockées par nom, pas _id)
+  const [masquees, setMasquees] = useState(() => {
+    try { return new Set(JSON.parse(localStorage.getItem('recettes_masquees') || '[]')); }
+    catch { return new Set(); }
+  });
+  function masquerRecette(nom) {
+    setMasquees(prev => {
+      const next = new Set(prev);
+      next.add(nom);
+      localStorage.setItem('recettes_masquees', JSON.stringify([...next]));
+      return next;
+    });
+  }
+
+  const toutesRecettes = useToutesRecettes(custom);
+  // Filtrer les recettes masquées
+  const recettesVisibles = useMemo(
+    () => toutesRecettes.filter(r => !masquees.has(r.nom)),
+    [toutesRecettes, masquees]
+  );
 
   const [recherche, setRecherche]         = useState('');
   const [filtreRegime, setFiltreRegime]   = useState('Tous');
@@ -1049,11 +1075,11 @@ export default function RecettesPage({ onRetour }) {
   }, [modifier]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const origines = useMemo(() =>
-    ['Tous', ...[...new Set(toutesRecettes.map(r => r.origine).filter(Boolean))].sort()],
-  [toutesRecettes]);
+    ['Tous', ...[...new Set(recettesVisibles.map(r => r.origine).filter(Boolean))].sort()],
+  [recettesVisibles]);
 
   const resultats = useMemo(() => {
-    let liste = toutesRecettes.filter(r => {
+    let liste = recettesVisibles.filter(r => {
       if (filtreRegime !== 'Tous' && r.regime_alimentaire !== filtreRegime) return false;
       if (filtreTheme && !r[filtreTheme]) return false;
       if (filtreOrigine !== 'Tous' && r.origine !== filtreOrigine) return false;
@@ -1079,7 +1105,7 @@ export default function RecettesPage({ onRetour }) {
       }
       return a.nom.localeCompare(b.nom, 'fr');
     });
-  }, [toutesRecettes, filtreRegime, filtreTheme, filtreOrigine, filtreCout, recherche, tri]);
+  }, [recettesVisibles, filtreRegime, filtreTheme, filtreOrigine, filtreCout, recherche, tri]);
 
   function ouvrirAjout()        { setRecetteEnEdition(null); setDrawerOpen(true); }
   function ouvrirEdition(r)     { setRecetteEnEdition(r);    setDrawerOpen(true); }
@@ -1150,12 +1176,13 @@ export default function RecettesPage({ onRetour }) {
           isNew={!recetteEnEdition}
           onSave={handleSave}
           onSupprimer={supprimer}
+          onMasquer={masquerRecette}
           onClose={() => setDrawerOpen(false)}
           apiKey={apiKey}
           onSaveApiKey={setApiKey}
           prompt={prompt}
           onSavePrompt={setPrompt}
-          toutesRecettes={toutesRecettes}
+          toutesRecettes={recettesVisibles}
         />
       </Drawer>
 
@@ -1179,7 +1206,7 @@ export default function RecettesPage({ onRetour }) {
               <span className="sync-pill sync-pill--idle" title="Sync GitHub actif">☁</span>
             )}
           </div>
-          <span className="recettes-compte">{resultats.length} / {toutesRecettes.length} recettes</span>
+          <span className="recettes-compte">{resultats.length} / {recettesVisibles.length} recettes{masquees.size > 0 && ` · ${masquees.size} masquée${masquees.size > 1 ? 's' : ''}`}</span>
           <div className="recettes-header__actions">
             <button
               className="img-style-toggle"
