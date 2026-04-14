@@ -132,9 +132,19 @@ const PALMARES_LABELS = {
 };
 
 // ── Carte film ─────────────────────────────────────────────────────────────────
-function FilmCarte({ film, ratings, onNoter }) {
+function FilmCarte({ film, ratings, onNoter, isCustom, onSupprimer }) {
   const [descExpand, setDescExpand] = useState(false);
+  const [confirming, setConfirming] = useState(false);
   const note = ratings[film.id] ?? 0;
+
+  function handleDeleteClick() {
+    if (confirming) {
+      onSupprimer(film.id);
+    } else {
+      setConfirming(true);
+      setTimeout(() => setConfirming(false), 4000);
+    }
+  }
   const tier = tierScore(film.score_consensus ?? 70);
   const scoreBar = Math.max(0, Math.min(100, film.score_consensus ?? 70));
   const posterUrl = useFilmPoster(film);
@@ -236,18 +246,25 @@ function FilmCarte({ film, ratings, onNoter }) {
             >★</button>
           ))}
         </div>
-        {film.imdb_url && (
-          <a href={film.imdb_url} target="_blank" rel="noopener noreferrer" className="album-apple-link">
-            🎬 IMDB
-          </a>
-        )}
+        <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          {film.imdb_url && (
+            <a href={film.imdb_url} target="_blank" rel="noopener noreferrer" className="album-apple-link">
+              🎬 IMDB
+            </a>
+          )}
+          {isCustom && onSupprimer && (
+            confirming
+              ? <button className="carte-del-btn carte-del-btn--confirm" onClick={handleDeleteClick}>Supprimer ?</button>
+              : <button className="carte-del-btn" onClick={handleDeleteClick} title="Supprimer ce film">🗑</button>
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
 // ── Page principale ────────────────────────────────────────────────────────────
-export default function FilmsPage({ onRetour, ratings = {}, onNoter, filmsCustom = [], onAjouterFilm }) {
+export default function FilmsPage({ onRetour, ratings = {}, onNoter, filmsCustom = [], onAjouterFilm, onSupprimerFilm }) {
   const [continent, setContinent] = useState('Tout');
   const [decade, setDecade] = useState('Tout');
   const [tri, setTri] = useState('consensus');
@@ -385,9 +402,19 @@ export default function FilmsPage({ onRetour, ratings = {}, onNoter, filmsCustom
         <div className="albums-vide">Aucun film ne correspond à ces critères.</div>
       ) : (
         <div className="albums-grille films-grille">
-          {filmsFiltres.map(film => (
-            <FilmCarte key={film.id} film={film} ratings={ratings} onNoter={onNoter} />
-          ))}
+          {filmsFiltres.map(film => {
+            const isCustom = filmsCustom.some(f => f.id === film.id);
+            return (
+              <FilmCarte
+                key={film.id}
+                film={film}
+                ratings={ratings}
+                onNoter={onNoter}
+                isCustom={isCustom}
+                onSupprimer={onSupprimerFilm}
+              />
+            );
+          })}
         </div>
       )}
 

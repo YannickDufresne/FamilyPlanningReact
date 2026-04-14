@@ -248,6 +248,15 @@ export default function App() {
     });
   }
 
+  function supprimerFilmCustom(id) {
+    setFilmsCustom(prev => {
+      const next = prev.filter(f => f.id !== id);
+      localStorage.setItem('fp_films_custom', JSON.stringify(next));
+      syncWrite({ filmsCustom: next });
+      return next;
+    });
+  }
+
   // ── Notation films ────────────────────────────────────────────────────────
   const [filmRatings, setFilmRatings] = useState(() => {
     try {
@@ -723,6 +732,7 @@ export default function App() {
           onNoter={raterFilm}
           filmsCustom={filmsCustom}
           onAjouterFilm={ajouterFilmCustom}
+          onSupprimerFilm={supprimerFilmCustom}
         />
       ) : view === 'epicerie' ? (
         <EpiceriePage

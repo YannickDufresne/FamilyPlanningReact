@@ -853,7 +853,19 @@ function Drawer({ open, onClose, children }) {
 }
 
 // ── Carte recette ─────────────────────────────────────────────────────────────
-function RecetteCard({ recette, onEdit, styleImages = 'aquarelle' }) {
+function RecetteCard({ recette, onEdit, onSupprimer, styleImages = 'aquarelle' }) {
+  const [confirming, setConfirming] = useState(false);
+
+  function handleDeleteClick() {
+    if (confirming) {
+      onSupprimer(recette._id);
+    } else {
+      setConfirming(true);
+      // Auto-annuler après 4 secondes
+      setTimeout(() => setConfirming(false), 4000);
+    }
+  }
+
   const themes = Object.entries(THEMES).filter(([key]) => recette[key] === 1);
   const evalsValides = MEMBRES.filter(m => recette[m.key] != null && recette[m.key] !== '' && !isNaN(parseFloat(recette[m.key])));
   const hasRatings = evalsValides.length > 0;
@@ -929,7 +941,22 @@ function RecetteCard({ recette, onEdit, styleImages = 'aquarelle' }) {
         {recette.livre && <div className="recette-card__livre">📖 {recette.livre}</div>}
       </div>
 
-      <button className="recette-card__edit-btn" onClick={() => onEdit(recette)} title="Modifier">✏</button>
+      <div className="recette-card__actions">
+        <button className="recette-card__edit-btn" onClick={() => onEdit(recette)} title="Modifier">✏</button>
+        {recette._source === 'local' && onSupprimer && (
+          confirming
+            ? <button
+                className="recette-card__del-btn recette-card__del-btn--confirm"
+                onClick={handleDeleteClick}
+                title="Cliquer pour confirmer la suppression"
+              >Supprimer ?</button>
+            : <button
+                className="recette-card__del-btn"
+                onClick={handleDeleteClick}
+                title="Supprimer cette recette"
+              >🗑</button>
+        )}
+      </div>
     </article>
   );
 }
@@ -1296,7 +1323,7 @@ export default function RecettesPage({ onRetour }) {
 
       {/* Grille */}
       <div className="recettes-grid">
-        {resultats.map(r => <RecetteCard key={r._id || r.nom} recette={r} onEdit={ouvrirEdition} styleImages={styleImages} />)}
+        {resultats.map(r => <RecetteCard key={r._id || r.nom} recette={r} onEdit={ouvrirEdition} onSupprimer={supprimer} styleImages={styleImages} />)}
         {resultats.length === 0 && (
           <div className="recettes-vide">Aucune recette ne correspond à ces critères.</div>
         )}
