@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import albums from '../data/albums.json';
+import AlbumAjoutModal from './AlbumAjoutModal';
 
 // ── Drapeaux pays ─────────────────────────────────────────────────────────────
 const DRAPEAUX = {
@@ -107,8 +108,14 @@ const PALMARES_LABELS = {
 };
 
 // ── Carte album ───────────────────────────────────────────────────────────────
-function AlbumCarte({ album, ratings, onNoter }) {
+function AlbumCarte({ album, ratings, onNoter, isCustom, onSupprimer }) {
+  const [confirming, setConfirming] = useState(false);
   const note = ratings[album.id] ?? 0;
+
+  function handleDeleteClick() {
+    if (confirming) { onSupprimer(album.id); }
+    else { setConfirming(true); setTimeout(() => setConfirming(false), 4000); }
+  }
   const artworkUrl = useArtworkFallback(album.artiste, album.nom, album.artwork_url);
   const tier = tierScore(album.score_consensus ?? 60);
 
@@ -196,6 +203,11 @@ function AlbumCarte({ album, ratings, onNoter }) {
               🎵 Écouter
             </a>
           )}
+          {isCustom && onSupprimer && (
+            confirming
+              ? <button className="carte-del-btn carte-del-btn--confirm" onClick={handleDeleteClick}>Supprimer ?</button>
+              : <button className="carte-del-btn" onClick={handleDeleteClick} title="Supprimer cet album">🗑</button>
+          )}
         </div>
       </div>
     </div>
@@ -203,15 +215,18 @@ function AlbumCarte({ album, ratings, onNoter }) {
 }
 
 // ── Page principale ───────────────────────────────────────────────────────────
-export default function AlbumsPage({ onRetour, ratings = {}, onNoter }) {
+export default function AlbumsPage({ onRetour, ratings = {}, onNoter, albumsCustom = [], onAjouterAlbum, onSupprimerAlbum }) {
   const [continent, setContinent] = useState('Tout');
+  const [showAjout, setShowAjout] = useState(false);
   const [decade, setDecade] = useState('Tout');
   const [tri, setTri] = useState('consensus'); // 'consensus' | 'coups_de_coeur' | 'annee'
   const [seulementNotes, setSeulementNotes] = useState(false);
   const [recherche, setRecherche] = useState('');
 
+  const tousAlbums = useMemo(() => [...albums, ...albumsCustom], [albumsCustom]);
+
   const albumsFiltres = useMemo(() => {
-    let liste = [...albums];
+    let liste = [...tousAlbums];
 
     // Filtre continent
     if (continent !== 'Tout') {
@@ -254,7 +269,7 @@ export default function AlbumsPage({ onRetour, ratings = {}, onNoter }) {
     }
 
     return liste;
-  }, [continent, decade, tri, seulementNotes, recherche, ratings]);
+  }, [continent, decade, tri, seulementNotes, recherche, ratings, tousAlbums]);
 
   const nbNotes = Object.values(ratings).filter(v => v > 0).length;
 
@@ -266,10 +281,16 @@ export default function AlbumsPage({ onRetour, ratings = {}, onNoter }) {
         <div style={{ flex: 1 }}>
           <h2 className="albums-page__titre">Bibliothèque musicale</h2>
           <p className="acti-page__intro">
-            <strong>{albumsFiltres.length}</strong> album{albumsFiltres.length > 1 ? 's' : ''} sur {albums.length}
+            <strong>{albumsFiltres.length}</strong> album{albumsFiltres.length > 1 ? 's' : ''} sur {tousAlbums.length}
+            {albumsCustom.length > 0 && ` · ${albumsCustom.length} ajouté${albumsCustom.length > 1 ? 's' : ''}`}
             {nbNotes > 0 && ` · ${nbNotes} noté${nbNotes > 1 ? 's' : ''}`}
           </p>
         </div>
+        {onAjouterAlbum && (
+          <button className="film-ajout-trigger" onClick={() => setShowAjout(true)}>
+            ➕ Ajouter un album
+          </button>
+        )}
       </div>
 
       {/* Barre de recherche */}
@@ -351,9 +372,19 @@ export default function AlbumsPage({ onRetour, ratings = {}, onNoter }) {
               album={album}
               ratings={ratings}
               onNoter={onNoter}
+              isCustom={albumsCustom.some(a => a.id === album.id)}
+              onSupprimer={onSupprimerAlbum}
             />
           ))}
         </div>
+      )}
+
+      {showAjout && (
+        <AlbumAjoutModal
+          albumsExistants={tousAlbums}
+          onSauvegarder={(album) => { if (onAjouterAlbum) onAjouterAlbum(album); setShowAjout(false); }}
+          onFermer={() => setShowAjout(false)}
+        />
       )}
     </div>
   );

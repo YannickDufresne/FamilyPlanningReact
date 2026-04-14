@@ -6251,6 +6251,95 @@ a.fa-sortie__nom:hover { text-decoration: underline; }
 }
 .film-ajout-trigger:hover { background: var(--sage, #6b9e82); }
 
+/* ── Modal Ajout générique (albums, activités, films) ─────────────────────── */
+.ajout-modal {
+  background: var(--bg, #faf8f4);
+  border-radius: 16px;
+  padding: 28px 28px 20px;
+  max-width: 560px;
+  width: 92vw;
+  max-height: 88vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
+.ajout-modal__close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; font-size: 1.1rem;
+  cursor: pointer; color: var(--ink-3); line-height: 1;
+}
+.ajout-modal__close:hover { color: var(--ink); }
+.ajout-modal__titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--ink); margin: 0 0 16px;
+}
+.ajout-modal__ia-row {
+  display: flex; gap: 8px; margin-bottom: 12px;
+}
+.ajout-modal__ia-input {
+  flex: 1; padding: 8px 12px;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-size: 0.85rem; background: white;
+}
+.ajout-modal__ia-btn {
+  background: var(--forest); color: white;
+  border: none; border-radius: 8px;
+  padding: 8px 14px; font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; white-space: nowrap;
+}
+.ajout-modal__ia-btn:disabled { opacity: 0.5; cursor: default; }
+.ajout-modal__ia-btn:not(:disabled):hover { background: var(--sage); }
+.ajout-modal__erreur {
+  color: #c0392b; font-size: 0.78rem; margin: 0 0 10px;
+}
+.ajout-modal__suggestions {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 16px;
+}
+.ajout-modal__suggestion {
+  border: 1.5px solid var(--border); border-radius: 8px;
+  padding: 10px 12px; cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.ajout-modal__suggestion:hover { background: var(--cream-2); border-color: var(--forest); }
+.ajout-modal__sug-titre { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+.ajout-modal__sug-detail { font-size: 0.73rem; color: var(--ink-3); margin-top: 2px; }
+.ajout-modal__sug-desc { font-size: 0.72rem; color: var(--ink-2); margin-top: 4px; line-height: 1.4; }
+.ajout-modal__form { display: flex; flex-direction: column; gap: 10px; }
+.ajout-modal__row { display: flex; flex-direction: column; gap: 4px; }
+.ajout-modal__row label { font-size: 0.72rem; font-weight: 600; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.04em; }
+.ajout-modal__row input,
+.ajout-modal__row select,
+.ajout-modal__row textarea {
+  padding: 7px 10px; border: 1.5px solid var(--border);
+  border-radius: 7px; font-size: 0.82rem; background: white;
+  font-family: inherit;
+}
+.ajout-modal__row textarea { resize: vertical; }
+.ajout-modal__row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ajout-modal__req { color: var(--terra); }
+.ajout-modal__checkbox {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.82rem; color: var(--ink-2); cursor: pointer;
+}
+.ajout-modal__actions {
+  display: flex; justify-content: flex-end; gap: 10px;
+  margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.ajout-modal__btn-annuler {
+  background: none; border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 8px 16px;
+  font-size: 0.82rem; cursor: pointer; color: var(--ink-2);
+}
+.ajout-modal__btn-sauver {
+  background: var(--forest); color: white;
+  border: none; border-radius: 8px; padding: 8px 18px;
+  font-size: 0.82rem; font-weight: 600; cursor: pointer;
+}
+.ajout-modal__btn-sauver:hover { background: var(--sage); }
+
 /* ── Modal Ajout Film ──────────────────────────────────────────────────────── */
 .film-ajout-modal {
   background: var(--bg, #faf8f4);

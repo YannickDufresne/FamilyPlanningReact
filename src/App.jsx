@@ -278,6 +278,55 @@ export default function App() {
     });
   }
 
+  // ── Albums custom ─────────────────────────────────────────────────────────
+  const [albumsCustom, setAlbumsCustom] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('fp_albums_custom') || '[]'); }
+    catch { return []; }
+  });
+
+  function ajouterAlbumCustom(album) {
+    setAlbumsCustom(prev => {
+      if (prev.some(a => a.id === album.id)) return prev;
+      const next = [...prev, album];
+      localStorage.setItem('fp_albums_custom', JSON.stringify(next));
+      syncWrite({ albumsCustom: next });
+      return next;
+    });
+  }
+
+  function supprimerAlbumCustom(id) {
+    setAlbumsCustom(prev => {
+      const next = prev.filter(a => a.id !== id);
+      localStorage.setItem('fp_albums_custom', JSON.stringify(next));
+      syncWrite({ albumsCustom: next });
+      return next;
+    });
+  }
+
+  // ── Activités custom ──────────────────────────────────────────────────────
+  const [activitesCustom, setActivitesCustom] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('fp_activites_custom') || '[]'); }
+    catch { return []; }
+  });
+
+  function ajouterActiviteCustom(activite) {
+    setActivitesCustom(prev => {
+      const next = [...prev, activite];
+      localStorage.setItem('fp_activites_custom', JSON.stringify(next));
+      syncWrite({ activitesCustom: next });
+      return next;
+    });
+  }
+
+  function supprimerActiviteCustom(id) {
+    setActivitesCustom(prev => {
+      const next = prev.filter(a => a.id !== id);
+      localStorage.setItem('fp_activites_custom', JSON.stringify(next));
+      syncWrite({ activitesCustom: next });
+      return next;
+    });
+  }
+
   // ── Notation albums ───────────────────────────────────────────────────────
   function raterAlbum(id, note) {
     setAlbumRatings(prev => {
@@ -718,12 +767,22 @@ export default function App() {
       {view === 'recettes' ? (
         <RecettesPage onRetour={() => setView('planning')} />
       ) : view === 'activites' ? (
-        <ActivitesPage onRetour={() => setView('planning')} semaine={meta.semaine} profils={profils} />
+        <ActivitesPage
+          onRetour={() => setView('planning')}
+          semaine={meta.semaine}
+          profils={profils}
+          activitesCustom={activitesCustom}
+          onAjouterActivite={ajouterActiviteCustom}
+          onSupprimerActivite={supprimerActiviteCustom}
+        />
       ) : view === 'albums' ? (
         <AlbumsPage
           onRetour={() => setView('planning')}
           ratings={albumRatings}
           onNoter={raterAlbum}
+          albumsCustom={albumsCustom}
+          onAjouterAlbum={ajouterAlbumCustom}
+          onSupprimerAlbum={supprimerAlbumCustom}
         />
       ) : view === 'films' ? (
         <FilmsPage

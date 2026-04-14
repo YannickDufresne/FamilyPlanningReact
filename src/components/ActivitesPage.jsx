@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import activites from '../data/activites.json';
 import familleDefaut from '../data/famille.json';
+import ActiviteAjoutModal from './ActiviteAjoutModal';
 
 // ── Génère une courte raison personnalisée pour un membre ─────────────────────
 function genererRaisonMembre(membre, activite) {
@@ -190,11 +191,12 @@ const PALIERS = [
   { label: '80%+',    val: 80, title: 'Pertinence minimale 80 %' },
 ];
 
-export default function ActivitesPage({ onRetour, semaine, profils }) {
+export default function ActivitesPage({ onRetour, semaine, profils, activitesCustom = [], onAjouterActivite, onSupprimerActivite }) {
   const [mode, setMode]         = useState('famille'); // 'famille' | 'adultes'
   const [tri, setTri]           = useState('score');   // 'score' | 'date' | 'gratuit'
   const [scoreMin, setScoreMin] = useState(0);         // palier de pertinence
   const [afficherPassees, setAfficherPassees] = useState(false);
+  const [showAjout, setShowAjout] = useState(false);
 
   const today = new Date().toISOString().split('T')[0];
 
@@ -204,11 +206,14 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
   const dansSemaine  = (d, dateFin) => debutSemaine && finSemaine && d <= finSemaine && (dateFin || d) >= debutSemaine;
   const estPassee    = a => a.date && (a.date_fin || a.date) < today;
 
+  // Fusionner base + custom
+  const toutesActivites = useMemo(() => [...activites, ...activitesCustom], [activitesCustom]);
+
   // Filtrer par pertinence minimale
   const scoreKey = mode === 'adultes' ? 'score_adultes' : 'score_famille';
   const activitesFiltrees = scoreMin === 0
-    ? activites
-    : activites.filter(a => (a[scoreKey] ?? 0) >= scoreMin);
+    ? toutesActivites
+    : toutesActivites.filter(a => (a[scoreKey] ?? 0) >= scoreMin);
 
   // Nombre d'activités passées (pour le bouton toggle)
   const nbPassees = activitesFiltrees.filter(a => estPassee(a)).length;
@@ -274,10 +279,16 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
               ? <><strong>{nbAffichees}</strong> sur {nbTotal} activités</>
               : <><strong>{nbTotal}</strong> activités</>
             }
+            {activitesCustom.length > 0 && ` · ${activitesCustom.length} ajoutée${activitesCustom.length > 1 ? 's' : ''}`}
             {nbScores > 0 && ` · ${nbScores} analysées par IA`}
             {' '}· mise à jour chaque dimanche
           </p>
         </div>
+        {onAjouterActivite && (
+          <button className="film-ajout-trigger" onClick={() => setShowAjout(true)}>
+            ➕ Ajouter
+          </button>
+        )}
 
         {/* Contrôles */}
         <div className="acti-controles">
@@ -372,6 +383,13 @@ export default function ActivitesPage({ onRetour, semaine, profils }) {
             ))}
           </div>
         </section>
+      )}
+
+      {showAjout && (
+        <ActiviteAjoutModal
+          onSauvegarder={(a) => { if (onAjouterActivite) onAjouterActivite(a); setShowAjout(false); }}
+          onFermer={() => setShowAjout(false)}
+        />
       )}
     </div>
   );
