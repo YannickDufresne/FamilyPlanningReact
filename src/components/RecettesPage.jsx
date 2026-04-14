@@ -828,16 +828,14 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onMasquer, onClose, 
         {!isNew && (
           confirmSuppr
             ? <>
-                <span className="recette-form__suppr-msg">
-                  {isLocal ? 'Supprimer définitivement ?' : 'Masquer cette recette ?'}
-                </span>
+                <span className="recette-form__suppr-msg">Supprimer définitivement ?</span>
                 <button type="button" className="recette-form__btn recette-form__btn--suppr-confirm"
                   onClick={() => {
                     if (isLocal) onSupprimer(recette._id);
                     else onMasquer && onMasquer(recette.nom);
                     onClose();
                   }}>
-                  {isLocal ? 'Oui, supprimer' : 'Oui, masquer'}
+                  Oui, supprimer
                 </button>
                 <button type="button" className="recette-form__btn recette-form__btn--annuler"
                   onClick={() => setConfirmSuppr(false)}>
@@ -846,7 +844,7 @@ function RecetteForm({ recette, isNew, onSave, onSupprimer, onMasquer, onClose, 
               </>
             : <button type="button" className="recette-form__btn recette-form__btn--suppr"
                 onClick={() => setConfirmSuppr(true)}>
-                🗑 {isLocal ? 'Supprimer' : 'Masquer'}
+                🗑 Supprimer
               </button>
         )}
         {!confirmSuppr && <>
