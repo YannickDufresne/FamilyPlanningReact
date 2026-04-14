@@ -36,6 +36,19 @@ function lundiISO(dateStr, deltaJours) {
   d.setDate(d.getDate() + deltaJours);
   return d.toISOString().split('T')[0];
 }
+
+// Retourne le lundi de la semaine courante en ISO (YYYY-MM-DD) en heure locale.
+// ⚠️ setHours(12,0,0,0) est indispensable pour éviter que toISOString() bascule
+// la date en UTC le lendemain (ex : 20h30 à Montréal UTC-4 = 00h30 UTC suivant).
+function lundiCalendaireISO() {
+  const auj = new Date();
+  const day = auj.getDay(); // 0=dim, 1=lun, ...
+  const diff = day === 0 ? -6 : 1 - day;
+  const lundi = new Date(auj);
+  lundi.setDate(auj.getDate() + diff);
+  lundi.setHours(12, 0, 0, 0); // ancrer à midi pour éviter le bug de timezone
+  return lundi.toISOString().split('T')[0];
+}
 function formatSemaineNav(lundiStr) {
   const lundi   = new Date(lundiStr + 'T12:00:00');
   const dimanche = new Date(lundiStr + 'T12:00:00');
@@ -79,12 +92,7 @@ export default function App() {
   const [semaineVue, setSemaineVue] = useState(() => {
     // Démarrer sur la semaine calendaire courante si elle est plus récente que la semaine meta
     // (évite d'afficher une semaine entièrement passée en lecture seule au démarrage)
-    const auj = new Date();
-    const day = auj.getDay();
-    const diff = day === 0 ? -6 : 1 - day;
-    const lundi = new Date(auj);
-    lundi.setDate(auj.getDate() + diff);
-    const calWeek = lundi.toISOString().split('T')[0];
+    const calWeek = lundiCalendaireISO();
     return calWeek > meta.semaine.debut ? calWeek : meta.semaine.debut;
   });
   const [albumRatings, setAlbumRatings] = useState(() => {
@@ -131,14 +139,9 @@ export default function App() {
   }
 
   // ── État par semaine (rechargé à chaque navigation) ───────────────────────
-  // Helper pour calculer la semaine de départ (même logique que semaineVue initial)
+  // Semaine de départ = semaine calendaire courante si plus récente que meta
   const _semaineInit = (() => {
-    const auj = new Date();
-    const day = auj.getDay();
-    const diff = day === 0 ? -6 : 1 - day;
-    const lundi = new Date(auj);
-    lundi.setDate(auj.getDate() + diff);
-    const calWeek = lundi.toISOString().split('T')[0];
+    const calWeek = lundiCalendaireISO();
     return calWeek > meta.semaine.debut ? calWeek : meta.semaine.debut;
   })();
 
@@ -477,14 +480,9 @@ export default function App() {
   // Semaine réelle contenant aujourd'hui (basée sur la date du navigateur, pas meta.json)
   // Cas typique : le script hebdo tourne vendredi soir → meta passe à la semaine suivante
   // mais samedi/dimanche appartiennent encore à la semaine courante du calendrier.
-  const semaineContenantAujourdhui = useMemo(() => {
-    const auj = new Date();
-    const jour = auj.getDay(); // 0=dim, 1=lun, ...
-    const diff = jour === 0 ? -6 : 1 - jour; // reculer jusqu'au lundi
-    const lundi = new Date(auj);
-    lundi.setDate(auj.getDate() + diff);
-    return lundi.toISOString().split('T')[0];
-  }, []);
+  // Lundi de la semaine courante en heure locale — lundiCalendaireISO() évite le
+  // bug timezone où toISOString() sort le lendemain en UTC (ex: 20h30 UTC-4 → 00h30 UTC)
+  const semaineContenantAujourdhui = useMemo(() => lundiCalendaireISO(), []);
 
   const estSemaineActuelle        = semaineVue === meta.semaine.debut;
   const estSemaineContenantAujourd = semaineVue === semaineContenantAujourdhui;
