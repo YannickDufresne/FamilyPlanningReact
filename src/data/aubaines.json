@@ -1,234 +1,96 @@
 {
-  "semaine": "2026-04-13",
-  "genereeLe": "2026-04-10T22:01:27.204Z",
+  "semaine": "2026-04-20",
+  "genereeLe": "2026-04-18T05:05:57.886Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
-      "nom": "Harvest Creek Saucisses fumées au poulet halal",
-      "prix": 3,
-      "prix_texte": "3,00 $ (900 g, 0,50 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 4,50 $",
+      "nom": "Pilons de poulet, format club",
+      "prix": 4.37,
+      "prix_texte": "4,37$/kg (1,98$/lb)",
+      "prix_regulier": 10.02,
+      "prix_regulier_texte": "10,02$/kg",
+      "rabais": "5,65$ DE RABAIS",
       "mots_cles": [
         "poulet",
-        "saucisse"
+        "pilons"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Le Choix du Boucher Bœuf haché mi-maigre, format club",
-      "prix": 10.94,
-      "prix_texte": "environ 10,94 $ (10,91 $/1kg 4,95 $/1lb)",
-      "prix_regulier": 15.01,
-      "prix_regulier_texte": "15,01 $ (régulier)",
-      "rabais": "4,07 $ DE RABAIS",
+      "nom": "La sélection du boucher Saucisse fumée original",
+      "prix": 3,
+      "prix_texte": "3,00$ (900g)",
+      "prix_regulier": 4.5,
+      "prix_regulier_texte": "4,50$ après limite",
+      "rabais": "Limite de 6",
       "mots_cles": [
-        "boeuf",
-        "oeufs"
+        "saucisse",
+        "fumée"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Planters Noix de cajou salées",
-      "prix": 4,
-      "prix_texte": "4,00 $ (200 g, 2,50 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 5,00 $",
+      "nom": "Flamingo Languettes de poulet légèrement poivrées",
+      "prix": 6.88,
+      "prix_texte": "6,88$ (680g)",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "10,99$",
+      "rabais": "4,11$ DE RABAIS",
       "mots_cles": [
-        "planters"
+        "poulet",
+        "languettes",
+        "surgelé"
       ],
-      "categorie": "epicerie"
+      "categorie": "surgelés"
     },
     {
-      "nom": "Fraises, 1 lb",
-      "prix": 2,
-      "prix_texte": "2,00 $ (454 g, 0,44 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "fraises"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Délices du Marché Tomates raisins",
-      "prix": 4,
-      "prix_texte": "4,00 $ (907 g, 0,44 $/100g)",
-      "prix_regulier": 9,
-      "prix_regulier_texte": "9,00 $ (régulier)",
-      "rabais": "5,00 $ DE RABAIS",
-      "mots_cles": [
-        "tomates"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Raisins verts extra gros sans pépins",
-      "prix": 7.87,
-      "prix_texte": "environ 7,87 $ (7,72 $/1kg 3,50 $/1lb)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "raisins"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Demi-longe de porc",
-      "prix": 13.54,
-      "prix_texte": "environ 13,54 $ (4,41 $/1kg 2,00 $/1lb)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "porc"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Gallo Huile d’olive extra-vierge",
-      "prix": 8.99,
-      "prix_texte": "8,99 $ (1 l, 0,90 $/100ml)",
-      "prix_regulier": 13.99,
-      "prix_regulier_texte": "13,99 $ (régulier)",
-      "rabais": "5,00 $ DE RABAIS",
-      "mots_cles": [
-        "huile"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Houston Avenue Bar & Grill Poulet en crapaudine à la saveur portugaise ",
-      "prix": 11.77,
-      "prix_texte": "environ 11,77 $ (8,82 $/1kg 4,00 $/1lb)",
-      "prix_regulier": 22.05,
-      "prix_regulier_texte": "22,05 $ (régulier)",
-      "rabais": "10,28 $ DE RABAIS",
-      "mots_cles": [
-        "poulet"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Délices du Marché Mandarines, sac de 4 lb",
-      "prix": 7.99,
-      "prix_texte": "7,99 $ (1.8 kg, 0,44 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "délices"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Concombres anglais",
-      "prix": 1.5,
-      "prix_texte": "1,50 $ (1 ea, 1,50 $/1ch)",
-      "prix_regulier": 1.88,
-      "prix_regulier_texte": "1,88 $ (régulier)",
-      "rabais": "0,38 $ DE RABAIS",
-      "mots_cles": [
-        "concombres"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Avocats",
-      "prix": 1,
-      "prix_texte": "1,00 $ (1 ea, 1,00 $/1ch)",
-      "prix_regulier": 1.49,
-      "prix_regulier_texte": "1,49 $ (régulier)",
-      "rabais": "0,49 $ DE RABAIS",
-      "mots_cles": [
-        "avocat"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Saputo Fromage Mozzarellissima pizza mozzarella",
-      "prix": 6,
-      "prix_texte": "6,00 $ (500 g, 1,20 $/100g)",
-      "prix_regulier": 8.5,
-      "prix_regulier_texte": "8,50 $ (régulier)",
-      "rabais": "2,50 $ DE RABAIS",
+      "nom": "P'tit Québec Fromage râpé mozzarella",
+      "prix": 11,
+      "prix_texte": "11,00$ (907g)",
+      "prix_regulier": 19.99,
+      "prix_regulier_texte": "19,99$",
+      "rabais": "8,99$ DE RABAIS",
       "mots_cles": [
         "fromage",
-        "mozzarella"
+        "mozzarella",
+        "râpé"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Marc Angelo Souvlaki de poulet, format économique",
-      "prix": 8.99,
-      "prix_texte": "8,99 $ (480 g, 1,87 $/100g)",
-      "prix_regulier": 14,
-      "prix_regulier_texte": "14,00 $ (régulier)",
-      "rabais": "5,01 $ DE RABAIS",
+      "nom": "Ox Head Parfum de riz",
+      "prix": 16.98,
+      "prix_texte": "16,98$ (7kg)",
+      "prix_regulier": 22.99,
+      "prix_regulier_texte": "22,99$",
+      "rabais": "6,01$ DE RABAIS",
       "mots_cles": [
-        "poulet"
+        "riz",
+        "jasmin"
       ],
-      "categorie": "viande"
+      "categorie": "epicerie"
     },
     {
-      "nom": "Tomates sur vigne rouge (1 grappe)",
-      "prix": 4.69,
-      "prix_texte": "environ 4,69 $ (6,61 $/1kg 3,00 $/1lb)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "nom": "QUÉBON Crème à café 10%",
+      "prix": 2.98,
+      "prix_texte": "2,98$ (1L)",
+      "prix_regulier": 5.5,
+      "prix_regulier_texte": "5,50$",
+      "rabais": "2,52$ DE RABAIS",
       "mots_cles": [
-        "tomates"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "DOM Saumon fumé Steelhead",
-      "prix": 3,
-      "prix_texte": "3,00 $ (50 g, 6,00 $/100g)",
-      "prix_regulier": 3.5,
-      "prix_regulier_texte": "3,50 $ (régulier)",
-      "rabais": "0,50 $ DE RABAIS",
-      "mots_cles": [
-        "saumon"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Saputo Fromage Mozzarellissima pizza mozzarellissima Chef Collection",
-      "prix": 6,
-      "prix_texte": "6,00 $ (500 g, 1,20 $/100g)",
-      "prix_regulier": 8.5,
-      "prix_regulier_texte": "8,50 $ (régulier)",
-      "rabais": "2,50 $ DE RABAIS",
-      "mots_cles": [
-        "fromage"
+        "crème",
+        "café",
+        "lait"
       ],
       "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Délices du Marché Orange, sac de 3 lb",
-      "prix": 5.99,
-      "prix_texte": "5,99 $ (1.36 kg, 0,44 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "oranges"
-      ],
-      "categorie": "fruits"
     },
     {
       "nom": "P'tit Québec Fromage cheddar marbré",
-      "prix": 5.47,
-      "prix_texte": "5,47 $ (400 g, 1,37 $/100g)",
+      "prix": 5.48,
+      "prix_texte": "5,48$ (400g)",
       "prix_regulier": 7,
-      "prix_regulier_texte": "7,00 $ (régulier)",
-      "rabais": "1,53 $ DE RABAIS",
+      "prix_regulier_texte": "7,00$ après limite",
+      "rabais": "Limite de 4",
       "mots_cles": [
         "fromage",
         "cheddar"
@@ -236,612 +98,325 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "le Choix du Président Mandarines Orri Faciles À Peler",
-      "prix": 6,
-      "prix_texte": "6,00 $ (907 g, 0,66 $/100g)",
-      "prix_regulier": 6.5,
-      "prix_regulier_texte": "6,50 $ (régulier)",
-      "rabais": "0,50 $ DE RABAIS",
+      "nom": "Délices du Marché Pommes Empire ou Cortland, sac 4 lb",
+      "prix": 4.88,
+      "prix_texte": "4,88$ (1,814kg)",
+      "prix_regulier": 7.5,
+      "prix_regulier_texte": "7,50$",
+      "rabais": "2,62$ DE RABAIS",
       "mots_cles": [
-        "le"
+        "pommes",
+        "fruits"
       ],
-      "categorie": "epicerie"
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Filets de truite steelhead congelés",
+      "prix": 17.37,
+      "prix_texte": "17,37$/kg (7,88$/lb)",
+      "prix_regulier": 25.35,
+      "prix_regulier_texte": "25,35$/kg",
+      "rabais": "3,65$ DE RABAIS",
+      "mots_cles": [
+        "truite",
+        "poisson",
+        "surgelé"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Cashmere Papier hygiénique 15 rouleaux",
+      "prix": 6.88,
+      "prix_texte": "6,88$",
+      "prix_regulier": 10,
+      "prix_regulier_texte": "10,00$",
+      "rabais": "3,12$ DE RABAIS",
+      "mots_cles": [
+        "papier",
+        "hygiénique"
+      ],
+      "categorie": "entretien"
     }
   ],
   "metro": [
     {
-      "nom": "clémentines — importées du Maroc, sac 3 lb",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 6.99,
-      "prix_regulier_texte": "6,99 (régulier)",
+      "nom": "Poitrines de poulet désossées",
+      "prix": 8.99,
+      "prix_texte": "8,99$/kg",
+      "prix_regulier": 15.41,
+      "prix_regulier_texte": "15,41$/kg",
+      "rabais": "42% de rabais",
+      "mots_cles": [
+        "poulet",
+        "poitrine"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Fraises du Québec en serre 454g",
+      "prix": 4.99,
+      "prix_texte": "4,99$",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7,99$",
+      "rabais": "38% de rabais",
+      "mots_cles": [
+        "fraises",
+        "fruits"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Brocoli",
+      "prix": 1.99,
+      "prix_texte": "1,99$ ch",
+      "prix_regulier": 3.49,
+      "prix_regulier_texte": "3,49$",
       "rabais": "43% de rabais",
       "mots_cles": [
-        "clémentines"
+        "brocoli",
+        "légumes"
       ],
-      "categorie": "fruits",
-      "sku": "10003079",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10003079_M.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
+      "categorie": "legumes"
     },
     {
-      "nom": "boeuf haché maigre — format économique",
-      "prix": 5.44,
-      "prix_texte": "5.44$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "nom": "Yogourt grec Liberté 750g",
+      "prix": 4.49,
+      "prix_texte": "4,49$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6,99$",
+      "rabais": "36% de rabais",
       "mots_cles": [
-        "boeuf",
+        "yogourt",
+        "grec"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Côtelettes de porc papillon",
+      "prix": 6.59,
+      "prix_texte": "6,59$/kg",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "10,99$/kg",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "porc",
+        "côtelettes"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Pain Boulangerie Première Moisson",
+      "prix": 3.99,
+      "prix_texte": "3,99$",
+      "prix_regulier": 5.49,
+      "prix_regulier_texte": "5,49$",
+      "rabais": "27% de rabais",
+      "mots_cles": [
+        "pain",
+        "boulangerie"
+      ],
+      "categorie": "boulangerie"
+    },
+    {
+      "nom": "Oeufs gros calibre 12 unités",
+      "prix": 4.29,
+      "prix_texte": "4,29$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99$",
+      "rabais": "28% de rabais",
+      "mots_cles": [
         "oeufs"
       ],
-      "categorie": "viande",
-      "sku": "13128205",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/13128205_M.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
+      "categorie": "produits_laitiers"
     },
     {
-      "nom": "champignons blancs entiers Mieux‑être biologique — produit du Canada, 227 g",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 2.99,
-      "prix_regulier_texte": "2,99 (régulier)",
-      "rabais": "33% de rabais",
+      "nom": "Carottes 2 lb sac",
+      "prix": 1.49,
+      "prix_texte": "1,49$",
+      "prix_regulier": 2.49,
+      "prix_regulier_texte": "2,49$",
+      "rabais": "40% de rabais",
       "mots_cles": [
-        "champignons"
+        "carottes",
+        "légumes"
       ],
-      "categorie": "legumes",
-      "sku": "10146256",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10146256_M_4.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "petites pommes de terre Russet, jaunes ou à chair rouge — produit du Québec, Canada No 1, sac 3 lb",
-      "prix": 0.99,
-      "prix_texte": "0.99$",
-      "prix_regulier": 2.99,
-      "prix_regulier_texte": "2,99 (régulier)",
-      "rabais": "67% de rabais",
-      "mots_cles": [
-        "pommes de terre",
-        "pommes"
-      ],
-      "categorie": "fruits",
-      "sku": "10048925",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10048925.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "osso buco de veau de lait — surgelés ou décongelés",
-      "prix": 10.99,
-      "prix_texte": "10.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "veau",
-        "lait"
-      ],
-      "categorie": "viande",
-      "sku": "13054902",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/13054902_M_2.psd.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "viande pour fondue Selection — surgelée, 175-350 g, choix varié",
-      "prix": 5.88,
-      "prix_texte": "5.88$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "de 7,99 à 9,49 (régulier)",
-      "rabais": "26% de rabais",
-      "mots_cles": [
-        "viande"
-      ],
-      "categorie": "viande",
-      "sku": "29772301",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/29772301Sel.psd.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "pommes Cortland, Empire, McIntosh ou Spartan — produit du Québec, Canada de fantaisie, gr 88-113",
-      "prix": 0.99,
-      "prix_texte": "0.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "pommes"
-      ],
-      "categorie": "fruits",
-      "sku": "10003562",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10003562_M.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "pommes Cortland, Empire, McIntosh ou Spartan — produit du Québec, Canada de fantaisie, gr 88-113",
-      "prix": 0.99,
-      "prix_texte": "0.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "pommes"
-      ],
-      "categorie": "fruits",
-      "sku": "10003662",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10003662_M.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "saucisses fraîches — format économique",
-      "prix": 4.99,
-      "prix_texte": "4.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "saucisse"
-      ],
-      "categorie": "viande",
-      "sku": "14585323",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/14585323_M.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "beurre Selection — 454 g, Mieux‑être 250 g, Natrel sans lactose 250 g, choix varié",
-      "prix": 4.97,
-      "prix_texte": "4.97$",
-      "prix_regulier": 6.49,
-      "prix_regulier_texte": "de 6,49 à 7,99 (régulier)",
-      "rabais": "23% de rabais",
-      "mots_cles": [
-        "beurre"
-      ],
-      "categorie": "produits_laitiers",
-      "sku": "22848501",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/22848501Sel.psd.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "concombre anglais sans pépins — produit du Québec",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": 2.99,
-      "prix_regulier_texte": "2,99 (régulier)",
-      "rabais": "",
-      "mots_cles": [
-        "concombre"
-      ],
-      "categorie": "legumes",
-      "sku": "10003927",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10003927_M.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "darnes de thon — surgelées, décongelées",
-      "prix": 8.99,
-      "prix_texte": "8.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "thon"
-      ],
-      "categorie": "poisson",
-      "sku": "10015619",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/10015619_CC.psd.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "vin rouge ou blanc — vinier 4 L, choix varié",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": 42.79,
-      "prix_regulier_texte": "de 42,79 à 52,99 (régulier)",
-      "rabais": "10$",
-      "mots_cles": [
-        "vin"
-      ],
-      "categorie": "epicerie",
-      "sku": "14178901",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/14178901.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "vin rouge ou blanc — vinier 4 L, choix varié",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": 42.79,
-      "prix_regulier_texte": "de 42,79 à 52,99 (régulier)",
-      "rabais": "10$",
-      "mots_cles": [
-        "vin"
-      ],
-      "categorie": "epicerie",
-      "sku": "18753502",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/18753502.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "vin rouge ou blanc — vinier 4 L, choix varié",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": 42.79,
-      "prix_regulier_texte": "de 42,79 à 52,99 (régulier)",
-      "rabais": "10$",
-      "mots_cles": [
-        "vin"
-      ],
-      "categorie": "epicerie",
-      "sku": "20889502",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/20889502.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "vin rouge ou blanc — vinier 4 L, choix varié",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": 42.79,
-      "prix_regulier_texte": "de 42,79 à 52,99 (régulier)",
-      "rabais": "10$",
-      "mots_cles": [
-        "vin"
-      ],
-      "categorie": "epicerie",
-      "sku": "30798201",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/30798201.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "pain tranché Pom — Club, Nature+, Signature, 600-675 g, Bon Matin pain tranché 595-600 g, choix vari",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "50%",
-      "mots_cles": [
-        "pain"
-      ],
-      "categorie": "epicerie_seche",
-      "sku": "36676303",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/36676303.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "pain tranché Pom — Club, Nature+, Signature, 600-675 g, Bon Matin pain tranché 595-600 g, choix vari",
-      "prix": null,
-      "prix_texte": "",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "50%",
-      "mots_cles": [
-        "pain"
-      ],
-      "categorie": "epicerie_seche",
-      "sku": "13701402",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/13701402.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "toast Melba Grissol — canapés Melba ronds, 125-200 g, Dare Breton bons grains, artisanal, Vinta craq",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 4.29,
-      "prix_regulier_texte": "4,29 (régulier)",
-      "rabais": "54% de rabais",
-      "mots_cles": [
-        "toast"
-      ],
-      "categorie": "epicerie_seche",
-      "sku": "39987007",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/39987007.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
-    },
-    {
-      "nom": "toast Melba Grissol — canapés Melba ronds, 125-200 g, Dare Breton bons grains, artisanal, Vinta craq",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 4.29,
-      "prix_regulier_texte": "4,29 (régulier)",
-      "rabais": "54% de rabais",
-      "mots_cles": [
-        "toast"
-      ],
-      "categorie": "epicerie_seche",
-      "sku": "40020701",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/82852/productImages/40020701.eps.png?version=3c63960a",
-      "valide_de": "2026-03-26",
-      "valide_au": "2026-04-01",
-      "magasin": "Metro"
+      "categorie": "legumes"
     }
   ],
   "adonis": [
     {
-      "nom": "fromage labneh Phoenicia ou Cedar — 500 g",
+      "nom": "Mozzarellissima fromage en bloc Saputo 1kg",
+      "prix": 9.99,
+      "prix_texte": "9,99$",
+      "prix_regulier": 18,
+      "prix_regulier_texte": "18,00$",
+      "rabais": "45% de rabais",
+      "mots_cles": [
+        "fromage",
+        "mozzarella"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Hauts de cuisses de poulet désossées",
+      "prix": 5.99,
+      "prix_texte": "5,99$/lb",
+      "prix_regulier": 9.99,
+      "prix_regulier_texte": "9,99$/lb",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "poulet",
+        "cuisses"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Filet de saumon coho",
+      "prix": 7.99,
+      "prix_texte": "7,99$/lb",
+      "prix_regulier": 13.99,
+      "prix_regulier_texte": "13,99$/lb",
+      "rabais": "43% de rabais",
+      "mots_cles": [
+        "saumon",
+        "poisson"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Chou-fleur",
+      "prix": 2.99,
+      "prix_texte": "2,99$ ch",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99$",
+      "rabais": "50% de rabais",
+      "mots_cles": [
+        "chou-fleur",
+        "légumes"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Mûres 170g",
+      "prix": 2.44,
+      "prix_texte": "2,44$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99$",
+      "rabais": "51% de rabais",
+      "mots_cles": [
+        "mûres",
+        "fruits"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Veau de grain haché maigre Halal",
+      "prix": 4.99,
+      "prix_texte": "4,99$/lb",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49$/lb",
+      "rabais": "41% de rabais",
+      "mots_cles": [
+        "veau",
+        "haché"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Fromage bocconcini ou ricotta Saputo 190-400g",
       "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 6.49,
-      "prix_regulier_texte": "6,49 (régulier)",
-      "rabais": "2,50",
+      "prix_texte": "3,99$",
+      "prix_regulier": 8.49,
+      "prix_regulier_texte": "8,49$",
+      "rabais": "53% de rabais",
       "mots_cles": [
-        "fromage"
+        "fromage",
+        "bocconcini",
+        "ricotta"
       ],
-      "categorie": "produits_laitiers",
-      "sku": "24220201",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/24220201.eps.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "boeuf haché maigre format économique",
-      "prix": 5.49,
-      "prix_texte": "5.49$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "44%",
-      "mots_cles": [
-        "boeuf",
-        "oeufs"
-      ],
-      "categorie": "viande",
-      "sku": "13113301",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/13113301_1.psd.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "prunes noires, pêches ou nectarines — Chili, Grèce, panier 2 lb",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "de 7,99 à 8,99 (régulier)",
-      "rabais": "56%",
-      "mots_cles": [
-        "prunes"
-      ],
-      "categorie": "legumes",
-      "sku": "10067179",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/10067179.eps.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "prunes noires, pêches ou nectarines — Chili, Grèce, panier 2 lb",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "de 7,99 à 8,99 (régulier)",
-      "rabais": "56%",
-      "mots_cles": [
-        "prunes"
-      ],
-      "categorie": "legumes",
-      "sku": "10067077",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/10067077.eps.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "prunes noires, pêches ou nectarines — Chili, Grèce, panier 2 lb",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "de 7,99 à 8,99 (régulier)",
-      "rabais": "56%",
-      "mots_cles": [
-        "prunes"
-      ],
-      "categorie": "epicerie",
-      "sku": "10009822",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/10009822.psd.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "oranges sans pépins, poires Bartlett ou avocats — Égypte, Afrique du Sud, Mexique",
-      "prix": 0.99,
-      "prix_texte": "0.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "67%",
-      "mots_cles": [
-        "oranges",
-        "avocat"
-      ],
-      "categorie": "fruits",
-      "sku": "10031107",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/10031107_1.psd.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "oranges sans pépins, poires Bartlett ou avocats — Égypte, Afrique du Sud, Mexique",
-      "prix": 0.99,
-      "prix_texte": "0.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "67%",
-      "mots_cles": [
-        "oranges",
-        "avocat"
-      ],
-      "categorie": "fruits",
-      "sku": "10097835",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/10097835_1.eps.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "oranges sans pépins, poires Bartlett ou avocats — Égypte, Afrique du Sud, Mexique",
-      "prix": 0.99,
-      "prix_texte": "0.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "67%",
-      "mots_cles": [
-        "oranges",
-        "avocat"
-      ],
-      "categorie": "fruits",
-      "sku": "10003422",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83007/productImages/10003422.eps.png?version=969c7197",
-      "valide_de": "2026-04-09",
-      "valide_au": "2026-04-15",
-      "magasin": "Adonis"
+      "categorie": "produits_laitiers"
     }
   ],
   "costco": [
     {
-      "nom": "Oeufs gros calibre Kirkland (30)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
+      "nom": "Saumon atlantique frais côté 1.2kg min",
+      "prix": 16.99,
+      "prix_texte": "16,99$/kg",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "oeufs",
-        "gros"
+        "saumon",
+        "poisson"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Cuisses de poulet avec dos 5kg",
+      "prix": 29.99,
+      "prix_texte": "29,99$ (5kg)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "6,00$/kg",
+      "mots_cles": [
+        "poulet",
+        "cuisses"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Beurre non salé Kirkland 4x454g",
+      "prix": 24.99,
+      "prix_texte": "24,99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "beurre"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Ketchup Heinz (2 x 1.25 L)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
+      "nom": "Fromage en grains frais du jour 600g",
+      "prix": 12.99,
+      "prix_texte": "12,99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "ketchup"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Crème sure 14% (2 x 500 ml)",
-      "prix": 8.99,
-      "prix_texte": "8.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "crème sure",
-        "sour cream"
+        "fromage",
+        "grains",
+        "poutine"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Filet de porc Kirkland (1.5 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
+      "nom": "Sirop d'érable pur Kirkland 1L",
+      "prix": 21.99,
+      "prix_texte": "21,99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "porc",
-        "filet"
+        "sirop",
+        "érable"
       ],
-      "categorie": "viande"
+      "categorie": "epicerie"
     },
     {
-      "nom": "Côtelettes de porc papillon (2 kg)",
-      "prix": 28.99,
-      "prix_texte": "28.99$",
+      "nom": "Pâtes penne Kirkland 3kg",
+      "prix": 9.99,
+      "prix_texte": "9,99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "porc",
-        "côtelette"
+        "pâtes",
+        "penne"
       ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Poulet entier Kirkland (2 kg)",
-      "prix": 18.99,
-      "prix_texte": "18.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "poulet",
-        "volaille",
-        "entier"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Poitrines de poulet désossées Kirkland (4 kg)",
-      "prix": 52.99,
-      "prix_texte": "52.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "poulet",
-        "poitrine",
-        "volaille"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Huile de canola Kirkland (3 L)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "huile",
-        "canola"
-      ],
-      "categorie": "condiments"
+      "categorie": "epicerie"
     }
   ],
-  "analyse": "Analyse IA non disponible (clé ANTHROPIC_API_KEY manquante).",
-  "economies_estimees": ""
+  "analyse": "Excellente semaine pour le poulet! Les pilons au Maxi à 4,37$/kg et les cuisses désossées chez Adonis à 5,99$/lb sont imbattables. Le fromage P'tit Québec râpé mozzarella à 11$ (rég. 19,99$) représente une économie de 9$ — parfait pour pizzas et gratins. Chez Adonis, la mozzarellissima Saputo 1kg à 9,99$ (rég. 18$) est aussi remarquable. Profitez du riz 7kg à 16,98$ au Maxi pour faire des réserves.",
+  "economies_estimees": "~35-45$"
 }
