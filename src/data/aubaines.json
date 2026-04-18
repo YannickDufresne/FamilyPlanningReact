@@ -1,14 +1,14 @@
 {
   "semaine": "2026-04-20",
-  "genereeLe": "2026-04-18T05:05:57.886Z",
+  "genereeLe": "2026-04-18T05:45:51.324Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
       "nom": "Pilons de poulet, format club",
       "prix": 4.37,
       "prix_texte": "4,37$/kg (1,98$/lb)",
-      "prix_regulier": 10.02,
-      "prix_regulier_texte": "10,02$/kg",
+      "prix_regulier": 9.92,
+      "prix_regulier_texte": "~9,92$/kg",
       "rabais": "5,65$ DE RABAIS",
       "mots_cles": [
         "poulet",
@@ -34,7 +34,7 @@
       "prix": 6.88,
       "prix_texte": "6,88$ (680g)",
       "prix_regulier": 10.99,
-      "prix_regulier_texte": "10,99$",
+      "prix_regulier_texte": "~10,99$",
       "rabais": "4,11$ DE RABAIS",
       "mots_cles": [
         "poulet",
@@ -48,7 +48,7 @@
       "prix": 11,
       "prix_texte": "11,00$ (907g)",
       "prix_regulier": 19.99,
-      "prix_regulier_texte": "19,99$",
+      "prix_regulier_texte": "~19,99$",
       "rabais": "8,99$ DE RABAIS",
       "mots_cles": [
         "fromage",
@@ -58,29 +58,43 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Ox Head Parfum de riz",
-      "prix": 16.98,
-      "prix_texte": "16,98$ (7kg)",
-      "prix_regulier": 22.99,
-      "prix_regulier_texte": "22,99$",
-      "rabais": "6,01$ DE RABAIS",
+      "nom": "Filets de truite steelhead congelés",
+      "prix": 17.37,
+      "prix_texte": "17,37$/kg (7,88$/lb)",
+      "prix_regulier": 25.35,
+      "prix_regulier_texte": "~25,35$/kg",
+      "rabais": "3,65$ DE RABAIS",
       "mots_cles": [
-        "riz",
-        "jasmin"
+        "truite",
+        "poisson",
+        "surgelé"
       ],
-      "categorie": "epicerie"
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Délices du Marché Pommes Empire, sac 4 lbs",
+      "prix": 4.88,
+      "prix_texte": "4,88$ (1,814kg)",
+      "prix_regulier": 7.5,
+      "prix_regulier_texte": "~7,50$",
+      "rabais": "2,62$ DE RABAIS",
+      "mots_cles": [
+        "pommes",
+        "Empire"
+      ],
+      "categorie": "fruits"
     },
     {
       "nom": "QUÉBON Crème à café 10%",
       "prix": 2.98,
       "prix_texte": "2,98$ (1L)",
       "prix_regulier": 5.5,
-      "prix_regulier_texte": "5,50$",
+      "prix_regulier_texte": "~5,50$",
       "rabais": "2,52$ DE RABAIS",
       "mots_cles": [
         "crème",
         "café",
-        "lait"
+        "laitier"
       ],
       "categorie": "produits_laitiers"
     },
@@ -98,44 +112,30 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Délices du Marché Pommes Empire ou Cortland, sac 4 lb",
-      "prix": 4.88,
-      "prix_texte": "4,88$ (1,814kg)",
-      "prix_regulier": 7.5,
-      "prix_regulier_texte": "7,50$",
-      "rabais": "2,62$ DE RABAIS",
+      "nom": "Kiwis",
+      "prix": 0.88,
+      "prix_texte": "0,88$ chacun",
+      "prix_regulier": 1.19,
+      "prix_regulier_texte": "~1,19$",
+      "rabais": "0,31$ DE RABAIS",
       "mots_cles": [
-        "pommes",
-        "fruits"
+        "kiwi",
+        "fruit"
       ],
       "categorie": "fruits"
     },
     {
-      "nom": "Filets de truite steelhead congelés",
-      "prix": 17.37,
-      "prix_texte": "17,37$/kg (7,88$/lb)",
-      "prix_regulier": 25.35,
-      "prix_regulier_texte": "25,35$/kg",
-      "rabais": "3,65$ DE RABAIS",
+      "nom": "Ox Head Parfum de riz",
+      "prix": 16.98,
+      "prix_texte": "16,98$ (7kg)",
+      "prix_regulier": 22.99,
+      "prix_regulier_texte": "~22,99$",
+      "rabais": "6,01$ DE RABAIS",
       "mots_cles": [
-        "truite",
-        "poisson",
-        "surgelé"
+        "riz",
+        "jasmin"
       ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Cashmere Papier hygiénique 15 rouleaux",
-      "prix": 6.88,
-      "prix_texte": "6,88$",
-      "prix_regulier": 10,
-      "prix_regulier_texte": "10,00$",
-      "rabais": "3,12$ DE RABAIS",
-      "mots_cles": [
-        "papier",
-        "hygiénique"
-      ],
-      "categorie": "entretien"
+      "categorie": "épicerie"
     }
   ],
   "metro": [
@@ -153,30 +153,17 @@
       "categorie": "viande"
     },
     {
-      "nom": "Fraises du Québec en serre 454g",
-      "prix": 4.99,
-      "prix_texte": "4,99$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "7,99$",
-      "rabais": "38% de rabais",
+      "nom": "Fraises Driscoll's 454g",
+      "prix": 2.99,
+      "prix_texte": "2,99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99$",
+      "rabais": "50% de rabais",
       "mots_cles": [
         "fraises",
-        "fruits"
+        "fruit"
       ],
       "categorie": "fruits"
-    },
-    {
-      "nom": "Brocoli",
-      "prix": 1.99,
-      "prix_texte": "1,99$ ch",
-      "prix_regulier": 3.49,
-      "prix_regulier_texte": "3,49$",
-      "rabais": "43% de rabais",
-      "mots_cles": [
-        "brocoli",
-        "légumes"
-      ],
-      "categorie": "legumes"
     },
     {
       "nom": "Yogourt grec Liberté 750g",
@@ -192,55 +179,54 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Côtelettes de porc papillon",
-      "prix": 6.59,
-      "prix_texte": "6,59$/kg",
-      "prix_regulier": 10.99,
-      "prix_regulier_texte": "10,99$/kg",
-      "rabais": "40% de rabais",
+      "nom": "Brocoli",
+      "prix": 1.49,
+      "prix_texte": "1,49$ chacun",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99$",
+      "rabais": "50% de rabais",
+      "mots_cles": [
+        "brocoli",
+        "légume"
+      ],
+      "categorie": "légumes"
+    },
+    {
+      "nom": "Filet de porc Olymel",
+      "prix": 9.99,
+      "prix_texte": "9,99$",
+      "prix_regulier": 14.99,
+      "prix_regulier_texte": "14,99$",
+      "rabais": "33% de rabais",
       "mots_cles": [
         "porc",
-        "côtelettes"
+        "filet"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Pain Boulangerie Première Moisson",
-      "prix": 3.99,
-      "prix_texte": "3,99$",
-      "prix_regulier": 5.49,
-      "prix_regulier_texte": "5,49$",
-      "rabais": "27% de rabais",
-      "mots_cles": [
-        "pain",
-        "boulangerie"
-      ],
-      "categorie": "boulangerie"
-    },
-    {
-      "nom": "Oeufs gros calibre 12 unités",
-      "prix": 4.29,
-      "prix_texte": "4,29$",
-      "prix_regulier": 5.99,
-      "prix_regulier_texte": "5,99$",
-      "rabais": "28% de rabais",
+      "nom": "Oeufs gros calibre 12",
+      "prix": 3.49,
+      "prix_texte": "3,49$",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4,99$",
+      "rabais": "30% de rabais",
       "mots_cles": [
         "oeufs"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Carottes 2 lb sac",
-      "prix": 1.49,
-      "prix_texte": "1,49$",
-      "prix_regulier": 2.49,
-      "prix_regulier_texte": "2,49$",
-      "rabais": "40% de rabais",
+      "nom": "Avocat Hass",
+      "prix": 0.99,
+      "prix_texte": "0,99$ chacun",
+      "prix_regulier": 1.99,
+      "prix_regulier_texte": "1,99$",
+      "rabais": "50% de rabais",
       "mots_cles": [
-        "carottes",
-        "légumes"
+        "avocat"
       ],
-      "categorie": "legumes"
+      "categorie": "légumes"
     }
   ],
   "adonis": [
@@ -250,7 +236,7 @@
       "prix_texte": "9,99$",
       "prix_regulier": 18,
       "prix_regulier_texte": "18,00$",
-      "rabais": "45% de rabais",
+      "rabais": "44% de rabais",
       "mots_cles": [
         "fromage",
         "mozzarella"
@@ -262,7 +248,7 @@
       "prix": 5.99,
       "prix_texte": "5,99$/lb",
       "prix_regulier": 9.99,
-      "prix_regulier_texte": "9,99$/lb",
+      "prix_regulier_texte": "~9,99$/lb",
       "rabais": "40% de rabais",
       "mots_cles": [
         "poulet",
@@ -275,7 +261,7 @@
       "prix": 7.99,
       "prix_texte": "7,99$/lb",
       "prix_regulier": 13.99,
-      "prix_regulier_texte": "13,99$/lb",
+      "prix_regulier_texte": "~13,99$/lb",
       "rabais": "43% de rabais",
       "mots_cles": [
         "saumon",
@@ -286,137 +272,133 @@
     {
       "nom": "Chou-fleur",
       "prix": 2.99,
-      "prix_texte": "2,99$ ch",
+      "prix_texte": "2,99$",
       "prix_regulier": 5.99,
-      "prix_regulier_texte": "5,99$",
+      "prix_regulier_texte": "~5,99$",
       "rabais": "50% de rabais",
       "mots_cles": [
         "chou-fleur",
-        "légumes"
+        "légume"
       ],
-      "categorie": "legumes"
+      "categorie": "légumes"
     },
     {
-      "nom": "Mûres 170g",
+      "nom": "Saucisses merguez boeuf et agneau",
+      "prix": 8.99,
+      "prix_texte": "8,99$/lb",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "~10,99$/lb",
+      "rabais": "2$/lb de rabais",
+      "mots_cles": [
+        "merguez",
+        "saucisse"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Mûres Mexique 170g",
       "prix": 2.44,
       "prix_texte": "2,44$",
       "prix_regulier": 4.99,
-      "prix_regulier_texte": "4,99$",
+      "prix_regulier_texte": "~4,99$",
       "rabais": "51% de rabais",
       "mots_cles": [
         "mûres",
-        "fruits"
+        "fruit"
       ],
       "categorie": "fruits"
     },
     {
-      "nom": "Veau de grain haché maigre Halal",
-      "prix": 4.99,
-      "prix_texte": "4,99$/lb",
-      "prix_regulier": 8.49,
-      "prix_regulier_texte": "8,49$/lb",
-      "rabais": "41% de rabais",
+      "nom": "Noix de Grenoble ou mélange oriental Cedar 454g",
+      "prix": 5.99,
+      "prix_texte": "5,99$",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "~8,99$",
+      "rabais": "33% de rabais",
       "mots_cles": [
-        "veau",
-        "haché"
+        "noix",
+        "collation"
       ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Fromage bocconcini ou ricotta Saputo 190-400g",
-      "prix": 3.99,
-      "prix_texte": "3,99$",
-      "prix_regulier": 8.49,
-      "prix_regulier_texte": "8,49$",
-      "rabais": "53% de rabais",
-      "mots_cles": [
-        "fromage",
-        "bocconcini",
-        "ricotta"
-      ],
-      "categorie": "produits_laitiers"
+      "categorie": "épicerie"
     }
   ],
   "costco": [
     {
-      "nom": "Saumon atlantique frais côté 1.2kg min",
-      "prix": 16.99,
-      "prix_texte": "16,99$/kg",
+      "nom": "Poitrines de poulet désossées Kirkland 4kg",
+      "prix": 52.99,
+      "prix_texte": "52,99$ (13,25$/kg)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "saumon",
-        "poisson"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Cuisses de poulet avec dos 5kg",
-      "prix": 29.99,
-      "prix_texte": "29,99$ (5kg)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "6,00$/kg",
+      "rabais": "Format économique",
       "mots_cles": [
         "poulet",
-        "cuisses"
+        "poitrine"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Beurre non salé Kirkland 4x454g",
+      "nom": "Oeufs gros calibre Kirkland (30)",
+      "prix": 12.99,
+      "prix_texte": "12,99$ (0,43$/oeuf)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "Meilleur prix/unité",
+      "mots_cles": [
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Beurre salé Kirkland (4 x 454g)",
       "prix": 24.99,
       "prix_texte": "24,99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "",
+      "rabais": "Format économique",
       "mots_cles": [
         "beurre"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Fromage en grains frais du jour 600g",
-      "prix": 12.99,
-      "prix_texte": "12,99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "fromage",
-        "grains",
-        "poutine"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Sirop d'érable pur Kirkland 1L",
-      "prix": 21.99,
-      "prix_texte": "21,99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "sirop",
-        "érable"
-      ],
-      "categorie": "epicerie"
-    },
-    {
       "nom": "Pâtes penne Kirkland 3kg",
       "prix": 9.99,
-      "prix_texte": "9,99$",
+      "prix_texte": "9,99$ (0,33$/100g)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "",
+      "rabais": "Format économique",
       "mots_cles": [
         "pâtes",
         "penne"
       ],
-      "categorie": "epicerie"
+      "categorie": "épicerie"
+    },
+    {
+      "nom": "Farine tout usage Kirkland 10kg",
+      "prix": 14.99,
+      "prix_texte": "14,99$ (0,15$/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "Format économique",
+      "mots_cles": [
+        "farine"
+      ],
+      "categorie": "épicerie"
+    },
+    {
+      "nom": "Côtelettes de porc papillon 2kg",
+      "prix": 28.99,
+      "prix_texte": "28,99$ (14,50$/kg)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "Format économique",
+      "mots_cles": [
+        "porc",
+        "côtelettes"
+      ],
+      "categorie": "viande"
     }
   ],
-  "analyse": "Excellente semaine pour le poulet! Les pilons au Maxi à 4,37$/kg et les cuisses désossées chez Adonis à 5,99$/lb sont imbattables. Le fromage P'tit Québec râpé mozzarella à 11$ (rég. 19,99$) représente une économie de 9$ — parfait pour pizzas et gratins. Chez Adonis, la mozzarellissima Saputo 1kg à 9,99$ (rég. 18$) est aussi remarquable. Profitez du riz 7kg à 16,98$ au Maxi pour faire des réserves.",
+  "analyse": "Cette semaine, les vedettes sont le fromage râpé P'tit Québec à 11$ (rabais de 9$!) au Maxi et la mozzarella Saputo 1kg à 9,99$ chez Adonis (rabais de 8$). Les pilons de poulet au Maxi à 1,98$/lb offrent 5,65$ d'économie. Chez Metro, les fraises à 2,99$ et les avocats à 0,99$ sont imbattables pour la saison. Combinez les achats: protéines en gros au Costco, aubaines fromages au Maxi/Adonis, et fruits frais au Metro.",
   "economies_estimees": "~35-45$"
 }
