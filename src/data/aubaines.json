@@ -1,15 +1,151 @@
 {
-  "semaine": "2026-05-11",
-  "genereeLe": "2026-05-09T06:22:02.239Z",
+  "semaine": "2026-05-18",
+  "genereeLe": "2026-05-16T05:51:43.332Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
-      "nom": "Poitrines de poulet sans peau, format club",
-      "prix": 8.8,
+      "nom": "Le Choix du Boucher Bœuf haché mi-maigre, format club",
+      "prix": 11.03,
+      "prix_texte": "11.00$/kg (4.99$/lb)",
+      "prix_regulier": 14.98,
+      "prix_regulier_texte": "14.98$/kg",
+      "rabais": "3.98$ DE RABAIS",
+      "mots_cles": [
+        "boeuf",
+        "haché",
+        "viande"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Filet de poitrine de poulet, format club",
+      "prix": 11.67,
+      "prix_texte": "15.41$/kg (6.99$/lb)",
+      "prix_regulier": 19.8,
+      "prix_regulier_texte": "19.80$/kg",
+      "rabais": "3.35$ DE RABAIS",
+      "mots_cles": [
+        "poulet",
+        "poitrine",
+        "filet"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "P'tit Québec Fromage râpé mozzarellaaaaah!",
+      "prix": 11,
+      "prix_texte": "11.00$ (907g)",
+      "prix_regulier": 19.99,
+      "prix_regulier_texte": "19.99$",
+      "rabais": "8.99$ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "mozzarella",
+        "râpé"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Cerises rouges",
+      "prix": 7.83,
       "prix_texte": "8.80$/kg (3.99$/lb)",
-      "prix_regulier": 14.62,
-      "prix_regulier_texte": "14.62$/kg",
-      "rabais": "5.82$ DE RABAIS",
+      "prix_regulier": 12.76,
+      "prix_regulier_texte": "12.76$/kg",
+      "rabais": "3.93$ DE RABAIS",
+      "mots_cles": [
+        "cerises",
+        "fruits"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Melon d'eau rouge sans pépins",
+      "prix": 3.77,
+      "prix_texte": "3.77$/ch",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "melon",
+        "watermelon"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Bâton Rouge Côtes de porc BBQ",
+      "prix": 10.99,
+      "prix_texte": "10.99$ (585g)",
+      "prix_regulier": 14.99,
+      "prix_regulier_texte": "14.99$",
+      "rabais": "4.00$ DE RABAIS",
+      "mots_cles": [
+        "porc",
+        "côtes",
+        "BBQ"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Concombres anglais",
+      "prix": 1.44,
+      "prix_texte": "1.44$/ch",
+      "prix_regulier": 1.77,
+      "prix_regulier_texte": "1.77$",
+      "rabais": "0.33$ DE RABAIS",
+      "mots_cles": [
+        "concombre",
+        "légume"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "le Choix du Président Champignons blancs entiers",
+      "prix": 1.49,
+      "prix_texte": "1.49$ (227g)",
+      "prix_regulier": 2,
+      "prix_regulier_texte": "2.00$",
+      "rabais": "0.51$ DE RABAIS",
+      "mots_cles": [
+        "champignons"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Sans Nom Pains à hamburger",
+      "prix": 2,
+      "prix_texte": "2.00$ (560g)",
+      "prix_regulier": 2.69,
+      "prix_regulier_texte": "2.69$",
+      "rabais": "0.69$ DE RABAIS",
+      "mots_cles": [
+        "pain",
+        "hamburger",
+        "BBQ"
+      ],
+      "categorie": "boulangerie"
+    },
+    {
+      "nom": "QUÉBON Lait au chocolat",
+      "prix": 1.99,
+      "prix_texte": "1.99$ (1L)",
+      "prix_regulier": 2.88,
+      "prix_regulier_texte": "2.88$",
+      "rabais": "0.89$ DE RABAIS",
+      "mots_cles": [
+        "lait",
+        "chocolat"
+      ],
+      "categorie": "produits_laitiers"
+    }
+  ],
+  "metro": [
+    {
+      "nom": "Poitrines de poulet désossées",
+      "prix": 8.99,
+      "prix_texte": "8.99$/kg",
+      "prix_regulier": 15.41,
+      "prix_regulier_texte": "15.41$/kg",
+      "rabais": "42% de rabais",
       "mots_cles": [
         "poulet",
         "poitrine"
@@ -17,195 +153,51 @@
       "categorie": "viande"
     },
     {
-      "nom": "Filet de saumon",
-      "prix": 22.02,
-      "prix_texte": "22.02$/kg (9.99$/lb)",
-      "prix_regulier": 29.52,
-      "prix_regulier_texte": "29.52$/kg",
-      "rabais": "7.50$ DE RABAIS",
-      "mots_cles": [
-        "saumon",
-        "poisson"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Lafleur Bacon",
-      "prix": 5.99,
-      "prix_texte": "5.99$ (500g)",
-      "prix_regulier": 11.5,
-      "prix_regulier_texte": "11.50$",
-      "rabais": "5.51$ DE RABAIS",
-      "mots_cles": [
-        "bacon",
-        "déjeuner"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Lafleur Saucisses porc et bœuf",
-      "prix": 6.99,
-      "prix_texte": "6.99$ (1kg)",
-      "prix_regulier": 12,
-      "prix_regulier_texte": "12.00$",
-      "rabais": "5.01$ DE RABAIS",
-      "mots_cles": [
-        "saucisses",
-        "BBQ"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Rooster Riz parfumé au jasmin",
-      "prix": 14.88,
-      "prix_texte": "14.88$ (8kg)",
-      "prix_regulier": 20,
-      "prix_regulier_texte": "20.00$",
-      "rabais": "Limite de 6, après limite 20.00$",
-      "mots_cles": [
-        "riz",
-        "jasmin"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Flamingo Médaillons de poulet au bacon",
-      "prix": 7.99,
-      "prix_texte": "7.99$ (730g)",
-      "prix_regulier": 14.99,
-      "prix_regulier_texte": "14.99$",
-      "rabais": "7.00$ DE RABAIS",
-      "mots_cles": [
-        "poulet",
-        "surgelé"
-      ],
-      "categorie": "surgeles"
-    },
-    {
-      "nom": "Dalisa Combo saucisses de porc",
-      "prix": 6.99,
-      "prix_texte": "6.99$ (900g)",
-      "prix_regulier": 13.99,
-      "prix_regulier_texte": "13.99$",
-      "rabais": "7.00$ DE RABAIS",
-      "mots_cles": [
-        "saucisses",
-        "BBQ"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Délices du Marché Pommes de terre Russet, sac de 10 lb",
+      "nom": "Fraises du Québec 1 lb",
       "prix": 3.99,
-      "prix_texte": "3.99$ (4.54kg)",
-      "prix_regulier": 4.99,
-      "prix_regulier_texte": "4.99$",
-      "rabais": "1.00$ DE RABAIS",
-      "mots_cles": [
-        "patates",
-        "légumes"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Bleuets",
-      "prix": 2.88,
-      "prix_texte": "2.88$",
-      "prix_regulier": 2.98,
-      "prix_regulier_texte": "2.98$",
-      "rabais": "0.10$ DE RABAIS",
-      "mots_cles": [
-        "bleuets",
-        "fruits"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Kiwis",
-      "prix": 0.55,
-      "prix_texte": "0.55$ chacun",
-      "prix_regulier": 1,
-      "prix_regulier_texte": "1.00$",
-      "rabais": "0.45$ DE RABAIS",
-      "mots_cles": [
-        "kiwi",
-        "fruits"
-      ],
-      "categorie": "fruits"
-    }
-  ],
-  "metro": [
-    {
-      "nom": "Fraises du Québec, casseau 1L",
-      "prix": 4.99,
-      "prix_texte": "4.99$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "7.99$",
-      "rabais": "38% de rabais",
+      "prix_texte": "3.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5.99$",
+      "rabais": "33% de rabais",
       "mots_cles": [
         "fraises",
+        "québec",
         "local"
       ],
       "categorie": "fruits"
     },
     {
-      "nom": "Bœuf haché mi-maigre",
-      "prix": 9.99,
-      "prix_texte": "9.99$/kg",
-      "prix_regulier": 13.21,
-      "prix_regulier_texte": "13.21$/kg",
-      "rabais": "24% de rabais",
+      "nom": "Côtelettes de porc avec os",
+      "prix": 6.59,
+      "prix_texte": "6.59$/kg",
+      "prix_regulier": 10.99,
+      "prix_regulier_texte": "10.99$/kg",
+      "rabais": "40% de rabais",
       "mots_cles": [
-        "boeuf",
-        "haché"
+        "porc",
+        "côtelettes"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Fromage Oka classique 200g",
-      "prix": 5.99,
-      "prix_texte": "5.99$",
-      "prix_regulier": 8.49,
-      "prix_regulier_texte": "8.49$",
-      "rabais": "29% de rabais",
+      "nom": "Tomates grappe",
+      "prix": 2.49,
+      "prix_texte": "2.49$/lb",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3.99$/lb",
+      "rabais": "38% de rabais",
       "mots_cles": [
-        "fromage",
-        "québécois"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Asperges fraîches",
-      "prix": 2.99,
-      "prix_texte": "2.99$/lb",
-      "prix_regulier": 4.99,
-      "prix_regulier_texte": "4.99$/lb",
-      "rabais": "40% de rabais",
-      "mots_cles": [
-        "asperges",
-        "légumes"
+        "tomates"
       ],
       "categorie": "legumes"
     },
     {
-      "nom": "Pain tranché Villaggio",
-      "prix": 2.99,
-      "prix_texte": "2.99$",
-      "prix_regulier": 4.49,
-      "prix_regulier_texte": "4.49$",
+      "nom": "Yogourt grec Oikos 750g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 7.49,
+      "prix_regulier_texte": "7.49$",
       "rabais": "33% de rabais",
-      "mots_cles": [
-        "pain"
-      ],
-      "categorie": "boulangerie"
-    },
-    {
-      "nom": "Yogourt grec Liberté 750g",
-      "prix": 4.49,
-      "prix_texte": "4.49$",
-      "prix_regulier": 6.99,
-      "prix_regulier_texte": "6.99$",
-      "rabais": "36% de rabais",
       "mots_cles": [
         "yogourt",
         "grec"
@@ -213,144 +205,163 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Cuisses de poulet avec dos",
-      "prix": 4.4,
-      "prix_texte": "4.40$/kg (1.99$/lb)",
-      "prix_regulier": 6.59,
-      "prix_regulier_texte": "6.59$/kg",
+      "nom": "Asperges du Québec",
+      "prix": 2.99,
+      "prix_texte": "2.99$/botte",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4.99$/botte",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "asperges",
+        "québec",
+        "local"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Saucisses italiennes Olymel",
+      "prix": 5.99,
+      "prix_texte": "5.99$ (450g)",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8.99$",
       "rabais": "33% de rabais",
       "mots_cles": [
-        "poulet",
-        "cuisses"
+        "saucisses",
+        "BBQ"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Œufs gros calibre 12",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 5.29,
-      "prix_regulier_texte": "5.29$",
-      "rabais": "25% de rabais",
+      "nom": "Bleuets cultivés",
+      "prix": 3.49,
+      "prix_texte": "3.49$ (170g)",
+      "prix_regulier": 4.99,
+      "prix_regulier_texte": "4.99$",
+      "rabais": "30% de rabais",
       "mots_cles": [
-        "oeufs"
+        "bleuets"
       ],
-      "categorie": "produits_laitiers"
+      "categorie": "fruits"
     }
   ],
   "adonis": [
     {
-      "nom": "Côtelette de porc avec os régulier ou mariné",
-      "prix": 2.49,
-      "prix_texte": "2.49$/lb",
-      "prix_regulier": 5.93,
-      "prix_regulier_texte": "5.93$/lb",
-      "rabais": "58% de rabais",
-      "mots_cles": [
-        "porc",
-        "côtelette"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Poitrines de poulet désossées Halal",
-      "prix": 5.99,
-      "prix_texte": "5.99$/lb",
-      "prix_regulier": 9.99,
-      "prix_regulier_texte": "9.99$/lb",
-      "rabais": "40% de rabais",
-      "mots_cles": [
-        "poulet",
-        "halal"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Fromage labneh Phoenicia ou Cedar 500g",
-      "prix": 4.97,
-      "prix_texte": "4.97$",
-      "prix_regulier": 6.46,
-      "prix_regulier_texte": "6.46$",
-      "rabais": "23% de rabais",
-      "mots_cles": [
-        "fromage",
-        "labneh"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Yogourt nature Phoenicia 750g",
-      "prix": 1.88,
-      "prix_texte": "1.88$",
-      "prix_regulier": 3.76,
-      "prix_regulier_texte": "3.76$",
-      "rabais": "50% de rabais",
-      "mots_cles": [
-        "yogourt"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Daurade royale",
+      "nom": "Rôti palette de boeuf désossé",
       "prix": 6.77,
       "prix_texte": "6.77$/lb",
-      "prix_regulier": 12.09,
-      "prix_regulier_texte": "12.09$/lb",
-      "rabais": "44% de rabais",
+      "prix_regulier": 14.4,
+      "prix_regulier_texte": "14.40$/lb",
+      "rabais": "53% de rabais",
       "mots_cles": [
-        "poisson",
-        "daurade"
+        "boeuf",
+        "rôti"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Cerises États-Unis",
+      "prix": 4.88,
+      "prix_texte": "4.88$/lb",
+      "prix_regulier": 9.95,
+      "prix_regulier_texte": "9.95$/lb",
+      "rabais": "51% de rabais",
+      "mots_cles": [
+        "cerises",
+        "fruits"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Filet de saumon de l'Atlantique frais",
+      "prix": 8.99,
+      "prix_texte": "8.99$/lb",
+      "prix_regulier": 17.98,
+      "prix_regulier_texte": "17.98$/lb",
+      "rabais": "50% de rabais",
+      "mots_cles": [
+        "saumon",
+        "poisson"
       ],
       "categorie": "poisson"
     },
     {
-      "nom": "Crevettes crues 91-110 Irrésistible 340g",
-      "prix": 5.99,
-      "prix_texte": "5.99$",
-      "prix_regulier": 9.99,
-      "prix_regulier_texte": "9.99$",
-      "rabais": "4.00$ de rabais",
+      "nom": "Asperges Québec",
+      "prix": 2.99,
+      "prix_texte": "2.99$/lb",
+      "prix_regulier": 5.98,
+      "prix_regulier_texte": "5.98$/lb",
+      "rabais": "50% de rabais",
       "mots_cles": [
-        "crevettes",
-        "fruits de mer"
+        "asperges",
+        "local",
+        "québec"
       ],
-      "categorie": "poisson"
+      "categorie": "legumes"
     },
     {
-      "nom": "Concombres libanais (Québec)",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Produit local",
+      "nom": "Cuisse de poulet avec dos (régulière ou Halal)",
+      "prix": 2.49,
+      "prix_texte": "2.49$/lb",
+      "prix_regulier": 4.98,
+      "prix_regulier_texte": "4.98$/lb",
+      "rabais": "50% de rabais",
       "mots_cles": [
-        "concombre",
-        "local"
+        "poulet",
+        "cuisse"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Fromage halloom Cedar 400g",
+      "prix": 6.77,
+      "prix_texte": "6.77$",
+      "prix_regulier": 10.92,
+      "prix_regulier_texte": "10.92$",
+      "rabais": "38% de rabais",
+      "mots_cles": [
+        "fromage",
+        "halloom",
+        "méditerranéen"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Laitues coeurs de romaine 3 un.",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6.99$",
+      "rabais": "43% de rabais",
+      "mots_cles": [
+        "laitue",
+        "romaine",
+        "salade"
       ],
       "categorie": "legumes"
     }
   ],
   "costco": [
     {
-      "nom": "Poitrines de poulet désossées Kirkland 4kg",
-      "prix": 52.99,
-      "prix_texte": "52.99$ (13.25$/kg)",
+      "nom": "Côtes levées de porc St-Louis",
+      "prix": 38.99,
+      "prix_texte": "38.99$ (2.5kg)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "Format économique",
+      "rabais": "",
       "mots_cles": [
-        "poulet",
-        "bulk"
+        "porc",
+        "côtes",
+        "BBQ"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Bœuf haché mi-maigre Kirkland 2kg",
-      "prix": 29.99,
-      "prix_texte": "29.99$ (15$/kg)",
+      "nom": "Boeuf haché extra-maigre",
+      "prix": 34.99,
+      "prix_texte": "34.99$ (1.8kg)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "Format économique",
+      "rabais": "",
       "mots_cles": [
         "boeuf",
         "haché"
@@ -358,56 +369,58 @@
       "categorie": "viande"
     },
     {
-      "nom": "Fromage cheddar fort Kirkland 1kg",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
+      "nom": "Crevettes crues 21-25",
+      "prix": 42.99,
+      "prix_texte": "42.99$ (2kg)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "Meilleur prix/kg",
+      "rabais": "",
       "mots_cles": [
-        "fromage",
-        "cheddar"
+        "crevettes",
+        "fruits de mer"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Bavette de boeuf AAA",
+      "prix": 44.99,
+      "prix_texte": "44.99$ (1.5kg)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "boeuf",
+        "bavette",
+        "BBQ"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Beurre salé Lactantia 2x454g",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "beurre"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Lait 2% Natrel 4L",
-      "prix": 7.49,
-      "prix_texte": "7.49$ (1.87$/L)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Meilleur prix/L",
-      "mots_cles": [
-        "lait"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Spaghetti Barilla 4x500g",
-      "prix": 11.99,
-      "prix_texte": "11.99$ (2kg)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Format économique",
-      "mots_cles": [
-        "pâtes",
-        "spaghetti"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Sucre blanc Lantic 10kg",
+      "nom": "Sauce BBQ Kirkland 2x1.2kg",
       "prix": 14.99,
       "prix_texte": "14.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "Meilleur prix/kg",
+      "rabais": "",
       "mots_cles": [
-        "sucre"
+        "sauce",
+        "BBQ"
       ],
       "categorie": "epicerie"
     }
   ],
-  "analyse": "Cette semaine, les meilleures aubaines sont chez Adonis avec les côtelettes de porc à 58% de rabais (2.49$/lb) et le yogourt Phoenicia à moitié prix (1.88$). Chez Maxi, le saumon (-7.50$), le bacon Lafleur (-5.51$) et les médaillons Flamingo (-7$) offrent d'excellentes économies. Pour le garde-manger, le riz jasmin 8kg à 14.88$ chez Maxi est imbattable. Profitez du beau temps pour le BBQ avec les saucisses Dalisa à 50% de rabais!",
-  "economies_estimees": "~45-55$"
+  "analyse": "Semaine idéale pour le BBQ de la longue fin de semaine des Patriotes! Le fromage P'tit Québec à 8.99$ de rabais chez Maxi est imbattable. Les cerises sont en vedette partout : 4.88$/lb chez Adonis (51% de rabais) vs 3.99$/lb chez Maxi. Le saumon frais à 8.99$/lb chez Adonis (50% de rabais) et le rôti de palette à 6.77$/lb sont des aubaines exceptionnelles pour une famille. Profitez des asperges du Québec à 2.99$ disponibles chez Adonis et Metro — c'est la pleine saison!",
+  "economies_estimees": "~35-45$"
 }
