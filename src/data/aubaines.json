@@ -1,6 +1,6 @@
 {
   "semaine": "2026-06-01",
-  "genereeLe": "2026-05-30T06:21:25.636Z",
+  "genereeLe": "2026-05-30T06:50:18.060Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
@@ -391,71 +391,70 @@
   ],
   "costco": [
     {
-      "nom": "Huile de canola Kirkland (3 L)",
+      "nom": "Pâte de tomate (6 x 156 ml)",
+      "prix": 8.99,
+      "prix_texte": "8.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "pâte tomate"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Moutarde de Dijon Maille (800 ml)",
+      "prix": 9.99,
+      "prix_texte": "9.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "moutarde",
+        "dijon"
+      ],
+      "categorie": "condiments"
+    },
+    {
+      "nom": "Fromage en grains frais (600 g)",
       "prix": 12.99,
       "prix_texte": "12.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "huile",
-        "canola"
+        "fromage en grains",
+        "poutine"
       ],
-      "categorie": "condiments"
+      "categorie": "produits_laitiers"
     },
     {
-      "nom": "Sirop d'érable pur Kirkland (1 L)",
-      "prix": 18.99,
-      "prix_texte": "18.99$",
+      "nom": "Saucisses italiennes douces (1.5 kg)",
+      "prix": 19.99,
+      "prix_texte": "19.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "sirop érable",
-        "québec"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Agneau gigot désossé (1.8 kg)",
-      "prix": 59.99,
-      "prix_texte": "59.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "agneau",
-        "gigot"
+        "saucisse",
+        "italienne",
+        "porc"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Fromage cheddar fort Kirkland (1 kg)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
+      "nom": "Saumon atlantique côté frais (1.5 kg)",
+      "prix": 32.99,
+      "prix_texte": "21.99$/kg",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "cheddar",
-        "fromage",
-        "fort"
+        "saumon",
+        "atlantique",
+        "frais"
       ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Yogourt grec Kirkland nature 0% (3 x 650 g)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "yogourt",
-        "grec",
-        "nature"
-      ],
-      "categorie": "produits_laitiers"
+      "categorie": "poisson"
     },
     {
       "nom": "Sauce BBQ Kirkland (2 x 1.2 kg)",
@@ -471,30 +470,30 @@
       "categorie": "condiments"
     },
     {
-      "nom": "Pâtes penne Kirkland (3 kg)",
-      "prix": 9.99,
-      "prix_texte": "9.99$",
+      "nom": "Oeufs gros calibre Kirkland (30 unités)",
+      "prix": 11.99,
+      "prix_texte": "11.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "pâtes",
-        "penne"
+        "oeufs",
+        "gros"
       ],
-      "categorie": "epicerie_seche"
+      "categorie": "produits_laitiers"
     },
     {
-      "nom": "Huile végétale (5 L)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
+      "nom": "Sauce tomate marinara Kirkland (3 x 860 ml)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "huile",
-        "végétale"
+        "sauce tomate",
+        "marinara"
       ],
-      "categorie": "condiments"
+      "categorie": "epicerie_seche"
     }
   ],
   "analyse": "",
