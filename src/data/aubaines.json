@@ -1,249 +1,249 @@
 {
   "semaine": "2026-06-08",
-  "genereeLe": "2026-06-06T06:28:20.526Z",
+  "genereeLe": "2026-06-06T06:57:58.812Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
-      "nom": "Entièrement cuit côtes levées barbeque texan",
-      "prix": 7.5,
-      "prix_texte": "7,50 $ (680 g, 1,32 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 8, après limite 9,00 $",
+      "nom": "Roma Pepperoni Sans Gluten",
+      "prix": 3.5,
+      "prix_texte": "3,50 $ (250 g, 1,40 $/100g)",
+      "prix_regulier": 5,
+      "prix_regulier_texte": "5,00 $ (régulier)",
+      "rabais": "1,50 $ DE RABAIS",
       "mots_cles": [
-        "entièrement"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Bleuets",
-      "prix": 2.69,
-      "prix_texte": "2,69 $ (1 ea, 0,79 $/100g)",
-      "prix_regulier": 2.98,
-      "prix_regulier_texte": "2,98 $ (régulier)",
-      "rabais": "0,29 $ DE RABAIS",
-      "mots_cles": [
-        "bleuets"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "le Choix du Président Champignons blancs entiers",
-      "prix": 1.44,
-      "prix_texte": "1,44 $ (227 g, 0,63 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "champignons"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Laitue iceberg",
-      "prix": 1.77,
-      "prix_texte": "1,77 $ (1 ea, 1,77 $/1ch)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "lait"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Poulet entier",
-      "prix": 7.67,
-      "prix_texte": "environ 7,67 $ (4,39 $/1kg 1,99 $/1lb)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "poulet"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Poitrine de poulet désossée et sans peau",
-      "prix": 15.55,
-      "prix_texte": "environ 15,55 $ (13,21 $/1kg 5,99 $/1lb)",
-      "prix_regulier": 17.62,
-      "prix_regulier_texte": "17,62 $ (régulier)",
-      "rabais": "2,07 $ DE RABAIS",
-      "mots_cles": [
-        "poulet"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Filet de saumon",
-      "prix": 13.46,
-      "prix_texte": "environ 13,46 $ (19,82 $/1kg 8,99 $/1lb)",
-      "prix_regulier": 22.45,
-      "prix_regulier_texte": "22,45 $ (régulier)",
-      "rabais": "8,99 $ DE RABAIS",
-      "mots_cles": [
-        "saumon"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "le Choix du Président Tarte-gâteau au fromage Franchement fraise Le triple délic",
-      "prix": 12,
-      "prix_texte": "12,00 $ (730 g, 1,64 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "fraises",
-        "fromage"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Poivrons rouges de champ paquet de 4",
-      "prix": 2.99,
-      "prix_texte": "2,99 $ (1 ea, 0,75 $/1ch)",
-      "prix_regulier": 6,
-      "prix_regulier_texte": "6,00 $ (régulier)",
-      "rabais": "3,01 $ DE RABAIS",
-      "mots_cles": [
-        "poivron"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "le Choix du Président Tomates cerises Mixiany ",
-      "prix": 6,
-      "prix_texte": "6,00 $ (340 g, 1,76 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "tomates"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Saputo Fromage Mozzarellissima pizza mozzarella",
-      "prix": 5.77,
-      "prix_texte": "5,77 $ (500 g, 1,15 $/100g)",
-      "prix_regulier": 8.5,
-      "prix_regulier_texte": "8,50 $ (régulier)",
-      "rabais": "2,73 $ DE RABAIS",
-      "mots_cles": [
-        "fromage",
-        "mozzarella"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "le Choix du Président Limonade à la Goyave",
-      "prix": 3,
-      "prix_texte": "3,00 $ (1.89 l, 0,16 $/100ml)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "le"
+        "roma"
       ],
       "categorie": "epicerie"
     },
     {
-      "nom": "Oasis Jus d’orange sans pulpe non fait de concentré",
-      "prix": 3.85,
-      "prix_texte": "3,85 $ (1.5 l, 0,33 $/100ml)",
+      "nom": "Doritos Chips tortilla aromatisées Fromage nacho",
+      "prix": 4,
+      "prix_texte": "4,00 $ (235 g, 1,70 $/100g)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 5,00 $",
+      "rabais": "",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "le Choix du Président Jus d’orange avec pulpe",
+      "prix": 6.5,
+      "prix_texte": "6,50 $ (2.5 l, 0,26 $/100ml)",
+      "prix_regulier": 7,
+      "prix_regulier_texte": "7,00 $ (régulier)",
+      "rabais": "0,50 $ DE RABAIS",
       "mots_cles": [
         "oranges"
       ],
       "categorie": "fruits"
     },
     {
-      "nom": "Délices du Marché Mini concombres",
-      "prix": 1.99,
-      "prix_texte": "1,99 $ (6 ea, 0,33 $/1ch)",
-      "prix_regulier": 3,
-      "prix_regulier_texte": "3,00 $ (régulier)",
-      "rabais": "1,01 $ DE RABAIS",
+      "nom": "Nestlé Drumstick Cornets Vanille Au Caramel",
+      "prix": 4,
+      "prix_texte": "4,00 $ (4x140.0 ml, 0,71 $/100ml)",
+      "prix_regulier": 5.5,
+      "prix_regulier_texte": "5,50 $ (régulier)",
+      "rabais": "1,50 $ DE RABAIS",
       "mots_cles": [
-        "délices"
+        "nestlé"
       ],
       "categorie": "epicerie"
     },
     {
-      "nom": "Saputo Fromage Mozzarellissima pizza mozzarellissima Chef Collection",
-      "prix": 5.77,
-      "prix_texte": "5,77 $ (500 g, 1,15 $/100g)",
-      "prix_regulier": 8.5,
-      "prix_regulier_texte": "8,50 $ (régulier)",
-      "rabais": "2,73 $ DE RABAIS",
+      "nom": "Kraft Cheez whiz tartinade de fromage",
+      "prix": 3.97,
+      "prix_texte": "3,97 $ (450 g, 1,33 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "Limite de 6, après limite 6,00 $",
       "mots_cles": [
         "fromage"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "le Choix du Président Muffins double chocolat le Décadent®",
-      "prix": 6,
-      "prix_texte": "6,00 $ (360 g, 1,67 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "nom": "SpongeTowels Essuie-tout",
+      "prix": 7,
+      "prix_texte": "7,00 $ (3 ea, 2,33 $/1ch)",
+      "prix_regulier": 8,
+      "prix_regulier_texte": "8,00 $ (régulier)",
+      "rabais": "1,00 $ DE RABAIS",
       "mots_cles": [
-        "le"
+        "spongetowels"
       ],
       "categorie": "epicerie"
     },
     {
-      "nom": "Saputo Feta Cheese",
-      "prix": 6.5,
-      "prix_texte": "6,50 $ (300 g, 2,17 $/100g)",
-      "prix_regulier": 9,
-      "prix_regulier_texte": "9,00 $ (régulier)",
-      "rabais": "2,50 $ DE RABAIS",
-      "mots_cles": [
-        "saputo"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Framboises, demi-pinte",
-      "prix": 3.99,
-      "prix_texte": "3,99 $ (170 g, 2,35 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "framboises"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "POM Pain à sandwich Superclub blanc ultra-moelleux",
-      "prix": 4,
-      "prix_texte": "4,00 $ (675 g, 0,59 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
+      "nom": "D’Italiano Pain au sésame",
+      "prix": 3.5,
+      "prix_texte": "3,50 $ (675 g, 0,52 $/100g)",
+      "prix_regulier": 4,
+      "prix_regulier_texte": "4,00 $ (régulier)",
+      "rabais": "0,50 $ DE RABAIS",
       "mots_cles": [
         "pain"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Marina Crevettes sauvages non cuites, faciles à peler",
+      "nom": "Del Monte Mélange de jus soleil du matin",
       "prix": 7,
-      "prix_texte": "7,00 $ (300 g, 2,33 $/100g)",
-      "prix_regulier": 11.99,
-      "prix_regulier_texte": "11,99 $ (régulier)",
-      "rabais": "4,99 $ DE RABAIS",
+      "prix_texte": "7,00 $ (2.5 l, 0,28 $/100ml)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
       "mots_cles": [
-        "crevettes"
+        "del"
       ],
-      "categorie": "poisson"
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Tomates Cerizo",
+      "prix": 2,
+      "prix_texte": "2,00 $ (150 g, 13,33 $/100g)",
+      "prix_regulier": 3.5,
+      "prix_regulier_texte": "3,50 $ (régulier)",
+      "rabais": "1,50 $ DE RABAIS",
+      "mots_cles": [
+        "tomates",
+        "riz"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "le Choix du Président Cheddar marbré sans lactose",
+      "prix": 5.77,
+      "prix_texte": "5,77 $ (400 g, 1,44 $/100g)",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "6,79 $ (régulier)",
+      "rabais": "1,02 $ DE RABAIS",
+      "mots_cles": [
+        "cheddar"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "le Choix du Président Bleuets cultivés",
+      "prix": 4,
+      "prix_texte": "4,00 $ (600 g, 0,67 $/100g)",
+      "prix_regulier": 4.75,
+      "prix_regulier_texte": "4,75 $ (régulier)",
+      "rabais": "0,75 $ DE RABAIS",
+      "mots_cles": [
+        "bleuets"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "le Choix du Président Fromage cheddar blanc fort, sans lactose",
+      "prix": 5.77,
+      "prix_texte": "5,77 $ (400 g, 1,44 $/100g)",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "6,79 $ (régulier)",
+      "rabais": "1,02 $ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "cheddar"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "D’Italiano Pain à 100% de blé entier tranché épais",
+      "prix": 3.5,
+      "prix_texte": "3,50 $ (675 g, 0,52 $/100g)",
+      "prix_regulier": 4,
+      "prix_regulier_texte": "4,00 $ (régulier)",
+      "rabais": "0,50 $ DE RABAIS",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Pogo Saucisses sur bâtonnet original",
+      "prix": 8.5,
+      "prix_texte": "8,50 $ (750 g, 1,13 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "saucisse"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Philadelphia Fromage à la crème Original",
+      "prix": 5,
+      "prix_texte": "5,00 $ (340 g, 1,47 $/100g)",
+      "prix_regulier": 7.79,
+      "prix_regulier_texte": "7,79 $ (régulier)",
+      "rabais": "2,79 $ DE RABAIS",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "St. Viateur ST VIATEUR BAGEL SESAME",
+      "prix": 5,
+      "prix_texte": "5,00 $ (480 g, 1,04 $/100g)",
+      "prix_regulier": 6,
+      "prix_regulier_texte": "6,00 $ (régulier)",
+      "rabais": "1,00 $ DE RABAIS",
+      "mots_cles": [
+        "st."
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Botan Riz Botan Calrose",
+      "prix": 14.88,
+      "prix_texte": "14,88 $ (8 kg, 0,19 $/100g)",
+      "prix_regulier": 17.99,
+      "prix_regulier_texte": "17,99 $ (régulier)",
+      "rabais": "3,11 $ DE RABAIS",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "le Choix du Président Bacon",
+      "prix": 6,
+      "prix_texte": "6,00 $ (375 g, 1,60 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "bacon"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Campbell’s Soupe condensée aux tomates",
+      "prix": 0.88,
+      "prix_texte": "0,88 $ (284 ml, 0,31 $/100ml)",
+      "prix_regulier": 1.49,
+      "prix_regulier_texte": "1,49 $ (régulier)",
+      "rabais": "0,61 $ DE RABAIS",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Lactantia Purfiltre lait entier 325 %",
+      "prix": 5.25,
+      "prix_texte": "5,25 $ (2 l, 0,26 $/100ml)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers"
     }
   ],
   "metro": [],
@@ -388,114 +388,114 @@
   ],
   "costco": [
     {
-      "nom": "Filets de saumon sockeye sauvage surgelé (1.36 kg)",
-      "prix": 42.99,
-      "prix_texte": "42.99$",
+      "nom": "Poitrines de poulet désossées Kirkland (4 kg)",
+      "prix": 52.99,
+      "prix_texte": "52.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "saumon",
-        "sockeye",
-        "sauvage",
-        "surgelé"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Filet mignon de boeuf AAA (1.2 kg)",
-      "prix": 69.99,
-      "prix_texte": "69.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "boeuf",
-        "filet mignon",
-        "steak"
+        "poulet",
+        "poitrine",
+        "désossé"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Beurre salé Kirkland (4 x 454 g)",
-      "prix": 22.99,
-      "prix_texte": "22.99$",
+      "nom": "Saucisses italiennes Kirkland (2.2 kg)",
+      "prix": 24.99,
+      "prix_texte": "24.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "beurre",
-        "salé"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage cheddar fort Kirkland (1 kg)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "fromage",
-        "cheddar",
-        "fort"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Bavette de boeuf AAA (1.5 kg)",
-      "prix": 45.99,
-      "prix_texte": "45.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "boeuf",
-        "bavette",
-        "steak"
+        "saucisse",
+        "porc",
+        "italienne"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Dinde hachée Kirkland (1.8 kg)",
-      "prix": 22.99,
-      "prix_texte": "22.99$",
+      "nom": "Mayonnaise Hellmann's (1.8 L)",
+      "prix": 13.99,
+      "prix_texte": "13.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "dinde",
-        "haché",
-        "volaille"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Miel pur Kirkland (3 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "miel"
+        "mayonnaise",
+        "mayo"
       ],
       "categorie": "condiments"
     },
     {
-      "nom": "Frites de pommes de terre surgelées (4 kg)",
+      "nom": "Gruau instantané Quaker (52 sachets)",
       "prix": 14.99,
       "prix_texte": "14.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "frites",
-        "pommes de terre",
-        "surgelé"
+        "gruau",
+        "avoine",
+        "déjeuner"
       ],
-      "categorie": "surgele"
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Jambon Forêt-Noire tranché (1 kg)",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "jambon",
+        "charcuterie",
+        "tranché"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Noix de Grenoble Kirkland (1.36 kg)",
+      "prix": 21.99,
+      "prix_texte": "21.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "noix",
+        "grenoble"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Hauts de cuisses de poulet désossés (2.5 kg)",
+      "prix": 34.99,
+      "prix_texte": "34.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "poulet",
+        "cuisse",
+        "désossé"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Longe de porc désossée (3 kg)",
+      "prix": 32.99,
+      "prix_texte": "32.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "porc",
+        "longe",
+        "rôti"
+      ],
+      "categorie": "viande"
     }
   ],
   "analyse": "",
