@@ -15,16 +15,16 @@
     "url": "https://www.ticketmaster.ca/the-great-legends-quebec-quebec-06-14-2026/event/3100635B35DC1288",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 55,
+    "score_famille": 65,
     "score_adultes": 75,
-    "explication_famille": "Pour 💚 Patricia · spectacle théâtral, mais long pour 🍒🍒 les jumelles",
-    "explication_adultes": "Soirée culturelle pour 💚 Patricia et 🦉 Yannick · théâtre, légendes",
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · théâtre, culture. 🐤 Joseph moyennement intéressé, difficile pour 🍒 bébés",
+    "explication_adultes": "Soirée culturelle pour 💚 Patricia · théâtre élégant, ambiance artistique",
     "scores_membres": {
       "Patricia": 85,
       "Yannick": 70,
-      "Joseph": 45,
-      "Mika": 25,
-      "Luce": 25
+      "Joseph": 50,
+      "Mika": 30,
+      "Luce": 30
     }
   },
   {
@@ -43,16 +43,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-06-19-2026/event/31006355714C3C08",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -71,16 +71,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-06-20-2026/event/31006355714F3C13",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -101,8 +101,8 @@
     "pourQui": "famille",
     "score_famille": 0,
     "score_adultes": 0,
-    "explication_famille": "Événement privé · non pertinent pour la famille Dufresne",
-    "explication_adultes": "Cérémonie scolaire privée · sans intérêt pour le couple",
+    "explication_famille": "Événement privé sans lien avec la famille Dufresne · non pertinent",
+    "explication_adultes": "Cérémonie privée d'une autre institution · aucun intérêt",
     "scores_membres": {
       "Patricia": 0,
       "Yannick": 0,
@@ -127,16 +127,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-06-21-2026/event/3100635571533C20",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -155,16 +155,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-quebec-quebec-06-25-2026/event/3100635E86855C55",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -183,16 +183,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-quebec-quebec-06-26-2026/event/3100635E868A5C5B",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -211,16 +211,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-quebec-quebec-06-27-2026/event/3100635E868E5C5E",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -239,14 +239,14 @@
     "url": "https://www.ticketmaster.ca/flo-rida-quebec-quebec-06-28-2026/event/310063858AB35F26",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 35,
+    "score_famille": 45,
     "score_adultes": 50,
-    "explication_famille": "Concert rap/hip-hop · trop fort pour 🍒🍒 bébés, moyen pour 🐤 Joseph",
-    "explication_adultes": "Ambiance festive mais pas le style de 💚 Patricia ni 🦉 Yannick",
+    "explication_famille": "Concert hip-hop/pop pour 🐤 Joseph · trop bruyant pour 🍒 bébés, pas le style de 💚🦉",
+    "explication_adultes": "Ambiance festive mais pas le genre préféré de 💚 Patricia et 🦉 Yannick",
     "scores_membres": {
       "Patricia": 40,
       "Yannick": 35,
-      "Joseph": 55,
+      "Joseph": 70,
       "Mika": 15,
       "Luce": 15
     }
@@ -267,16 +267,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-quebec-quebec-06-28-2026/event/3100635E86925C61",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -295,14 +295,14 @@
     "url": "http://palaismontcalm.tuxedobillet.com/main/father-john-misty-mev3",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 30,
-    "score_adultes": 80,
-    "explication_famille": "Concert folk intimiste · inadapté pour 🐤 Joseph et 🍒🍒 bébés",
-    "explication_adultes": "Soirée idéale pour 💚 Patricia et 🦉 Yannick · découverte musicale, calme",
+    "score_famille": 35,
+    "score_adultes": 70,
+    "explication_famille": "Concert folk-rock introspectif · parfait pour 💚🦉, ennuyant pour 🐤, inadapté aux 🍒 bébés",
+    "explication_adultes": "Soirée musicale raffinée pour 💚 Patricia et 🦉 Yannick · culture, découverte",
     "scores_membres": {
-      "Patricia": 80,
-      "Yannick": 75,
-      "Joseph": 25,
+      "Patricia": 75,
+      "Yannick": 70,
+      "Joseph": 30,
       "Mika": 10,
       "Luce": 10
     }
@@ -323,16 +323,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-02-2026/event/31006476E4D78CFB",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -351,14 +351,14 @@
     "url": "https://evenko.ca/fr/evenements/palais-montcalm/steve-earle?code=e007604",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 25,
-    "score_adultes": 70,
-    "explication_famille": "Concert folk/country · pas adapté pour 🐤 Joseph ni 🍒🍒 bébés",
-    "explication_adultes": "Pour 🦉 Yannick · découverte musicale, histoires, ambiance intime",
+    "score_famille": 30,
+    "score_adultes": 75,
+    "explication_famille": "Concert country/folk pour 🦉 Yannick · trop calme pour 🐤, inadapté aux 🍒 tout-petits",
+    "explication_adultes": "Soirée intimiste parfaite pour 🦉 Yannick · histoires, découverte musicale authentique",
     "scores_membres": {
       "Patricia": 65,
-      "Yannick": 75,
-      "Joseph": 20,
+      "Yannick": 80,
+      "Joseph": 25,
       "Mika": 10,
       "Luce": 10
     }
@@ -379,16 +379,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-03-2026/event/31006476E78B8F22",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -407,16 +407,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-04-2026/event/31006476E78C8F27",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -435,16 +435,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-05-2026/event/31006476E4D98CFD",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -463,16 +463,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-09-2026/event/31006476E4DA8CFF",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -491,16 +491,16 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-10-2026/event/31006476E78E8F30",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -519,17 +519,322 @@
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-11-2026/event/31006476E78F8F38",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 50,
+    "score_famille": 60,
     "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · musique énergique, mais trop bruyant pour 🍒🍒 bébés",
-    "explication_adultes": "Spectacle musical divertissant pour 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Spectacle musical énergique pour 🐤 Joseph · 💚 Patricia appréciera le show. Long pour 🍒 jumelles",
+    "explication_adultes": "Concert divertissant pour 💚 Patricia et 🦉 Yannick · musique, spectacle",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 55,
-      "Joseph": 70,
-      "Mika": 20,
-      "Luce": 20
+      "Joseph": 65,
+      "Mika": 25,
+      "Luce": 25
     }
+  },
+  {
+    "nom": "Balade sur les Plaines d'Abraham et pique-nique familial",
+    "lieu": "Parc des Plaines d'Abraham, Québec",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-15",
+    "url": "https://www.lesplainesdabraham.ca",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Grand espace vert parfait pour courir 🐤 Joseph et découvrir l'histoire 🦉 Yannick! Les jumelles 🍒 Mika et Luce adoreront rouler sur l'herbe pendant que 💚 Patricia profite du paysage élégant sur le fleuve.",
+    "score_famille": 95,
+    "score_adultes": 80,
+    "explication_famille": "Parfait pour tous! 🐤 Joseph court, 🦉 Yannick explore l'histoire, 🍒 jumelles sur l'herbe, 💚 vue élégante",
+    "explication_adultes": "Balade romantique pour 💚 Patricia et 🦉 Yannick · histoire, paysage majestueux",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 95,
+      "Joseph": 90,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Visite du Musée de la civilisation - Exposition permanente",
+    "lieu": "Musée de la civilisation, 85 rue Dalhousie, Québec",
+    "duree": 150,
+    "cout": 22,
+    "cout_adulte": 22,
+    "cout_enfant": 8,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-16",
+    "url": "https://www.mcq.org",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Un incontournable pour 💚 Patricia et 🦉 Yannick! Expositions interactives qui captiveront 🐤 Joseph. Espaces colorés et ludiques pour les petites 🍒 curieuses. Gratuit pour les moins de 12 ans le mercredi!",
+    "score_famille": 92,
+    "score_adultes": 90,
+    "explication_famille": "Idéal! 💚🦉 culture et histoire, 🐤 Joseph zones interactives, 🍒 espaces colorés et ludiques",
+    "explication_adultes": "Découvertes intellectuelles pour 🦉 Yannick et 💚 Patricia · culture, arts, histoire",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 95,
+      "Joseph": 80,
+      "Mika": 85,
+      "Luce": 85
+    }
+  },
+  {
+    "nom": "Marché public du Vieux-Port de Québec",
+    "lieu": "Marché du Vieux-Port, 160 Quai Saint-André, Québec",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-17",
+    "url": "https://www.marchevieuxport.com",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Paradis gourmand pour 💚 Patricia et 🦉 Yannick! Fruits frais colorés qui émerveilleront 🍒 Mika et Luce. 🐤 Joseph pourra goûter aux produits locaux. Ambiance animée et entrée gratuite!",
+    "score_famille": 90,
+    "score_adultes": 88,
+    "explication_famille": "Bonheur gourmand! 💚🦉 gastronomie locale, 🐤 découvertes, 🍒 couleurs et fruits frais",
+    "explication_adultes": "Escapade gastronomique pour 💚 Patricia et 🦉 Yannick · terroir, découvertes culinaires",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 90,
+      "Joseph": 75,
+      "Mika": 90,
+      "Luce": 90
+    }
+  },
+  {
+    "nom": "Heure du conte à la Bibliothèque Gabrielle-Roy",
+    "lieu": "Bibliothèque Gabrielle-Roy, 350 rue Saint-Joseph Est, Québec",
+    "duree": 45,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "apprentissage",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-18",
+    "url": "https://www.bibliothequesdequebec.qc.ca",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Activité douce et gratuite parfaite pour 🍒 Luce et Mika! Histoires colorées et chansons. 💚 Patricia appréciera ce moment calme et culturel en famille.",
+    "score_famille": 82,
+    "score_adultes": 50,
+    "explication_famille": "Doux moment pour 🍒 Mika et Luce · histoires colorées! 💚 Patricia aime ce calme culturel. 🐤 moins captivé",
+    "explication_adultes": "Activité orientée jeunes enfants · peu stimulant pour 💚🦉 seuls",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 55,
+      "Joseph": 40,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Souper gastronomique au Restaurant Légende",
+    "lieu": "Restaurant Légende, 255 rue Saint-Paul, Vieux-Québec",
+    "duree": 120,
+    "cout": 85,
+    "cout_adulte": 85,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "toute",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-18",
+    "url": "https://www.restaurantlegende.com",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Soirée en amoureux pour 💚 Patricia et 🦉 Yannick! Cuisine québécoise raffinée, produits du terroir et ambiance élégante. Une escapade gourmande bien méritée pendant que les enfants sont gardés!",
+    "score_famille": 20,
+    "score_adultes": 98,
+    "explication_famille": "Restaurant gastronomique inadapté aux enfants · soirée adultes uniquement",
+    "explication_adultes": "Soirée parfaite pour 💚 Patricia et 🦉 Yannick · gastronomie raffinée, terroir, élégance",
+    "scores_membres": {
+      "Patricia": 98,
+      "Yannick": 95,
+      "Joseph": 10,
+      "Mika": 5,
+      "Luce": 5
+    }
+  },
+  {
+    "nom": "Randonnée familiale au Parc de la Chute-Montmorency",
+    "lieu": "Parc de la Chute-Montmorency, 5300 boul. Sainte-Anne, Québec",
+    "duree": 180,
+    "cout": 6.57,
+    "cout_adulte": 6.57,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-19",
+    "url": "https://www.sepaq.com/ct/pcm",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Aventure spectaculaire pour 🐤 Joseph qui adorera les escaliers et la tyrolienne! 🦉 Yannick explorera l'histoire du site. Vue époustouflante pour 💚 Patricia. Promenade en poussette possible pour 🍒 les jumelles!",
+    "score_famille": 93,
+    "score_adultes": 85,
+    "explication_famille": "Aventure idéale! 🐤 Joseph adore escaliers et tyrolienne, 🦉 histoire, 💚 vue, 🍒 poussette OK",
+    "explication_adultes": "Randonnée romantique pour 💚 Patricia et 🦉 Yannick · nature, histoire, vue spectaculaire",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 90,
+      "Joseph": 98,
+      "Mika": 85,
+      "Luce": 88
+    }
+  },
+  {
+    "nom": "Concert gratuit aux Jardins de l'Hôtel de Ville",
+    "lieu": "Jardins de l'Hôtel de Ville, 2 rue des Jardins, Québec",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-20",
+    "url": "https://www.ville.quebec.qc.ca",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Musique en plein air gratuite! 💚 Patricia et 🦉 Yannick profiteront de l'ambiance culturelle. 🍒 Mika et Luce danseront sur l'herbe. 🐤 Joseph découvrira différents styles musicaux. Été festif à Québec!"
+  },
+  {
+    "nom": "Visite architecturale nocturne du Vieux-Québec",
+    "lieu": "Vieux-Québec, départ Place d'Armes",
+    "duree": 90,
+    "cout": 25,
+    "cout_adulte": 25,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "été",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-21",
+    "url": "https://www.toursvoirquebec.com",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Soirée magique pour 🦉 Yannick passionné d'architecture et d'histoire! 💚 Patricia adorera l'élégance du Vieux-Québec illuminé. Visite guidée à 20h, ambiance romantique sous les étoiles d'été."
+  },
+  {
+    "nom": "Exploration du Domaine de Maizerets",
+    "lieu": "Domaine de Maizerets, 2000 boulevard Montmorency, Québec",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.domainemaizerets.com",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Un havre de paix parfait pour toute la famille! 🦉 Yannick adorera l'architecture historique du manoir et les arboretums centenaires. 🐤 Joseph pourra se défouler dans les sentiers et observer les canards au grand étang. 💚 Patricia appréciera les jardins paisibles et l'ambiance champêtre. 🍒🍒 Mika et Luce seront émerveillées par les oiseaux, les couleurs des fleurs et les grands espaces verts sécuritaires pour les poussettes. Aires de pique-nique ombragées disponibles!"
+  },
+  {
+    "nom": "Promenade historique du Petit-Champlain et Place Royale",
+    "lieu": "Quartier Petit-Champlain et Place Royale, Vieux-Québec",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "patrimoine",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.quartier-petit-champlain.com",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Balade dans le berceau de la Nouvelle-France! 🦉 Yannick sera comblé par l'histoire de la Place Royale et l'église Notre-Dame-des-Victoires (1688). 💚 Patricia savourera l'élégance des façades colorées et l'ambiance artistique des galeries. 🐤 Joseph aimera l'aventure de descendre l'escalier Casse-Cou! 🍒🍒 Mika et Luce seront captivées par les murales, les musiciens de rue et l'animation estivale. Accessible en poussette par le funiculaire (gratuit pour les moins de 2 ans)."
+  },
+  {
+    "nom": "Parc linéaire de la Rivière-Saint-Charles - Secteur Cartier-Brébeuf",
+    "lieu": "Parc Cartier-Brébeuf, 175 rue de l'Espinay, Québec",
+    "duree": 105,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.pc.gc.ca/fr/lhn-nhs/qc/cartierbrebeuf",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Lieu historique national combinant nature et patrimoine! 🦉 Yannick découvrira l'histoire de Jacques Cartier et son premier hivernage. 🐤 Joseph pourra courir sur les sentiers le long de la rivière et explorer les modules de jeux. 💚 Patricia appréciera la tranquillité des berges et les œuvres d'art public. 🍒🍒 Mika et Luce profiteront des espaces gazonnés pour jouer, observer les canards et les écureuils dans un environnement doux et sécuritaire. Sentiers plats parfaits pour les poussettes doubles!"
+  },
+  {
+    "nom": "Québec en harmonies",
+    "lieu": "Agora de la Maison Girardin, Beauport (600, avenue Royale)",
+    "duree": 480,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "festival",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-20",
+    "url": "https://quebecenharmonies.ca/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "famille",
+    "description": "Festival gratuit sur deux jours (20-21 juin) avec prestations d'orchestres d'harmonie de la région de Québec. Musiques de films, jeux vidéo, marches et grands airs. Programmation incluant Harmonie de Loretteville, Harmonie de Saint-Augustin, Orchestre d'Harmonie Léonardo DaVinci, Les Diplomates de Québec, Harmonie des Cascades et plusieurs autres. Événement unique dans l'Est du Québec depuis 2002."
+  },
+  {
+    "nom": "Journée nationale des peuples autochtones - 30e anniversaire",
+    "lieu": "Place D'Youville et Place George-V, Québec",
+    "duree": 360,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-06-21",
+    "url": "https://www.rcaanc-cirnac.gc.ca/fra/1100100013718/1708446948967",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "famille",
+    "description": "Le 21 juin 2026 marque le 30e anniversaire de la Journée nationale des peuples autochtones, coïncidant avec le solstice d'été. Spectacles de musique et danse d'artistes autochtones à la Place D'Youville. Événement gratuit célébrant les traditions et cultures des Premières Nations, des Inuits et des Métis. L'organisation KWE! organise également des activités à la Place George-V pour cette occasion."
   },
   {
     "nom": "Balade sur les Plaines d'Abraham au soleil couchant",
@@ -587,35 +892,6 @@
       "Joseph": 15,
       "Mika": 5,
       "Luce": 5
-    }
-  },
-  {
-    "nom": "Heure du conte à la Bibliothèque Gabrielle-Roy",
-    "lieu": "Bibliothèque Gabrielle-Roy, 350 rue Saint-Joseph Est",
-    "duree": 45,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "toute",
-    "type": "apprentissage",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "2026-06-17",
-    "url": "https://www.bibliothequesdequebec.qc.ca",
-    "source": "claude",
-    "pourQui": "famille",
-    "description": "Activité gratuite parfaite pour les tout-petits! 🍒 Mika et 🍒 Luce découvriront les joies des histoires colorées et des comptines. 💚 Patricia appréciera ce moment culturel doux et 🐤 Joseph pourra explorer la section ados ensuite!",
-    "score_famille": 88,
-    "score_adultes": 45,
-    "explication_famille": "Idéal pour 🍒 Mika et 🍒 Luce · histoires, couleurs! 💚 Patricia · culture douce",
-    "explication_adultes": "Activité enfantine · peu stimulant pour 💚 Patricia et 🦉 Yannick seuls",
-    "scores_membres": {
-      "Patricia": 75,
-      "Yannick": 60,
-      "Joseph": 50,
-      "Mika": 95,
-      "Luce": 95
     }
   },
   {
@@ -761,96 +1037,6 @@
       "Joseph": 20,
       "Mika": 5,
       "Luce": 5
-    }
-  },
-  {
-    "nom": "Exploration du Domaine de Maizerets",
-    "lieu": "Domaine de Maizerets, 2000 boulevard Montmorency, Québec",
-    "duree": 120,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "plein air",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.domainemaizerets.com",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Un magnifique parc de 27 hectares parfait pour toute la famille! 🦉 Yannick adorera l'arboretum historique et le manoir patrimonial datant du 17e siècle. 🐤 Joseph pourra courir dans les sentiers et observer les canards au marais. 💚 Patricia appréciera les jardins paisibles et les sculptures extérieures. 🍒🍒 Mika et Luce s'émerveilleront devant les animaux du petit parc animalier gratuit (poules, lapins) et les jeux d'eau en été. Sentiers accessibles aux poussettes!",
-    "score_famille": 95,
-    "score_adultes": 75,
-    "explication_famille": "Pour 🦉 histoire · 🐤 sentiers et animaux · 💚 jardins · 🍒🍒 parc animalier et jeux d'eau",
-    "explication_adultes": "Agréable pour 💚🦉 · patrimoine et jardins paisibles, mais orienté famille",
-    "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 90,
-      "Joseph": 88,
-      "Mika": 95,
-      "Luce": 95
-    }
-  },
-  {
-    "nom": "Promenade patrimoniale du Vieux-Québec - Circuit des fortifications",
-    "lieu": "Fortifications de Québec, Porte Saint-Jean, Québec",
-    "duree": 90,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "patrimoine",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.pc.gc.ca/fr/lhn-nhs/qc/fortifications",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Marchez sur les seuls remparts fortifiés en Amérique du Nord! 🦉 Yannick sera captivé par l'architecture militaire et les 4,6 km de murs historiques. 💚 Patricia savourera les vues élégantes sur le fleuve et la Basse-Ville. 🐤 Joseph adorera explorer les canons, les poudrières et jouer aux soldats sur les remparts! 🍒🍒 Mika et Luce profiteront de la balade en poussette avec plein de choses colorées à observer. Une aventure historique accessible à tous!",
-    "score_famille": 90,
-    "score_adultes": 88,
-    "explication_famille": "Pour 🦉 architecture militaire · 🐤 canons et aventure · 💚 vues élégantes · 🍒🍒 balade poussette",
-    "explication_adultes": "Idéal pour 🦉 histoire et fortifications · 💚 promenade élégante avec vues",
-    "scores_membres": {
-      "Patricia": 88,
-      "Yannick": 95,
-      "Joseph": 85,
-      "Mika": 75,
-      "Luce": 75
-    }
-  },
-  {
-    "nom": "Parc linéaire de la Rivière-Saint-Charles - Secteur Cartier-Brébeuf",
-    "lieu": "Parc Cartier-Brébeuf, 175 rue de l'Espinay, Québec",
-    "duree": 105,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "plein air",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.pc.gc.ca/fr/lhn-nhs/qc/cartierbrebeuf",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Un lieu historique national au bord de l'eau, idéal pour une sortie estivale! 🦉 Yannick découvrira le site du premier hivernage de Jacques Cartier en 1535 et l'histoire des Premières Nations. 💚 Patricia appréciera le cadre paisible et naturel en pleine ville. 🐤 Joseph pourra faire du vélo sur les pistes, observer les hérons et dépenser son énergie! 🍒🍒 Mika et Luce profiteront des grandes pelouses pour gambader, des canards sur la rivière et de l'aire de jeux. Parfait pour un pique-nique familial! 🧺",
-    "score_famille": 93,
-    "score_adultes": 78,
-    "explication_famille": "Pour 🦉 histoire Jacques Cartier · 🐤 vélo et énergie · 💚 nature paisible · 🍒🍒 pelouses et canards",
-    "explication_adultes": "Pour 🦉 site historique national · 💚 cadre naturel calme en ville",
-    "scores_membres": {
-      "Patricia": 82,
-      "Yannick": 92,
-      "Joseph": 90,
-      "Mika": 88,
-      "Luce": 90
     }
   },
   {
@@ -1195,13 +1381,13 @@
     "pourQui": "famille",
     "description": "Envie de découvrir des recettes fraîches, colorées et parfaites pour la belle saison ?",
     "score_famille": 45,
-    "score_adultes": 55,
-    "explication_famille": "Pour 💚🦉 gastronomie découverte · 🐤 cuisine peu excitant · 🍒🍒 inadapté",
-    "explication_adultes": "Pour 💚🦉 si intérêt culinaire · atelier pratique gastronomique",
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, découverte culinaire. Difficile avec bébés 🍒🍒",
+    "explication_adultes": "Idéal pour 💚 Patricia et 🦉 Yannick · gastronomie, recettes estivales",
     "scores_membres": {
-      "Patricia": 70,
-      "Yannick": 65,
-      "Joseph": 25,
+      "Patricia": 80,
+      "Yannick": 75,
+      "Joseph": 20,
       "Mika": 15,
       "Luce": 15
     }
@@ -1224,16 +1410,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Retrouvons-nous entre coachs en nature pour marcher, échanger et s’inspirer, beau temps ou mauvais temps.",
-    "score_famille": 10,
-    "score_adultes": 20,
-    "explication_famille": "Événement professionnel coachs · inadapté pour sortie familiale",
-    "explication_adultes": "Networking pro · hors intérêts culturels de 💚🦉",
+    "score_famille": 25,
+    "score_adultes": 40,
+    "explication_famille": "Réseau professionnel, peu adapté aux enfants. 🦉 Yannick aimerait la randonnée",
+    "explication_adultes": "Pour 🦉 Yannick · randonnée en nature, mais contexte networking coachs",
     "scores_membres": {
-      "Patricia": 20,
-      "Yannick": 25,
-      "Joseph": 5,
-      "Mika": 5,
-      "Luce": 5
+      "Patricia": 30,
+      "Yannick": 55,
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -1254,16 +1440,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Showcase your products, connect with eager shoppers, and grow your brand—secure your spot and sell at our vibrant vendor event.",
-    "score_famille": 50,
-    "score_adultes": 45,
-    "explication_famille": "Foire commerciale · 🐤 peu d'action · 🍒🍒 promenade possible · 💚🦉 moyen",
-    "explication_adultes": "Événement commercial · peu de culture ou gastronomie pour 💚🦉",
+    "score_famille": 55,
+    "score_adultes": 50,
+    "explication_famille": "Plaines d'Abraham pour tous · 🐤 Joseph espace libre, 🍒🍒 plein air, musique légère",
+    "explication_adultes": "Pour 💚 Patricia · ambiance culturelle, mais focus vente/exposants",
     "scores_membres": {
-      "Patricia": 45,
-      "Yannick": 40,
-      "Joseph": 40,
-      "Mika": 50,
-      "Luce": 50
+      "Patricia": 55,
+      "Yannick": 45,
+      "Joseph": 50,
+      "Mika": 55,
+      "Luce": 55
     }
   },
   {
@@ -1285,15 +1471,15 @@
     "pourQui": "famille",
     "description": "4 journées de formation vocale intensive. Travail corporel, respiration, vocalises, technique vocale, gestion du stress de performance",
     "score_famille": 15,
-    "score_adultes": 30,
-    "explication_famille": "Formation vocale intensive · inadapté aux enfants et bébés",
-    "explication_adultes": "Pour 💚 si passion chant · 🦉 peu d'intérêt · formation spécialisée",
+    "score_adultes": 55,
+    "explication_famille": "Camp intensif 4 jours · inadapté enfants, format pro. 💚 Patricia pourrait aimer",
+    "explication_adultes": "Pour 💚 Patricia · arts, expression vocale. Engagement de 4 jours",
     "scores_membres": {
-      "Patricia": 45,
-      "Yannick": 25,
-      "Joseph": 10,
-      "Mika": 0,
-      "Luce": 0
+      "Patricia": 65,
+      "Yannick": 30,
+      "Joseph": 5,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -1315,12 +1501,12 @@
     "pourQui": "famille",
     "description": "Des rencontres mensuelles dans la ville de Québec où les développeurs parlent de code.",
     "score_famille": 5,
-    "score_adultes": 10,
-    "explication_famille": "Meetup développeurs · technique, aucun intérêt familial",
-    "explication_adultes": "Événement tech · hors intérêts de 💚🦉",
+    "score_adultes": 20,
+    "explication_famille": "Rencontre développeurs · technique, aucun intérêt familial",
+    "explication_adultes": "Trop spécialisé même pour 🦉 Yannick · pas leur domaine",
     "scores_membres": {
-      "Patricia": 10,
-      "Yannick": 15,
+      "Patricia": 5,
+      "Yannick": 25,
       "Joseph": 5,
       "Mika": 0,
       "Luce": 0
@@ -1344,16 +1530,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Sortie Marche/Course, récupération de déchets jeudi le 17 juin 2026.",
-    "score_famille": 65,
-    "score_adultes": 55,
-    "explication_famille": "Pour 🐤 activité physique · 💚🦉 cause écolo · 🍒🍒 si en poussette possible",
-    "explication_adultes": "Marche/course écolo · 💚🦉 apprécieraient l'engagement mais basique",
+    "score_famille": 50,
+    "score_adultes": 45,
+    "explication_famille": "Pour 🐤 Joseph · activité physique, plein air! Éco-citoyen. Bébés 🍒🍒 en poussette",
+    "explication_adultes": "Pour 🦉 Yannick · marche/course. Cause environnementale sympathique",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 60,
-      "Joseph": 80,
-      "Mika": 50,
-      "Luce": 50
+      "Patricia": 40,
+      "Yannick": 55,
+      "Joseph": 70,
+      "Mika": 30,
+      "Luce": 30
     }
   },
   {
@@ -1374,14 +1560,14 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Découvrez-en plus sur ce personnage historique reconnu comme le premier résident d'origine africaine en Nouvelle-France!",
-    "score_famille": 72,
+    "score_famille": 60,
     "score_adultes": 85,
-    "explication_famille": "Pour 🦉 histoire Nouvelle-France · 💚 culture · 🐤 si intéressé · 🍒🍒 peu adapté",
-    "explication_adultes": "Idéal pour 🦉 découverte historique · 💚 culture et arts à la Maison BD",
+    "explication_famille": "Pour 🦉 Yannick et 💚 Patricia · histoire fascinante! Conférence calme pour bébés 🍒🍒",
+    "explication_adultes": "Parfait pour 🦉 Yannick · histoire, découverte intellectuelle. 💚 Patricia · culture",
     "scores_membres": {
       "Patricia": 80,
-      "Yannick": 92,
-      "Joseph": 45,
+      "Yannick": 90,
+      "Joseph": 35,
       "Mika": 20,
       "Luce": 20
     }
@@ -1404,14 +1590,14 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Joins-toi aux Sketcheur.e.s de Québec pour un atelier de dessin d'après modèle vivant décomplexé à la Ninkasi Bar et Bistro!",
-    "score_famille": 25,
+    "score_famille": 20,
     "score_adultes": 70,
-    "explication_famille": "Atelier dessin bar · 🐤 pourrait aimer mais lieu bar · 🍒🍒 inadapté",
-    "explication_adultes": "Pour 💚 arts et créativité · 🦉 découverte intellectuelle · ambiance décontractée",
+    "explication_famille": "Pour 💚 Patricia · arts, dessin. Bar inadapté aux enfants et bébés 🍒🍒",
+    "explication_adultes": "Idéal pour 💚 Patricia · arts, créativité. 🦉 Yannick découverte",
     "scores_membres": {
       "Patricia": 85,
-      "Yannick": 60,
-      "Joseph": 40,
+      "Yannick": 55,
+      "Joseph": 15,
       "Mika": 5,
       "Luce": 5
     }
@@ -1434,14 +1620,14 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Les midis leadership en nature offrent des moments d'arrêt en nature pour se ressourcer et évoluer en tant que leader.",
-    "score_famille": 15,
-    "score_adultes": 30,
-    "explication_famille": "Événement pro leadership · inadapté aux enfants",
-    "explication_adultes": "Networking nature · 💚🦉 si intérêt leadership mais événement pro",
+    "score_famille": 20,
+    "score_adultes": 50,
+    "explication_famille": "Leadership pro · inadapté enfants. 🦉 Yannick apprécierait la nature",
+    "explication_adultes": "Pour 🦉 Yannick · nature, réflexion. Format professionnel",
     "scores_membres": {
-      "Patricia": 35,
-      "Yannick": 40,
-      "Joseph": 10,
+      "Patricia": 40,
+      "Yannick": 60,
+      "Joseph": 15,
       "Mika": 10,
       "Luce": 10
     }
@@ -1464,16 +1650,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Assemblez-le, saisissez-le et brandissez-le comme un champion. Votre mini trophée de la FIFA LEGO® vous attend.",
-    "score_famille": 35,
-    "score_adultes": 10,
-    "explication_famille": "Pour 🐤 Joseph · activité LEGO amusante, mais très courte et en magasin",
-    "explication_adultes": "Peu d'intérêt pour 💚 Patricia et 🦉 Yannick · activité commerciale basique",
+    "score_famille": 75,
+    "score_adultes": 25,
+    "explication_famille": "Super pour 🐤 Joseph · LEGO, FIFA! 🍒 Mika et 🍒 Luce · jeux colorés, créativité",
+    "explication_adultes": "Activité enfants · peu d'intérêt pour 💚 Patricia et 🦉 Yannick seuls",
     "scores_membres": {
-      "Patricia": 15,
-      "Yannick": 15,
-      "Joseph": 55,
-      "Mika": 40,
-      "Luce": 40
+      "Patricia": 30,
+      "Yannick": 30,
+      "Joseph": 85,
+      "Mika": 70,
+      "Luce": 65
     }
   },
   {
@@ -1495,11 +1681,11 @@
     "pourQui": "famille",
     "description": "Une soirée de connexion et de messages en provenance des tes êtres aimés.",
     "score_famille": 10,
-    "score_adultes": 20,
-    "explication_famille": "Inadapté aux enfants · soirée médiumnique longue et abstraite",
-    "explication_adultes": "Thème ésotérique, peu compatible avec 🦉 Yannick · découvertes intellectuelles",
+    "score_adultes": 25,
+    "explication_famille": "Médiumnité · inadapté enfants, sujet délicat. Pas les intérêts de la famille",
+    "explication_adultes": "Soirée spirituelle · pas vraiment pour 💚 Patricia ni 🦉 Yannick",
     "scores_membres": {
-      "Patricia": 25,
+      "Patricia": 20,
       "Yannick": 15,
       "Joseph": 5,
       "Mika": 0,
@@ -1524,16 +1710,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "For the 6th edition of the Game Point All-Star, we will feature two exciting games showcasing the best male juvenile and cegep/prep players",
-    "score_famille": 45,
-    "score_adultes": 15,
-    "explication_famille": "Pour 🐤 Joseph · basketball énergique! Mais long pour bébés 🍒🍒",
-    "explication_adultes": "Peu d'attrait pour 💚 Patricia et 🦉 Yannick · sport spectateur seulement",
+    "score_famille": 55,
+    "score_adultes": 30,
+    "explication_famille": "Parfait pour 🐤 Joseph · sport, basketball! 🦉 Yannick accompagne. Bébés 🍒🍒 moins adaptés",
+    "explication_adultes": "Sport spectacle · 🐤 Joseph adorerait mais adultes seuls moins intéressés",
     "scores_membres": {
-      "Patricia": 20,
-      "Yannick": 25,
-      "Joseph": 85,
-      "Mika": 15,
-      "Luce": 15
+      "Patricia": 25,
+      "Yannick": 40,
+      "Joseph": 90,
+      "Mika": 20,
+      "Luce": 20
     }
   },
   {
@@ -1554,16 +1740,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Saisissez l'opportunité de créer des liens, de connecter ensemble et de bâtir une communauté le temps d'un après-midi.",
-    "score_famille": 30,
-    "score_adultes": 55,
-    "explication_famille": "Lieu magnifique 🦉💚 mais atelier introspectif inadapté aux enfants",
-    "explication_adultes": "Pour 💚 Patricia · cadre élégant, connexion humaine au Monastère historique",
+    "score_famille": 40,
+    "score_adultes": 65,
+    "explication_famille": "Monastère apaisant · 💚 Patricia et 🦉 Yannick. Atelier adulte, bébés 🍒🍒 calmes?",
+    "explication_adultes": "Pour 💚 Patricia · sortie calme, élégante. 🦉 Yannick · lieu historique",
     "scores_membres": {
-      "Patricia": 60,
-      "Yannick": 55,
-      "Joseph": 10,
-      "Mika": 10,
-      "Luce": 10
+      "Patricia": 70,
+      "Yannick": 65,
+      "Joseph": 20,
+      "Mika": 25,
+      "Luce": 30
     }
   },
   {
@@ -1584,16 +1770,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Vivez un atelier de «Travail qui relie» guidée par Jeanne Camirand, facilitatrice.",
-    "score_famille": 15,
-    "score_adultes": 45,
-    "explication_famille": "Atelier spirituel adulte · inadapté aux enfants et bébés",
-    "explication_adultes": "Pour 💚 Patricia · introspection dans cadre patrimonial, moins pour 🦉 Yannick",
+    "score_famille": 25,
+    "score_adultes": 55,
+    "explication_famille": "Atelier introspection · inadapté enfants. 💚 Patricia pourrait apprécier",
+    "explication_adultes": "Pour 💚 Patricia · sortie calme, bien-être. Format développement personnel",
     "scores_membres": {
-      "Patricia": 50,
-      "Yannick": 40,
-      "Joseph": 5,
-      "Mika": 0,
-      "Luce": 0
+      "Patricia": 60,
+      "Yannick": 45,
+      "Joseph": 10,
+      "Mika": 10,
+      "Luce": 15
     }
   },
   {
@@ -1616,11 +1802,11 @@
     "description": "Une des formations les plus attendues de 2026 avec deux SVPP! Soyez présents!",
     "score_famille": 5,
     "score_adultes": 10,
-    "explication_famille": "Formation professionnelle · aucun intérêt familial ou récréatif",
-    "explication_adultes": "Événement corporatif sans lien avec culture, histoire ou gastronomie",
+    "explication_famille": "Formation professionnelle · aucun intérêt familial, contexte corporatif",
+    "explication_adultes": "Événement business · pas pour 💚 Patricia ni 🦉 Yannick",
     "scores_membres": {
-      "Patricia": 5,
-      "Yannick": 10,
+      "Patricia": 10,
+      "Yannick": 15,
       "Joseph": 0,
       "Mika": 0,
       "Luce": 0
@@ -1644,16 +1830,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Le Monastère vous accueille dans ses voûtes datant de 1695 pour vivre une expérience unique en compagnie de Bernard Bosa.",
-    "score_famille": 40,
-    "score_adultes": 75,
-    "explication_famille": "Voûtes historiques 🦉💚 magnifiques mais méditation difficile avec bébés 🍒🍒",
-    "explication_adultes": "Idéal pour 💚 Patricia et 🦉 Yannick · culture, histoire, expérience sonore unique",
+    "score_famille": 45,
+    "score_adultes": 85,
+    "explication_famille": "Pour 💚 Patricia · arts, calme. 🦉 Yannick · voûtes 1695! Bébés 🍒🍒 si sages",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture, histoire, élégance, musique",
     "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 75,
-      "Joseph": 20,
-      "Mika": 10,
-      "Luce": 15
+      "Patricia": 90,
+      "Yannick": 85,
+      "Joseph": 25,
+      "Mika": 25,
+      "Luce": 35
     }
   },
   {
@@ -1674,16 +1860,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Une invitation à offrir une attention toute particulière et bienveillante aux maux du corps et à lui apporter une présence douce.",
-    "score_famille": 20,
-    "score_adultes": 55,
-    "explication_famille": "Atelier bien-être adulte · cadre historique mais inadapté aux enfants",
-    "explication_adultes": "Pour 💚 Patricia · douceur et élégance au Monastère, découverte pour 🦉 Yannick",
+    "score_famille": 30,
+    "score_adultes": 60,
+    "explication_famille": "Atelier bien-être adulte · 💚 Patricia apprécierait. Pas pour enfants",
+    "explication_adultes": "Pour 💚 Patricia · sortie calme, bien-être. Monastère pour 🦉 Yannick",
     "scores_membres": {
-      "Patricia": 65,
+      "Patricia": 70,
       "Yannick": 50,
-      "Joseph": 5,
-      "Mika": 5,
-      "Luce": 5
+      "Joseph": 10,
+      "Mika": 15,
+      "Luce": 20
     }
   },
   {
@@ -1704,16 +1890,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Essai gratuit. Cours de chant en groupe et en ligne à Québec et en ligne. Respiration, vocalises, technique vocale, chanson connue.",
-    "score_famille": 25,
-    "score_adultes": 40,
-    "explication_famille": "Cours en ligne/groupe · 🐤 Joseph pourrait aimer, difficile avec bébés 🍒🍒",
-    "explication_adultes": "Activité créative pour 💚 Patricia · moins pour 🦉 Yannick sauf curiosité",
+    "score_famille": 35,
+    "score_adultes": 55,
+    "explication_famille": "Cours chant · 💚 Patricia arts! Gratuit mais enfants ne participent pas",
+    "explication_adultes": "Pour 💚 Patricia · arts, expression. Essai gratuit intéressant",
     "scores_membres": {
-      "Patricia": 50,
-      "Yannick": 30,
-      "Joseph": 35,
-      "Mika": 10,
-      "Luce": 10
+      "Patricia": 70,
+      "Yannick": 35,
+      "Joseph": 15,
+      "Mika": 15,
+      "Luce": 15
     }
   },
   {
@@ -1735,13 +1921,13 @@
     "pourQui": "famille",
     "description": "PLL EN SHOWCASE",
     "score_famille": 10,
-    "score_adultes": 25,
-    "explication_famille": "Soirée clubbing/showcase · totalement inadapté aux enfants et bébés",
-    "explication_adultes": "Ambiance festive mais éloignée des goûts culturels de 💚 Patricia et 🦉 Yannick",
+    "score_adultes": 30,
+    "explication_famille": "Showcase bar/club · inadapté famille avec bébés 🍒🍒 et ado 🐤",
+    "explication_adultes": "Soirée dansante · pas vraiment pour 💚 Patricia (préfère élégant) ni 🦉 Yannick",
     "scores_membres": {
-      "Patricia": 20,
-      "Yannick": 15,
-      "Joseph": 25,
+      "Patricia": 25,
+      "Yannick": 20,
+      "Joseph": 30,
       "Mika": 0,
       "Luce": 0
     }
@@ -1766,10 +1952,10 @@
     "description": "EXPÉRIMENTÉ DESIGN",
     "score_famille": 5,
     "score_adultes": 10,
-    "explication_famille": "Formation coiffure professionnelle · aucun intérêt familial",
-    "explication_adultes": "Événement technique sans lien avec intérêts de 💚 Patricia ou 🦉 Yannick",
+    "explication_famille": "Formation coiffure pro · aucun intérêt familial",
+    "explication_adultes": "Événement professionnel coiffure · pas pour la famille Dufresne",
     "scores_membres": {
-      "Patricia": 10,
+      "Patricia": 15,
       "Yannick": 5,
       "Joseph": 0,
       "Mika": 0,
@@ -1796,14 +1982,14 @@
     "description": "Prépare-toi pour une soirée élégante pleine de surprises et de moments mémorables à la 2e édition du Gala Secur Emploi Immigration !",
     "score_famille": 25,
     "score_adultes": 70,
-    "explication_famille": "Soirée élégante 💚🦉 mais gala tardif inadapté aux enfants et bébés",
-    "explication_adultes": "Idéal pour 💚 Patricia · soirée élégante, gastronomie et découverte pour 🦉 Yannick",
+    "explication_famille": "Gala élégant · 💚 Patricia adorerait! Soirée tardive, pas pour enfants 🍒🍒 🐤",
+    "explication_adultes": "Parfait pour 💚 Patricia · sortie élégante! 🦉 Yannick · soirée gastronomie",
     "scores_membres": {
-      "Patricia": 80,
+      "Patricia": 85,
       "Yannick": 65,
       "Joseph": 15,
-      "Mika": 0,
-      "Luce": 0
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -1824,44 +2010,15 @@
     "pourQui": "famille",
     "description": "Paradis pour Joseph 🐤 avec montagnes russes, patinoire et jeux! Yannick 🦉 l'accompagnera dans l'aventure. Zone douce pour les jumeaux 🍒🍒 et Patricia 💚 pourra superviser tranquillement.",
     "score_famille": 90,
-    "score_adultes": 30,
-    "explication_famille": "Parfait pour tous! 🐤 Joseph · aventure, 🍒🍒 zone douce, 💚🦉 supervision tranquille",
-    "explication_adultes": "Divertissement familial · peu d'attrait culturel pour 💚 Patricia et 🦉 Yannick seuls",
+    "score_adultes": 40,
+    "explication_famille": "Parfait! 🐤 Joseph · aventure, sport! 🍒🍒 zone douce. 💚 Patricia supervise, 🦉 accompagne",
+    "explication_adultes": "Parc d'attractions · super en famille mais adultes seuls moins pertinent",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 50,
+      "Patricia": 60,
+      "Yannick": 70,
       "Joseph": 95,
       "Mika": 75,
-      "Luce": 75
-    }
-  },
-  {
-    "nom": "Concert gratuit aux Jardins de l'Hôtel de Ville",
-    "lieu": "Jardins de l'Hôtel de Ville, 2 rue des Jardins, Vieux-Québec",
-    "duree": 90,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "musique",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "2026-06-14",
-    "url": "https://www.ville.quebec.qc.ca",
-    "source": "claude",
-    "pourQui": "famille",
-    "description": "Musique en plein air dans un cadre historique magnifique 🦉💚! Les jumeaux 🍒🍒 danseront sur l'herbe et Joseph 🐤 pourra explorer les environs. Ambiance festive et gratuite!",
-    "score_famille": 88,
-    "score_adultes": 75,
-    "explication_famille": "Idéal pour tous! 🦉💚 histoire et musique, 🍒🍒 herbe et danse, 🐤 exploration",
-    "explication_adultes": "Cadre historique magnifique pour 🦉 Yannick et 💚 Patricia · culture en plein air",
-    "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 85,
-      "Joseph": 65,
-      "Mika": 80,
-      "Luce": 85
+      "Luce": 70
     }
   },
   {
@@ -1881,16 +2038,16 @@
     "source": "claude",
     "pourQui": "adultes",
     "description": "Soirée mystérieuse pour Patricia 💚 et Yannick 🦉! Histoire, architecture et légendes du Vieux-Québec à la tombée de la nuit. Découvertes intellectuelles et frissons garantis! 🌙👻",
-    "score_famille": 20,
-    "score_adultes": 92,
-    "explication_famille": "Visite nocturne adulte · parfait pour 🦉💚 mais inadapté aux enfants et bébés",
-    "explication_adultes": "Parfait pour 🦉 Yannick · histoire, architecture! 💚 Patricia · ambiance mystérieuse élégante",
+    "score_famille": 30,
+    "score_adultes": 95,
+    "explication_famille": "Visite nocturne adultes · parfait 💚🦉 mais pas pour bébés 🍒🍒 ni 🐤 Joseph",
+    "explication_adultes": "Idéal! 💚 Patricia · culture, élégance. 🦉 Yannick · histoire, architecture, mystère",
     "scores_membres": {
-      "Patricia": 90,
+      "Patricia": 95,
       "Yannick": 95,
       "Joseph": 45,
-      "Mika": 0,
-      "Luce": 0
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -1910,16 +2067,16 @@
     "source": "web_search",
     "pourQui": "famille",
     "description": "16e anniversaire de la NSPW, le plus grand gala de lutte professionnelle au Québec. Les meilleurs lutteurs de la scène indépendante québécoise, incluant Mustafa Ali vs Dylan Donovan. Meet & Greet à 17h, avant-show Pabst à 19h30, gala à 20h.",
-    "score_famille": 55,
-    "score_adultes": 35,
-    "explication_famille": "Pour 🐤 Joseph · action et spectacle sportif! Long et bruyant pour bébés 🍒🍒",
-    "explication_adultes": "Spectacle énergique · peu compatible avec goûts culturels de 💚 Patricia et 🦉 Yannick",
+    "score_famille": 70,
+    "score_adultes": 45,
+    "explication_famille": "Super pour 🐤 Joseph · sport, action, aventure! Spectacle familial. Bébés 🍒🍒 bruyant",
+    "explication_adultes": "Lutte spectacle · 🐤 Joseph adorerait mais pas vraiment pour 💚 Patricia",
     "scores_membres": {
       "Patricia": 30,
-      "Yannick": 40,
-      "Joseph": 90,
-      "Mika": 25,
-      "Luce": 20
+      "Yannick": 50,
+      "Joseph": 95,
+      "Mika": 40,
+      "Luce": 35
     }
   },
   {
@@ -1939,14 +2096,14 @@
     "source": "web_search",
     "pourQui": "famille",
     "description": "Coup d'envoi de la saison estivale à la Place Limouloise avec l'ouverture du piano public. Animation par Valérie Beaudry et Piano Passion Québec. Début à 13h. Pianistes en solo ou accompagnés chaque mercredi de 19h à 20h30 jusqu'en septembre.",
-    "score_famille": 82,
-    "score_adultes": 65,
-    "explication_famille": "Musique en plein air pour tous! 💚 culture, 🍒🍒 ambiance festive, 🐤 liberté",
-    "explication_adultes": "Pour 💚 Patricia · arts et musique! Découverte culturelle locale pour 🦉 Yannick",
+    "score_famille": 85,
+    "score_adultes": 70,
+    "explication_famille": "Parfait! 💚 Patricia · arts, musique. 🍒🍒 plein air, jeux. 🐤 Joseph espace libre!",
+    "explication_adultes": "Pour 💚 Patricia · culture, piano. 🦉 Yannick · découverte place publique",
     "scores_membres": {
-      "Patricia": 80,
-      "Yannick": 65,
-      "Joseph": 55,
+      "Patricia": 85,
+      "Yannick": 70,
+      "Joseph": 60,
       "Mika": 80,
       "Luce": 85
     }
@@ -1968,16 +2125,16 @@
     "source": "web_search",
     "pourQui": "famille",
     "description": "Plus de 80 artisans exposent leurs créations. Vide-grenier citoyen dans les ruelles environnantes. Escouade chariot pour transport des objets. Jumelé au festival Limoilou en musique.",
-    "score_famille": 92,
-    "score_adultes": 70,
-    "explication_famille": "Excellent pour tous! 💚 artisans et arts, 🦉 découvertes, 🍒🍒 couleurs, 🐤 exploration",
-    "explication_adultes": "Pour 💚 Patricia · arts et créativité! 🦉 Yannick · découvertes locales et ambiance",
+    "score_famille": 82,
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · arts, artisans | 🐤 Joseph · ambiance animée | 🍒 Mika et Luce · marché coloré",
+    "explication_adultes": "Idéal pour 💚 Patricia · arts, artisans | 🦉 Yannick · découvertes, architecture Limoilou",
     "scores_membres": {
-      "Patricia": 90,
-      "Yannick": 75,
-      "Joseph": 60,
-      "Mika": 90,
-      "Luce": 90
+      "Patricia": 88,
+      "Yannick": 80,
+      "Joseph": 55,
+      "Mika": 85,
+      "Luce": 85
     }
   },
   {
@@ -1999,14 +2156,14 @@
     "incontournable": true,
     "pourQui": "famille",
     "description": "Balade de train sur la place Jean-Béliveau et son boisé. Activité familiale populaire qui débute le 16 mai 2026 pour la saison estivale. Accessible du 18 au 24 mai.",
-    "score_famille": 95,
-    "score_adultes": 40,
-    "explication_famille": "Parfait pour tous! 🐤 Joseph · aventure, 🍒🍒 balade douce en nature, 💚🦉 détente",
-    "explication_adultes": "Activité familiale classique · peu de valeur culturelle pour 💚 Patricia et 🦉 Yannick seuls",
+    "score_famille": 88,
+    "score_adultes": 45,
+    "explication_famille": "Pour 🐤 Joseph · aventure en train | 🍒 Mika et Luce · balade douce, boisé | 💚🦉 moment familial",
+    "explication_adultes": "Activité surtout familiale, peu de contenu culturel ou gastronomique pour 💚🦉",
     "scores_membres": {
-      "Patricia": 60,
+      "Patricia": 50,
       "Yannick": 55,
-      "Joseph": 85,
+      "Joseph": 75,
       "Mika": 95,
       "Luce": 95
     }
