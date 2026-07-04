@@ -14,7 +14,18 @@
     "date": "2026-07-05",
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-05-2026/event/31006476E4D98CFD",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 35,
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia · théâtre, culture | Trop long et bruyant pour 🍒 Mika et Luce",
+    "explication_adultes": "Soirée spectacle pour 💚 Patricia · arts, culture, sortie élégante",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 65,
+      "Joseph": 55,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "Michael Jackson - Legacy - SUPPLÉMENTAIRE",
@@ -31,7 +42,18 @@
     "date": "2026-07-09",
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-09-2026/event/31006476E4DA8CFF",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 35,
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia · théâtre, culture | Trop long et bruyant pour 🍒 Mika et Luce",
+    "explication_adultes": "Soirée spectacle pour 💚 Patricia · arts, culture, sortie élégante",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 65,
+      "Joseph": 55,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "Michael Jackson - Legacy - SUPPLÉMENTAIRE",
@@ -48,7 +70,18 @@
     "date": "2026-07-10",
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-10-2026/event/31006476E78E8F30",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 35,
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia · théâtre, culture | Trop long et bruyant pour 🍒 Mika et Luce",
+    "explication_adultes": "Soirée spectacle pour 💚 Patricia · arts, culture, sortie élégante",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 65,
+      "Joseph": 55,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "Michael Jackson - Legacy - SUPPLÉMENTAIRE",
@@ -65,7 +98,18 @@
     "date": "2026-07-11",
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-11-2026/event/31006476E78F8F38",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 35,
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia · théâtre, culture | Trop long et bruyant pour 🍒 Mika et Luce",
+    "explication_adultes": "Soirée spectacle pour 💚 Patricia · arts, culture, sortie élégante",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 65,
+      "Joseph": 55,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "Michael Jackson - Legacy - SUPPLÉMENTAIRE",
@@ -82,7 +126,18 @@
     "date": "2026-07-12",
     "url": "https://www.ticketmaster.ca/michael-jackson-legacy-supplementaire-quebec-quebec-07-12-2026/event/31006476E4DC8D02",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 35,
+    "score_adultes": 75,
+    "explication_famille": "Pour 💚 Patricia · théâtre, culture | Trop long et bruyant pour 🍒 Mika et Luce",
+    "explication_adultes": "Soirée spectacle pour 💚 Patricia · arts, culture, sortie élégante",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 65,
+      "Joseph": 55,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "Shinedown: Dance, Kid, Dance Act II",
@@ -99,7 +154,18 @@
     "date": "2026-07-15",
     "url": "https://www.ticketmaster.ca/shinedown-dance-kid-dance-act-ii-quebec-quebec-07-15-2026/event/310064459A975079",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 20,
+    "score_adultes": 50,
+    "explication_famille": "Concert rock intense | Inadapté pour 🍒 bébés, trop bruyant",
+    "explication_adultes": "Pour 🦉 Yannick si fan de rock | 💚 Patricia moins intéressée",
+    "scores_membres": {
+      "Patricia": 40,
+      "Yannick": 55,
+      "Joseph": 60,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Wanted - Hommage à Bon Jovi",
@@ -116,7 +182,18 @@
     "date": "2026-07-17",
     "url": "https://www.ticketmaster.ca/wanted-hommage-a-bon-jovi-quebec-quebec-07-17-2026/event/3100647B0B24D394",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 25,
+    "score_adultes": 65,
+    "explication_famille": "Hommage Bon Jovi pour 💚 Patricia · théâtre | Trop fort pour 🍒 jumeaux",
+    "explication_adultes": "Soirée rock nostalgique pour 💚🦉 adultes · ambiance festive",
+    "scores_membres": {
+      "Patricia": 65,
+      "Yannick": 60,
+      "Joseph": 45,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Wanted - Hommage à Bon Jovi",
@@ -133,7 +210,18 @@
     "date": "2026-07-18",
     "url": "https://www.ticketmaster.ca/wanted-hommage-a-bon-jovi-quebec-quebec-07-18-2026/event/3100647B0B26D396",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 25,
+    "score_adultes": 65,
+    "explication_famille": "Hommage Bon Jovi pour 💚 Patricia · théâtre | Trop fort pour 🍒 jumeaux",
+    "explication_adultes": "Soirée rock nostalgique pour 💚🦉 adultes · ambiance festive",
+    "scores_membres": {
+      "Patricia": 65,
+      "Yannick": 60,
+      "Joseph": 45,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Flashback to The 80s",
@@ -150,7 +238,18 @@
     "date": "2026-07-24",
     "url": "https://www.ticketmaster.ca/flashback-to-the-80s-quebec-quebec-07-24-2026/event/310064A1586B1246",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 25,
+    "score_adultes": 70,
+    "explication_famille": "Pour 💚 Patricia · sortie culturelle | Pas adapté aux 🍒 tout-petits",
+    "explication_adultes": "Soirée nostalgique années 80 pour 💚🦉 · musique, ambiance élégante",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 65,
+      "Joseph": 35,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Kaleo - Way Down We Go Tour - Sièges Platines Officiels",
@@ -167,7 +266,18 @@
     "date": "2026-07-25",
     "url": "https://www.ticketmaster.ca/kaleo-way-down-we-go-tour-quebec-quebec-07-25-2026/event/3100643097F15558",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 30,
+    "score_adultes": 60,
+    "explication_famille": "Concert en plein air | 🐤 Joseph peut aimer | Difficile pour 🍒 bébés",
+    "explication_adultes": "Pour 💚🦉 découverte musicale · cadre extérieur agréable",
+    "scores_membres": {
+      "Patricia": 60,
+      "Yannick": 55,
+      "Joseph": 50,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "Flashback to The 80s",
@@ -184,7 +294,18 @@
     "date": "2026-07-25",
     "url": "https://www.ticketmaster.ca/flashback-to-the-80s-quebec-quebec-07-25-2026/event/310064A1586C1248",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 25,
+    "score_adultes": 70,
+    "explication_famille": "Pour 💚 Patricia · sortie culturelle | Pas adapté aux 🍒 tout-petits",
+    "explication_adultes": "Soirée nostalgique années 80 pour 💚🦉 · musique, ambiance élégante",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 65,
+      "Joseph": 35,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "BUNT.",
@@ -201,7 +322,18 @@
     "date": "2026-08-01",
     "url": "https://www.ticketmaster.ca/bunt-quebec-quebec-08-01-2026/event/310064CAA8AA5622",
     "source": "ticketmaster",
-    "pourQui": "famille"
+    "pourQui": "famille",
+    "score_famille": 20,
+    "score_adultes": 45,
+    "explication_famille": "Concert électro | Inadapté pour 🍒🐤 enfants, ambiance tardive",
+    "explication_adultes": "Pour 💚🦉 si fans de musique électro · ambiance festive",
+    "scores_membres": {
+      "Patricia": 45,
+      "Yannick": 40,
+      "Joseph": 30,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "Inauguration de l'espace modulaire du Carrefour de l'eau",
@@ -220,7 +352,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Le Carrefour de l'eau revient cet été avec son espace modulaire, une première incarnation du projet à échelle."
+    "description": "Le Carrefour de l'eau revient cet été avec son espace modulaire, une première incarnation du projet à échelle.",
+    "score_famille": 85,
+    "score_adultes": 55,
+    "explication_famille": "Idéal pour tous! 🍒 Mika et Luce · plein air, eau | 🐤 Joseph · aventure",
+    "explication_adultes": "Pour 🦉 Yannick · découverte | 💚 Patricia moins captivée",
+    "scores_membres": {
+      "Patricia": 55,
+      "Yannick": 65,
+      "Joseph": 85,
+      "Mika": 90,
+      "Luce": 90
+    }
   },
   {
     "nom": "Festival d’été de Québec",
@@ -239,7 +382,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Join us for  Festival d’été de Québec Artisan & Food Vendor Areas  one of Canada’s largest outdoor music festivals attracting many visitors"
+    "description": "Join us for  Festival d’été de Québec Artisan & Food Vendor Areas  one of Canada’s largest outdoor music festivals attracting many visitors",
+    "score_famille": 80,
+    "score_adultes": 85,
+    "explication_famille": "Festival pour tous! 💚🦉 gastronomie, culture | 🐤 Joseph énergie | 🍒 ambiance",
+    "explication_adultes": "Parfait pour 💚🦉 · gastronomie, arts, découvertes culturelles",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 85,
+      "Joseph": 75,
+      "Mika": 70,
+      "Luce": 70
+    }
   },
   {
     "nom": "Conférence Gratuite Attire la personne que tu veux (Pour Hommes et Femmes)",
@@ -258,7 +412,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Salut à toi\nTu te demandes comment attirer l'homme ou la femme que tu veux?\nTu veux devenir la meilleure version de toi-même?"
+    "description": "Salut à toi\nTu te demandes comment attirer l'homme ou la femme que tu veux?\nTu veux devenir la meilleure version de toi-même?",
+    "score_famille": 5,
+    "score_adultes": 15,
+    "explication_famille": "Conférence pour adultes célibataires | Aucun intérêt familial",
+    "explication_adultes": "Non pertinent pour 💚🦉 couple établi avec famille",
+    "scores_membres": {
+      "Patricia": 10,
+      "Yannick": 10,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Soirée réseautage : 2 ans de la Clinique de soins infirmiers Humanité",
@@ -277,7 +442,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Viens fêter les 2 ans de la Clinique Humanité dans un cocktail dinatoire estival et réseautage convivial!"
+    "description": "Viens fêter les 2 ans de la Clinique Humanité dans un cocktail dinatoire estival et réseautage convivial!",
+    "score_famille": 10,
+    "score_adultes": 30,
+    "explication_famille": "Réseautage professionnel | Inadapté pour 🐤🍒 enfants",
+    "explication_adultes": "Pour 💚🦉 si intérêt professionnel santé · cocktail élégant",
+    "scores_membres": {
+      "Patricia": 30,
+      "Yannick": 25,
+      "Joseph": 5,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Merche Énergie & Connexion",
@@ -296,7 +472,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Une marche de 2 heures en nature pour reconnecter avec ton énergie, échanger et t’inspirer."
+    "description": "Une marche de 2 heures en nature pour reconnecter avec ton énergie, échanger et t’inspirer.",
+    "score_famille": 50,
+    "score_adultes": 55,
+    "explication_famille": "Marche nature 2h | 🦉 Yannick · randonnée | Trop long pour 🍒 bébés",
+    "explication_adultes": "Pour 🦉 Yannick · nature, découverte | 💚 Patricia si calme",
+    "scores_membres": {
+      "Patricia": 50,
+      "Yannick": 70,
+      "Joseph": 55,
+      "Mika": 30,
+      "Luce": 35
+    }
   },
   {
     "nom": "Masterclass Santé sans filtre",
@@ -315,7 +502,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "On sépare les faits de la fiction pour t'aider à prendre des décisions éclairées pour ta santé et ton bien-être."
+    "description": "On sépare les faits de la fiction pour t'aider à prendre des décisions éclairées pour ta santé et ton bien-être.",
+    "score_famille": 15,
+    "score_adultes": 35,
+    "explication_famille": "Atelier CrossFit adultes | Pas pour 🐤🍒 enfants",
+    "explication_adultes": "Pour 🦉 Yannick · découverte intellectuelle santé | 💚 Patricia peut-être",
+    "scores_membres": {
+      "Patricia": 35,
+      "Yannick": 45,
+      "Joseph": 20,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Atelier Boulangerie Thermomix® – Venez mettre la main à la pâte !",
@@ -334,7 +532,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Le pain maison vous fait envie ? Venez découvrir tout ce que votre Thermomix® peut réaliser en boulangerie !"
+    "description": "Le pain maison vous fait envie ? Venez découvrir tout ce que votre Thermomix® peut réaliser en boulangerie !",
+    "score_famille": 70,
+    "score_adultes": 80,
+    "explication_famille": "Pour 💚🦉 gastronomie | 🐤 Joseph peut participer | 🍒 surveillance requise",
+    "explication_adultes": "Idéal pour 💚🦉 · gastronomie, découverte culinaire élégante",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 80,
+      "Joseph": 50,
+      "Mika": 45,
+      "Luce": 45
+    }
   },
   {
     "nom": "Festival d’été de Québec",
@@ -353,7 +562,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Showcase your products, connect with eager shoppers, and grow your brand—secure your spot and sell at our vibrant vendor event!"
+    "description": "Showcase your products, connect with eager shoppers, and grow your brand—secure your spot and sell at our vibrant vendor event!",
+    "score_famille": 15,
+    "score_adultes": 25,
+    "explication_famille": "Événement vendeurs/exposants | Pas une activité familiale",
+    "explication_adultes": "Non pertinent pour 💚🦉 · événement commercial",
+    "scores_membres": {
+      "Patricia": 25,
+      "Yannick": 20,
+      "Joseph": 10,
+      "Mika": 10,
+      "Luce": 10
+    }
   },
   {
     "nom": "[ATELIER] Imagine ton univers BD avec Alex A. et Laurie Forêt",
@@ -372,7 +592,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Viens apprendre, en deux sessions de deux heures, comment créer un univers fictif complet grâce aux conseils de Alex A et de Laurie Forêt!"
+    "description": "Viens apprendre, en deux sessions de deux heures, comment créer un univers fictif complet grâce aux conseils de Alex A et de Laurie Forêt!",
+    "score_famille": 85,
+    "score_adultes": 65,
+    "explication_famille": "Génial! 💚 Patricia · arts | 🐤 Joseph · créativité | 🍒 Mika · couleurs, jeux",
+    "explication_adultes": "Pour 💚 Patricia · arts, créativité | 🦉 Yannick accompagne",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 60,
+      "Joseph": 75,
+      "Mika": 80,
+      "Luce": 70
+    }
   },
   {
     "nom": "Code @ Québec",
@@ -391,7 +622,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Des rencontres mensuelles dans la ville de Québec où les développeurs parlent de code."
+    "description": "Des rencontres mensuelles dans la ville de Québec où les développeurs parlent de code.",
+    "score_famille": 5,
+    "score_adultes": 20,
+    "explication_famille": "Rencontre développeurs | Technique, pas familial",
+    "explication_adultes": "Pour 🦉 Yannick si intérêt tech | 💚 Patricia non concernée",
+    "scores_membres": {
+      "Patricia": 10,
+      "Yannick": 30,
+      "Joseph": 15,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Coachs en marche à Québec du mercredi 22 juillet 2026",
@@ -410,7 +652,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "Retrouvons-nous entre coachs, en nature, pour marcher, échanger et s’inspirer, beau temps ou mauvais temps."
+    "description": "Retrouvons-nous entre coachs, en nature, pour marcher, échanger et s’inspirer, beau temps ou mauvais temps.",
+    "score_famille": 10,
+    "score_adultes": 20,
+    "explication_famille": "Rencontre professionnelle coachs | Pas pour la famille",
+    "explication_adultes": "Non pertinent sauf si 💚🦉 sont coachs professionnels",
+    "scores_membres": {
+      "Patricia": 20,
+      "Yannick": 25,
+      "Joseph": 5,
+      "Mika": 5,
+      "Luce": 5
+    }
   },
   {
     "nom": "DEVTEAMDRINK - Québec",
@@ -429,7 +682,18 @@
     "source": "eventbrite",
     "gratuit": true,
     "pourQui": "famille",
-    "description": "DevteamDrink! In Quebec City!\nStudents, pros, let's share a drink, talk about gamedev and laugh/cry together!"
+    "description": "DevteamDrink! In Quebec City!\nStudents, pros, let's share a drink, talk about gamedev and laugh/cry together!",
+    "score_famille": 5,
+    "score_adultes": 15,
+    "explication_famille": "Soirée développeurs jeux vidéo au bar | Inadapté famille",
+    "explication_adultes": "Pour 🦉 Yannick si passion gamedev | Bar, pas pour 💚 Patricia",
+    "scores_membres": {
+      "Patricia": 10,
+      "Yannick": 25,
+      "Joseph": 20,
+      "Mika": 0,
+      "Luce": 0
+    }
   },
   {
     "nom": "Festival AfriCa Fest Québec - 4e Édition",
@@ -448,7 +712,18 @@
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "AfriCa Fest Québec est de retour : concerts, conférences & expérience jeunesse. Places limitées – réserve ton billet ️"
+    "description": "AfriCa Fest Québec est de retour : concerts, conférences & expérience jeunesse. Places limitées – réserve ton billet ️",
+    "score_famille": 80,
+    "score_adultes": 85,
+    "explication_famille": "Festival multiculturel! 💚🦉 culture, gastronomie | 🐤 musique | 🍒 ambiance festive",
+    "explication_adultes": "Parfait pour 💚🦉 · culture, arts, gastronomie, découvertes",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 85,
+      "Joseph": 70,
+      "Mika": 70,
+      "Luce": 65
+    }
   },
   {
     "nom": "Influence écrite : principes et pratiques stratégiques",
@@ -470,8 +745,8 @@
     "description": "Influence à l’écrit à l’ère de l’IA : clarté, impact et décisions stratégiques pour renforcer ta crédibilité et éviter la confusion.",
     "score_famille": 5,
     "score_adultes": 25,
-    "explication_famille": "Atelier professionnel inadapté aux enfants · aucun intérêt pour 🐤 Joseph ou 🍒 jumelles",
-    "explication_adultes": "Formation IA/écriture · peu aligné avec 💚 Patricia arts ou 🦉 Yannick histoire",
+    "explication_famille": "Atelier professionnel inadapté aux enfants · aucun intérêt familial",
+    "explication_adultes": "Formation IA/écriture stratégique · peu lié aux passions de 💚 et 🦉",
     "scores_membres": {
       "Patricia": 20,
       "Yannick": 30,
@@ -499,13 +774,13 @@
     "pourQui": "famille",
     "description": "Viens bouger au rythme Afro Urbain avec la nouvelle génération à AfriCa Fest Québec 2026, soirée inoubliable !",
     "score_famille": 35,
-    "score_adultes": 55,
-    "explication_famille": "Soirée dansante tardive · 🐤 Joseph aimerait bouger mais 🍒 jumelles trop petites",
-    "explication_adultes": "Ambiance festive pour 💚 Patricia culture · 🦉 Yannick découverte musicale",
+    "score_adultes": 50,
+    "explication_famille": "Soirée dansante tard · 🐤 Joseph pourrait aimer mais bébés 🍒🍒 inadaptés",
+    "explication_adultes": "Ambiance festive culturelle · 💚 Patricia apprécierait la découverte artistique",
     "scores_membres": {
-      "Patricia": 60,
-      "Yannick": 50,
-      "Joseph": 45,
+      "Patricia": 55,
+      "Yannick": 40,
+      "Joseph": 50,
       "Mika": 10,
       "Luce": 10
     }
@@ -529,13 +804,13 @@
     "pourQui": "famille",
     "description": "3 soirées, 12 artistes, 1 seul pass. Économisez jusqu'à 30 $ et vivez l'expérience complète AfriCa Fest Québec 2026.",
     "score_famille": 30,
-    "score_adultes": 50,
-    "explication_famille": "Festival 3 soirées · format inadapté pour 🍒 bébés, horaires tardifs",
-    "explication_adultes": "Expérience musicale complète pour 💚 Patricia et 🦉 Yannick · découverte culturelle",
+    "score_adultes": 55,
+    "explication_famille": "3 soirées de festival · logistique impossible avec bébés 🍒🍒",
+    "explication_adultes": "Expérience culturelle riche pour 💚 Patricia · musique et arts",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 50,
-      "Joseph": 40,
+      "Patricia": 60,
+      "Yannick": 45,
+      "Joseph": 45,
       "Mika": 5,
       "Luce": 5
     }
@@ -560,11 +835,11 @@
     "description": "Là où le voyage, les connexions humaines et les opportunités prennent leur envol.",
     "score_famille": 0,
     "score_adultes": 15,
-    "explication_famille": "Événement réseautage professionnel · aucun intérêt familial",
-    "explication_adultes": "Networking affaires · hors intérêts de 💚 Patricia arts et 🦉 Yannick histoire",
+    "explication_famille": "Événement networking professionnel · aucun intérêt familial",
+    "explication_adultes": "Réseautage d'affaires · hors des intérêts de 💚 et 🦉",
     "scores_membres": {
       "Patricia": 10,
-      "Yannick": 20,
+      "Yannick": 15,
       "Joseph": 0,
       "Mika": 0,
       "Luce": 0
@@ -590,10 +865,10 @@
     "description": "Pour femmes d'affaires, solopreneures ambitieuses et femmes de cœur!",
     "score_famille": 0,
     "score_adultes": 10,
-    "explication_famille": "Réseautage femmes d'affaires · non adapté aux enfants ni à 🦉 Yannick",
-    "explication_adultes": "Événement féminin uniquement · 💚 Patricia pourrait y aller seule",
+    "explication_famille": "Événement femmes d'affaires exclusif · inadapté à la famille",
+    "explication_adultes": "Réservé aux femmes entrepreneures · 🦉 Yannick exclu",
     "scores_membres": {
-      "Patricia": 25,
+      "Patricia": 15,
       "Yannick": 0,
       "Joseph": 0,
       "Mika": 0,
@@ -620,8 +895,8 @@
     "description": "This 1 day program is tailored for current Executive Assistants and ambitious professionals preparing to step into executive support roles.",
     "score_famille": 0,
     "score_adultes": 5,
-    "explication_famille": "Formation leadership en anglais · aucun lien avec intérêts familiaux",
-    "explication_adultes": "Atelier professionnel · hors champs d'intérêt de 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Formation leadership anglophone · aucun lien familial",
+    "explication_adultes": "Atelier professionnel spécialisé · hors passions de 💚 et 🦉",
     "scores_membres": {
       "Patricia": 5,
       "Yannick": 5,
@@ -648,14 +923,14 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Life can get lonely, even when you’re always working. Take the opportunity to meet locals over dinner!",
-    "score_famille": 10,
-    "score_adultes": 50,
-    "explication_famille": "Dîner entre inconnus · format adulte incompatible avec 🍒 jumelles et 🐤 Joseph",
-    "explication_adultes": "Expérience gastronomique sociale · 💚 Patricia et 🦉 Yannick gastronomie, découverte",
+    "score_famille": 0,
+    "score_adultes": 45,
+    "explication_famille": "Souper entre inconnus · concept adulte incompatible avec enfants",
+    "explication_adultes": "Découverte gastronomique sociale · 💚🦉 apprécieraient la nouveauté culinaire",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 50,
-      "Joseph": 5,
+      "Patricia": 50,
+      "Yannick": 55,
+      "Joseph": 0,
       "Mika": 0,
       "Luce": 0
     }
@@ -678,16 +953,16 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Marcher. Connecter. S'inspirer.",
-    "score_famille": 45,
-    "score_adultes": 55,
-    "explication_famille": "Marche urbaine · 🦉 Yannick randonnée, mais format réseautage moins fun pour 🐤 Joseph",
-    "explication_adultes": "Marche nature et connexions · parfait pour 🦉 Yannick randonnée, découverte",
+    "score_famille": 55,
+    "score_adultes": 65,
+    "explication_famille": "Marche nature accessible · 🦉 Yannick ravi, 🍒🍒 en poussette, 🐤 Joseph actif",
+    "explication_adultes": "Randonnée urbaine inspirante · parfait pour 🦉 Yannick, nature pour 💚",
     "scores_membres": {
-      "Patricia": 45,
-      "Yannick": 65,
-      "Joseph": 35,
-      "Mika": 30,
-      "Luce": 35
+      "Patricia": 55,
+      "Yannick": 75,
+      "Joseph": 50,
+      "Mika": 45,
+      "Luce": 50
     }
   },
   {
@@ -710,10 +985,10 @@
     "description": "Quatre univers. Une seule scène. Une soirée Soul, Jazz et Afro d'exception avec Joyce N'sana, Azaf, Spaicy Bazile et Alain Rodrigue Oyono.",
     "score_famille": 40,
     "score_adultes": 70,
-    "explication_famille": "Soirée Soul Jazz · 💚 Patricia culture, mais horaire tardif pour 🍒 jumelles",
-    "explication_adultes": "Soirée musicale raffinée · 💚 Patricia arts, 🦉 Yannick découverte culturelle",
+    "explication_famille": "Soirée jazz élégante · 💚 Patricia enchantée mais tard pour 🍒🍒 bébés",
+    "explication_adultes": "Soul & Jazz raffiné · soirée culturelle idéale pour 💚 Patricia et 🦉 Yannick",
     "scores_membres": {
-      "Patricia": 75,
+      "Patricia": 80,
       "Yannick": 65,
       "Joseph": 30,
       "Mika": 10,
@@ -738,13 +1013,13 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Zal Sissokho, Nda Chi et le spectaculaire Cirque Kalabanté réunis pour une soirée d’exception à AfriCa Fest Québec 2026",
-    "score_famille": 50,
-    "score_adultes": 70,
-    "explication_famille": "Cirque et musique · 🐤 Joseph spectacle, 💚 Patricia arts, mais soirée tardive pour 🍒",
-    "explication_adultes": "Performance artistique unique · 💚 Patricia arts, 🦉 Yannick découverte culturelle",
+    "score_famille": 45,
+    "score_adultes": 75,
+    "explication_famille": "Cirque et musique africaine · 🐤 Joseph aimerait mais soirée tardive pour 🍒🍒",
+    "explication_adultes": "Arts et culture d'exception · 💚 Patricia ravie, 🦉 Yannick curieux",
     "scores_membres": {
-      "Patricia": 75,
-      "Yannick": 65,
+      "Patricia": 80,
+      "Yannick": 70,
       "Joseph": 55,
       "Mika": 15,
       "Luce": 15
@@ -768,12 +1043,12 @@
     "gratuit": false,
     "pourQui": "famille",
     "description": "Join us at our TECH MIXER AND SOCIAL for afterwork drinks, networking with tech / IT workers in and connect with others in tech",
-    "score_famille": 5,
+    "score_famille": 0,
     "score_adultes": 20,
-    "explication_famille": "Soirée tech networking pub · inadapté aux enfants, hors intérêts familiaux",
-    "explication_adultes": "Réseautage tech · peu aligné avec 💚 Patricia arts ou 🦉 Yannick histoire",
+    "explication_famille": "Soirée tech/pub · environnement adulte, aucun intérêt pour enfants",
+    "explication_adultes": "Réseautage tech · hors des passions culturelles de 💚 et 🦉",
     "scores_membres": {
-      "Patricia": 15,
+      "Patricia": 10,
       "Yannick": 25,
       "Joseph": 0,
       "Mika": 0,
@@ -799,20 +1074,20 @@
     "pourQui": "famille",
     "description": "Want to meet new people? Join us and make new friends from Quebec City and all over the world",
     "score_famille": 15,
-    "score_adultes": 35,
-    "explication_famille": "Échange linguistique au pub · ambiance bar inadaptée pour 🍒 jumelles et 🐤 Joseph",
-    "explication_adultes": "Rencontres sociales · 💚 Patricia sorties, 🦉 Yannick découvertes intellectuelles",
+    "score_adultes": 40,
+    "explication_famille": "Échange social au pub · ambiance inadaptée aux enfants et bébés",
+    "explication_adultes": "Rencontres interculturelles · 💚🦉 pourraient apprécier les échanges",
     "scores_membres": {
       "Patricia": 40,
-      "Yannick": 35,
-      "Joseph": 10,
+      "Yannick": 45,
+      "Joseph": 15,
       "Mika": 0,
       "Luce": 0
     }
   },
   {
-    "nom": "Emotional Intelligence® 1 Day Masterclass in Quebec City | Wisdom Hub",
-    "lieu": "Regus, 1020 Rue Bouvier Bureau 400",
+    "nom": "Executive Presentation Skills for Keynotes – 1 Day Training in Quebec City",
+    "lieu": "Regus - Quebec, QC, Regus Office Space",
     "duree": 120,
     "cout": null,
     "cout_adulte": null,
@@ -823,18 +1098,18 @@
     "origine": "Québec",
     "exemple_claude": 0,
     "date": "2026-07-09",
-    "url": "https://www.eventbrite.com/e/emotional-intelligence-1-day-masterclass-in-quebec-city-wisdom-hub-tickets-1986551423785",
+    "url": "https://www.eventbrite.ca/e/executive-presentation-skills-for-keynotes-1-day-training-in-quebec-city-tickets-1986407391982",
     "source": "eventbrite",
     "gratuit": false,
     "pourQui": "famille",
-    "description": "Boost your people skills and get savvy with emotions in this fun, one-day Emotional Intelligence® crash course!",
+    "description": "Command the stage with confidence, deliver compelling insights, and inspire audiences with memorable, high-impact presentations.",
     "score_famille": 0,
-    "score_adultes": 20,
-    "explication_famille": "Formation professionnelle · aucun intérêt pour la famille",
-    "explication_adultes": "Masterclass développement personnel · intérêt limité pour 💚🦉",
+    "score_adultes": 10,
+    "explication_famille": "Formation professionnelle anglophone · aucun lien familial",
+    "explication_adultes": "Atelier présentation · hors des intérêts de 💚 et 🦉",
     "scores_membres": {
-      "Patricia": 25,
-      "Yannick": 20,
+      "Patricia": 10,
+      "Yannick": 10,
       "Joseph": 0,
       "Mika": 0,
       "Luce": 0
@@ -859,13 +1134,13 @@
     "pourQui": "famille",
     "description": "Course-Rave sociale préparatrice pour la soirée électro-FEQ avec DJ mobile dans sillery!",
     "score_famille": 25,
-    "score_adultes": 40,
-    "explication_famille": "Course-rave · 🐤 Joseph sport mais format soirée électro inadapté aux 🍒 jumelles",
-    "explication_adultes": "Course festive · 🦉 Yannick activité physique, ambiance moins élégante pour 💚",
+    "score_adultes": 35,
+    "explication_famille": "Course-rave énergique · 🐤 Joseph adorerait mais impossible avec 🍒🍒 bébés",
+    "explication_adultes": "Événement sportif festif · peu adapté aux goûts calmes de 💚",
     "scores_membres": {
-      "Patricia": 30,
-      "Yannick": 45,
-      "Joseph": 65,
+      "Patricia": 25,
+      "Yannick": 40,
+      "Joseph": 85,
       "Mika": 0,
       "Luce": 0
     }
@@ -889,15 +1164,15 @@
     "pourQui": "famille",
     "description": "Cette retraite vous propose un voyage immersif, de la tête aux pieds, en passant par le coeur.",
     "score_famille": 20,
-    "score_adultes": 65,
-    "explication_famille": "Retraite bien-être · ambiance calme pour 💚 Patricia mais 🐤 Joseph s'ennuierait",
-    "explication_adultes": "Retraite immersive · 💚 Patricia calme élégant, 🦉 Yannick découverte intellectuelle",
+    "score_adultes": 75,
+    "explication_famille": "Retraite bien-être immersive · inadaptée aux enfants et bébés",
+    "explication_adultes": "Expérience zen et culturelle · 💚 Patricia enchantée, 🦉 Yannick inspiré",
     "scores_membres": {
-      "Patricia": 70,
-      "Yannick": 60,
-      "Joseph": 10,
-      "Mika": 10,
-      "Luce": 15
+      "Patricia": 85,
+      "Yannick": 70,
+      "Joseph": 5,
+      "Mika": 0,
+      "Luce": 0
     }
   },
   {
@@ -920,8 +1195,8 @@
     "description": "Learn how to build Visualizations, Organize Data, and Design Dashboards to empower more meaningful business decisions.",
     "score_famille": 0,
     "score_adultes": 15,
-    "explication_famille": "Formation Tableau technique · aucun intérêt familial",
-    "explication_adultes": "Certification data · hors intérêts de 💚 Patricia arts et 🦉 Yannick histoire",
+    "explication_famille": "Certification Tableau technique · formation pro inadaptée à tous",
+    "explication_adultes": "Formation data · hors des passions culture/histoire de 💚🦉",
     "scores_membres": {
       "Patricia": 5,
       "Yannick": 20,
@@ -932,7 +1207,7 @@
   },
   {
     "nom": "Festival d'été de Québec - Scènes extérieures gratuites",
-    "lieu": "Place d'Youville et Rue Saint-Jean, Québec",
+    "lieu": "Plaines d'Abraham, Québec",
     "duree": 180,
     "cout": 0,
     "cout_adulte": 0,
@@ -946,17 +1221,805 @@
     "url": "https://www.feq.ca",
     "source": "claude",
     "pourQui": "famille",
-    "description": "Ambiance festive garantie! 🎶 Patricia 💚 et Yannick 🦉 profiteront des concerts en plein air pendant que Joseph 🐤 s'imprègne de l'énergie de la foule. Les jumelles Mika 🍒 et Luce 🍒 découvriront leurs premiers sons de festival en poussette!",
+    "description": "Ambiance festive garantie sur les scènes gratuites du FEQ! 🎶 Patricia 💚 et Yannick 🦉 profitent de la musique pendant que Joseph 🐤 danse et que les jumelles Mika 🍒 et Luce 🍒 découvrent leurs premiers sons de festival en poussette!",
     "score_famille": 85,
     "score_adultes": 75,
-    "explication_famille": "Festival plein air · 💚 Patricia concerts, 🐤 Joseph énergie, 🍒 jumelles en poussette!",
-    "explication_adultes": "Concerts extérieurs · 💚 Patricia culture, 🦉 Yannick ambiance festive découverte",
+    "explication_famille": "Festival gratuit plein air · 💚🦉 musique, 🐤 danse, 🍒🍒 en poussette!",
+    "explication_adultes": "Ambiance festive et culturelle · 💚 Patricia et 🦉 Yannick ravis",
     "scores_membres": {
       "Patricia": 85,
       "Yannick": 75,
       "Joseph": 80,
+      "Mika": 75,
+      "Luce": 75
+    }
+  },
+  {
+    "nom": "Balade historique du Vieux-Québec en famille",
+    "lieu": "Quartier Petit-Champlain et Terrasse Dufferin, Québec",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-07",
+    "url": "https://www.quebec-cite.com",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Promenade gratuite dans le joyau du patrimoine mondial! 🏰 Yannick 🦉 partage ses connaissances historiques, Patricia 💚 admire l'architecture, Joseph 🐤 explore les ruelles, et les jumelles 🍒🍒 profitent de la balade en poussette!",
+    "score_famille": 95,
+    "score_adultes": 85,
+    "explication_famille": "Patrimoine mondial parfait · 🦉 histoire, 💚 arts, 🐤 explore, 🍒🍒 balade!",
+    "explication_adultes": "Architecture et histoire · 🦉 Yannick passionné, 💚 Patricia charmée",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 95,
+      "Joseph": 70,
+      "Mika": 80,
+      "Luce": 85
+    }
+  },
+  {
+    "nom": "Heure du conte estivale à la Bibliothèque Gabrielle-Roy",
+    "lieu": "Bibliothèque Gabrielle-Roy, 350 rue Saint-Joseph Est",
+    "duree": 45,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-08",
+    "url": "https://www.bibliothequesdequebec.qc.ca",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Moment magique gratuit pour les tout-petits! 📚 Mika 🍒 et Luce 🍒 découvrent les histoires colorées pendant que Patricia 💚 et Yannick 🦉 savourent ce moment de douceur familiale!",
+    "score_famille": 90,
+    "score_adultes": 60,
+    "explication_famille": "Contes colorés pour 🍒🍒 Mika et Luce · 💚🦉 moment doux en famille!",
+    "explication_adultes": "Activité orientée tout-petits · moins stimulant pour 💚🦉 seuls",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 65,
+      "Joseph": 40,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Souper gastronomique au Laurie Raphaël",
+    "lieu": "Restaurant Laurie Raphaël, 117 rue Dalhousie",
+    "duree": 150,
+    "cout": 150,
+    "cout_adulte": 150,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "toute",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-10",
+    "url": "https://www.laurieraphael.com",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Escapade gourmande en duo pour Patricia 💚 et Yannick 🦉! 🍽️✨ Cuisine québécoise raffinée signée Daniel Vézina, accord mets-vins et ambiance élégante — une soirée romantique bien méritée!",
+    "score_famille": 15,
+    "score_adultes": 95,
+    "explication_famille": "Restaurant gastronomique raffiné · réservé aux adultes sans enfants",
+    "explication_adultes": "Escapade gourmande parfaite · 💚🦉 gastronomie et élégance idéales!",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 95,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
+  },
+  {
+    "nom": "Parc Aquarium du Québec - Aventure marine",
+    "lieu": "Aquarium du Québec, 1675 avenue des Hôtels",
+    "duree": 180,
+    "cout": 24,
+    "cout_adulte": 24,
+    "cout_enfant": 12,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "famille",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-11",
+    "url": "https://www.sepaq.com/ct/paq/",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Rencontre avec les phoques et morses! 🦭🐟 Joseph 🐤 adore les bassins tactiles, Mika 🍒 et Luce 🍒 s'émerveillent devant les méduses colorées, Patricia 💚 et Yannick 🦉 apprécient les jardins extérieurs!",
+    "score_famille": 95,
+    "score_adultes": 55,
+    "explication_famille": "Animaux marins · 🐤 Joseph bassins tactiles, 🍒🍒 méduses colorées, 💚🦉 jardins!",
+    "explication_adultes": "Plutôt familial · 💚🦉 apprécieraient les jardins mais moins stimulant",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 65,
+      "Joseph": 95,
+      "Mika": 90,
+      "Luce": 90
+    }
+  },
+  {
+    "nom": "Randonnée familiale à la Chute Montmorency",
+    "lieu": "Parc de la Chute-Montmorency, 5300 boul. Sainte-Anne",
+    "duree": 150,
+    "cout": 0,
+    "cout_adulte": 6.25,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-06",
+    "url": "https://www.sepaq.com/ct/pcm/",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Spectacle naturel impressionnant — plus haute que Niagara! 💦🌲 Joseph 🐤 court sur les sentiers, Yannick 🦉 admire la géologie, les jumelles 🍒🍒 en porte-bébé profitent de la brume rafraîchissante!",
+    "score_famille": 90,
+    "score_adultes": 80,
+    "explication_famille": "Nature spectaculaire · 🐤 sentiers, 🦉 géologie, 🍒🍒 brume en porte-bébé!",
+    "explication_adultes": "Randonnée impressionnante · 🦉 Yannick ravi, 💚 Patricia nature",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 90,
+      "Joseph": 95,
       "Mika": 70,
-      "Luce": 70
+      "Luce": 75
+    }
+  },
+  {
+    "nom": "Concert d'orgue gratuit à la Basilique-Cathédrale",
+    "lieu": "Basilique-Cathédrale Notre-Dame de Québec, 16 rue De Buade",
+    "duree": 60,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-12",
+    "url": "https://www.notre-dame-de-quebec.org",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Moment de grâce sous les voûtes historiques! 🎹⛪ Patricia 💚 et Yannick 🦉 savourent l'acoustique exceptionnelle et l'architecture majestueuse lors de ce récital gratuit dominical!",
+    "score_famille": 25,
+    "score_adultes": 90,
+    "explication_famille": "Concert calme en basilique · silence requis, difficile avec 🍒🍒 bébés",
+    "explication_adultes": "Culture et architecture sacrée · 💚🦉 moment de grâce parfait!",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 90,
+      "Joseph": 20,
+      "Mika": 10,
+      "Luce": 10
+    }
+  },
+  {
+    "nom": "Marché du Vieux-Port de Québec",
+    "lieu": "Marché du Vieux-Port, 160 quai Saint-André",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-08",
+    "url": "https://www.marchevieuxport.com",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Explosion de saveurs locales et couleurs estivales! 🍓🧀 Yannick 🦉 et Patricia 💚 dénichent des produits du terroir, Joseph 🐤 goûte aux échantillons, Mika 🍒 et Luce 🍒 admirent les étalages colorés!",
+    "score_famille": 95,
+    "score_adultes": 85,
+    "explication_famille": "Terroir et couleurs · 💚🦉 produits locaux, 🐤 échantillons, 🍒🍒 étalages!",
+    "explication_adultes": "Gastronomie locale · 💚🦉 découvertes gourmandes et ambiance charmante",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 90,
+      "Joseph": 75,
+      "Mika": 85,
+      "Luce": 85
+    }
+  },
+  {
+    "nom": "Exploration des Plaines d'Abraham - Parcours des jardins Jeanne-d'Arc",
+    "lieu": "Plaines d'Abraham, Avenue Wilfrid-Laurier, Québec, QC G1R 2L3",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.lesplainesdabraham.ca",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Une balade enchantée dans les magnifiques jardins Jeanne-d'Arc en pleine floraison estivale! 🦉 Yannick adorera l'histoire riche de ce site patrimonial tandis que 💚 Patricia appréciera l'élégance des parterres fleuris. 🐤 Joseph pourra courir dans les vastes espaces verts et 🍒 Mika et Luce seront émerveillés par les couleurs vives des fleurs! Sentiers accessibles aux poussettes doubles.",
+    "score_famille": 98,
+    "score_adultes": 80,
+    "explication_famille": "Jardins enchantés · 🦉 histoire, 💚 élégance florale, 🐤 espace, 🍒🍒 couleurs!",
+    "explication_adultes": "Patrimoine et beauté · 🦉 Yannick passionné, 💚 Patricia charmée",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 95,
+      "Joseph": 80,
+      "Mika": 90,
+      "Luce": 90
+    }
+  },
+  {
+    "nom": "Visite libre de l'Hôtel du Parlement et ses jardins",
+    "lieu": "Hôtel du Parlement, 1045 rue des Parlementaires, Québec, QC G1A 1A3",
+    "duree": 75,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "patrimoine",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.assnat.qc.ca/fr/visitez/index.html",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Découverte gratuite de l'architecture majestueuse du Parlement! 🦉 Yannick sera fasciné par l'histoire politique et l'architecture Second Empire, 💚 Patricia appréciera les œuvres d'art et la culture québécoise exposées. 🐤 Joseph découvrira comment fonctionne la démocratie et 🍒 les jumelles Mika et Luce pourront profiter de la fontaine de Tourny et des jardins extérieurs après la visite. Ascenseur disponible pour les poussettes!",
+    "score_famille": 82,
+    "score_adultes": 88,
+    "explication_famille": "Pour 🦉 Yannick et 💚 Patricia · histoire, architecture, culture · jardins pour 🍒 jumelles",
+    "explication_adultes": "Visite idéale pour 🦉 Yannick · architecture Second Empire, histoire politique québécoise",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 95,
+      "Joseph": 55,
+      "Mika": 60,
+      "Luce": 60
+    }
+  },
+  {
+    "nom": "Pique-nique et jeux au Domaine Maizerets",
+    "lieu": "Domaine Maizerets, 2000 boulevard Montmorency, Québec, QC G1J 5E7",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.domainemaizerets.com",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Un vaste parc naturel urbain parfait pour toute la famille Dufresne! 🐤 Joseph pourra se défouler dans l'arboretum et les sentiers (11 km disponibles), 🦉 Yannick découvrira le manoir historique datant de 1777, 💚 Patricia profitera des jardins paisibles et artistiques. 🍒 Mika et Luce adoreront le module de jeux adapté aux tout-petits et les canards du grand étang! Aires de pique-nique ombragées et sentiers plats accessibles aux poussettes.",
+    "score_famille": 95,
+    "score_adultes": 70,
+    "explication_famille": "Pour toute la famille · 🐤 Joseph sentiers actifs, 🍒 jumelles jeux et canards, 🦉 manoir historique",
+    "explication_adultes": "Agréable pour 🦉 Yannick · manoir 1777, mais activité plutôt familiale",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 85,
+      "Joseph": 95,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec (FEQ) 2026",
+    "lieu": "Plaines d'Abraham, Place George-V, Place D'Youville, Place de l'Assemblée-Nationale, Manège militaire - Québec",
+    "duree": 300,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "festival",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "tous",
+    "description": "Le plus grand festival de musique extérieur au Canada avec plus de 150 spectacles sur 11 jours. Du 9 au 12 juillet: Limp Bizkit (9), The Lumineers (10), Luis Fonsi (11), Michael Bublé (12). Scènes gratuites disponibles à Place D'Youville et Place de l'Assemblée-Nationale.",
+    "score_famille": 65,
+    "score_adultes": 80,
+    "explication_famille": "Ambiance festive mais foules intenses · scènes gratuites accessibles pour 🍒 jumelles en journée",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · concerts variés, culture musicale, ambiance estivale",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 70,
+      "Joseph": 75,
+      "Mika": 40,
+      "Luce": 40
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec 2026 - Limp Bizkit avec Cypress Hill et Cleopatrick",
+    "lieu": "Plaines d'Abraham - Scène Bell",
+    "duree": 240,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca/en/program",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Soirée d'ouverture du FEQ 2026 avec les icônes du nu-metal Limp Bizkit et les pionniers du hip-hop Cypress Hill sur les Plaines d'Abraham.",
+    "score_famille": 15,
+    "score_adultes": 55,
+    "explication_famille": "Nu-metal intense, inadapté aux 🍒 bébés et ambiance trop agressive pour famille",
+    "explication_adultes": "Potentiel pour 🦉 Yannick · découverte musicale, mais style éloigné de leurs goûts",
+    "scores_membres": {
+      "Patricia": 30,
+      "Yannick": 45,
+      "Joseph": 70,
+      "Mika": 5,
+      "Luce": 5
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec 2026 - The Lumineers avec Wyatt Flores et The Barr Brothers",
+    "lieu": "Plaines d'Abraham - Scène Bell",
+    "duree": 240,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-10",
+    "url": "https://www.feq.ca/en/program",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Soirée folk-rock atmosphérique avec The Lumineers en tête d'affiche, accompagnés de Wyatt Flores et The Barr Brothers.",
+    "score_famille": 25,
+    "score_adultes": 75,
+    "explication_famille": "Concert tardif en foule · peu adapté aux 🍒 jumelles, 🐤 Joseph pourrait aimer",
+    "explication_adultes": "Pour 💚 Patricia · ambiance folk-rock élégante et atmosphérique, soirée culturelle",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 70,
+      "Joseph": 50,
+      "Mika": 10,
+      "Luce": 10
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec 2026 - Luis Fonsi avec Ariane Roy",
+    "lieu": "Plaines d'Abraham - Scène Bell",
+    "duree": 240,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-11",
+    "url": "https://www.feq.ca/en/program",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Soirée latin pop internationale avec Luis Fonsi, l'artiste derrière Despacito, accompagné de la talentueuse Ariane Roy.",
+    "score_famille": 30,
+    "score_adultes": 70,
+    "explication_famille": "Ambiance festive latine mais soirée tardive · difficile avec 🍒 bébés",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · rythmes latins, découverte musicale internationale",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 60,
+      "Joseph": 55,
+      "Mika": 15,
+      "Luce": 15
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec 2026 - Michael Bublé avec Melody Gardot et The Brooks",
+    "lieu": "Plaines d'Abraham - Scène Bell",
+    "duree": 240,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-12",
+    "url": "https://www.feq.ca/en/program",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Le crooner canadien Michael Bublé présente un spectacle jazz et soul classique sur les Plaines d'Abraham.",
+    "score_famille": 25,
+    "score_adultes": 90,
+    "explication_famille": "Spectacle sophistiqué tardif · parfait pour adultes mais pas pour 🍒 jumelles",
+    "explication_adultes": "Idéal pour 💚 Patricia · jazz élégant, crooner classique, soirée raffinée avec 🦉 Yannick",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 85,
+      "Joseph": 35,
+      "Mika": 10,
+      "Luce": 10
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec - Scène Hydro-Québec (gratuit)",
+    "lieu": "Place de l'Assemblée-Nationale",
+    "duree": 180,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca/en/program",
+    "source": "web_search",
+    "pourQui": "famille",
+    "description": "Scène gratuite du FEQ avec soirées consacrées aux musiques du monde, au reggae et aux rythmes latins. Aucun billet requis.",
+    "score_famille": 75,
+    "score_adultes": 70,
+    "explication_famille": "Gratuit et accessible · musiques du monde pour 💚 Patricia, 🍒 jumelles en fin de journée",
+    "explication_adultes": "Pour 💚 Patricia · découvertes musicales mondiales, ambiance culturelle décontractée",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 70,
+      "Joseph": 65,
+      "Mika": 55,
+      "Luce": 55
+    }
+  },
+  {
+    "nom": "Festival d'été de Québec - Scène Crave (gratuit)",
+    "lieu": "Place D'Youville",
+    "duree": 180,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca/en/program",
+    "source": "web_search",
+    "pourQui": "famille",
+    "description": "Scène entièrement gratuite du FEQ proposant une programmation éclectique de découvertes musicales allant de l'indie au jazz.",
+    "score_famille": 72,
+    "score_adultes": 75,
+    "explication_famille": "Scène gratuite flexible · 💚 Patricia jazz et indie, ambiance festive pour tous",
+    "explication_adultes": "Pour 💚 Patricia · découvertes indie et jazz, soirée culturelle accessible",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 70,
+      "Joseph": 60,
+      "Mika": 50,
+      "Luce": 50
+    }
+  },
+  {
+    "nom": "Cinéma en plein air Durocher - Anaconda",
+    "lieu": "Parc Durocher",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "cinéma",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-07",
+    "url": "https://centredurocher.org/fr/pages/cinema-en-plein-air",
+    "source": "web_search",
+    "pourQui": "famille",
+    "description": "Soirée de cinéma en plein air gratuite au parc Durocher, tous les mardis de juillet. Film projeté sur écran géant gonflable vers 20h30. Apportez couvertures et chaises.",
+    "score_famille": 45,
+    "score_adultes": 40,
+    "explication_famille": "Cinéma tardif · 🐤 Joseph aimerait mais film intense, 🍒 jumelles trop petites pour 20h30",
+    "explication_adultes": "Film d'action peu raffiné · éloigné des goûts culturels de 💚 Patricia et 🦉 Yannick",
+    "scores_membres": {
+      "Patricia": 35,
+      "Yannick": 40,
+      "Joseph": 75,
+      "Mika": 20,
+      "Luce": 20
+    }
+  },
+  {
+    "nom": "Activités d'éveil à la lecture en bibliothèque",
+    "lieu": "Bibliothèques de Québec (plusieurs succursales)",
+    "duree": 60,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "famille",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-08",
+    "url": "https://www.bibliothequedequebec.qc.ca/activites",
+    "source": "web_search",
+    "pourQui": "famille",
+    "description": "Heures du conte et activités d'éveil à la lecture de retour dans les bibliothèques et parcs avoisinants. Ateliers créatifs gratuits pour les familles sur réservation.",
+    "score_famille": 88,
+    "score_adultes": 50,
+    "explication_famille": "Parfait pour 🍒 Mika et Luce · éveil lecture, ateliers créatifs, 💚 Patricia culture",
+    "explication_adultes": "Activité orientée enfants · peu stimulant intellectuellement pour 🦉 Yannick seul",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 55,
+      "Joseph": 45,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Spectacle L'Anti Bar & Spectacles",
+    "lieu": "L'Anti Bar & Spectacles",
+    "duree": 180,
+    "cout": 20,
+    "cout_adulte": 20,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-10",
+    "url": "https://lepointdevente.com/lieux/l-anti-bar-and-spectacles",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Concert dans cette salle emblématique du quartier Saint-Roch. L'Anti présente régulièrement des artistes rock, punk et alternatifs. 18 ans et plus.",
+    "score_famille": 0,
+    "score_adultes": 50,
+    "explication_famille": "18+ seulement · bar rock punk inadapté aux enfants et 🍒 bébés",
+    "explication_adultes": "Sortie possible mais style alternatif éloigné des goûts de 💚 Patricia élégante",
+    "scores_membres": {
+      "Patricia": 40,
+      "Yannick": 55,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
+  },
+  {
+    "nom": "Spectacle L'Anti Bar & Spectacles",
+    "lieu": "L'Anti Bar & Spectacles",
+    "duree": 180,
+    "cout": 20,
+    "cout_adulte": 20,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-11",
+    "url": "https://lepointdevente.com/lieux/l-anti-bar-and-spectacles",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Concert dans cette salle emblématique du quartier Saint-Roch. L'Anti présente régulièrement des artistes rock, punk et alternatifs. 18 ans et plus.",
+    "score_famille": 0,
+    "score_adultes": 50,
+    "explication_famille": "18+ seulement · bar rock punk inadapté aux enfants et 🍒 bébés",
+    "explication_adultes": "Sortie possible mais style alternatif éloigné des goûts de 💚 Patricia élégante",
+    "scores_membres": {
+      "Patricia": 40,
+      "Yannick": 55,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
+  },
+  {
+    "nom": "FEQ - Lou-Adriane Cassidy à la Place George-V",
+    "lieu": "Place George-V - Scène Loto-Québec",
+    "duree": 90,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca/en/lineup",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Lou-Adriane Cassidy, l'une des figures les plus en vue de la scène québécoise actuelle, se produit à la Place George-V lors de la soirée d'ouverture du FEQ.",
+    "score_famille": 30,
+    "score_adultes": 80,
+    "explication_famille": "Concert adultes tardif · 💚 Patricia apprécierait mais difficile avec 🍒 jumelles",
+    "explication_adultes": "Pour 💚 Patricia · artiste québécoise émergente, découverte culturelle locale",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 70,
+      "Joseph": 45,
+      "Mika": 15,
+      "Luce": 15
+    }
+  },
+  {
+    "nom": "FEQ - Sean Paul à la Place George-V",
+    "lieu": "Place George-V - Scène Loto-Québec",
+    "duree": 90,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-10",
+    "url": "https://www.feq.ca/en/lineup",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "Le légendaire artiste dancehall jamaïcain Sean Paul enflamme la Place George-V pour une soirée dansante.",
+    "score_famille": 25,
+    "score_adultes": 60,
+    "explication_famille": "Soirée dancehall intense · trop tard et bruyant pour 🍒 bébés",
+    "explication_adultes": "Ambiance festive pour 💚 Patricia · danse, mais moins intellectuel pour 🦉 Yannick",
+    "scores_membres": {
+      "Patricia": 65,
+      "Yannick": 50,
+      "Joseph": 60,
+      "Mika": 10,
+      "Luce": 10
+    }
+  },
+  {
+    "nom": "FEQ - Gab Bouchard à la Place George-V",
+    "lieu": "Place George-V - Scène SiriusXM",
+    "duree": 60,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca/en/lineup",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "L'auteur-compositeur-interprète québécois Gab Bouchard présente ses chansons folk-rock teintées d'humour.",
+    "score_famille": 30,
+    "score_adultes": 72,
+    "explication_famille": "Concert folk-rock adultes · 🦉 Yannick découverte mais pas pour 🍒 jumelles",
+    "explication_adultes": "Pour 🦉 Yannick · folk-rock québécois avec humour, découverte intellectuelle",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 75,
+      "Joseph": 50,
+      "Mika": 15,
+      "Luce": 15
+    }
+  },
+  {
+    "nom": "FEQ - Extras FEQ Stage au Manège militaire (soirée)",
+    "lieu": "Manège militaire (The Armoury)",
+    "duree": 180,
+    "cout": 180,
+    "cout_adulte": 180,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "été",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-09",
+    "url": "https://www.feq.ca/en/lineup",
+    "source": "web_search",
+    "pourQui": "adultes",
+    "description": "La scène nocturne du FEQ démarre vers 22h30 avec ambiance club, sets électroniques et performances DJ jusqu'au petit matin.",
+    "score_famille": 0,
+    "score_adultes": 35,
+    "explication_famille": "Soirée club 22h30 · totalement inadapté aux enfants et 🍒 bébés",
+    "explication_adultes": "Ambiance club tardive · éloigné des sorties calmes et élégantes de 💚 Patricia",
+    "scores_membres": {
+      "Patricia": 25,
+      "Yannick": 30,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
+    }
+  },
+  {
+    "nom": "FEQ - Amandine et Gédéon (spectacle famille)",
+    "lieu": "Place de l'Assemblée-Nationale - Scène Hydro-Québec",
+    "duree": 60,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "été",
+    "type": "famille",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-07-12",
+    "url": "https://www.feq.ca/en/lineup",
+    "source": "web_search",
+    "pourQui": "famille",
+    "description": "Spectacle gratuit pour la famille présenté à 11h sur la scène Hydro-Québec dans le cadre de la programmation jeunesse du Festival d'été.",
+    "score_famille": 90,
+    "score_adultes": 45,
+    "explication_famille": "Spectacle jeunesse 11h parfait · 🍒 Mika et Luce, 🐤 Joseph, gratuit et accessible",
+    "explication_adultes": "Spectacle enfants · agréable en famille mais peu stimulant pour 💚🦉 seuls",
+    "scores_membres": {
+      "Patricia": 65,
+      "Yannick": 55,
+      "Joseph": 70,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Emotional Intelligence® 1 Day Masterclass in Quebec City | Wisdom Hub",
+    "lieu": "Regus, 1020 Rue Bouvier Bureau 400",
+    "duree": 120,
+    "cout": null,
+    "cout_adulte": null,
+    "cout_enfant": null,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 0,
+    "date": "2026-07-09",
+    "url": "https://www.eventbrite.com/e/emotional-intelligence-1-day-masterclass-in-quebec-city-wisdom-hub-tickets-1986551423785",
+    "source": "eventbrite",
+    "gratuit": false,
+    "pourQui": "famille",
+    "description": "Boost your people skills and get savvy with emotions in this fun, one-day Emotional Intelligence® crash course!",
+    "score_famille": 5,
+    "score_adultes": 25,
+    "explication_famille": "Formation professionnelle anglophone · aucun intérêt familial ni pour enfants",
+    "explication_adultes": "Atelier corporatif · hors contexte vacances, pas une sortie culturelle",
+    "scores_membres": {
+      "Patricia": 20,
+      "Yannick": 30,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
     }
   },
   {
@@ -976,10 +2039,10 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Balade historique avec vue imprenable sur le fleuve! 🏰 Yannick 🦉 sera comblé par l'architecture et l'histoire, Patricia 💚 par l'élégance des lieux. Joseph 🐤 courra sur la terrasse pendant que Mika 🍒 et Luce 🍒 observent les bateaux!",
-    "score_famille": 95,
-    "score_adultes": 90,
-    "explication_famille": "Balade historique parfaite · 🦉 histoire, 💚 élégance, 🐤 espace, 🍒🍒 bateaux!",
-    "explication_adultes": "Architecture et histoire · 🦉 Yannick comblé, 💚 Patricia charme du Vieux-Québec",
+    "score_famille": 92,
+    "score_adultes": 85,
+    "explication_famille": "Pour tous · 🦉 Yannick histoire, 💚 Patricia élégance, 🐤 Joseph terrasse, 🍒 jumelles bateaux",
+    "explication_adultes": "Idéal pour 🦉 Yannick et 💚 Patricia · architecture, histoire, promenade élégante",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 95,
@@ -1005,16 +2068,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Culture et découvertes pour tous! 🎭 Patricia 💚 adorera les expositions artistiques, Yannick 🦉 les aspects historiques. Joseph 🐤 explorera les zones interactives et les jumelles 🍒🍒 profiteront de l'espace tout-petits!",
-    "score_famille": 92,
-    "score_adultes": 85,
-    "explication_famille": "Musée familial idéal · 💚 arts, 🦉 histoire, 🐤 interactif, 🍒🍒 espace tout-petits!",
-    "explication_adultes": "Expositions culturelles · 💚 Patricia arts, 🦉 Yannick découvertes intellectuelles",
+    "score_famille": 93,
+    "score_adultes": 88,
+    "explication_famille": "Pour tous · 💚 Patricia arts, 🦉 Yannick histoire, 🐤 Joseph interactif, 🍒 espace bébés",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · culture, expositions artistiques et historiques",
     "scores_membres": {
-      "Patricia": 90,
+      "Patricia": 95,
       "Yannick": 90,
-      "Joseph": 70,
-      "Mika": 75,
-      "Luce": 75
+      "Joseph": 80,
+      "Mika": 85,
+      "Luce": 85
     }
   },
   {
@@ -1034,16 +2097,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Spectacle naturel époustouflant! 💦 Joseph 🐤 adorera gravir les 487 marches, Yannick 🦉 appréciera la randonnée et les points de vue. Patricia 💚 et les jumelles Mika 🍒 et Luce 🍒 profiteront de la brume rafraîchissante!",
-    "score_famille": 88,
+    "score_famille": 78,
     "score_adultes": 80,
-    "explication_famille": "Aventure nature · 🐤 Joseph 487 marches! 🦉 randonnée, 💚🍒🍒 brume et beauté",
-    "explication_adultes": "Randonnée spectaculaire · 🦉 Yannick plein air, 💚 Patricia paysages majestueux",
+    "explication_famille": "Pour 🐤 Joseph aventure 487 marches, 🦉 Yannick rando · 🍒 jumelles en poussette limitées",
+    "explication_adultes": "Pour 🦉 Yannick · randonnée, nature spectaculaire, découverte avec 💚 Patricia",
     "scores_membres": {
       "Patricia": 75,
       "Yannick": 90,
       "Joseph": 95,
-      "Mika": 65,
-      "Luce": 70
+      "Mika": 55,
+      "Luce": 55
     }
   },
   {
@@ -1063,16 +2126,16 @@
     "source": "claude",
     "pourQui": "adultes",
     "description": "Escapade gourmande en duo! 🍷✨ Patricia 💚 et Yannick 🦉 savoureront une cuisine québécoise raffinée signée Daniel Vézina. Soirée élégante et découvertes gustatives dans un cadre exceptionnel du Vieux-Port!",
-    "score_famille": 15,
-    "score_adultes": 95,
-    "explication_famille": "Restaurant gastronomique · réservé adultes, parfait en duo sans enfants",
-    "explication_adultes": "Soirée raffinée idéale · 💚 Patricia élégance, 🦉 Yannick gastronomie québécoise",
+    "score_famille": 20,
+    "score_adultes": 98,
+    "explication_famille": "Restaurant gastronomique haut de gamme · inadapté aux 🍒 bébés et 🐤 ado",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · gastronomie raffinée, soirée élégante en duo",
     "scores_membres": {
-      "Patricia": 95,
+      "Patricia": 98,
       "Yannick": 95,
-      "Joseph": 10,
-      "Mika": 0,
-      "Luce": 0
+      "Joseph": 30,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -1092,13 +2155,13 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Aventure sous-marine fascinante! 🐠🦭 Joseph 🐤 sera captivé par les morses et les ours polaires, Mika 🍒 et Luce 🍒 s'émerveilleront devant les couleurs des poissons. Patricia 💚 et Yannick 🦉 apprécieront les jardins et le fleuve!",
-    "score_famille": 95,
-    "score_adultes": 70,
-    "explication_famille": "Parfait en famille! 🐤 Joseph animaux, 🍒🍒 couleurs poissons, 💚🦉 jardins fleuve",
-    "explication_adultes": "Aquarium agréable · 💚 Patricia nature calme, 🦉 Yannick découverte mais moins stimulant",
+    "score_famille": 94,
+    "score_adultes": 72,
+    "explication_famille": "Pour tous · 🐤 Joseph morses et aventure, 🍒 jumelles couleurs poissons, 💚🦉 jardins",
+    "explication_adultes": "Agréable pour 💚 Patricia · jardins et fleuve, mais activité plutôt familiale",
     "scores_membres": {
-      "Patricia": 75,
-      "Yannick": 70,
+      "Patricia": 80,
+      "Yannick": 75,
       "Joseph": 95,
       "Mika": 90,
       "Luce": 90
@@ -1121,16 +2184,16 @@
     "source": "claude",
     "pourQui": "adultes",
     "description": "Soirée glamour au cœur du Vieux-Québec! 🎭🌟 Patricia 💚 sera enchantée par l'ambiance théâtrale élégante et Yannick 🦉 par l'architecture Art déco magistrale de ce joyau patrimonial. Magie garantie!",
-    "score_famille": 10,
-    "score_adultes": 92,
-    "explication_famille": "Soirée cabaret · réservé adultes, spectacle tardif inadapté aux enfants",
-    "explication_adultes": "Soirée glamour parfaite · 💚 Patricia théâtre élégant, 🦉 Yannick architecture Art déco",
+    "score_famille": 25,
+    "score_adultes": 95,
+    "explication_famille": "Soirée cabaret adultes · 💚 Patricia théâtre élégant mais pas pour 🍒 bébés",
+    "explication_adultes": "Idéal pour 💚 Patricia et 🦉 Yannick · théâtre élégant, architecture Art déco, culture",
     "scores_membres": {
-      "Patricia": 95,
+      "Patricia": 98,
       "Yannick": 90,
-      "Joseph": 15,
-      "Mika": 0,
-      "Luce": 0
+      "Joseph": 35,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -1150,106 +2213,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Saveurs locales et ambiance conviviale! 🍓🧀 Patricia 💚 et Yannick 🦉 dénicheront des produits du terroir pendant que Joseph 🐤 explore les étals colorés. Mika 🍒 et Luce 🍒 goûteront leurs premiers fruits frais au bord de l'eau!",
-    "score_famille": 93,
+    "score_famille": 92,
     "score_adultes": 85,
-    "explication_famille": "Sortie familiale idéale · 💚🦉 terroir, 🐤 exploration, 🍒🍒 fruits et couleurs!",
-    "explication_adultes": "Marché gourmand · 💚 Patricia gastronomie, 🦉 Yannick produits locaux découverte",
+    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, terroir | 🐤 Joseph explore | 🍒🍒 fruits frais au bord de l'eau",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · gastronomie, produits locaux, ambiance conviviale",
     "scores_membres": {
       "Patricia": 90,
-      "Yannick": 85,
-      "Joseph": 75,
+      "Yannick": 88,
+      "Joseph": 65,
       "Mika": 85,
       "Luce": 85
-    }
-  },
-  {
-    "nom": "Balade sur les Plaines d'Abraham et Jardin Jeanne-d'Arc",
-    "lieu": "Plaines d'Abraham, entrée par l'avenue Wilfrid-Laurier, Québec",
-    "duree": 120,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "plein air",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.lesplainesdabraham.ca",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Un grand bol d'air sur ce parc historique mythique! 🦉 Yannick adorera l'histoire militaire et les fortifications, 💚 Patricia appréciera les jardins fleuris élégants du Jardin Jeanne-d'Arc, 🐤 Joseph pourra courir et jouer au frisbee dans les vastes espaces verts, et 🍒 Mika & Luce profiteront d'une promenade en poussette avec plein de fleurs colorées à observer! Parfait pour un pique-nique familial gratuit avec vue sur le fleuve.",
-    "score_famille": 96,
-    "score_adultes": 88,
-    "explication_famille": "Sortie parfaite! 🦉 histoire, 💚 jardins, 🐤 frisbee espace, 🍒🍒 fleurs poussette!",
-    "explication_adultes": "Balade historique et nature · 🦉 Yannick fortifications, 💚 Patricia jardins élégants",
-    "scores_membres": {
-      "Patricia": 90,
-      "Yannick": 95,
-      "Joseph": 90,
-      "Mika": 85,
-      "Luce": 88
-    }
-  },
-  {
-    "nom": "Heure du conte estivale à la Bibliothèque Gabrielle-Roy",
-    "lieu": "Bibliothèque Gabrielle-Roy, 350 rue Saint-Joseph Est, Québec",
-    "duree": 60,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "culturel",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.bibliothequesdequebec.qc.ca",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Animation gratuite parfaite pour les tout-petits! 🍒 Mika et Luce seront captivées par les histoires colorées et les comptines, 💚 Patricia appréciera ce moment culturel calme et élégant, 🦉 Yannick pourra découvrir la magnifique architecture de cette bibliothèque moderne. L'espace jeunesse climatisé est idéal pour une pause fraîche en été. 🐤 Joseph peut explorer la section ados pendant ce temps!",
-    "score_famille": 82,
-    "score_adultes": 45,
-    "explication_famille": "Pour 🍒 Mika et Luce · histoires colorées, comptines douces. 💚 Patricia · culture calme",
-    "explication_adultes": "Activité orientée tout-petits, peu stimulante pour 💚🦉 seuls",
-    "scores_membres": {
-      "Patricia": 70,
-      "Yannick": 55,
-      "Joseph": 35,
-      "Mika": 95,
-      "Luce": 95
-    }
-  },
-  {
-    "nom": "Exploration du Domaine de Maizerets",
-    "lieu": "Domaine de Maizerets, 2000 boulevard Montmorency, Québec",
-    "duree": 150,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "été",
-    "type": "plein air",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.domainemaizerets.com",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "27 hectares de nature et patrimoine en pleine ville! 🐤 Joseph dépensera son énergie dans les sentiers et l'arboretum, 🦉 Yannick admirera le manoir historique et l'architecture patrimoniale, 💚 Patricia se régalera des jardins paisibles et artistiques. 🍒 Mika et Luce adoreront le labyrinthe végétal adapté aux poussettes et observer les canards au plan d'eau! Aires de jeux gratuites et sentiers accessibles pour toute la famille.",
-    "score_famille": 95,
-    "score_adultes": 80,
-    "explication_famille": "Pour toute la famille · 🐤 Joseph sentiers actifs, 🦉 Yannick patrimoine, 🍒 jumelles nature",
-    "explication_adultes": "Pour 🦉 Yannick · architecture patrimoniale, 💚 Patricia · jardins paisibles",
-    "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 90,
-      "Joseph": 90,
-      "Mika": 88,
-      "Luce": 92
     }
   },
   {
@@ -1270,14 +2243,14 @@
     "incontournable": true,
     "pourQui": "tous",
     "description": "Soirée d'ouverture du FEQ 2026 avec Limp Bizkit et Cypress Hill sur les Plaines d'Abraham. Un des plus grands festivals de musique en Amérique du Nord avec jusqu'à 90 000 spectateurs.",
-    "score_famille": 15,
-    "score_adultes": 35,
-    "explication_famille": "Inadapté · rock intense, foule 90 000, dangereux pour 🍒 bébés, tard pour 🐤 Joseph",
-    "explication_adultes": "Style musical éloigné des goûts de 💚 Patricia · peu élégant, 🦉 Yannick · bruyant",
+    "score_famille": 20,
+    "score_adultes": 45,
+    "explication_famille": "Trop intense pour 🍒🍒 bébés · foule 90 000, rock énergique | 🐤 Joseph aimerait l'énergie",
+    "explication_adultes": "Rock nu-metal pas idéal pour 💚 Patricia · sorties calmes | 🦉 Yannick moyennement intéressé",
     "scores_membres": {
-      "Patricia": 15,
-      "Yannick": 25,
-      "Joseph": 65,
+      "Patricia": 25,
+      "Yannick": 40,
+      "Joseph": 75,
       "Mika": 5,
       "Luce": 5
     }
@@ -1300,16 +2273,16 @@
     "incontournable": true,
     "pourQui": "tous",
     "description": "The Lumineers en tête d'affiche au FEQ 2026 avec du folk-rock américain atmosphérique. Wyatt Flores et The Barr Brothers aussi au menu.",
-    "score_famille": 25,
-    "score_adultes": 55,
-    "explication_famille": "Folk-rock agréable mais foule immense, soirée tardive inadaptée aux 🍒 jumelles",
-    "explication_adultes": "Pour 💚 Patricia · ambiance atmosphérique élégante, 🦉 Yannick · découverte musicale",
+    "score_famille": 55,
+    "score_adultes": 70,
+    "explication_famille": "Folk-rock accessible pour tous | 🍒🍒 bébés ok si logistique | Ambiance plus douce que rock",
+    "explication_adultes": "Pour 💚 Patricia · sortie musicale élégante | 🦉 Yannick · découverte folk atmosphérique",
     "scores_membres": {
-      "Patricia": 60,
-      "Yannick": 55,
-      "Joseph": 45,
-      "Mika": 10,
-      "Luce": 10
+      "Patricia": 75,
+      "Yannick": 70,
+      "Joseph": 50,
+      "Mika": 30,
+      "Luce": 30
     }
   },
   {
@@ -1330,16 +2303,16 @@
     "incontournable": true,
     "pourQui": "tous",
     "description": "Luis Fonsi, l'artiste international de pop latine derrière Despacito, en tête d'affiche au FEQ 2026.",
-    "score_famille": 22,
-    "score_adultes": 50,
-    "explication_famille": "Ambiance festive mais foule dense, soirée tardive problématique pour 🍒 bébés",
-    "explication_adultes": "Pour 💚 Patricia · pop latine dansante, soirée festive pour couple",
+    "score_famille": 50,
+    "score_adultes": 60,
+    "explication_famille": "Pop latine festive · 🐤 Joseph connaît Despacito | 🍒🍒 rythmes dansants mais foule dense",
+    "explication_adultes": "Pour 💚 Patricia · ambiance festive | 🦉 Yannick · découverte culturelle latine",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 40,
-      "Joseph": 50,
-      "Mika": 8,
-      "Luce": 8
+      "Patricia": 65,
+      "Yannick": 55,
+      "Joseph": 60,
+      "Mika": 35,
+      "Luce": 35
     }
   },
   {
@@ -1360,16 +2333,16 @@
     "incontournable": true,
     "pourQui": "tous",
     "description": "Michael Bublé, le crooner canadien bien-aimé, offre un spectacle feel-good classique au FEQ 2026. Melody Gardot et Hologramme aussi au programme.",
-    "score_famille": 30,
-    "score_adultes": 75,
-    "explication_famille": "Style élégant mais foule et horaire tardif inadaptés aux 🍒 tout-petits",
-    "explication_adultes": "Idéal pour 💚 Patricia · crooner élégant, 🦉 Yannick · soirée classique raffinée",
+    "score_famille": 60,
+    "score_adultes": 88,
+    "explication_famille": "Crooner élégant · 💚 Patricia adorerait | 🍒🍒 mélodies douces ok | 🐤 Joseph moins captivé",
+    "explication_adultes": "Idéal pour 💚 Patricia · élégance, culture | 🦉 Yannick · soirée raffinée et classique",
     "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 70,
-      "Joseph": 30,
-      "Mika": 10,
-      "Luce": 10
+      "Patricia": 92,
+      "Yannick": 85,
+      "Joseph": 35,
+      "Mika": 40,
+      "Luce": 45
     }
   },
   {
@@ -1390,16 +2363,16 @@
     "incontournable": true,
     "pourQui": "famille",
     "description": "Scènes gratuites du FEQ 2026 : Scène Hydro-Québec (Place de l'Assemblée-Nationale) et Scène Crave (Place D'Youville). Musiques du monde, reggae, artistes émergents locaux et internationaux. Aucune réservation requise.",
-    "score_famille": 72,
-    "score_adultes": 60,
-    "explication_famille": "Pour toute la famille · gratuit, plein air, 🍒 jumelles ambiance festive, 🐤 Joseph découvertes",
-    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · découvertes musicales, ambiance culturelle",
+    "score_famille": 78,
+    "score_adultes": 72,
+    "explication_famille": "Scènes gratuites plein air · 🍒🍒 liberté de mouvement | 🐤 Joseph découvre | Ambiance festive",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · découvertes musicales, ambiance culturelle décontractée",
     "scores_membres": {
-      "Patricia": 65,
-      "Yannick": 60,
-      "Joseph": 55,
+      "Patricia": 75,
+      "Yannick": 72,
+      "Joseph": 60,
       "Mika": 70,
-      "Luce": 68
+      "Luce": 70
     }
   },
   {
@@ -1420,14 +2393,14 @@
     "pourQui": "famille",
     "description": "Marché de producteurs et artisans locaux dans une ambiance festive et gourmande. Bijoux, textiles, produits naturels. De 12h à 17h entre Sainte-Claire et des Zouaves, et Marché du Jardin de 10h à 15h devant le parc Saint-Matthew.",
     "score_famille": 88,
-    "score_adultes": 85,
-    "explication_famille": "Pour toute la famille · 🦉💚 gastronomie locale, 🍒 jumelles plein air coloré, 🐤 Joseph ambiance",
-    "explication_adultes": "Idéal pour 🦉 Yannick et 💚 Patricia · gastronomie, artisanat, découvertes locales",
+    "score_adultes": 82,
+    "explication_famille": "Pour 💚 Patricia · arts, artisans | 🦉 Yannick · gastronomie | 🍒🍒 ambiance colorée, parc à côté",
+    "explication_adultes": "Parfait pour 💚 Patricia · bijoux, arts | 🦉 Yannick · produits locaux, découvertes",
     "scores_membres": {
       "Patricia": 88,
-      "Yannick": 85,
+      "Yannick": 80,
       "Joseph": 55,
-      "Mika": 80,
+      "Mika": 82,
       "Luce": 82
     }
   },
@@ -1449,16 +2422,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Assemblez-le, saisissez-le et brandissez-le comme un champion. Votre mini trophée de la FIFA LEGO® vous attend.",
-    "score_famille": 45,
+    "score_famille": 62,
     "score_adultes": 15,
-    "explication_famille": "Pour 🐤 Joseph · LEGO sport, activité brève. Peu stimulant pour 💚🦉, neutre 🍒 bébés",
-    "explication_adultes": "Activité enfants dans magasin, aucun intérêt pour 💚 Patricia ou 🦉 Yannick",
+    "explication_famille": "🐤 Joseph · activité manuelle sport FIFA | 🍒🍒 LEGO colorés | Rapide mais amusant",
+    "explication_adultes": "Peu d'intérêt pour 💚 Patricia et 🦉 Yannick · activité enfantine, pas culturel",
     "scores_membres": {
-      "Patricia": 15,
+      "Patricia": 20,
       "Yannick": 15,
-      "Joseph": 75,
-      "Mika": 40,
-      "Luce": 35
+      "Joseph": 85,
+      "Mika": 60,
+      "Luce": 55
     }
   },
   {
@@ -1479,16 +2452,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Assemblez-le, saisissez-le et brandissez-le comme un champion. Votre mini trophée de la FIFA LEGO® vous attend.",
-    "score_famille": 45,
+    "score_famille": 62,
     "score_adultes": 15,
-    "explication_famille": "Pour 🐤 Joseph · LEGO sport, activité brève. Peu stimulant pour 💚🦉, neutre 🍒 bébés",
-    "explication_adultes": "Activité enfants dans magasin, aucun intérêt pour 💚 Patricia ou 🦉 Yannick",
+    "explication_famille": "🐤 Joseph · activité manuelle sport FIFA | 🍒🍒 LEGO colorés | Rapide mais amusant",
+    "explication_adultes": "Peu d'intérêt pour 💚 Patricia et 🦉 Yannick · activité enfantine, pas culturel",
     "scores_membres": {
-      "Patricia": 15,
+      "Patricia": 20,
       "Yannick": 15,
-      "Joseph": 75,
-      "Mika": 40,
-      "Luce": 35
+      "Joseph": 85,
+      "Mika": 60,
+      "Luce": 55
     }
   },
   {
@@ -1509,16 +2482,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "Assemblez-le, saisissez-le et brandissez-le comme un champion. Votre mini trophée de la FIFA LEGO® vous attend.",
-    "score_famille": 45,
+    "score_famille": 62,
     "score_adultes": 15,
-    "explication_famille": "Pour 🐤 Joseph · LEGO sport, activité brève. Peu stimulant pour 💚🦉, neutre 🍒 bébés",
-    "explication_adultes": "Activité enfants dans magasin, aucun intérêt pour 💚 Patricia ou 🦉 Yannick",
+    "explication_famille": "🐤 Joseph · activité manuelle sport FIFA | 🍒🍒 LEGO colorés | Rapide mais amusant",
+    "explication_adultes": "Peu d'intérêt pour 💚 Patricia et 🦉 Yannick · activité enfantine, pas culturel",
     "scores_membres": {
-      "Patricia": 15,
+      "Patricia": 20,
       "Yannick": 15,
-      "Joseph": 75,
-      "Mika": 40,
-      "Luce": 35
+      "Joseph": 85,
+      "Mika": 60,
+      "Luce": 55
     }
   },
   {
@@ -1539,16 +2512,16 @@
     "gratuit": true,
     "pourQui": "famille",
     "description": "[ATELIER] Éva D'Aoust propose d’explorer la BD autrement,  en s’éloignant des cases carrées et des bulles de dialogue traditionnelles.",
-    "score_famille": 55,
-    "score_adultes": 78,
-    "explication_famille": "Pour 💚 Patricia · arts créatifs, 🍒 Mika · créativité. Atelier trop avancé pour 🐤 Joseph",
-    "explication_adultes": "Idéal pour 💚 Patricia · arts et culture, 🦉 Yannick · découverte intellectuelle",
+    "score_famille": 45,
+    "score_adultes": 75,
+    "explication_famille": "💚 Patricia · arts, créativité BD | 🍒 Mika créatif ok | 🐤 Joseph et 🍒 Luce moins captivés",
+    "explication_adultes": "Pour 💚 Patricia · arts visuels | 🦉 Yannick · découverte intellectuelle, culture",
     "scores_membres": {
-      "Patricia": 90,
+      "Patricia": 85,
       "Yannick": 70,
       "Joseph": 30,
       "Mika": 45,
-      "Luce": 35
+      "Luce": 25
     }
   },
   {
@@ -1570,9 +2543,9 @@
     "pourQui": "famille",
     "description": "Attention à tous! Le légendaire dîner des partenaires EMCO se prépare! Rendez-vous le 15 juillet dès 11h30 - un événement à ne pas manquer!",
     "score_famille": 0,
-    "score_adultes": 5,
-    "explication_famille": "Événement corporatif privé EMCO · non pertinent pour famille Dufresne",
-    "explication_adultes": "Dîner d'affaires privé · aucun lien avec 💚 Patricia ou 🦉 Yannick",
+    "score_adultes": 0,
+    "explication_famille": "Événement corporatif privé EMCO · Non pertinent pour la famille Dufresne",
+    "explication_adultes": "Événement B2B partenaires · Aucun lien avec 💚 Patricia ou 🦉 Yannick",
     "scores_membres": {
       "Patricia": 0,
       "Yannick": 0,
@@ -1600,14 +2573,14 @@
     "incontournable": true,
     "pourQui": "famille",
     "description": "Balade de train sur la place Jean-Béliveau et son boisé. Activité familiale populaire qui débute le 16 mai 2026 pour la saison estivale. Accessible du 18 au 24 mai.",
-    "score_famille": 92,
-    "score_adultes": 50,
-    "explication_famille": "Parfait pour 🍒 Mika et Luce · balade douce, 🐤 Joseph · aventure, plein air familial",
-    "explication_adultes": "Activité orientée enfants, peu stimulante intellectuellement pour 💚🦉 seuls",
+    "score_famille": 90,
+    "score_adultes": 35,
+    "explication_famille": "Parfait pour 🍒🍒 bébés · balade douce en nature | 🐤 Joseph · plein air, aventure légère",
+    "explication_adultes": "Activité enfantine · Peu stimulant pour 💚 Patricia et 🦉 Yannick sans les enfants",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 50,
-      "Joseph": 85,
+      "Patricia": 45,
+      "Yannick": 40,
+      "Joseph": 75,
       "Mika": 95,
       "Luce": 95
     }
