@@ -1,6 +1,6 @@
 {
   "semaine": "2026-07-13",
-  "genereeLe": "2026-07-11T05:37:36.639Z",
+  "genereeLe": "2026-07-11T06:16:17.823Z",
   "storeId": "deals-centre",
   "source": "maxi.ca/__NEXT_DATA__",
   "items": [
@@ -56,9 +56,9 @@
       "nom": "Cerises rouges",
       "prix": 3.91,
       "prix_texte": "environ 3,91 $ (4,39 $/1kg 1,99 $/1lb)",
-      "prix_regulier": 10.77,
-      "prix_regulier_texte": "10,77 $ (régulier)",
-      "rabais": "6,86 $ DE RABAIS",
+      "prix_regulier": 7.83,
+      "prix_regulier_texte": "7,83 $ (régulier)",
+      "rabais": "3,92 $ DE RABAIS",
       "mots_cles": [
         "cerises"
       ],
@@ -371,9 +371,9 @@
       "nom": "Radis",
       "prix": 0.77,
       "prix_texte": "0,77 $ (1 ea, 0,77 $/1ch)",
-      "prix_regulier": 1.99,
-      "prix_regulier_texte": "1,99 $ (régulier)",
-      "rabais": "1,22 $ DE RABAIS",
+      "prix_regulier": 1.5,
+      "prix_regulier_texte": "1,50 $ (régulier)",
+      "rabais": "0,73 $ DE RABAIS",
       "mots_cles": [
         "radis"
       ],

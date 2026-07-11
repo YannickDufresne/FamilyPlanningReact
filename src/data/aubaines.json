@@ -1,243 +1,394 @@
 {
   "semaine": "2026-07-13",
-  "genereeLe": "2026-07-11T05:38:21.074Z",
+  "genereeLe": "2026-07-11T06:17:01.832Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
       "nom": "Brochettes de crevettes crues 31/40, lot de 5",
       "prix": 4.77,
-      "prix_texte": "4,77 $ (300 g, 2,00 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 6,00 $",
+      "prix_texte": "4.77$ (300 g, 2.00$/100g)",
+      "prix_regulier": 6,
+      "prix_regulier_texte": "6.00$ après limite",
+      "rabais": "Limite de 6",
       "mots_cles": [
-        "crevettes"
+        "crevettes",
+        "fruits de mer",
+        "BBQ"
       ],
       "categorie": "poisson"
     },
     {
       "nom": "Pilons de poulet, format club",
       "prix": 4.88,
-      "prix_texte": "environ 4,88 $ (4,39 $/1kg 1,99 $/1lb)",
+      "prix_texte": "environ 4.88$ (4.39$/kg)",
       "prix_regulier": 10.51,
-      "prix_regulier_texte": "10,51 $ (régulier)",
-      "rabais": "5,63 $ DE RABAIS",
+      "prix_regulier_texte": "5.63$ DE RABAIS",
+      "rabais": "5.63$ DE RABAIS",
       "mots_cles": [
-        "poulet"
+        "poulet",
+        "pilons",
+        "BBQ"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Dare Craquelins Breton Basilic et huile d’olive",
-      "prix": 1.88,
-      "prix_texte": "1,88 $ (200 g, 1,50 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 3,00 $",
-      "mots_cles": [
-        "huile"
-      ],
-      "categorie": "epicerie_seche"
-    },
-    {
-      "nom": "Sans Nom Beurre salé",
-      "prix": 4.97,
-      "prix_texte": "4,97 $ (454 g, 1,32 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 6,00 $",
-      "mots_cles": [
-        "beurre"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
       "nom": "Cerises rouges",
       "prix": 3.91,
-      "prix_texte": "environ 3,91 $ (4,39 $/1kg 1,99 $/1lb)",
-      "prix_regulier": 10.77,
-      "prix_regulier_texte": "10,77 $ (régulier)",
-      "rabais": "6,86 $ DE RABAIS",
+      "prix_texte": "environ 3.91$ (4.39$/kg)",
+      "prix_regulier": 7.83,
+      "prix_regulier_texte": "3.92$ DE RABAIS",
+      "rabais": "3.92$ DE RABAIS",
       "mots_cles": [
-        "cerises"
+        "cerises",
+        "fruits"
       ],
       "categorie": "fruits"
     },
     {
       "nom": "Fraises",
       "prix": 3.77,
-      "prix_texte": "3,77 $ (420 g, 0,90 $/100g)",
+      "prix_texte": "3.77$ (420 g)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "fraises"
+        "fraises",
+        "fruits"
       ],
       "categorie": "fruits"
     },
     {
-      "nom": "Tomates sur vigne rouge (1 grappe)",
-      "prix": 3.13,
-      "prix_texte": "environ 3,13 $ (4,41 $/1kg 2,00 $/1lb)",
-      "prix_regulier": 4.69,
-      "prix_regulier_texte": "4,69 $ (régulier)",
-      "rabais": "1,56 $ DE RABAIS",
+      "nom": "Gallo Huile d'olive extra-vierge",
+      "prix": 8.99,
+      "prix_texte": "8.99$ (1 L)",
+      "prix_regulier": 13.99,
+      "prix_regulier_texte": "13.99$",
+      "rabais": "5.00$ DE RABAIS",
       "mots_cles": [
-        "tomates"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Houston Avenue Bar & Grill Bavette de bœuf assaisonnée saveur steakhouse",
-      "prix": 7.88,
-      "prix_texte": "7,88 $ (225 g, 3,50 $/100g)",
-      "prix_regulier": 12,
-      "prix_regulier_texte": "12,00 $ (régulier)",
-      "rabais": "4,12 $ DE RABAIS",
-      "mots_cles": [
-        "boeuf",
-        "oeufs"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "P'tit Québec Fromage pizza mozzarella mozzarellaaaaah gourmet! 19 % m.g.",
-      "prix": 4.99,
-      "prix_texte": "4,99 $ (500 g, 1,00 $/100g)",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "7,99 $ (régulier)",
-      "rabais": "3,00 $ DE RABAIS",
-      "mots_cles": [
-        "fromage",
-        "mozzarella"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Houston Avenue Bar & Grill Bavette de bœuf assaisonné ail et fines herbes",
-      "prix": 7.88,
-      "prix_texte": "7,88 $ (225 g, 3,50 $/100g)",
-      "prix_regulier": 12,
-      "prix_regulier_texte": "12,00 $ (régulier)",
-      "rabais": "4,12 $ DE RABAIS",
-      "mots_cles": [
-        "boeuf",
-        "oeufs"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Naya Eau de source naturelle",
-      "prix": 4.55,
-      "prix_texte": "4,55 $ (28x500.0 ml, 0,03 $/100ml)",
-      "prix_regulier": 6,
-      "prix_regulier_texte": "6,00 $ (régulier)",
-      "rabais": "1,45 $ DE RABAIS",
-      "mots_cles": [
-        "naya"
+        "huile",
+        "olive"
       ],
       "categorie": "epicerie"
     },
     {
-      "nom": "Gallo Huile d’olive extra-vierge",
-      "prix": 8.99,
-      "prix_texte": "8,99 $ (1 l, 0,90 $/100ml)",
-      "prix_regulier": 13.99,
-      "prix_regulier_texte": "13,99 $ (régulier)",
-      "rabais": "5,00 $ DE RABAIS",
-      "mots_cles": [
-        "huile"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Brocoli",
-      "prix": 3.44,
-      "prix_texte": "3,44 $ (1 ea, 3,44 $/1ch)",
-      "prix_regulier": 4.29,
-      "prix_regulier_texte": "4,29 $ (régulier)",
-      "rabais": "0,85 $ DE RABAIS",
-      "mots_cles": [
-        "brocoli"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Sans Nom Beurre non salé",
+      "nom": "Sans Nom Beurre salé",
       "prix": 4.97,
-      "prix_texte": "4,97 $ (454 g, 1,32 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 6,00 $",
+      "prix_texte": "4.97$ (454 g)",
+      "prix_regulier": 6,
+      "prix_regulier_texte": "6.00$ après limite",
+      "rabais": "Limite de 6",
       "mots_cles": [
         "beurre"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "P'tit Québec Fromage pizza mozzarella",
+      "prix": 4.99,
+      "prix_texte": "4.99$ (500 g)",
+      "prix_regulier": 7.99,
+      "prix_regulier_texte": "7.99$",
+      "rabais": "3.00$ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "mozzarella",
+        "pizza"
       ],
       "categorie": "produits_laitiers"
     },
     {
       "nom": "St Hubert Côtes levées de dos à la texane",
       "prix": 9.99,
-      "prix_texte": "9,99 $ (680 g, 1,47 $/100g)",
+      "prix_texte": "9.99$ (680 g)",
       "prix_regulier": 12,
-      "prix_regulier_texte": "12,00 $ (régulier)",
-      "rabais": "2,01 $ DE RABAIS",
+      "prix_regulier_texte": "12.00$",
+      "rabais": "2.01$ DE RABAIS",
       "mots_cles": [
-        "st"
+        "côtes levées",
+        "BBQ",
+        "prêt-à-manger"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Oignons verts",
-      "prix": 0.77,
-      "prix_texte": "0,77 $ (1 ea, 0,77 $/1ch)",
-      "prix_regulier": 1.5,
-      "prix_regulier_texte": "1,50 $ (régulier)",
-      "rabais": "0,73 $ DE RABAIS",
+      "nom": "Courgette",
+      "prix": 0.62,
+      "prix_texte": "environ 0.62$ (2.20$/kg)",
+      "prix_regulier": 1.72,
+      "prix_regulier_texte": "1.10$ DE RABAIS",
+      "rabais": "1.10$ DE RABAIS",
       "mots_cles": [
-        "oignons"
+        "courgette",
+        "légumes"
       ],
       "categorie": "legumes"
     },
     {
-      "nom": "Sans Nom Beurre demi-sel",
-      "prix": 4.97,
-      "prix_texte": "4,97 $ (454 g, 1,32 $/100g)",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "Limite de 6, après limite 6,00 $",
+      "nom": "Oignons verts",
+      "prix": 0.77,
+      "prix_texte": "0.77$",
+      "prix_regulier": 1.5,
+      "prix_regulier_texte": "1.50$",
+      "rabais": "0.73$ DE RABAIS",
       "mots_cles": [
-        "beurre"
+        "oignons",
+        "légumes"
       ],
-      "categorie": "produits_laitiers"
-    },
+      "categorie": "legumes"
+    }
+  ],
+  "metro": [
     {
-      "nom": "Cuisses de poulet",
-      "prix": 10.34,
-      "prix_texte": "environ 10,34 $ (7,69 $/1kg 3,49 $/1lb)",
-      "prix_regulier": 13.33,
-      "prix_regulier_texte": "13,33 $ (régulier)",
-      "rabais": "2,99 $ DE RABAIS",
+      "nom": "Poitrines de poulet désossées",
+      "prix": 8.99,
+      "prix_texte": "8.99$/kg",
+      "prix_regulier": 13.21,
+      "prix_regulier_texte": "13.21$/kg",
+      "rabais": "32% de rabais",
       "mots_cles": [
-        "poulet"
+        "poulet",
+        "poitrine"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Nectarines à chair jaune",
-      "prix": 0.61,
-      "prix_texte": "environ 0,61 $ (4,39 $/1kg 1,99 $/1lb)",
-      "prix_regulier": 1.39,
-      "prix_regulier_texte": "1,39 $ (régulier)",
-      "rabais": "0,78 $ DE RABAIS",
+      "nom": "Bleuets du Québec",
+      "prix": 3.49,
+      "prix_texte": "3.49$ (pinte)",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5.99$",
+      "rabais": "42% de rabais",
       "mots_cles": [
-        "nectarines"
+        "bleuets",
+        "fruits",
+        "local"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Maïs du Québec",
+      "prix": 0.5,
+      "prix_texte": "0.50$ l'épi",
+      "prix_regulier": 0.99,
+      "prix_regulier_texte": "0.99$",
+      "rabais": "49% de rabais",
+      "mots_cles": [
+        "maïs",
+        "légumes",
+        "local"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Yogourt grec Oikos 750g",
+      "prix": 4.99,
+      "prix_texte": "4.99$",
+      "prix_regulier": 7.49,
+      "prix_regulier_texte": "7.49$",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "yogourt",
+        "grec"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Saucisses à griller Selection",
+      "prix": 5.99,
+      "prix_texte": "5.99$ (450 g)",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8.99$",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "saucisses",
+        "BBQ"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Pain hot-dog ou hamburger",
+      "prix": 2.49,
+      "prix_texte": "2.49$ (8 unités)",
+      "prix_regulier": 3.99,
+      "prix_regulier_texte": "3.99$",
+      "rabais": "38% de rabais",
+      "mots_cles": [
+        "pain",
+        "BBQ"
+      ],
+      "categorie": "boulangerie"
+    },
+    {
+      "nom": "Framboises du Québec",
+      "prix": 3.99,
+      "prix_texte": "3.99$ (170 g)",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5.99$",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "framboises",
+        "fruits",
+        "local"
+      ],
+      "categorie": "fruits"
+    }
+  ],
+  "adonis": [
+    {
+      "nom": "Hummus zeste de citron et cumin ou olives grecques Adonis",
+      "prix": 1.99,
+      "prix_texte": "1.99$ (250 g)",
+      "prix_regulier": 4.74,
+      "prix_regulier_texte": "4.74$",
+      "rabais": "58% de rabais",
+      "mots_cles": [
+        "hummus",
+        "olives",
+        "méditerranéen"
       ],
       "categorie": "epicerie"
     },
     {
-      "nom": "Natrel Lait finement filtré 2 %",
-      "prix": 4.77,
-      "prix_texte": "4,77 $ (2 l, 0,24 $/100ml)",
+      "nom": "Fraises du Québec",
+      "prix": 2.77,
+      "prix_texte": "2.77$ (750 ml)",
+      "prix_regulier": 6.93,
+      "prix_regulier_texte": "6.93$",
+      "rabais": "60% de rabais",
+      "mots_cles": [
+        "fraises",
+        "fruits",
+        "local"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Concombres anglais ou radis en botte — Québec",
+      "prix": 0.88,
+      "prix_texte": "0.88$",
+      "prix_regulier": 2.93,
+      "prix_regulier_texte": "2.93$",
+      "rabais": "70% de rabais",
+      "mots_cles": [
+        "concombre",
+        "radis",
+        "légumes",
+        "local"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Filet de saumon de l'Atlantique frais",
+      "prix": 9.99,
+      "prix_texte": "9.99$/lb",
+      "prix_regulier": 17.84,
+      "prix_regulier_texte": "17.84$/lb",
+      "rabais": "44% de rabais",
+      "mots_cles": [
+        "saumon",
+        "poisson",
+        "frais"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Poitrines de poulet avec dos format économique",
+      "prix": 3.77,
+      "prix_texte": "3.77$/lb",
+      "prix_regulier": 6.28,
+      "prix_regulier_texte": "6.28$/lb",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "poulet",
+        "poitrine"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Épaule d'agneau frais",
+      "prix": 7.99,
+      "prix_texte": "7.99$/lb",
+      "prix_regulier": 12.89,
+      "prix_regulier_texte": "12.89$/lb",
+      "rabais": "38% de rabais",
+      "mots_cles": [
+        "agneau",
+        "viande"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Boissons gazeuses Coca-Cola 6x222ml",
+      "prix": 1,
+      "prix_texte": "1.00$ + consigne",
+      "prix_regulier": 6.67,
+      "prix_regulier_texte": "6.67$",
+      "rabais": "85% de rabais",
+      "mots_cles": [
+        "boisson",
+        "Coca-Cola"
+      ],
+      "categorie": "boissons"
+    }
+  ],
+  "costco": [
+    {
+      "nom": "Pilons de poulet 4 kg",
+      "prix": 29.99,
+      "prix_texte": "29.99$ (4 kg)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "poulet",
+        "pilons",
+        "format familial"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Oeufs gros calibre Kirkland 30 unités",
+      "prix": 13.99,
+      "prix_texte": "13.99$ (30 oeufs)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Saucisses à hot-dog Kirkland 1.5 kg",
+      "prix": 18.99,
+      "prix_texte": "18.99$ (1.5 kg)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "saucisses",
+        "hot-dog",
+        "BBQ"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Boeuf haché mi-maigre Kirkland 2 kg",
+      "prix": 28.99,
+      "prix_texte": "28.99$ (2 kg)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "boeuf",
+        "haché"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Lait 2% Natrel 3x2L",
+      "prix": 12.99,
+      "prix_texte": "12.99$ (6 L)",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
@@ -245,255 +396,21 @@
         "lait"
       ],
       "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Sauce BBQ Kirkland 2.84 L",
+      "prix": 10.99,
+      "prix_texte": "10.99$ (2.84 L)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "sauce",
+        "BBQ"
+      ],
+      "categorie": "epicerie"
     }
   ],
-  "metro": [],
-  "adonis": [
-    {
-      "nom": "hummus zeste de citron et cumin ou olives grecques Adonis — 250 g",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 4.79,
-      "prix_regulier_texte": "4,79 (régulier)",
-      "rabais": "58%",
-      "mots_cles": [
-        "hummus"
-      ],
-      "categorie": "fruits",
-      "sku": "44829602",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/44829602.psd.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "hummus zeste de citron et cumin ou olives grecques Adonis — 250 g",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 4.79,
-      "prix_regulier_texte": "4,79 (régulier)",
-      "rabais": "58%",
-      "mots_cles": [
-        "hummus"
-      ],
-      "categorie": "fruits",
-      "sku": "44829601",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/44829601.psd.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "fraises du Québec — 750 ml",
-      "prix": 2.77,
-      "prix_texte": "2.77$",
-      "prix_regulier": 6.99,
-      "prix_regulier_texte": "6,99 (régulier)",
-      "rabais": "60%",
-      "mots_cles": [
-        "fraises"
-      ],
-      "categorie": "fruits",
-      "sku": "10144381",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/10144381_M.psd.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "bifteck de côte format économique",
-      "prix": 11.99,
-      "prix_texte": "11.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "54%",
-      "mots_cles": [
-        "bifteck"
-      ],
-      "categorie": "viande",
-      "sku": "74610222",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/Bifteck_ASS.psd.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "poulet BBQ servi avec riz mandi ou frites Halal",
-      "prix": 15,
-      "prix_texte": "15.00$",
-      "prix_regulier": 19.99,
-      "prix_regulier_texte": "de 19,99 à 23,99 (régulier)",
-      "rabais": "37%",
-      "mots_cles": [
-        "poulet",
-        "riz"
-      ],
-      "categorie": "viande",
-      "sku": "44581101",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/44581101.psd.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "pêches et nectarines jaunes ou prunes noires — États-Unis",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "60%",
-      "mots_cles": [
-        "pêches"
-      ],
-      "categorie": "legumes",
-      "sku": "10005598",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/10005598.eps.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "pêches et nectarines jaunes ou prunes noires — États-Unis",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "60%",
-      "mots_cles": [
-        "pêches"
-      ],
-      "categorie": "legumes",
-      "sku": "10003372",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/10003372ONT.eps.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    },
-    {
-      "nom": "boissons gazeuses Coca-Cola — 6/222 ml, consigne",
-      "prix": 1,
-      "prix_texte": "1.00$",
-      "prix_regulier": 6.49,
-      "prix_regulier_texte": "6,49 (régulier)",
-      "rabais": "85% de rabais",
-      "mots_cles": [
-        "boissons"
-      ],
-      "categorie": "epicerie",
-      "sku": "24610801",
-      "image": "https://promo-omni.net/cdn-cgi/image/fit=scale-down,width=400/https://metrocommonapi.blob.core.windows.net/83202/productImages/24610801.psd.png?version=f4290bb4",
-      "valide_de": "2026-06-25",
-      "valide_au": "2026-07-01",
-      "magasin": "Adonis"
-    }
-  ],
-  "costco": [
-    {
-      "nom": "Thon albacore en conserve Kirkland (8 x 198 g)",
-      "prix": 28.99,
-      "prix_texte": "28.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "thon",
-        "conserve"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Ketchup Heinz (2.5 L)",
-      "prix": 11.99,
-      "prix_texte": "11.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "ketchup",
-        "heinz"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Filets de morue (1.36 kg)",
-      "prix": 32.99,
-      "prix_texte": "32.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "morue",
-        "filet"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Vinaigre balsamique de Modène (1 L)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "vinaigre",
-        "balsamique"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Arachides rôties salées (1.36 kg)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "arachides",
-        "noix"
-      ],
-      "categorie": "epicerie_seche"
-    },
-    {
-      "nom": "Fromage en grains frais du jour (600 g)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "fromage",
-        "grains",
-        "poutine"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Pétoncles géants (907 g)",
-      "prix": 38.99,
-      "prix_texte": "38.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "pétoncles",
-        "fruits de mer"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Lait 3.25% entier (4 L)",
-      "prix": 8.49,
-      "prix_texte": "8.49$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "lait",
-        "entier"
-      ],
-      "categorie": "produits_laitiers"
-    }
-  ],
-  "analyse": "",
-  "economies_estimees": ""
+  "analyse": "Semaine exceptionnelle pour les BBQ de juillet! Les fraises du Québec à 2.77$ chez Adonis (60% de rabais) battent Maxi à 3.77$. Les pilons de poulet Maxi à 4.39$/kg offrent 5.63$ d'économie, parfaits pour le grill. L'huile d'olive Gallo à 8.99$ (5$ de rabais) et le Coca-Cola à 1$ chez Adonis (85% de rabais!) sont des aubaines à ne pas manquer. Combiné au maïs local à 0.50$/épi chez Metro, c'est idéal pour les repas estivaux en famille.",
+  "economies_estimees": "~32$"
 }
