@@ -1,6 +1,591 @@
 {
-  "semaine": "",
-  "genereeLe": "2026-07-18T05:19:57.856Z",
-  "storeId": "",
-  "items": []
+  "semaine": "2026-07-20",
+  "genereeLe": "2026-07-18T06:08:18.254Z",
+  "storeId": "deals-centre",
+  "source": "maxi.ca/__NEXT_DATA__",
+  "items": [
+    {
+      "nom": "Brochettes de crevettes crues 31/40, lot de 5",
+      "prix": 4.77,
+      "prix_texte": "4,77 $ (300 g, 2,00 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "Limite de 6, après limite 6,00 $",
+      "mots_cles": [
+        "crevettes"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Le Choix du Boucher Bœuf haché mi-maigre, format club",
+      "prix": 11.03,
+      "prix_texte": "environ 11,03 $ (11,00 $/1kg 4,99 $/1lb)",
+      "prix_regulier": 15.01,
+      "prix_regulier_texte": "15,01 $ (régulier)",
+      "rabais": "3,98 $ DE RABAIS",
+      "mots_cles": [
+        "boeuf",
+        "oeufs"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Reese’s Grand Moule Friandise Moules au Beurre d'Arachides 16 Barres",
+      "prix": 1.5,
+      "prix_texte": "1,50 $ (79 g, 0,03 $/1ch)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "Limite de 6, après limite 2,00 $",
+      "mots_cles": [
+        "beurre"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Bleuets",
+      "prix": 1.99,
+      "prix_texte": "1,99 $ (1 ea, 0,59 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "bleuets"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Délices du Marché Petits poivrons doux (emballage de 4)",
+      "prix": 5,
+      "prix_texte": "5,00 $ (1 ea, 1,25 $/1ch)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "poivron"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Concombres anglais",
+      "prix": 1,
+      "prix_texte": "1,00 $ (1 ea, 1,00 $/1ch)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "concombres"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Poitrines de poulet format club",
+      "prix": 10.73,
+      "prix_texte": "environ 10,73 $ (7,58 $/1kg 3,44 $/1lb)",
+      "prix_regulier": 19.95,
+      "prix_regulier_texte": "19,95 $ (régulier)",
+      "rabais": "9,22 $ DE RABAIS",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Jasmine Gold Riz thaï au jasmin",
+      "prix": 12.99,
+      "prix_texte": "12,99 $ (8 kg, 0,16 $/100g)",
+      "prix_regulier": 15.99,
+      "prix_regulier_texte": "15,99 $ (régulier)",
+      "rabais": "3,00 $ DE RABAIS",
+      "mots_cles": [
+        "riz"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Filet de bœuf entier",
+      "prix": 100.07,
+      "prix_texte": "environ 100,07 $ (37,48 $/1kg 17,01 $/1lb)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "boeuf",
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Framboises, demi-pinte",
+      "prix": 3.99,
+      "prix_texte": "3,99 $ (170 g, 2,35 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "framboises"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Couronne de brocoli",
+      "prix": 2.49,
+      "prix_texte": "2,49 $ (1 ea, 2,49 $/1ch)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "brocoli"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Pepsi Cola",
+      "prix": 12.99,
+      "prix_texte": "12,99 $ (24x355.0 ml, 0,15 $/100ml)",
+      "prix_regulier": 14.29,
+      "prix_regulier_texte": "14,29 $ (régulier)",
+      "rabais": "1,30 $ DE RABAIS",
+      "mots_cles": [
+        "pepsi"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Lafleur Saucisses fumées",
+      "prix": 1.99,
+      "prix_texte": "1,99 $ (450 g, 0,44 $/100g)",
+      "prix_regulier": 6,
+      "prix_regulier_texte": "6,00 $ (régulier)",
+      "rabais": "4,01 $ DE RABAIS",
+      "mots_cles": [
+        "saucisse"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Saputo Fromage Mozzarellissima pizza mozzarella râpé",
+      "prix": 12,
+      "prix_texte": "12,00 $ (1 kg, 1,20 $/100g)",
+      "prix_regulier": 19.99,
+      "prix_regulier_texte": "19,99 $ (régulier)",
+      "rabais": "7,99 $ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "mozzarella"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Oasis Jus d’orange sans pulpe non fait de concentré",
+      "prix": 3.85,
+      "prix_texte": "3,85 $ (1.5 l, 0,26 $/100ml)",
+      "prix_regulier": 5,
+      "prix_regulier_texte": "5,00 $ (régulier)",
+      "rabais": "1,15 $ DE RABAIS",
+      "mots_cles": [
+        "oranges"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Délices du Marché Pommes de terre Russet, sac de 10 lb",
+      "prix": 3.99,
+      "prix_texte": "3,99 $ (4.54 kg, 0,09 $/100g)",
+      "prix_regulier": 5.49,
+      "prix_regulier_texte": "5,49 $ (régulier)",
+      "rabais": "1,50 $ DE RABAIS",
+      "mots_cles": [
+        "pommes de terre",
+        "pommes"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Sans Nom Fromage farmer’s marbré",
+      "prix": 4.44,
+      "prix_texte": "4,44 $ (400 g, 1,11 $/100g)",
+      "prix_regulier": 5.5,
+      "prix_regulier_texte": "5,50 $ (régulier)",
+      "rabais": "1,06 $ DE RABAIS",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "DOM Saumon fumé Steelhead",
+      "prix": 3,
+      "prix_texte": "3,00 $ (50 g, 6,00 $/100g)",
+      "prix_regulier": 3.88,
+      "prix_regulier_texte": "3,88 $ (régulier)",
+      "rabais": "0,88 $ DE RABAIS",
+      "mots_cles": [
+        "saumon"
+      ],
+      "categorie": "poisson"
+    },
+    {
+      "nom": "Saputo Feta Cheese",
+      "prix": 6.5,
+      "prix_texte": "6,50 $ (300 g, 2,17 $/100g)",
+      "prix_regulier": 9,
+      "prix_regulier_texte": "9,00 $ (régulier)",
+      "rabais": "2,50 $ DE RABAIS",
+      "mots_cles": [
+        "saputo"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "POM Pain à sandwich Superclub blanc ultra-moelleux",
+      "prix": 4,
+      "prix_texte": "4,00 $ (675 g, 0,59 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "pain"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Lafleur Jambon fumé à l’ancienne",
+      "prix": 7.99,
+      "prix_texte": "7,99 $ (550 g, 1,45 $/100g)",
+      "prix_regulier": 14,
+      "prix_regulier_texte": "14,00 $ (régulier)",
+      "rabais": "6,01 $ DE RABAIS",
+      "mots_cles": [
+        "jambon"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Sans Nom Fromage pizza mozzarella ",
+      "prix": 4.44,
+      "prix_texte": "4,44 $ (400 g, 1,11 $/100g)",
+      "prix_regulier": 5.5,
+      "prix_regulier_texte": "5,50 $ (régulier)",
+      "rabais": "1,06 $ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "mozzarella"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "le Choix du Président Tomates cerises Axiany",
+      "prix": 5,
+      "prix_texte": "5,00 $ (567 g, 0,88 $/100g)",
+      "prix_regulier": 7,
+      "prix_regulier_texte": "7,00 $ (régulier)",
+      "rabais": "2,00 $ DE RABAIS",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Pepsi Cola Diète",
+      "prix": 12.99,
+      "prix_texte": "12,99 $ (24x355.0 ml, 0,15 $/100ml)",
+      "prix_regulier": 14.29,
+      "prix_regulier_texte": "14,29 $ (régulier)",
+      "rabais": "1,30 $ DE RABAIS",
+      "mots_cles": [
+        "pepsi"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "QUÉBON Crème à café 10 %",
+      "prix": 3.99,
+      "prix_texte": "3,99 $ (1 l, 0,40 $/100ml)",
+      "prix_regulier": 4.75,
+      "prix_regulier_texte": "4,75 $ (régulier)",
+      "rabais": "0,76 $ DE RABAIS",
+      "mots_cles": [
+        "québon"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Délices du Marché Mandarines 1,5 lbs",
+      "prix": 3.44,
+      "prix_texte": "3,44 $ (681 g, 0,51 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "délices"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Aylmer Soupe condensée aux tomates",
+      "prix": 0.88,
+      "prix_texte": "0,88 $ (284 ml, 0,31 $/100ml)",
+      "prix_regulier": 1.29,
+      "prix_regulier_texte": "1,29 $ (régulier)",
+      "rabais": "0,41 $ DE RABAIS",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Sans Nom Fromage cheddar fort",
+      "prix": 4.44,
+      "prix_texte": "4,44 $ (400 g, 1,11 $/100g)",
+      "prix_regulier": 5.5,
+      "prix_regulier_texte": "5,50 $ (régulier)",
+      "rabais": "1,06 $ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "cheddar"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Lafleur Jambon fumé Forêt-Noire",
+      "prix": 7.99,
+      "prix_texte": "7,99 $ (550 g, 1,45 $/100g)",
+      "prix_regulier": 14,
+      "prix_regulier_texte": "14,00 $ (régulier)",
+      "rabais": "6,01 $ DE RABAIS",
+      "mots_cles": [
+        "jambon"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Sans Nom Mozzarella râpé",
+      "prix": 4.44,
+      "prix_texte": "4,44 $ (320 g, 1,39 $/100g)",
+      "prix_regulier": 5.79,
+      "prix_regulier_texte": "5,79 $ (régulier)",
+      "rabais": "1,35 $ DE RABAIS",
+      "mots_cles": [
+        "mozzarella"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Délices du Marché Mini concombres",
+      "prix": 2,
+      "prix_texte": "2,00 $ (6 ea, 0,33 $/1ch)",
+      "prix_regulier": 3,
+      "prix_regulier_texte": "3,00 $ (régulier)",
+      "rabais": "1,00 $ DE RABAIS",
+      "mots_cles": [
+        "délices"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Lafleur Bacon",
+      "prix": 7,
+      "prix_texte": "7,00 $ (500 g, 1,40 $/100g)",
+      "prix_regulier": 11.5,
+      "prix_regulier_texte": "11,50 $ (régulier)",
+      "rabais": "4,50 $ DE RABAIS",
+      "mots_cles": [
+        "bacon"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Natrel Produit laitier sans lactose 2 %",
+      "prix": 6.25,
+      "prix_texte": "6,25 $ Non-membres (2 l, 0,31 $/100ml)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Kiwi frais",
+      "prix": 4.99,
+      "prix_texte": "4,99 $ (600 g, 0,83 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "kiwi"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Hellmann’s Mayonnaise Vraie",
+      "prix": 5.77,
+      "prix_texte": "5,77 $ (890 ml, 0,65 $/100ml)",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5,99 $ (régulier)",
+      "rabais": "0,22 $ DE RABAIS",
+      "mots_cles": [
+        "hellmann’s"
+      ],
+      "categorie": "condiments"
+    },
+    {
+      "nom": "Sans Nom Fromage cheddar mi-fort",
+      "prix": 4.44,
+      "prix_texte": "4,44 $ (400 g, 1,11 $/100g)",
+      "prix_regulier": 5.5,
+      "prix_regulier_texte": "5,50 $ (régulier)",
+      "rabais": "1,06 $ DE RABAIS",
+      "mots_cles": [
+        "fromage",
+        "cheddar"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Pommes Pink Lady",
+      "prix": 0.93,
+      "prix_texte": "environ 0,93 $ (4,41 $/1kg 2,00 $/1lb)",
+      "prix_regulier": 1.39,
+      "prix_regulier_texte": "1,39 $ (régulier)",
+      "rabais": "0,46 $ DE RABAIS",
+      "mots_cles": [
+        "pommes"
+      ],
+      "categorie": "fruits"
+    },
+    {
+      "nom": "Flamingo Ailes de poulet BBQ Flamingo",
+      "prix": 10.99,
+      "prix_texte": "10,99 $ (550 g, 2,00 $/100g)",
+      "prix_regulier": 16.99,
+      "prix_regulier_texte": "16,99 $ (régulier)",
+      "rabais": "6,00 $ DE RABAIS",
+      "mots_cles": [
+        "poulet"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Maïs deux couleurs, maïs en épis",
+      "prix": 0.7,
+      "prix_texte": "0,70 $ (1 ea, 0,70 $/1ch)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "maïs"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Kraft Tranches de fromage Original",
+      "prix": 4,
+      "prix_texte": "4,00 $ (410 g, 0,98 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Heinz Ketchup aux tomates",
+      "prix": 4.99,
+      "prix_texte": "4,99 $ (1 l, 0,50 $/100ml)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "tomates"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Délices du Marché Oignons rouges, sac de 3 lb",
+      "prix": 4.99,
+      "prix_texte": "4,99 $ (1.36 kg, 0,37 $/100g)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "oignons"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Becel Margarine originale",
+      "prix": 6.99,
+      "prix_texte": "6,99 $ (800 g, 0,87 $/100g)",
+      "prix_regulier": 8.99,
+      "prix_regulier_texte": "8,99 $ (régulier)",
+      "rabais": "2,00 $ DE RABAIS",
+      "mots_cles": [
+        "becel"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Courgette",
+      "prix": 0.93,
+      "prix_texte": "environ 0,93 $ (3,31 $/1kg 1,50 $/1lb)",
+      "prix_regulier": 1.54,
+      "prix_regulier_texte": "1,54 $ (régulier)",
+      "rabais": "0,61 $ DE RABAIS",
+      "mots_cles": [
+        "courge"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Pepsi Sans Sucre Cola",
+      "prix": 12.99,
+      "prix_texte": "12,99 $ (24x355.0 ml, 0,15 $/100ml)",
+      "prix_regulier": 14.29,
+      "prix_regulier_texte": "14,29 $ (régulier)",
+      "rabais": "1,30 $ DE RABAIS",
+      "mots_cles": [
+        "pepsi"
+      ],
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Lactantia Purfiltre lait partiellement écrémé 2 %",
+      "prix": 4.88,
+      "prix_texte": "4,88 $ (2 l, 0,24 $/100ml)",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Saputo Fromage Bocconcini cocktail emballage duo",
+      "prix": 6.5,
+      "prix_texte": "6,50 $ (252 g, 2,58 $/100g)",
+      "prix_regulier": 9,
+      "prix_regulier_texte": "9,00 $ (régulier)",
+      "rabais": "2,50 $ DE RABAIS",
+      "mots_cles": [
+        "fromage"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Concombres des champs",
+      "prix": 0.75,
+      "prix_texte": "0,75 $ (1 ea, 0,75 $/1ch)",
+      "prix_regulier": 1.5,
+      "prix_regulier_texte": "1,50 $ (régulier)",
+      "rabais": "0,75 $ DE RABAIS",
+      "mots_cles": [
+        "concombres"
+      ],
+      "categorie": "epicerie"
+    }
+  ]
 }
