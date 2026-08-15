@@ -1,5 +1,5 @@
 {
-  "genereeLe": "2026-07-11T05:37:34.641Z",
+  "genereeLe": "2026-08-15T03:37:40.813Z",
   "source": "claude_fallback",
   "produits": [
     {
@@ -27,9 +27,21 @@
       "categorie": "viande"
     },
     {
+      "nom": "Cuisses de poulet avec dos (5 kg)",
+      "prix": 29.99,
+      "prix_texte": "29.99$",
+      "unite": "5 kg",
+      "mots_cles": [
+        "poulet",
+        "cuisse",
+        "volaille"
+      ],
+      "categorie": "viande"
+    },
+    {
       "nom": "Hauts de cuisses de poulet désossés (2.5 kg)",
-      "prix": 32.99,
-      "prix_texte": "32.99$",
+      "prix": 34.99,
+      "prix_texte": "34.99$",
       "unite": "2.5 kg",
       "mots_cles": [
         "poulet",
@@ -39,22 +51,10 @@
       "categorie": "viande"
     },
     {
-      "nom": "Pilons de poulet (4 kg)",
-      "prix": 29.99,
-      "prix_texte": "29.99$",
-      "unite": "4 kg",
-      "mots_cles": [
-        "poulet",
-        "pilon",
-        "volaille"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Boeuf haché mi-maigre Kirkland (2 kg)",
-      "prix": 28.99,
-      "prix_texte": "28.99$",
-      "unite": "2 kg",
+      "nom": "Boeuf haché mi-maigre Kirkland (2.5 kg)",
+      "prix": 38.99,
+      "prix_texte": "38.99$",
+      "unite": "2.5 kg",
       "mots_cles": [
         "boeuf",
         "haché",
@@ -63,10 +63,10 @@
       "categorie": "viande"
     },
     {
-      "nom": "Boeuf haché extra-maigre (1.8 kg)",
-      "prix": 34.99,
-      "prix_texte": "34.99$",
-      "unite": "1.8 kg",
+      "nom": "Boeuf haché extra-maigre (2 kg)",
+      "prix": 42.99,
+      "prix_texte": "42.99$",
+      "unite": "2 kg",
       "mots_cles": [
         "boeuf",
         "haché",
@@ -75,46 +75,73 @@
       "categorie": "viande"
     },
     {
-      "nom": "Bavette de boeuf AAA (1.5 kg)",
-      "prix": 49.99,
-      "prix_texte": "49.99$",
+      "nom": "Faux-filet de boeuf AAA (1.5 kg)",
+      "prix": 74.99,
+      "prix_texte": "74.99$",
       "unite": "1.5 kg",
       "mots_cles": [
         "boeuf",
-        "bavette",
-        "steak"
+        "steak",
+        "faux-filet",
+        "ribeye"
       ],
       "categorie": "viande"
     },
     {
       "nom": "Filet mignon de boeuf AAA (1.2 kg)",
-      "prix": 79.99,
-      "prix_texte": "79.99$",
+      "prix": 89.99,
+      "prix_texte": "89.99$",
       "unite": "1.2 kg",
       "mots_cles": [
         "boeuf",
-        "filet mignon",
+        "filet",
         "steak"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Côtes levées de porc (2.5 kg)",
-      "prix": 38.99,
-      "prix_texte": "38.99$",
-      "unite": "2.5 kg",
+      "nom": "Bavette de boeuf marinée (1.5 kg)",
+      "prix": 44.99,
+      "prix_texte": "44.99$",
+      "unite": "1.5 kg",
       "mots_cles": [
-        "porc",
-        "côtes levées",
-        "ribs"
+        "boeuf",
+        "bavette",
+        "mariné"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Longe de porc désossée (2.2 kg)",
-      "prix": 29.99,
-      "prix_texte": "29.99$",
-      "unite": "2.2 kg",
+      "nom": "Rôti de palette de boeuf (2 kg)",
+      "prix": 36.99,
+      "prix_texte": "36.99$",
+      "unite": "2 kg",
+      "mots_cles": [
+        "boeuf",
+        "rôti",
+        "palette",
+        "braisé"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Côtes levées de porc St-Louis (3 kg)",
+      "prix": 48.99,
+      "prix_texte": "48.99$",
+      "unite": "3 kg",
+      "mots_cles": [
+        "porc",
+        "côtes",
+        "ribs",
+        "bbq"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Longe de porc désossée (3 kg)",
+      "prix": 32.99,
+      "prix_texte": "32.99$",
+      "unite": "3 kg",
       "mots_cles": [
         "porc",
         "longe",
@@ -123,20 +150,32 @@
       "categorie": "viande"
     },
     {
-      "nom": "Côtelettes de porc (2 kg)",
-      "prix": 27.99,
-      "prix_texte": "27.99$",
-      "unite": "2 kg",
+      "nom": "Filet de porc Kirkland (1.5 kg)",
+      "prix": 28.99,
+      "prix_texte": "28.99$",
+      "unite": "1.5 kg",
       "mots_cles": [
         "porc",
-        "côtelette"
+        "filet"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Bacon Kirkland (4 x 500 g)",
-      "prix": 32.99,
-      "prix_texte": "32.99$",
+      "nom": "Saucisses italiennes douces (1.8 kg)",
+      "prix": 24.99,
+      "prix_texte": "24.99$",
+      "unite": "1.8 kg",
+      "mots_cles": [
+        "saucisse",
+        "porc",
+        "italien"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Bacon Kirkland tranché (2 kg)",
+      "prix": 34.99,
+      "prix_texte": "34.99$",
       "unite": "2 kg",
       "mots_cles": [
         "bacon",
@@ -146,78 +185,69 @@
       "categorie": "viande"
     },
     {
-      "nom": "Saucisses italiennes (1.5 kg)",
+      "nom": "Jambon fumé tranché (1.5 kg)",
       "prix": 22.99,
       "prix_texte": "22.99$",
       "unite": "1.5 kg",
       "mots_cles": [
-        "saucisse",
-        "italienne",
-        "porc"
+        "jambon",
+        "porc",
+        "fumé",
+        "sandwich"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Saucisses à hot-dog Kirkland (1.5 kg)",
-      "prix": 18.99,
-      "prix_texte": "18.99$",
-      "unite": "1.5 kg",
+      "nom": "Gigot d'agneau Nouvelle-Zélande (2 kg)",
+      "prix": 64.99,
+      "prix_texte": "64.99$",
+      "unite": "2 kg",
       "mots_cles": [
-        "saucisse",
-        "hot-dog"
+        "agneau",
+        "gigot",
+        "rôti"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Jambon Forêt-Noire tranché (1 kg)",
+      "nom": "Côtelettes d'agneau (1.2 kg)",
+      "prix": 54.99,
+      "prix_texte": "54.99$",
+      "unite": "1.2 kg",
+      "mots_cles": [
+        "agneau",
+        "côtelette"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Dinde entière Butterball (7 kg)",
+      "prix": 54.99,
+      "prix_texte": "54.99$",
+      "unite": "7 kg",
+      "mots_cles": [
+        "dinde",
+        "volaille",
+        "fête"
+      ],
+      "categorie": "viande"
+    },
+    {
+      "nom": "Poitrine de dinde rôtie tranchée (1 kg)",
       "prix": 19.99,
       "prix_texte": "19.99$",
       "unite": "1 kg",
       "mots_cles": [
-        "jambon",
-        "charcuterie",
-        "tranché"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Dinde hachée maigre (1.8 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
-      "unite": "1.8 kg",
-      "mots_cles": [
         "dinde",
-        "haché",
-        "volaille"
+        "tranché",
+        "sandwich"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Agneau gigot désossé (1.8 kg)",
-      "prix": 59.99,
-      "prix_texte": "59.99$",
-      "unite": "1.8 kg",
-      "mots_cles": [
-        "agneau",
-        "gigot"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Veau escalopes (1 kg)",
-      "prix": 39.99,
-      "prix_texte": "39.99$",
-      "unite": "1 kg",
-      "mots_cles": [
-        "veau",
-        "escalope"
-      ],
-      "categorie": "viande"
-    },
-    {
-      "nom": "Saumon atlantique frais côté (1.8 kg min.)",
-      "prix": 14.99,
-      "prix_texte": "14.99$/kg",
+      "nom": "Saumon atlantique frais (côté 1.2 kg min)",
+      "prix": 16.99,
+      "prix_texte": "16.99$/kg",
       "unite": "kg",
       "mots_cles": [
         "saumon",
@@ -227,10 +257,10 @@
       "categorie": "poisson"
     },
     {
-      "nom": "Filets de saumon sockeye sauvage (1.36 kg)",
-      "prix": 42.99,
-      "prix_texte": "42.99$",
-      "unite": "1.36 kg",
+      "nom": "Filets de saumon sockeye sauvage (1 kg)",
+      "prix": 38.99,
+      "prix_texte": "38.99$",
+      "unite": "1 kg",
       "mots_cles": [
         "saumon",
         "sockeye",
@@ -239,9 +269,9 @@
       "categorie": "poisson"
     },
     {
-      "nom": "Crevettes crues 21-25 Kirkland (2 lb)",
-      "prix": 29.99,
-      "prix_texte": "29.99$",
+      "nom": "Crevettes crues décortiquées 31-40 (2 lb)",
+      "prix": 28.99,
+      "prix_texte": "28.99$",
       "unite": "907 g",
       "mots_cles": [
         "crevettes",
@@ -250,21 +280,22 @@
       "categorie": "poisson"
     },
     {
-      "nom": "Crevettes cuites décortiquées (907 g)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
+      "nom": "Crevettes cuites géantes 16-20 (2 lb)",
+      "prix": 34.99,
+      "prix_texte": "34.99$",
       "unite": "907 g",
       "mots_cles": [
         "crevettes",
-        "cuites"
+        "cuites",
+        "cocktail"
       ],
       "categorie": "poisson"
     },
     {
-      "nom": "Filets de tilapia (1.36 kg)",
+      "nom": "Filets de tilapia (1.5 kg)",
       "prix": 24.99,
       "prix_texte": "24.99$",
-      "unite": "1.36 kg",
+      "unite": "1.5 kg",
       "mots_cles": [
         "tilapia",
         "filet",
@@ -273,42 +304,32 @@
       "categorie": "poisson"
     },
     {
-      "nom": "Filets de morue (1.36 kg)",
+      "nom": "Morue de l'Atlantique filets (1.2 kg)",
       "prix": 32.99,
       "prix_texte": "32.99$",
-      "unite": "1.36 kg",
+      "unite": "1.2 kg",
       "mots_cles": [
         "morue",
-        "filet"
+        "filet",
+        "poisson blanc"
       ],
       "categorie": "poisson"
     },
     {
-      "nom": "Thon albacore en conserve Kirkland (8 x 198 g)",
-      "prix": 28.99,
-      "prix_texte": "28.99$",
-      "unite": "8 x 198 g",
+      "nom": "Thon albacore steaks (1 kg)",
+      "prix": 44.99,
+      "prix_texte": "44.99$",
+      "unite": "1 kg",
       "mots_cles": [
         "thon",
-        "conserve"
+        "steak"
       ],
       "categorie": "poisson"
     },
     {
-      "nom": "Saumon rose en conserve Kirkland (6 x 213 g)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
-      "unite": "6 x 213 g",
-      "mots_cles": [
-        "saumon",
-        "conserve"
-      ],
-      "categorie": "poisson"
-    },
-    {
-      "nom": "Pétoncles géants (907 g)",
-      "prix": 38.99,
-      "prix_texte": "38.99$",
+      "nom": "Pétoncles géants U-10 (907 g)",
+      "prix": 52.99,
+      "prix_texte": "52.99$",
       "unite": "907 g",
       "mots_cles": [
         "pétoncles",
@@ -317,42 +338,43 @@
       "categorie": "poisson"
     },
     {
-      "nom": "Lait 2% Natrel (3 x 2 L)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "unite": "6 L",
+      "nom": "Lait 2% Kirkland (4 L)",
+      "prix": 7.49,
+      "prix_texte": "7.49$",
+      "unite": "4 L",
       "mots_cles": [
         "lait",
-        "natrel"
+        "2%"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Lait 3.25% entier (4 L)",
-      "prix": 8.49,
-      "prix_texte": "8.49$",
+      "nom": "Lait 3.25% homogénéisé (4 L)",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
       "unite": "4 L",
       "mots_cles": [
         "lait",
+        "homogénéisé",
         "entier"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Crème 35% Natrel (2 L)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
-      "unite": "2 L",
+      "nom": "Oeufs gros calibre Kirkland (30 unités)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "unite": "30 oeufs",
       "mots_cles": [
-        "crème",
-        "fouetter"
+        "oeufs",
+        "déjeuner"
       ],
       "categorie": "produits_laitiers"
     },
     {
       "nom": "Beurre salé Kirkland (4 x 454 g)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
+      "prix": 21.99,
+      "prix_texte": "21.99$",
       "unite": "1.82 kg",
       "mots_cles": [
         "beurre",
@@ -362,31 +384,21 @@
     },
     {
       "nom": "Beurre non salé Kirkland (4 x 454 g)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
+      "prix": 22.99,
+      "prix_texte": "22.99$",
       "unite": "1.82 kg",
       "mots_cles": [
         "beurre",
-        "non salé"
+        "non salé",
+        "pâtisserie"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Oeufs gros calibre Kirkland (30 unités)",
-      "prix": 13.99,
-      "prix_texte": "13.99$",
-      "unite": "30 oeufs",
-      "mots_cles": [
-        "oeufs",
-        "gros"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Yogourt grec nature Kirkland (3 x 650 g)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "unite": "1.95 kg",
+      "nom": "Yogourt grec Kirkland nature 0% (1.5 kg)",
+      "prix": 11.99,
+      "prix_texte": "11.99$",
+      "unite": "1.5 kg",
       "mots_cles": [
         "yogourt",
         "grec",
@@ -395,114 +407,116 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Yogourt Iögo (24 x 100 g)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
-      "unite": "24 x 100 g",
-      "mots_cles": [
-        "yogourt",
-        "fruits",
-        "iogo"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage cheddar fort Kirkland (1 kg)",
-      "prix": 18.99,
-      "prix_texte": "18.99$",
+      "nom": "Crème sure Kirkland 14% (1 kg)",
+      "prix": 6.99,
+      "prix_texte": "6.99$",
       "unite": "1 kg",
-      "mots_cles": [
-        "fromage",
-        "cheddar",
-        "fort"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage cheddar mi-fort (1 kg)",
-      "prix": 17.99,
-      "prix_texte": "17.99$",
-      "unite": "1 kg",
-      "mots_cles": [
-        "fromage",
-        "cheddar",
-        "mi-fort"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage mozzarella râpé Kirkland (2.5 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
-      "unite": "2.5 kg",
-      "mots_cles": [
-        "fromage",
-        "mozzarella",
-        "râpé"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage parmesan Parmigiano Reggiano (1 kg)",
-      "prix": 44.99,
-      "prix_texte": "44.99$",
-      "unite": "1 kg",
-      "mots_cles": [
-        "fromage",
-        "parmesan",
-        "parmigiano"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage brie double crème (600 g)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "unite": "600 g",
-      "mots_cles": [
-        "fromage",
-        "brie"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage feta (1 kg)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
-      "unite": "1 kg",
-      "mots_cles": [
-        "fromage",
-        "feta",
-        "grec"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage en grains frais du jour (600 g)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "unite": "600 g",
-      "mots_cles": [
-        "fromage",
-        "grains",
-        "poutine"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Crème sure 14% (2 kg)",
-      "prix": 9.99,
-      "prix_texte": "9.99$",
-      "unite": "2 kg",
       "mots_cles": [
         "crème sure"
       ],
       "categorie": "produits_laitiers"
     },
     {
+      "nom": "Crème à fouetter 35% (2 L)",
+      "prix": 14.99,
+      "prix_texte": "14.99$",
+      "unite": "2 L",
+      "mots_cles": [
+        "crème",
+        "fouetter",
+        "35%"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Fromage cheddar fort Kirkland (1 kg)",
+      "prix": 16.99,
+      "prix_texte": "16.99$",
+      "unite": "1 kg",
+      "mots_cles": [
+        "cheddar",
+        "fort",
+        "fromage"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Fromage cheddar mi-fort (1.2 kg)",
+      "prix": 17.99,
+      "prix_texte": "17.99$",
+      "unite": "1.2 kg",
+      "mots_cles": [
+        "cheddar",
+        "fromage"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Mozzarella râpée Kirkland (2.5 kg)",
+      "prix": 24.99,
+      "prix_texte": "24.99$",
+      "unite": "2.5 kg",
+      "mots_cles": [
+        "mozzarella",
+        "râpé",
+        "fromage",
+        "pizza"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Brie double crème (600 g)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "unite": "600 g",
+      "mots_cles": [
+        "brie",
+        "fromage",
+        "français"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Parmesan Reggiano Kirkland (1 kg)",
+      "prix": 44.99,
+      "prix_texte": "44.99$",
+      "unite": "1 kg",
+      "mots_cles": [
+        "parmesan",
+        "reggiano",
+        "italien"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Fromage en grains du Québec (1 kg)",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
+      "unite": "1 kg",
+      "mots_cles": [
+        "fromage",
+        "grains",
+        "poutine",
+        "québec"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Feta Kirkland (1.2 kg)",
+      "prix": 15.99,
+      "prix_texte": "15.99$",
+      "unite": "1.2 kg",
+      "mots_cles": [
+        "feta",
+        "fromage",
+        "salade"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
       "nom": "Huile d'olive extra vierge Kirkland (3 L)",
-      "prix": 32.99,
-      "prix_texte": "32.99$",
+      "prix": 29.99,
+      "prix_texte": "29.99$",
       "unite": "3 L",
       "mots_cles": [
         "huile",
@@ -512,24 +526,26 @@
       "categorie": "condiments"
     },
     {
-      "nom": "Huile de canola Kirkland (3 L)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "unite": "3 L",
+      "nom": "Huile de canola Kirkland (5 L)",
+      "prix": 16.99,
+      "prix_texte": "16.99$",
+      "unite": "5 L",
       "mots_cles": [
         "huile",
-        "canola"
+        "canola",
+        "cuisson"
       ],
       "categorie": "condiments"
     },
     {
-      "nom": "Huile d'avocat Kirkland (2 L)",
+      "nom": "Huile de coco biologique (2.5 L)",
       "prix": 24.99,
       "prix_texte": "24.99$",
-      "unite": "2 L",
+      "unite": "2.5 L",
       "mots_cles": [
         "huile",
-        "avocat"
+        "coco",
+        "bio"
       ],
       "categorie": "condiments"
     },
@@ -540,40 +556,8 @@
       "unite": "1 L",
       "mots_cles": [
         "vinaigre",
-        "balsamique"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Mayonnaise Hellmann's (1.8 L)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "unite": "1.8 L",
-      "mots_cles": [
-        "mayonnaise",
-        "hellmanns"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Ketchup Heinz (2.5 L)",
-      "prix": 11.99,
-      "prix_texte": "11.99$",
-      "unite": "2.5 L",
-      "mots_cles": [
-        "ketchup",
-        "heinz"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Moutarde de Dijon (830 ml)",
-      "prix": 8.99,
-      "prix_texte": "8.99$",
-      "unite": "830 ml",
-      "mots_cles": [
-        "moutarde",
-        "dijon"
+        "balsamique",
+        "italien"
       ],
       "categorie": "condiments"
     },
@@ -583,111 +567,114 @@
       "prix_texte": "11.99$",
       "unite": "1.6 L",
       "mots_cles": [
-        "sauce",
-        "soya",
+        "sauce soya",
+        "asiatique",
         "kikkoman"
       ],
       "categorie": "condiments"
     },
     {
-      "nom": "Sauce BBQ Kirkland (2.84 L)",
-      "prix": 10.99,
-      "prix_texte": "10.99$",
-      "unite": "2.84 L",
+      "nom": "Ketchup Heinz (2.5 kg)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "unite": "2.5 kg",
       "mots_cles": [
-        "sauce",
-        "bbq",
-        "barbecue"
+        "ketchup",
+        "heinz"
       ],
       "categorie": "condiments"
     },
     {
-      "nom": "Sauce tomate marinara Kirkland (3 x 860 ml)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "unite": "3 x 860 ml",
-      "mots_cles": [
-        "sauce",
-        "tomate",
-        "marinara"
-      ],
-      "categorie": "condiments"
-    },
-    {
-      "nom": "Pesto au basilic (920 ml)",
+      "nom": "Mayonnaise Hellmann's (1.8 L)",
       "prix": 13.99,
       "prix_texte": "13.99$",
-      "unite": "920 ml",
+      "unite": "1.8 L",
       "mots_cles": [
-        "pesto",
-        "basilic"
+        "mayonnaise",
+        "hellmanns"
+      ],
+      "categorie": "condiments"
+    },
+    {
+      "nom": "Moutarde de Dijon Kirkland (750 ml)",
+      "prix": 7.99,
+      "prix_texte": "7.99$",
+      "unite": "750 ml",
+      "mots_cles": [
+        "moutarde",
+        "dijon"
+      ],
+      "categorie": "condiments"
+    },
+    {
+      "nom": "Sauce marinara Kirkland (3 x 850 ml)",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "unite": "2.55 L",
+      "mots_cles": [
+        "sauce",
+        "marinara",
+        "tomate",
+        "pâtes"
       ],
       "categorie": "condiments"
     },
     {
       "nom": "Sirop d'érable pur Kirkland (1 L)",
-      "prix": 22.99,
-      "prix_texte": "22.99$",
+      "prix": 19.99,
+      "prix_texte": "19.99$",
       "unite": "1 L",
       "mots_cles": [
         "sirop",
         "érable",
+        "québec"
+      ],
+      "categorie": "condiments"
+    },
+    {
+      "nom": "Miel pur Kirkland (3 kg)",
+      "prix": 28.99,
+      "prix_texte": "28.99$",
+      "unite": "3 kg",
+      "mots_cles": [
+        "miel",
         "pur"
       ],
       "categorie": "condiments"
     },
     {
-      "nom": "Miel liquide naturel Kirkland (3 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
-      "unite": "3 kg",
-      "mots_cles": [
-        "miel",
-        "naturel"
-      ],
-      "categorie": "condiments"
-    },
-    {
       "nom": "Amandes entières Kirkland (1.36 kg)",
-      "prix": 22.99,
-      "prix_texte": "22.99$",
+      "prix": 24.99,
+      "prix_texte": "24.99$",
       "unite": "1.36 kg",
       "mots_cles": [
         "amandes",
-        "noix"
+        "noix",
+        "collation"
       ],
       "categorie": "epicerie_seche"
     },
     {
       "nom": "Noix de cajou Kirkland (1.13 kg)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
+      "prix": 26.99,
+      "prix_texte": "26.99$",
       "unite": "1.13 kg",
       "mots_cles": [
         "cajou",
-        "noix"
-      ],
-      "categorie": "epicerie_seche"
-    },
-    {
-      "nom": "Noix de Grenoble Kirkland (1.36 kg)",
-      "prix": 21.99,
-      "prix_texte": "21.99$",
-      "unite": "1.36 kg",
-      "mots_cles": [
         "noix",
-        "grenoble"
+        "collation"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Mélange de noix non salées Kirkland (1.13 kg)",
-      "prix": 23.99,
-      "prix_texte": "23.99$",
+      "nom": "Noix mélangées non salées (1.13 kg)",
+      "prix": 28.99,
+      "prix_texte": "28.99$",
       "unite": "1.13 kg",
       "mots_cles": [
         "noix",
-        "mélange"
+        "mélange",
+        "collation"
       ],
       "categorie": "epicerie_seche"
     },
@@ -698,14 +685,15 @@
       "unite": "1.36 kg",
       "mots_cles": [
         "arachides",
-        "noix"
+        "peanuts",
+        "collation"
       ],
       "categorie": "epicerie_seche"
     },
     {
       "nom": "Riz basmati Kirkland (8 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
+      "prix": 24.99,
+      "prix_texte": "24.99$",
       "unite": "8 kg",
       "mots_cles": [
         "riz",
@@ -715,49 +703,66 @@
     },
     {
       "nom": "Riz jasmin (8 kg)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
+      "prix": 22.99,
+      "prix_texte": "22.99$",
       "unite": "8 kg",
       "mots_cles": [
         "riz",
-        "jasmin"
+        "jasmin",
+        "thaï"
       ],
       "categorie": "epicerie_seche"
     },
     {
       "nom": "Pâtes penne Kirkland (3 kg)",
-      "prix": 10.99,
-      "prix_texte": "10.99$",
+      "prix": 11.99,
+      "prix_texte": "11.99$",
       "unite": "3 kg",
       "mots_cles": [
         "pâtes",
-        "penne"
+        "penne",
+        "italien"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Pâtes spaghetti (3 kg)",
-      "prix": 10.99,
-      "prix_texte": "10.99$",
+      "nom": "Spaghetti Kirkland (3 kg)",
+      "prix": 11.99,
+      "prix_texte": "11.99$",
       "unite": "3 kg",
       "mots_cles": [
         "pâtes",
-        "spaghetti"
+        "spaghetti",
+        "italien"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Farine tout usage (10 kg)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
+      "nom": "Quinoa biologique Kirkland (2.04 kg)",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
+      "unite": "2.04 kg",
+      "mots_cles": [
+        "quinoa",
+        "bio",
+        "grain"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Farine tout usage Robin Hood (10 kg)",
+      "prix": 17.99,
+      "prix_texte": "17.99$",
       "unite": "10 kg",
       "mots_cles": [
-        "farine"
+        "farine",
+        "tout usage",
+        "pâtisserie"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Sucre blanc (10 kg)",
+      "nom": "Sucre blanc Redpath (10 kg)",
       "prix": 14.99,
       "prix_texte": "14.99$",
       "unite": "10 kg",
@@ -768,171 +773,51 @@
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Flocons d'avoine Quaker (5 kg)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
-      "unite": "5 kg",
+      "nom": "Thon pâle en morceaux Kirkland (6 x 170 g)",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
+      "unite": "1.02 kg",
       "mots_cles": [
-        "avoine",
-        "gruau",
-        "déjeuner"
+        "thon",
+        "conserve"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Céréales Cheerios (1.3 kg)",
+      "nom": "Tomates italiennes en dés (6 x 796 ml)",
       "prix": 14.99,
       "prix_texte": "14.99$",
-      "unite": "1.3 kg",
+      "unite": "4.78 L",
       "mots_cles": [
+        "tomates",
+        "conserve",
+        "italien"
+      ],
+      "categorie": "epicerie_seche"
+    },
+    {
+      "nom": "Céréales granola avec amandes (2 kg)",
+      "prix": 16.99,
+      "prix_texte": "16.99$",
+      "unite": "2 kg",
+      "mots_cles": [
+        "granola",
         "céréales",
-        "cheerios",
         "déjeuner"
       ],
       "categorie": "epicerie_seche"
     },
     {
-      "nom": "Pizza surgelée Kirkland (4 unités)",
-      "prix": 19.99,
-      "prix_texte": "19.99$",
-      "unite": "4 pizzas",
+      "nom": "Pizza Delissio 4 fromages surgelée (4 x 519 g)",
+      "prix": 29.99,
+      "prix_texte": "29.99$",
+      "unite": "2.08 kg",
       "mots_cles": [
         "pizza",
-        "surgelé"
-      ],
-      "categorie": "surgele"
-    },
-    {
-      "nom": "Filets de poulet panés surgelés (2 kg)",
-      "prix": 24.99,
-      "prix_texte": "24.99$",
-      "unite": "2 kg",
-      "mots_cles": [
-        "poulet",
-        "pané",
-        "surgelé"
-      ],
-      "categorie": "surgele"
-    },
-    {
-      "nom": "Mélange légumes surgelés Normandie (2.5 kg)",
-      "prix": 14.99,
-      "prix_texte": "14.99$",
-      "unite": "2.5 kg",
-      "mots_cles": [
-        "légumes",
         "surgelé",
-        "mélange"
+        "fromage"
       ],
       "categorie": "surgele"
-    },
-    {
-      "nom": "Petits fruits mélangés surgelés (2 kg)",
-      "prix": 19.99,
-      "prix_texte": "19.99$",
-      "unite": "2 kg",
-      "mots_cles": [
-        "fruits",
-        "surgelé",
-        "petits fruits"
-      ],
-      "categorie": "surgele"
-    },
-    {
-      "nom": "Frites surgelées coupe maison (4 kg)",
-      "prix": 16.99,
-      "prix_texte": "16.99$",
-      "unite": "4 kg",
-      "mots_cles": [
-        "frites",
-        "surgelé"
-      ],
-      "categorie": "surgele"
-    },
-    {
-      "nom": "Carottes (4.54 kg)",
-      "prix": 8.99,
-      "prix_texte": "8.99$",
-      "unite": "4.54 kg",
-      "mots_cles": [
-        "carottes",
-        "légumes"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Pommes de terre Russet (9.07 kg)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "unite": "9.07 kg",
-      "mots_cles": [
-        "pommes de terre",
-        "russet"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Oignons jaunes (4.54 kg)",
-      "prix": 7.99,
-      "prix_texte": "7.99$",
-      "unite": "4.54 kg",
-      "mots_cles": [
-        "oignons"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Ail pelé (1.36 kg)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "unite": "1.36 kg",
-      "mots_cles": [
-        "ail"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Poivrons tricolores (6 unités)",
-      "prix": 10.99,
-      "prix_texte": "10.99$",
-      "unite": "6 poivrons",
-      "mots_cles": [
-        "poivrons"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Bananes (1.36 kg)",
-      "prix": 2.79,
-      "prix_texte": "2.79$",
-      "unite": "1.36 kg",
-      "mots_cles": [
-        "bananes",
-        "fruits"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Pommes Gala (5 lb)",
-      "prix": 11.99,
-      "prix_texte": "11.99$",
-      "unite": "2.27 kg",
-      "mots_cles": [
-        "pommes",
-        "gala"
-      ],
-      "categorie": "fruits"
-    },
-    {
-      "nom": "Bleuets frais (510 g)",
-      "prix": 8.99,
-      "prix_texte": "8.99$",
-      "unite": "510 g",
-      "mots_cles": [
-        "bleuets",
-        "petits fruits"
-      ],
-      "categorie": "fruits"
     }
   ]
 }
