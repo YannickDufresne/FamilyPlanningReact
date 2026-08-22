@@ -1,6 +1,6 @@
 {
   "semaine": "2026-08-24",
-  "genereeLe": "2026-08-22T03:37:41.900Z",
+  "genereeLe": "2026-08-22T04:35:20.892Z",
   "storeId": "deals-centre",
   "source": "maxi.ca/__NEXT_DATA__",
   "items": [
@@ -32,9 +32,9 @@
       "nom": "Melon d’eau rouge sans pépins",
       "prix": 4.99,
       "prix_texte": "4,99 $ (1 ea, 4,99 $/1ch)",
-      "prix_regulier": 5.88,
-      "prix_regulier_texte": "5,88 $ (régulier)",
-      "rabais": "0,89 $ DE RABAIS",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
       "mots_cles": [
         "melon"
       ],
@@ -44,9 +44,9 @@
       "nom": "Framboises, demi-pinte",
       "prix": 1.99,
       "prix_texte": "1,99 $ (170 g, 1,17 $/100g)",
-      "prix_regulier": 4,
-      "prix_regulier_texte": "4,00 $ (régulier)",
-      "rabais": "2,01 $ DE RABAIS",
+      "prix_regulier": 2.99,
+      "prix_regulier_texte": "2,99 $ (régulier)",
+      "rabais": "1,00 $ DE RABAIS",
       "mots_cles": [
         "framboises"
       ],
@@ -106,9 +106,9 @@
       "nom": "Délices du Marché Sac d'avocat",
       "prix": 4,
       "prix_texte": "4,00 $ (1 ea, 4,00 $/1ch)",
-      "prix_regulier": 4.99,
-      "prix_regulier_texte": "4,99 $ (régulier)",
-      "rabais": "0,99 $ DE RABAIS",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
       "mots_cles": [
         "avocat"
       ],
