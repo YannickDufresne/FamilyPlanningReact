@@ -17,14 +17,14 @@
     "pourQui": "famille",
     "score_famille": 25,
     "score_adultes": 70,
-    "explication_famille": "Spectacle musical long, inadapté pour 🍒 Mika et 🍒 Luce · peu d'intérêt pour 🐤 Joseph",
-    "explication_adultes": "Soirée musicale pour 💚 Patricia · culture, sortie élégante au Capitole",
+    "explication_famille": "Spectacle musical adulte · peu adapté pour 🍒 Mika, 🍒 Luce et 🐤 Joseph",
+    "explication_adultes": "Pour 💚 Patricia · culture, musique · sortie calme et élégante",
     "scores_membres": {
       "Patricia": 75,
       "Yannick": 65,
-      "Joseph": 30,
-      "Mika": 10,
-      "Luce": 10
+      "Joseph": 20,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -45,14 +45,14 @@
     "pourQui": "famille",
     "score_famille": 30,
     "score_adultes": 85,
-    "explication_famille": "Concert intimiste trop long pour 🍒 Mika et 🍒 Luce · musique celtique calme",
-    "explication_adultes": "Soirée idéale pour 💚 Patricia et 🦉 Yannick · arts, culture, ambiance élégante",
+    "explication_famille": "Concert intimiste · trop long et calme pour 🍒 les jumelles et 🐤 Joseph",
+    "explication_adultes": "Idéal pour 💚 Patricia et 🦉 Yannick · arts, culture, ambiance élégante",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 80,
-      "Joseph": 25,
-      "Mika": 10,
-      "Luce": 10
+      "Joseph": 15,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -73,14 +73,14 @@
     "pourQui": "famille",
     "score_famille": 30,
     "score_adultes": 85,
-    "explication_famille": "Concert intimiste trop long pour 🍒 Mika et 🍒 Luce · musique celtique calme",
-    "explication_adultes": "Soirée idéale pour 💚 Patricia et 🦉 Yannick · arts, culture, ambiance élégante",
+    "explication_famille": "Concert intimiste · trop long et calme pour 🍒 les jumelles et 🐤 Joseph",
+    "explication_adultes": "Idéal pour 💚 Patricia et 🦉 Yannick · arts, culture, ambiance élégante",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 80,
-      "Joseph": 25,
-      "Mika": 10,
-      "Luce": 10
+      "Joseph": 15,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -101,14 +101,14 @@
     "pourQui": "famille",
     "score_famille": 75,
     "score_adultes": 80,
-    "explication_famille": "Cirque spectaculaire pour tous! 🐤 Joseph aime l'action · 🍒 jumeaux fascinés par couleurs",
-    "explication_adultes": "Sortie culturelle élégante pour 💚 Patricia et 🦉 Yannick · arts du cirque",
+    "explication_famille": "Pour toute la famille! 🐤 Joseph · acrobaties · 🍒 Mika et Luce · couleurs, spectacle visuel",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · arts du cirque, culture, élégance",
     "scores_membres": {
       "Patricia": 85,
       "Yannick": 75,
       "Joseph": 80,
       "Mika": 60,
-      "Luce": 60
+      "Luce": 55
     }
   },
   {
@@ -129,14 +129,14 @@
     "pourQui": "famille",
     "score_famille": 75,
     "score_adultes": 80,
-    "explication_famille": "Cirque spectaculaire pour tous! 🐤 Joseph aime l'action · 🍒 jumeaux fascinés par couleurs",
-    "explication_adultes": "Sortie culturelle élégante pour 💚 Patricia et 🦉 Yannick · arts du cirque",
+    "explication_famille": "Pour toute la famille! 🐤 Joseph · acrobaties · 🍒 Mika et Luce · couleurs, spectacle visuel",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · arts du cirque, culture, élégance",
     "scores_membres": {
       "Patricia": 85,
       "Yannick": 75,
       "Joseph": 80,
       "Mika": 60,
-      "Luce": 60
+      "Luce": 55
     }
   },
   {
@@ -157,12 +157,12 @@
     "pourQui": "famille",
     "score_famille": 20,
     "score_adultes": 55,
-    "explication_famille": "Concert rock fort, inadapté pour 🍒 Mika et 🍒 Luce · durée et volume excessifs",
-    "explication_adultes": "Nostalgie rock pour 🦉 Yannick · moins culturel pour 💚 Patricia",
+    "explication_famille": "Concert rock · trop bruyant pour 🍒 Mika et Luce · peu d'intérêt pour 🐤 Joseph",
+    "explication_adultes": "Pour 🦉 Yannick si amateur de rock classique · moins pour 💚 Patricia",
     "scores_membres": {
-      "Patricia": 45,
-      "Yannick": 65,
-      "Joseph": 40,
+      "Patricia": 40,
+      "Yannick": 60,
+      "Joseph": 25,
       "Mika": 5,
       "Luce": 5
     }
@@ -185,14 +185,14 @@
     "pourQui": "famille",
     "score_famille": 75,
     "score_adultes": 80,
-    "explication_famille": "Cirque spectaculaire pour tous! 🐤 Joseph aime l'action · 🍒 jumeaux fascinés par couleurs",
-    "explication_adultes": "Sortie culturelle élégante pour 💚 Patricia et 🦉 Yannick · arts du cirque",
+    "explication_famille": "Pour toute la famille! 🐤 Joseph · acrobaties · 🍒 Mika et Luce · couleurs, spectacle visuel",
+    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · arts du cirque, culture, élégance",
     "scores_membres": {
       "Patricia": 85,
       "Yannick": 75,
       "Joseph": 80,
       "Mika": 60,
-      "Luce": 60
+      "Luce": 55
     }
   },
   {
@@ -213,12 +213,12 @@
     "pourQui": "famille",
     "score_famille": 0,
     "score_adultes": 15,
-    "explication_famille": "Metal extrême totalement inadapté · dangereux pour 🍒 Mika et 🍒 Luce · trop intense",
-    "explication_adultes": "Concert metal intense, peu adapté aux goûts de 💚 Patricia et 🦉 Yannick",
+    "explication_famille": "Concert metal extrême · absolument inadapté pour enfants · trop intense",
+    "explication_adultes": "Musique très agressive · peu compatible avec 💚 Patricia et 🦉 Yannick",
     "scores_membres": {
       "Patricia": 5,
       "Yannick": 15,
-      "Joseph": 35,
+      "Joseph": 30,
       "Mika": 0,
       "Luce": 0
     }
@@ -239,12 +239,12 @@
     "url": "https://www.ticketmaster.ca/remparts-de-quebec-v-le-drakkar-quebec-quebec-10-31-2026/event/310064F6820939FE",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 60,
-    "score_adultes": 45,
-    "explication_famille": "Hockey parfait pour 🐤 Joseph · sport, action! Ambiance Halloween pour 🍒 jumeaux",
-    "explication_adultes": "Événement sportif, moins culturel pour 💚 Patricia · divertissant pour 🦉 Yannick",
+    "score_famille": 65,
+    "score_adultes": 50,
+    "explication_famille": "Pour 🐤 Joseph · hockey, sport, action! · Thème Halloween pour 🍒 Mika et Luce",
+    "explication_adultes": "Ambiance sportive · moins culturel pour 💚 Patricia · divertissant pour 🦉 Yannick",
     "scores_membres": {
-      "Patricia": 40,
+      "Patricia": 35,
       "Yannick": 55,
       "Joseph": 95,
       "Mika": 45,
@@ -269,14 +269,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -297,14 +297,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -323,13 +323,13 @@
     "url": "https://www.ticketmaster.ca/remparts-v-le-drakkar-hommage-aux-quebec-quebec-11-01-2026/event/310064F6820D3A02",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 55,
-    "score_adultes": 45,
-    "explication_famille": "Hockey idéal pour 🐤 Joseph · sport, énergie! Thème patriotique intéressant",
-    "explication_adultes": "Événement sportif avec dimension historique pour 🦉 Yannick · moins pour 💚 Patricia",
+    "score_famille": 60,
+    "score_adultes": 50,
+    "explication_famille": "Pour 🐤 Joseph · hockey, sport, énergie! · Thème patriotique intéressant",
+    "explication_adultes": "Pour 🦉 Yannick · aspect historique · moins pour 💚 Patricia",
     "scores_membres": {
-      "Patricia": 35,
-      "Yannick": 55,
+      "Patricia": 30,
+      "Yannick": 60,
       "Joseph": 95,
       "Mika": 35,
       "Luce": 30
@@ -353,14 +353,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -381,14 +381,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -409,14 +409,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -435,13 +435,13 @@
     "url": "https://www.ticketmaster.ca/remparts-de-quebec-v-oceanic-de-quebec-quebec-11-06-2026/event/310064F682123A1C",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 60,
-    "score_adultes": 50,
-    "explication_famille": "Hockey parfait pour 🐤 Joseph · sport! Hommage Villeneuve plaît à 🦉 Yannick",
-    "explication_adultes": "Thème automobile/histoire pour 🦉 Yannick · sportif, moins pour 💚 Patricia",
+    "score_famille": 65,
+    "score_adultes": 55,
+    "explication_famille": "Pour 🐤 Joseph · hockey, sport! · Hommage Villeneuve intéresse 🦉 Yannick",
+    "explication_adultes": "Aspect historique pour 🦉 Yannick · ambiance sportive moins pour 💚 Patricia",
     "scores_membres": {
-      "Patricia": 35,
-      "Yannick": 65,
+      "Patricia": 30,
+      "Yannick": 70,
       "Joseph": 95,
       "Mika": 35,
       "Luce": 30
@@ -465,14 +465,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -493,14 +493,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -521,14 +521,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -549,14 +549,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -577,14 +577,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -605,14 +605,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -633,14 +633,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -661,14 +661,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -689,14 +689,14 @@
     "pourQui": "famille",
     "score_famille": 45,
     "score_adultes": 90,
-    "explication_famille": "Hommage à Félix Leclerc, culturel mais long pour 🍒 Mika et 🍒 Luce",
-    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, histoire, théâtre",
+    "explication_famille": "Hommage à Félix Leclerc · culturel mais long pour 🍒 les jumelles",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture québécoise, poésie, histoire",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 90,
-      "Joseph": 30,
-      "Mika": 15,
-      "Luce": 15
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -715,16 +715,523 @@
     "url": "https://www.ticketmaster.ca/felix-je-me-souviens-quebec-quebec-11-15-2026/event/3100635F56401906",
     "source": "ticketmaster",
     "pourQui": "famille",
-    "score_famille": 45,
+    "score_famille": 35,
     "score_adultes": 85,
-    "explication_famille": "Pour 💚 Patricia et 🦉 Yannick · théâtre, culture | Difficile avec 🍒🍒 bébés",
-    "explication_adultes": "Soirée idéale pour 💚 Patricia · arts, théâtre, ambiance élégante",
+    "explication_famille": "Théâtre long pour 🍒 Mika et Luce · difficile avec tout-petits",
+    "explication_adultes": "Soirée culturelle idéale pour 💚 Patricia et 🦉 Yannick · théâtre, arts",
     "scores_membres": {
       "Patricia": 90,
       "Yannick": 75,
       "Joseph": 40,
+      "Mika": 10,
+      "Luce": 10
+    }
+  },
+  {
+    "nom": "Exploration automnale des Plaines d'Abraham",
+    "lieu": "Parc des Plaines d'Abraham, Québec",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.lesplainesdabraham.ca",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Balade magique dans les couleurs d'automne! 🦉 Yannick adorera l'histoire du site, 🐤 Joseph pourra courir librement, et 🍒 Mika et Luce ramasseront des feuilles colorées pendant que 💚 Patricia profite du calme!",
+    "score_famille": 95,
+    "score_adultes": 70,
+    "explication_famille": "Parfait pour tous! 🦉 histoire, 🐤 liberté, 🍒 feuilles colorées, 💚 calme nature",
+    "explication_adultes": "Agréable mais plus magique en famille · 🦉 Yannick appréciera l'histoire",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 95,
+      "Joseph": 90,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Heure du conte à la Bibliothèque Gabrielle-Roy",
+    "lieu": "Bibliothèque Gabrielle-Roy, 350 rue Saint-Joseph Est",
+    "duree": 45,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "apprentissage",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-21",
+    "url": "https://www.bibliothequesdequebec.qc.ca",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Moment lecture enchanteur pour les tout-petits! 🍒 Mika et Luce seront captivées par les histoires animées. Activité gratuite parfaite pour éveiller leur curiosité!",
+    "score_famille": 75,
+    "score_adultes": 30,
+    "explication_famille": "Idéal pour 🍒 Mika et Luce · histoires, éveil · 🐤 Joseph peut s'ennuyer",
+    "explication_adultes": "Activité centrée tout-petits · peu d'intérêt pour adultes seuls",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 50,
+      "Joseph": 30,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Souper gastronomique au Restaurant Légende",
+    "lieu": "Restaurant Légende, 255 rue Saint-Paul",
+    "duree": 150,
+    "cout": 85,
+    "cout_adulte": 85,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "toute",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.restaurantlegende.com",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Escapade gourmande en amoureux! 💚 Patricia et 🦉 Yannick découvriront la cuisine boréale québécoise raffinée. Menu dégustation mettant en valeur le terroir local. Soirée élégante et délicieuse!",
+    "score_famille": 15,
+    "score_adultes": 98,
+    "explication_famille": "Restaurant gastronomique inadapté aux enfants · réservé aux adultes",
+    "explication_adultes": "Escapade parfaite! 💚 Patricia élégance, 🦉 Yannick gastronomie et terroir",
+    "scores_membres": {
+      "Patricia": 98,
+      "Yannick": 95,
+      "Joseph": 10,
+      "Mika": 5,
+      "Luce": 5
+    }
+  },
+  {
+    "nom": "Visite du Musée de la civilisation - Gratuit le samedi matin",
+    "lieu": "Musée de la civilisation, 85 rue Dalhousie",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "culturel",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-24",
+    "url": "https://www.mcq.org",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Entrée gratuite avant 10h le samedi! 💚 Patricia et 🦉 Yannick exploreront les expos fascinantes, 🐤 Joseph adorera les zones interactives, et 🍒 les jumelles s'émerveilleront dans l'espace enfants!",
+    "score_famille": 92,
+    "score_adultes": 85,
+    "explication_famille": "Excellent pour tous! 💚🦉 expos, 🐤 interactif, 🍒 espace enfants · gratuit!",
+    "explication_adultes": "Riche culturellement pour 💚 Patricia arts et 🦉 Yannick histoire",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 95,
+      "Joseph": 80,
+      "Mika": 85,
+      "Luce": 85
+    }
+  },
+  {
+    "nom": "Randonnée familiale au Parc de la Chute-Montmorency",
+    "lieu": "Parc de la Chute-Montmorency, Boischatel",
+    "duree": 150,
+    "cout": 6,
+    "cout_adulte": 6,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.sepaq.com/ct/pcm/",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Aventure spectaculaire devant la chute plus haute que Niagara! 🐤 Joseph grimpera les 487 marches avec énergie, 🦉 Yannick photographiera les panoramas, 🍒 Mika et Luce en poussette admireront l'eau!",
+    "score_famille": 88,
+    "score_adultes": 80,
+    "explication_famille": "Aventure pour 🐤 Joseph · 🦉 photos · 🍒 poussette possible · spectaculaire!",
+    "explication_adultes": "Belle rando pour 🦉 Yannick · 💚 Patricia appréciera les panoramas",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 90,
+      "Joseph": 95,
+      "Mika": 75,
+      "Luce": 75
+    }
+  },
+  {
+    "nom": "Marché du Vieux-Port de Québec",
+    "lieu": "Marché du Vieux-Port, 160 Quai Saint-André",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "gastronomique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-25",
+    "url": "https://www.marchevieuxport.com",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Délices d'automne au marché! 💚 Patricia et 🦉 Yannick dénicheront courges et fromages locaux, 🐤 Joseph goûtera aux échantillons, 🍒 Mika et Luce découvriront les couleurs des étals!",
+    "score_famille": 93,
+    "score_adultes": 88,
+    "explication_famille": "Délices pour tous! 💚🦉 gastronomie locale, 🐤 échantillons, 🍒 couleurs vives",
+    "explication_adultes": "Découvertes gourmandes pour 💚 Patricia et 🦉 Yannick · terroir québécois",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 90,
+      "Joseph": 75,
+      "Mika": 90,
+      "Luce": 90
+    }
+  },
+  {
+    "nom": "Concert Loreena McKennitt au Grand Théâtre",
+    "lieu": "Grand Théâtre de Québec, 269 boul. René-Lévesque Est",
+    "duree": 150,
+    "cout": 75,
+    "cout_adulte": 75,
+    "cout_enfant": null,
+    "cout_bebe": null,
+    "saison": "toute",
+    "type": "musique",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-21",
+    "url": "https://www.grandtheatre.qc.ca",
+    "source": "claude",
+    "pourQui": "adultes",
+    "description": "Soirée musicale envoûtante pour le 30e anniversaire de The Mask and Mirror! 💚 Patricia sera transportée par la musique celtique mystique, 🦉 Yannick appréciera la richesse artistique. Magique!",
+    "score_famille": 20,
+    "score_adultes": 95,
+    "explication_famille": "Concert en soirée inadapté aux enfants · ambiance adulte requise",
+    "explication_adultes": "Soirée magique! 💚 Patricia musique envoûtante, 🦉 Yannick richesse artistique",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 90,
+      "Joseph": 25,
+      "Mika": 5,
+      "Luce": 5
+    }
+  },
+  {
+    "nom": "Aquarium du Québec en famille",
+    "lieu": "Aquarium du Québec, 1675 av. des Hôtels",
+    "duree": 180,
+    "cout": 23,
+    "cout_adulte": 23,
+    "cout_enfant": 11,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "famille",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.sepaq.com/ct/paq/",
+    "source": "claude",
+    "pourQui": "famille",
+    "description": "Émerveillement aquatique garanti! 🐤 Joseph adorera les phoques et morses, 🍒 Mika et Luce seront fascinées par les poissons colorés, 💚 Patricia et 🦉 Yannick apprécieront les jardins d'eau!",
+    "score_famille": 96,
+    "score_adultes": 70,
+    "explication_famille": "Émerveillement garanti! 🐤 animaux, 🍒 poissons colorés, 💚🦉 jardins d'eau",
+    "explication_adultes": "Plaisant mais orienté famille · moins d'intérêt intellectuel",
+    "scores_membres": {
+      "Patricia": 75,
+      "Yannick": 70,
+      "Joseph": 98,
+      "Mika": 95,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Balade patrimoniale dans le Vieux-Québec",
+    "lieu": "Vieux-Québec, départ Place Royale, Québec, QC",
+    "duree": 90,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "patrimoine",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Découvrez les ruelles pavées et l'architecture centenaire du Vieux-Québec en famille! 🦉 Yannick sera fasciné par les bâtiments historiques et les fortifications. 💚 Patricia appréciera l'élégance des façades françaises. 🐤 Joseph pourra grimper les escaliers et explorer les passages secrets. 🍒 Mika et Luce adoreront observer les couleurs d'automne et les pigeons sur les places! Poussettes bienvenues sur les rues principales.",
+    "score_famille": 90,
+    "score_adultes": 88,
+    "explication_famille": "Parfait! 🦉 architecture, 💚 élégance, 🐤 escaliers, 🍒 pigeons et couleurs",
+    "explication_adultes": "Balade idéale pour 🦉 Yannick histoire et 💚 Patricia architecture",
+    "scores_membres": {
+      "Patricia": 90,
+      "Yannick": 95,
+      "Joseph": 80,
+      "Mika": 80,
+      "Luce": 80
+    }
+  },
+  {
+    "nom": "Atelier créatif gratuit à la Bibliothèque Monique-Corriveau",
+    "lieu": "Bibliothèque Monique-Corriveau, 1100 route de l'Église, Québec, QC",
+    "duree": 60,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "toute",
+    "type": "communautaire",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.bibliothequesdequebec.qc.ca",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Activités créatives gratuites pour toute la famille dans cette magnifique bibliothèque! 🍒 Mika s'éclatera avec les bricolages colorés et les jeux sensoriels. 🍒 Luce profitera de l'espace doux et des livres cartonnés. 💚 Patricia adorera l'ambiance culturelle et calme. 🦉 Yannick découvrira les expositions temporaires. 🐤 Joseph pourra explorer la section ados et BD. Espace famille adapté aux poussettes!",
+    "score_famille": 88,
+    "score_adultes": 65,
+    "explication_famille": "Créativité pour 🍒 Mika! 💚 ambiance calme, 🦉 expos, 🐤 section ados · gratuit",
+    "explication_adultes": "Culturel mais orienté famille · 💚 Patricia appréciera l'ambiance",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 70,
+      "Joseph": 65,
+      "Mika": 95,
+      "Luce": 90
+    }
+  },
+  {
+    "nom": "Randonnée automnale au Domaine de Maizerets",
+    "lieu": "Domaine de Maizerets, 2000 boulevard Montmorency, Québec, QC",
+    "duree": 120,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "plein air",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "",
+    "url": "https://www.domainemaizerets.com",
+    "source": "claude",
+    "gratuit": true,
+    "pourQui": "famille",
+    "description": "Un vaste parc urbain parfait pour toute la famille Dufresne! 🐤 Joseph pourra courir dans les sentiers et observer les canards et oiseaux. 🦉 Yannick appréciera le manoir historique et l'arboretum. 💚 Patricia profitera d'une promenade élégante parmi les feuillages dorés. 🍒 Mika et Luce s'émerveilleront devant les écureuils et joueront dans les aires de jeux adaptées. Sentiers accessibles aux poussettes, stationnement gratuit!",
+    "score_famille": 94,
+    "score_adultes": 75,
+    "explication_famille": "Idéal! 🐤 sentiers et animaux, 🦉 manoir, 💚 élégance, 🍒 aires de jeux",
+    "explication_adultes": "Belle promenade pour 🦉 Yannick histoire · 💚 Patricia nature calme",
+    "scores_membres": {
+      "Patricia": 85,
+      "Yannick": 90,
+      "Joseph": 95,
+      "Mika": 92,
+      "Luce": 95
+    }
+  },
+  {
+    "nom": "Festival Québec en toutes lettres",
+    "lieu": "Divers lieux (Le Diamant, Bibliothèque Gabrielle-Roy, Maison de la littérature, Parc Durocher)",
+    "duree": 180,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "festival",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-15",
+    "date_fin": "2026-10-25",
+    "url": "https://quebecentouteslettres.qc.ca/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "adulte",
+    "description": "17e édition du festival littéraire sous le thème 'Ce cri qui jamais ne s'endort'. Spectacles inédits, rencontres d'auteurs, Foire littéraire au Parc Durocher (17-18 oct.), installations dans l'espace public. Programmation largement gratuite dans bibliothèques et librairies indépendantes.",
+    "score_famille": 40,
+    "score_adultes": 92,
+    "explication_famille": "Festival littéraire adulte · peu adapté aux enfants et tout-petits",
+    "explication_adultes": "Parfait pour 💚 Patricia culture et 🦉 Yannick découvertes intellectuelles",
+    "scores_membres": {
+      "Patricia": 95,
+      "Yannick": 90,
+      "Joseph": 20,
       "Mika": 15,
       "Luce": 15
+    }
+  },
+  {
+    "nom": "L'Étrange Carnaval",
+    "lieu": "Vieux-Québec (Jardins de l'Hôtel-de-Ville, Place de l'Hôtel-de-Ville, rue Saint-Jean)",
+    "duree": 240,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "festival",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-23",
+    "date_fin": "2026-10-25",
+    "url": "https://www.etrangecarnaval.ca/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "famille",
+    "description": "4e édition de la fête foraine d'Halloween inspirée des années 1920 dans le Vieux-Québec. Événement gratuit avec dompteurs de feu, acrobates, jeux de kermesse, ateliers de cirque, spectacles mystérieux et déambulatoire costumé (samedi 13h30). Vendredi 17h-21h, samedi 12h-21h, dimanche 12h-17h.",
+    "score_famille": 91,
+    "score_adultes": 72,
+    "explication_famille": "Fête magique! 🐤 acrobates et cirque, 🍒 kermesse colorée, 💚🦉 ambiance",
+    "explication_adultes": "Festif mais ambiance famille · 🦉 Yannick années 1920 intéressant",
+    "scores_membres": {
+      "Patricia": 80,
+      "Yannick": 75,
+      "Joseph": 92,
+      "Mika": 90,
+      "Luce": 85
+    }
+  },
+  {
+    "nom": "Salon National des Animaux de Compagnie (SNAC)",
+    "lieu": "Centre de foires ExpoCité, 2005 rue de l'Exposition",
+    "duree": 300,
+    "cout": 17.5,
+    "cout_adulte": 17.5,
+    "cout_enfant": 13.5,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "salon",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-24",
+    "date_fin": "2026-10-25",
+    "url": "https://www.snac.ca/en/salon-national-animaux-de-compagnie-quebec-city/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "famille",
+    "description": "Le plus grand salon d'animaux de compagnie au Canada. Chiens plongeurs (Dockdogs), concours félin avec plus de 90 chats, compétition nationale d'agilité, reptiles, lapins, oiseaux et espèces exotiques. Samedi 10h-18h, dimanche 10h-17h. Gratuit pour moins de 5 ans.",
+    "score_famille": 93,
+    "score_adultes": 55,
+    "explication_famille": "Paradis pour 🐤 Joseph! Animaux variés, 🍒 fascinées, 💚🦉 découverte",
+    "explication_adultes": "Orienté animaux/enfants · moins d'attrait culturel pour adultes",
+    "scores_membres": {
+      "Patricia": 60,
+      "Yannick": 55,
+      "Joseph": 100,
+      "Mika": 88,
+      "Luce": 88
+    }
+  },
+  {
+    "nom": "Fête familiale d'Halloween du Petit-Champlain",
+    "lieu": "Quartier Petit-Champlain et Place-Royale",
+    "duree": 180,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "familial",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-24",
+    "url": "https://www.quartierpetitchamplain.com/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "famille",
+    "description": "Fête familiale gratuite sous le thème de la sorcellerie de 13h à 16h. Jeux de kermesse (dont Quidditch), maquillage, cirque déambulatoire, échassier, marionnette géante, atelier créatif et distribution de bonbons. Costumes encouragés. Se combine bien avec L'Étrange Carnaval via funiculaire.",
+    "score_famille": 94,
+    "score_adultes": 50,
+    "explication_famille": "Halloween parfait! 🐤 Quidditch, 🍒 maquillage et bonbons, 💚🦉 ambiance",
+    "explication_adultes": "Fête enfantine · peu d'intérêt pour sortie adultes uniquement",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 60,
+      "Joseph": 95,
+      "Mika": 95,
+      "Luce": 90
+    }
+  },
+  {
+    "nom": "Marché de l'Étrange",
+    "lieu": "Le Grand Marché de Québec, 220 boulevard Wilfrid-Hamel (2e étage)",
+    "duree": 240,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "marché",
+    "origine": "Québec",
+    "exemple_claude": 1,
+    "date": "2026-10-24",
+    "date_fin": "2026-10-25",
+    "url": "https://www.legrandmarchedequebec.com/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "adulte",
+    "description": "6e édition du marché ésotérique et mystique. Artisans et artistes de l'étrange, de l'inexplicable et du spirituel: bijoux, tarot, voyance, plantes médicinales, encens, produits ésotériques. Atelier gratuit sur les lutins du Québec (samedi 10h). De 9h à 17h, entrée gratuite.",
+    "score_famille": 30,
+    "score_adultes": 75,
+    "explication_famille": "Marché ésotérique adulte · peu adapté aux enfants et tout-petits",
+    "explication_adultes": "Curiosité pour 🦉 Yannick découvertes · 💚 Patricia artisanat unique",
+    "scores_membres": {
+      "Patricia": 70,
+      "Yannick": 75,
+      "Joseph": 25,
+      "Mika": 20,
+      "Luce": 20
+    }
+  },
+  {
+    "nom": "RIMS Canada Conference 2026",
+    "lieu": "Centre des congrès de Québec, 1000 boulevard René-Lévesque Est",
+    "duree": 480,
+    "cout": 0,
+    "cout_adulte": 0,
+    "cout_enfant": 0,
+    "cout_bebe": 0,
+    "saison": "automne",
+    "type": "congrès",
+    "origine": "International",
+    "exemple_claude": 1,
+    "date": "2026-10-18",
+    "date_fin": "2026-10-21",
+    "url": "https://www.rimscanadaconference.ca/",
+    "source": "web_search",
+    "incontournable": true,
+    "pourQui": "professionnel",
+    "description": "Deuxième plus grande conférence en gestion des risques au monde. Conférenciers de renom dont Lieutenant-General Darcy Molstad (19 oct.), tables rondes, séances de formation. Du 18 au 21 octobre. Événement professionnel (500+ délégués) - pas grand public.",
+    "score_famille": 0,
+    "score_adultes": 10,
+    "explication_famille": "Conférence professionnelle · non pertinent pour la famille",
+    "explication_adultes": "Événement professionnel spécialisé · non pertinent pour loisirs",
+    "scores_membres": {
+      "Patricia": 5,
+      "Yannick": 15,
+      "Joseph": 0,
+      "Mika": 0,
+      "Luce": 0
     }
   },
   {
@@ -744,12 +1251,12 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Moment magique de lecture animée pour Mika 🍒 et Luce 🍒! Histoires d'automne, comptines et bricolage simple. Patricia 💚 adorera cette ambiance douce et créative! 📚🍂",
-    "score_famille": 88,
-    "score_adultes": 25,
-    "explication_famille": "Pour 🍒 Mika et 🍒 Luce · histoires, bricolage | 💚 Patricia appréciera l'ambiance douce",
-    "explication_adultes": "Activité conçue pour tout-petits · peu d'intérêt sans enfants",
+    "score_famille": 75,
+    "score_adultes": 30,
+    "explication_famille": "Parfait pour 🍒 Mika et Luce! Histoires et comptines · 💚 ambiance douce",
+    "explication_adultes": "Activité tout-petits · peu d'intérêt pour adultes seuls",
     "scores_membres": {
-      "Patricia": 75,
+      "Patricia": 70,
       "Yannick": 50,
       "Joseph": 25,
       "Mika": 95,
@@ -773,16 +1280,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Les couleurs d'automne seront spectaculaires! 🍁 Joseph 🐤 pourra grimper les 487 marches pendant que Yannick 🦉 admirera l'architecture du manoir. Poussette adaptée sur certains sentiers pour les jumelles 🍒🍒!",
-    "score_famille": 92,
-    "score_adultes": 70,
-    "explication_famille": "Pour 🐤 Joseph · 487 marches, aventure | 🦉 Yannick · architecture | 🍒🍒 poussette OK",
-    "explication_adultes": "Belle randonnée pour 🦉 Yannick · architecture, nature | 💚 Patricia · paysages",
+    "score_famille": 88,
+    "score_adultes": 82,
+    "explication_famille": "Spectaculaire! 🐤 487 marches, 🦉 manoir, 🍒 poussette · couleurs d'automne",
+    "explication_adultes": "Belle rando pour 🦉 Yannick architecture · 💚 Patricia panoramas",
     "scores_membres": {
-      "Patricia": 80,
+      "Patricia": 78,
       "Yannick": 90,
       "Joseph": 95,
       "Mika": 75,
-      "Luce": 80
+      "Luce": 75
     }
   },
   {
@@ -802,16 +1309,16 @@
     "source": "claude",
     "pourQui": "adultes",
     "description": "Soirée en amoureux pour Patricia 💚 et Yannick 🦉! Cuisine boréale québécoise raffinée, produits locaux d'automne et ambiance élégante. Un moment de découverte gastronomique sans les enfants! 🍷✨",
-    "score_famille": 10,
+    "score_famille": 15,
     "score_adultes": 98,
-    "explication_famille": "Restaurant gastronomique inadapté aux enfants et bébés",
-    "explication_adultes": "Soirée parfaite pour 💚 Patricia et 🦉 Yannick · gastronomie raffinée, élégance",
+    "explication_famille": "Gastronomie raffinée inadaptée aux enfants · soirée adultes",
+    "explication_adultes": "Soirée idéale! 💚 Patricia élégance, 🦉 Yannick terroir et découverte",
     "scores_membres": {
       "Patricia": 98,
       "Yannick": 95,
       "Joseph": 10,
-      "Mika": 0,
-      "Luce": 0
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -831,14 +1338,14 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Le coin des tout-petits ravira Mika 🍒 et Luce 🍒! Yannick 🦉 plongera dans l'histoire et Patricia 💚 appréciera les expositions artistiques. Joseph 🐤 aimera les zones interactives! 🏛️🎨",
-    "score_famille": 94,
+    "score_famille": 92,
     "score_adultes": 85,
-    "explication_famille": "Pour toute la famille! 🍒🍒 coin tout-petits | 🐤 zones interactives | 🦉💚 expos",
-    "explication_adultes": "Pour 🦉 Yannick · histoire | 💚 Patricia · arts et expositions culturelles",
+    "explication_famille": "Parfait! 🍒 coin tout-petits, 🦉 histoire, 💚 art, 🐤 zones interactives",
+    "explication_adultes": "Riche pour 🦉 Yannick histoire et 💚 Patricia expositions artistiques",
     "scores_membres": {
-      "Patricia": 90,
-      "Yannick": 92,
-      "Joseph": 75,
+      "Patricia": 95,
+      "Yannick": 95,
+      "Joseph": 80,
       "Mika": 85,
       "Luce": 85
     }
@@ -860,16 +1367,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Récolte d'automne en famille! 🎃 Pommes, courges, cidres locaux... Patricia 💚 et Yannick 🦉 dénicheront des trésors gourmands. Les jumelles 🍒🍒 s'émerveilleront devant les couleurs des étals!",
-    "score_famille": 90,
-    "score_adultes": 82,
-    "explication_famille": "Pour 💚🦉 gastronomie locale | 🍒🍒 couleurs, ambiance | 🐤 découvertes gourmandes",
-    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, produits locaux d'automne",
+    "score_famille": 93,
+    "score_adultes": 88,
+    "explication_famille": "Automne gourmand! 💚🦉 trésors locaux, 🍒 couleurs vives, 🐤 découvertes",
+    "explication_adultes": "Gastronomie locale pour 💚 Patricia et 🦉 Yannick · produits d'automne",
     "scores_membres": {
-      "Patricia": 88,
-      "Yannick": 85,
-      "Joseph": 65,
-      "Mika": 80,
-      "Luce": 80
+      "Patricia": 90,
+      "Yannick": 88,
+      "Joseph": 75,
+      "Mika": 90,
+      "Luce": 90
     }
   },
   {
@@ -889,16 +1396,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Joseph 🐤 pourra se défouler sur la glace pendant que les jumelles 🍒🍒 regardent depuis les gradins! Yannick 🦉 et Patricia 💚 peuvent aussi chausser les patins. Activité sportive parfaite pour l'automne! ⛸️",
-    "score_famille": 78,
-    "score_adultes": 55,
-    "explication_famille": "Pour 🐤 Joseph · sport, défoulement! | 🍒🍒 regardent | 💚🦉 peuvent patiner",
-    "explication_adultes": "Activité sportive · moins alignée avec culture et gastronomie",
+    "score_famille": 82,
+    "score_adultes": 65,
+    "explication_famille": "Sport pour 🐤 Joseph! 🍒 regardent, 💚🦉 peuvent patiner · activité fun",
+    "explication_adultes": "Sportif mais moins culturel · 🦉 Yannick peut apprécier l'activité",
     "scores_membres": {
-      "Patricia": 55,
-      "Yannick": 50,
-      "Joseph": 95,
-      "Mika": 45,
-      "Luce": 45
+      "Patricia": 60,
+      "Yannick": 65,
+      "Joseph": 98,
+      "Mika": 65,
+      "Luce": 65
     }
   },
   {
@@ -918,16 +1425,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Balade gratuite dans le joyau patrimonial! 🏰 Yannick 🦉 sera aux anges devant l'architecture Nouvelle-France. Poussette double dans les rues pavées pour Mika 🍒 et Luce 🍒. Joseph 🐤 grimpera sur les canons! 🍂",
-    "score_famille": 88,
+    "score_famille": 90,
     "score_adultes": 90,
-    "explication_famille": "Pour 🦉 Yannick · architecture! | 🐤 canons | 🍒🍒 poussette | 💚 ambiance élégante",
-    "explication_adultes": "Idéal pour 🦉 Yannick · architecture, histoire | 💚 Patricia · charme du Vieux",
+    "explication_famille": "Parfait! 🦉 architecture Nouvelle-France, 🐤 canons, 🍒 poussette, 💚 charme",
+    "explication_adultes": "Idéal pour 🦉 Yannick histoire/architecture et 💚 Patricia élégance",
     "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 95,
-      "Joseph": 70,
-      "Mika": 70,
-      "Luce": 75
+      "Patricia": 90,
+      "Yannick": 98,
+      "Joseph": 78,
+      "Mika": 80,
+      "Luce": 82
     }
   },
   {
@@ -947,106 +1454,16 @@
     "source": "claude",
     "pourQui": "adultes",
     "description": "Moment de grâce musicale pour Patricia 💚 et Yannick 🦉! Les récitals d'orgue gratuits du midi offrent une pause culturelle sublime dans un cadre architectural époustouflant. 🎵⛪",
-    "score_famille": 20,
+    "score_famille": 25,
     "score_adultes": 92,
-    "explication_famille": "Concert calme inadapté aux 🍒🍒 bébés et 🐤 ado énergique",
-    "explication_adultes": "Moment sublime pour 💚 Patricia · arts, musique | 🦉 Yannick · architecture sacrée",
+    "explication_famille": "Difficile avec 🍒 jumelles de 2 ans · silence requis, durée longue pour 🐤 Joseph",
+    "explication_adultes": "Moment sublime pour 💚 Patricia et 🦉 Yannick · culture, architecture, arts",
     "scores_membres": {
       "Patricia": 95,
-      "Yannick": 88,
-      "Joseph": 20,
-      "Mika": 5,
-      "Luce": 5
-    }
-  },
-  {
-    "nom": "Exploration des Plaines d'Abraham - Sentiers automnaux",
-    "lieu": "Parc des Plaines d'Abraham, 835 Avenue Wilfrid-Laurier, Québec",
-    "duree": 90,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "automne",
-    "type": "plein air",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.lesplainesdabraham.ca",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Magnifique balade familiale dans les couleurs d'automne! 🦉 Yannick adorera l'histoire riche de ce site patrimonial et les monuments historiques. 🐤 Joseph pourra courir et explorer les vastes espaces verts. 💚 Patricia appréciera l'élégance du paysage et les vues sur le fleuve. 🍒🍒 Mika et Luce s'émerveilleront devant les feuilles colorées et les écureuils! Sentiers accessibles aux poussettes, parfait pour les tout-petits.",
-    "score_famille": 95,
-    "score_adultes": 78,
-    "explication_famille": "Parfait! 🦉 histoire | 🐤 grands espaces | 💚 élégance | 🍒🍒 feuilles, écureuils",
-    "explication_adultes": "Pour 🦉 Yannick · histoire patrimoniale | 💚 Patricia · paysages élégants",
-    "scores_membres": {
-      "Patricia": 85,
       "Yannick": 90,
-      "Joseph": 88,
-      "Mika": 85,
-      "Luce": 90
-    }
-  },
-  {
-    "nom": "Atelier créatif gratuit à la Bibliothèque Gabrielle-Roy",
-    "lieu": "Bibliothèque Gabrielle-Roy, 350 rue Saint-Joseph Est, Québec",
-    "duree": 60,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "toute",
-    "type": "culturel",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.bibliothequesdequebec.qc.ca",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Activité créative en famille dans un lieu culturel chaleureux! 🍒 Mika s'éclatera avec les bricolages colorés et les livres imagés. 🍒 Luce profitera de l'espace doux et des jeux simples adaptés aux tout-petits. 💚 Patricia appréciera l'ambiance culturelle et les expositions. 🦉 Yannick pourra explorer la section patrimoine. 🐤 Joseph découvrira les BD et romans ados. Matériel fourni gratuitement!",
-    "score_famille": 92,
-    "score_adultes": 65,
-    "explication_famille": "Pour 🍒 Mika · bricolages | 🍒 Luce · jeux doux | 💚 culture | 🦉 patrimoine | 🐤 BD",
-    "explication_adultes": "Espace culturel pour 💚 Patricia | 🦉 section patrimoine · mais orienté famille",
-    "scores_membres": {
-      "Patricia": 80,
-      "Yannick": 70,
-      "Joseph": 65,
-      "Mika": 95,
-      "Luce": 90
-    }
-  },
-  {
-    "nom": "Promenade au Domaine de Maizerets - Arboretum et jardins",
-    "lieu": "Domaine de Maizerets, 2000 boulevard Montmorency, Québec",
-    "duree": 120,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "automne",
-    "type": "plein air",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "",
-    "url": "https://www.domainemaizerets.com",
-    "source": "claude",
-    "gratuit": true,
-    "pourQui": "famille",
-    "description": "Un joyau naturel parfait pour toute la famille! 🦉 Yannick sera fasciné par le manoir historique du 17e siècle et l'architecture patrimoniale. 🐤 Joseph adorera le labyrinthe végétal et les grands espaces pour bouger. 💚 Patricia appréciera les jardins élégants et le charme bucolique. 🍒🍒 Mika et Luce s'amuseront à observer les canards sur les étangs et à jouer dans les feuilles d'automne. Sentiers plats parfaits pour poussettes!",
-    "score_famille": 94,
-    "score_adultes": 75,
-    "explication_famille": "Pour 🦉 manoir 17e! | 🐤 labyrinthe | 💚 jardins | 🍒🍒 canards, feuilles, poussette!",
-    "explication_adultes": "Pour 🦉 Yannick · architecture historique | 💚 Patricia · jardins élégants",
-    "scores_membres": {
-      "Patricia": 88,
-      "Yannick": 92,
-      "Joseph": 80,
-      "Mika": 88,
-      "Luce": 90
+      "Joseph": 25,
+      "Mika": 10,
+      "Luce": 10
     }
   },
   {
@@ -1067,16 +1484,16 @@
     "incontournable": true,
     "pourQui": "adulte",
     "description": "Festival littéraire majeur en plein déroulement (15-25 octobre). Spectacles inédits, rencontres d'auteurs, Foire littéraire au parc Durocher (17-18 oct). Programmation largement gratuite dans les bibliothèques et librairies. Thème 2026 : 'Ce cri qui jamais ne s'endort'.",
-    "score_famille": 35,
-    "score_adultes": 88,
-    "explication_famille": "Festival littéraire adulte · peu adapté aux 🍒🍒 et 🐤 Joseph",
-    "explication_adultes": "Idéal pour 💚 Patricia · arts, culture | 🦉 Yannick · découvertes intellectuelles",
+    "score_famille": 20,
+    "score_adultes": 95,
+    "explication_famille": "Festival littéraire adulte · peu adapté aux 🍒 tout-petites et 🐤 ado actif",
+    "explication_adultes": "Parfait pour 💚 Patricia et 🦉 Yannick · culture, découvertes intellectuelles",
     "scores_membres": {
-      "Patricia": 92,
-      "Yannick": 85,
-      "Joseph": 25,
-      "Mika": 15,
-      "Luce": 15
+      "Patricia": 98,
+      "Yannick": 92,
+      "Joseph": 15,
+      "Mika": 5,
+      "Luce": 5
     }
   },
   {
@@ -1097,46 +1514,16 @@
     "incontournable": true,
     "pourQui": "famille",
     "description": "Fête foraine d'Halloween gratuite dans le Vieux-Québec. Ambiance années 1920, jeux de kermesse, spectacles de rue, collecte de bonbons chez les commerçants, déambulatoire costumé (sam 13h30), spectacle de feu (sam 18h30). Près de 18 000 visiteurs en 2025. 23-25 oct.",
-    "score_famille": 88,
-    "score_adultes": 60,
-    "explication_famille": "Pour 🐤 Joseph · kermesse, aventure | 🍒🍒 bonbons, couleurs | 💚🦉 ambiance 1920",
-    "explication_adultes": "Ambiance festive pour 💚🦉 · mais très orienté familles et enfants",
-    "scores_membres": {
-      "Patricia": 70,
-      "Yannick": 65,
-      "Joseph": 90,
-      "Mika": 85,
-      "Luce": 80
-    }
-  },
-  {
-    "nom": "Salon National des Animaux de Compagnie (SNAC)",
-    "lieu": "Centre de foires ExpoCité, 2005 rue de l'Exposition",
-    "duree": 420,
-    "cout": 17.5,
-    "cout_adulte": 17.5,
-    "cout_enfant": 13.5,
-    "cout_bebe": 0,
-    "saison": "automne",
-    "type": "salon",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "2026-10-24",
-    "url": "https://www.snac.ca/en/salon-national-animaux-de-compagnie-quebec-city/",
-    "source": "web_search",
-    "incontournable": true,
-    "pourQui": "famille",
-    "description": "Plus grand événement canadien consacré aux animaux de compagnie. Centaines d'animaux (chats, chiens, reptiles, oiseaux), chiens plongeurs Flying Team, concours d'agilité canine, exposition féline. 24-25 octobre, 10h-18h/17h. Enfants -5 ans gratuit.",
     "score_famille": 92,
-    "score_adultes": 40,
-    "explication_famille": "Pour 🐤 Joseph · animaux, aventure! | 🍒🍒 fascinées par les animaux | Gratuit -5 ans",
-    "explication_adultes": "Événement familial · peu aligné avec intérêts culturels de 💚🦉",
+    "score_adultes": 70,
+    "explication_famille": "Idéal pour tous! 🐤 Joseph · aventure, 🍒 jumelles · bonbons et couleurs, 💚🦉 · ambiance",
+    "explication_adultes": "Ambiance festive pour 💚 Patricia et 🦉 Yannick · spectacles, atmosphère années 20",
     "scores_membres": {
-      "Patricia": 50,
-      "Yannick": 45,
-      "Joseph": 98,
-      "Mika": 88,
-      "Luce": 85
+      "Patricia": 80,
+      "Yannick": 75,
+      "Joseph": 90,
+      "Mika": 95,
+      "Luce": 90
     }
   },
   {
@@ -1157,13 +1544,13 @@
     "incontournable": true,
     "pourQui": "adulte",
     "description": "16e édition du grand marché des importations privées présenté par la SAQ. Plus de 1000 vins, bières et spiritueux à déguster. Rencontres avec producteurs et agences du monde entier. 24-25 octobre, 11h-18h.",
-    "score_famille": 5,
-    "score_adultes": 85,
-    "explication_famille": "Dégustation alcool · interdit et inadapté aux enfants",
-    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · gastronomie, découvertes, vins du monde",
+    "score_famille": 0,
+    "score_adultes": 88,
+    "explication_famille": "Dégustation d'alcool · interdit aux mineurs, inadapté aux enfants",
+    "explication_adultes": "Escapade gastronomique parfaite pour 💚 Patricia et 🦉 Yannick · vins, découvertes",
     "scores_membres": {
-      "Patricia": 88,
-      "Yannick": 85,
+      "Patricia": 90,
+      "Yannick": 88,
       "Joseph": 0,
       "Mika": 0,
       "Luce": 0
@@ -1187,16 +1574,16 @@
     "incontournable": true,
     "pourQui": "adulte",
     "description": "Événement culturel majeur de l'année! Inauguration du nouveau pavillon dédié à Jean Paul Riopelle. 4 jours de célébrations (22-25 oct). Trois expositions, dont L'Hommage à Rosa Luxemburg. Vue imprenable sur le fleuve. Projet de 84M$.",
-    "score_famille": 40,
-    "score_adultes": 95,
-    "explication_famille": "Musée art · 💚🦉 adoreraient | Mais visite longue difficile avec 🍒🍒 et 🐤",
-    "explication_adultes": "Événement majeur pour 💚 Patricia · arts! | 🦉 Yannick · architecture, Riopelle",
+    "score_famille": 45,
+    "score_adultes": 98,
+    "explication_famille": "🦉💚 ravis · arts majeurs, mais 🍒 jumelles et 🐤 Joseph moins captivés par expo",
+    "explication_adultes": "Événement culturel exceptionnel pour 💚 Patricia · arts, et 🦉 Yannick · architecture",
     "scores_membres": {
-      "Patricia": 98,
-      "Yannick": 88,
+      "Patricia": 100,
+      "Yannick": 95,
       "Joseph": 30,
-      "Mika": 20,
-      "Luce": 20
+      "Mika": 25,
+      "Luce": 25
     }
   },
   {
@@ -1217,46 +1604,16 @@
     "incontournable": true,
     "pourQui": "famille",
     "description": "Enquête familiale d'Halloween dans les voûtes historiques du site archéologique. Les enfants deviennent détectives pour démasquer le fantôme en retrouvant 5 extraits de journal. Du 23 au 25 octobre, 9h30-16h30. Compris dans l'entrée.",
-    "score_famille": 85,
-    "score_adultes": 70,
-    "explication_famille": "Pour 🐤 Joseph · enquête, aventure! | 🦉 histoire | 🍒🍒 un peu jeunes mais ambiance",
-    "explication_adultes": "Pour 🦉 Yannick · site archéologique, histoire | 💚 ambiance originale",
+    "score_famille": 78,
+    "score_adultes": 75,
+    "explication_famille": "🐤 Joseph · aventure détective, 🦉 Yannick · histoire, 🍒 jumelles un peu jeunes",
+    "explication_adultes": "Site historique fascinant pour 🦉 Yannick · histoire, 💚 Patricia · culture",
     "scores_membres": {
-      "Patricia": 70,
-      "Yannick": 82,
-      "Joseph": 92,
-      "Mika": 55,
-      "Luce": 50
-    }
-  },
-  {
-    "nom": "Fête familiale d'Halloween du Petit-Champlain",
-    "lieu": "Quartier Petit-Champlain et Place-Royale",
-    "duree": 180,
-    "cout": 0,
-    "cout_adulte": 0,
-    "cout_enfant": 0,
-    "cout_bebe": 0,
-    "saison": "automne",
-    "type": "fete",
-    "origine": "Québec",
-    "exemple_claude": 1,
-    "date": "2026-10-24",
-    "url": "https://www.quartierpetitchamplain.com/",
-    "source": "web_search",
-    "incontournable": true,
-    "pourQui": "famille",
-    "description": "Fête gratuite sous le thème de la sorcellerie. Kermesse, maquillage, collecte de bonbons dans le quartier historique. Samedi 24 octobre, 13h à 16h. Se combine parfaitement avec L'Étrange Carnaval (accès par funiculaire).",
-    "score_famille": 90,
-    "score_adultes": 55,
-    "explication_famille": "Pour 🍒🍒 maquillage, bonbons! | 🐤 kermesse | 💚🦉 quartier historique charmant",
-    "explication_adultes": "Fête familiale · peu d'intérêt sans enfants pour 💚🦉",
-    "scores_membres": {
-      "Patricia": 68,
-      "Yannick": 60,
+      "Patricia": 75,
+      "Yannick": 88,
       "Joseph": 85,
-      "Mika": 92,
-      "Luce": 88
+      "Mika": 40,
+      "Luce": 35
     }
   },
   {
@@ -1277,11 +1634,11 @@
     "pourQui": "famille",
     "score_famille": 55,
     "score_adultes": 75,
-    "explication_famille": "Spectacle musical · 🐤 Joseph pourrait aimer | Difficile avec 🍒🍒 bébés",
-    "explication_adultes": "Divertissement pour 💚 Patricia · arts | 🦉 Yannick · découverte",
+    "explication_famille": "🐤 Joseph pourrait aimer · énergie rock, 🍒 jumelles trop petites pour spectacle",
+    "explication_adultes": "Sortie culturelle pour 💚 Patricia · théâtre, 🦉 Yannick · découverte",
     "scores_membres": {
-      "Patricia": 75,
-      "Yannick": 65,
+      "Patricia": 80,
+      "Yannick": 70,
       "Joseph": 60,
       "Mika": 20,
       "Luce": 20
@@ -1304,16 +1661,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Découverte des saveurs d'automne! 🦉 Yannick et 💚 Patricia dénicheront des produits locaux savoureux. Les 🍒 jumelles adoreront les couleurs des étalages et 🐤 Joseph pourra goûter aux échantillons! 🎃🍎",
-    "score_famille": 88,
-    "score_adultes": 80,
-    "explication_famille": "Pour 💚🦉 gastronomie locale | 🍒🍒 couleurs des étals | 🐤 échantillons!",
-    "explication_adultes": "Pour 💚 Patricia et 🦉 Yannick · découvertes gastronomiques, produits locaux",
+    "score_famille": 90,
+    "score_adultes": 85,
+    "explication_famille": "Parfait pour tous! 🦉💚 · gastronomie locale, 🍒 · couleurs, 🐤 · découvertes",
+    "explication_adultes": "Plaisir gourmand pour 💚 Patricia et 🦉 Yannick · gastronomie, produits locaux",
     "scores_membres": {
-      "Patricia": 85,
-      "Yannick": 82,
-      "Joseph": 65,
-      "Mika": 78,
-      "Luce": 78
+      "Patricia": 88,
+      "Yannick": 90,
+      "Joseph": 70,
+      "Mika": 92,
+      "Luce": 92
     }
   },
   {
@@ -1334,15 +1691,15 @@
     "pourQui": "famille",
     "description": "Émerveillement garanti pour toute la famille! 🐤 Joseph adorera les phoques et l'aventure, les 🍒 jumelles seront fascinées par les couleurs des poissons. 🦉 Yannick et 💚 Patricia apprécieront les jardins extérieurs automnaux! 🐟🦭",
     "score_famille": 95,
-    "score_adultes": 65,
-    "explication_famille": "Pour 🐤 Joseph · phoques, aventure! | 🍒🍒 poissons colorés | 💚🦉 jardins automne",
-    "explication_adultes": "Attraction familiale · 💚🦉 apprécieront jardins mais orienté enfants",
+    "score_adultes": 72,
+    "explication_famille": "Bonheur familial! 🐤 Joseph · animaux aventure, 🍒 jumelles · couleurs poissons, 🦉💚 · jardins",
+    "explication_adultes": "Agréable pour 💚 Patricia et 🦉 Yannick · nature, jardins automnaux",
     "scores_membres": {
-      "Patricia": 72,
-      "Yannick": 68,
+      "Patricia": 75,
+      "Yannick": 78,
       "Joseph": 95,
-      "Mika": 92,
-      "Luce": 90
+      "Mika": 98,
+      "Luce": 95
     }
   },
   {
@@ -1362,16 +1719,16 @@
     "source": "claude",
     "pourQui": "famille",
     "description": "Balade gratuite dans les feuilles dorées! 🦉 Yannick racontera l'histoire des batailles, 🐤 Joseph courra dans les grands espaces, et 🍒🍒 ramassent des feuilles colorées avec 💚 Patricia! 🍂",
-    "score_famille": 94,
-    "score_adultes": 78,
-    "explication_famille": "Pour 🦉 histoire! | 🐤 courir, explorer | 🍒🍒 feuilles avec 💚 | Gratuit!",
-    "explication_adultes": "Pour 🦉 Yannick · histoire des batailles | 💚 Patricia · paysages automnaux",
+    "score_famille": 95,
+    "score_adultes": 82,
+    "explication_famille": "Idéal pour tous! 🦉 · histoire, 🐤 · plein air, 🍒 · nature feuilles, 💚 · balade",
+    "explication_adultes": "Belle promenade pour 🦉 Yannick · histoire, 💚 Patricia · sortie élégante en nature",
     "scores_membres": {
       "Patricia": 82,
       "Yannick": 92,
       "Joseph": 88,
-      "Mika": 85,
-      "Luce": 88
+      "Mika": 95,
+      "Luce": 98
     }
   }
 ]
