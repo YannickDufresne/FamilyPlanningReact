@@ -1,23 +1,23 @@
 {
   "semaine": "2026-11-02",
-  "genereeLe": "2026-10-31T09:08:28.735Z",
+  "genereeLe": "2026-10-31T10:15:54.892Z",
   "costcoSource": "catalogue_mensuel",
   "maxi": [
     {
-      "nom": "Poulet entier frais",
-      "prix": 7.99,
-      "prix_texte": "7.99$/kg",
-      "prix_regulier": 11.99,
-      "prix_regulier_texte": "11.99$/kg",
-      "rabais": "33% de rabais",
+      "nom": "Poitrines de poulet désossées",
+      "prix": 8.99,
+      "prix_texte": "8.99$/kg",
+      "prix_regulier": 13.21,
+      "prix_regulier_texte": "13.21$/kg",
+      "rabais": "32% de rabais",
       "mots_cles": [
         "poulet",
-        "volaille"
+        "poitrine"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Pommes Cortland sac 3 lb",
+      "nom": "Pommes McIntosh sac 3 lb",
       "prix": 2.99,
       "prix_texte": "2.99$",
       "prix_regulier": 4.99,
@@ -25,22 +25,72 @@
       "rabais": "40% de rabais",
       "mots_cles": [
         "pommes",
-        "fruits"
+        "mcintosh"
       ],
       "categorie": "fruits"
+    },
+    {
+      "nom": "Courge butternut",
+      "prix": 0.99,
+      "prix_texte": "0.99$/lb",
+      "prix_regulier": 1.49,
+      "prix_regulier_texte": "1.49$/lb",
+      "rabais": "34% de rabais",
+      "mots_cles": [
+        "courge",
+        "butternut"
+      ],
+      "categorie": "legumes"
     },
     {
       "nom": "Boeuf haché mi-maigre",
       "prix": 9.99,
       "prix_texte": "9.99$/kg",
-      "prix_regulier": 13.99,
-      "prix_regulier_texte": "13.99$/kg",
-      "rabais": "29% de rabais",
+      "prix_regulier": 13.21,
+      "prix_regulier_texte": "13.21$/kg",
+      "rabais": "24% de rabais",
       "mots_cles": [
         "boeuf",
         "haché"
       ],
       "categorie": "viande"
+    },
+    {
+      "nom": "Lait 2% Québon 4L",
+      "prix": 5.49,
+      "prix_texte": "5.49$",
+      "prix_regulier": 6.79,
+      "prix_regulier_texte": "6.79$",
+      "rabais": "19% de rabais",
+      "mots_cles": [
+        "lait"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Oeufs gros calibre 12",
+      "prix": 3.49,
+      "prix_texte": "3.49$",
+      "prix_regulier": 4.29,
+      "prix_regulier_texte": "4.29$",
+      "rabais": "19% de rabais",
+      "mots_cles": [
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Patates russet sac 10 lb",
+      "prix": 3.99,
+      "prix_texte": "3.99$",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5.99$",
+      "rabais": "33% de rabais",
+      "mots_cles": [
+        "patates",
+        "pommes de terre"
+      ],
+      "categorie": "legumes"
     },
     {
       "nom": "Carottes sac 2 lb",
@@ -50,70 +100,19 @@
       "prix_regulier_texte": "2.49$",
       "rabais": "40% de rabais",
       "mots_cles": [
-        "carottes",
-        "légumes"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Lait 2% Lactantia 4L",
-      "prix": 6.49,
-      "prix_texte": "6.49$",
-      "prix_regulier": 7.99,
-      "prix_regulier_texte": "7.99$",
-      "rabais": "19% de rabais",
-      "mots_cles": [
-        "lait"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Oignons jaunes sac 3 lb",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 3.49,
-      "prix_regulier_texte": "3.49$",
-      "rabais": "43% de rabais",
-      "mots_cles": [
-        "oignons",
-        "légumes"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Pain blanc tranché Villagio",
-      "prix": 2.49,
-      "prix_texte": "2.49$",
-      "prix_regulier": 3.99,
-      "prix_regulier_texte": "3.99$",
-      "rabais": "38% de rabais",
-      "mots_cles": [
-        "pain"
-      ],
-      "categorie": "boulangerie"
-    },
-    {
-      "nom": "Pommes de terre Russet 10 lb",
-      "prix": 3.99,
-      "prix_texte": "3.99$",
-      "prix_regulier": 5.99,
-      "prix_regulier_texte": "5.99$",
-      "rabais": "33% de rabais",
-      "mots_cles": [
-        "pommes de terre",
-        "patates"
+        "carottes"
       ],
       "categorie": "legumes"
     }
   ],
   "metro": [
     {
-      "nom": "Clémentines sac 3 lb",
+      "nom": "Clémentines sac 2 lb",
       "prix": 3.99,
       "prix_texte": "3.99$",
-      "prix_regulier": 6.99,
-      "prix_regulier_texte": "6.99$",
-      "rabais": "43% de rabais",
+      "prix_regulier": 5.99,
+      "prix_regulier_texte": "5.99$",
+      "rabais": "33% de rabais",
       "mots_cles": [
         "clémentines",
         "agrumes"
@@ -121,41 +120,53 @@
       "categorie": "fruits"
     },
     {
-      "nom": "Poitrines de poulet désossées",
-      "prix": 11.99,
-      "prix_texte": "11.99$/kg",
-      "prix_regulier": 17.99,
-      "prix_regulier_texte": "17.99$/kg",
-      "rabais": "33% de rabais",
+      "nom": "Porc haché maigre",
+      "prix": 7.69,
+      "prix_texte": "7.69$/kg",
+      "prix_regulier": 11,
+      "prix_regulier_texte": "11.00$/kg",
+      "rabais": "30% de rabais",
       "mots_cles": [
-        "poulet",
-        "poitrine"
+        "porc",
+        "haché"
       ],
       "categorie": "viande"
     },
     {
-      "nom": "Courge Butternut",
-      "prix": 1.29,
-      "prix_texte": "1.29$/lb",
-      "prix_regulier": 1.99,
-      "prix_regulier_texte": "1.99$/lb",
-      "rabais": "35% de rabais",
-      "mots_cles": [
-        "courge",
-        "légumes"
-      ],
-      "categorie": "legumes"
-    },
-    {
-      "nom": "Bacon fumé Lafleur 500g",
+      "nom": "Fromage cheddar vieilli Balderson 280g",
       "prix": 5.99,
       "prix_texte": "5.99$",
       "prix_regulier": 8.99,
       "prix_regulier_texte": "8.99$",
       "rabais": "33% de rabais",
       "mots_cles": [
-        "bacon",
-        "porc"
+        "fromage",
+        "cheddar"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Champignons blancs 227g",
+      "prix": 1.99,
+      "prix_texte": "1.99$",
+      "prix_regulier": 3.29,
+      "prix_regulier_texte": "3.29$",
+      "rabais": "40% de rabais",
+      "mots_cles": [
+        "champignons"
+      ],
+      "categorie": "legumes"
+    },
+    {
+      "nom": "Cuisses de poulet avec dos",
+      "prix": 5.49,
+      "prix_texte": "5.49$/kg",
+      "prix_regulier": 8.8,
+      "prix_regulier_texte": "8.80$/kg",
+      "rabais": "38% de rabais",
+      "mots_cles": [
+        "poulet",
+        "cuisses"
       ],
       "categorie": "viande"
     },
@@ -167,54 +178,53 @@
       "prix_regulier_texte": "3.49$",
       "rabais": "43% de rabais",
       "mots_cles": [
-        "brocoli",
-        "légumes"
+        "brocoli"
       ],
       "categorie": "legumes"
     },
     {
-      "nom": "Fromage cheddar vieilli Bergeron 200g",
+      "nom": "Yogourt grec Liberté 750g",
       "prix": 4.99,
       "prix_texte": "4.99$",
-      "prix_regulier": 7.49,
-      "prix_regulier_texte": "7.49$",
-      "rabais": "33% de rabais",
+      "prix_regulier": 6.99,
+      "prix_regulier_texte": "6.99$",
+      "rabais": "29% de rabais",
       "mots_cles": [
-        "fromage",
-        "cheddar"
+        "yogourt",
+        "grec"
       ],
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Soupe Habitant 796ml",
+      "nom": "Soupe aux légumes Habitant 796ml",
       "prix": 2.49,
       "prix_texte": "2.49$",
-      "prix_regulier": 3.99,
-      "prix_regulier_texte": "3.99$",
-      "rabais": "38% de rabais",
+      "prix_regulier": 3.79,
+      "prix_regulier_texte": "3.79$",
+      "rabais": "34% de rabais",
       "mots_cles": [
-        "soupe"
+        "soupe",
+        "conserve"
       ],
       "categorie": "epicerie"
-    },
-    {
-      "nom": "Champignons blancs 227g",
-      "prix": 1.99,
-      "prix_texte": "1.99$",
-      "prix_regulier": 3.29,
-      "prix_regulier_texte": "3.29$",
-      "rabais": "39% de rabais",
-      "mots_cles": [
-        "champignons",
-        "légumes"
-      ],
-      "categorie": "legumes"
     }
   ],
   "adonis": [],
   "costco": [
     {
-      "nom": "Hauts de cuisses de poulet désossés Kirkland (2.5 kg)",
+      "nom": "Oeufs gros calibre Kirkland 30 unités",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "oeufs"
+      ],
+      "categorie": "produits_laitiers"
+    },
+    {
+      "nom": "Hauts de cuisses de poulet désossés 2.5 kg",
       "prix": 32.99,
       "prix_texte": "32.99$",
       "prix_regulier": null,
@@ -227,7 +237,7 @@
       "categorie": "viande"
     },
     {
-      "nom": "Beurre salé Kirkland (4 x 454 g)",
+      "nom": "Beurre salé Kirkland 4 x 454g",
       "prix": 21.99,
       "prix_texte": "21.99$",
       "prix_regulier": null,
@@ -239,46 +249,7 @@
       "categorie": "produits_laitiers"
     },
     {
-      "nom": "Sirop d'érable pur Kirkland (1 L)",
-      "prix": 18.99,
-      "prix_texte": "18.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "sirop",
-        "érable"
-      ],
-      "categorie": "epicerie"
-    },
-    {
-      "nom": "Lait 2% Natrel (4 L)",
-      "prix": 7.49,
-      "prix_texte": "7.49$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "lait"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Fromage en grains frais (600 g)",
-      "prix": 12.99,
-      "prix_texte": "12.99$",
-      "prix_regulier": null,
-      "prix_regulier_texte": "",
-      "rabais": "",
-      "mots_cles": [
-        "fromage",
-        "grains",
-        "poutine"
-      ],
-      "categorie": "produits_laitiers"
-    },
-    {
-      "nom": "Légumes mélangés surgelés Kirkland (2.5 kg)",
+      "nom": "Légumes mélangés surgelés 2.5 kg",
       "prix": 12.99,
       "prix_texte": "12.99$",
       "prix_regulier": null,
@@ -291,19 +262,33 @@
       "categorie": "surgeles"
     },
     {
-      "nom": "Côtelettes de porc Kirkland (2 kg)",
-      "prix": 26.99,
-      "prix_texte": "26.99$",
+      "nom": "Sirop d'érable pur Kirkland 1L",
+      "prix": 18.99,
+      "prix_texte": "18.99$",
       "prix_regulier": null,
       "prix_regulier_texte": "",
       "rabais": "",
       "mots_cles": [
-        "porc",
-        "côtelettes"
+        "sirop",
+        "érable"
       ],
-      "categorie": "viande"
+      "categorie": "epicerie"
+    },
+    {
+      "nom": "Fromage en grains frais 600g",
+      "prix": 12.99,
+      "prix_texte": "12.99$",
+      "prix_regulier": null,
+      "prix_regulier_texte": "",
+      "rabais": "",
+      "mots_cles": [
+        "fromage",
+        "grains",
+        "poutine"
+      ],
+      "categorie": "produits_laitiers"
     }
   ],
-  "analyse": "Cette semaine, profitez des excellents rabais sur les protéines: poulet entier à 7.99$/kg chez Maxi (économie de 4$/kg) et poitrines de poulet à 11.99$/kg chez Metro. Les légumes d'automne sont avantageux avec la courge Butternut et les pommes Cortland en solde. Costco offre le meilleur prix sur le lait 4L à 7.49$ et le beurre Kirkland reste imbattable à 5.50$/lb.",
+  "analyse": "Cette semaine, profitez des excellents prix sur les légumes d'automne québécois : courge butternut à 0.99$/lb chez Maxi et brocoli à 1.99$ chez Metro. Les oeufs Costco (30 pour 12.99$) offrent le meilleur rapport qualité-prix à 0.43$/oeuf vs 0.29$/oeuf chez Maxi. Le fromage cheddar Balderson à 33% de rabais chez Metro est un incontournable pour les plats réconfortants de novembre.",
   "economies_estimees": "~22$"
 }
